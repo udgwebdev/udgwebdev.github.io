@@ -1,0 +1,10 @@
+.row-fluid
+  .col-xs-12
+    img(src="#{root_url[environment]}images/#{main_image}" width="256" class="img-responsive img-circle center-block")
+    p.text-center Página não encontrada, relax, vamos te <a href="#{root_url[environment]}" id="home_url">redirecionar pra home</a>.
+    script.
+      (function() {
+        setTimeout(function() {
+          window.location = document.getElementById('home_url').href;
+        }, 3000);
+      })()

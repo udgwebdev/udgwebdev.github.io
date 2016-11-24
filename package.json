@@ -1,0 +1,26 @@
+{
+  "name": "udgwebdev.github.io",
+  "description": "Blog Underground WebDev",
+  "version": "1.0.0",
+  "author": "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
+  "scripts": {
+    "start": "grunt prebuild:dev && harp server . -p 3000",
+    "build": "grunt prebuild:prod && harp compile . www && grunt build:prod",
+    "deploy": "npm run build && grunt deploy:prod"
+  },
+  "dependencies": {
+    "eslint": "3.10.2",
+    "eslint-config-airbnb-base": "10.0.1",
+    "eslint-plugin-import": "2.2.0",
+    "grunt": "1.0.1",
+    "grunt-appcache": "0.2.0",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-compress": "1.3.0",
+    "grunt-contrib-imagemin": "1.0.1",
+    "grunt-env": "0.4.4",
+    "grunt-gh-pages": "2.0.0",
+    "grunt-sass": "1.2.1",
+    "grunt-sw-precache": "1.0.3",
+    "harp": "0.22.0"
+  }
+}

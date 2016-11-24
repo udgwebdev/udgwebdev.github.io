@@ -1,0 +1,103 @@
+---
+layout: post
+title: Video Streaming com Node.js
+tags: Node.js
+keywords: Node.js, Stream, Video Streaming
+published: true
+description: Um quick post que explica na prática como montar um servidor de video streaming usando Node.js.
+image_url: nodejs-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-logo.jpg" width="250" height="86" alt="Video Streaming com Node.js" title="Video Streaming com Node.js">
+  <figcaption>Video Streaming com Node.js</figcaption>
+</figure>
+<div class="post-content">
+  <p>Streaming de videos é algo muito comum nos dias de hoje, afinal quem é que não conhece Netflix, Vimeo ou pelo menos Youtube? (E o Redtube e XVideos? hahahaha) Em geral o que todos esses sites tem em comum é que possuem servidores que realizam streaming de video.</p>
+  <p>Mas o que é Streaming? Não sou expert nesse assunto, mas basicamente o Streaming é uma funcionalidade de processar dados (geralmente grandes) em pedaços, para que eles sejam enviados ou escritos aos poucos. Um bom exemplo disso são os videos e audios, eles geralmente são arquivos grandes, algo que realizando um download normal, vai te fazer esperar alguns minutos ou horas (dependendo do tamanho do arquivo e principalmente da velocidade de sua banda larga). Nesse caso o uso do streaming, vai te permitir consumir esses arquivos aos poucos, sem esperar muito tempo comparado com o download normal, afinal será feito downloads de pedaços menores desse arquivo que será suficiente para você ir consumindo-o aos poucos também.</p>
+  <p>Por exemplo: Quem nunca viu o youtube carregando partes de um video, suficiente para que você já assista os primeiros segundos desse video, enquanto ele vai baixando mais pedaços desse video, até montar completamente o video? Quem nunca viu um video travar pois ele carregou poucos dados pelo qual você já assistiu e teve que esperar o carregamento de mais dados durante uma tela congelada?</p>
+  <p>Tudo isso foi realizado via servidor de streaming de dados aliado com o recurso de <a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding" target="_blank">Chunked Transfer Encoding</a> do protocolo HTTP 1.1.</p>
+  <p>O Node.js possui nativamente o módulo <a href="https://nodejs.org/api/stream.html" target="_blank">Stream</a> que permite trabalhar com streaming de arquivos, também existe um ebook free criado pelo @substack, que realmente explica bem detalhado como trabalhar com streaming no Node.js, recomendo muito essa leitura: <a href="https://github.com/substack/stream-handbook" target="_blank">stream-handbook</a>.</p>
+  <p>Depois dessa introdução, vou mostrar em código um simples servidor de video streaming que você pode criar e usar em sua casa, para por exemplo renderizar seus videos em sua rede wifi.</p>
+  <p>Para começar, rode esses comandos para criar o projeto inicial:</p>
+
+{% highlight bash %}
+mkdir videoflix
+cd videoflix
+npm init
+{% endhighlight %}
+
+  <p>Após preencher os campos para criar o <code>package.json</code>, instale o <a href="https://expressjs.com/" target="_blank">Express</a> para que possamos criar algumas rotas dinâmicas em nossa aplicação:</p>
+
+{% highlight bash %}
+npm install --save express
+{% endhighlight %}
+
+  <p>Agora crie o <code>index.js</code> que será o código backend do nosso servidor de streaming</p>
+
+{% highlight javascript %}
+const fs = require('fs');
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  fs.readFile('./index.html', (err, html) => res.end(html));
+});
+
+app.get('/movies/:movieName', (req, res) => {
+  const { movieName } = req.params;
+  const movieFile = `./movies/${movieName}`;
+  fs.stat(movieFile, (err, stats) => {
+    if (err) {
+      console.log(err);
+      return res.status(404).end('<h1>Movie Not found</h1>');
+    }
+    // Variáveis necessárias para montar o chunk header corretamente
+    const { range } = req.headers;
+    const { size } = stats;
+    const start = Number((range || '').replace(/bytes=/, '').split('-')[0]);
+    const end = size - 1;
+    const chunkSize = (end - start) + 1;
+    // Definindo headers de chunk
+    res.set({
+      'Content-Range': `bytes ${start}-${end}/${size}`,
+      'Accept-Ranges': 'bytes',
+      'Content-Length': chunkSize,
+      'Content-Type': 'video/mp4'
+    });
+    // É importante usar status 206 - Partial Content para o streaming funcionar
+    res.status(206);
+    // Utilizando ReadStream do Node.js
+    // Ele vai ler um arquivo e enviá-lo em partes via stream.pipe()
+    const stream = fs.createReadStream(movieFile, { start, end });
+    stream.on('open', () => stream.pipe(res));
+    stream.on('error', (streamErr) => res.end(streamErr));
+  });
+});
+
+app.listen(3000, () => console.log('VideoFlix Server!'));
+{% endhighlight %}
+
+  <p>Para garantir que o servidor funcione, crie a pasta <code>movies</code> na raíz do projeto, e inclua alguns videos em formato MP4. Para evitar problemas com nomes de arquivos, recomendo que renomeie os videos de mp4 de forma que não contenha espaços em branco.</p>
+  <p>Em seguida, crie o <code>index.html</code> que terá a parte visual para renderizar o player de video gerado nativamente pelo HTML5:</p>
+
+{% highlight html %}
+{% raw %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VideoFlix</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body style="text-align:center">
+    <div style="margin:0 auto;">
+      <!-- Mude o src dessa tag para o nome do video que você possuir -->
+      <video src="/movies/300.mp4" controls width="640" height="480"></video>
+    </div>
+  </body>
+</html>
+{% endraw %}
+{% endhighlight %}
+
+  <p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000" target="_blank">localhost:3000</a>, se tudo estiver ok, um player do HTML5 será renderizado no seu browser, permitindo que você visualize o filme que você incluir no seu servidor. Até a próxima!</p>
+</div>

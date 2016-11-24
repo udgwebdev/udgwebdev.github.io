@@ -1,0 +1,18 @@
+{
+  "globals": {
+    "blog_name": "Underground WebDev",
+    "slug_name": "udgwebdev",
+    "app_name": "UDGWebDev",
+    "title": "Um blog para quem curte open-source, Linux e JavaScript",
+    "description": "Um blog para quem curte open-source, Linux e JavaScript",
+    "author": "Caio Ribeiro Pereira",
+    "main_image": "udgwebdev-logo.png",
+    "github_repo": "git@github.com:udgwebdev/udgwebdev.github.io.git",
+    "google_plus": "https://plus.google.com/+CaioRibeiroPereira",
+    "twitter": "@crp_underground",
+    "root_url": {
+      "development": "http://localhost:3000/",
+      "production": "https://udgwebdev.com/"
+    }
+  }
+}
