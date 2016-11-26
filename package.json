@@ -12,6 +12,7 @@
     "eslint": "3.10.2",
     "eslint-config-airbnb-base": "10.0.1",
     "eslint-plugin-import": "2.2.0",
+    "fs-extra": "1.0.0",
     "grunt": "1.0.1",
     "grunt-appcache": "0.2.0",
     "grunt-contrib-clean": "1.0.0",
@@ -21,6 +22,10 @@
     "grunt-gh-pages": "2.0.0",
     "grunt-newer": "1.2.0",
     "grunt-sw-precache": "1.0.3",
-    "harp": "0.22.0"
+    "harp": "0.22.0",
+    "lodash": "4.17.2",
+    "moment": "2.17.0",
+    "to-markdown": "3.0.3",
+    "yamljs": "0.2.8"
   }
 }

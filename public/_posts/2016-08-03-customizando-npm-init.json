@@ -1,0 +1,8 @@
+{
+  "title": "Customizando npm init",
+  "tags": "Node.js",
+  "published": true,
+  "description": "Veja nesse post como modificar o resultado do comando npm init para automatizar a geração de package.json com dados customizados.",
+  "image_url": "npm-logo.png",
+  "created_at": "03/08/2016"
+}
