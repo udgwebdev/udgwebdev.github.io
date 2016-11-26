@@ -15,15 +15,6 @@ module.exports = (grunt) => {
         NODE_ENV: 'production'
       }
     },
-    // Stylus ========================================
-    sass: {
-      main: {
-        options: { outputStyle: 'compressed' },
-        files: {
-          'public/css/main.css': 'public/css/main.scss'
-        }
-      }
-    },
     // Compress ======================================
     compress: {
       main: {
@@ -98,14 +89,14 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-env');
   grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-appcache');
+  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-sw-precache');
 
-  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'sass', 'imagemin']);
-  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'sass', 'imagemin']);
+  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin']);
+  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin']);
   grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'compress']);
   grunt.registerTask('deploy:prod', ['gh-pages', 'clean']);
 };
