@@ -1,0 +1,42 @@
+---
+layout: post
+title: Organizando um projeto Meteor
+tags: Meteor
+keywords: Meteor, MeteorJS, Aplicação com Meteor, Desenvolvendo com Meteor, Programando com Meteor
+description: Neste post explicarei o significado das conveções de diretórios do Meteor, para você organizar projetos de larga-escala.
+published: true
+image_url: meteor-logo.jpg
+---
+<figure class="post-image">
+  <a href="http://meteor.com" target="_blank">
+    <img src="{{ site.url }}/images/meteor-logo.jpg" width="250" height="110" alt="Meteor" title="Meteor">
+  </a>
+</figure>
+<div class="post-content">
+  <p>Uma dúvida muito recorrente para os iniciantes da plataforma Meteor, é sobre como organizar os diretórios do projeto.<br>
+  Acredito que muitos que começaram, se depararam com este problema. Afinal a documentação oficial não explica muito claro esses detalhes. Mas graças a <a href="https://github.com/oortcloud/unofficial-meteor-faq" target="_blank">documentação não-oficial</a> aprendi as convenções desse framework, que são boas práticas para desenvolvimento de projeto de larga-escala. Hoje explicarei o significado das conveções de diretórios do Meteor.</p>
+  {% include content-ads.ext %}
+  <h3>Convenções de diretórios do Meteor</h3>
+  <ul>
+    <li><strong>lib</strong>: Inclua common-codes ou bibliotecas que serão carregados tanto no cliente como no servidor. Um bom exemplo são libs de regras de negócio.</li>
+    <li><strong>lib/environment.js</strong>: Javascript de configurações gerais de ambiente.</li>
+    <li><strong>lib/methods.js</strong>: Definições de rotinas para o <code>Meteor.method</code></li>
+    <li><strong>lib/external</strong>: Bibliotecas externas de outros autores, exemplo: plugins para jQuery.</li>
+    <li><strong>models</strong>: Definições de modelos que representarão collections do banco MongoDB.</li>
+    <li><strong>client/lib</strong>: Códigos específicos do cliente pelo qual são carregados primeiro entre os demais códigos de sua pasta client.</li>
+    <li><strong>client/lib/environment.js</strong>: Configurações de pacotes para o client.</li>
+    <li><strong>client/lib/helpers</strong>: Pasta dedicada para funções helpers e events de um determinado template.</li>
+    <li><strong>client/application.js</strong>: Código de startup no cliente, geralmente utiliza funções de subscriptions e rotinas internas da função <code>Meteor.startup</code>.</li>
+    <li><strong>client/index.html</strong>: Código HTML principal.</li>
+    <li><strong>client/index.js</strong>: Javascript principal que carrega primeiro (também pode ser chamado de main.js).</li>
+    <li><strong>client/views/nome_do_template.html</strong>: View template específicos (mude nome_do_template para o nome real do template).</li>
+    <li><strong>client/views/nome_do_template.js</strong>: Código Javascript para um específico template (mude nome_do_template para o nome real do template).</li>
+    <li><strong>client/views/sub_template</strong>: Você também pode criar sub-templates dentro dessa pasta, geralmente eles são conhecidos como partials, e são trechos de templates utilizados para um template principal (mude sub_template para o nome real do template principal).</li>
+    <li><strong>client/stylesheets</strong>: Arquivos CSS, Less ou Stylus.</li>
+    <li><strong>server/publications.js</strong>: Definições de rotinas para o <code>Meteor.publish</code>.</li>
+    <li><strong>server/lib/environment.js</strong>: Configurações de pacotes para o servidor.</li>
+    <li><strong>public</strong>: Pasta de arquivos estáticos: imagens, fontes e outros arquivos que serão servidos estaticamente.</li>
+    <li><strong>tests</strong>: Diretório para criação de testes unitários (por default eles não serão carregados nem no cliente e nem no servidor, somente utilizando um framework de testes).</li>
+  </ul>
+  <p>Até a próxima galera! Continuem acompanhando o blog, novos posts sobre Meteor estão por vir.</p>
+</div>

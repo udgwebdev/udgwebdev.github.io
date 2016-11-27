@@ -1,0 +1,177 @@
+---
+layout: post
+title: Node.js para leigos - Framework Express Parte 1
+tags: Node.js
+keywords: Curso de Node.js, Node.js, Node.js para leigos, Express, ExpressJS
+published: true
+description: O framework que irei apresentar, se chama Express e foi inspirado pelo framework Sinatra do Ruby.
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-para-leigos.jpg" width="250" height="137" alt="Curso de Node.js" title="Curso de Node.js">
+  <figcaption>Curso de Node.js</figcaption>
+</figure>
+<div class="post-content">
+    <h3>Atenção</h3>
+    <p>As dicas desse post <strong>são baseadas em uma versão antiga do Express 3.x</strong>, porém os conceitos desse framework continuam intactos! Caso queira se <strong>atualizar com o que há de novo na versão Express 4.x</strong>, recomendo que leia esse post: <a href="{{site.url}}/primeiros-passos-com-express-4" title="Primeiros passos com Express 4" rel="me">Primeiros passos com Express 4</a>.</p>
+    <p>Após explicar um pouco sobre a <a href="{{ site.url }}/node-js-para-leigos-trabalhando-com-http" title="Node.js para leigos – Trabalhando com HTTP" target="_blank">API HTTP nativa do node.js</a>, percebemos que ela não é apropriada para desenvolvimento de aplicações complexas, visto que todo gerenciamento de rotas e outros recursos desse módulo são tratados de maneira bem básica, sendo necessário aplicar diversos comandos <strong>ifs e fors</strong> para tratá-los.</p>
+    <p>Vendo essa problema surgiram diversos web-frameworks e micro-frameworks, visando melhorar essas carências, trazendo mais produtividade no desenvolvimento de sistemas. O framework que irei apresentar, se chama <a href="http://expressjs.com/" title="ExpressJS" target="_blank">Express</a>, que foi inspirado pelo framework <a href="http://www.sinatrarb.com/" title="Sinatra" target="_blank">Sinatra</a> do Ruby.</p>
+    <p>Alguns recursos em destaque desse framework são:</p>
+    <ul>
+        <li>Routing robusto</li>
+        <li>Redirecionador para Helpers</li>
+        <li>Dynamic View Helpers</li>
+        <li>Integração View Template Engine</li>
+        <li>Content negotiation (RESTFul)</li>
+        <li>Application mounting</li>
+        <li>Focado em alta performance</li>
+        <li>Renderizador de Views</li>
+        <li>Suporte a Partials</li>
+        <li>Configuração baseado no ambiente do sistema operacional</li>
+        <li>Desenvolvido com a base no <a href="http://www.senchalabs.org/connect/" title="Middleware Connect" target="_blank">Middleware Connect</a></li>
+    </ul>
+    <p>Com ele será possível desenvolver uma aplicação complexa e de forma totalmente controlada pelo desenvolvedor. Antes mais nada, após criar uma pasta para aplicar na prática os códigos abaixo, execute essa linha de comando para <strong>instalar o framework Express</strong>:</p>
+    <p><code>npm install express</code></p>
+    <p class="obs">Obs.: Irei usar em todos os exemplos códigos da <strong>versão estável 2.x.x do Express</strong>, muitos dos exemplos poderão ou não sofrer mudanças na <strong>versão 3.x.x</strong>. Caso queira adaptar para nova versão veja este link: <a href="https://github.com/visionmedia/express/wiki/Migrating-from-2.x-to-3.x" target="_blank" title="Migrando Express de 2.x para 3.x">Migrando Express de 2.x para 3.x</a>. Veja um exemplo abaixo de <strong>Hello World</strong>:</p>
+{% highlight javascript %}
+var express = require('express')
+  , app = express();
+
+app.get('/', function(req, res){
+  res.send('Hello World');
+});
+
+app.listen(3000);
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+    <p>Esse exemplo mostra de forma mais enxuta uma simples aplicação sendo executada na <strong>rota raíz '/'</strong>. Não há muito segredo ou dicas para se passar com isso, mas aprofundando mais a nossa aplicação, irei criar mais rotas e algumas configurações relevantes para ele.</p>
+
+{% highlight javascript %}
+var express = require('express')
+  , app = express();
+
+app.configure(function(){
+  app.use(express.bodyParser());
+});
+
+var clientes = [];
+
+app.get('/', function(req, res){
+  html  = '<html><body>';
+  html += '<form action="/cliente" method="post">';
+  html += '<label>Nome: <input type="text" name="cliente[nome]"></label><br>';
+  html += '<label>Idade: <input type="text" name="cliente[idade]"></label><br>';
+  html += '<button type="submit">Enviar</button>';
+  html += '</form>';
+  html += '<br>';
+  html += '<h1>Lista de clientes</h1>';
+  html += '<ul>';
+  for(var i = 0; i < clientes.length; i++){
+    html += '<li>'+clientes[i].nome+' | '+clientes[i].idade+'</li>';
+  }
+  html += '</ul></body></html>';
+  res.send(html);
+});
+
+app.post('/cliente', function(req, res){
+  var cliente = req.body.cliente;
+  clientes.push(cliente);
+  res.redirect('/');
+});
+
+app.listen(3000);
+{% endhighlight %}
+
+    <p>Agora criamos um simples cadastro de clientes, em que estamos renderizando de forma básica um formulário HTML que abaixo dele aparece uma lista com os clientes cadastrados. Todos os dados são armazenados <strong>In-Memory</strong>, ou seja, estamos usando um simples array para controlar todos os registros, em outros posts aplicarei exemplos utilizando banco de dados com Node.js.</p>
+    <p>Na prática esse exemplo funciona e de comandos novos do Express, apenas cito o <strong>app.configure</strong>, nele sempre coloque antes de implementar as rotas, Javascript da prioridade a cada linha de forma ordenada, ou seja, se você colocar o <strong>app.configure</strong> no final do código nenhuma configuração inserida nele funcionará. O mesmo ocorre na ordem que cada item dentro do configurador é inserido, é claro que nesse exemplo existe apenas o <code>app.use(express.bodyParser())</code>, porém em aplicações mais complexas que exigem diversos tipos de configurações cada item colocado na ordem correta evitará possíveis problemas em sua aplicação. Ao decorrer dos exemplos irei mostrar em detalhes alguns dos possíveis problemas sobre o quão importante é a colocar na ordem certa possíveis configurações que dependem uma da outra, o mais importante é conhecer bem os tipos de configurações no Express para saber a prioridade certa de cada item, muitas vezes a própria documentação te ajudará, porém em casos que você instale itens de frameworks de terceiros para integrarem com Express é necessário entendê-lo melhor para saber em qual ordem incluí-lo.</p>
+    <p>O <code>express.bodyParser()</code> é uma função que facilita a construção de objetos JSON apartir de uma submissão de dados de um formulário html, ele simplesmente monta um objeto apartir dos valores do campo <strong>name</strong>, em que o campo <strong>name</strong> cria um objeto e atributos e o campo <strong>value</strong> insere valores nesses objetos.</p>
+    <p>Na prática ao submeter a tag:
+{% highlight html %}
+<input type='text' name='cliente[nome]' value='Caio'>
+{% endhighlight %}
+    <p>Faz o <code>express.bodyParser();</code> executar um parser desses valores criando o objeto JSON: <code>cliente.nome</code> com valor <code>'Caio'</code>. E para utilizar esse objeto você acessa através do <code>request.body.(nome do objeto)</code>, no nosso exemplo ele se encontra através da função <code>req.body.cliente</code>. A boa prática é sempre criar <code>objeto[atributo]</code>, </p>ojetos mais complexos são criados da seguinte maneira: <code>cliente[endereco][rua] = cliente.endereco.rua</code> e por ai vai.</p>
+
+    <p>Complicando mais a nossa aplicação, que tal adicionarmos novas funcionalidades a esse cadastro, vamos implementar uma rota para excluir um registro, uma para possibilitar a edição de um registro existente e uma para submeter a atualização dos registros editados.</p>
+
+{% highlight javascript %}
+var express = require('express')
+  , app = express();
+
+app.configure(function(){
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+});
+
+var clientes = [];
+
+app.get('/', function(req, res){
+  var html  = '<html><body>';
+  html += '<form action="/cliente" method="post">';
+  html += '<label>Nome: <input type="text" name="cliente[nome]"></label><br>';
+  html += '<label>Idade: <input type="text" name="cliente[idade]"></label><br>';
+  html += '<button type="submit">Enviar</button>';
+  html += '</form>';
+  html += '<br>';
+  html += '<h1>Lista de clientes</h1>';
+  html += '<ul>';
+  for(var i = 0; i < clientes.length; i++){
+    html += '<li>'+clientes[i].nome+' | '+clientes[i].idade;
+    html += '<a href="/cliente/'+i+'/editar">Editar</a> | ';
+    html += '<a href="/cliente/'+i+'">Excluir</a></li>';
+  }
+  html += '</ul></body></html>';
+  res.send(html);
+});
+
+app.post('/cliente', function(req, res){
+  var cliente = req.body.cliente;
+  clientes.push(cliente);
+  res.redirect('/');
+});
+
+app.get('/cliente/:id/editar', function(req, res){
+  var id = req.params.id;
+  var html  = '<html><body>';
+  html += '<h1>Editar dados do cliente: '+clientes[id].nome+'</h1>';
+  html += '<form action="/cliente/'+ id +'" method="post">';
+  html += '<input type="hidden" name="_method" value="put">'; // Força o formulário realizar um comando PUT no submit.
+  html += '<label>Nome: <input type="text" name="cliente[nome]" value="'+clientes[id].nome+'"></label>';
+  html += '<label>Idade: <input type="text" name="cliente[idade]" value="'+clientes[id].idade+'"></label>';
+  html += '<button type="submit">Enviar</button>';
+  html += '</form>';
+  html += '</html>';
+  res.send(html);
+});
+
+app.put('/cliente/:id', function(req, res){
+  var id = req.params.id;
+  clientes[id] = req.body.cliente;
+  res.redirect('/');
+});
+
+app.del('/cliente/:id', function(req, res){
+  var id = req.params.id;
+  clientes.splice(id, 1);
+  res.redirect('/');
+});
+
+app.listen(3000);
+{% endhighlight %}
+
+    <p>Pronto agora sim, criamos um cadastro completo de clientes! Alguns detalhes em destaque para explicar...</p>
+    <p><strong>req.params.id</strong>: a função params de uma request, pega valores criados através de uma URL porém apenas valores que estejam citados explicitamente na string da rota, como por exemplo <code>'/cliente/:id'</code> que automaticamente criará uma variável com o nome id em que qualquer valor passado por este padrão será o valor dessa variável. Lembresse, <strong>Params</strong> é totalmente diferente de <strong>QueryString</strong>, em que para capturar valores via QueryStrings, basta utilizar a função <strong>request.query.nome_da_variavel</strong> veja esse exemplo: </p>
+
+{% highlight javascript %}
+// Ao executar a url dessa forma: http://localhost:3000/cliente/1?nome=caio
+// Através dessa rota é possível pegar os seguintes valores dessa url.
+app.get('/cliente/:id', function(req, res){
+  var id = req.params.id; // valor: 1
+  var nome = req.query.nome; // valor: caio
+  res.send('Cliente '+id+': '+nome);
+});
+{% endhighlight %}
+
+    <p><code>app.use(express.methodOverride())</code>: essa função que esta dentro do <code>app.configure</code>, permite que sua aplicação faça sobrescrita de rotas que utilizem métodos HTTP diferentes. Repare no código da nossa aplicação que a maioria das rotas possuem o mesmo nome, por exemplo a rota: <code>'/cliente/:id'</code>, porém são usadas em diferentes funções que vão entre o <code>get(), post(), put() e del()</code> que são as funções do <strong>HTTP (GET, POST, PUT e DELETE)</strong> essa é uma boa prática para quem pretende desenvolver aplicações que seguem o padrão <a href="http://pt.wikipedia.org/wiki/REST" title="Entendendo o cocento REST" target="_blank">REST</a> que é muito utilizado na construção de <strong>WebServices</strong>.</p>
+    <p>No próximo post irei continuar com a segunda parte otimizando esse mesmo projeto de cadastro de clientes, incluindo novas configurações, separando o código html do código server-side, além de utilizar novos recursos do Express, não percam!</p>
+</div>

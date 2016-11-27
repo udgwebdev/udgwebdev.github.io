@@ -1,0 +1,8 @@
+{
+  "title": "Evitando callback hell no node.js",
+  "tags": "Node.js",
+  "published": true,
+  "description": "O objetivo desse post é apresentar boas práticas para lidar com encadeamento de múltiplas funções assíncronas que criam o mais irritante callback hell no node.js.",
+  "slug": "evitando-callback-hell-no-node-js",
+  "created_at": "12/06/2013"
+}

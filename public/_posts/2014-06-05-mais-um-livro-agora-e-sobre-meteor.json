@@ -1,0 +1,11 @@
+{
+  "title": "Mais um livro, agora é sobre Meteor!",
+  "tags": [
+    "Meteor"
+  ],
+  "published": true,
+  "description": "Olá! Quero apresentar a vocês mais um novo livro que foi lançado sua versão final mês passado. Estou falando do livro que escrevi sobre o framework Meteor, que cada vez mais ganha espaço no mundo de aplicações web.",
+  "image_url": "entrevista-em-equipe.jpg",
+  "slug": "mais-um-livro-agora-e-sobre-meteor",
+  "created_at": "05/06/2014"
+}

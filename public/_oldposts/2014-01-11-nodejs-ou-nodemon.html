@@ -1,0 +1,42 @@
+---
+layout: post
+title: Node.js ou Nodemon?
+tags: Node.js
+keywords: Nodemon, Node.js, Node.js auto reload
+published: true
+description: ! 'O nodemon é uma daquelas ferramentas de grande utilidade para quem trabalha com Node.js.'
+image_url: nodejs-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-logo.jpg" width="250" height="86" alt="Node.js ou Nodemon?" title="Node.js ou Nodemon?">
+  <figcaption>Node.js ou Nodemon?</figcaption>
+</figure>
+<div class="post-content">
+  <p>O nodemon é uma daquelas ferramentas de grande utilidade para quem trabalha com Node.js.</p>
+  <p>Basicamente ele é um file watcher que roda internamente o próprio comando node. A diferença entre usá-lo ou usar o comando node é que ele faz auto-restart da aplicação, toda vez que um arquivo do projeto for modificado.</p>
+  <p>Utilizá-lo é muito fácil, basta instalar:</p>
+
+{% highlight bash %}
+npm install -g nodemon
+{% endhighlight %}
+
+  <p>E toda vez que você rodar uma aplicação Node.js utilize o comando:</p>
+
+{% highlight bash %}
+nodemon app.js
+{% endhighlight %}
+
+  <p>Rodando este comando você não precisará se preocupar em reiniciar manualmente seu app toda vez que atualizar seus códigos.</p>
+  <p>Um outro detalhe importante é que você pode citar quais arquivos e ou diretórios serão ignorados pelo file watcher do nodemon, assim você evita restart desnecessário, que é muito útil quando se tem uma aplicação que demore reiniciar, para isso crie o arquivo ".nodemonignore" no diretório raíz do seu projeto e dentro dele digite a cada linha o nome do arquivo ou subdiretório que deseja ignorar (ele é igual ao mesmo padrão do <code>.gitignore</code>).</p>
+  <p>Veja este exemplo de arquivo:</p>
+
+{% highlight bash %}
+node_modules
+tmp
+public
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+  <p>Pronto! Agora diga adeus a improdutividade de ficar toda hora reiniciando manualmente sua aplicação Node.js.</p>
+</div>

@@ -1,0 +1,9 @@
+{
+  "title": "Dicas de segurança para aplicações Meteor",
+  "tags": "Meteor",
+  "published": true,
+  "description": "Se você esta desenvolvendo uma aplicação Meteor, é importante estar por dentro de como garantir segurança em sua aplicação. Nesse post mostrarei algumas dicas simples e de fácil execução para blindar seu projeto!",
+  "image_url": "meteor-logo.jpg",
+  "slug": "dicas-de-seguranca-para-aplicacoes-meteor",
+  "created_at": "23/05/2015"
+}

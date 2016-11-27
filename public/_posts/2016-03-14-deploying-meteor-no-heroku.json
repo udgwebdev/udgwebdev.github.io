@@ -1,0 +1,9 @@
+{
+  "title": "Deploying Meteor no Heroku",
+  "tags": "Meteor",
+  "published": true,
+  "description": "Veja nesse quick post como configurar um servidor Meteor no PaaS Heroku.",
+  "image_url": "heroku.jpg",
+  "slug": "deploying-meteor-no-heroku",
+  "created_at": "14/03/2016"
+}

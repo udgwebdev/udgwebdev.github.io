@@ -1,0 +1,11 @@
+{
+  "title": "Node.js processamento paralelo",
+  "published": true,
+  "tags": [
+    "Node.js"
+  ],
+  "description": "Apesar do Node.js ser single-thread é possível sim, prepará-lo para trabalhar com processamento paralelo. Veja nesse post como trabalhar com processamento paraleleo usando o módulo nativo chamado cluster. (Publicado no iMasters).",
+  "alias_url": "http://imasters.com.br/desenvolvimento/node-js-processando-em-paralelo/",
+  "slug": "nodejs-processamento-em-paralelo",
+  "created_at": "05/09/2013"
+}

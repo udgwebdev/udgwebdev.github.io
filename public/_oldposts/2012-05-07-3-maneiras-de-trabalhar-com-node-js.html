@@ -1,0 +1,75 @@
+---
+layout: post
+title: 3 maneiras de trabalhar com Node.js
+tags: Node.js
+keywords: CoffeeScript, DSL, HaxeNode, Javascript, Node.js
+published: true
+description: Existem 3 maneiras de trabalhar com Node.js e elas visam facilitar que programadores de outras linguagens se adaptem nessa plataforma.
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-logo.jpg" width="250" height="86" alt="Node.js" title="Node.js">
+</figure>
+<div class="post-content">
+  <p>Andei estudando um pouco mais sobre DSLs para <strong>Node.js</strong> e descobri que existem <strong>3 maneiras de trabalhar com Node.js</strong> e que visa facilitar que programadores de outras linguagens se adaptem facilmente nessa plataforma.</p>
+  <p>Na verdade existem <strong>3 linguagens de programação</strong> que compilam em Javascript para trabalhar com Node.js, elas são: <strong>Javascript, CoffeeScript e HaxeNode.</strong></p>
+  <h4>Javascript</h4>
+  <p>Por padrão <strong>Node.js</strong> compila código <strong>Javascript</strong> que é a sua <strong>DSL nativa</strong>. É claro que esse <strong>Javascript</strong> vem acompanhado com uma vasta lista de APIs e adaptações preparadas para trabalhar no server-side de uma aplicação. Abaixo segue um exemplo de um servidor HTTP apresentando o clássico <strong>Hello World</strong>:</p>
+{% highlight javascript %}
+var http = require('http');
+var server = http.createServer(
+  function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World\n');
+  }
+);
+server.listen(4000);
+console.log('Hello World executando em http://localhost:4000');
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+  <h4>CoffeeScript</h4>
+  <p>Se você adora trabalhar com uma síntaxe mais enxuta, inspirada nas linguagens <strong>Ruby e Python</strong>, com certeza <strong>CoffeeScript</strong> será ideal para você. Ele na prática apenas compila e traduz código <strong>CoffeeScript</strong> para <strong>Javascript</strong> no final. É uma boa escolha nos casos em que você precisa desenvolver aplicações grandes e complexas, dando preferência em trabalhar de forma organizada e com diversas funcionalidades extras que visam facilitar o seu dia-a-dia de programador, tanto na produtividade quanto manutenção de código. Veja abaixo o mesmo exemplo de <strong>Hello World</strong> em versão <strong>CoffeeScript</strong>:</p>
+{% highlight ruby %}
+http = require 'http'
+
+http.createServer (req, res) ->
+
+  res.writeHead 200, 'Content-Type': 'text/plain'
+  res.end 'Hello, World!'
+
+.listen 4000
+
+console.log 'Hello World executando em http://localhost:4000'
+{% endhighlight %}
+
+  <h4>HaxeNode</h4>
+  <p>Confesso que essa DSL me surpreendeu, totalmente nova e veio com intuito de cativar os programadores do <strong>Java, C++ e C#</strong>, pois o objetivo do <strong>HaxeNode</strong> é fornecer as principais características do <strong>paradigma orientado à objetos</strong> para o Node.js.</p>
+  <p>De fato, com ele você conseguirá utilizar <strong>Generics, Tipagem forte de variáveis, Enumerators, declaração e pacotamento de classes, Iterators, Classes Inline e Interfaces.</strong> Para finalizar segue abaixo um exemplo de Hello World feito com HaxeNode:</p>
+{% highlight java%}
+import js.Node;
+
+class Hello {
+
+  public static function main() {
+
+    var server = Node.http.createServer(function(req:NodeHttpServerReq, res:NodeHttpServerResp){
+      res.setHeader("Content-Type","text/plain");
+      res.writeHead(200);
+      res.end('Hello World\n');
+    });
+
+    server.listen(4000,"localhost");
+    trace('Hello World executando em http://127.0.0.1:1337/');
+  }
+}
+{% endhighlight %}
+
+  <h4>Referências</h4>
+  <ul>
+    <li><a href="http://nodejs.org/" title="Node.js" target="_blank">Node.js</a></p>
+    <li><a href="http://coffeescript.org/" title="CoffeeScript" target="_blank">CoffeeScript</a></li>
+    <li><a href="http://haxenode.org/" title="HaxeNode" target="_blank">HaxeNode</a></li>
+  </ul>
+  <p>Com esses exemplos que apresentei, não tem mais desculpas para não aprender Node.js! Entendido? See you on my next post!</p>
+</div>

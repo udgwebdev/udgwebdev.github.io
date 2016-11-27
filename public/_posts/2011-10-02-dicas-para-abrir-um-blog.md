@@ -1,0 +1,22 @@
+![Gerenciadores de blogs](images/gerenciadores-de-blogs.jpg)
+
+Para você que gosta de ler e principalmente escrever, gostaria de compartilhar e contribuir para o mundo com frases, textos, artigos, dicas, contar histórias, opinōes ou pensamentos para web, a melhor recomendação é montar um blog.
+
+Mas não faça nada, sem antes planejar! Um bom blog precisa ser bem planejado, por isso listarei abaixo alguns itens importantes a seguir:
+
+1.  **Defina um tema e escopo:** um bom blog não deve conter assuntos fora do contexto atual, por exemplo, Um blog de tecnologia falar sobre medicina ou um tema sobre esportes falar sobre assuntos que não combinam com o tema. Isso fará com que você perca leitores e os algoritmos da engine de busca do Google irá penalizá-lo, diminuindo com o tempo a visibilidade do seu blog.
+2.  **Aprenda programação web:** aprender pelo menos o básico de **HTML, CSS e Javascript** será um diferencial para você gerenciar plugins, adaptar o layout ao seu gosto ou adicionar widgets no blog.
+3.  **Utilize técnicas SEO:** será um diferencial aprender um pouco sobre técnicas de SEO **(Search Engine Optimizer)** que visam otimizar seu blog para as engines de busca do Google, Bing ou Yahoo.
+4.  **Domine o idioma:** tenha um ótimo português, escreva de forma simples e objetiva e principalmente evite gírias, pois fique ciente de que pessoas de diversas culturas irão ler o seu blog e elas poderão ser incompreendida por alguns leitores.
+5.  **Cuide de sua imagem:** cuidado com o que vai falar no blog! Um blog é totalmente público e principalmente seus amigos e parentes mais próximos irão ler algum dia. Saiba que falar mal de forma pública irá degradar sua imagem na web, sem contar que poderá gerar conflitos no mundo real.
+6.  **Referencie a fonte do post:** busque referências e estude a fundo sobre os assuntos do seu post. Isso faz com que seus leitores credibilizem melhor seu blog, pois na maioria dos casos você será a fonte da informação e se basear em referências de outros blogs ou sites é melhor do que simplesmente dizer que foi você o autor do assunto, resumindo, não seja egoísta compartilhar faz bem e você também iria gostar quando os outros fizessem uma referência de um assunto seu em outro blog.
+7.  **Seja original:** ao invés de copiar dos outros, faça uma resenha sobre o que entendeu e adicione no final um link de referência sobre um artigo que você ler.
+8.  **Dedicação e metas:** separe um tempo para se dedicar completamente para o blog, trace metas também, um bom exemplo de meta é definir quantos posts deseja publicar por mês.
+9.  **Deseja lucrar com o blog?:** Existem diversos programas para monetização de blogs e site, geralmente são programas de afiliados, pelo qual você irá anunciar produtos e serviços no seu blog, ganhando dinheiro por clicks. Existem diversos programas entre eles os que recomendo são: **Google Adsense, Boo-Box, Lomadee Afiliados, Submarino Afiliados, Uol Afiliados e Amazon Associates**.
+10.  **Monitore sua audiência:** monitore seu blog em busca de melhorá-lo constantemente os assuntos dos seus posts, maximizando o número de pageviews. Uma boa ferramenta para isso é o **Google Analytics**, ele gera relatórios sobre pageviews, páginas mais visitadas, navegadores que os leitores visualizam seu blog e muito mais.
+11.  **Monitore o desempenho do blog:** se você possui um bom conhecimento técnico, vale a pena monitorar também o desempenho do seu blog, utilize ferramentas como Google WebMaster, Bing WebMaster Tools ou até mesmo um addon para Firefox chamado Firebug ou Google Chrome DevTools vão te ajudarem a identificar gargalos que diminuem o tempo de carregamento do blog.
+12.  **Rede sociais:** criar um perfil do blog nas redes sociais será um diferencial para manter contatos mais próximo com seus leitores, divulgar seus posts e fazer marketing do blog. Boas redes sociais que recomendo são: **Twitter, Facebook, Google+ ou LinkedIn**.
+13.  **A melhor dica:** faça novos amigos, compartilhe idéias, contribua com informação útil para o mundo, comente os blogs amigos ou concorrentes, e o principal de tudo, se divirta com seu blog, essa será a melhor maneira de obter sucesso em um blog!
+
+Espero que gostem desse post e até mais pessoal!
+Uma boa referências com dicas para blogueiros: [Gerenciando Blog](http://www.gerenciandoblog.com.br/).

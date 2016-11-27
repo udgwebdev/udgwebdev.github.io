@@ -1,0 +1,96 @@
+---
+layout: post
+title: Administrando o LevelDB com LevelWeb
+tags:
+- Node.js
+- NoSQL
+keywords: LevelDB, LevelWeb
+published: true
+description: ! 'Continuando minhas experiências com o NoSQL LevelDB, neste post apresentarei um simples web admin de fácil integração e quebra bem o galho na hora de usar uma ferramenta visual pra administrar dados deste banco.'
+image_url: levelweb.png
+---
+<figure class="post-image">
+  <a href="https://github.com/hij1nx/levelweb" target="_blank">
+    <img src="{{ site.url }}/images/levelweb.png" width="250" height="170" alt="LevelWeb" title="LevelWeb">
+  </a>
+</figure>
+<div class="post-content">
+  <p>Continuando minhas experiências com o NoSQL <a href="http://code.google.com/p/leveldb" target="_blank">LevelDB</a>, neste post apresentarei um simples web admin de fácil integração e quebra bem o galho na hora de usar uma ferramenta visual pra administrar dados deste banco.</p>
+  <p>Seu nome é LevelWeb e utilizá-lo é bem simples! Ele possui suporte a login/senha normal e também criptografado via protocolo https. Além de acessar os dados via TCP ou RPC também.</p>
+  {% include content-ads.ext %}
+  <p>De funcionalidades ele é bem simples, tudo se resume em você rodar um comando e visualizar seu resultado na tela.</p>
+
+  <h2>Screenshots</h2>
+  <figure class="post-image">
+    <a href="{{ site.url }}/images/levelweb-login.jpg" target="_blank">
+      <img src="{{ site.url }}/images/levelweb-login-small.jpg" width="250" height="202" alt="LevelWeb" title="LevelWeb">
+      <figcaption>Tela de login (clique na imagem)</figcaption>
+    </a>
+  </figure>
+
+  <figure class="post-image">
+    <a href="{{ site.url }}/images/levelweb-visualizando-dados.jpg" target="_blank">
+      <img src="{{ site.url }}/images/levelweb-visualizando-dados-small.jpg" width="250" height="244" alt="Visualizando dados" title="Visualizando dados">
+      <figcaption>Visualizando dados (clique na imagem)</figcaption>
+    </a>
+  </figure>
+
+  <figure class="post-image">
+    <a href="{{ site.url }}/images/levelweb-grafico-de-barra.jpg" target="_blank">
+      <img src="{{ site.url }}/images/levelweb-grafico-de-barra-small.jpg" width="250" height="244" alt="Dados em gráfico de barra" title="Dados em gráfico de barra">
+      <figcaption>Dados em gráfico de barra (clique na imagem)</figcaption>
+    </a>
+  </figure>
+
+  <figure class="post-image">
+    <a href="{{ site.url }}/images/levelweb-grafico-treemap.jpg" target="_blank">
+      <img src="{{ site.url }}/images/levelweb-grafico-treemap-small.jpg" width="250" height="244" alt="Dados em TreeMap" title="Dados em TreeMap">
+      <figcaption>Dados em TreeMap (clique na imagem)</figcaption>
+    </a>
+  </figure>
+
+  <figure class="post-image">
+    <a href="{{ site.url }}/images/levelweb-grafico-de-linha.jpg" target="_blank">
+      <img src="{{ site.url }}/images/levelweb-grafico-de-linha-small.jpg" width="250" height="244" alt="Dados em gráfico de linha" title="Dados em gráfico de linha">
+      <figcaption>Dados em gráfico de linha (clique na imagem)</figcaption>
+    </a>
+  </figure>
+
+  <h2>Configuração</h2>
+  <p>Quer fazer um test-drive? Execute:</p>
+
+{% highlight bash %}
+npm install levelweb -g
+{% endhighlight %}
+
+  <p>Após sua instalação, crie uma conta de acesso:</p>
+
+{% highlight bash %}
+levelweb -u admin -p password
+{% endhighlight %}
+
+  <p>Agora basta se conectar em uma base local:</p>
+
+{% highlight bash %}
+levelweb ./test/data
+{% endhighlight %}
+
+  <p>Você também pode acessar uma base remota:</p>
+
+{% highlight bash %}
+levelweb --client 9099 --host 192.168.0.1
+{% endhighlight %}
+
+  <p>Para mais detalhes veja abaixo todos os parâmetros de seu CLI:</p>
+  <ul>
+    <li><strong>-u</strong>: define o nome de usuário de acesso.</li>
+    <li><strong>-p</strong>: define uma senha de acesso.</li>
+    <li><strong>--https</strong>: define a porta para servidor https.</li>
+    <li><strong>--host</strong>: define o nome do host, por default é <strong>localhost</strong>.</li>
+    <li><strong>--protocol</strong>: define o protcolo que pode ser <strong>"tls"</strong> ou <strong>"tcp"</strong>.</li>
+    <li><strong>--client</strong>: define a porta de conexão como cliente.</li>
+    <li><strong>--server</strong>: define a porta de conexão, tornando disponivel o LevelWeb como servidor.</li>
+  </ul>
+
+  <p>Para conhecer mais sobre o LevelWeb acesse seu github: <a href="https://github.com/hij1nx/levelweb" target="_blank">https://github.com/hij1nx/levelweb</a>.<br>Até a próxima! :)</p>
+</div>

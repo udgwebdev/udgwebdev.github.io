@@ -1,0 +1,11 @@
+{
+  "title": "Dicas de terminal - Processamento paralelo com xargs",
+  "tags": [
+    "Dicas de terminal"
+  ],
+  "published": true,
+  "description": "A dica de hoje será bem útil, com ela você estará apto para manipular diversos arquivos de um diretório fazendo processamento paralelo e em lote deles.",
+  "image_url": "terminal-console-linux.jpg",
+  "slug": "dicas-de-terminal-processamento-paralelo-com-xargs",
+  "created_at": "27/04/2013"
+}

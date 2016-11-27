@@ -1,0 +1,43 @@
+---
+layout: post
+title: WebScraping com Node.js
+tags: Node.js
+keywords: Web Scraping, Node Web Scraping, Data scraping
+published: true
+description: ! 'WebScraping para quem não conhece, é uma técnica em que se extrai dados dentro de um documento, geralmente, documento HTML.'
+image_url: web-scraping.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/web-scraping.jpg" width="250" height="192" alt="WebScraping com Node.js" title="WebScraping com Node.js">
+  <figcaption>WebScraping com Node.js</figcaption>
+</figure>
+<div class="post-content">
+	<p>WebScraping para quem não conhece, é uma <strong>técnica em que se extrai dados dentro de um documento, geralmente, documento HTML.</strong><br>
+	Primeiro você analisa a estrutura de uma página para identificar padrões de dados que deseja extrair e em seguida faz um scraping disso.</p>
+	<p>Pra fazer essa magia, é necessário usar um <strong>framework para fazer request HTTP</strong>, eae com o resultado em mãos, que é uma string da página, você utiliza um <strong>framework para extrair informações, baseado num padrão de tags, class, ids ou outros elementos que você identificar na página.</strong></p>
+  {% include content-ads.ext %}
+	<p>No mundo Node.js, temos o módulo <a href="https://npmjs.org/package/request" target="_blank">Request para solicitar uma página</a> e o <a href="https://npmjs.org/package/cheerio" target="_blank">Cheerio para extrair dados das páginas</a>.<br>
+	Só pra demonstrar um exemplo, vou mostrar como fazer um scraping para capturar todos os links da página inicial deste blog:</p>
+
+{% highlight javascript %}
+const URL = 'http://udgwebdev.com';
+
+var request = require('request')
+  , cheerio = require('cheerio')
+;
+
+request(URL, function(err, res, body) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('Scraping Links');
+    var $ = cheerio.load(body);
+    $('a').each(function(i, link) {
+      console.log('%s', $(link).attr('href'));
+    });
+  }
+});
+{% endhighlight %}
+
+	<p>Uma coisa legal do <a href="https://npmjs.org/package/cheerio" target="_blank">Cheerio</a> é que sua interface é praticamente um clone do <a href="http://jquery.com" target="_blank">jQuery</a>, e isso é um ponto positivo para muitos desenvolvedores que já estão acostumados a usar este framework.</p>
+</div>

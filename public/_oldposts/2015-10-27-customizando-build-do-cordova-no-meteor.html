@@ -1,0 +1,39 @@
+---
+layout: post
+title: Customizando Build do Cordova no Meteor
+tags: Meteor
+keywords: Meteor, Cordova, Mobile
+published: true
+description: Se você estiver construindo um mobile app para Android utilizando Meteor com Cordova, e necessite customizar o build do cordova em sua aplicação, então veja essa dica simples e rápida desse post.
+image_url: meteor-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/meteor-logo.jpg" width="250" height="72" alt="Customizando Build do Cordova no Meteor" title="Customizando Build do Cordova no Meteor">
+  <figcaption>Customizando Build do Cordova no Meteor</figcaption>
+</figure>
+<div class="post-content">
+  <p>
+    Se você estiver construindo um mobile app para Android utilizando Meteor com Cordova, talvez em algum momento, possa surgir a necessidade de você sobreescrever ou customizar o build do cordova em sua aplicação.
+    <br>
+    Para este caso, é possível fazer um override, extendendo funcionalidades de build do cordova criando na raíz do projeto a pasta <code>cordova-build-override</code>, pelo qual será responsável por sobreescrever qualquer arquivo default do build mobile.
+    <br>
+    Para testar um caso real, vamos resolver o seguinte problema. Caso você tenha algum plugin do cordova pelo qual ainda não está 100% compatível com o <strong>Meteor 1.2</strong>, e por causa disso, ele anda quebrando o build mobile, gerando erros de Lint, você pode facilmente desativar o Lint criando o seguinte arquivo: <code>cordova-build-override/platforms/android/build-extras.gradle</code> e em seguida incluir o seguinte código:
+  </p>
+
+{% highlight javascript %}
+ext.postBuildExtras = {
+ android {
+   lintOptions {
+     disable 'MissingTranslation'
+     disable 'ExtraTranslation'
+   }
+ }
+}
+{% endhighlight %}
+{% include content-ads.ext %}
+  <p>
+    Tudo que você incluir dentro de <code>ext.postBuildExtras</code> será extendido no build padrão do Cordova, neste caso, ele vai apenas desativar o Android Lint para garantir que alguns plugins antigos rodem normalmente no Meteor 1.2.
+    <br>
+    Até a próxima!
+  </p>
+</div>

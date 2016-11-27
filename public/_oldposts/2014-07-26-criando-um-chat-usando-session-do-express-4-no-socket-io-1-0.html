@@ -1,0 +1,137 @@
+---
+layout: post
+title: ! 'Criando um chat usando session do Express 4 no Socket.IO 1.0'
+tags: Node.js
+keywords: Express, ExpressJS, Socket.IO, Node.js, Sessions
+published: true
+description: Esse post é de grande utilidade para quem precisa criar um chat que compartilha uma sessão do Express no Socket.IO, leitura obrigatória!
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/express-socketio.jpg" width="250" height="49" alt="Criando um chat usando session do Express 4 no Socket.IO 1.0" title="Criando um chat usando session do Express 4 no Socket.IO 1.0">
+  <figcaption>Criando um chat usando session do Express 4 no Socket.IO 1.0</figcaption>
+</figure>
+<div class="post-content">
+  <p>Fala pessoal tudo bem? Se você utiliza Socket.IO e Express juntos, esse tutorial vai te ajudar a manter mais seguro o seu sistema, afinal vou te explicar como compartilhar dados de uma session do Express no Socket.IO, que é bem melhor do que aderir a <del>gambiarras</del> soluções paliativas.</p>
+  <p>O Socket.IO consegue acessar e manipular sessões que são criadas por um servidor web (neste caso o Express). E o que faremos é um simples controle de sessão, que valida, autoriza e compartilha os dados da sessão para o Socket.IO usar.</p>
+
+  <h4>Quais as vantagens disso?</h4>
+  <p>É mais seguro acessar os dados de uma Session compartilhada, do que enviar tais dados das Sessions para o HTML e depois reenviá-los para o Socket.IO, isso por que código no cliente pode ser facilmente adulterado, até mesmo usando um <a href="http://getfirebug.com" target="_blank" title="Firebug">Firebug</a> ou <a href="https://developers.google.com/chrome-developer-tools/" target="_blank" title="Chrome DevTools">Chrome DevTools</a> é possível alterar os valores de código HTML ou JavaScript.</p>
+
+  {% include content-ads.ext %}
+
+  <h4>Como isso funciona?</h4>
+  <p>Na prática, quando entramos no sistema, o Express automaticamente cria uma <strong>SessionID</strong>. Essa variável pode ser persistida em memória ou em disco no servidor (essa decisão fica a critério dos desenvolvedores, por default o Express mantém em memória). O Socket.IO não consegue acessar esses dados, ele apenas possui um callback que visa barrar ou autorizar uma conexão do cliente, com isso, dentro dessa callback utilizamos funções de <strong>Session e Cookie do Express</strong>para buscar e validar se tal usuário esta dentro da sessão, se este usuário estiver válido, pegamos todos seus dados da sessão armazenamos no em um <strong>objeto handshake</strong> e liberamos sua conexão com o Socket.IO.</p>
+
+  <h4>Let's code!</h4>
+  <p class="obs">Atenção! As dicas desse post funcionará somente nas <strong>versões do Socket.IO 1.0 e Express 4.x</strong>, versões anteriores não funcionarão com os códigos abaixo. Caso você precise implementar esta técnica utilizando o <strong>Express 3.x com Socket.IO 0.9</strong>, recomendo que leia este post antigo do blog: <a href="{{ site.url }}/nodejs-express-socketio-e-sessions/" target="_blank" title="Node.js: Express, Socket.IO e Sessions">Node.js: Express, Socket.IO e Sessions</a></p>
+  <p>Antes de implementar o código abaixo, crie uma pasta com o nome: <strong>mini-chat</strong> e dentro dessa pasta instale os seguintes módulos:</p>
+
+{% highlight bash %}
+npm install express socket.io cookie-parser express-session ejs --save
+{% endhighlight %}
+
+  <p>Com os módulos instalados, agora vamos criar nossa aplicação que visa implementar o controle de autorização do Socket.IO baseado na sessão gerada pelo Express, e algumas funcionalidades básicas de um chat para enviar e receber mensagens, crie o arquivo <strong>app.js</strong>:</p>
+
+{% highlight javascript %}
+const KEY = 'nome-do-cookie';
+const SECRET = 'chave-secreta-aqui!';
+
+var express = require('express')
+  , cookieParser = require('cookie-parser')
+  , expressSession = require('express-session')
+  , app = express()
+  , server = require('http').createServer(app)
+  , io = require('socket.io').listen(server)
+  , cookie = cookieParser(SECRET)
+  , store = new expressSession.MemoryStore()
+;
+
+// Configurando middlewares de Session e Cookie no Express
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+app.use(cookie);
+app.use(expressSession({
+  secret: SECRET,
+  name: KEY,
+  resave: true,
+  saveUninitialized: true,
+  store: store
+}));
+
+// Compartilhando a sessão válida do Express no Socket.IO
+io.use(function(socket, next) {
+  var data = socket.request;
+  cookie(data, {}, function(err) {
+    var sessionID = data.signedCookies[KEY];
+    store.get(sessionID, function(err, session) {
+      if (err || !session) {
+        return next(new Error('Acesso negado!'));
+      } else {
+        socket.handshake.session = session;
+        return next();
+      }
+    });
+  });
+});
+
+// Rota para acessar a página principal
+app.get("/", function(req, res){
+  // Armazenando o nome na sessão.
+  req.session.nome = "Usuario";
+  res.render('index');
+});
+
+// Iniciando uma conexão com Socket.IO.
+io.sockets.on('connection', function (client) {
+  // Recuperando uma sessão Express.
+  var session = client.handshake.session;
+
+  client.on('toServer', function (msg) {
+    msg = "<b>" + session.nome + ":</b> " + msg + "<br>";
+    client.emit('toClient', msg);
+    client.broadcast.emit('toClient', msg);
+  });
+});
+
+server.listen(3000, function(){
+  console.log("Rodando o server!");
+});
+{% endhighlight %}
+
+  <p>Com esses recursos habilitado será possível utilizar session no Socket.IO, em <strong>io.use();</strong> temos o callback <strong>next()</strong>, ele é responsável pela autorização e não autorização de uma conexão. A variável <strong>socket.request</strong> contém informações da requisição do cliente, isso inclui <strong>headers, cookies e outras informações do HTTP</strong>. Para recuperar o <strong>sessionID</strong>, utilizamos o array <strong>data.signedCookies[KEY]</strong>, e em seguida, utilizamos esses dados para verificar se sessão esta na memória do servidor através da função <strong>store.get(sessionID)</strong>, se tudo estiver correto, o callback dessa função retornará os dados da sessão, e com isso enviamos essa sessão para o objeto <strong>socket.handshake.session</strong> e executamos o callback <strong>return next()</strong> para autorizar esta conexão com o Socket.IO.</p>
+  <p>Se surgir um erro ao recuperar uma sessão, executamos o callback <strong>return next(new Error('Acesso negado!'))</strong> com uma mensagem de erro que avisa que bloqueamos a conexão desse cliente.</p>
+  <p>Pronto! Agora o Socket.IO esta habilitado para ler e manipular os objetos de uma session criada pelo Express. Com isso, podemos trafegar dados da sessão do usuário para qualquer funcionalidade criada pelo Socket.IO, no nosso caso vamos enviar esta sessão para um simples chat estamos implementando neste post. O código abaixo é uma view da nossa aplicação de exemplo que inicia o cliente do Socket.IO do nosso chat. Para funcionar essa view, você precisa criar o arquivo <strong>views/index.ejs</strong> implementando o seguinte código:</p>
+
+{% highlight html %}
+<html>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io('http://localhost:3000');
+        socket.on('toClient', function (msg) {
+        var chat = document.getElementById('chat');
+        chat.innerHTML += msg;
+      });
+      var enviar = function() {
+        var msg = document.getElementById('msg');
+        socket.emit('toServer', msg.value);
+      };
+    </script>
+    <section>
+      <pre id="chat"></pre>
+      <input type="text" id="msg" placeholder="Sua mensagem">
+      <input type="button" onclick="enviar();" value="Enviar">
+    </section>
+  </body>
+</html>
+{% endhighlight %}
+  <p>Para testar essa técnica, rode o comando:</p>
+
+{% highlight bash %}
+node app
+{% endhighlight %}
+
+  <p>Em seguida, acesse o endereço: <strong>http://localhost:3000</strong>, digite e envie qualquer mensagem, que em seguida será mostrada no chat, o nome do usuário que veio da sessão.</p>
+  <p>Dúvidas, sugestões ou achou um bug neste post! Comente abaixo, ok? Obrigado!</p>
+
+</div>

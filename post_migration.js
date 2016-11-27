@@ -8,6 +8,31 @@ const toMarkdown = require('to-markdown');
 const OLD_POSTS = path.join(__dirname, 'public/_oldposts');
 const NEW_POSTS = path.join(__dirname, 'public/_posts');
 const META_OMIT = ['layout', 'keywords'];
+const MARKDOWN_OPTS = {
+  gfm: true,
+  converters: [
+    {
+      filter: 'snippet',
+      replacement(content, node) {
+        const lang = node.getAttribute('id');
+        return `\`\`\` ${lang}\n ${content}\n\`\`\``;
+      }
+    },
+    {
+      filter: 'figcaption',
+      replacement() {
+        return '';
+      }
+    },
+    {
+      filter: 'line',
+      replacement(content, node) {
+        const spaces = node.getAttribute('spaces');
+        return `${_.repeat(' ', spaces)}${_.unescape(content)}\n`;
+      }
+    }
+  ]
+};
 
 console.log('Migrating UDGWebDev posts...');
 
@@ -16,18 +41,51 @@ fs.emptyDirSync(NEW_POSTS);
 _.each(fs.readdirSync(OLD_POSTS), (postFile) => {
   const oldPostData = fs.readFileSync(path.join(OLD_POSTS, postFile), 'utf8');
   const postSlugTitle = postFile.replace(/[\d]{4}-[\d]{2}-[\d]{2}-/, '').replace('.html', '');
-  const postPubDate = moment(_.take(postFile.split('-'), 3)).subtract(1, 'month').format('DD/MM/YYYY');
-  const postDataSplitted = _.takeRight(oldPostData.split('---\n'), 2);
-  const postMetaDataObj = YAML.parse(postDataSplitted[0]);
-  const postMetaData = _.extend(_.omit(postMetaDataObj, META_OMIT), { created_at: postPubDate });
-  const postContentData = postDataSplitted[1]
-    .replace(/\{%\shighlight\s([a-z]*)\s%\}/g, '``` $1')
-    .replace(/\{% endhighlight %\}/g, '```')
-    .replace(/\{% (raw|endraw) %\}/g, '')
-  ;
-  const postMarkdownData = toMarkdown(postContentData, { gfm: true });
-  console.log(postContentData);
-  console.log(postSlugTitle);
-  fs.outputFileSync(path.join(NEW_POSTS, postFile.replace('.html', '.md')), postMarkdownData);
-  fs.outputJsonSync(path.join(NEW_POSTS, postFile.replace('.html', '.json')), postMetaData);
+  const postPubDateArray = _.take(postFile.split('-'), 3);
+  postPubDateArray[1] = +(postPubDateArray[1]) - 1;
+  const postPubDate = moment(postPubDateArray).format('DD/MM/YYYY');
+  const postSplitPoint = oldPostData.replace(/(---\r\n|---)/g, '---\n').split('---\n');
+  const postDataSplitted = _.takeRight(postSplitPoint, 2);
+  try {
+    const postMetaDataObj = YAML.parse(postDataSplitted[0]);
+    const postMetaData = _.extend(_.omit(postMetaDataObj, META_OMIT), {
+      slug: postSlugTitle, created_at: postPubDate
+    });
+    if (!postMetaDataObj.alias_url && !postMetaDataObj.alias) {
+      const postContentArray = postDataSplitted[1]
+        .replace(/\{%\shighlight\s([a-z]*)\s%\}/g, '<snippet id="$1">')
+        .replace(/\{% endhighlight %\}/g, '</snippet>')
+        .replace(/\{% (raw|endraw) %\}/g, '')
+        .replace(/<figure class="post-image">/g, '')
+        .replace(/<div class="post-content">/g, '')
+        .replace(/\{\{\ssite.url\s\}\}\//g, '')
+        .replace(/\{%\sinclude\scontent-ads\.ext\s%\}/g, '')
+        .split('\n')
+      ;
+      let isCode = false;
+      const postContentData = _.map(postContentArray, (content) => {
+        if (_.includes(content, '<snippet id')) { isCode = true; return content; }
+        if (_.includes(content, '</snippet>')) { isCode = false; return content; }
+        if (isCode) {
+          let spaces = 0;
+          const contentArray = content.split('');
+          while (contentArray[spaces] === ' ') {
+            spaces += 1;
+          }
+          return `<line spaces="${spaces}">${_.escape(content)}</line>`;
+        }
+        return content;
+      }).join('\n');
+      const postMarkdownData = toMarkdown(postContentData, MARKDOWN_OPTS);
+      fs.outputFileSync(path.join(NEW_POSTS, postFile.replace('.html', '.md')), postMarkdownData);
+    }
+    if (!postMetaDataObj.alias) {
+      fs.outputJsonSync(path.join(NEW_POSTS, postFile.replace('.html', '.json')), postMetaData);
+    }
+  } catch (e) {
+    console.error(`Error processing: ${postFile}`);
+    console.error(postDataSplitted);
+  }
 });
+
+console.log('Migration is done!');

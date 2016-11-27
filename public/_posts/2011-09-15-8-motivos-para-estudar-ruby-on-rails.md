@@ -1,0 +1,18 @@
+![Ruby On Rails](images/rails-logo.jpg "Ruby On Rails")
+
+Venho aqui em mais um post falar sobre meus poucos, porém produtivos momentos que tive ao desenvolver utilizando a tecnologia web: Ruby On Rails.
+
+E isso me motivou a citar em minha opinião 8 motivos, pelo qual espero que você leitor, programador, se motive a aprender um pouco mais sobre essa linguagem e framework, que cada vez mais conquista novos desenvolvedores e startups.
+
+*   **1) DRY - Don't Repeat Yourself (Não fique repetindo):** A idéia por traz deste conceito no Rails, é a de proporcionar ao programador métodos que abstraia ao máximo todo o desenvolvimento do projeto, e isso segue desde a modelagem dos objetos até a preparação das views, pois já existe pronto determinados métodos que resolvam os clássicos problemas de duplicidade de código, por isso, caso perceba a existência de um código redundante, procure investigar se não há uma nova e melhor forma de resolvê-lo.
+*   **2) CoC - Convention over Configuration (Convenção acima de Configuração):** A melhor forma de programar em Ruby On Rails é estudando bastante todas as suas técnicas para seguir rigorosamente seus "padrões de sucesso", pois ele foi projetado para não gastarmos tempo configurando todo o ambiente do projeto.
+*   **3) Comunidade ativa:** Conheço muitos programadores, principalmente do Java, estão migrando para Ruby, e isso traz mais credibilidade a esta plataforma por que Ruby On Rails é open-source, e isso significa que neste mundo, alguém irá te ajudar a resolver um probleminha que já foi resolvido por outros ou que sempre existirá um colaborador contribuindo na manuntenção e inovação deste framework.
+*   **4) Agilidade:** Ruby On Rails segue fielmente a maioria dos conceitos do desenvolvimento Agile, TDD, BDD e DDD, conhecer e seguir esses conceitos permitirá um desenvolvimento rápido do software e com qualidade garantida.
+*   **5) Foco no negócio:** ao criar um projeto, 90% do tempo será investido fazendo o que mais agrega valor ao sistema, que são as regras de negócio, layout, usabilidade, modelagem e testes, os outros 10% serão gastos configurando algumas bibliotecas (GEMs) ou estudando novas técnicas para aperfeiçoar o projeto.
+*   **6) A favorita das startups:** Muitas das startups estão adotando Rails em alguns dos seus projetos, pois permite a eles se empenharem no que mais almejam, que é inovar em seus projeto, desenvolvendo-o em curto prazo.
+*   **7) Problemas grandes, soluções pequenas:** Diferente das "linguagens clássicas" (Java, C#, C++, PHP) Ruby possui uma sintaxe simplista e muitos métodos poderosos que facilitam muito a vida do programador. Existem problemas que levariam mais de 20 linhas de código em uma "linguagem clássica" sendo resumido em 3 linhas usando Ruby.
+*   **8) O mundo esta usando Ruby On Rails:** Existem muitas aplicações web famosas adotando Rails: [Twitter](http://twitter.com), [37Signals](http://37signals.com/), [GitHub](http://github.com/), [Hungroo](http://hungroo.com/), e muito mais [clicando aqui.](http://rubyonrails.com.br/aplicacoes)
+
+Enfim, espero que este post lhe-motive a estudar não só Ruby, mas sempre que puder uma nova linguagem de programação, pois o intuito aqui não é dizer que Ruby On Rails será o mundo perfeito, tanto é que apenas citei um pouco sobre minhas experiências com este framework, e sempre é bom conhecer novos paradigmas de programação, pois permitirá resolver com sabedoria os problemas que enfrentamos ao desenvolver um projeto.
+
+Caso saiba outros motivos para aprender Ruby On Rails, comentem esse post! Depois que você dominar Ruby On Rails, veja também as [6 motivos para usar Node.js]({{site.url}}/6-motivos-para-usar-nodejs).

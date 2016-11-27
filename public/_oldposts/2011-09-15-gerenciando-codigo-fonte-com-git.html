@@ -1,0 +1,50 @@
+---
+layout: post
+title: Gerenciando código-fonte com Git
+description: Neste post irei explicar alguns comandos essenciais para trabalhar com o Git.
+tags: Git
+keywords: comandos git, git, repositório git
+published: true
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/git-logo.jpg" width="206" height="141" alt="Gerenciando código-fonte com Git" title="Gerenciando código-fonte com Git">
+  <figcaption>Gerenciando código-fonte com Git</figcaption>
+</figure>
+<div class="post-content">
+  <p>A pedido de um amigo da minha classe, que esta na mesma correria que eu, que é a época de desenvolvimento de TCC na faculdade, irei explicar alguns comandos essenciais para trabalhar com o Git.</p>
+  <p>Para quem não conhece, o Git é um sistema de controle de versionamento de código-fonte distribuído, que inicialmente foi desenvolvido por Linus Torvalds para gerir todo o código-fonte do seu famoso Kernel Linux.</p>
+  <p>Uma das características do Git é:</p>
+  <ul>
+    <li><strong>Suporte para desenvolvimento não-linear:</strong> permite a criar <strong>branchs</strong> que são áreas distintas para separar em cada área, o que irá fazer no projeto, por exemplo: Uma branch para corrigir bugs e uma outra branch para dar continuidade no desenvolvimento de uma nova funcionalidade. Após o término de uma das branchs, você terá a possibilidade de realizar um <strong>merge</strong>, que faz uma mesclagem entre ambas as áreas, para corrigir conflitos e manter ambas as branchs em uma única linha de desenvolvimento no final.</li>
+    <li><strong>Autenticação criptografada do histórico:</strong> O histórico do Git gera uma árvore de hash para cada <strong>commit</strong> (publicação de código) efetuado, sendo que uma vez publicado, não será possível mudar as versões de hash que foram geradas.</li>
+    <li><strong>Estratégia de merge conectáveis:</strong> O Git possui um conjunto de algoritmos bem definidos para mesclagem de códigos, realizando autocompletes do código e avisando o desenvolvedor quando ocorrer conflitos entre o mesmo arquivo, só que de versões distintas.</li>
+  </ul>
+  <p>Para melhores informações sobre o Git visite: <a href="http://pt.wikipedia.org/wiki/Git" target="_blank">Wikipedia do Git.</a></p>
+  <p>Para iniciarmos, primeiro faça o download direto do site oficial do Git: <a href="http://git-scm.com/" target="_blank">www.git-scm.com</a>.</p>
+  <p>Ele é compatível com <strong>Windows, Mac e Linux</strong> e sua instalação é simples e sossegada.</p>
+  {% include content-ads.ext %}
+  <p>Agora vamos ao que interessa, abaixo listarei não todos, mas os comandos mais utilizados para gerenciar toda demanda de atualizações de um projeto:</p>
+  <ul>
+    <li><strong>git init</strong> - Criar um repositório Git dentro da pasta raíz do projeto, apartir desse comando será permitido realizar todo gerenciamento dos arquivos contidos nesse diretório, usando os demais comandos git citados abaixo.</li>
+    <li><strong>git status</strong> - Exibe o estado atual do repositório.</li>
+    <li><strong>git add .</strong> - Inclui todos os novos arquivos e os arquivos modificados para área de publicação <strong>(área de commits)</strong>.</li>
+    <li><strong>git add -i</strong> - Apresenta um menu para selecionar os arquivos a serem publicados.</li>
+    <li><strong>git reset</strong> - Retira todos os arquivos da área de publicação <strong>(área de commits).</strong></li>
+    <li><strong>git commit -m "Mensagem do commit."</strong> - Publica os arquivos que foram selecionados pelo comando <strong>git add</strong>.</li>
+    <li><strong>git commit -am "Mensagem do commit."</strong> - Seleciona todos os arquivos e depois publica-os <strong>(realiza um commit de todos os arquivos)</strong>.</li>
+    <li><strong>git checkout /diretorio/arquivo.txt</strong> - Desfaz as alterações realizadas no arquivo selecionado.</li>
+    <li><strong>git branch nome_da_branch</strong> - Cria um novo ramo <strong>branch</strong> para trabalhar no projeto.</li>
+    <li><strong>git checkout nome_da_branch</strong> - Entra em uma branch do projeto.</li>
+    <li><strong>git clone git://github.com/git/projeto.git</strong> - Faz download de um repositório online do git.</li>
+    <li><strong>git push</strong> - Envia todos os <strong>commits</strong> do computador local para um repositório online do git.</li>
+    <li><strong>git pull</strong> - Baixa as últimas alterações de um repositório online do git para o seu repositório local.</li>
+    <li><strong>git merge nome_da_branch</strong> - Mescla o conteúdo de uma <strong>branch</strong> selecionada com a branch que você está trabalhando.</li>
+  </ul>
+
+  <p>Espero que esse tutorial seja de grande utilidade, lembrando que para mais detalhes acesse os links abaixo:</p>
+  <ul>
+    <li><a href="http://git-scm.com/documentation" target="_blank">Documentação oficial do Git.</a></li>
+    <li><a href="http://www.fml.eti.br/wiki/index.php/Git" target="_blank">Git para preguisoços.</a></li>
+    <li><a href="http://github.com" target="_blank">Repositório online Github.</a></li>
+  </ul>
+</div>

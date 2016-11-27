@@ -1,0 +1,140 @@
+---
+layout: post
+title: Brincando de ES6 no Meteor
+tags: Meteor
+keywords: Meteor, ES6, EcmaScript 6, ES2015, EcmaScript 2015
+published: true
+description: Neste post mostrarei como utilizar alguns recursos legais do ES6 (aka ES2015) em um projeto Meteor de versão 1.2 ou superior, pelo qual nessas versões essa implementação já se encontra nativo no Meteor.
+image_url: meteor-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/meteor-logo.jpg" width="250" height="72" alt="Brincando de ES6 no Meteor" title="Brincando de ES6 no Meteor">
+</figure>
+<div class="post-content">
+  <p>
+    De volta a ativa no blog, hoje mostrarei como utilizar alguns recursos legais do ES6 em um projeto Meteor de versão 1.2 ou superior, pelo qual nessas versões o ES6 já esta nativo para uso.
+  </p>
+
+  <h2>Use const ou let no lugar de var</h2>
+  <p>
+    Agora no ES6 é possível criar constantes (<code>const</code>), que é um tipo de variável imutável, ou seja, você define uma única vez o valor de uma constante e nunca mais poderá mudar seu valor, aplicar esse recurso faz seu sistema utilizar menos memória, e toda vez que precisar criar uma variável mutável utilize o <code>let</code> no lugar do antigo <code>var</code>, outro detalhe importante é que ambos <code>const</code> e <code>let</code> são <strong>blocked-scoped</strong> e isso impedirá que a variável escape de seu escopo atual, evitando problemas de <a href="http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/" target="_blank">scope e hoisting</a>. Veja um exemplo:
+  </p>
+
+  <h4>Usando var</h4>
+{% highlight javascript %}
+for (var i = 1; i < 3; i++) {
+  Meteor.setTimeout(function () {
+    console.log(i);
+  }, 0); // 3 3 3 - Bug estranho!
+}
+console.log(i); // 3 - A variável i vazou de seu escopo
+{% endhighlight %}
+
+  <h4>Usando let</h4>
+{% highlight javascript %}
+for (let i = 1; i < 3; i++) {
+  Meteor.setTimeout(function () {
+    console.log(i);
+  }, 0); // 1 2 3 - Agora o resultado veio correto!
+}
+console.log(i); // undefined
+{% endhighlight %}
+
+  <h2>Use arrow-function no lugar de var self = this</h2>
+  <p>
+    O recurso <strong>arrow-function</strong> é sensacional! Além de encurtar o código na declaração de funções e funções callback substituindo a keyword <code>function() {}</code> por <code>() => {}</code>, ele permite compartilhar através do <code>this</code> atributos e funções entre uma função pai com uma função filha, removendo o workaround de criar uma varíavel com o estado do objeto pai (<code>var self = this;</code>). Veja o exemplo:
+  </p>
+
+  <h4>Sem arrow-function</h4>
+{% highlight javascript %}
+Template.dashboard.onRendered(function() {
+  this.msg = "Ola!";
+  var self = this;
+  Meteor.setTimeout(function() {
+    console.log(self.msg);
+  }, 1000);
+});
+{% endhighlight %}
+
+  <h4>Com arrow-function</h4>
+{% highlight javascript %}
+Template.dashboard.onRendered(() => {
+  this.msg = "Ola!";
+  Meteor.setTimeout(() => {
+    console.log(this.msg);
+  }, 1000);
+});
+{% endhighlight %}
+
+  <p>
+    <strong>Obs.:</strong> Atenção na versão Meteor 1.2 existe um bug que não permite usar <strong>arrow-function</strong> dentro da função <code>Meteor.publish()</code>, fazendo com que <code>this.userId</code> retorne <code>undefined</code>.
+  </p>
+
+  <h2>Template Strings</h2>
+  <p>
+    Template strings é um outro recurso bem legal, que ao invés de concatenar strings com variáveis, você simplesmente interpola as variáveis dentro da string, deixando-as mais elegante e legível. Para usá-lo, basta declarar uma string entre crases <code>(`String`)</code> e a interpolação das variáveis é feita através da <code>${variavel}</code>, veja um exemplo:
+  </p>
+
+  <h4>Concatenando string</h4>
+{% highlight javascript %}
+var ano = 2016;
+console.log("Feliz " + ano + "!");
+{% endhighlight %}
+
+  <h4>Interpolando string</h4>
+{% highlight javascript %}
+var ano = 2016;
+console.log(`Feliz ${ano}!`);
+{% endhighlight %}
+
+  <h2>Object Method</h2>
+  <p>
+    Object methods é apenas um <strong>syntax sugar</strong>, um encurtador de declaração de funções bem útil e facil de aplicar, veja:
+  </p>
+
+  <h4>Sem object method</h4>
+{% highlight javascript %}
+Template.body.helpers({
+  users: function() {
+    return Meteor.users.find({});
+  }
+});
+{% endhighlight %}
+
+  <h4>Com object method</h4>
+{% highlight javascript %}
+Template.body.helpers({
+  users() {
+    return Meteor.users.find({});
+  }
+});
+{% endhighlight %}
+
+  <h2>Criando Classes</h2>
+  <p>
+    Agora no ES6 você pode criar classes, deixando seu projeto mais orientado à objetos, no Meteor é possível fazer isso também, porém a maneira como você exporta uma classe no Meteor, ficou um pouco estranha devido ao seu contexto, veja:
+  </p>
+
+{% highlight javascript %}
+Cliente = class Cliente {
+  constructor(nome) {
+    this.nome = nome;
+  }
+}
+{% endhighlight %}
+  <p>
+    <strong>Obs.:</strong> Se você deixar apenas <code>class Cliente</code> ela não será global, impossibilitando seu uso em outros pontos da aplicação, como solução workaround você terá que declarar estranhamente <code>Cliente = class Cliente</code> para que seja criado uma variável global dessa classe.
+  </p>
+  <p>
+    Por enquanto é isso pessoal, feliz ano novo, até a próxima!
+  </p>
+  <h4>Boas referêcias:</h4>
+  <ul>
+    <li>
+      <a href="http://info.meteor.com/blog/es2015-get-started" target="_blank">Get started with ES2015 (ES6) and Meteor</a>
+    </li>
+    <li>
+      <a href="https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa" target="_blank">Real-World ES6 Examples in Meteor</a>
+    </li>
+  </ul>
+</div>

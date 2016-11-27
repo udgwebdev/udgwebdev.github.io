@@ -1,0 +1,234 @@
+---
+layout: post
+title: 15 JavaScript Hacks
+tags: ['Javascript']
+keywords: Javascript, JS, JS Hacks, Javascript Hacks
+published: true
+description: Neste post vou compartilhar 15 Hacks extremamente úteis para se aplicar em JavaScript. As dicas são um acumulado de magias avançadas que visam diminuir o tamanho do código ou realizar um código de forma muito eficiente.
+image_url: javascript-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/javascript-logo.jpg" width="250" height="250" alt="15 JavaScript Hacks" title="15 JavaScript Hacks">
+</figure>
+<div class="post-content">
+  <p>Neste post vou compartilhar 15 Hacks extremamente úteis para se aplicar em JavaScript. As dicas são um acumulado de magias avançadas que visam diminuir o tamanho do código ou realizar um código de forma muito eficiente. Então let's go hack!</p>
+
+  <h3>1) Concatenando strings direito</h3>
+  <p>Com certeza um dev já precisou uma vez na vida montar uma string com base na concatenação de outras strings e de alguma forma acabou criando um código similar a este:</p>
+
+{% highlight javascript %}
+  var result = "";
+  for (var i = 0; i < 100000; i++) {
+      var user = "user: " + i + "\n";
+      result += user;
+  }
+  console.log(result);
+{% endhighlight %}
+
+  <p>Sem dúvidas, a primeira solução que vem em mente é a de utilizar o operador <code>+=</code> para concatenar dados para uma string principal, isso é muito comum e largamente utilizado. Porém o problema surge somente quando você precisar concatenar muitos dados (principalmente quando são dados grandes!).<br>Neste caso o recomendado é trabalhar com arrays. Primeiro você cria o array (<code>var result = [];</code>), a cada iteração você vai adicionando os dados usando <code>result.push(valor)</code>, para que no final do loop a geração da string concatenada seja realizada via função <code>result.join("")</code>, veja abaixo:</p>
+
+{% highlight javascript %}
+  var result = [];
+  for (var i = 0; i < 100000; i++) {
+      var user = "User: " + i + "\n";
+      result.push(user);
+  }
+  console.log(result.join(""));
+{% endhighlight %}
+
+  <h3>2) Convertendo para boolean usando "!!"</h3>
+  <p>Muitas vezes precisamos checar a existência de uma variável, ou seja, se ela possui um valor válido que seja considerado como <strong>"valor verdadeiro"</strong>, para isso, utilizar <code>if (variavel)</code> automaticamente vai retornar falso se a variavel conter qualquer um desses valores: <code>false, 0, null, "", undefined ou NaN</code>, e é claro que diferente desses valores citados a condicional vai retornar verdadeiro.<br>
+  Porém as vezes, você pode precisar converter uma varíavel para boolean e ae neste caso o jeito eficiente é usar o operador <code>!!</code>, por exemplo:</p>
+
+{% highlight javascript %}
+  function User(name) {
+    this.name = name;
+    this.hasName = !!name;
+  }
+  var user = new User("Caio");
+  console.log(user.name); // Caio
+  console.log(user.hasName); // true
+{% endhighlight %}
+
+  <p>Neste caso qualquer tipo de valor válido que você inserir em <code>new User("Joao")</code> o seu atributo <code>this.hasName</code> será verdadeiro.</p>
+
+  <h3>3) Convertendo para numbers usando o operador "+"</h3>
+  <p>Essa magia é muito, mas muito foda! E também simples de se fazer. Quando uma string contém apenas números ela pode ser convertida para number utilizando apenas o operador <code>+</code>, caso contrário será retornado um <code>NaN</code> <strong>(Not a Number)</strong>. Veja esse exemplo:</p>
+
+{% highlight javascript %}
+  function toNumber(strNumber) {
+    return +strNumber;
+  }
+  console.log(toNumber("1234")); // 1234
+{% endhighlight %}
+
+  <h3>4) Capturando milisegundos de uma data usando denovo o "+"</h3>
+  <p>Assim como o operador <code>+</code> converte uma string para number, ele também converte um objeto Date para um number que consequentemente seu retorno será os milisegundos de uma data:</p>
+
+{% highlight javascript %}
+  console.log(+new Date()) // 1410480611962
+{% endhighlight %}
+
+  <h3>5) Condicionais usando short-circuits</h3>
+  <p>Se você tem um código semelhante a esse:</p>
+
+{% highlight javascript %}
+  if (conected) {
+    login();
+  }
+{% endhighlight %}
+
+  <p>Você pode encurtá-lo usando apenas a combinação de uma variável com uma função através do operador lógico <code>&&</code>. Resumindo, o código anterior pode ficar em uma única linha, da seguinte forma:</p>
+
+{% highlight javascript %}
+  conected && login();
+{% endhighlight %}
+
+  <p>O mesmo pode ser feito quando se precisa checar seu um objeto existe, para em seguida executar seu respectivo método:</p>
+
+{% highlight javascript %}
+  user && user.login();
+{% endhighlight %}
+
+  <h3>6) Use o operador "||" para criar default values</h3>
+  <p>Quando se tem um objeto que precisa de valores default quando nenhum parâmetro é passado para ele, você pode usar o operador lógico <code>||</code> para checar se será usado os parâmetros válidos do construtor ou se será usado um valor default, por exemplo:</p>
+
+{% highlight javascript %}
+  function User(name, age) {
+    this.name = name || "No name";
+    this.age = age || 18;
+  }
+  var user1 = new User();
+  console.log(user1.name); // No name
+  console.log(user1.age); // 18
+
+  var user2 = new User("Caio", 25);
+  console.log(user2.name); // Caio
+  console.log(user2.age); // 25
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+  <h3>7) Cacheando array.length em um loop</h3>
+  <p>Essa dica é muito simples e tem um impacto imenso quando se trabalha com arrays gigantes. Basicamente todo mundo itera um array da seguinte maneira:</p>
+
+{% highlight javascript %}
+  for(var i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+{% endhighlight %}
+
+  <p>Porém o grande erro do código anterior é que a cada iteração do loop o <code>array.length</code> é contabilizado, em arrays gigantes isso pode causar uma lentidão e a solução é simples, basta armazenar o <code>array.length</code> em uma variável para usá-la no loop:</p>
+
+{% highlight javascript %}
+  var length = array.length;
+  for(var i = 0; i < length; i++) {
+    console.log(array[i]);
+  }
+{% endhighlight %}
+
+  <p>Ou caso queria deixar esse loop mais enxuto, faça isso:</p>
+
+{% highlight javascript %}
+  for(var i = 0, length = array.length; i < length; i++) {
+    console.log(array[i]);
+  }
+{% endhighlight %}
+
+  <h3>8) Detectando propriedades em um objeto</h3>
+  <p>Sabe quando você precisa executar um método de um objeto, pelo qual você não sabe se o objeto existe? Um exemplo clássico são as distintas APIs do HTML que cada browser possui ou não possui, por exemplo, o <strong>Internet Explorer 7</strong> não possui as funções <code>document.querySelector</code> e <code>document.querySelectorAll</code>. Se você pretende criar uma biblioteca JavaScript cross-browser você terá que <strong>previnir null pointers</strong> checando se tal objeto possui um determinado método ou atributo. Neste caso você pode usar o operador <code>in</code> comparando se uma string (referente ao nome do atributo ou método) existe em um objeto. Para detectar se o browser possui a função <code>document.querySelector</code> você pode fazer o seguinte código:</p>
+
+{% highlight javascript %}
+  if ('querySelector' in document) {
+    document.querySelector("#id");
+  } else {
+    document.getElementById("id");
+  }
+{% endhighlight %}
+
+  <h3>9) Pegando o último elemento do array</h3>
+  <p>A função <code>Array.prototype.slice(begin, end)</code> tem o poder de cortar um array ou string com base nos parâmetros <code>begin</code> e <code>end</code>. Se você não informar o parâmetro <code>end</code> automaticamente será considerado o valor máximo do array, outro detalhe legal é que essa função também pode ser usada em strings, pelo qual tem o mesmo comportamento das funções <code>String.prototype.substr()</code> e <code>String.prototype.substring()</code>.<br>O que pouca gente sabe é que ao usar um valor negativo na função slice, você consegue pegar exatamente o último elemento ou os últimos elementos de um array, por exemplo:</p>
+
+{% highlight javascript %}
+  var arr = [1,2,3,4,5,6];
+  console.log(arr.slice(-1)); // [6]
+  console.log(arr.slice(-2)); // [5,6]
+  console.log(arr.slice(-3)); // [4,5,6]
+{% endhighlight %}
+
+  <h3>10) Array trucation</h3>
+  <p>Array trucation é a técnica de travar o tamanho de um array, forçando que o mesmo tenha um número restrito de elementos e caso o array tenha mais elementos do que o valor que pretende truncar, os elementos que sobrarem são excluídos. Na prática basta você definir um valor para o atributo <code>array.length</code> e pronto!</p>
+
+{% highlight javascript %}
+  var arr = [1,2,3,4,5,6];
+  console.log(arr.length); // 6
+  arr.length = 3;
+  console.log(arr.length); // 3
+{% endhighlight %}
+
+  <h3>11) Replace all</h3>
+  <p>A função <code>string.replace()</code> é muito útil quando se precisa substituir determinados trechos de uma string, o que torna ela muito foda é que ela permite utilizar <strong>expressão regular</strong> para fazer um <strong>match</strong> de caracteres. E graças a isso, é possível fazer com que essa função substitua numa única execução várias ocorrências repetidas, para isso basta utilizar o <code>/g</code> no final do match que pretende buscar:</p>
+
+{% highlight javascript %}
+  var string = "joão joão";
+  console.log(string.replace(/ão/, "ana")); // "joana joão"
+  console.log(string.replace(/ão/g, "ana")); // "joana joana"
+{% endhighlight %}
+
+  <h3>12) Combinando arrays</h3>
+  <p>A técnica de combinar arrays pode ser feita utilizando a função:</p>
+
+{% highlight javascript %}
+  var array1 = [1,2,3];
+  var array2 = [4,5,6];
+  console.log(array1.concat(array2)); // [1,2,3,4,5,6];
+{% endhighlight %}
+
+  <p>O único problema dessa função, é que ela é recomendada apenas quando se pretende combinar pequenos arrays, afinal essa função aumenta o uso de memória dos arrays até que o array final seja gerado e isso pode causar lentidão quando se pretende combinar dois ou <strong>mais arrays de 50000 elementos cada</strong>.<br>Se esse for o seu caso, utilize a função: <code>array.push.apply()</code> que é otimizada para trabalhar com arrays gigantes:</p>
+
+{% highlight javascript %}
+  var array1 = [1,2,3];
+  var array2 = [4,5,6];
+  console.log(array1.push.apply(array1, array2)); // [1,2,3,4,5,6];
+{% endhighlight %}
+
+  <h3>13) Transformando NodeList em arrays</h3>
+  <p>Se você executar <code>document.querySelectorAll("p")</code> com certeza será retornado um array de elementos do HTML, mais conhecidos como <code>NodeList</code>.<br>Porém um <code>NodeList</code> não possui todas funções de um array e caso você precise usar funções do tipo: <code>sort(), reduce(), map(), filter()</code>, você terá que converter um <code>NodeList</code> em um array. Para fazer essa conversão basta executar a função <code>[].slice.call(arguments)</code>, por exemplo:</p>
+
+{% highlight javascript %}
+  var elements = document.querySelectorAll("p"); // NodeList
+  var arrayElements = [].slice.call(elements); // Array de Nodes
+{% endhighlight %}
+
+  <h3>14) Embaralhando elementos do array</h3>
+  <p>Se você precisa embaralhar a ordem dos elementos de um array, faça a seguinte magia:</p>
+
+{% highlight javascript %}
+  var list = [1,2,3];
+  console.log(list.sort(function() Math.random() - 0.5)); // [2,1,3]
+{% endhighlight %}
+
+
+
+  <h3>15) Calculando idade</h3>
+  <p>Se você um dia precisar criar uma função que calcule a idade com base em uma data de nascimento, recomendo que utilize essa função que faz uma magia extremamente performática:</p>
+
+{% highlight javascript %}
+  function calcAge(dateString) {
+    var birthday = +new Date(dateString);
+    return ~~((Date.now() - birthday) / (31557600000));
+  }
+{% endhighlight %}
+
+  <p>Essa função eu achei no link: <a href="http://jsperf.com/birthday-calculation" target="_blank">http://jsperf.com/birthday-calculation</a> e desde então passei a usá-la como referência, pois obteve uma alta performance em um código minimalista.</p>
+
+  <p><strong>Referências:</strong>
+    <ul>
+      <li><a href="https://code.google.com/p/jslibs/wiki/JavascriptTips" target="_blank">https://code.google.com/p/jslibs/wiki/JavascriptTips</a></li>
+      <li><a href="http://davidwalsh.name/combining-js-arrays" target="_blank">http://davidwalsh.name/combining-js-arrays</a></li>
+      <li><a href="https://github.com/jed/140bytes/wiki/Byte-saving-techniques" target="_blank">https://github.com/jed/140bytes/wiki/Byte-saving-techniques</a></li>
+      <li><a href="http://blog.mdnbar.com/javascript-common-tricks" target="_blank">http://blog.mdnbar.com/javascript-common-tricks</a></li>
+      <li><a href="http://jsperf.com/birthday-calculation" target="_blank">http://jsperf.com/birthday-calculation</a></li>
+    </ul>
+  </p>
+</div>

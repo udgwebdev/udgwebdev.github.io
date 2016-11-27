@@ -1,0 +1,9 @@
+{
+  "title": "Usando Spread operator do ES6",
+  "tags": "Javascript",
+  "published": true,
+  "description": "Se você já trabalha com alguns recursos do ES6, recomendo a leitura desse post que vai falar sobre Spread Operator.",
+  "image_url": "es6-logo.jpg",
+  "slug": "usando-spread-operator-do-es6",
+  "created_at": "06/04/2016"
+}

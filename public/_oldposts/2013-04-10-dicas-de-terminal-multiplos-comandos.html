@@ -1,0 +1,28 @@
+---
+layout: post
+title: Dicas de terminal - Múltiplos comandos
+tags: ['Dicas de terminal']
+keywords: dicas de terminal, comando booleano, múltiplos comandos no terminal
+published: true
+description: Hoje a dica será simples de fazer e tão útil que vai te economizar tempo com console. Falarei sobre como realizar múltiplas tarefas no console.
+image_url: terminal-console-linux.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/terminal-console-linux.jpg" alt="Terminal Console Linux" width="200" height="200">
+  <figcaption>Terminal Console Linux</figcaption>
+</figure>
+<div class="post-content">
+  <p>Fala galera! Hoje a dica será bem simples de fazer e tão útil que vai te economizar tempo em frente o terminal console. Não falarei de nenhum comando específico e sim sobre como realizar múltiplas tarefas de forma ordenada em apenas uma linha de comando. Outro detalhe interessante é que essa dica também funciona no prompt de comandos do Windows, pois aplicamos apenas um conceito de lógica booleana entre os comandos para ele realizar várias tarefas.</p>
+
+  <p>Vamos a prática! Tenha em mente que você precise realizar mais de um comando no terminal. Por exemplo, vamos ao seguinte caso em que você precisa criar uma pasta chamada videos, mover arquivos da pasta filmes para ela e no final criar um arquivo vazio chamado <code>README.txt</code> dentro desse diretório, eae o que você faz? O jeito mais utilizado pela maioria seria fazer o todos os comandos um por vez.<br>
+  <code>1 - mkdir videos</code><br>
+  <code>2 - mv ~/Documents/filmes ~/Documents/videos</code><br>
+  <code>3 - touch README.txt</code></p>
+
+  <p>Porém a dica é digitar todos os comandos de uma vez, para depois o terminal realizar todas as tarefas sozinho, para fazer isso basta utilizar o <strong>comando booleano && (conhecido como "E" lógico)</strong> entre cada comando e veja como ficaria o exemplo anterior:<br>
+  <code>mkdir videos && mv ~/Documents/filmes ~/Documents/videos && touch README.txt</code></p>
+
+  {% include content-ads.ext %}
+
+  <p>Esse simples comando se torna muito útil quando se realiza tarefas repetidas do dia-a-dia, podendo criar <a href="{{ site.url }}/criando-comando-alias-no-bash-profile" target="_blank" rel="author">comando alias</a> de comandos para suas combinações de comandos utilizados com frequência. É isso ae pessoal, espero que tenham gostado dessa dica.</p>
+</div>

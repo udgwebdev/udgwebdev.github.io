@@ -1,0 +1,83 @@
+---
+layout: post
+title: Escrevendo JavaScript melhor - Parte 3
+tags: Javascript
+keywords: JavaScript, ES6
+published: true
+description: E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais.
+image_url: es6-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/es6-logo.jpg" width="250" height="250" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor">
+</figure>
+<div class="post-content">
+  <p>E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais.</p>
+
+  <h2>1) Verificando se um item existe em um array</h2>
+  <p>Para verificar se um determinado item existe em um array, praticamente muita gente já deve ter feito algo parecido com isso:</p>
+
+{% highlight javascript %}
+var itens = [1,2,3,4,6];
+var item = 4;
+var existe = false;
+for (var i = 0; i < itens.length; i++) {
+   if (itens[i] === item) {
+       existe = true;
+       break;
+   }
+}
+{% endhighlight %}
+
+  <p>Com certeza você já deve ter feito ou visto isso, seja em projetos grandes ou mini-projetos de lição de casa na faculdade!</p>
+  <p>É muito comum uma implementação desse tipo para verificar se um determinado item existe em um array, porém caso não conheça, no ES6 existe uma função muito enxuta para fazer esse tipo de checagem, se chama <code>includes()</code>, veja como usá-la:</p>
+
+{% highlight javascript %}
+var itens = [1,2,3,4,6];
+var item = 6;
+itens.includes(6); // Retorna true
+{% endhighlight %}
+
+  <h2>2) Simplificando comparações nulas</h2>
+  <p>O JavaScript é uma linguagem em que quando queremos verificar se tal variável não possui um valor, elas geralmente podem ter valores do tipo: <code>null</code>, <code>undefined</code>, <code>""</code> ou <code>false</code>.</p>
+  <p>Nesses casos é muito comum projetos verificarem esses valores da seguinte maneira:</p>
+
+{% highlight javascript %}
+if (foo !== null && foo !== undefined && foo !== "") {
+   fazerAlgo();
+}
+{% endhighlight %}
+
+  <p>Por favor, parem de escrever desse jeito! O código fica muiiiiitoooo feio!!!<br />
+    Caso não saiba, existe um simples shortcut lógico para verificar esses a existência desses valores no JavaScript, basta utilizar o operador lógico de negação ou dupla negação:</p>
+
+{% highlight javascript %}
+if (!!foo) {
+   fazerAlgo();
+}
+{% endhighlight %}
+
+  <p>Neste caso, se <code>foo</code> possuir um valor diferente de: <code>null</code>, <code>undefined</code>, <code>false</code>, <code>0</code> ou <code>""</code> então ele possui um valor válido, suficiente para retornar true nessa condicional.<br>Veja mais detalhes sobre essa dica nesse post: <a href="{{ site.url }}/15-javascript-hacks" target="_blank" rel="me" title="15 JavaScript Hacks">15 JavaScript Hacks</a></p>
+
+  <h2>3) Aplicando substring corretamente</h2>
+  <p>Em primeiro lugar, acredito que muita gente aplica substring corretamente, porém você sabe as diferenças entre as funções: <code>substring()</code> e <code>substr()</code>?</p>
+  <p>Basicamente ambas funções utilizam a mesma entrada de argumentos, o primeiro argumento é o indíce de ponto de partida, porém a diferença esta na semântica do segundo argumento de ambas funções, veja.</p>
+
+{% highlight javascript %}
+"JavaScript".substr(4, 6); // "Script"
+"JavaScript".substring(4, 6); // "Sc"
+{% endhighlight %}
+
+  <p>Em <code>substr(index, qtd)</code> o segundo parâmetro retorna a quantidade de caracteres a partir do index</p>
+  <p>Em <code>substring(start, end)</code> o segundo parâmetro retorna a posição final da string, ou seja, essa função retorna a substring com base na posição inicial até final</p>.
+
+  <p>
+    Veja também:<br />
+    <ul>
+      <li><a href="{{ site.url }}/escrevendo-javascript-melhor-parte-1" target="_blank" rel="me" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+      <li><a href="{{ site.url }}/escrevendo-javascript-melhor-parte-2" target="_blank" rel="me" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+      <li><a href="{{ site.url }}/escrevendo-javascript-melhor-parte-4" target="_blank" rel="me" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+    </ul>
+  </p>
+
+  <p>Até a próxima galera!</p>
+</div>

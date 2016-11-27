@@ -1,0 +1,115 @@
+---
+layout: post
+title: Frontend moderno com Browserify e Babel
+tags: ['Javascript', 'Node.js']
+keywords: Browserify, Babel, Babelify
+published: true
+description: Neste post vou explicar de forma rápida e bem prática como usar o melhor do Browserify e Babel no frontend de sua aplicação usando o plugin Babelify.
+image_url: browserify.jpg
+---
+<figure class="post-image">
+  <a href="http://browserify.org/" title="Browserify" target="_blank">
+    <img src="{{ site.url }}/images/browserify.jpg" width="250" height="111" alt="Browserify e Babelify" title="Browserify e Babelify">
+    <figcaption>Browserify e Babelify</figcaption>
+  </a>
+</figure>
+<div class="post-content">
+  <p>Nos dois últimos posts, expliquei sobre as vantagens de usar o Browserify através do post: <a href="{{ site.url }}/modularizando-frontend-javascript-com-browserify" target="_blank" rel="me">Modularizando Frontend JavaScript com Browserify</a> e também fiz um tutorial muito útil sobre como usar ES6 sem se preocupar com compatibilidades de browsers no post <a href="{{ site.url }}/frontend-lindo-usando-babel-para-rodar-es6" target="_blank" rel="me">Frontend lindo usando Babel para rodar ES6</a>.</p>
+  <p>Neste post vou explicar de forma rápida e bem prática como usar o melhor do Browserify e Babel no frontend de sua aplicação usando o plugin Babelify.</p>
+  <p>Se você já esta familiarizado com o Browserify, então será tranquilo usar o Babelify.</p>
+  <p>Para usá-lo você nem precisa ter o Babel instalado, somente o Browserify e Babelify, pois o Babelify é um plugin de transformação que incorpora as funcionalidades do Babel para rodar diretamente na compilação do Browserify. Para usá-los, primeiro instale o CLI do Browserify:</p>
+
+{% highlight bash %}
+npm install -g browserify
+{% endhighlight %}
+
+  <p>E depois instale em seu projeto o Babelify:</p>
+
+{% highlight bash %}
+npm install babelify --save-dev
+{% endhighlight %}
+
+  <p>Agora que temos Browserify e Babelify instalado vamos criar um simples código de classe em formato ES6, ele terá o nome <code>src/carro.js</code>:</p>
+
+{% highlight javascript %}
+class Carro {
+
+  constructor(modelo, ano) {
+    this.modelo = modelo;
+    this.ano = ano;
+  }
+
+  render() {
+    return `<h1>Carro: ${this.modelo} - ${this.ano}</h1>`;
+  }
+
+}
+module.exports = Carro;
+{% endhighlight %}
+
+  <p>Em seguida vamos criar o código <code>src/main.js</code> que vai carregar a classe Carro e instanciar um objeto Carro com o nome Fusca, no final vamos renderizar no body do html o resultado da método <code>fusca.render()</code>:</p>
+
+{% highlight javascript %}
+var Carro = require("./carro");
+
+window.onload = function() {
+  var fusca = new Carro("Fusca", 1980);
+  document.body.innerHTML = fusca.render();
+};
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+  
+  <p>Para finalizar crie também um html sem conteúdo, o <code>public/index.html</code> este estará no diretório public (ou em qualquer diretório diferente de src, afinal vamos concatenar e compilar todo os códigos do diretório src e o resultado precisa ser em outro diretório). Este html vai apenas carregar o JavaScript compilado pela dupla Babelify e Browserify:</p>
+
+{% highlight html %}
+{% raw %}
+<html>
+  <head>
+    <script src="main.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+{% endraw %}
+{% endhighlight %}
+
+  <p>Agora vamos fazer a mágica da compilação! No nosso exemplo, essa compilação precisa gerar o arquivo <code>public/main.js</code>, que estará no mesmo diretório do <code>public/index.html</code>, para fazer essa mágica execute o comando:</p>
+
+{% highlight bash %}
+browserify src/*.js -t babelify -o public/main.js
+{% endhighlight %}
+
+  <p>Pronto! Se tudo deu certo, ao acessar o <code>public/index.html</code> em seu browser, você terá a mensagem: <strong>Carro: Fusca - 1980</strong></p>
+
+  <p>O <a href="https://twitter.com/RikeSilverio" target="_blank" rel="nofollow">Henrique Silvério</a> fez um comentário abaixo muito interessante que eu não tinha testado e que realmente funciona, é possível carregar os módulos usando o padrão ES6 no lugar do padrão CommonJS. Como alternativa os códigos ficariam desse jeito:</p>
+
+{% highlight javascript %}
+class Carro {
+
+  constructor(modelo, ano) {
+    this.modelo = modelo;
+    this.ano = ano;
+  }
+
+  render() {
+    return `<h1>Carro: ${this.modelo} - ${this.ano}</h1>`;
+  }
+
+}
+export default Carro;
+{% endhighlight %}
+
+  <p>E em seguida...</p>
+
+{% highlight javascript %}
+import Carro from './carro';
+
+window.onload = function() {
+  var fusca = new Carro("Fusca", 1980);
+  document.body.innerHTML = fusca.render();
+};
+{% endhighlight %}
+
+  <p><strong>Final tip:</strong> Há uma lista com várias maneiras de usar o Babel com outros tipos de compiladores e sistemas de builds, para ver essas dicas recomendo que acessem o link da <a href="https://babeljs.io/docs/using-babel/" target="_blank">Documentação oficial do Babel</a>. Até a próxima!</p>
+</div>

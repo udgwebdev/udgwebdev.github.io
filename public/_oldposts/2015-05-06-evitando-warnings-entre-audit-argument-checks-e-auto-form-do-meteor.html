@@ -1,0 +1,74 @@
+---
+layout: post
+title: Evitando warnings entre audit-argument-checks e auto-form do Meteor
+tags: Meteor
+keywords: Meteor, auto-form, audit-argument-checks, check, Meteor methods
+published: true
+description: Este post é para quem esta desenvolvendo aplicações Meteor usando o auto-form e audit-argument-checks e anda recebendo warnings de que falta checar argumentos em um Meteor.methods().
+image_url: meteor-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/meteor-logo.jpg" width="250" height="72" alt="Meteor" title="Meteor">
+</figure>
+<div class="post-content">
+  <p>Este post é para quem esta desenvolvendo aplicações Meteor usando o incrível package <a href="https://atmospherejs.com/aldeed/autoform" target="_blank">auto-form</a> junto com <a href="https://atmospherejs.com/meteor/audit-argument-checks" target="_blank">audit-argument-checks</a> e anda recebendo warnings de que falta checar todos os argumentos em um <strong>Meteor.methods</strong>.</p>
+
+  <p>Vamos supor que você criou o seguinte form:</p>
+
+{% highlight html %}
+{% raw %}
+<template name="messageForm">
+  {{#autoForm type="method" meteormethod="sendMessage"}}
+    {{> afQuickField name="name"}}
+    {{> afQuickField name="email"}}
+    {{> afQuickField name="message" rows=6}}
+    <button type="submit">Send</button>
+  {{/autoForm}}
+</template>
+{% endraw %}
+{% endhighlight %}
+
+  <p>Este form irá submeter dados para o seguinte <strong>Meteor.methods</strong>:</p>
+
+{% highlight javascript %}
+Meteor.methods({
+  sendMessage: function(messageData) {
+    check(messageData, {
+      name: String,
+      email: String,
+      message: String
+    });
+    // Processar messageData após validação do check.
+  }
+});
+{% endhighlight %}
+
+  <p>Até aqui esta tudo bem, porém mesmo assim, ao submeter um form você recebe o seguinte warning:</p>
+
+{% highlight bash %}
+Exception while invoking method 'sendMessage' Error: Did not check() all arguments during call to 'sendMessage'
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+  <p>Caso você esteja passando por esse problema, eis uma simples solução, por default o auto-form envia dois parâmetros adicionais (<strong>modifier</strong> e <strong>docID</strong>) pelo qual eles não estão presentes na documentação do auto-form. Para remover definitivamente esse warning basta fazer um check desses parâmetros comparando-os com o <strong>Match.Any</strong> e pronto! Veja abaixo como solucionar isso:</p>
+
+{% highlight javascript %}
+Meteor.methods({
+  sendMessage: function(messageData, modifier, docID) {
+    check(messageData, {
+      name: String,
+      email: String,
+      message: String
+    });
+    check(modifier, Match.Any);
+    check(docID, Match.Any);
+    // Processar messageData após validação do check.
+  }
+});
+{% endhighlight %}
+
+  <p>Até a próxima!</p>
+
+  <p><strong>Fonte:</strong> <a href="http://sunkay.github.io/meteor/2015/02/24/autoform-audit" target="_blank">Meteor autoform and check audit errors (audit-argument-checks)</a></p>
+</div>

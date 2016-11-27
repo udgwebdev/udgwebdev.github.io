@@ -1,0 +1,8 @@
+{
+  "title": "Trabalhando com múltiplas contas do Heroku",
+  "tags": "PaaS",
+  "published": true,
+  "description": "O objetivo desse post é apresentar um plugin que resolve o problema de trabalhar na mesma máquina com múltiplas contas do Heroku.",
+  "slug": "trabalhando-com-multiplas-contas-do-heroku",
+  "created_at": "22/05/2012"
+}

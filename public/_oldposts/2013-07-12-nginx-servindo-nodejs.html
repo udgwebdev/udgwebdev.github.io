@@ -1,0 +1,120 @@
+---
+layout: post
+title: Nginx servindo Node.js
+tags: Node.js
+keywords: Nginx, Node.js, servidor estático, servidor proxy
+published: true
+description: Nesse post falarei um pouco mais sobre a união entre Node.js e Nginx, mostrando as vantagens desse casamento e como implementar um servidor estático + servidor proxy com eles.
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-nginx.jpg" width="250" height="165" alt="Node.js e Nginx" title="Node.js e Nginx">
+  <figcaption>Node.js e Nginx</figcaption>
+</figure>
+<div class="post-content">
+	<p>Nesse post falarei um pouco mais sobre a união entre Node.js e Nginx, mostrando as vantagens desse casamento e como implementar essa dupla corretamente.</p>
+	<p>O objetivo dessa integração visa aumentar performance de uma aplicação pelo qual criaremos um <strong>proxy server</strong> do Nginx com Node.js e também um <strong>static server</strong> pelo qual é delegado todo processamento de arquivos estático para o Nginx, deixando apenas que o Node.js cuide do processamento de suas rotas, diminuindo o número de requisições diretas na aplicação.</p>
+
+	<p><strong class="obs">Atenção:</strong> Não entrarei em detalhes sobre como instalar o Nginx em sua máquina, para instalá-lo recomendo que acesse seu site oficial: <a href="http://nginx.org" target="_blank">http://nginx.org</a>. Também recomendo que leia sua <a href="http://wiki.nginx.org/Main" target="_blank">Wiki</a> que contém diversas dicas de como configurá-lo. A versão utilizada neste post é a versão <strong>1.5.2</strong>, recomendo que <strong>não</strong> utilize versões anteriores a esta, pois provavelmente não irá funcionar a dica de configuração que explicarei a seguir.</p>
+
+	<p>Agora que temos o Nginx instalado e funcionando corretamente em sua máquina, vamos configurá-lo para que ele comece a servir arquivos estáticos de nossa aplicação, tudo isso será feito dentro de seu arquivo principal chamado <code>nginx.conf</code>. A localização deste arquivo varia de acordo com o sistema operacional, então recomendo que leia sua <a href="http://nginx.org/en/docs" target="_blank">documentação oficial</a> para descobrir onde ele se encontra.</p>
+
+	<p>Abaixo apresento uma versão simplificada de configuração do Nginx. Esta configuração fará o Nginx servir os arquivos estáticos ao invés do Node.js, e para finalizar aplicamos um <strong>proxy</strong> no Nginx para que ele redirecione para Node.js quando um usuário acessar uma rota da nossa aplicação.</p>
+
+{% highlight nginx %}
+worker_processes 1;
+events {
+  worker_connections 1024;
+}
+http {
+  include mime.types;
+  default_type application/octet-stream;
+  sendfile on;
+  keepalive_timeout 65;
+  gzip on;
+
+  server {
+	listen 80;
+	server_name localhost;
+	access_log logs/access.log;
+
+	location /static {
+	  root /meuapp/public;
+	  expires max;
+	}
+	location / {
+	  proxy_pass http://localhost:3000;
+    }
+  }
+}
+{% endhighlight %}
+
+	<p>Praticamente adicionamos algumas melhorias em cima das configurações padrões do <code>nginx.conf</code>. Com o objetivo de otimizar o servidor estático, habilitamos <strong>compactação gzip</strong>, através do trecho: <code>gzip on</code> e criamos dois <code>location</code> dentro de <code>server</code>. O primeiro <code>location</code> é responsável por servir conteúdo estático.
+
+{% highlight nginx %}
+location /static {
+  root /meuapp/public;
+  expires max;
+}
+{% endhighlight %}
+
+	<p>É dentro dele definimos a localização da pasta <code>public</code> da nossa aplicação através do trecho: <code>root /meuapp/public</code>. Esta localização definida no item <code>root</code> se baseia no endereço onde fica a pasta <code>public</code> do seu sistema operacional, ou seja, em <code>root /meuapp/public</code> estou assumindo que a pasta <code>meuapp</code> esta localizada na raíz do sistema operacional (geralmente sistemas <strong>Linux, Unix e MacOSX</strong> utilizam este padrão de endereço). Se o seu sistema é <strong>Windows</strong> altere o endereço para o padrão de diretórios dele, que é algo semelhante a <code>root C:/meuapp/public</code>. Também aplicamos dentro desse <code>location</code> um <strong>cache</strong> simples dos arquivos através do item: <code>expires max</code>.
+
+  {% include content-ads.ext %}
+
+	<p>No último <code>location</code>, aplicamos o <strong>proxy server</strong>, o item <code>proxy_pass</code> praticamente faz um redirecionamento para as demais rotas da aplicação e esse redirecionamento vai para o endereço: <code>http://localhost:3000</code>.
+
+{% highlight nginx %}
+location / {
+  proxy_pass http://localhost:3000;
+}
+{% endhighlight %}
+
+	<p>Agora que já configuramos o Nginx, vamos criar uma simples aplicação em Node.js. Crie o arquivo dentro da pasta <code>/meuapp</code> e também crie a pasta <code>/meuapp/public</code>. Abaixo segue o código-fonte da aplicação Node utilizando Express:</p>
+
+{% highlight javascript %}
+// Arquivo: app.js
+var express = require('express')
+  , app = express();
+
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.static(__dirname + '/public'));
+
+app.get('/node', function(req, res){
+  var html  = "<h1>Aqui é Node.js!</h1>"
+  	  		+ "<h1><a href='/static/nginx.html'>Ir para Nginx</a></h1>";
+  res.send(html);
+});
+
+app.listen(3000);
+{% endhighlight %}
+
+	<p>Vamos criar o arquivo <code>nginx.html</code> dentro da pasta <code>/meuapp/public/static</code>, para que este arquivo seja servido via Nginx.</p>
+
+{% highlight html %}
+<h1>Aqui é Nginx</h1>
+<h1><a href="/node">Ir para Node.js</a></h1>
+{% endhighlight %}
+
+	<p>Pronto! Criamos uma aplicação em Node.js que utiliza o Express, para rodá-lo, instale primeiro: <code>npm install express --save</code><br>Agora execute: <code>node app.js</code>.<br>Acesse no seu browser: <code>http://localhost:3000</code> e clique em ambos os links. Veja dessa vez os logs registraram acessos nas rotas: <code>/node</code> e <code>/nginx.html</code>.
+
+	<figure class="post-image">
+		<a href="{{ site.url }}/images/node-logger-sem-nginx-static.jpg" target="_blank">
+	  		<img src="{{ site.url }}/images/node-logger-sem-nginx-static-small.jpg" width="250" height="99" alt="Node.js servindo arquivo estático">
+	  		<figcaption>Node.js servindo estático (clique na imagem)</figcaption>
+	  	</a>
+	</figure>
+
+	<p>Isto é normal, visto que até agora o Node.js esta servindo arquivo estático e o Nginx não esta rodando seu <strong>proxy server</strong> por um motivo: você está acessando diretamente o servidor Node.js através da porta 3000.</p>
+
+	<p>Agora que temos o Nginx configurado, que tal testar essa integração? Reinicie o Nginx através do comando: <code>nginx -s reload</code>. E acesse sua aplicação através do novo endereço: <code>http://localhost</code>.</p>
+
+	<figure class="post-image">
+		<a href="{{ site.url }}/images/node-logger-com-nginx-static.jpg" target="_blank">
+	  		<img src="{{ site.url }}/images/node-logger-com-nginx-static-small.jpg" width="250" height="99" alt="Nginx servindo arquivo estático">
+	  		<figcaption>Nginx servindo estático (clique na imagem)</figcaption>
+	  	</a>
+	</figure>
+
+	<p>Dessa vez o seu log da aplicação Node.js vai apenas registrar acessos na rota <code>/node</code>, deixando que a rota <code>/nginx.html</code> seja acessada pelo Nginx.</p>
+</div>

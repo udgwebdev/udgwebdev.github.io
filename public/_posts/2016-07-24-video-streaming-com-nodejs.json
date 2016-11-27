@@ -4,5 +4,6 @@
   "published": true,
   "description": "Um quick post que explica na prática como montar um servidor de video streaming usando Node.js.",
   "image_url": "nodejs-logo.jpg",
+  "slug": "video-streaming-com-nodejs",
   "created_at": "24/07/2016"
 }

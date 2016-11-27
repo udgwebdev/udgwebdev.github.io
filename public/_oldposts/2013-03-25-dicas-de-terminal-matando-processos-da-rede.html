@@ -1,0 +1,31 @@
+---
+layout: post
+title: Dicas de terminal - Matando processos da rede
+tags: ['Dicas de terminal']
+keywords: Processos da rede, Matando processos, processos, terminal
+published: true
+description: A dica de hoje será sobre como descobrir e matar processos que utilizam uma porta específica da sua rede.
+image_url: terminal-console-linux.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/terminal-console-linux.jpg" alt="Terminal Console Linux" width="200" height="200">
+  <figcaption>Terminal Console Linux</figcaption>
+</figure>
+<div class="post-content">
+  <p>Com intuito de voltar a ativa neste blog, pretendo lançar uma séries de mini-posts com dicas rápidas para serem utilizados no terminal console do Linux. Estudarei profundamente em busca de comandos e combinações de comandos, que possam realmente agregar valores no seu dia-a-dia para automatizar seu Linux. Lembrando que todas as dicas servirão para qualquer <strong>distribuição Linux, sistemas Unix e MacOSX.</strong></p>
+  <p>Para começar, a dica de hoje será sobre como descobrir e matar processos que utilizam tal porta da rede, essa dica é muito útil quando se utiliza um programa rodando em background que trabalha utilizando uma porta específica (por exemplo porta 3000) e no momento em que você pretende utilizar um outro programa que por coincidência precisa usar a mesma porta, surge a necessidade de parar tal processo, pois quando acontece isso, <strong>é necessário matar um processo para liberar espaço para um outro utilizar a mesma porta da rede.</strong> Agora vamos na prática!</p>
+
+  <p>Abra seu terminal console e execute os comandos abaixo:</p>
+
+  <p>1 - Listar todos os processos que utilizam uma porta específica:<br>
+  <code>lsof -i :[Porta]</code><br>
+  <code>lsof -i :4000</code></p>
+
+  <p>2 - Matar processo baseado no pid que foi listado pelo comando anterior:<br>
+  <code>kill -9 [Número do pid do processo]</code><br>
+  <code>kill -9 1112</code></p>
+
+  {% include content-ads.ext %}
+
+  <p>Se quiser compartilhar suas dicas ou até mesmo gostaria de aprender como automatizar tal tarefa em seu Linux, mas não sabe como fazer isso, comente abaixo suas necessidades que estudarei como realizá-lo e publicarei nos futuros posts. Até a próxima!</p>
+</div>

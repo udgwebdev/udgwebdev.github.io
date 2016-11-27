@@ -1,0 +1,54 @@
+---
+layout: post
+title: Módulos essenciais para Node.js - Parte 1
+tags: Node.js
+description: Módulos Node.js, Node.js, Frameworks para Node.js
+published: tornou-se
+description: A proposta desse post é apresentar de forma bem resumida módulos do Node.js que são de grande utilidade em diversos aspectos do desenvolvimento de sistemas.
+image_url: nodejs-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-logo.jpg" width="250" height="86" alt="Node.js" title="Node.js">
+  <figcaption>Node.js</figcaption>
+</figure>
+<div class="post-content">
+  <p>Atualmente em sua versão estável <strong>0.10.12</strong> muitas novidades surgiram para universo Node.js. Pouco a pouco novos projetos de grandes e pequenas empresas estão surgindo com esta tecnologia. Outro fator importamente é os surgimento de inúmeros módulos que visam resolver diversos tipos de problemas nesta plataforma.</p>
+
+  <p>O objetivo deste post é apresentar de forma bem resumida, os essenciais módulos do Node.js, para te dar um norte ao caminho do desenvolvimento de sua aplicação Node.js. Confira abaixo quem são:</p>
+
+  <h4>Connect</h4>
+  <p>Ele é criado em cima do <a href="http://nodejs.org/api/http.html" target="_blank">módulo http</a> nativo do Node.js, com ele será possível criar sistemas com alto nível de configurações de servidor. Ele é base em diversos módulos para <strong>desenvolvimento Web MVC</strong>. Ele é recomendado para o desenvolvimento de projetos pequenos, que utilizam poucas rotas, ou projetos que utilizam diversos middlewares de configuração do servidor, por exemplo: <strong>Logger, Gzip, JSON Parser, Session, Cookie, Static Cache</strong> e muito mais. Um bom exemplo são os sistemas <strong>single-page</strong>, onde o foco de interação do sistema é centralizado em uma única página dinâmica ou um servidor de widgets.<br>
+  Site: <a href="http://www.senchalabs.org/connect/" target="_blank">http://www.senchalabs.org/connect</a></p>
+
+  <h4>Express</h4>
+  <p>Ele utiliza o Connect por trás dos panos. Por isso é possível utilizar todo o poder do <strong>Connect</strong>, junto ao um roteador de url robusto. Sua simplicidade é muito semelhante ao <a href="http://www.sinatrarb.com/" target="_blank">Sinatra do Ruby</a> e existem diversos projetos na web feitos por ele (<a href="https://new.myspace.com" target="_blank">MySpaces</a>, <a href="https://www.learnboost.com" target="_blank">LearnBoost</a>, <a href="http://storify.com/" target="_blank">Storify</a>, <a href="http://treinosmart.com" target="_blank">TreinoSmart</a> e <a href="http://expressjs.com/applications.html" target="_blank">outros</a>). Ele é um framework ideal para criação de projetos pequeno à grande porte, e toda a organização dos códigos fica a critério do desenvolvedor. Ou seja, você pode montar um projeto em <strong>MVC (Model-View-Controller), MVR (Model-View-Routes), Single-page</strong> e entre outros patterns.<br>
+  Site: <a href="http://expressjs.com/" target="_blank">http://expressjs.com</a></p>
+
+  <h4>Sails</h4>
+  <p>Ele é mais novo framework MVC lançado para Node.js, sua estrutura e filosofia de desenvolvimento foi inspirado pelo <a href="http://rubyonrails.org/" target="_blank">Rails</a>, porém ele é focado no desenvolvimento de <strong>APIs e comunicação real-time</strong>, ou seja, suas rotas retornam tanto resultados no formato JSON (típicos de <strong>API RESTFul</strong>) como também são acessadas via <strong>WebSockets</strong> permitindo uma comunicação bi-direcional com servidor. Ele apesar de ser novo, é perfeito para desenvolver projetos de médio a grande porte.<br>
+  Site: <a href="http://sailsjs.org/" target="_blank">http://sailsjs.org</a></p>
+
+  <h4>Meteor</h4>
+  <p>Este é um framework totalmente inovador focado no desenvolvimento de sistemas real-time. Ele utiliza o <strong>Express + Socket.IO + Mongoose</strong> internamente, permitindo o acesso direto ao banco de dados tanto no back-end como no front-end. Com apenas 3 arquivos <strong>(JS/HTML/CSS)</strong> já é possível criar uma mini aplicação 100% real-time nesta plataforma. Recomendado para o desenvolvimento de aplicações single-page que necessitam de interações em tempo real com o usuário.<br>
+  Site: <a href="http://meteor.com/" target="_blank">http://meteor.com</a></p>
+
+  <h4>Socket.IO</h4>
+  <p>Com a popularização do <strong>HTML5 WebSockets</strong> tornou-se viável criar sistemas real-time. Porém o grande problema é que não são todos os browsers compatíveis com esta tecnologia. Foi apartir deste problema que nasceu o Socket.IO, um módulo <strong>cross-browser</strong> que permite comunicar-se entre cliente e servidor em real-time de uma forma mágica! Além do WebSockets, ele possui outros <strong>transporters</strong>: <strong>FlashSocket, Ajax Long Polling, Forever Iframe, JSONP Polling.</strong> Estes recursos visam manter uma comunicação real-time quando o browser não possuir nativamente o WebSockets, garantindo que até no <strong>Internet Explorer 6</strong> tenha interação em tempo real.<br>
+  Site: <a href="http://socket.io" target="_blank">http://socket.io</a></p>
+
+  <h4>Engine.IO</h4>
+  <p>Este é a versão minimalista do <strong>Socket.IO</strong>. Sua interface foi projetada para ser o mais próximo do <strong>padrão WebSockets do HTML5</strong>. Ele possui apenas 3 <strong>transporters</strong>: <strong>WebSockets, FlashSockets e JSONP Long Polling</strong>. Este é o mais recente módulo real-time para Node.js criado pelos mesmos desenvolvedores do Socket.IO. Ele é um módulo <strong>leve e de baixo nível</strong>. Uma boa comparação é que assim como <strong>Connect</strong> esta para o <strong>Express</strong>, o <strong>Engine.IO</strong> esta para o <strong>Socket.IO</strong>.<br>
+  Site: <a href="https://github.com/LearnBoost/engine.io" target="_blank">https://github.com/LearnBoost/engine.io</a></p>
+
+  <h4>Underscore</h4>
+  <p>Este módulo é o famoso <strong>kit de ferramentas para o Node.js</strong>. Com ele é possível manipular estruturas complexas com muita facilidade. Sua documentação tem diversas funções que fazem manipulações milagrosas com Arrays e objetos JSON. É um módulo recomendado para estar presente em qualquer projeto que exija manipulações complexas de estrutura de dados. Ele é compatível tanto no <strong>Node.js como no Javascript client-side</strong>.<br>
+  Site: <a href="http://underscorejs.org" target="_blank">http://underscorejs.org</a></p>
+
+  <h4>Moment</h4>
+  <p>Se você precisa trabalhar com <strong>parsers, validações e formatações de datas</strong> ou até mesmo lidar com manipulações temporais. Este é o módulo perfeito para ti! Ele faz possui uma interface muito simples para lidar com o objeto Date do Javascript. Assim como o Underscore, ele é compatível tanto no <strong>Node.js como Javascript client-side</strong>. Esta é uma biblioteca recomendada para qualquer tipo de sistemas, afinal quem nunca precisou apresentar de forma amigável uma data no sistema?<br>
+  Site: <a href="http://momentjs.com/" target="_blank">http://momentjs.com</a></p>
+
+  {% include content-ads.ext %}
+
+  <p>Por enquanto é isso, em breve continuarei este post apresentando mais alguns módulos que vão te ajudar e muito no desenvolvimento de sua aplicação Node.js.</p>
+</div>

@@ -1,0 +1,104 @@
+---
+layout: post
+title: Meteor e SEO
+tags: Meteor
+keywords: Meteor, SEO, PhantomJS
+published: true
+description: Se você trabalha desenvolvendo aplicações com o incrível framework Meteor, com certeza você já deve ter questionado sobre como tornar minha aplicação SEO like, entenda nesse post como fazer isso.
+image_url: meteor-seo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/meteor-seo.jpg" width="250" height="208" alt="Meteor e SEO" title="Meteor e SEO">
+</figure>
+<div class="post-content">
+  <h2>Problema do Meteor em relação ao SEO</h2>
+  <p>Se você trabalha ou já trabalhou desenvolvendo aplicações com o incrível framework Meteor, com certeza você já deve ter questionado sobre como posso tornar minha aplicação compatível com SEO. Afinal o Meteor renderiza templates de HTML no client-side, pelo qual apenas dados são trafegado via server-side. Atualmente os crawlers não indexam conteúdos de dinâmico vindos do protocolo DDP. Uma aplicação compatível com SEO precisa renderizar do server-side uma página HTML completa, para que os crawlers analisem o conteúdo dos HTMLs.</p>
+
+  <h2>A solução</h2>
+  <p>Como solução, existe um package nativo do Meteor que força a renderização dos templates via server-side apenas para os crawlers, ou seja, sua aplicação vai renderizar templates no client-side para um usuário e via server-side um HTML será processado e renderizado quando um robot dos crawlers acessarem sua aplicação. Tecnicamente falando, esse package utiliza o PhantomJS (que é um browser headless) para renderizar o conteúdo dinâmico e em seguida retornar um HTML final para os crawlers indexarem-os. Tudo isso é possível usando o package <code>spiderable</code>.
+
+  {% include content-ads.ext %}
+  
+  <h2>Hands on code!</h2>
+  <p>Para mostrar na prática, primeiro vamos criar uma simples aplicação Meteor que terá algumas metatags e conteúdo mínimo a ser indexado pelos crawlers. Para criar uma aplicação Meteor execute os comandos:</p>
+
+{% highlight bash %}
+meteor create myblog
+cd myblog
+{% endhighlight %}
+
+  <p>Em seguida, vamos editar o <code>myblog.html</code> para ter algum conteúdo e metatags relevantes para SEO:</p>
+
+{% highlight html %}
+{% raw %}
+<head>
+  <title>MyBlog</title>
+  <meta name="description" content="Este é um blog criado em Meteor">
+  <meta name="author" content="Caio Ribeiro Pereira">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MyBlog">
+  <meta property="og:description" content="Este é um blog criado em Meteor">
+  <meta property="og:site_name" content="MyBlog">
+  <meta property="og:url" content="http://localhost:3000">
+</head>
+<body>
+  <h1>Welcome to MyBlog!</h1>
+  {{> article}}
+</body>
+<template name="article">
+  {{#each posts}}
+    <article>
+      <h1>{{title}}</h1>
+      <p>{{content}}</p>
+    </article>
+  {{else}}
+    <p>Nenhum post publicado.</p>
+  {{/each}}
+</template>
+{% endraw %}
+{% endhighlight %}
+
+  <p>Repare que o conteúdo e metatags foram incluídas dinamicamente pelo server-side, ou seja, apenas os dados serão enviados do server para o client processar e renderizar os templates. Esses dados dinâmicos vamos incluir no <code>myblog.js</code> através de um json estático que servirá para o nosso exemplo:</p>
+
+{% highlight javascript %}
+if (Meteor.isClient) {
+  Template.article.helpers({
+    posts: function () {
+      return [
+        {
+          title: "Meu primeiro post",
+          content: "Neste post vou falar pela primeira do meu primeiro post."
+        },
+        {
+          title: "Último post do blog",
+          content: "Infelizmente o blog acabou e este é meu último post."
+        }
+      ]
+    }
+  });
+}
+{% endhighlight %}
+
+  <p>De fato estamos apenas usando um JSON estático no servidor que também pode ser uma collection do MongoDB ou um JSON de um sistema externo, para o nosso exemplo, não importa de onde virão os dados, o que importa é eles sejam repassados do servidor para o cliente. Esse é um procedimento nativo do Meteor que também é uma característica muito comum em frameworks SPA (Single-Page Application).</p>
+
+  {% include content-ads.ext %}
+
+  <p>Se você rodar o comando <code>meteor</code> e em seguida acessar o endereço <a href="http://localhost:3000" target="_blank" rel="nofollow">http://localhost:3000</a>, com certeza, você usuário vai visualizar os templates corretamente, exceto os crawlers...</p>
+
+  <p>...como dito antes, o package <code>spiderable</code> resolve esse problema de indexação de conteúdo para uma aplicação Meteor. Antes de instalar o <code>spiderable</code> é necessário instalar antes o PhantomJS, e para isso recomendo que acesse esse link <a href="http://phantomjs.org/download.html" target="_blank">http://phantomjs.org/download.html</a> para instalar uma versão compatível com seu sistema operacional. Depois basta rodar o comando:</p>
+
+{% highlight bash %}
+meteor add spiderable
+{% endhighlight %}
+
+  <p>E pronto! Você não precisa fazer nenhuma implementação de código adicional, este package se encarrega de fazer o resto.<br>Para verificar se ele esta funcionando basta acessar o endereço: <a href="http://localhost:3000/?_escaped_fragment_=1" target="_blank" rel="nofollow">http://localhost:3000/?_escaped_fragment_=1</a> e veja se a mesma página foi renderizada em seu browser.</p>
+
+  <p><strong>Fontes:</strong>
+    <ul>
+      <li><a href="https://gentlenode.com/journal/meteor-12-the-complete-guide-to-seo/20" target="_blank">METEOR #12: THE COMPLETE GUIDE TO SEO</a></li>
+      <li><a href="http://www.manuel-schoebel.com/blog/meteor-and-seo" target="_blank">Meteor and SEO</a></li>
+      <li><a href="https://meteorhacks.com/meteor-seo-google-fetch-and-render.html" target="_blank">Meteor SEO - Google Fetch & Render</a></li>
+    </ul>
+  </p>
+</div>

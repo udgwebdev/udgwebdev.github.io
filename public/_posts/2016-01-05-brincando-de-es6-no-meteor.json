@@ -1,0 +1,9 @@
+{
+  "title": "Brincando de ES6 no Meteor",
+  "tags": "Meteor",
+  "published": true,
+  "description": "Neste post mostrarei como utilizar alguns recursos legais do ES6 (aka ES2015) em um projeto Meteor de versão 1.2 ou superior, pelo qual nessas versões essa implementação já se encontra nativo no Meteor.",
+  "image_url": "meteor-logo.jpg",
+  "slug": "brincando-de-es6-no-meteor",
+  "created_at": "05/01/2016"
+}

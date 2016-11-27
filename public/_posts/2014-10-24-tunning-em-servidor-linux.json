@@ -1,0 +1,11 @@
+{
+  "title": "Tunning em servidor Linux",
+  "tags": [
+    "Sistemas operacionais"
+  ],
+  "published": true,
+  "description": "Neste post apresentarei uma série de configurações que vale a pena aplicar em uma máquina Linux. Essas configurações, na maioria dos casos vão aumentar a performance de 10% à 40% em seu servidor.",
+  "image_url": "terminal-console-linux.jpg",
+  "slug": "tunning-em-servidor-linux",
+  "created_at": "24/10/2014"
+}

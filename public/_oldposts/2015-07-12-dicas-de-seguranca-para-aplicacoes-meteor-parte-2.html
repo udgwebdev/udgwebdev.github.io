@@ -1,0 +1,79 @@
+---
+layout: post
+title: Dicas de segurança para aplicações Meteor - Parte 2
+tags: Meteor
+keywords: Meteor, MongoDB fields, Meteor.settings
+published: true
+description: Dando continuidade ao post Dicas de segurança para aplicações Meteor, apresentarei mais algumas dicas de fácil implementação e que vão manter sua aplicação Meteor blindada!
+image_url: meteor-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/meteor-logo.jpg" width="250" height="72" alt="Meteor" title="Meteor">
+</figure>
+<div class="post-content">
+  <p>Dando continuidade ao post <a href="{{site.url}}/dicas-de-seguranca-para-aplicacoes-meteor" title="Dicas de segurança para aplicações Meteor" rel="me">Dicas de segurança para aplicações Meteor</a>, apresentarei mais algumas dicas de fácil implementação e que vão manter sua aplicação Meteor blindada!</p>
+
+  <h2>Utilize corretamente o fields do MongoDB</h2>
+
+  <p>Se você criar um <code>Meteor.publish</code> é de extrema importância que a query a ser executada no callback dessa função retorne somente os campos necessários como resultado. Por exemplo, vamos supor que sua aplicação utiliza somente uma única Collection (Pode ser o default <code>Meteor.users</code> que é praticamente a collection users no MongoDB) com vários campos, porém cada Meteor.publish precisa retornar somente os dados necessários para tal template da aplicação, e mais, nessa mesma collection existem alguns dados que jamais deverão ser expostos, como por exemplo, senhas, login, emails e etc. Neste caso você pode fazer uma query bem detalhada usando o atributo <code>fields</code> com subatributos representando os campos que deseja retornar, veja a seguir:</p>
+
+{% highlight javascript %}
+Meteor.publish("profile", function() {
+  return Meteor.users.find(
+    {_id: this.userId},
+    {fields: {name: 1, description: 1}}
+  );
+});
+{% endhighlight %}
+
+  <p>Neste caso quando o cliente executar <code>Meteor.subscribe("profile")</code>, toda execução de query do minimongo retornará um <code>Meteor.user</code> somente com os atributos <code>name</code> e <code>description</code>. Isso vai evitar por exemplo que essa query não vaze outros atributos sensíveis no client-side da aplicação.</p>
+
+  {% include content-ads.ext %}
+
+  <h2>Organizando dados de configurações com Meteor.settings</h2>
+
+  <p>Jamais deixe dados de configurações em código JavaScript, por mais que seja em códigos somente vistos no server-side, evite fazer por exemplo um código parecido como esse:</p>
+
+{% highlight javascript %}
+ServiceConfiguration.configurations.upsert(
+  { service: "twitter" },
+  {
+    $set: {
+      consumerKey: "ABC",
+      secret: "123456"
+    }
+  }
+);
+{% endhighlight %}
+
+  <p>Ao invés de deixar esses campos de chaves secretas expostos no código JavaScript, utilize o padrão <code>Meteor.settings</code>. Para usá-lo é muito simples. Primeiro crie na raíz do seu projeto o arquivo <code>settings.json</code>, esse também pode ser criado com outro nome e também é possível ter múltiplos arquivos desse, cada um voltado para um ambiente da aplicação, exemplo: <code>settings.development.json</code>, <code>settings.staging.json</code> e <code>settings.production.json</code>. No nosso caso prático vamos apenas trabalhar com <code>settings.json</code>:</p>
+
+{% highlight json %}
+{
+  "twitter": {
+    "consumerKey": "ABC",
+    "secret": "123456"
+  },
+  "public": {
+    "appName": "My app"
+  }
+}
+{% endhighlight %}
+
+  <p>Neste <code>settings.json</code> você só precisa organizá-lo da seguinte maneira: Tudo que estiver dentro do atributo <code>"public"</code> será exposto no client-side, o resto somente será visualizado no server-side da aplicação. Para consumir os dados desse <code>settings.json</code> você pode usar o objeto <code>Meteor.settings</code> no server-side e <code>Meteor.settings.public</code> no client-side. Refatorando o código anterior, você pode fazer algo mais organizado seguindo esse código:</p>
+
+{% highlight javascript %}
+ServiceConfiguration.configurations.upsert(
+  { service: "twitter" },
+  { $set: Meteor.settings.twitter }
+);
+{% endhighlight %}
+
+  <p>Para rodar sua aplicação já carregando os dados do arquivo <code>settings.json</code>, apenas execute o comando:</p>
+
+{% highlight bash %}
+meteor --settings=settings.json
+{% endhighlight %}
+
+  <p>Veja mais posts sobre <a href="{{site.url}}/meteor" rel="me">Meteor aqui</a>. See ya!</p>
+</div>

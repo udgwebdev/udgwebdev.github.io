@@ -1,0 +1,235 @@
+---
+layout: post
+title: Node.js para leigos - Jade Template Engine
+tags: Node.js
+keywords: Curso de Node.js, Node.js, Node.js para leigos, Jade, Jade template engine
+published: true
+description: O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby. Sua síntaxe é totalmente diferente do HTML convencional.
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-para-leigos.jpg" width="250" height="137" alt="Curso de Node.js" title="Curso de Node.js">
+  <figcaption>Curso de Node.js</figcaption>
+</figure>
+<div class="post-content">
+	<p>Hoje apresentarei um íncrivel template engine para node.js, seu nome se chama Jade. Digo íncrivel por que com ele será possível desenvolver códigos html com uma síntaxe muito limpa, com regras de identação semelhantes a linguagem Python <strong>(através de espaçamentos ou tabulações de código, porém jamais tente as duas regras no mesmo código!)</strong>, integração com comandos do servidor e  trabalhando de forma otimizada reaproveitando e extendendo trechos das views.</p>
+	<p>O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby, sua sintaxe é totalmente diferente do HTML convencional, veja o código abaixo:</p>
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jade</title>
+    <script>
+      if (foo) {
+        bar();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Template engine</h1>
+    <div id="container">
+      <p>Jade</p>
+    </div>
+  </body>
+</html>
+{% endhighlight %}
+
+	<p>Ele foi substituído pelo código abaixo:</p>
+
+{% highlight javascript %}
+!!! 5
+html(lang="en")
+  head
+    title Jade
+    script
+      if (foo) {
+        bar();
+      }
+  body
+    h1 Template engine
+    #container
+      p Jade
+{% endhighlight %}
+
+	<p>Algo que melhora drasticamente a legibilidade do código, permitindo que você desenvolva mais com menos esforço. Outro destaque do Jade é a possibilidade de trabalhar com código server-side junto ao código client-side, ou seja, código javascript server-side misturado com código html ou javascript client-side, para isso é necessário utilizar alguns comandos para <strong>"escapar"</strong> determinado comando de forma que o Jade reconheça quem é quem. Um bom exemplo disso é o código abaixo:</p>
+{% highlight javascript %}
+!!! 5
+html(lang="en")
+  head
+    title Jade
+    script
+      // #{usuario.nome} é uma variável do server-side.
+      var nome = '#{usuario.nome}';
+      // Nome é variável client-side
+      alert(nome);
+  body
+    #container
+      // Comando server-side para exibição do nome do usuário.
+      if(usuario)
+        p #{usuario.nome}
+      else
+        p Não informado.
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+	<p>O Jade possui alguns <strong>shortcuts-commands</strong>, que visam agilizar e reduzir a complexidade do seu código, abaixo listarei alguns comandos e seus respectivos shortcuts:</p>
+	<ul>
+		<li>div(id='containter', class='menu') ---> <strong>#container.menu</strong></li>
+		<li>doctype 5 ---> <strong>!!! 5</strong></li>
+		<li>p= nome ---> <strong>p #{nome}</strong></li>
+	</ul>
+
+	<p>Trabalhando com Jade é possível desenvolver <strong>views reaproveitáveis</strong>, evitando o desperdício de repetir código em diversas partes do layout da aplicação.</p>
+{% highlight javascript %}
+// header.jade
+header
+  h1 Hey this is Jade!
+{% endhighlight %}
+
+{% highlight javascript %}
+// footer.jade
+footer
+  small Bye! See you later!
+{% endhighlight %}
+
+{% highlight javascript %}
+// main.jade
+!!! 5
+html
+  head
+    title This is Jade
+  body
+    include header
+    section
+      p This is a post about jade template engine, enjoy it!
+    include footer
+{% endhighlight %}
+
+	<p>Repare que no código <strong>main.jade</strong> reaproveitamos o header e footer que são arquivos separados, e a inclusão foi feita através do <strong>método include</strong>. Outro meio de reaproveitar código é através dos comandos <strong>extends e block</strong>, que geralmente são utilizados para trabalhar com o conceito de <strong>layout</strong>, onde criamos uma página principal que receberá em alguns pontos outras views.</p>
+
+{% highlight javascript %}
+// main.jade
+!!! 5
+html
+  head
+    title Jade
+  body
+    block body
+{% endhighlight %}
+
+	<p>Todas as demais views serão incluídas através do body via comando <strong>block</strong>, abaixo segue um exemplo em que a página extende o layout para ela mesma.</p>
+
+{% highlight javascript %}
+// list.jade
+extends main_layout
+block body
+  ul
+    li Jade
+    li Template
+    li Engine
+    li For
+    li Node.js
+{% endhighlight %}
+
+	<p>Basicamente extendemos o <strong>main_layout.jade</strong> para o <strong>list.jade</strong> em que incluímos os componentes do html dentro do <strong>block body</strong>. Podemos até misturar ambos os comandos <strong>include, extends e block</strong>, fazendo com que o <strong>list.jade</strong> fique dessa maneira:</p>
+{% highlight javascript %}
+extends main_layout
+block body
+  include header
+  section
+    ul
+      li Jade
+      li Template
+      li Engine
+      li For
+      li Node.js
+  include footer
+{% endhighlight %}
+
+	<p>Agora listarei algumas dicas, que serão essenciais para trabalhar de forma produtiva com Jade:</p>
+	<ul>
+		<li>Respeite a regra de identação utilize espaçamento ou tabulação e NUNCA os dois no mesmo código.</li>
+		<li>Código Javascript client-side também precisa respeitar a regra de identação para evitar problemas com Jade.</li>
+		<li>Utilize comandos <strong>shortcuts-commands</strong> na medida do possível, para diminuir o número de códigos.</li>
+		<li>Trabalhe com os comandos <strong>include</strong>, <strong>block</strong> e <strong>extends</strong> para separar códigos que possam ser reaproveitados em mais de uma view, para isso, identifique em suas views quais trechos de código html ou javascript se repetem com frequência e aplique esses conceitos de <strong>extensão e reaproveitamento das views.</strong></li>
+	</ul>
+	<p>Voltando a nossa mini-aplicação de cadastro de clientes, agora implementaremos as views utilizando o Jade no lugar do atual EJS. O primeiro passo é configurar no Express o template engine Jade. Execute o comando no terminal console ou prompt de comando:
+	<p><code>npm install jade</code></p>
+	<p>E modifique o <strong>app.js</strong>:</p>
+{% highlight javascript %}
+app.configure(function(){
+  app.set('views', __dirname + '/views');
+  // Apenas modifique de ejs para jade.
+  app.set('view engine', 'jade');
+  app.set('view options', {layout: false});
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+});
+{% endhighlight %}
+	<p>Agora vamos alterar as atuais views, primeiro renomeie as extensões dos arquivos: <strong>index.ejs, edit.ejs, 500.ejs e 404.ejs</strong> para <strong>.jade</strong>, e agora mãos a obra!
+
+{% highlight javascript %}
+// index.jade
+!!! 5
+html
+  body
+    h1 Cadastro de cliente
+    form(action="/cliente", method="post")
+      label Nome:
+        input(type="text", name="cliente[nome]")
+      label Idade:
+        input(type="text", name="cliente[idade]")
+      button(type="submit") Enviar
+    h1 Lista de clientes
+    ul
+      each cliente, i in clientes
+        li #{cliente.nome} - #{cliente.idade}
+          a(href="/cliente/#{i}/editar") Editar
+          a(href="/cliente/#{i}") Excluir
+{% endhighlight %}
+
+{% highlight javascript %}
+// edit.jade
+!!! 5
+html
+  body
+    h1 Editar dados do cliente: #{cliente.nome}
+    form(action="/cliente/#{id}", method="post")
+      input(type="hidden", name="_method", value="put")
+      label Nome:
+        input(type="text", name="cliente[nome]", value="#{cliente.nome}")
+      label Idade:
+        input(type="text", name="cliente[idade]", value="#{cliente.idade}")
+			button(type="submit") Enviar
+{% endhighlight %}
+
+{% highlight javascript %}
+// 404.jade
+!!! 5
+html
+  head
+    title Página não encontrada.
+  body
+    h1 Página não encontrada.
+{% endhighlight %}
+
+<p>Para finalizar os refactorings de views...</p>
+
+{% highlight javascript %}
+// 500.jade
+!!! 5
+html
+  head
+    title Erro na aplicação.
+  body
+    h1 Erro na aplicação.
+    h3 Detalhes: #{error.message}
+{% endhighlight %}
+
+	<p>E finalizamos mais uma saga dessa consagrada série de mini-curso Node.js para leigos.</p>
+
+	<h4>Quero propor um desafio para vocês!</h4>
+	<p>Refaçam esses <strong>layouts tornando-os reaproveitáveis</strong>. Utilizam qualquer um dos comandos que citei: <strong>extends, block ou include</strong>.</p>
+	<p><strong>Dica: identifique os possíveis pontos que podem futuramente se repetir ou simplesmente separe cada componente em arquivos diferentes com o intuito de organizar suas views.</strong> Por exemplo: separe em um arquivo o form e em outro arquivo você lista todos os clientes e no final unifique-os numa mesma view.</p>
+	<p>Até a próxima pessoal e um grande abraço a todos!</p>
+</div>

@@ -1,0 +1,11 @@
+{
+  "title": "Node.js e MongoDB na prática!",
+  "tags": [
+    "Node.js",
+    "NoSQL"
+  ],
+  "description": "Aplicando meus conhecimentos sobre Node.js busquei aprender um pouco mais sobre bancos NoSQL e a recomendação que me veio foi de estudar o MongoDB.",
+  "published": true,
+  "slug": "um-pouco-de-node-js-e-mongodb-na-pratica",
+  "created_at": "16/11/2011"
+}

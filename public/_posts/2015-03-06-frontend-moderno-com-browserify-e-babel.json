@@ -1,0 +1,12 @@
+{
+  "title": "Frontend moderno com Browserify e Babel",
+  "tags": [
+    "Javascript",
+    "Node.js"
+  ],
+  "published": true,
+  "description": "Neste post vou explicar de forma rápida e bem prática como usar o melhor do Browserify e Babel no frontend de sua aplicação usando o plugin Babelify.",
+  "image_url": "browserify.jpg",
+  "slug": "frontend-moderno-com-browserify-e-babel",
+  "created_at": "06/03/2015"
+}

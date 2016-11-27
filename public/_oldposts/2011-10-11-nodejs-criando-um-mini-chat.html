@@ -1,0 +1,85 @@
+---
+layout: post
+title: Node.js - Criando Mini-chat via Telnet
+keywords: Node.js, Node.js TCP Chat, node.js telnet chat, TCP, Telnet
+tags: Node.js
+description: Continuando os estudos sobre Node.js, apresentarei um tutorial para desenvolver um mini-chat rodando via telnet, para executá-lo no protocolo TCP/IP.
+published: true
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-logo.jpg" width="250" height="86" alt="Node.js - Criando Mini-chat via Telnet" title="Node.js - Criando Mini-chat via Telnet">
+</figure>
+<div class="post-content">
+  <p>Continuando os estudos sobre Node.js, hoje apresentarei um simples tutorial para desenvolver um mini-chat rodando via <a href="http://pt.wikipedia.org/wiki/Telnet" target="_blank" title="Telnet" rel="no-follow">telnet</a>, para executá-lo através do protocolo TCP/IP.</p>
+  <p>Abaixo apresentarei passo-a-passo o tutorial, lembrando que o próprio código e seus respectivos comentários já dizem por si só o objetivo principal, mas caso tenha dúvidas entre em contato comigo ou deixe um comentário no final do post.</p>
+  {% include content-ads.ext %}
+  <h2>Código-fonte:</h2>
+{% highlight javascript %}
+var net = require('net'); // Carrega o módulo TCP.
+var carrier = require('carrier'); // Carrega o módulo Carrier.
+var connections = []; // Cria um array de conexões.
+
+// Inicia o servidor.
+var server = net.createServer(function(conn){
+  // Adiciona no array uma conexão de um usuário.
+  connections.push(conn);
+  // Evento que remove o usuário do array quando ele é desconectado.
+  conn.on('close', function(){
+    var pos = connections.indexOf(conn);
+    if(pos >= 0){
+      connections.splice(pos, 1);
+    }
+  });
+
+  //Imprime no cliente a mensagem de início no mini-chat.
+  conn.write('Node ChatnName: ');
+  // Variável para identificar o nome do usuário conectado.
+  var username;
+
+  // No evento carry é que o mini-chat acontece.
+  // A variável line é responsável por carregar as mensagens do chat.
+  carrier.carry(conn, function(line){
+    // Se a variável username estiver nula, é definido o um nome para ela.
+    if(!username){
+      username = line;
+      conn.write("Hi! "+ username +"\n");
+      return;
+    }
+    // Aqui comparo o valor de line com as palavras-chaves "end","quit" e "exit" que irão finalizar uma conexão.
+    if(line == 'end' || line == 'quit' || line == 'exit'){
+      conn.end();
+      return;
+    }
+
+    // Se nenhuma das condições acontecer, então preparamos uma  mensagem de feedback.
+    var feedback = username +": "+ line +"\n";
+
+    //Aqui ocorre o loop de distribuição de mensageria.
+    connections.forEach(function(one_connection){
+      one_connection.write(feedback);
+    });
+  });
+});
+// Inicia o servidor na porta 4000.
+server.listen(4000);
+// Mensagem de servidor ligado.
+console.log("Servidor mini-chat em execução.");
+{% endhighlight %}
+
+  <h2>Configurando</h2>
+  <p>Para iniciar, será necessário instalar o módulo <a href="https://github.com/pgte/carrier" target="_blank" title="Node JS Carrier." rel="no-follow">Carrier</a>, que irá ajudá-lo a gerenciar os múltiplos envios dos clientes para o servidor, separando-os linha a linha cada envio.</p>
+  <p>Via comando <a href="{{ site.url }}/npm-node-package-manager/" title="NPM – Node Package Manager" rel='me'>NPM</a> instale esse módulo:</p>
+
+{% highlight bash %}
+npm install carrier
+{% endhighlight %}
+
+  <h2>Executando</h2>
+  <ol>
+    <li>Inicie o servidor: <code>node mini-chat.js</code></li>
+    <li>Abra um novo console para executar um cliente e execute o comando: <code>telnet [IP] [Porta]</code>, por exemplo: <code>telnet 127.0.0.1 4000</code></li>
+    <li>E brinque com o chat iniciando uma conversa entre dois consoles telnet.</li>
+  </ol>
+
+  <p>Espero que tenham gostado e nos próximos posts mostrarei mais exemplos práticos explorando essa tecnologia. Obrigado e até a próxima!</p>
+</div>

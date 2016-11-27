@@ -1,0 +1,90 @@
+---
+layout: post
+title: Modularizando Frontend JavaScript com Browserify
+tags: ['Javascript', 'Node.js']
+keywords: Browserify, Node.js modular, JavaScript Modular, CommonJS
+published: true
+description: Se você gosta de criar e organizar códigos JavaScript seguindo o padrão CommonJS, que é muito popular no Node.js, e gostaria de trabalhar com o mesmo padrão no front-end de sua aplicação, então esse post será de grande utilidade para você.
+image_url: browserify.jpg
+---
+<figure class="post-image">
+  <a href="http://browserify.org/" title="Browserify" target="_blank">
+    <img src="{{ site.url }}/images/browserify.jpg" width="250" height="111" alt="Browserify" title="Browserify">
+    <figcaption>Browserify</figcaption>
+  </a>
+</figure>
+<div class="post-content">
+  <p>Se você gosta de criar e organizar códigos JavaScript seguindo o padrão <a href="http://wiki.commonjs.org" target="_blank">CommonJS</a>, que é muito popular no Node.js, e gostaria de trabalhar com o mesmo padrão no front-end de sua aplicação, então esse post será de grande utilidade para você.</p>
+  <p>Com o módulo Browserify você consegue implementar <strong>client-side JavaScript like Node.js code!</strong> E com isso você obtém três grandes vantagens:</p>
+  <ol>
+    <li>Sua aplicação terá uma estrutura de código homogenea, em que a criação e carregamento dos módulos JavaScript tanto no backend como no frontend utilizarão o CommonJS;</li>
+    <li>Chega de baixar e instalar código JavaScript na mão e também chega de usar <a href="http://bower.io" target="_blank">Bower</a>! Afinal para usá-lo você precisa ter Node.js instalado e ainda terá que controlar as depedências do <strong>bower.json</strong>. Usando Browserify você pode reutilizar a gestão de módulos do Node.js existentes no <strong>package.json</strong>, é claro que somente os módulos que possuem suporte client-side vão funcionar com Browserify, mas como o NPM esta muito popular, a probabilidade de um framework ou plugin JavaScript client-side existir nessa plataforma é alta. Com o Browserify também é possível reaproveitar alguns módulos nativos do Nodejs, como por exemplo o <a href="http://nodejs.org/api/events.html" title="Event Emitter" target="_blank">Event Emitter</a>;</li>
+    <li>Você também pode criar um módulo que funciona tanto no backend como frontend, ou seja, você cria uma única vez o módulo e reaproveita em ambas camadas da aplicação! (É claro que esse módulo não deve usar recursos específicos de servidor Node.js, assim como também não pode usar recursos de browsers, o módulo deve apenas processar dados usando ou JavaScript puro ou APIs existentes no motor Chrome V8);</li>
+  </ol>
+  <p>Agora vamos na prática usar o Browserify, para isso, primeiro você terá que instalar seu CLI via comando:</p>
+
+{% highlight bash %}
+npm install -g browserify
+{% endhighlight %}
+
+  <p>Após sua instalação, você libera o comando <code>browserify</code> em seu terminal, mas antes de usá-lo, vamos criar um pouco de código client-side para depois testá-lo corretamente.<br>Crie uma pasta com qualquer nome que servirá de projeto Node.js, no meu caso vou criar a pasta com o nome <code>browserify-app</code>, em seguida rode os comando:</p>
+
+{% highlight bash %}
+cd browserify-app
+npm init
+{% endhighlight %}
+
+  <p>Responda o mini questionário do comando <code>npm init</code> com qualquer informação, o importante é que ele crie o arquivo <code>package.json</code> no final.<br>Agora vamos instalar um módulo Node.js qualquer, cuja sua utilidade seja compatível tanto no backend como no frontend, como bom exemplo, usarei o <a href="http://underscorejs.org" target="_blank">Underscore</a>:</p>
+
+{% highlight bash %}
+npm install underscore --save
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+  <p>Agora vamos criar um simples código JavaScript utilizando o padrão CommonJS (neste caso será utilizado apenas a função <code>require()</code>, mas você também pode usar as funções <code>exports</code> e <code>module.exports</code>) que vai rodar uma função que retorna valores únicos de um array, salve esse arquivo em <code>src/main.js</code>.</p>
+
+{% highlight javascript %}
+var _ = require("underscore");
+var values = [1,1,2,3,4,5,8,9,1];
+
+window.onload = function() {
+  document.body.innerHTML = _.uniq(values);
+};
+{% endhighlight %}
+
+  <p>Para finalizar a implementação, crie o <code>public/index.html</code> com o seguinte código:</p>
+
+{% highlight html %}
+{% raw %}
+<html>
+  <head>
+    <title>Meus animais</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+{% endraw %}
+{% endhighlight %}
+
+  <p>Já temos um mini environment preparado para trabalhar com Browserify, o que resta fazer para a mágica acontecer é apenas rodar esse comando:</p>
+
+{% highlight bash %}
+browserify src/main.js -o public/main.js
+{% endhighlight %}
+
+  <p>Ou caso você queria concatenar e compilar todos os JavaScript em um único arquivo, execute:</p>
+
+{% highlight bash %}
+browserify src/*.js -o public/main.js
+{% endhighlight %}
+
+  <p>Pronto! Mission Complete!</p>
+  <p>Para se aprofundar mais nesse módulo recomendo as seguintes leituras:<br>
+  <ul>
+    <li><a href="https://github.com/substack/node-browserify#usage" target="_blank">Documentação do Browserify</a></li>
+    <li><a href="https://github.com/substack/browserify-handbook" target="_blank">Browserify Handbook</a></li>
+  </ul>
+  </p>
+</div>

@@ -1,0 +1,59 @@
+---
+layout: post
+title: Onde hospedar aplicações Node.js
+tags: Node.js
+keywords: Node.js, Deploy, Getup Cloud, Heroku, Nodester, Nodejitsu, PaaS
+published: true
+description: Conheça quarto excelentes PaaS (Plataform as a Service) focadas em hospedagem de aplicações Node.js.
+image_url: getup-cloud.jpg
+---
+<div class="post-content">
+  <p>Conheça quatro excelentes <strong>PaaS (Plataform as a Service)</strong> focadas em hospedagem de aplicações <strong>Node.js</strong>. Especificamente quero que conheçam as plataformas: <a href="http://getupcloud.com" title="Getup Cloud" target="_blank">Getup Cloud</a>, <a href="http://nodester.com" title="Appfog Nodester" target="_blank">Appfog Nodester</a>, <a href="http://nodejitsu.com" target="_blank" title="Nodejitsu">Nodejitsu</a> e <a href="http://www.heroku.com" title="Heroku" target="_blank">Heroku</a>.</p>
+
+  <h2>Getup Cloud</h2>
+  <figure class="post-image">
+    <a href="http://getupcloud.com" title="Getup Cloud" target="_blank">
+      <img src="{{ site.url }}/images/getup-cloud.jpg" width="250" height="250" alt="Getup Cloud" title="Getup Cloud">
+    </a>
+  </figure>
+  <p>É uma empresa brasileira (<strong>isso mesmo, temos alguém por aqui construindo nuvem de verdade</strong>), plataforma open-source (OpenShift), infraestrutura Amazon e cobrança por hora e on-demand.</p>
+  <p>Além de rodar Node.js, também suportam outras linguagens (<strong>Java, PHP, Ruby, Python, Perl</strong>), frameworks (<strong>Ruby on Rails, CakePHP, Django, Wordpress</strong>) e banco de dados (<strong>MySQL, PortgreSQL e MongoDB</strong>).</p>
+  <p>O mais legal é que a plataforma oferece escalabilidade automática para as aplicações, criando e destruindo máquinas de acordo com o volume de conexões simultâneas <strong>sem que você precise entender de load balance e outros detalhes</strong>.</p>
+  <p>A administração pode ser feita pelo CLI (Command Line Interface) <strong>via comando rhc</strong> ou pela <strong>interface web e o deploy é feito através do git</strong>.
+  <p>As aplicações rodam no que chamam de gear (<strong>é uma máquina na nuvem</strong>), quando criadas recebem uma URL no formato <strong>https://nome_app-namespace.getup.io</strong> e com SSL incluso, além de permitir o uso do seu domínio próprio.</p>
+  <p>O formato de pagamento é através de <strong>paypal, cobrança por hora e em reais</strong>.</p>
+  <p>Site oficial: <a href="http://getupcloud.com" title="Getup Cloud" target="_blank">Getup Cloud</a></p>
+
+  {% include content-ads.ext %}
+
+  <h2>Appfog Nodester</h2>
+  <figure class="post-image">
+    <a href="http://nodester.com" title="Appfog Nodester" target="_blank">
+      <img src="{{ site.url }}/images/appfog-nodester.jpg" width="250" height="119" alt="Appfog Nodester" title="Appfog Nodester">
+    </a>
+  </figure>
+  <p>É uma plataforma open-source totalmente focado para aplicações <strong>Node.js.</strong>. Eles oferecem uma documentação completa de sua API para utilizá-lo via terminal console ou através de interface <strong>RESTFul</strong>. Outra vantagem é que o serviço oferece um repositório <strong>Git</strong> e possui integração com o <strong>Cloud9IDE</strong>, fazendo com que todo desenvolvimento até sua fase de deploy seja completamente realizada online. Atualmente eles implementaram um sistema de administração web para gerenciar o processo de deploy da sua aplicação. Gratuitamente eles oferecem o domínio <strong>nome_app.nodester.com</strong>, além de permitir via sua <strong>API</strong> ou pelo próprio sistema admin o redirecionamento de sua aplicação para um domínio próprio.</p>
+  <p>Sua <strong>CLI (Command Line Interface)</strong> é totalmente <strong>RESTFul</strong> e permite utilizar via módulo <strong>Nodester</strong> o <a href="{{ site.url }}/npm-node-package-manager/" title="NPM – Node Package Manager" target="_blank">NPM (Node Package Manager)</a> no serviço fazendo com que seja instalado qualquer módulo em sua plataforma. Seu único defeito é que a plataforma é apenas dedicada para o <strong>Node.js</strong>, sendo necessário utilizar outro serviço de banco de dados para desenvolver uma aplicação completa. Porém o seu ponto forte é que tudo é gratuito e open-source!</p>
+  <p>Site oficial: <a href="http://nodester.com" title="Nodester" target="_blank">Nodester</a></p>
+
+  <h2>Nodejitsu</h2>
+  <figure class="post-image">
+    <a href="http://nodejitsu.com" title="Nodejitsu" target="_blank">
+      <img src="{{ site.url }}/images/nodejitsu.jpg" width="250" height="64" alt="Nodejitsu" title="Nodejitsu">
+    </a>
+  </figure>
+  <p>Com a proposta de um serviço de hospedagem em nuvem, o <strong>Nodejitsu</strong> traz consigo diversos módulos para desenvolver aplicações <strong>Node.js</strong> em sua plataforma. Atualmente o serviço se encontra em <strong>fase beta privada</strong>, ou seja, é necessário se cadastrar e ser escolhido por eles para utilizar seus recursos. Possui uma documentação bastante clara e didática sobre sua <strong>API</strong> e também oferecem gratuitamente um domínio para sua aplicação: <strong>nome_app.nodejitsu.com</strong>, sendo também possível o redirecionamento de sua aplicação para um domínio próprio.</p>
+  <p>Site oficial: <a href="http://nodejitsu.com" target="_blank" title="Nodejitsu">Nodejitsu</a></p>
+
+  <h2>Heroku</h2>
+  <figure class="post-image">
+    <a href="http://heroku.com" title="Heroku" target="_blank">
+      <img src="{{ site.url }}/images/heroku.jpg" width="180" height="58" alt="Heroku" title="Heroku">
+    </a>
+  </figure>
+  <p>Conhecida pelos programadores <strong>Ruby On Rails, Java, Python e Closure</strong>, recentemente adotou o <strong>Node.js</strong> em sua plataforma. Possui uma <strong>CLI</strong> totalmente <strong>RESTFul</strong> e eles oferecem gratuitamente o domínio <strong>nome_app.heroku.com</strong>. O mais interessante desse serviço é que eles possuem diversos <strong>Add-ons</strong> que permitem integrar sua aplicação com diversas outras aplicações da internet, exemplo disso são o <strong>Add-ons</strong> que integram-se com o <strong>Twitter</strong>, serviços da <strong>Amazon</strong>, banco de dados <strong>MongoDB</strong>, plugins para serviço de <strong>mensageria SMS</strong> e muito mais. </p>
+
+  <p>Porém não são todos os <strong>Add-ons</strong> gratuitos, muitos deles são oferecidos como <strong>serviços adicionais a serem pagos.</strong></p>
+  <p>É uma excelente alternativa para quem realmente tem dinheiro para investir em uma aplicação <strong>Node.js</strong>.
+  <p>Site oficial: <a href="http://www.heroku.com" title="Heroku" target="_blank">Heroku</a></p>
+</div>

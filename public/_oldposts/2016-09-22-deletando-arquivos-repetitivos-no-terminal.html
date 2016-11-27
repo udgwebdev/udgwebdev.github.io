@@ -1,0 +1,40 @@
+---
+layout: post
+title: Deletando arquivos repetitivos pelo terminal
+tags: ['Dicas de terminal']
+keywords: find, rm, terminal
+published: true
+description: ! 'Neste post a dica será bastante útil no seu dia-a-dia, basicamente você vai aprender a rodar um script que procura pastas e subpastas repetições de um determinado arquivo e em seguida apaga-os através da combinação dos comandos find e rm.'
+image_url: terminal-console-linux.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/terminal-console-linux.jpg" alt="Terminal Console Linux" width="200" height="200">
+  <figcaption>Terminal Console Linux</figcaption>
+</figure>
+<div class="post-content">
+  <p>Depois de um bom tempo sem <a href="{{ site.url }}/dicas-de-terminal" title="Dicas de terminal" target="_blank">dicas de terminal</a>, eis que volta das cinzas essa categoria com um novo post, pelo qual a dica será bastante útil no seu dia-a-dia, basicamente é um script que procura pastas e subpastas repetições de um determinado arquivo e em seguida apaga-os, isso ocorre através da combinação do comando <code>find</code> + <code>rm</code>.</p>
+
+  <p>O comando é basicamente esse:</p>
+
+  {% highlight bash %}
+  find nome_da_pasta -name 'nome_do_arquivo' -exec rm {} \;
+  {% endhighlight %}
+
+  <p>Para entender melhor os parâmetros desse comando:<br />
+  <ul>
+  <li><code>find nome_da_pasta</code>: vai iniciar uma busca a partir do nome da pasta indicada;</li>
+  <li><code>-name</code>: nome do arquivo a ser procurado;</li>
+  <li><code>-exec</code>: executa um comando bash qualquer, neste caso será o comando <code>rm {} \</code>, pelo qual vai excluir cada arquivo encontrado pelo comando <code>find</code>;</li>
+  </ul>
+  </p>
+
+  <p>No meu caso, estou usando esse comando para apagar o maldito arquivo chato <code>.DS_Store</code> que é gerado direto nos meus projetos pelo MacOSX, então resolvi criar o seguinte comando alias:</p>
+
+  {% highlight bash %}
+  alias ds_clear="find . -name '.DS_Store' -exec rm {} \;"
+  {% endhighlight %}
+
+  <p>Dessa forma esse comando vai procurar e apagar todos os <code>.DS_Store</code> existentes nas subpastas, com base na pasta atual (Pois usei o <code>find .</code> para referenciar a pasta atual) que eu rodar esse comando.</p>
+
+  <p>Veja também outras <a href="{{ site.url }}/dicas-de-terminal" title="Dicas de terminal" target="_blank">dicas de terminal</a>.</p>
+</div>

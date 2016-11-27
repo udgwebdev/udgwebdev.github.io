@@ -1,0 +1,9 @@
+{
+  "title": "Configurando Meteor e Velocity no Travis-CI",
+  "tags": "Meteor",
+  "published": true,
+  "description": "Configurar um ambiente de CI (Continuos Integration) para um projeto Meteor com Velocity é muito fácil. Mais fácil ainda é se você for configurar tudo isso no serviço Travis-CI.",
+  "image_url": "meteor-logo.jpg",
+  "slug": "configurando-meteor-e-velocity-no-travis-ci",
+  "created_at": "25/06/2015"
+}

@@ -1,0 +1,53 @@
+---
+layout: post
+title: Dicas de terminal - Trabalhando com SSH
+tags: ['Dicas de terminal']
+keywords: SSH no Arch Linux, SSH, OpenSSH
+published: true
+description: Neste post explicarei como utilizar o Nautilus do Gnome para acessar diretórios via SSH.
+image_url: ssh.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/ssh.jpg" alt="Trabalhando com SSH" width="250" height="176">
+  <figcaption>Trabalhando com SSH</figcaption>
+</figure>
+<div class="post-content">
+  <p>Ultimamente estou desenvolvendo um site pelo qual precisei muito trabalhar com <strong>ssh</strong> para transferir os arquivos. Com isso resolvi instalar o mínimo e necessário de ferramentas <strong>ssh</strong> para o meu <strong>Arch</strong>. Como utilizo o ambiente desktop <strong>Gnome</strong>, também configurei o <strong>Nautilus</strong> para trabalhar entre os arquivos de forma prática e visual. Praticamente instalei apenas duas ferramentas que são: <strong>OpenSSH</strong> que permite trabalhar com o protocolo <strong>ssh</strong> e o <strong>RSSH</strong> que habilita o suporte <strong>SCP (Secure Copy Protocol)</strong> e <strong>SFTP (Security File Transfer Protocol)</strong>. Então mãos a obra!</p>
+
+  {% include content-ads.ext %}
+
+  <h4>Instalação</h4>
+  <p>Para instalá-los digite em seu terminal:<br>
+  <code>sudo pacman -S openssh rssh</code><br>
+  Agora para acessar um repositório remoto via terminal:<br>
+  <code>ssh user@domain</code></p>
+
+  <h4>Copiando arquivos</h4>
+  <p>Quando desejar copiar algum arquivo remoto para um diretório local, digite:<br>
+  <code>scp user@domain:/pasta-remota/arquivo-remoto.txt /pasta-local/arquivo-local.txt</code><br>
+  O mesmo comando só que com parâmetros invertidos, envia os arquivos locais para o repositório remoto:<br>
+  <code>scp /pasta-local/arquivo-local.txt user@domain:/pasta-remota/arquivo-remoto.txt</code></p>
+
+  <h4>Copiando diretórios</h4>
+  <p>Quando precisar baixar todos os arquivos remotos, digite:<br>
+  <code>scp -r user@domain:/pasta-remota/ /pasta-local/</code><br>
+  Para fazer o inverso...<br>
+  <code>scp -r /pasta-local/ user@domain:/pasta-remota/</code></p>
+
+  <p>Com essas dicas você já estará apto para gerenciar arquivos remotos, caso queira mais uma facilidade, no ambiente <strong>Gnome</strong> você pode trabalhar com os arquivos remotos via <strong>Nautilus</strong>. Lembrando que também é possível trabalhar através de um ambiente gráfico concorrentes como o <strong>KDE, XFCE, etc.</strong>
+
+  <figure class="post-image">
+    <a href="{{ site.url }}/images/nautilus-ssh-small.jpg" target="_blank">
+      <img src="{{ site.url }}/images/nautilus-ssh-small.jpg" alt="SSH via Nautilus" width="250" height="179">
+      <figcaption>SSH via Nautilus</figcaption>
+    </a>
+  </figure>
+
+  <p>Para isso abra o <strong>Nautilus</strong> e clique no menu <strong>Arquivos >> Conectar ao servidor</strong>. Informe os dados para conexão <strong>ssh</strong> e se divirtam!!</p>
+
+
+
+  <p>Fontes:</p>
+  <p><a href="http://pangea.stanford.edu/computing/unix/netcommands/scpsftp.php" title="SCP e SFTP" target="_blank">NetCommands using SCP and SFTP</a><br>
+  <a href="http://polishlinux.org/apps/ssh-tricks/" title="SSH Tricks" target="_blank">SSH Tricks</a></p>
+</div>

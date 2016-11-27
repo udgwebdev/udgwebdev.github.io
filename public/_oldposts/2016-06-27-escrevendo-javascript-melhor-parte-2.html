@@ -1,0 +1,82 @@
+---
+layout: post
+title: Escrevendo JavaScript melhor - Parte 2
+tags: Javascript
+keywords: JavaScript, ES6
+published: true
+description: Dando continuidade ao post Escrevendo JavaScript melhor - Parte 1, nesse post falarei duas dicas úteis para melhorar seu código JavaScript.
+image_url: es6-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/es6-logo.jpg" width="250" height="250" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor">
+</figure>
+<div class="post-content">
+  <p>Dando continuidade ao post: <a href="{{ site.url }}/escrevendo-javascript-melhor-parte-1" target="_blank" rel="me" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a>, nesse post falarei sobre mais duas dicas úteis para melhorar seu código JavaScript.</p>
+  <h2>1) Use === no lugar de ==</h2>
+
+  <p>De fato, ainda é muito comum ver aplicações JavaScript utilizando <code>==</code> ou <code>!=</code> na comparação entre duas variáveis, apesar desses operadores realizarem a comparação de valores corretamente, eles ignoram a comparação do tipo de dado, ou seja:</p>
+
+{% highlight javascript %}
+// Aqui a comparação esta correta
+console.log(1 == 1) // true
+// Aqui a comparação não deveria retornar true
+console.log('1' == 1) // true
+{% endhighlight %}
+
+  <p>Para evitar esse tipo de problemas é recomendado utilizar os operadores <code>===</code> e <code>!==</code> para que a comparação seja justa em comparar se os valores são iguais e principalmente se os tipos de dados são os mesmos, veja:</p>
+
+{% highlight javascript %}
+// Aqui a comparação esta correta
+console.log(1 === 1) // true
+// Aqui também!
+console.log('1' === 1) // false
+{% endhighlight %}
+
+  <h2>2) Filtre campos usando shorthand value</h2>
+
+  <p>Essa dica só funciona com ES6 habilitado, e é bem útil!<br>Caso não conheça o <strong>shorthand value</strong>, também conhecido <strong>Object destructuring assignment</strong> do ES6, permite extrair campos de um objeto de forma mais elegante:</p>
+
+{% highlight javascript %}
+// É muito comum fazer isso
+var nome = cliente.nome;
+// Com shorthand value você pode fazer isso
+var { nome } = cliente;
+{% endhighlight %}
+
+  <p>Com shorthand value é possível extrair em váriaveis os atributos de um objeto, ou seja, imagine um sistema externo enviando para seu sistema objetos com vários campos, porém você somente precisa de apenas alguns campos, nesse caso é muito comum você fazer algo semelhante a isso:</p>
+
+{% highlight javascript %}
+// Imagine que este cliente possua +10 campos
+function formatar(cliente) {
+   // Porém você só quer retornar nome e email do cliente
+   var nome = cliente.nome;
+   var email = cliente.email;
+   return {
+       nome: nome,
+       email: email
+   };
+}
+{% endhighlight %}
+
+  <p>Com o shorthand value você pode fazer uma formatação desse objeto cliente de forma mais enxuta, sem contar que essa funcionalidade também serve para criar um novo objeto sem a necessidade de repetir a chave e valor que possua o mesmo nome, ou seja, o retorno dessa função pode se resumir da seguinte maneira:</p>
+
+{% highlight javascript %}
+// Esse cliente também possui +10 campos, ok?
+function formatar(cliente) {
+    // Dessa vez, vamos filtrar os campos usando shorthand value
+    var { nome, email } = cliente;
+    // E também será usado shorthand value no novo objeto
+    return { nome, email };
+}
+{% endhighlight %}
+
+  <p>
+    Veja também:<br />
+    <ul>
+      <li><a href="{{ site.url }}/escrevendo-javascript-melhor-parte-1" target="_blank" rel="me" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+      <li><a href="{{ site.url }}/escrevendo-javascript-melhor-parte-3" target="_blank" rel="me" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+      <li><a href="{{ site.url }}/escrevendo-javascript-melhor-parte-4" target="_blank" rel="me" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+    </ul>
+  </p>
+  <p>See you later! <i class="icon-emo-coffee"></i></p>
+</div>

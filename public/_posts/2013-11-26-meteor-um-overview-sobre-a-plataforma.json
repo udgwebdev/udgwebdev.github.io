@@ -1,0 +1,9 @@
+{
+  "title": "Meteor - Um overview sobre a plataforma",
+  "tags": "Meteor",
+  "description": "Para quem não participou do evento DevInSantos, veja os slides da minha palestra pelo qual falei sobre um assunto que pelo qual me surpreendeu ver que na platéia da sala, ninguém conhecia o Meteor.",
+  "published": true,
+  "image_url": "speakerdeck-meteor.jpg",
+  "slug": "meteor-um-overview-sobre-a-plataforma",
+  "created_at": "26/11/2013"
+}

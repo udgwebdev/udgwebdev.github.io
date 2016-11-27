@@ -1,0 +1,34 @@
+---
+layout: post
+title: NPM - Node Package Manager
+keywords: NPM, Node Package Manager, Node.js, Módulos Node.js
+tags: Node.js
+description: Apresento-lhes o NPM - Node Package Manager, sua utilização é muito simples e é recomendado ter instalado em sua máquina para gerenciar módulos Node.js
+published: true
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/npm.jpg" width="260" height="101" alt="NPM - Node Package Manager" title="NPM - Node Package Manager">
+</figure>
+<div class="post-content">
+  <p>Continuando mais um post sobre meus estudos com o Node.js, hoje apresentarei um aplicativo muito útil para gerenciar módulos.</p>
+  <p>Apresento-lhes o NPM - Node Package Manager, sua instalação já vem quando se instala o <a href="http://nodejs.org" target="_blank" title="Node.js oficial">Node.js</a> e utilizá-lo é muito simples.</p>
+  <p class="obs">Obs.: Por padrão cada módulo é instalado em modo local, ou seja, é apenas inserido dentro do diretório atual do projeto. Caso queria instalar módulos em módulo global apenas inclua o parâmetro <code>-g</code> em cada comando.</p>
+  <p>Por exemplo: <strong>npm install -g nome_do_módulo</strong></p>
+  {% include content-ads.ext %}
+  <p>Abaixo mostrarei alguns comandos básicos e essenciais para você sobreviver gerenciando módulos em um projeto node:</p>
+  <ul>
+    <li><strong>npm install nome_do_módulo</strong>: instala um módulo no projeto.</li>
+    <li><strong>npm install nome_do_módulo --save</strong>: instala o módulo e adiciona-o na lista de dependências do <strong>package.json</strong> do projeto.</li>
+    <li><strong>npm list</strong>: lista todos os módulos existentes no projeto.</li>
+    <li><strong>npm list -g</strong>: lista todos os módulos globais.</li>
+    <li><strong>npm remove nome_do_módulo</strong>: desinstala um módulo do projeto.</li>
+    <li><strong>npm update nome_do_módulo</strong>: atualiza a versão do módulo.</li>
+    <li><strong>npm -v</strong>: exibe a versão atual do npm.</li>
+    <li><strong>npm adduser nome_do_usuário</strong>: cria um usuário no site <a href="https://npmjs.org" title="NPM" target="_blank">https://npmjs.org</a> para publicar seu módulo na internet.</li>
+    <li><strong>npm whoami</strong>: exibe detalhes do seu perfil público do npm (é necessário criar um usuário com o comando anterior).</li>
+    <li><strong>npm publish</strong>: publica o seu módulo, é necessário ter uma conta ativa no <a href="https://npmjs.org" title="NPM" target="_blank">https://npmjs.org</a>.</li>
+  </ul>
+
+  <p>Para conhecer melhor acesse o site oficial: <a href="http://npmjs.org/" target="_blank" rel="no-follow">http://npmjs.org</a> e conheça também seu código-fonte: <a href="https://github.com/isaacs/npm" target="_blank" rel="no-follow">https://github.com/isaacs/npm</a></p>
+  <p>Até a próxima pessoal!</p>
+</div>

@@ -1,0 +1,8 @@
+{
+  "title": null,
+  "tags": "Node.js",
+  "published": true,
+  "description": "Se você utiliza Socket.IO e Express, esse tutorial vai te ajudar a manter mais seguro o seu sistema, compartilhando Sessions do Express com Socket.IO.",
+  "slug": "nodejs-express-socketio-e-sessions",
+  "created_at": "13/05/2013"
+}

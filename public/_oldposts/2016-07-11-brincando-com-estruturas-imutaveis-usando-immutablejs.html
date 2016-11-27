@@ -1,0 +1,202 @@
+---
+layout: post
+title: Brincando com estruturas imutáveis usando Immutable.js
+tags: Javascript
+keywords: JavaScript, Immutable.js
+published: true
+description: Neste post iremos aprender um pouco de conceitos sobre lidar com dados e estrutura de dados imutáveis usando Immutable.js, afinal a imutabilidade é uma das técnicas aplicadas no paradigma da programação funcional.
+image_url: immutable-logo.png
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/immutable-logo.png" width="250" height="34" alt="Brincando com estruturas imutáveis usando Immutable.js" title="Brincando com estruturas imutáveis usando Immutable.js">
+</figure>
+<div class="post-content">
+  <p>
+    Neste post iremos aprender um pouco de conceitos sobre lidar com dados e estrutura de dados imutáveis usando Immutable.js, afinal a imutabilidade é uma das técnicas aplicadas no paradigma da programação funcional.
+  </p>
+  <p>
+    A imutabilidade de dados é o comportamento que ocorre quando uma variável recebe pela primeira vez um valor qualquer, e nunca mais poderá mudar de valor, ou seja, não permite uma mutação de estado. <br/>
+    Quando se trabalha com immutabilidade, compiladores e interpretadores ganham alguns benefícios:<br />
+    <ul>
+      <li>Persistência fácil de manter;</li>
+      <li>Copiar/Clonar dados se uma operação torna constante, afinal você não pode mudar internamente o estado de um dado, você só pode criar uma nova referência baseada em um dado atual, ou seja, você cria uma versão modificada se baseando em um dado atual;</li>
+      <li>Não se trabalha com <strong>locks</strong> de variáveis no sincronismo de dados entre threads, afinal os dados não vão mudar de estado;</li>
+    </ul>
+  </p>
+  <p>
+    O Immutable.js é uma biblioteca JavaScript criada e mantida pelo Facebook focada em trabalhar com estrutura de dados imutáveis, atualmente ela trabalha com as seguintes estruturas: <code>List, Stack, Map, OrderedMap, Set, OrderedSet e Record</code>.
+  </p>
+  <h3>Brincando com Immutable.js</h3>
+  <p>
+    Existem várias formas de instalar essa lib, para escolher uma forma mais adequada para seus projetos veja esse link: <a href="https://facebook.github.io/immutable-js" target="_blank">facebook.github.io/immutable-js</a>.
+    Nos exemplos desse post, vamos instalar via NPM para testar códigos via Node.js REPL, caso queria fazer o mesmo, primeiro rode esse comando:<br />
+
+{% highlight bash %}
+npm install immutable
+{% endhighlight %}
+  </p>
+  <p>
+    Para testarmos, vamos criar um simples Map para entendermos os principais comportamentos e regras de se trabalhar com essa library.<br />
+{% highlight javascript %}
+var Immutable = require('immutable');
+var cliente = Immutable.Map({ nome: 'John Connor', email: 'john@connor.net' });
+console.log(cliente.get('nome')); // 'John Connor'
+console.log(cliente.get('email')); // 'john@connor.net'
+{% endhighlight %}
+  </p>
+  <p>
+    Após criar um Map, você pode acessar suas chaves através da função <code>map.get('chave')</code>. Se for necessário atualizar os dados de uma chave do Map, você pode usar a função <code>map.set('chave')</code>, porém não será modificado o estado do map atual, na verdade essa função vai retornar um novo map com os dados atualizado, afinal essa estrutura aplica o conceito de imutabilidade, então ao invés de mudar internamente, é criado uma nova estrutura modificada com base na estrutura atual. Veja esse exemplo:
+  </p>
+
+{% highlight javascript %}
+var Immutable = require('immutable');
+var cliente = Immutable.Map({ nome: 'John Connor', email: 'john@connor.net' });
+console.log(cliente.get('nome')); // 'John Connor'
+console.log(cliente.get('email')); // 'john@connor.net'
+// Com retorno encadeado do map.set() é possível mudar múltiplas chaves!
+var novoCliente = cliente.set('nome', 'Sarah Connor')
+                         .set('email', 'sarah@connor.net');
+console.log(novoCliente.get('nome')); // 'Sarah Connor'
+console.log(novoCliente.get('email')); // 'sarah@connor.net'
+{% endhighlight %}
+
+  <p>
+    As vezes, monitorar e manter estado se torna uma tarefa difícil e cansativa de lidar. Ao trabalhar com dados imutáveis você elimina essa tarefa chata, e passa a pensar em uma nova forma mais controlada e precisa de trabalhar com os dados de uma aplicação.
+    Conceitualmente coleções imutáveis devem serem tratadas como <strong>valores</strong> ao invés de <strong>objetos</strong>. Pois os <strong>objetos</strong> representam um conjunto de dados que <strong>mudam com o passar do tempo</strong>, já os <strong>valores</strong> representam um <strong>estado particular em uma instância de tempo</strong>. E é com base nesse princípio que melhora o entendimento sobre dados imutáveis.
+  </p>
+
+  <h3>Explorando as estruturas imutáveis</h3>
+  <p>
+    <code>List</code>: é uma representação imutável de um array, ou seja, ela possui as principais funções de um array do JavaScript, veja:
+  </p>
+
+{% highlight javascript %}
+var Immutable = require('immutable');
+var scores1 = Immutable.List([2, 4, 6, 8]);
+console.log(scores1.size); // 4
+var scores2 = scores1.push(10); // [2,4,6,8,10]
+var scores3 = scores2.pop().pop(); // [2,4,6]
+var scores4 = scores3.shift(); // [4,6]
+var scores5 = scores4.concat(10, 12, 14); // [4,6,10,12,14]
+{% endhighlight %}
+  <p>
+    Para conhecer em mais funções dessa estrutura veja: <a href="https://facebook.github.io/immutable-js/docs/#/List" target="_blank">facebook.github.io/immutable-js/docs/#/List</a>.
+  </p>
+  <p>
+    <code>Stack</code>: esta é a implementação clássica de Pilha (FILO - First In, Last Out), para manipular essa Stack você pode usar funções do tipo <code>stack.push()</code> e <code>stack.pop()</code> e para acessar os itens de uma pilha utilize a função <code>stack.get(index)</code>:
+  </p>
+
+{% highlight javascript %}
+var Immutable = require('immutable');
+var stack = Immutable.Stack();
+var pontuacoes = stack.push(10, 12, 14);
+console.log(pontuacoes.size); // 3
+// pontuacoes.get() e pontuacoes.get(0) retornam os mesmos resultados
+console.log(pontuacoes.get()); // 10
+console.log(pontuacoes.get(0)); // 10
+console.log(pontuacoes.get(1)); // 12
+console.log(pontuacoes.get(2)); // 14
+var novaPontuacao = pontuacoes.pop(); // [10, 12]
+console.log(novaPontuacao.get(0)); // 10
+console.log(novaPontuacao.get(1)); // 12
+{% endhighlight %}
+
+  <p>
+    Para conhecer em mais funções dessa estrutura veja: <a href="https://facebook.github.io/immutable-js/docs/#/Stack" target="_blank">facebook.github.io/immutable-js/docs/#/Stack</a>.
+  </p>
+  <p>
+    <code>Map</code>: é uma estrutura do tipo <strong>chave-valor</strong>, praticamente ela representa um objeto JavaScript, porém imutável né! Você pode definir todos os dados do Map em seu construtor. Como já foi apresentado essa estrutura na seção anterior, então apenas recomendo que veja esse link para conhecer todas suas funções de manipulação: <a href="https://facebook.github.io/immutable-js/docs/#/Map" target="_blank">facebook.github.io/immutable-js/docs/#/Map</a>.
+  </p>
+  <p>
+    <code>OrderedMap</code>: esta estrutura é um mix de objetos e arrays. Afinal ela manipula seus itens utilizando estrutura de Maps, exemplo as funções <code>orderedMap.get('chave')</code> e <code>orderedMap.set('chave', valor)</code>, e também essa estrutura mantém uma ordem dos itens que são incluídos, permitindo utilizar funções do tipo <code>orderedMap.first()</code> e <code>orderedMap.last()</code> que são próprias para manipular arrays. Também é possível redefinir a ordem das chaves utilizando as funções: <code>orderedMap.sort()</code> e <code>orderedMap.sortBy()</code> que vão retornar um novo map ordenado.
+  </p>
+
+{% highlight javascript %}
+var Immutable = require('immutable');
+// Múltiplos inserts utilizando set() encadeado
+var clientes = Immutable.OrderedMap()
+                      .set('John', 25)
+                      .set('Mary', 27);
+console.log(clientes.first(), clientes.last()); // 25, 27
+console.log(JSON.stringify(clientes)); // '{"John": 25, "Mary": 27}'
+// Reordenando o map
+var clientesMaisVelhos = clientes.sortBy(function(value, key) {
+  return -value;
+});
+console.log(JSON.stringify(clientesMaisVelhos)); // '{"Mary": 27, "John": 25}'
+{% endhighlight %}
+
+  <p>
+    Para conhecer em mais funções dessa estrutura veja: <a href="https://facebook.github.io/immutable-js/docs/#/OrderedMap" target="_blank">facebook.github.io/immutable-js/docs/#/OrderedMap</a>.
+  </p>
+
+  <p>
+    <code>Set</code>: é um array de elementos únicos, ou seja, não é permitido valores duplicados. Se você incluir um valor repetido, o primeiro valor será mantido e o segundo ignorado.
+  </p>
+
+{% highlight javascript %}
+var Immutable = require('immutable');
+var set1 = Immutable.Set([1, 2, 3, 3]);
+var set2 = Immutable.Set([4, 5, 5]);
+
+console.log(set1.count()); // 3
+console.log(set1.toArray()); // [1,2,3]
+console.log(set2.count()); // 2
+console.log(set2.toArray()); // [4,5]
+
+var union = set1.union(set2);
+console.log(union.count()); // 5
+console.log(union.toArray()); // [1,2,3,4,5]
+{% endhighlight %}
+
+  <p>
+    Veja mais funções dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Set" target="_blank">facebook.github.io/immutable-js/docs/#/Set</a>.
+  </p>
+
+  <p>
+    <code>OrderedSet</code>: é uma variação do Set em que os dados são ordenados e reordenados.
+  </p>
+
+{% highlight javascript %}
+var Immutable = require('immutable');
+var orderedSet1 = Immutable.OrderedSet([1, 2, 2]);
+var orderedSet2 = Immutable.OrderedSet([2, 1, 2]);
+
+console.log(orderedSet1.count()); // 2
+console.log(orderedSet1.toArray()); // [1,2]
+console.log(orderedSet2.count()); // 2
+console.log(orderedSet2.toArray()); // [2,1]
+
+var intersected = orderedSet1.intersect(orderedSet2);
+console.log(intersected.count()); // 2
+console.log(intersected.toArray()); // [1,2]
+{% endhighlight %}
+
+  <p>
+    Veja mais funções dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/OrderedSet" target="_blank">facebook.github.io/immutable-js/docs/#/OrderedSet</a>.
+  </p>
+
+  <p>
+    <code>Record</code>: é praticamente um construtor de objetos imutáveis. Nele também é possível definir valores default, em casos campos sem valores.
+  </p>
+
+{% highlight javascript %}
+var Immutable = require('immutable');
+var Cliente = Immutable.Record({ nome: 'John', idade: 25 });
+var john = new Cliente();
+console.log(john.toJSON()); // Object { nome: 'John', idade: 25 }
+var mary = new Cliente({ nome: 'Mary', idade: 20 });
+console.log(mary.toJSON()); // Object { nome: 'Mary', idade: 20 }
+{% endhighlight %}
+
+  <p>
+    Para mais detalhes dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Record" target="_blank">facebook.github.io/immutable-js/docs/#/Record</a>.
+  </p>
+
+  <h3>Conclusão</h3>
+
+  <p>
+    Esta é uma incrível e poderosa biblioteca quando se trata de manipular estruturas de dados imutáveis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, até mesmo seu nome <strong>Immutable.js</strong> que reflete bem o propósito de manipular estruturas imutáveis.
+  </p>
+
+</div>

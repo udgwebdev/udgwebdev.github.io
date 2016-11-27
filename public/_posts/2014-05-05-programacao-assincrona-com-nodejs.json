@@ -1,0 +1,11 @@
+{
+  "title": "Programação assíncrona com Node.js",
+  "published": true,
+  "tags": [
+    "Node.js"
+  ],
+  "description": "Boas práticas relativas ao desenvolvimento assíncrono em JavaScript, usando Node.js. Veremos desde os conceitos da tecnologia, as aplicações, como se acopla ao JavaScript, assim como o desenvolvimento do código referente ao assincronismo (Publicado no DevMedia).",
+  "alias_url": "http://www.devmedia.com.br/programacao-assincrona-com-node-js/31509",
+  "slug": "programacao-assincrona-com-nodejs",
+  "created_at": "05/05/2014"
+}

@@ -1,0 +1,45 @@
+---
+layout: post
+title: Split e Join de arquivos com Tar
+tags: ['Dicas de terminal']
+keywords: dicas de terminal, utilizando comando tar, split de arquivos tar, join de arquivos tar
+published: true
+description: Dica muito boa sobre como fazer split e join de arquivos através do comando tar que existe nos sistemas operacionais Linux, MacOS e Unix.
+image_url: comando-tar.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/comando-tar.jpg" alt="Comando Tar" width="250" height="250">
+  <figcaption>Comando Tar</figcaption>
+</figure>
+<div class="post-content">
+  <p>Recentemente precisei muito achar um programa para dividir arquivos grandes de +ou- 8 GB para transferir para meu HD externo. Motivo, a partição do meu HD externo esta em <strong>FAT32</strong> e já tem muito arquivo nele pelo qual demoraria muito fazer backups e formatá-lo para outro tipo de partição. Infelizmente o <strong>FAT32</strong> não consegue transferir um arquivo único de mais de 4 GB, bom pelo menos no meu HD eu não consegui, então a solução seria quebra esse arquivo em partes menores para enviar para o meu HD externo. Como estou atualmente usando <strong>Mac</strong> não encontrei nenhum programa gratuito que fizesse isso. Lembro que no meu tempo de usuário <strong>Windows</strong> programas como <a href="http://www.hjsplit.org/" title="HJSplit" target="_blank">HJSplit</a> já resolveria o meu problema. Porém descobri apartir de um amigo, que o <strong>comando tar</strong> existente tanto em <strong>Linux, Unix e MacOS X</strong> é capaz de realizar <strong>split e joins</strong> de arquivos de forma simples. A dica é muito útil e vale a pena conferir como se faz.</p>
+
+  <h4>Compactando arquivos</h4>
+  <p>Primeiro temos que compactar o arquivo:<br>
+  <code>tar -cvvzf [nome-do-arquivo.tar.gz] [pasta a ser compactada]</code><br>
+  Exemplo:<br>
+  <code>tar -cvvzf arquivo.tar.gz /pasta/a/ser/compactada</code></p>
+
+  <h4>Spliting arquivo tar</h4>
+  <p>Agora basta realizar um split do arquivo:<br>
+  <code>split -b [tamanho em megabyte a ser dividido] [arquivo-compactado.tar.gz] [nome-do-novo-arquivo.tar.gz.parte]</code><br>
+  Exemplo:<br>
+  <code>split -b 2000m arquivo.tar.gz arquivo.tar.gz.parte-</code></p>
+
+  <p>Neste caso foi dividido um arquivo em partes de 2GB cada. Um outro detalhe é que cada parte recebeu uma letra no sufixo do arquivo.<br>
+  Exemplo:<br>
+  <ul>
+    <li>arquivo.tar.gz.parte-aa</li>
+    <li>arquivo.tar.gz.parte-ab</li>
+    <li>arquivo.tar.gz.parte-ac</li>
+    <li>arquivo.tar.gz.parte-ad</li>
+    <li>...</li>
+  </ul>
+
+  <p>Quando precisar descompactá-lo, primeiro será necessário unir todas as partes do arquivo:<br>
+  <code>cat arquivo.tar.gz.parte-* > arquivo.tar.gz</code></p>
+
+  {% include content-ads.ext %}
+
+  <p>Espero que tenham gostado dessa dica, até mais!</p>
+</div>

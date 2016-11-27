@@ -1,0 +1,27 @@
+---
+layout: post
+title: Validação com Ruby On Rails
+keywords: Ruby, Ruby on Rails, Validação com Rails
+tags: Ruby
+description: Neste post irei apresentar alguns recursos interessantes do Rails para realizar validações em um determinado modelo.
+published: true
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/rails-logo.jpg" width="156" height="200" alt="Validations com Rails" title="Validations com Rails">
+  <figcaption>Validations com Rails</figcaption>
+</figure>
+<div class="post-content">
+  <p>Para quem já programa com Ruby On Rails, sabe o quão produtivo ele torna o desenvolvedor. O framework possui uma semântica e expressividade incrível, fazendo com que até os menos experientes na área tenha uma curva de aprendizado rápida. Irei apresentar alguns recursos interessantes do Rails para realizar validações em um determinado modelo. Você verá que é muito fácil programar em Rails, pois te economizará muitas linhas de códigos comparado com outras linguagens de mercado.</p>
+  {% include content-ads.ext %}
+  <p>A idéia de realizar validações nos objetos é para evitar que determinados dados inválidos sejam persistidos no banco de dados, e em muitos casos essas validações evitam que possíveis bugs ocorram na aplicação. Indo direto ao assunto, irei apresentar os principais métodos que valida os atributos de um objeto no Rails:</p>
+  <ul>
+    <li><strong>validates_presence_of</strong> - valida se o atributo do objeto não esta nulo ou vazio.</li>
+    <li><strong>validates_size_of</strong> - verifica o total de caracteres de um atributo do tipo texto.</li>
+    <li><strong>validates_uniqueness_of</strong> - valida a unicidade do campo, ou seja, se já foi cadastrado antes os mesmos dados desse atributo.</li>
+    <li><strong>validates_numericality_of</strong> - verifica se o campo é do tipo númerico.</li>
+    <li><strong>validates_associated</strong> - valida se existe relacionamento apartir desse atributo chave.</li>
+    <li><strong>validates_format_of</strong> - verifica se uma expressão regular passada em parâmetro esta compatível.</li>
+  </ul>
+
+  <p>Enfim é isso ai! se gostou do post, comente por favor e obrigado mais uma vez!</p>
+</div>

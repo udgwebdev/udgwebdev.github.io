@@ -1,0 +1,97 @@
+---
+layout: post
+title: Node.js para leigos - Child process
+published: true
+tags: Node.js
+description: No node.js a manipulação de processos do sistema operacional é fácil de aprender e sua utilização é de extrema importância. Neste post falarei como trabalhar com child process.
+keywords: Curso de Node.js, Node.js, Node.js para leigos, Child process
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/nodejs-para-leigos.jpg" width="250" height="137" alt="Curso de Node.js" title="Curso de Node.js">
+  <figcaption>Curso de Node.js</figcaption>
+</figure>
+<div class="post-content">
+  <p>Hoje estudaremos um assunto muito interessante em que no Node.js sua manipulação é simples de aprender e sua utilização é de extrema importância. Falarei sobre manipulação de processos do sistema operacional, através da API nativa chamada: <strong>Child Process</strong>.</p>
+  <p>Primeiramente, quando utilizar Child Process?<br>Quando há a necessidade de utilizar programas ou comandos nativos do sistema operacional. Ao executar um programa, é criado um processo sobre esse programa, e todo processo é gerenciado pelo sistema operacional.</p>
+  <p>Exemplos de manipulação de processos: <strong>executar um processo, executar processo em background, matar um processo, priorizar a execução de processos e muito mais.</strong> Todo sistema operacional traz essas funcionalidades para gerenciá-lo, assim como a maioria das linguagens de programação possuem bibliotecas para manipulação do mesmo.</p>
+
+  {% include content-ads.ext %}
+  
+  <p>Com o Node.js é possível fazer o mesmo e também manipular processos filhos <strong>(Child Process)</strong> que são processos que compartilham memória com o processo pai, que no caso o processo pai sempre será a sua aplicação Node.js.</p>
+  <p>Na prática, compartilhar memória entre processos seria basicamente compartilhar variáveis entre os processos, fazendo com que ambos trabalhem e manipulem elas. Child Process é uma biblioteca nativa do Node.js, e sua <a href="http://nodejs.org/api/child_process.html" target="_blank" title="Documentação Child Process no Node.js">documentação completa esta aqui.</a> Veja alguns exemplos práticos do que fazer com ele:</p>
+  <h4>Utilizando comandos Exec</h4>
+{% highlight javascript %}
+var exec = require('child_process').exec;
+
+exec('pwd', function(error, stdout, stderr){
+  console.log(stdout);
+});
+{% endhighlight %}
+
+  <p>Para quem não sabe, o <strong>comando pwd é exclusivo dos sistemas UNIX</strong>, e ele apenas informa o diretório atual que o usuário esta acessando. Repare também que a função callback do comando exec, retorna obrigatoriamente 3 variáveis: <strong>error, stdout e stderr</strong>. Respetivamente elas significam: <strong>erro de execução (lança uma exceção), mensagem de saída, mensagem de erro.</strong></p>
+  <h4>Spawn de processos</h4>
+{% highlight javascript %}
+var spawn = require('child_process').spawn
+  , pwd = spawn('pwd');
+
+pwd.stdout.setEncoding('utf8');
+pwd.stdout.on('data', function(data){
+  console.log(data);
+});
+{% endhighlight %}
+  <p>Neste exemplo, executamos o mesmo comando, porém fazendo um spawn de processos. A grande diferença entre <strong>exec e spawn</strong>, é que o exec faz uma execução simples e o spawn possui funções e eventos mais completos para realizar uma execução complexa de processos. É necessário informar o encoding no método <strong>setEncoding()</strong> para a variável <strong>data</strong> retornar uma String, <strong>senão será retornado um objeto Buffer</strong>. Outro detalhe é que o spawn possui as funções: <strong>stdout, stderr, stdin, kill e pid</strong>.</p>
+  <ul>
+    <li><code>stdout:</code> trata a saída da execução do processo;</li>
+    <li><code>stderr:</code> trata a saída de erro na execução do processo;</li>
+    <li><code>stdin:</code> trata a entrada de dados na execução do processo;</li>
+    <li><code>pid:</code> retorna o PID, ID do processo no sistema operacional;</li>
+    <li><code>kill:</code> mata o processo atual;</li>
+  </ul>
+  <p>Todas elas funcionam através dos eventos: <strong>on(‘data’), on(‘exit’), on(‘disconnect’) e on(‘close’)</strong>.Um bom exemplo de saída de processos é o comando do código abaixo:</p>
+{% highlight javascript %}
+pwd.stdout.on('data', function(data){
+  console.log(data)
+});
+{% endhighlight %}
+  <p>Com isso, podemos cria aplicações que utilizem programas ou comandos do sistema operacional. Para finalizar, mostrarei uma simples aplicação de logger em tempo real, que basicamente faz um spawn de processos, executando o comando <strong>tail -f</strong> de um arquivo de logs gerado por uma outra aplicação.</p>
+  <p class="obs">Obs.: Este aplicativo só funciona em <strong>ambiente UNIX, Linux ou MacOSX</strong>, visto que o comando tail é específico desses sistemas operacionais.</p>
+  <p>Para executar esse código, execute primeiro o comando:<p>
+  <p><code>npm install express</code></p>
+
+{% highlight javascript %}
+// app.js
+var express = require('express')
+  , fs = require('fs')
+  , app = express()
+  , logFile = fs.createWriteStream('./app.log', {flags: 'a'});
+
+app.configure(function(){
+  app.use(express.logger({stream: logFile}));
+  app.use(express.methodOverride());
+  app.use(app.router);
+});
+
+app.get('/', function(req, res){
+  res.end("Hello World");
+});
+
+app.listen(3000, function(){
+  console.log('Hello world running...');
+});
+{% endhighlight %}
+
+{% highlight javascript %}
+// log.js
+var spawn = require('child_process').spawn
+  , tail = spawn('tail', ['-f', './app.log']);
+
+tail.stdout.setEncoding('utf8');
+tail.stdout.on('data', function(data){
+  console.log(data);
+});
+{% endhighlight %}
+
+  <p>Abra dois consoles: um para executar o comando a aplicação web: <code>node app.js)</code> e no outro inicie a aplicação de logger: <code>node log.js</code>.</p>
+  <p>Ao acessar a aplicação web através do endereço: <strong>http://localhost:3000</strong> verifique no console da aplicação de logger as atualizações na tela com mensagens de logging da aplicação web que foi acessada.</p>
+  <p>É isso ae pessoal! Esse foi mais um capitúlo da série node.js para leigos, dúvidas, sugestões ou críticas comentem abaixo. Até a próxima!</p>
+</div>

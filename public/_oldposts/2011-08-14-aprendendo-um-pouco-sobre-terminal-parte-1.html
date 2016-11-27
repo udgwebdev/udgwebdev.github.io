@@ -1,0 +1,40 @@
+---
+layout: post
+title: Um pouco sobre terminal - Parte 1
+tags: ['Dicas de terminal']
+keywords: Terminal, Console, Dicas de terminal
+published: true
+description: A proposta desse post é apresentar os comandos essenciais para sobreviver tanto em um ambiente Linux quanto Unix, pois os comandos na prática são os mesmos.
+image_url: terminal-console-linux.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/terminal-console-linux.jpg" alt="Terminal console do Linux" width="200" height="200">
+  <figcaption>Terminal console do Linux</figcaption>
+</figure>
+<div class="post-content">
+  <p>Uma das maiores rejeições pelo qual muitos usuários desistem de migrar para linux é a comodidade de gerenciar todo sistema operacional através de interface gráfica (Windows, MacOS), e isso nunca foi o ponto forte no Linux, é claro que atualmente existem distribuições focado em usabilidade para o usuário final, mas mesmo assim, em alguns casos ter o mínimo conhecimento sobre os comandos do terminal linux pode te ajudar a resolver grandes problemas.</p>
+  {% include content-ads.ext %}
+  <p>A proposta desse post é apresentar os comandos essenciais para sobreviver tanto em um ambiente Linux quanto Unix, pois os comandos na prática são os mesmos.</p>
+  <ul>
+    <li><code>cp</code> - copia um arquivo ou diretório.<br>
+    Copiando: <code>cp /arquivo_a_copiar.txt /home</code></li>
+    <li><code>mv</code> - move ou renomeia um arquivo ou diretório.<br>
+    Movendo: <code>mv /arquivo_a_mover.txt /opt</code><br>
+    Renomeando: <code>mv /arquivo.txt /arquivo_renomeado.txt</code></li>
+    <li><code>rm</code> - exclui um arquivo ou diretório.<br>
+    Excluindo arquivo: <code>rm /arquivo.txt</code><br>
+    Excluindo diretório e subdiretórios: <code>rm -r /pasta</code></li>
+    <li><code>cd</code> - acessa um diretório.<br>
+    Acessando diretório: <code>cd /user/documentos</code><br>
+    Acessando diretório raíz: <code>cd /</code><br>
+    Acessando diretório anterior: <code>cd ..</code></li>
+    <li><code>ls</code> - lista todos os arquivos e pastas de um diretório.<br>
+    Lista horizontal: <code>ls /pasta</code><br>
+    Lista vertical: <code>ls -l</code></li>
+    <li><code>mkdir</code> - cria uma nova pasta.<br>
+    Criando pasta: <code>mkdir nova-pasta</code></li>
+    <li><code>find</code> - busca arquivos no disco.<br>
+    Buscando um arquivo: <code>find arquivo.txt</code></li>
+  </ul>
+  <p>Por enquanto é isso, em breve farei a segunda parte desse post!</p>
+</div>

@@ -1,0 +1,9 @@
+{
+  "title": "Brincando com estruturas imutáveis usando Immutable.js",
+  "tags": "Javascript",
+  "published": true,
+  "description": "Neste post iremos aprender um pouco de conceitos sobre lidar com dados e estrutura de dados imutáveis usando Immutable.js, afinal a imutabilidade é uma das técnicas aplicadas no paradigma da programação funcional.",
+  "image_url": "immutable-logo.png",
+  "slug": "brincando-com-estruturas-imutaveis-usando-immutablejs",
+  "created_at": "11/07/2016"
+}

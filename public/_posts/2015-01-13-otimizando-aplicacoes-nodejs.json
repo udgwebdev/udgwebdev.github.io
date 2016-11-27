@@ -1,0 +1,9 @@
+{
+  "title": "Otimizando aplicações Node.js",
+  "tags": "Node.js",
+  "published": true,
+  "description": "Neste post apresentarei 10 dicas extremamente úteis para você aplicar em uma aplicação Node.js em produção.",
+  "image_url": "nodejs-logo.jpg",
+  "slug": "otimizando-aplicacoes-nodejs",
+  "created_at": "13/01/2015"
+}

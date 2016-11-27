@@ -1,0 +1,11 @@
+{
+  "title": "Visualizando portas da rede com NMAP",
+  "tags": [
+    "Dicas de terminal"
+  ],
+  "published": true,
+  "description": "Hoje vou mostrar como visualizar todas os processos ativos que estão utilizando alguma porta da rede.",
+  "image_url": "terminal-console-linux.jpg",
+  "slug": "visualizando-portas-da-rede-com-nmap",
+  "created_at": "03/12/2013"
+}

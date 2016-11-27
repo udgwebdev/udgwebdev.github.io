@@ -1,0 +1,11 @@
+{
+  "title": "Um pouco sobre terminal - Parte 1",
+  "tags": [
+    "Dicas de terminal"
+  ],
+  "published": true,
+  "description": "A proposta desse post é apresentar os comandos essenciais para sobreviver tanto em um ambiente Linux quanto Unix, pois os comandos na prática são os mesmos.",
+  "image_url": "terminal-console-linux.jpg",
+  "slug": "aprendendo-um-pouco-sobre-terminal-parte-1",
+  "created_at": "14/08/2011"
+}

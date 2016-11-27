@@ -1,0 +1,31 @@
+---
+layout: post
+title: Terminal gerando arquivo de texto
+tags: ['Dicas de terminal']
+keywords: Saída em arquivo de texto, gerando arquivo de texto, gerando logs
+published: true
+description: Hoje apresentarei uma dica muito legal e fácil de implementar. Seu objetivo é de exportar os resultados de saída do terminal diretamente em um arquivo de texto.
+image_url: terminal-console-linux.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/terminal-console-linux.jpg" alt="Terminal Console Linux" width="200" height="200">
+  <figcaption>Terminal Console Linux</figcaption>
+</figure>
+<div class="post-content">
+
+  <p>Hoje apresentarei uma dica muito legal e fácil de implementar. Seu objetivo é de exportar os resultados de saída do terminal diretamente em um arquivo de texto. Para rodar este comando primeiro temos que utilizar um comando qualquer que imprima algum resultado no próprio terminal, para que no final deste comando seja incluído o caracter <code>&gt; arquivo.txt</code> ou <code>&gt;&gt; arquivo.txt</code>. Veja exemplos desses dois comandos e a diferença deles:</p>
+
+  <p>Utilize o <code>&gt;</code> quando deseja gerar um arquivo de texto:<br>
+{% highlight bash %}
+ls -al > arquivo.txt
+{% endhighlight %}
+  Utilize o <code>&gt;&gt;</code> quando precisa gerar um arquivo pelo qual sua sobreescrita seja incremental, ou seja, sempre será adicionado novo conteúdo no mesmo arquivo:
+{% highlight bash %}
+ls -al >> arquivo.txt
+{% endhighlight %}
+  </p>
+
+  {% include content-ads.ext %}
+
+  <p>Veja também outras <a href="{{ site.url }}/dicas-de-terminal" title="Dicas de terminal" target="_blank">dicas de terminal</a>.</p>
+</div>

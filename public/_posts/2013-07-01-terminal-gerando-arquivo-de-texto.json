@@ -1,0 +1,11 @@
+{
+  "title": "Terminal gerando arquivo de texto",
+  "tags": [
+    "Dicas de terminal"
+  ],
+  "published": true,
+  "description": "Hoje apresentarei uma dica muito legal e fácil de implementar. Seu objetivo é de exportar os resultados de saída do terminal diretamente em um arquivo de texto.",
+  "image_url": "terminal-console-linux.jpg",
+  "slug": "terminal-gerando-arquivo-de-texto",
+  "created_at": "01/07/2013"
+}

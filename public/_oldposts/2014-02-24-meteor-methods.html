@@ -1,0 +1,101 @@
+---
+layout: post
+title: Meteor.methods
+tags: Meteor
+keywords: Meteor, Meteor.methods, Meteor.js
+description: ! 'Neste post falarei sobre a importância do Meteor.methods() e principalmente porque, quando e como utilizar ele junto com o Meteor.call().'
+published: true
+image_url: meteor-logo.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/meteor-logo.jpg" width="250" height="110" alt="Meteor" title="Meteor">
+</figure>
+<div class="post-content">
+	<h2>Introdução</h2>
+  <p>Neste post falarei sobre a importância do Meteor.methods() e principalmente porque, quando e como utilizar ele junto com o Meteor.call().</p>
+  <p>Um dos princípios do Meteor é o <a href="http://docs.meteor.com/#sevenprinciples" target="_blank" title="Database everywhere">Database everywhere</a> (banco de dados em qualquer lugar). Esse princípio existe no Meteor de forma que <strong>collections do MongoDB sejam utilizadas e sincronizadas entre cliente e servidor</strong>. No Meteor podemos usar uma collection no client-side através da <a href="https://github.com/mWater/minimongo" target="_blank" title="Minimongo">API do mini-mongo</a>, responsável por sincronizar dados do modelo server-side, e essa sincronização é feita via biblioteca de <a href="http://docs.meteor.com/#publishandsubscribe" target="_blank" title="PubSub">PubSub</a> nativa no Meteor.</p>
+
+  {% include content-ads.ext %}
+
+	<h2>Entendendo na prática</h2>
+	<p>Vamos supor que um template responsável por listar posts na aplicação, basicamente uma timeline de posts. Nele temos uma collection de posts e que precisamos listar todas mensagens na timeline da aplicação. Primeiro vamos criar o modelo no projeto, ele já terá alguns posts carregados para simplificar a explicação. Crie-o em <code>models/post.js</code> conforme o trecho a seguir:</p>
+
+{% highlight javascript %}
+Post = new Meteor.Collection('posts');
+
+Post.insert({message: 'Ola!'});
+Post.insert({message: 'tudo bem?'});
+Post.insert({message: 'tudo ótimo!'});
+Post.insert({message: '5 minutos em silêncio...'});
+Post.insert({message: 'Bye! Bye!'});
+{% endhighlight %}
+
+	<p>Agora que temos um modelo na aplicação podemos utilizá-lo em qualquer camada da aplicação, ou seja, utilizaremos sua função <code>Post.find()</code> para listar todos os posts através de um helper que criaremos em <code>client/lib/helpers/posts.js</code> de acordo com o código abaixo:</p>
+
+{% highlight javascript %}
+Template.posts.helpers({
+  posts: function() {
+    return Post.find();
+  }
+});
+{% endhighlight %}
+
+	<p>Mas em relação ao comando <code>Post.remove({})</code> temos algumas <a href="http://docs.meteor.com/#allow" target="_blank">restrições de segurança ao usar uma collection no client-side</a> (mesmo usando o package insecure habilitado!). Dúvida? Então veja você mesmo! Crie o template de posts em <code>client/index.html</code> que irá listar os posts e no final terá um botão para apagar todos os posts:
+
+{% highlight html %}
+{% raw %}
+<head>
+  <title>Timeline</title>
+</head>
+<body>
+  {{> posts}}
+</body>
+<template name="posts">
+  {{#each posts}}
+    <p>{{message}}</p>
+  {{/each}}
+  <button>Excluir tudo!</button>
+</template>
+{% endraw %}
+{% endhighlight %}
+
+	<p>E para mostrar na prática essas restrições de segurança no client-side, vamos dar vidas ao botão <strong>"Excluir tudo!"</strong> criando um evento para excluir todos os posts. Crie este código em <code>client/lib/events/posts.js</code>:
+
+{% highlight javascript %}
+Template.posts.events({
+  "click button": function() {
+    Post.remove({});
+  }
+});
+{% endhighlight %}
+
+	<p>Eae conseguiu? Que mensagem de erro apareceu no console do browser? Por acaso foi essa mensagem:
+
+	<p><strong class="obs">Uncaught Error: Not permitted. Untrusted code may only remove documents by ID. [403]</strong></p>
+
+	<p>Essa restrição é apenas uma regra de segurança do Meteor aplicado nas collections, em que somente é permitido remover objetos através do seu <code>_id</code> no client-side da aplicação. Essa regra existe para garantir que funções críticas do banco de dados não sejam aldulteradas facilmente, e que não permitam a exploração de excluir dados errados através do browser.</p>
+
+	<h2>Eis a solução!</h2>
+	<p>Foi baseado nesse problema que existe o <a href="http://docs.meteor.com/#meteor_methods" target="_blank" title="Meteor.methods">Meteor.methods</a>. Que é uma função que permite criar funções no server-side que a serem chamadas pelo cliente via <a href="http://docs.meteor.com/#meteor_call" target="_blank" title="Meteor.call">Meteor.call</a>. Dessa forma você delega funções críticas para o servidor, evitando brechas na aplicação no client-side. Implementá-lo é muito simples, para isso crie seu arquivo em <code>server/methods.js</code> com o código a seguir:</p>
+
+{% highlight javascript %}
+Meteor.methods({
+  removeAll: function() {
+    Post.remove({});
+  }
+});
+{% endhighlight %}
+
+	<p>Feito isso basta voltar em <code>client/lib/events/posts.js</code> e mudar a chamada da função <code>Post.remove</code> para <code>Meteor.call('removeAll')</code>.</p>
+
+{% highlight javascript %}
+Template.posts.events({
+  "click button": function() {
+    Meteor.call("removeAll");
+  }
+});
+{% endhighlight %}
+
+	<p>Dúvidas, sugestões ou elogios? Comentem abaixo! Até a próxima :)</p>
+
+</div>

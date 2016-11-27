@@ -1,0 +1,90 @@
+---
+layout: post
+title: Socket.IO com Redis
+tags: Node.js
+keywords: Redis, Socket.IO, MemoryStore, RedisStore, Session
+published: true
+description: Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a documentação nos ensina, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca.
+image_url: socket-io.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/socket-io.jpg" width="239" height="114" alt="Compartilhando Session entre Express e Socket.IO" title="Socket.IO com Redis">
+  <figcaption>Socket.IO com Redis</figcaption>
+</figure>
+<div class="post-content">
+  <p>Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a <a href="http://socket.io/#how-to-use" target="_blank">documentação nos ensina</a>, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca, que por default é utilizado o <strong>MemoryStore</strong> (sessão em memória).</p>
+  <p>Este controle não é recomendável em ambiente de produção, pois além da Session, o Socket.IO mantém em memória conexões dos usuários online na aplicação e outros recursos internos.</p>
+  <p>Outro problema do MemoryStore é que ele não permite que sua aplicação trabalhe com <a href="http://nodejs.org/api/cluster.html" target="_blank">clusters</a>, por que cada cluster vai alterar a session de outro cluster sem ter um controle exato sobre qual session pertece a qual cluster, e por causa disso, comportamentos anormais ocorrerão em sua aplicação.</p>
+  <p>A solução é utilizar uma session em banco de dados, o Socket.IO já vem com suporte ao Redis, e aplicar essa adaptação é bem simples.</p>
+  <p>Para isso utilizaremos o seu módulo nativo, o <a href="https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO" target="_blank">RedisStore</a>, ele permite gerenciar sessions via banco de dados Redis, que é um NoSQL extremamente rápido!</p>
+  <p>Para seguir as dicas desse post será necessário configurar o Redis, se você não tem ele em sua máquina <a href="http://redis.io/" target="_blank">acesse seu site oficial para instalá-lo</a>.</p>
+  <p>Com o Redis rodando, vamos ao que interessa! Criaremos um simples servidor, utilizando apenas o Socket.IO para demonstrar essa dica.</p>
+  <p>Para criar uma nova aplicação, execute:</p>
+
+{% highlight bash %}
+npm init
+{% endhighlight %}
+
+  <p>Responda as perguntas deste comando do jeito que quiser, por exemplo, o nome do meu app será <strong>"socket-redis"</strong>, versão: <strong>"0.0.1"</strong> e o resto apenas deixe em branco para finalizar e criar o <strong>package.json</strong> corretamente.</p>
+  <p>Feito isso, vamos instalar os módulos do nosso app, digite:</p>
+
+{% highlight bash %}
+npm install socket.io redis --save
+{% endhighlight %}
+
+  <p>Agora que temos tudo preparado, vamos ao que interessa:</p>
+
+{% highlight javascript %}
+var io = require('socket.io').listen(80);
+
+io.sockets.on('connection', function(socket) {
+  socket.on('msg', function (data) {
+    socket.broadcast.emit(data);
+  });
+});
+{% endhighlight %}
+
+  {% include content-ads.ext %}
+
+  <p>Para simplificar este post criei um simples <strong>emissor de mensageria broadcast</strong>, ou seja, o usuário emite um <strong>'msg'</strong> e o servidor envia esta mensagem para todos os demais usuários conectados.<br>
+  Não entrarei em detalhes sobre o front-end da aplicação, pois o foco aqui é otimizar o back-end, então fique a vontade para criar a view que envia mensagens para este servidor.</p>
+  <p>O código anterior esta bem simplificado e por default ele já esta <strong>pré-configurado para MemoryStore</strong>, para adaptar este código para <strong>RedisStore</strong>, faça as seguintes modificações:</p>
+
+{% highlight javascript %}
+var SocketIO = require('socket.io')
+  , io = SocketIO.listen(80)
+;
+
+io.set('store', new SocketIO.RedisStore);
+io.sockets.on('connection', function(socket) {
+  socket.on('msg', function (data) {
+    socket.broadcast.emit(data);
+  });
+});
+{% endhighlight %}
+
+  <p>Essa simples modificação funcionará somente se o Redis estiver rodando na mesma máquina da aplicação, pois por default o <strong>cliente Redis interno</strong> se conectará no <strong>http://localhost:6379</strong>.<br>
+  Caso você precise informar um endereço específico de um servidor Redis externo, você terá que adicionar um pouco mais de código:</p>
+
+{% highlight javascript %}
+var redis = require('redis')
+  , SocketIO = require('socket.io')
+  , io = SocketIO.listen(80)
+;
+
+io.set('store', new SocketIO.RedisStore({
+   redisPub: redis.createClient(/* Porta,Host */)
+  ,redisSub: redis.createClient(/* Porta,Host */)
+  ,redisClient: redis.createClient(/* Porta,Host */)
+}));
+
+io.sockets.on('connection', function(socket) {
+  socket.on('msg', function (data) {
+    socket.broadcast.emit(data);
+  });
+});
+{% endhighlight %}
+
+  <p>Com esse upgrade implementado o seu sistema vai rodar perfeitamente em clusters, sem causar bugs no controle de session, pois as sessions serão compartilhadas entre os clusters existentes.</p>
+  <p>Outro ponto forte é que sua aplicação consumirá menos memória, afinal a memória dedicada para as Sessions foi delegada para o Redis, e este banco mantém em curtos períodos os dados da Session em disco.</p>
+</div>

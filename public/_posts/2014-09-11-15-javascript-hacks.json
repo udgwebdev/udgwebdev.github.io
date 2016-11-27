@@ -1,0 +1,11 @@
+{
+  "title": "15 JavaScript Hacks",
+  "tags": [
+    "Javascript"
+  ],
+  "published": true,
+  "description": "Neste post vou compartilhar 15 Hacks extremamente úteis para se aplicar em JavaScript. As dicas são um acumulado de magias avançadas que visam diminuir o tamanho do código ou realizar um código de forma muito eficiente.",
+  "image_url": "javascript-logo.jpg",
+  "slug": "15-javascript-hacks",
+  "created_at": "11/09/2014"
+}

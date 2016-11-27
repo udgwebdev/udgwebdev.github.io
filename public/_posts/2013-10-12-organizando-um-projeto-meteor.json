@@ -1,0 +1,9 @@
+{
+  "title": "Organizando um projeto Meteor",
+  "tags": "Meteor",
+  "description": "Neste post explicarei o significado das conveções de diretórios do Meteor, para você organizar projetos de larga-escala.",
+  "published": true,
+  "image_url": "meteor-logo.jpg",
+  "slug": "organizando-um-projeto-meteor",
+  "created_at": "12/10/2013"
+}

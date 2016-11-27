@@ -1,0 +1,9 @@
+{
+  "title": "Socket.IO com Redis",
+  "tags": "Node.js",
+  "published": true,
+  "description": "Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a documentação nos ensina, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca.",
+  "image_url": "socket-io.jpg",
+  "slug": "socket-io-com-redis",
+  "created_at": "13/12/2013"
+}

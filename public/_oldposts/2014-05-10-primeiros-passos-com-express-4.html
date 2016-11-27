@@ -1,0 +1,156 @@
+---
+layout: post
+title: Primeiros passos com Express 4
+tags: Node.js
+keywords: Node.js, Express, Express 4, Express.JS
+description: ! 'O principal foco do Express é ser um framework minimalista. Neste post veja algumas mudanças e novos recursos, explorando na prática esse popular framework web do Node.js.'
+published: true
+image_url: express4.jpg
+---
+<figure class="post-image">
+  <a href="http://expressjs.com" target="_blank" title="Express">
+    <img src="{{ site.url }}/images/express4.jpg" width="250" height="76" alt="Express 4.0" title="Express 4.0">
+  </a>
+</figure>
+<div class="post-content">
+  <p>Já faz um tempo que publiquei alguns posts sobre Node.js usando Express neste blog e infelizmente esses posts já estão desatualizados.</p>
+  <p>Por isso, com o objetivo de compensar esse atraso vou mostrar nesse post, como trabalhar com a nova versão do popular <a href="http://expressjs.com" target="_blank" title="Express">web framework Express</a>.</p>
+
+  <h2>Sobre o Express</h2>
+  <p>O principal foco do Express é ser um framework minimalista, para atingir esse objetivo, algumas mudanças foram realizadas que em destaque são:</p>
+  <ul>
+    <li>Remoção do CLI que liberava o comando <strong>express</strong> para bundle</li>
+    <li>Remoção dos middlewares: <strong>bodyParser, cookieParser, session, favicon, logger</strong> (agora eles se encontram em módulos separados, permitindo que sejam instalados quando necessário).</li>
+    <li>Remoção do <strong>app.use(app.router)</strong></li>
+    <li>Criação de uma nova API para roteamento, o <strong>Router</strong></li>
+    <li>Utilização do <strong>app.route</strong> que permite numa única rota chamar mais de um verbo HTTP.</li>
+  </ul>
+  <p>Se sua aplicação Express utiliza uma versão anterior <strong>(3.x)</strong>, recomendo que <a href="https://github.com/visionmedia/express/wiki/Migrating-from-3.x-to-4.x" target="_blank" title="Migrando Express 3.x para 4.x">acesse essa wiki que contém dicas para migração.</a></p>
+
+  {% include content-ads.ext %}
+
+  <h2>Show me code!</h2>
+  <p>Para mostrar na prática, que tal criarmos um mini blog explorando os recursos do Express 4?</p>
+  <p>Nosso mini blog utilizará os seguintes frameworks:</p>
+  <ul>
+    <li><a href="https://github.com/visionmedia/express" target="_blank" title="Github do Express">Express 4</a>: O framework web cobaia deste post.</li>
+    <li><a href="https://github.com/rvagg/node-levelup" target="_blank" title="Github do LevelUP">LevelUP</a>: Um framework do LevelDB compatível com Node.js. (veja mais sobre LevelDB neste post: <a href="http://udgwebdev.com/brincando-com-leveldb" target="_blank" title="Brincando com LevelDB">Brincando com LevelDB</a>).</li>
+    <li><a href="https://github.com/broofa/node-uuid" target="_blank" title="Github do Node UUID">Node UUID</a>: Gerador de IDs malucos baseado em UUIDs.</li>
+    <li><a href="https://github.com/expressjs/body-parser" target="_blank" title="Github do Body Parser">Body Parser</a>: Realiza parser de dados do HTTP para objeto JSON.</li>
+  </ul>
+
+  <p>Para começar abra o terminal e execute o comando:</p>
+
+{% highlight bash %}
+mkdir miniblog
+cd miniblog
+npm init
+{% endhighlight %}
+
+  <p>Responda o questionário do <strong>npm init</strong> informando os dados do projeto, no meu caso eu respondi da seguinte maneira:</p>
+
+{% highlight bash %}
+name: miniblog
+version: 0.0.1
+description: Mini blog escrito em Express 4
+entry point: app.js
+author: Caio R. Pereira
+license: MIT
+{% endhighlight %}
+
+  <p>Em seguida instale todas as dependências em um único comando:</p>
+
+{% highlight bash %}
+npm install express jade level node-uuid body-parser --save
+{% endhighlight %}
+
+  <p>Pronto! Já temos o projeto configurado, agora só falta o principal, que é criar o back-end da aplicação. Crie o arquivo <strong>app.js</strong> com o seguinte código:</p>
+
+{% highlight javascript %}
+var express = require('express')
+  , bodyParser = require('body-parser')
+  , path = require('path')
+  , level = require('level')
+  , uuid = require('node-uuid')
+  , db = level('./miniblog.db', {valueEncoding: 'json'})
+  , app = express()
+;
+
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'jade');
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
+
+app.route('/')
+  .get(function(req, res) {
+    var posts = [];
+    var stream = db.createValueStream();
+    stream.on('data', function(post) {
+      posts.push(post);
+    });
+    stream.on('end', function() {
+      return res.render('index', {posts: posts});
+    });
+  })
+  .post(function(req, res) {
+    db.put(uuid.v1(), req.body.post, function(err) {
+      return res.redirect('/');
+    });
+  });
+
+app.listen(3000, function() {
+  console.log('MiniBlog running...');
+});
+{% endhighlight %}
+
+  <p>Repare que para reaproveitar uma mesma rota em ambos os verbos: <strong>GET</strong> e <strong>POST</strong> foi utilizado a nova função <strong>app.route("/")</strong>. Com essa função você terá uma organização melhor de suas rotas, facilitando também a modularização de um grupo de rotas e também facilita a criação de <strong>controllers</strong>, caso queira uma <a href="http://pt.wikipedia.org/wiki/MVC" target="_blank" title="Wiki: Padrão MVC (Model-View-Controller)">organização de códigos like MVC</a>.</p>
+  <p>Outro detalhe foi a utilização do middleware: <strong>bodyParser</strong>. Dessa vez foi necessário instalá-lo individualmente para usar seus recursos, isso faz com que o Express fique mais enxuto, pois antigamente esse e outros middlewares eram pré-instalados pelo framework mesmo que você não fosse utilizado.</p>
+  <p>Para finalizar, falta criar a página do nosso blog, que são conhecidas pelo nome <strong>views</strong>.</p>
+  <p>Primeiro criaremos um simples layout para suportar o conteúdo das views, então crie o arquivo <strong>views/layout.jade</strong>:</p>
+
+{% highlight javascript %}
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    title MiniBlog
+  body
+    block content
+{% endhighlight %}
+
+  <p>Agora vamos implementar a página principal que terá apenas dois recursos:</p>
+  <ol>
+    <li>Listagem de posts</li>
+    <li>Cadastro de post</li>
+  </ol>
+  <p>Para isso, crie o arquivo <strong>views/index.jade</strong> com o seguinte código Jade:</p>
+
+{% highlight javascript %}
+extends layout
+block content
+  h1 MiniBlog
+  form(action="/", method="post")
+    fieldset
+      legend Novo post
+      label Título
+      input(type="text" name="post[title]")
+      label Conteúdo
+      textarea(rows="6" name="post[content]")
+      button(type="submit") Cadastrar
+  br
+  each post in posts
+    h2 #{post.title}
+    p #{post.content}
+    hr
+{% endhighlight %}
+
+  <p>Depois disso tudo, agora você pode rodar sua aplicação, para isso execute o comando:</p>
+
+{% highlight bash %}
+node app
+{% endhighlight %}
+
+  <p>E faça o test-drive do MiniBlog acessando a url: <strong>http://localhost:3000</strong>.</p>
+
+</div>

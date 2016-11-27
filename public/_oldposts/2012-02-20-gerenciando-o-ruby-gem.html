@@ -1,0 +1,37 @@
+---
+layout: post
+title: Gerenciando o Ruby Gem
+tags: Ruby
+keywords: Ruby, Ruby Gems, Gems, Gerenciando gems
+published: true
+description: O objetivo desse post é ensinar o básíco de comandos para gerenciar repositórios Ruby - Gems
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/ruby.jpg" width="128" height="127" alt="Ruby Gems" title="Ruby Gems">
+  <figcaption>Utilizando Ruby Gems</figcaption>
+</figure>
+<div class="post-content">
+  <p>Recentemente voltei a estudar um pouco <strong>Ruby</strong>, motivo foi por que estou desenvolvendo um site dinâmico, estou aprendendo muito sobre <strong>Ruby com framework Sinatra</strong>, ambos possuem muitas funcionalidades semelhantes ao <strong>Node.js com Express</strong>, pelo qual já conheço melhor.</p>
+  <p>No começo, seguindo diversos tutoriais e documentações acabei instalando e desinstalando do muitas <strong>Ruby Gems</strong>, resumindo acabei armazenando cerca <strong>100 gems</strong> pelo qual só utilizo 5 no projeto. Eae surgiu a necessidade de aprender o básico sobre gerenciamento de Gems e será isso que irei compartilhar abaixo:</p>
+
+  {% include content-ads.ext %}
+
+  <h4>Instalando uma gem</h4>
+  <p><code>gem install nome_da_gem</code></p>
+  <h4>Removendo uma gem</h4>
+  <p><code>gem uninstall nome_da_gem</code></p>
+  <h4>Atualizando uma gem</h4>
+  <p><code>gem update nome_da_gem</code></p>
+  <h4>Listando gems</h4>
+  <p><code>gem list</code></p>
+  <h4>Limpando versões antigas das gems</h4>
+  <p><code>gem cleanup</code></p>
+  <h4>Pesquisar por uma gem</h4>
+  <p><code>gem search nome_da_gem</code></p>
+  <h4>Visualizando documentação das gems</h4>
+  <p>Execute o comando: <code>gem server</code> e acesse no browser: <code>http://localhost:8808</code></p>
+  <h4>Desinstalando todas as gems</h4>
+  <p><code>gem list | cut -d" " -f1 | xargs gem uninstall -aIx</code></p>
+
+  <p>Com isso você já terá conhecimento suficiente para sobreviver no mundo <strong>Ruby</strong> gerenciando de forma eficiente os repositórios <strong>Gems</strong> em seu projeto.</p>
+</div>

@@ -1,0 +1,9 @@
+{
+  "title": "Escrevendo JavaScript melhor - Parte 1",
+  "tags": "Javascript",
+  "published": true,
+  "description": "Esse post visa mostrar na prática como melhorar algumas gambiarras clássicas de se encontrar em qualquer projeto legado que utiliza JavaScript.",
+  "image_url": "es6-logo.jpg",
+  "slug": "escrevendo-javascript-melhor-parte-1",
+  "created_at": "02/06/2016"
+}

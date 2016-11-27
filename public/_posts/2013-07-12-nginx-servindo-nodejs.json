@@ -1,0 +1,8 @@
+{
+  "title": "Nginx servindo Node.js",
+  "tags": "Node.js",
+  "published": true,
+  "description": "Nesse post falarei um pouco mais sobre a união entre Node.js e Nginx, mostrando as vantagens desse casamento e como implementar um servidor estático + servidor proxy com eles.",
+  "slug": "nginx-servindo-nodejs",
+  "created_at": "12/07/2013"
+}

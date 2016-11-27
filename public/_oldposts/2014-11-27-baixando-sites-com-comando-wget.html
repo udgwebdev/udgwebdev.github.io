@@ -1,0 +1,29 @@
+---
+layout: post
+title: Baixando sites com comando wget
+tags: ['Dicas de terminal']
+keywords: Download de sites com wget, Baixando sites com wget
+published: true
+description: Hoje apresentarei um comando que realiza uma contagem de quantos arquivos existem em um diretório.
+image_url: terminal-console-linux.jpg
+---
+<figure class="post-image">
+  <img src="{{ site.url }}/images/terminal-console-linux.jpg" alt="Terminal Console Linux" width="200" height="200">
+  <figcaption>Terminal Console Linux</figcaption>
+</figure>
+<div class="post-content">
+  <p>Fazia um tempinho que não postava algo sobre dicas de terminal e hoje finalmente vou mostrar mais uma vez dica bem útil através de um simples comando. Vou mostrar para vocês como baixar um site inteiro usando o comando <code>wget</code>.</p>
+  <p>Na prática vamos utilizar o comando <code>wget</code> em modo de download recursivo através da flag <code>-r</code> ou <code>--recursive</code>.
+
+  {% include content-ads.ext %}
+
+  <p>Lembrando que infelizmente o comando <code>curl</code> que é um concorrente do <code>wget</code> não possui suporte a download recursivo.</p>
+  <br>
+  Para fazer essa tafera apenas execute esse comando:
+{% highlight bash %}
+wget -r http://udgwebdev.com
+{% endhighlight %}
+  <br>
+  E mais uma vez você aprendeu uma combinação de comando linux útil para tarefas do seu dia-a-dia, até a próxima!</p>
+  <p>Veja também outras <a href="{{ site.url }}/dicas-de-terminal" title="Dicas de terminal" target="_blank">dicas de terminal</a>.</p>
+</div>
