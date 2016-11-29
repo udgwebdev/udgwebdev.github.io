@@ -1,3 +1,5 @@
+# Teclas de atalho essenciais no Eclipse
+
 ![Eclipse IDE](../images/eclipse-logo.jpg "Eclipse IDE")
 
 Essa dica é obrigatória para todo desenvolvedor não só para os que utilizam o Eclipse, mas para os que utilizam qualquer outra IDE, por que nós da área de programação em muitos casos vivemos trabalhando com muitas tarefas e não há coisa mais improdutiva do que programar em um IDE como se estivesse utilizando um simples bloco de notas (Digitando palavra por palavra), pior que isso utilizando com frequência os comandos de copiar e colar, que em muitas vezes geram possíveis bugs no sistema devido a falta de atenção do programador que copiou certo trecho de código e esqueceu de adaptá-lo. Além dessa atitude ser improdutiva, você deixa de utilizar 90% dos recursos presentes na sua IDE.

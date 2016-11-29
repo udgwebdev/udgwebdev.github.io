@@ -1,3 +1,5 @@
+# Deploying Meteor no Heroku
+
 ![Deploying Meteor no Heroku](../images/heroku.jpg "Deploying Meteor no Heroku")
 
 Recentemente, a equipe do Meteor, publicou em sua newsletter que vai descontinuar os servidores free que são fornecidos através do comando meteor deploy.

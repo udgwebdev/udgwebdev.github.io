@@ -1,3 +1,5 @@
+# Modularizando Frontend JavaScript com Browserify
+
 [![Browserify](../images/browserify.jpg "Browserify")](http://browserify.org/ "Browserify")
 
 Se você gosta de criar e organizar códigos JavaScript seguindo o padrão [CommonJS](http://wiki.commonjs.org), que é muito popular no Node.js, e gostaria de trabalhar com o mesmo padrão no front-end de sua aplicação, então esse post será de grande utilidade para você.

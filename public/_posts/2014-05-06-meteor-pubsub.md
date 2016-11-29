@@ -1,3 +1,5 @@
+# Meteor PubSub
+
 [![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 ### O que é PubSub?

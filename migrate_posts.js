@@ -79,7 +79,7 @@ _.eachRight(fs.readdirSync(OLD_POSTS), (postFile) => {
         }
         return content;
       }).join('\n');
-      const postMarkdownData = toMarkdown(postContentData, MARKDOWN_OPTS);
+      const postMarkdownData = `# ${postMetaData.title}\n\n${toMarkdown(postContentData, MARKDOWN_OPTS)}`;
       fs.outputFileSync(path.join(NEW_POSTS, postFile.replace('.html', '.md')), postMarkdownData);
     }
     if (!postMetaDataObj.alias) {

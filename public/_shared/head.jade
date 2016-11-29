@@ -1,5 +1,5 @@
 - var page_title = title + ' | ' + blog_name
-- var page_url = root_url[environment] + current.path
+- var page_url = root_url[environment] + (slug || current.path)
 meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
 meta(charset="utf-8")
 title #{page_title}

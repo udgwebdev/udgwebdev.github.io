@@ -1,3 +1,5 @@
+# Dicas de terminal - Matando processos da rede
+
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Com intuito de voltar a ativa neste blog, pretendo lançar uma séries de mini-posts com dicas rápidas para serem utilizados no terminal console do Linux. Estudarei profundamente em busca de comandos e combinações de comandos, que possam realmente agregar valores no seu dia-a-dia para automatizar seu Linux. Lembrando que todas as dicas servirão para qualquer **distribuição Linux, sistemas Unix e MacOSX.**

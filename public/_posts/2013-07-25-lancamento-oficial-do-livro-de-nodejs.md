@@ -1,3 +1,5 @@
+# Lançamento oficial do livro de Node.js
+
 [![Livro: Aplicações web real-time com Node.js](../images/livro-aplicacoes-web-real-time-com-nodejs.jpg "Livro: Aplicações web real-time com Node.js")](https://casadocodigo.refersion.com/l/630.1389 "Livro: Aplicações web real-time com Node.js")
 
 Fala pessoal, é com muito orgulho que venho divulgar aqui meu primeiro livro sobre Node.js que foi oficialmente lançado hoje.

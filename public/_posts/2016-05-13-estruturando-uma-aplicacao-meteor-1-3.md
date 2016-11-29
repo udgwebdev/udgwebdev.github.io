@@ -1,3 +1,5 @@
+# Estruturando uma aplicação Meteor 1.3
+
 ![Estruturando uma aplicação Meteor 1.3](../images/meteor-logo.jpg "Estruturando uma aplicação Meteor 1.3")
 
 Desde a versão 1.3 do Meteor muitas melhorias surgiram, uma das principais mudanças foi a adoção do ES6, integração completa com NPM e uma nova estrutura de convenções de pastas para organizar sua aplicação Meteor.

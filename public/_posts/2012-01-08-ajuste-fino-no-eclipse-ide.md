@@ -1,3 +1,5 @@
+# Ajuste fino no Eclipse IDE
+
 ![Ajuste fino no Eclipse](../images/eclipse-logo.jpg "Ajuste fino no Eclipse")
 
 Para os que utilizam o **Eclipse IDE**, segue abaixo algumas simples dicas, que na verdade são algumas pequenas configurações que realmente fazem diferença e aumentam a produtividade ao utilizar essa incrível ferramenta.

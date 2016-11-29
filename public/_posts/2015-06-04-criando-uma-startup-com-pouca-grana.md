@@ -1,3 +1,5 @@
+# Criando uma startup com pouca grana
+
 ![Criando uma startup com pouca grana](../images/startup-money.jpg "Criando uma startup com pouca grana")
 
 Recentemente criei uma nova startup que se chama 99folks **(Infelizmente ela não existe mais)** que é um aplicativo facilitador de networking, ele usa o GPS para compartilhar dados de contatos com pessoas geograficamente próximas ao usuário. Quando você é um desenvolvedor, você praticamente aprende muita coisa legal em uma startup, principalmente na parte técnica, e é incrível como **existem diversos serviços gratuitos ou beeeeemmmmm barato** para te auxiliar na construção de uma aplicação web ou mobile.

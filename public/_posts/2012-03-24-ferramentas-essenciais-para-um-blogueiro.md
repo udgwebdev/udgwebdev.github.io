@@ -1,3 +1,5 @@
+# Ferramentas essenciais para um blogueiro
+
 ![Gerenciadores de blogs](../images/gerenciadores-de-blogs.jpg)
 
 Esse post tem como objetivo de apresentar para os novatos no mundo de blogs, as ferramentas gratuitas da web, que são essenciais para gerenciar não só o conteúdo do blog, mas também como melhorar a visibilidade dele na web.

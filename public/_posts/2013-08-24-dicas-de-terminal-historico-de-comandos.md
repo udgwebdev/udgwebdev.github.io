@@ -1,3 +1,5 @@
+# Dicas de terminal - Histórico de comandos
+
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Para quem trabalha com terminal, digitando diversos comandos com frequência vira e volta acaba digitando comandos pelo qual num futuro próximo vai utilizá-lo, porém acaba esquecendo de como chamá-lo.

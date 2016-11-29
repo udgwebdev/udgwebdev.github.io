@@ -1,3 +1,5 @@
+# Organizando aplicações Node.js
+
 ![Organizando aplicações Node.js](../images/nodejs-logo.jpg "Organizando aplicações Node.js")
 
 Se você esta começando com Node.js e esta trabalhando utilizando um framework minimalista like Express ou Hapi, com certeza você cairá na armadilha de organizar os módulos de sua aplicação do jeito que quiser ou até mesmo criar tudo num único arquivo `app.js`, `server.js`, `main.js`, `index.js` ou etc.

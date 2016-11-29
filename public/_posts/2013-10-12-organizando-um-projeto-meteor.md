@@ -1,3 +1,5 @@
+# Organizando um projeto Meteor
+
 [![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 Uma dúvida muito recorrente para os iniciantes da plataforma Meteor, é sobre como organizar os diretórios do projeto.

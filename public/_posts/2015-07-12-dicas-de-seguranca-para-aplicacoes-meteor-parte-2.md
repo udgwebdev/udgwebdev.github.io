@@ -1,3 +1,5 @@
+# Dicas de segurança para aplicações Meteor - Parte 2
+
 ![Meteor](../images/meteor-logo.jpg "Meteor")
 
 Dando continuidade ao post [Dicas de segurança para aplicações Meteor]({{site.url}}/dicas-de-seguranca-para-aplicacoes-meteor "Dicas de segurança para aplicações Meteor"), apresentarei mais algumas dicas de fácil implementação e que vão manter sua aplicação Meteor blindada!

@@ -1,3 +1,5 @@
+# Dicas de terminal - Processos em background
+
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 De vez enquando rodar aplicativos em background é vantajoso, pois possibilita no terminal **executar N processos em paralelo**, outra vantagem é que libera o terminal para executar outras tarefas.

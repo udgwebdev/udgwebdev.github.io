@@ -1,3 +1,5 @@
+# Múltiplos diretórios em um comando
+
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Hoje a dica é bem simples e prática, utilizarei como exemplo um comando para criar diretórios, porém a técnica pode ser usada em outros comandos. Basicamente iremos incluir múltiplos parâmetros para ser executados por um comando específico. Abaixo utilizaremos o comando para criar múltiplos diretórios, veja o comando:

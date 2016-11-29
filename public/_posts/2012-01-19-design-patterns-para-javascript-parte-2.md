@@ -1,3 +1,5 @@
+# Design Patterns para Javascript - Parte 2
+
 ![Javascript Desing Pattenrs](../images/javascript-logo.jpg "Javascript Desing Pattenrs")
 
 Continuando a série de posts relacionado a **Design Patterns para Javascript** hoje apresentarei os patterns: **Module, Factory e Mixin**. Caso ainda não tenha visto a primeira parte desse post, veja-o neste link: [Design Patterns para Javascript - Parte 1.](../design-patterns-para-javascript-parte-1/ "Design Patterns para Javascript – Parte 1")

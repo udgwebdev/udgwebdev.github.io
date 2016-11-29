@@ -1,3 +1,5 @@
+# Módulos essenciais para Node.js - Parte 1
+
 ![Node.js](../images/nodejs-logo.jpg "Node.js")
 
 Atualmente em sua versão estável **0.10.12** muitas novidades surgiram para universo Node.js. Pouco a pouco novos projetos de grandes e pequenas empresas estão surgindo com esta tecnologia. Outro fator importamente é os surgimento de inúmeros módulos que visam resolver diversos tipos de problemas nesta plataforma.

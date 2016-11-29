@@ -1,3 +1,5 @@
+# Um pouco sobre terminal - Parte 1
+
 ![Terminal console do Linux](../images/terminal-console-linux.jpg)
 
 Uma das maiores rejeições pelo qual muitos usuários desistem de migrar para linux é a comodidade de gerenciar todo sistema operacional através de interface gráfica (Windows, MacOS), e isso nunca foi o ponto forte no Linux, é claro que atualmente existem distribuições focado em usabilidade para o usuário final, mas mesmo assim, em alguns casos ter o mínimo conhecimento sobre os comandos do terminal linux pode te ajudar a resolver grandes problemas.

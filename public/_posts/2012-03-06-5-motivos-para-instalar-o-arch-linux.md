@@ -1,3 +1,5 @@
+# 5 motivos para instalar o Arch Linux
+
 [![Distro Arch Linux](../images/arch-linux-logo.jpg)](http://archlinux.org/) 
 
 Bom pessoal, venho a este post apresentá-los alguns motivos, para que conheçam esse excelente sistema operacional chamado **Arch Linux**, isso tudo resumindo em 5 motivos listados abaixo que fazem dessa distro um diferencial entre as demais.

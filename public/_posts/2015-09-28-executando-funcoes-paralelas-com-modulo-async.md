@@ -1,3 +1,5 @@
+# Executando funções paralelas com módulo async
+
 ![Funções paralelas usando async](../images/nodejs-logo.jpg "Funções paralelas usando async")
 
 Para quem não conhece, o módulo [async](https://github.com/caolan/async "Github do async") é muito útil quando se precisa de um framework para manipular fluxo de execuções assíncronas, com ele é possível organizar de forma elegante todo código de funções assíncronas, assim como também organizar a execução de cada uma delas.

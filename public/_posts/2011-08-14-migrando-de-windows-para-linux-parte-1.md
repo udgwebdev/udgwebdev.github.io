@@ -1,3 +1,5 @@
+# Migrando Windows para Linux - Parte 1
+
 ![Migrando definitivamente para Linux](../images/mingrando-de-windows-para-linux.jpg)
 
 A idéia do post é apresentar alternativos aplicativos encontrados para qualquer distribuição, com intuito de ajudá-lo na migração para Linux. Neste post, listarei diversos programas bem conhecidos do mundo linux, que podem substituir completamente os programas que se encontra nos produtos Micro$oft Windows.

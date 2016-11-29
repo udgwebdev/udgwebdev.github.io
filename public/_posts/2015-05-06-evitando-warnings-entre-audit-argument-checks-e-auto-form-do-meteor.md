@@ -1,3 +1,5 @@
+# Evitando warnings entre audit-argument-checks e auto-form do Meteor
+
 ![Meteor](../images/meteor-logo.jpg "Meteor")
 
 Este post é para quem esta desenvolvendo aplicações Meteor usando o incrível package [auto-form](https://atmospherejs.com/aldeed/autoform) junto com [audit-argument-checks](https://atmospherejs.com/meteor/audit-argument-checks) e anda recebendo warnings de que falta checar todos os argumentos em um **Meteor.methods**.

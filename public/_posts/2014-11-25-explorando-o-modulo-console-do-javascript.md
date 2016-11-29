@@ -1,3 +1,5 @@
+# Explorando o módulo console do JavaScript
+
 ![15 JavaScript Hacks](../images/javascript-logo.jpg "15 JavaScript Hacks")
 
 Pra quem programa com JavaScript ou Node.js com certeza já usou em algum trecho de código a função `console.log` para imprimir alguma informação na tela. Mas e as demais funções do módulo `console`? Neste post vou apresentar algumas funcionalidades que são pouco conhecidas, mas que são bem úteis desse módulo.
