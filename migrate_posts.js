@@ -51,8 +51,9 @@ _.eachRight(fs.readdirSync(OLD_POSTS), (postFile) => {
   const postDataSplitted = _.takeRight(postSplitPoint, 2);
   try {
     const postMetaDataObj = YAML.parse(postDataSplitted[0]);
+    const tags = _.isArray(postMetaDataObj.tags) ? postMetaDataObj.tags : [postMetaDataObj.tags];
     const postMetaData = _.extend(_.omit(postMetaDataObj, META_OMIT), {
-      slug: postSlugTitle, created_at: postPubDate
+      slug: postSlugTitle, created_at: postPubDate, tags
     });
     if (!postMetaDataObj.alias_url && !postMetaDataObj.alias) {
       const postContentArray = postDataSplitted[1]

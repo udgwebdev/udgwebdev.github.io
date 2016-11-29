@@ -1,7 +1,17 @@
+a {
+  color: rgb(186, 45, 39);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 .vertical-centralization {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .navbar-logo {
   margin-top: 5px;
   margin-left: 10px;
+}
+.navbar-inverse {
+  background-color: rgb(186, 45, 39);
 }
