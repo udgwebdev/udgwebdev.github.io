@@ -3,3 +3,6 @@ www
 node_modules
 .grunt
 npm-debug.log
+!public/{css,js,images,fonts,_posts,_shared}/*
+!public/*
+public/**/*

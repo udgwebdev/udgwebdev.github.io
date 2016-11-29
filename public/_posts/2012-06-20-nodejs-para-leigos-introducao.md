@@ -1,4 +1,4 @@
-![Curso de Node.js](images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Bem-vindos ao cursinho de Node.js para leigos, neste primeiro post apresentarei uma introdução sobre como é o mundo dessa tecnologia, como surgiu Node.js e para o que ela foi desenvolvida, para finalizar mostrarei também as principais características que mais destacam essa tecnologia apresentando suas vantagens e desvantagens.
 
@@ -10,7 +10,7 @@ Principais características do Node.js:
 
 #### Linguagem Google Chrome Javascript V8
 
-Você irá desenvolver aplicações utilizando Javascript, algo muito interessante, pois essa linguagem permite trabalhar de forma simplificada tudo o que receber do lado cliente, a curva de aprendizado será pequena, pois o Javascript que você conhece não será diferente do que irá usar no server-side da aplicação, de fato você irá aprender mais como utilizar os **diversos módulos (APIs ou Frameworks)** e principalmente irá conhecer os diversos [Design Patterns do Javascript](design-patterns-para-javascript-parte-2/ "Design Patterns para Javascript – Parte 2") no Node.js.
+Você irá desenvolver aplicações utilizando Javascript, algo muito interessante, pois essa linguagem permite trabalhar de forma simplificada tudo o que receber do lado cliente, a curva de aprendizado será pequena, pois o Javascript que você conhece não será diferente do que irá usar no server-side da aplicação, de fato você irá aprender mais como utilizar os **diversos módulos (APIs ou Frameworks)** e principalmente irá conhecer os diversos [Design Patterns do Javascript](../design-patterns-para-javascript-parte-2/ "Design Patterns para Javascript – Parte 2") no Node.js.
 
 #### Orientado à eventos de I/O
 
@@ -24,11 +24,11 @@ Em sistemas com arquitetura de **Threads Bloqueantes** quando 10 usuários simul
 
 Com isso o conceito de **Threads Não-Bloqueantes** é totalmente o inverso, ou seja, ninguém controla a concorrência de usuários e isso por mais que não garanta a integridade, traz como benefício um ganho maior em performance, visto que o total de threads concorrentes ficam na memória por um tempo menor e não serão enfileirados para utilizarem o mesmo recurso, e simplesmente o primeiro que utilizar o recurso ganha, os demais perdem ou tentam outra vez. Diversos sistemas pode utilizar esse conceito sem prejudicar os usuários, geralmente são sistemas que trabalham mais com consultas na base de dados do que alterações no mesmo. Alguns exemplos: **Games Multiplayer, Web Services, Blogs, Redes sociais, Web Analytics, Chats, e muito mais.**Abaixo apresento duas imagens fazendo uma analogia aos mecanismos de **Threads Bloqueantes e Não-bloqueantes**:
 
-![Threads Bloqueantes =  Trânsito](images/transito.jpg "Threads Bloqueantes =  Trânsito")
+![Threads Bloqueantes =  Trânsito](../images/transito.jpg "Threads Bloqueantes =  Trânsito")
 
 Um trânsito de carros passando por um túneo faz uma ótima analogia com Threads bloqueantes, porque para se passar no túneo é necessário formar uma fila de carros para cada carro passar neste local.
 
-![Threads Não-Bloqueantes = Cardume](images/cardume.jpg "Threads Não-Bloqueantes = Cardume")
+![Threads Não-Bloqueantes = Cardume](../images/cardume.jpg "Threads Não-Bloqueantes = Cardume")
 
 A comparação com um cardume de peixes com Threads Não-Bloqueantes é perfeita, visto que todos os peixes estão livres, não há regras, filas e principalmente se você **jogar comida para apenas um peixe (analogia ao uso de um recurso do sistema)** apenas o peixe sortudo irá comê-lo e os demais esperarão pela próxima tentativa.
 

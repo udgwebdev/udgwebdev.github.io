@@ -1,4 +1,4 @@
-![Realtime com RethinkDB](images/rethinkdb-logo.png "Realtime com RethinkDB")
+![Realtime com RethinkDB](../images/rethinkdb-logo.png "Realtime com RethinkDB")
 
 Se você precisa de um banco NoSQL que trabalhe com JSON, tenha suporte a consultas realtime e você quer expandir seus horizontes em conhecimentos que vão além de trabalhar apenas com MongoDB, uma boa opção é conhecer o RethinkDB.
 

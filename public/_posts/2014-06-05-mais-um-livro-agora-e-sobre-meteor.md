@@ -1,4 +1,4 @@
-[![Livro: Meteor - Criando aplicações web real-time com JavaScript](images/meteor-criando-aplicacoes-web-real-time-com-javascript.jpg "Livro: Meteor - Criando aplicações web real-time com JavaScript")](https://casadocodigo.refersion.com/l/d88.3525 "Livro: Meteor - Criando aplicações web real-time com JavaScript")
+[![Livro: Meteor - Criando aplicações web real-time com JavaScript](../images/meteor-criando-aplicacoes-web-real-time-com-javascript.jpg "Livro: Meteor - Criando aplicações web real-time com JavaScript")](https://casadocodigo.refersion.com/l/d88.3525 "Livro: Meteor - Criando aplicações web real-time com JavaScript")
 
 Olá! Quero apresentar a vocês mais um novo livro que foi lançado sua versão final mês passado. Estou falando do livro que escrevi sobre o framework Meteor, que cada vez mais ganha espaço no mundo de aplicações web.
 

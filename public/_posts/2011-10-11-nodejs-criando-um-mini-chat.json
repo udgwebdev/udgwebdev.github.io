@@ -1,8 +1,0 @@
-{
-  "title": "Node.js - Criando Mini-chat via Telnet",
-  "tags": "Node.js",
-  "description": "Continuando os estudos sobre Node.js, apresentarei um tutorial para desenvolver um mini-chat rodando via telnet, para executá-lo no protocolo TCP/IP.",
-  "published": true,
-  "slug": "nodejs-criando-um-mini-chat",
-  "created_at": "11/10/2011"
-}

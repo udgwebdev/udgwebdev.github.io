@@ -1,4 +1,4 @@
-![Criando um chat usando session do Express 4 no Socket.IO 1.0](images/express-socketio.jpg "Criando um chat usando session do Express 4 no Socket.IO 1.0")
+![Criando um chat usando session do Express 4 no Socket.IO 1.0](../images/express-socketio.jpg "Criando um chat usando session do Express 4 no Socket.IO 1.0")
 
 Fala pessoal tudo bem? Se você utiliza Socket.IO e Express juntos, esse tutorial vai te ajudar a manter mais seguro o seu sistema, afinal vou te explicar como compartilhar dados de uma session do Express no Socket.IO, que é bem melhor do que aderir a ~~gambiarras~~ soluções paliativas.
 
@@ -14,7 +14,7 @@ Na prática, quando entramos no sistema, o Express automaticamente cria uma **Se
 
 #### Let's code!
 
-Atenção! As dicas desse post funcionará somente nas **versões do Socket.IO 1.0 e Express 4.x**, versões anteriores não funcionarão com os códigos abaixo. Caso você precise implementar esta técnica utilizando o **Express 3.x com Socket.IO 0.9**, recomendo que leia este post antigo do blog: [Node.js: Express, Socket.IO e Sessions](nodejs-express-socketio-e-sessions/ "Node.js: Express, Socket.IO e Sessions")
+Atenção! As dicas desse post funcionará somente nas **versões do Socket.IO 1.0 e Express 4.x**, versões anteriores não funcionarão com os códigos abaixo. Caso você precise implementar esta técnica utilizando o **Express 3.x com Socket.IO 0.9**, recomendo que leia este post antigo do blog: [Node.js: Express, Socket.IO e Sessions](../nodejs-express-socketio-e-sessions/ "Node.js: Express, Socket.IO e Sessions")
 
 Antes de implementar o código abaixo, crie uma pasta com o nome: **mini-chat** e dentro dessa pasta instale os seguintes módulos:
 

@@ -1,4 +1,4 @@
-![Mais um livro sobre Node.js](images/nodejs-logo.jpg "Mais um livro sobre Node.js")
+![Mais um livro sobre Node.js](../images/nodejs-logo.jpg "Mais um livro sobre Node.js")
 
 Fala pessoal blz? Atualmente ando finalizando mais um livro, dessa vez será sobre como construi APIs REST utilizando Node.js com banco de dados relacional através do [Sequelize.js](http://sequelizejs.com/), e tenho certeza que vocês vão gostar!
 

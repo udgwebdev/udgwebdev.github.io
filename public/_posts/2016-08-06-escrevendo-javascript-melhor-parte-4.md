@@ -1,4 +1,4 @@
-![Escrevendo JavaScript melhor](images/es6-logo.jpg "Escrevendo JavaScript melhor")
+![Escrevendo JavaScript melhor](../images/es6-logo.jpg "Escrevendo JavaScript melhor")
 
 E mais uma vez, volto a falar desse assunto, já chegando na quarto episódio dessa série sobre boas práticas para escrever JavaScript melhor.
 
@@ -60,8 +60,8 @@ A função `array.filter()`, retorna um novo array com base no callback de filtr
 
 Veja também:
 
-*   [Escrevendo JavaScript melhor - Parte 1](escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")
-*   [Escrevendo JavaScript melhor - Parte 2](escrevendo-javascript-melhor-parte-2 "Escrevendo JavaScript melhor - Parte 2")
-*   [Escrevendo JavaScript melhor - Parte 3](escrevendo-javascript-melhor-parte-3 "Escrevendo JavaScript melhor - Parte 3")
+*   [Escrevendo JavaScript melhor - Parte 1](../escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")
+*   [Escrevendo JavaScript melhor - Parte 2](../escrevendo-javascript-melhor-parte-2 "Escrevendo JavaScript melhor - Parte 2")
+*   [Escrevendo JavaScript melhor - Parte 3](../escrevendo-javascript-melhor-parte-3 "Escrevendo JavaScript melhor - Parte 3")
 
 Estou adorando escrever sobre esse assunto, caso você tenha uma dica boa sobre como escrever JavaScript melhor comente abaixo que farei questão de estudar e escrever no próximo post, e é claro, citando o nome do autor da dica, até o próximo post!

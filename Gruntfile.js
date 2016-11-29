@@ -40,6 +40,12 @@ module.exports = (grunt) => {
         }]
       }
     },
+    // Exec Feed Generator ===========================
+    shell: {
+      posts: {
+        command: 'node posts.js'
+      }
+    },
     // Manifest ======================================
     appcache: {
       options: {
@@ -93,10 +99,11 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-appcache');
   grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sw-precache');
 
-  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin']);
-  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin']);
+  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin', 'shell:posts']);
+  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin', 'shell:posts']);
   grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'compress']);
   grunt.registerTask('deploy:prod', ['gh-pages', 'clean']);
 };

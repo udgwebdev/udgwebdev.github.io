@@ -1,9 +1,0 @@
-{
-  "title": "Dicas de segurança para aplicações Meteor - Parte 2",
-  "tags": "Meteor",
-  "published": true,
-  "description": "Dando continuidade ao post Dicas de segurança para aplicações Meteor, apresentarei mais algumas dicas de fácil implementação e que vão manter sua aplicação Meteor blindada!",
-  "image_url": "meteor-logo.jpg",
-  "slug": "dicas-de-seguranca-para-aplicacoes-meteor-parte-2",
-  "created_at": "12/07/2015"
-}

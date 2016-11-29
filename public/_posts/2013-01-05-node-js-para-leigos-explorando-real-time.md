@@ -1,4 +1,4 @@
-![Curso de Node.js](images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Fala galera! O capítulo de hoje será muito interessante, falarei sobre um assunto que esta muito emergente nos sistemas web, que esta sendo largamente utilizado no [Node.js]({{site.url}}/nodejs), **o assunto é Real-time.**
 Quando se fala de aplicações real-time, estamos técnicamente falando de **conexões bi-direcionais**, que na prática, é uma **conexão que se mantem aberta (keep-alive)** para que os clientes interajam com o servidor em uma única conexão aberta. A grande vantagem disso é de não precisar mais das **requisições assíncronas (AJAX)** para simular uma **“ação quase real-time”**, digo quase pois **AJAX não é uma conexão bi-direcional** capaz de se manter aberta até o término de seu processamento.

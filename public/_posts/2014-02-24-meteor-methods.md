@@ -1,4 +1,4 @@
-![Meteor](images/meteor-logo.jpg "Meteor")
+![Meteor](../images/meteor-logo.jpg "Meteor")
 
 ## Introdução
 

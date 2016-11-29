@@ -1,9 +1,0 @@
-{
-  "title": "Organizando aplicações Node.js",
-  "tags": "Node.js",
-  "published": true,
-  "description": "Se você tem dúvida sobre como organizar os códigos de sua aplicação colocando-os em seus diretórios corretos, acompanhe neste post uma lista diretórios com seus respectivos significados.",
-  "image_url": "nodejs-logo.jpg",
-  "slug": "organizando-uma-aplicacao-nodejs",
-  "created_at": "03/02/2015"
-}

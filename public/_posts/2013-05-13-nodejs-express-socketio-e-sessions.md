@@ -1,4 +1,4 @@
-![Compartilhando Session entre Express e Socket.IO](images/express-socketio.jpg "Compartilhando Session entre Express e Socket.IO")
+![Compartilhando Session entre Express e Socket.IO](../images/express-socketio.jpg "Compartilhando Session entre Express e Socket.IO")
 
 ### Atenção
 

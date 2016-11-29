@@ -1,4 +1,4 @@
-![Escrevendo JavaScript melhor](images/es6-logo.jpg "Escrevendo JavaScript melhor")
+![Escrevendo JavaScript melhor](../images/es6-logo.jpg "Escrevendo JavaScript melhor")
 
 E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais.
 
@@ -50,7 +50,7 @@ Caso não saiba, existe um simples shortcut lógico para verificar esses a exist
 ``` 
 
 Neste caso, se `foo` possuir um valor diferente de: `null`, `undefined`, `false`, `0` ou `""` então ele possui um valor válido, suficiente para retornar true nessa condicional.
-Veja mais detalhes sobre essa dica nesse post: [15 JavaScript Hacks](15-javascript-hacks "15 JavaScript Hacks")
+Veja mais detalhes sobre essa dica nesse post: [15 JavaScript Hacks](../15-javascript-hacks "15 JavaScript Hacks")
 
 ## 3) Aplicando substring corretamente
 
@@ -71,8 +71,8 @@ Em `substring(start, end)` o segundo parâmetro retorna a posição final da str
 
 Veja também:
 
-*   [Escrevendo JavaScript melhor - Parte 1](escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")
-*   [Escrevendo JavaScript melhor - Parte 2](escrevendo-javascript-melhor-parte-2 "Escrevendo JavaScript melhor - Parte 2")
-*   [Escrevendo JavaScript melhor - Parte 4](escrevendo-javascript-melhor-parte-4 "Escrevendo JavaScript melhor - Parte 4")
+*   [Escrevendo JavaScript melhor - Parte 1](../escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")
+*   [Escrevendo JavaScript melhor - Parte 2](../escrevendo-javascript-melhor-parte-2 "Escrevendo JavaScript melhor - Parte 2")
+*   [Escrevendo JavaScript melhor - Parte 4](../escrevendo-javascript-melhor-parte-4 "Escrevendo JavaScript melhor - Parte 4")
 
 Até a próxima galera!

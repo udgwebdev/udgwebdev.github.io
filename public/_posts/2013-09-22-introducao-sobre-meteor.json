@@ -1,9 +1,0 @@
-{
-  "title": "Introdução sobre Meteor",
-  "tags": "Meteor",
-  "description": "Pra galera que estuda ou trabalha com Node.js, hoje apresentarei neste post uma nova plataforma Web Full-Stack totalmente Javascript, feita em cima do Node.js, seu nome é Meteor.",
-  "published": true,
-  "image_url": "meteor-logo.jpg",
-  "slug": "introducao-sobre-meteor",
-  "created_at": "22/09/2013"
-}

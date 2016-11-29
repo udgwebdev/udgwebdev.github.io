@@ -1,9 +1,0 @@
-{
-  "title": "Módulos do NPM no Meteor",
-  "tags": "Meteor",
-  "description": "Como o Meteor é uma plataforma construída em cima do Node.js, é possível consumir o NPM, aumentando seu leque de ferramentas utilizando módulos do Node.js.",
-  "published": true,
-  "image_url": "meteor-logo.jpg",
-  "slug": "modulos-do-npm-no-meteor",
-  "created_at": "25/10/2013"
-}

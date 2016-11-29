@@ -1,4 +1,4 @@
-![Curso de Node.js](images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Node.js é uma plataforma multiprotocolo, ou seja, com ele será possível trabalhar com HTTP, DNS, TCP, WebSockets e muito mais. Porém um dos protocolos mais usados para desenvolver sistemas web é o protocolo HTTP, de fato é o protocolo com a maior quantidade de módulos disponíveis para trabalhar no Node.js.
 

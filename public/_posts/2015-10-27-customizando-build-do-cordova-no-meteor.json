@@ -1,9 +1,0 @@
-{
-  "title": "Customizando Build do Cordova no Meteor",
-  "tags": "Meteor",
-  "published": true,
-  "description": "Se você estiver construindo um mobile app para Android utilizando Meteor com Cordova, e necessite customizar o build do cordova em sua aplicação, então veja essa dica simples e rápida desse post.",
-  "image_url": "meteor-logo.jpg",
-  "slug": "customizando-build-do-cordova-no-meteor",
-  "created_at": "27/10/2015"
-}

@@ -1,9 +1,0 @@
-{
-  "title": "Livro Construindo APIs Rest com Node.js",
-  "tags": "Node.js",
-  "published": true,
-  "description": "Meu terceiro livro acabou de ser publicado. Dessa vez o assunto é sobre como construir APIs Rest usando Node.js e seus principais frameworks. O livro esta com conteúdo avançado e ficou sensacional, veja detalhes nesse post.",
-  "image_url": "nodejs-logo.jpg",
-  "slug": "livro-construindo-apis-rest-com-nodejs",
-  "created_at": "22/01/2016"
-}

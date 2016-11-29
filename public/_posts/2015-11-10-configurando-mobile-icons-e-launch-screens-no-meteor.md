@@ -1,4 +1,4 @@
-![Configurando mobile icons e launch screens no Meteor](images/meteor-logo.jpg "Configurando mobile icons e launch screens no Meteor")
+![Configurando mobile icons e launch screens no Meteor](../images/meteor-logo.jpg "Configurando mobile icons e launch screens no Meteor")
 
 Se você pretende construir uma aplicação mobile usando Meteor com Cordova, será necessário incluir no app todas as resoluções de ícones e launch screens necessárias para que seu app renderize essas imagens nas principais telas de smartphones e tablets Android, iPhone e iPads.
 

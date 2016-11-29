@@ -1,8 +1,0 @@
-{
-  "title": "Trabalhando com validators no Node.js",
-  "tags": "Node.js",
-  "published": true,
-  "description": "Trabalhar com validators é muito importante no tratamento de dados, pois ele mantém o projeto organizado e padronizado, evitando ifs e elses",
-  "slug": "trabalhando-com-validators-no-node-js",
-  "created_at": "05/04/2012"
-}

@@ -1,4 +1,4 @@
-![Node.js](images/nodejs-logo.jpg "Node.js")
+![Node.js](../images/nodejs-logo.jpg "Node.js")
 
 Andei estudando um pouco mais sobre DSLs para **Node.js** e descobri que existem **3 maneiras de trabalhar com Node.js** e que visa facilitar que programadores de outras linguagens se adaptem facilmente nessa plataforma.
 

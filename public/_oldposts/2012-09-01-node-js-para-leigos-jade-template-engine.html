@@ -36,7 +36,7 @@ description: O Jade é um template engine exclusivo para Node.js, inspirado no H
 	<p>Ele foi substituído pelo código abaixo:</p>
 
 {% highlight javascript %}
-!!! 5
+doctype html
 html(lang="en")
   head
     title Jade
@@ -52,7 +52,7 @@ html(lang="en")
 
 	<p>Algo que melhora drasticamente a legibilidade do código, permitindo que você desenvolva mais com menos esforço. Outro destaque do Jade é a possibilidade de trabalhar com código server-side junto ao código client-side, ou seja, código javascript server-side misturado com código html ou javascript client-side, para isso é necessário utilizar alguns comandos para <strong>"escapar"</strong> determinado comando de forma que o Jade reconheça quem é quem. Um bom exemplo disso é o código abaixo:</p>
 {% highlight javascript %}
-!!! 5
+doctype html
 html(lang="en")
   head
     title Jade
@@ -74,9 +74,8 @@ html(lang="en")
 
 	<p>O Jade possui alguns <strong>shortcuts-commands</strong>, que visam agilizar e reduzir a complexidade do seu código, abaixo listarei alguns comandos e seus respectivos shortcuts:</p>
 	<ul>
-		<li>div(id='containter', class='menu') ---> <strong>#container.menu</strong></li>
-		<li>doctype 5 ---> <strong>!!! 5</strong></li>
-		<li>p= nome ---> <strong>p #{nome}</strong></li>
+		<li><code>div(id='containter', class='menu')</code> => <code>#container.menu</code></li>
+		<li></code>p= nome</code> => <code>p #{nome}</code></li>
 	</ul>
 
 	<p>Trabalhando com Jade é possível desenvolver <strong>views reaproveitáveis</strong>, evitando o desperdício de repetir código em diversas partes do layout da aplicação.</p>
@@ -94,7 +93,7 @@ footer
 
 {% highlight javascript %}
 // main.jade
-!!! 5
+doctype html
 html
   head
     title This is Jade
@@ -109,7 +108,7 @@ html
 
 {% highlight javascript %}
 // main.jade
-!!! 5
+doctype html
 html
   head
     title Jade
@@ -170,7 +169,7 @@ app.configure(function(){
 
 {% highlight javascript %}
 // index.jade
-!!! 5
+doctype html
 html
   body
     h1 Cadastro de cliente
@@ -190,7 +189,7 @@ html
 
 {% highlight javascript %}
 // edit.jade
-!!! 5
+doctype html
 html
   body
     h1 Editar dados do cliente: #{cliente.nome}
@@ -205,7 +204,7 @@ html
 
 {% highlight javascript %}
 // 404.jade
-!!! 5
+doctype html
 html
   head
     title Página não encontrada.
@@ -217,7 +216,7 @@ html
 
 {% highlight javascript %}
 // 500.jade
-!!! 5
+doctype html
 html
   head
     title Erro na aplicação.

@@ -1,6 +1,6 @@
-![Terminal console do Linux](images/terminal-console-linux.jpg)
+![Terminal console do Linux](../images/terminal-console-linux.jpg)
 
-Continuando com a segunda parte do post irei apresentar mais alguns comandos básicos e essenciais para você sobreviver em um ambiente Unix ou Linux. Para quem não leu, [clique aqui para ler a primeira parte desse post.](aprendendo-um-pouco-sobre-terminal-parte-1 "Aprendendo um pouco sobre terminal – Parte 1")
+Continuando com a segunda parte do post irei apresentar mais alguns comandos básicos e essenciais para você sobreviver em um ambiente Unix ou Linux. Para quem não leu, [clique aqui para ler a primeira parte desse post.](../aprendendo-um-pouco-sobre-terminal-parte-1 "Aprendendo um pouco sobre terminal – Parte 1")
 Abaixo segue novos os comandos que são essenciais para lidar com Linux:
 
 *   `mount` - Monta uma partição no sistema.

@@ -1,4 +1,4 @@
-![Migrando definitivamente para Linux](images/mingrando-de-windows-para-linux.jpg)
+![Migrando definitivamente para Linux](../images/mingrando-de-windows-para-linux.jpg)
 
 Continuando o post, agora falarei um pouco sobre os aplicativos de mensagem instantânea mais famosos do mundo Linux, que na minha opinião, de uma forma bem [KISS (Keep It Simple, Stupid!)](http://pt.wikipedia.org/wiki/Keep_It_Simple "Keep It Simple, Stupid!") me satisfaz por completo. E também apresentarei algumas aplicações básicas para edição e criação multimídia pro seu linux ficar perfeito.
 
@@ -20,4 +20,4 @@ Listarei agora os programas open-source que mais utilizo para manipular audio, v
 *   [Pitivi:](http://www.pitivi.org/ "Pitivi") Editor de vídeo, simples e intuitivo, traz consigo os codecs essenciais e mais utilizados pela web (Divx, Xvid, Mp4, H264), possui uma interface clean e objetiva para realizar edições básicas de vídeo.
 *   [Arista Transcoder:](http://www.transcoder.org/ "Arista Transcoder") Um conversor de vídeo excelente para Linux, e no site existe a possibilidade de baixar novos Presets (Formatos de conversão de vídeo).
 
-Por enquanto é isso pessoal! Muito obrigado! Espero que gostem desse post, e não deixem de ler a [primeira parte](migrando-de-windows-para-linux-parte-1 "Migrando de Windows para Linux – Parte 1") e [segunda parte](migrando-de-windows-para-linux-parte-2 "Migrando de Windows para Linux – Parte 2") dessa série de posts.
+Por enquanto é isso pessoal! Muito obrigado! Espero que gostem desse post, e não deixem de ler a [primeira parte](../migrando-de-windows-para-linux-parte-1 "Migrando de Windows para Linux – Parte 1") e [segunda parte](../migrando-de-windows-para-linux-parte-2 "Migrando de Windows para Linux – Parte 2") dessa série de posts.

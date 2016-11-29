@@ -1,4 +1,4 @@
-![Curso de Node.js](images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Fala galera!! Realmente precisei do mês de setembro para resolver outras pendências, e isso me impossibilitou de continuar o mini-curso, mas enfim, vamos ao que interessa. Hoje o assunto será mais light, será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional - **[File System](http://nodejs.org/api/fs.html "Node.js File System API")**.
 
@@ -99,4 +99,4 @@ Vou mostrar em código, um exemplo bacana, uma galeria de fotos, nela o usuário
            img(src='/#{foto}', width='240', height='120', border='0', alt='#{foto}')
 ``` 
 
-Pronto e feito! Esse foi mais um capítulo do [Curso Node.js para leigos](nodejs), espero que tenham gostado desse artigo, e para melhores detalhes sobre o File System, segue o link da documentação: [http://nodejs.org/api/fs.html](http://nodejs.org/api/fs.html "Node.js File System API"). See you on my next post!
+Pronto e feito! Esse foi mais um capítulo do [Curso Node.js para leigos](../nodejs), espero que tenham gostado desse artigo, e para melhores detalhes sobre o File System, segue o link da documentação: [http://nodejs.org/api/fs.html](http://nodejs.org/api/fs.html "Node.js File System API"). See you on my next post!

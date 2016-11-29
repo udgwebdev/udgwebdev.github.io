@@ -1,4 +1,4 @@
-[![Express Admin](images/express-admin-small.jpg "Express Admin")]({{site.url}}/images/express-admin.jpg)
+[![Express Admin](../images/express-admin-small.jpg "Express Admin")]({{site.url}}/images/express-admin.jpg)
 
 Se você precisa de uma interface admin para seu app, neste post explicarei como usar o [Express Admin](http://simov.github.io/express-admin-site).
 

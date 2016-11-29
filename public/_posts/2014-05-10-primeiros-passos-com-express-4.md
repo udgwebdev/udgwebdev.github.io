@@ -1,4 +1,4 @@
-[![Express 4.0](images/express4.jpg "Express 4.0")](http://expressjs.com "Express") 
+[![Express 4.0](../images/express4.jpg "Express 4.0")](http://expressjs.com "Express") 
 
 Já faz um tempo que publiquei alguns posts sobre Node.js usando Express neste blog e infelizmente esses posts já estão desatualizados.
 

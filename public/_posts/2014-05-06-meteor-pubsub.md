@@ -1,4 +1,4 @@
-[![Meteor](images/meteor-logo.jpg "Meteor")](http://meteor.com) 
+[![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 ### O que é PubSub?
 

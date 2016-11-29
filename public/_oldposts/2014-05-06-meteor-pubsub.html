@@ -3,7 +3,7 @@ layout: post
 title: Meteor PubSub
 tags: Meteor
 keywords: Meteor, Meteor.js, MeteorJS, PubSub, Publication, Subscription
-description: ! 'O PubSub (Publications and Subscriptions), para quem não conhece, é um pattern cujo conceito é realizar mensageria através de dois personagens: um publisher (o publicador) e um subscriber (o assinante).'
+description: O PubSub (Publications and Subscriptions), para quem não conhece, é um pattern cujo conceito é realizar mensageria através de dois personagens um publisher (o publicador) e um subscriber (o assinante).
 published: true
 image_url: meteor-logo.jpg
 ---
@@ -20,7 +20,7 @@ image_url: meteor-logo.jpg
   <p>Trabalhar corretamente com PubSub no Meteor vai garantir o desenvolvimento de uma aplicação sustentável, visto que uma implementação mal-feita vai tornar o sistema uma carroça, de tão lenta que será a velocidade na sincronização dos dados. Outro detalhe de extrema importância é a segurança dos dados, pois uma publicação que liberar dados errados para o usuário vai gerar vazamento de informações na aplicação.</p>
 
   {% include content-ads.ext %}
-  
+
   <h3>Entendendo seu mecanismo</h3>
   <p>Imagine um cenário em que temos uma rede social, semelhante ao Twitter, sendo acessada por mais de 100 mil usuários. Nela, temos um usuário seguindo 1000 usuários populares. Como sabemos, o objetivo do PubSub é sincronizar dados entre o servidor MongoDB e o cliente Minimongo, o que faz com que o Meteor trafegue apenas dados seguindo <a href="http://udgwebdev.com/introducao-sobre-meteor" target="_blank">seu princípio data on-the wire</a>.</p>
   <p>Essa sincronização se faz através do protocolo DDP (<strong>Data Distribution Protocol</strong>). Este protocolo é o que faz a biblioteca PubSub enviar e receber dados através de objeto JSON em tempo real utilizando o framework SockJS por trás dos panos.</p>

@@ -1,9 +1,0 @@
-{
-  "title": "Evitando warnings entre audit-argument-checks e auto-form do Meteor",
-  "tags": "Meteor",
-  "published": true,
-  "description": "Este post é para quem esta desenvolvendo aplicações Meteor usando o auto-form e audit-argument-checks e anda recebendo warnings de que falta checar argumentos em um Meteor.methods().",
-  "image_url": "meteor-logo.jpg",
-  "slug": "evitando-warnings-entre-audit-argument-checks-e-auto-form-do-meteor",
-  "created_at": "06/05/2015"
-}

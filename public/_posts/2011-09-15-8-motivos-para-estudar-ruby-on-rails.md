@@ -1,4 +1,4 @@
-![Ruby On Rails](images/rails-logo.jpg "Ruby On Rails")
+![Ruby On Rails](../images/rails-logo.jpg "Ruby On Rails")
 
 Venho aqui em mais um post falar sobre meus poucos, porém produtivos momentos que tive ao desenvolver utilizando a tecnologia web: Ruby On Rails.
 

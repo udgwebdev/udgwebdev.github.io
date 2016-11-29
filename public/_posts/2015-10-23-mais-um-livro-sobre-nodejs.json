@@ -1,9 +1,0 @@
-{
-  "title": "Mais um livro sobre Node.js",
-  "tags": "Node.js",
-  "published": true,
-  "description": "Fala pessoal blz? Atualmente ando finalizando mais um livro, dessa vez será sobre como construi APIs REST utilizando Node.js, e tenho certeza que vocês vão gostar!",
-  "image_url": "nodejs-logo.jpg",
-  "slug": "mais-um-livro-sobre-nodejs",
-  "created_at": "23/10/2015"
-}

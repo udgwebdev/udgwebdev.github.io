@@ -2,7 +2,7 @@ Estarei com o tempo apresentando os slides das palestras que foram ministradas n
 
 Neste post apresentarei os slides de Leandro Alvares da Costa - [@leandroadacosta](http://twitter.com/#!/leandroadacosta/ "Twitter do Leandro Alvares da Costa")
 
-[![Software fácil de usar não é difícil de programar](images/slide-software-facil-de-usar-nao-e-dificil-de-programar.jpg "Software fácil de usar não é difícil de programar")](https://speakerdeck.com/leandroadacosta/software-facil-de-usar-nao-e-dificil-de-programar)
+[![Software fácil de usar não é difícil de programar](../images/slide-software-facil-de-usar-nao-e-dificil-de-programar.jpg "Software fácil de usar não é difícil de programar")](https://speakerdeck.com/leandroadacosta/software-facil-de-usar-nao-e-dificil-de-programar)
 
 É isso ai!! Em breve postarei os outros dois slides do evento, obrigado a todos!
 

@@ -1,4 +1,4 @@
-![Funções paralelas usando async](images/nodejs-logo.jpg "Funções paralelas usando async")
+![Funções paralelas usando async](../images/nodejs-logo.jpg "Funções paralelas usando async")
 
 Para quem não conhece, o módulo [async](https://github.com/caolan/async "Github do async") é muito útil quando se precisa de um framework para manipular fluxo de execuções assíncronas, com ele é possível organizar de forma elegante todo código de funções assíncronas, assim como também organizar a execução de cada uma delas.
 
@@ -54,9 +54,9 @@ Com base nessa função faremos dois código, em que o primeiro executará duas 
 ``` 
 
 Repare que ambos os códigos estão calculando o tempo de execução através das funções `console.time()` e `console.timeEnd()`, na minha máquina rodando 3x o mesmo código, os resultados foram esses:
-[![Resultado do benchmark: async vs parallel](images/async-vs-parallel-small.png)](images/async-vs-parallel.png "Resultado do benchmark: async vs parallel")
+[![Resultado do benchmark: async vs parallel](../images/async-vs-parallel-small.png)](../images/async-vs-parallel.png "Resultado do benchmark: async vs parallel")
 
-[](images/async-vs-parallel.png "Resultado do benchmark: async vs parallel")
+[](../images/async-vs-parallel.png "Resultado do benchmark: async vs parallel")
 
 **Conclusão:** Sempre que puder, otimize processamento de suas funções no Node.js utilizando o módulo [async](https://github.com/caolan/async "Github do async") via função `async.paralell` para obter um ganho em performance.
 **Observação:** Um detalhe bacana que o [Itacir Pompeu](https://disqus.com/by/ItacirPompeu/) comentou abaixo é que esse módulo [async](https://github.com/caolan/async "Github do async") também pode ser usado no client-side de uma aplicação.

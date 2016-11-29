@@ -1,4 +1,4 @@
-![Gerenciando código-fonte com Git](images/git-logo.jpg "Gerenciando código-fonte com Git")
+![Gerenciando código-fonte com Git](../images/git-logo.jpg "Gerenciando código-fonte com Git")
 
 A pedido de um amigo da minha classe, que esta na mesma correria que eu, que é a época de desenvolvimento de TCC na faculdade, irei explicar alguns comandos essenciais para trabalhar com o Git.
 

@@ -1,9 +1,0 @@
-{
-  "title": "Executando funções paralelas com módulo async",
-  "tags": "Node.js",
-  "published": true,
-  "description": "Neste post vou explicar como organizar e rodar múltiplas funções assíncronas de forma que elas sejam otimizadas para serem executadas em paralelo.",
-  "image_url": "nodejs-logo.jpg",
-  "slug": "executando-funcoes-paralelas-com-modulo-async",
-  "created_at": "28/09/2015"
-}

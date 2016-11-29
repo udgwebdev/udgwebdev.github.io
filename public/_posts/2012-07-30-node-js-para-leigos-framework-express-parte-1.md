@@ -1,10 +1,10 @@
-![Curso de Node.js](images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 ### Atenção
 
 As dicas desse post **são baseadas em uma versão antiga do Express 3.x**, porém os conceitos desse framework continuam intactos! Caso queira se **atualizar com o que há de novo na versão Express 4.x**, recomendo que leia esse post: [Primeiros passos com Express 4]({{site.url}}/primeiros-passos-com-express-4 "Primeiros passos com Express 4").
 
-Após explicar um pouco sobre a [API HTTP nativa do node.js](node-js-para-leigos-trabalhando-com-http "Node.js para leigos – Trabalhando com HTTP"), percebemos que ela não é apropriada para desenvolvimento de aplicações complexas, visto que todo gerenciamento de rotas e outros recursos desse módulo são tratados de maneira bem básica, sendo necessário aplicar diversos comandos **ifs e fors** para tratá-los.
+Após explicar um pouco sobre a [API HTTP nativa do node.js](../node-js-para-leigos-trabalhando-com-http "Node.js para leigos – Trabalhando com HTTP"), percebemos que ela não é apropriada para desenvolvimento de aplicações complexas, visto que todo gerenciamento de rotas e outros recursos desse módulo são tratados de maneira bem básica, sendo necessário aplicar diversos comandos **ifs e fors** para tratá-los.
 
 Vendo essa problema surgiram diversos web-frameworks e micro-frameworks, visando melhorar essas carências, trazendo mais produtividade no desenvolvimento de sistemas. O framework que irei apresentar, se chama [Express](http://expressjs.com/ "ExpressJS"), que foi inspirado pelo framework [Sinatra](http://www.sinatrarb.com/ "Sinatra") do Ruby.
 

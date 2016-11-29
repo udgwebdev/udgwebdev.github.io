@@ -1,4 +1,4 @@
-![Meteor](images/meteor-logo.jpg "Meteor")
+![Meteor](../images/meteor-logo.jpg "Meteor")
 
 Configurar um ambiente de CI (Continuos Integration) para um projeto [Meteor](https://www.meteor.com) com [Velocity](http://velocity.meteor.com) é muito fácil.
 Mais fácil ainda é se você for configurar tudo isso no serviço Travis-CI.

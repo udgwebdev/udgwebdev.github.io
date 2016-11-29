@@ -1,4 +1,4 @@
-[![Meteor](images/meteor-logo.jpg "Meteor")](http://meteor.com) 
+[![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 Como o Meteor é uma plataforma construída em cima do Node.js, é possível consumir o NPM, aumentando seu leque de ferramentas utilizando módulos do Node.js.
 

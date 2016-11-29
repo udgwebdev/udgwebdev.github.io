@@ -1,4 +1,4 @@
-![Customizando npm init](images/npm-logo.png "Customizando npm init")
+![Customizando npm init](../images/npm-logo.png "Customizando npm init")
 
 Para quem não conhece esse comando, o `npm init` apresenta um simples questionário para descrever informações básica de um módulo Node.js, pelo qual seu resultado final é gerar o arquivo `package.json`.
 
@@ -36,6 +36,6 @@ Com isso, praticamente você nem terá mais que responder as principais pergunta
 
 Agora se você criar um novo projeto e rodar o comando `npm init` você terá um resultado semelhante a este:
 
-[![Clique na imagem para ampliar](images/npm-init-small.png "Clique na imagem para ampliar")](images/npm-init.png)
+[![Clique na imagem para ampliar](../images/npm-init-small.png "Clique na imagem para ampliar")](../images/npm-init.png)
 
 See you in the next post!

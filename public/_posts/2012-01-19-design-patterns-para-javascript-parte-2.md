@@ -1,6 +1,6 @@
-![Javascript Desing Pattenrs](images/javascript-logo.jpg "Javascript Desing Pattenrs")
+![Javascript Desing Pattenrs](../images/javascript-logo.jpg "Javascript Desing Pattenrs")
 
-Continuando a série de posts relacionado a **Design Patterns para Javascript** hoje apresentarei os patterns: **Module, Factory e Mixin**. Caso ainda não tenha visto a primeira parte desse post, veja-o neste link: [Design Patterns para Javascript - Parte 1.](design-patterns-para-javascript-parte-1/ "Design Patterns para Javascript – Parte 1")
+Continuando a série de posts relacionado a **Design Patterns para Javascript** hoje apresentarei os patterns: **Module, Factory e Mixin**. Caso ainda não tenha visto a primeira parte desse post, veja-o neste link: [Design Patterns para Javascript - Parte 1.](../design-patterns-para-javascript-parte-1/ "Design Patterns para Javascript – Parte 1")
 
 ## Pattern Module
 
@@ -33,7 +33,7 @@ Este conceito de métodos públicos e privados permite que variáveis sejam aces
 
 ## Pattern Factory
 
-Parecido com o [Pattern Creational](design-patterns-para-javascript-parte-1/ "Design Patterns para Javascript – Parte 1"), o **Pattern Factory** resolve alguns problemas de criação de objetos sem especificar o nome exato do objeto a ser instanciado.
+Parecido com o [Pattern Creational](../design-patterns-para-javascript-parte-1/ "Design Patterns para Javascript – Parte 1"), o **Pattern Factory** resolve alguns problemas de criação de objetos sem especificar o nome exato do objeto a ser instanciado.
 
 Esse é o conceito de uma fábrica de objetos, pelo qual é definido uma interface para criação desses objetos por onde é permitido que subclasses decidam qual o objeto a ser instanciado. Esse pattern lida com o problema através da definição separada de funções para criação dos objetos, pelo qual sub-classes são capazes de sobrescrever e decidir qual tipo de fábricação de objeto a ser criada. Com frequência esse pattern é encontrado em frameworks onde o código-fonte precisa ser criado em tipos de objetos particulares que são utilizados através de subclasses.
 
@@ -45,7 +45,7 @@ Esse é o conceito de uma fábrica de objetos, pelo qual é definido uma interfa
 
 ###### Quando não utilizá-lo?
 
-*   Geralmente é uma boa prática não usar esse pattern em todas as situações, isso ocorre devido a grande complexidade de sua implementação, sendo substituído facilmente pelo [Pattern Constructor](design-patterns-para-javascript-parte-1/ "Design Patterns para Javascript – Parte 1").
+*   Geralmente é uma boa prática não usar esse pattern em todas as situações, isso ocorre devido a grande complexidade de sua implementação, sendo substituído facilmente pelo [Pattern Constructor](../design-patterns-para-javascript-parte-1/ "Design Patterns para Javascript – Parte 1").
 *   Sua implementação exige um trabalho extra de implementação e seus testes.
 
 A seguir veja um exemplo de seu código:

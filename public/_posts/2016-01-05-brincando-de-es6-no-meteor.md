@@ -1,4 +1,4 @@
-![Brincando de ES6 no Meteor](images/meteor-logo.jpg "Brincando de ES6 no Meteor")
+![Brincando de ES6 no Meteor](../images/meteor-logo.jpg "Brincando de ES6 no Meteor")
 
 De volta a ativa no blog, hoje mostrarei como utilizar alguns recursos legais do ES6 em um projeto Meteor de versão 1.2 ou superior, pelo qual nessas versões o ES6 já esta nativo para uso.
 

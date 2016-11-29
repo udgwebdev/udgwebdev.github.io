@@ -1,4 +1,4 @@
-![Meteor e SEO](images/meteor-seo.jpg "Meteor e SEO")
+![Meteor e SEO](../images/meteor-seo.jpg "Meteor e SEO")
 
 ## Problema do Meteor em relação ao SEO
 

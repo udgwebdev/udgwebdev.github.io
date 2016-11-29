@@ -1,8 +1,0 @@
-{
-  "title": "Node.js para leigos - Utilizando API File System",
-  "tags": "Node.js",
-  "published": true,
-  "description": "Hoje o assunto será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional, a File System.",
-  "slug": "node-js-para-leigos-utilizando-api-file-system",
-  "created_at": "03/10/2012"
-}

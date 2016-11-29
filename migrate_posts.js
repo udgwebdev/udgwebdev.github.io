@@ -5,8 +5,9 @@ const fs = require('fs-extra');
 const YAML = require('yamljs');
 const toMarkdown = require('to-markdown');
 
-const OLD_POSTS = path.join(__dirname, 'public/_oldposts');
-const NEW_POSTS = path.join(__dirname, 'public/_posts');
+const PUBLIC = path.join(__dirname, 'public');
+const OLD_POSTS = path.join(PUBLIC, '_oldposts');
+const NEW_POSTS = path.join(PUBLIC, '_posts');
 const META_OMIT = ['layout', 'keywords'];
 const MARKDOWN_OPTS = {
   gfm: true,
@@ -38,7 +39,9 @@ console.log('Migrating UDGWebDev posts...');
 
 fs.emptyDirSync(NEW_POSTS);
 
-_.each(fs.readdirSync(OLD_POSTS), (postFile) => {
+const postDataJson = {};
+
+_.eachRight(fs.readdirSync(OLD_POSTS), (postFile) => {
   const oldPostData = fs.readFileSync(path.join(OLD_POSTS, postFile), 'utf8');
   const postSlugTitle = postFile.replace(/[\d]{4}-[\d]{2}-[\d]{2}-/, '').replace('.html', '');
   const postPubDateArray = _.take(postFile.split('-'), 3);
@@ -58,7 +61,7 @@ _.each(fs.readdirSync(OLD_POSTS), (postFile) => {
         .replace(/\{% (raw|endraw) %\}/g, '')
         .replace(/<figure class="post-image">/g, '')
         .replace(/<div class="post-content">/g, '')
-        .replace(/\{\{\ssite.url\s\}\}\//g, '')
+        .replace(/\{\{\ssite.url\s\}\}\//g, '../')
         .replace(/\{%\sinclude\scontent-ads\.ext\s%\}/g, '')
         .split('\n')
       ;
@@ -80,12 +83,14 @@ _.each(fs.readdirSync(OLD_POSTS), (postFile) => {
       fs.outputFileSync(path.join(NEW_POSTS, postFile.replace('.html', '.md')), postMarkdownData);
     }
     if (!postMetaDataObj.alias) {
-      fs.outputJsonSync(path.join(NEW_POSTS, postFile.replace('.html', '.json')), postMetaData);
+      postDataJson[postMetaData.slug] = postMetaData;
     }
   } catch (e) {
     console.error(`Error processing: ${postFile}`);
     console.error(postDataSplitted);
   }
 });
+
+fs.outputJsonSync(path.join(PUBLIC, '_data.json'), postDataJson);
 
 console.log('Migration is done!');

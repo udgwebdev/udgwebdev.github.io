@@ -1,4 +1,4 @@
-![Gerenciadores de blogs](images/gerenciadores-de-blogs.jpg)
+![Gerenciadores de blogs](../images/gerenciadores-de-blogs.jpg)
 
 Esse post tem como objetivo de apresentar para os novatos no mundo de blogs, as ferramentas gratuitas da web, que são essenciais para gerenciar não só o conteúdo do blog, mas também como melhorar a visibilidade dele na web.
 
@@ -9,6 +9,6 @@ Esse post tem como objetivo de apresentar para os novatos no mundo de blogs, as 
 5.  **Twuffer:** Ferramenta muito útil para agendar e automatizar tweets. Para usá-lo é simples: basta logar com uma conta do Twitter, escrever um tweet e agendá-lo para sua publicação ocorrer em uma determinada data desejada. Para melhores detalhes [visite sua página inicial aqui](http://twuffer.com).
 6.  **Propaganda no blog:** O **Google Adsense e Boo-box** são boas ferramentas para publicação e monetização de anúncios para blogs. É uma ótima ferramenta para quem deseja ganhar dinheiro através de clicks em banners que você adicionou em seu blog ou site.
 
-Se você é novato no mundo dos blogs, recomendo que leia esse post que contém dicas para iniciantes: [Dicas para abrir um blog](dicas-para-abrir-um-blog "Dicas para abrir um blog")
+Se você é novato no mundo dos blogs, recomendo que leia esse post que contém dicas para iniciantes: [Dicas para abrir um blog](../dicas-para-abrir-um-blog "Dicas para abrir um blog")
 
 Se conhecer outras ferramentas que não citei aqui, comentem abaixo pessoal, até a próxima!

@@ -1,4 +1,4 @@
-![Meteor](images/meteor-logo.jpg "Meteor")
+![Meteor](../images/meteor-logo.jpg "Meteor")
 
 Se você esta desenvolvendo uma aplicação Meteor, é importante estar por dentro de como garantir segurança em sua aplicação. Nesse post mostrarei algumas dicas simples e de fácil execução para blindar seu projeto.
 
@@ -10,7 +10,7 @@ Antes de você colocar seu app em produção, execute esse comando:
  meteor remove insecure autopublish
 ``` 
 
-E faça um refactoring em seu app para garantir que todas as funcionalidades de PubSub estão funcionando e certifique-se também que todas as funções de escrita das collections que são realizadas no client-side funcionem através da função Meteor.call (client-side) /Meteor.methods (server-side). Se possível, toda vez que você começar um novo projeto Meteor, que comece-o removendo esses 2 packages, para que você não tenha retrabalho no futuro. O motivo do Meteor utilizar esses packages é que eles agilizam a produtividade na prototipação, porém usar eles em produção libera uma brecha de segurança que permite pelo console de um browser executar qualquer manipulação nas collections do MongoDB. Se estiver com dúvidas sobre trabalhar com PubSub ou Meteor.methods, leia esses post: [Meteor PubSub](meteor-pubsub "Meteor PubSub") e [Meteor.methods](meteor-methods "Meteor.methods").
+E faça um refactoring em seu app para garantir que todas as funcionalidades de PubSub estão funcionando e certifique-se também que todas as funções de escrita das collections que são realizadas no client-side funcionem através da função Meteor.call (client-side) /Meteor.methods (server-side). Se possível, toda vez que você começar um novo projeto Meteor, que comece-o removendo esses 2 packages, para que você não tenha retrabalho no futuro. O motivo do Meteor utilizar esses packages é que eles agilizam a produtividade na prototipação, porém usar eles em produção libera uma brecha de segurança que permite pelo console de um browser executar qualquer manipulação nas collections do MongoDB. Se estiver com dúvidas sobre trabalhar com PubSub ou Meteor.methods, leia esses post: [Meteor PubSub](../meteor-pubsub "Meteor PubSub") e [Meteor.methods](../meteor-methods "Meteor.methods").
 
 ## Evitando NoSQL Injection
 

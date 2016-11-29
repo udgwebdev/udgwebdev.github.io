@@ -1,4 +1,4 @@
-![Usando Spread operator do ES6](images/es6-logo.jpg "Usando Spread operator do ES6")
+![Usando Spread operator do ES6](../images/es6-logo.jpg "Usando Spread operator do ES6")
 
 Se você já trabalha com alguns recursos do ES6, recomendo a leitura desse post que vai falar sobre Spread Operator.
 O Spread Operator basicamente converte um array em argumentos, ele é muito útil quando se precisar quebrar um array para passar seus valores para uma função ou construtor de um objeto como argumentos de valores separados.

@@ -1,4 +1,4 @@
-![Curso de Node.js](images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 ### Atenção
 
@@ -223,4 +223,4 @@ Esse foi um exemplo simples de tratamento de erros, na prática recomendo que ut
  app.listen(3000);
 ``` 
 
-Bom pessoal esse foi mais um episódio do [Curso Node.js para leigos](nodejs), espero que tenham gostado desse post, comentem abaixo, tire suas dúvidas, críticas e sugestões serão sempre bem-vindas também, até a próxima!
+Bom pessoal esse foi mais um episódio do [Curso Node.js para leigos](../nodejs), espero que tenham gostado desse post, comentem abaixo, tire suas dúvidas, críticas e sugestões serão sempre bem-vindas também, até a próxima!

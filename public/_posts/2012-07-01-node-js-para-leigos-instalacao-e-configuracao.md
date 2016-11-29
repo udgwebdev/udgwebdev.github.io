@@ -1,4 +1,4 @@
-![Curso de Node.js](images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 E neste novo capítulo dessa consagrada série de posts sobre o [mini-cursinho de Node.js para leigos]({{site.url}}/nodejs), hoje o objetivo é passar algumas dicas de como **instalar e configurar um ambiente de desenvolvimento para essa tecnologia**, independente de qual sistema operacional você usa, as dicas serão as mesmas, é claro que, com **procedimentos diferentes (pelo menos no Windows haverá algumas diferenças de configuração, mas nada de grave!).**
 
@@ -8,9 +8,9 @@ Primeiro passo, acesse o site oficial: [http://nodejs.org](http://nodejs.org/ "N
 
 Após o seu download e instalação, caso não ocorra problemas, basta abri o seu **terminal console ou prompt de comando** para digitar o comando: **node -v**
 
-[![Versão do Node.js instalado](images/node-terminal-small.jpg "Versão do Node.js instalado")](images/node-terminal.jpg "Versão do Node.js instalado")
+[![Versão do Node.js instalado](../images/node-terminal-small.jpg "Versão do Node.js instalado")](../images/node-terminal.jpg "Versão do Node.js instalado")
 
-O mais interessante das **versões atuais (versão 0.6.x) do Node.js** é que ela já vem integrado com [NPM (Node Package Manager)](npm-node-package-manager "NPM – Node Package Manager") e isso ajudará e muito você na hora integrar módulos de terceiros em seu projeto.
+O mais interessante das **versões atuais (versão 0.6.x) do Node.js** é que ela já vem integrado com [NPM (Node Package Manager)](../npm-node-package-manager "NPM – Node Package Manager") e isso ajudará e muito você na hora integrar módulos de terceiros em seu projeto.
 
 #### Configurando ambiente de desenvolvimento
 
@@ -18,7 +18,7 @@ Para configurar o ambiente de desenvolvimento basta adicionar uma variável de a
 
 No Windows, o processo é um pouco diferente, por exemplo, no Windows 7 clique com botão direito no ícone **Meu Computador** e selecione a opção **Propriedades**, no lado esquerdo da janela, clique no link **Configurações avançadas do sistema**. Na janela seguinte, acesse a aba **Avançado** e clique no botão **Variáveis de Ambiente...**, agora no campo **Variáveis do sistema** clique no botão **Novo...**, em **Nome da variável digite NODE_ENV** e em **Valor da variável digite development**. Veja a imagem abaixo para entender melhor:
 
-[![Configuração do Node.js no Windows](images/node-windows-small.jpg "Configuração do Node.js no Windows")](images/node-windows.jpg "Configuração do Node.js no Windows")
+[![Configuração do Node.js no Windows](../images/node-windows-small.jpg "Configuração do Node.js no Windows")](../images/node-windows.jpg "Configuração do Node.js no Windows")
 
 Ao terminar esse procedimento, basta reiniciar o seu computador e começar a brincar com Node.js.
 

@@ -1,4 +1,4 @@
-![Email Weeklys para devs](images/email-weeklys.jpg "Email Weeklys para devs") **Último update: 17/11/2014**
+![Email Weeklys para devs](../images/email-weeklys.jpg "Email Weeklys para devs") **Último update: 17/11/2014**
 
 Hoje o post é rápido, quero apenas recomendar uma lista com alguns e-mail weeklys que acompanho e que valem a pena assinar. Confira abaixo na lista!
 

@@ -1,8 +1,0 @@
-{
-  "title": "Praticando TDD com JUnit",
-  "tags": "Java",
-  "description": "TDD é uma metodologia de desenvolvimento de software focada na programação orientada por testes, em que na prática o desenvolvedor elabora um script de testes automatizados para um código de regra de negócio que será escrita no futuro.",
-  "published": true,
-  "slug": "praticando-tdd-com-junit",
-  "created_at": "15/09/2011"
-}

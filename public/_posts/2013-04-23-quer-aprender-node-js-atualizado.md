@@ -1,4 +1,4 @@
-![Quer aprender Node.js?](images/nodejs-logo.jpg "Quer aprender Node.js?")
+![Quer aprender Node.js?](../images/nodejs-logo.jpg "Quer aprender Node.js?")
 
 Atualizando um antigo post do blog, hoje recomendarei para os entusiastas e evangelistas excelentes slides, cursos, fóruns, blogs, podcasts e screencasts pra te dar um pontapé inicial no mundo Node.js que esta cada vez mais conquistando novos projetos e desenvolvedores.
 
@@ -46,4 +46,4 @@ Atualizando um antigo post do blog, hoje recomendarei para os entusiastas e evan
 *   [GrokPodcast - Node.js Parte 2](http://www.grokpodcast.com/2011/02/24/episodio-20-node-js-parte-2/ "GrokPodcast Node.js Parte 2")
 *   [GrokPodcast - Node.js Parte 3](http://www.grokpodcast.com/2011/03/03/episodio-21-node-js-parte-3/ "GrokPodcast Node.js Parte 3")
 
-Bom, não recomendei livros nesta atualização, pois muita coisa mudou recentemente no Node.js e praticamente não encontrei livros atualizados para recomendação neste post, [mas em breve isso irá mudar!](livro-de-nodejs "Livro: Aplicações web real-time com Node.js") Eae quer aprender Node.js? Bons estudos!
+Bom, não recomendei livros nesta atualização, pois muita coisa mudou recentemente no Node.js e praticamente não encontrei livros atualizados para recomendação neste post, [mas em breve isso irá mudar!](../livro-de-nodejs "Livro: Aplicações web real-time com Node.js") Eae quer aprender Node.js? Bons estudos!

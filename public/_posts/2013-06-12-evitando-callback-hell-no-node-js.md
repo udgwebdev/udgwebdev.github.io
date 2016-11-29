@@ -1,4 +1,4 @@
-![Evitando Callback Hell](images/callback-hell.jpg "Evitando Callback Hell")
+![Evitando Callback Hell](../images/callback-hell.jpg "Evitando Callback Hell")
 
 De fato vimos o quanto é vantajoso e performático trabalhar de forma assíncrona, porém em certos momentos, inevitavelmente implementaremos diversas funções assíncronas, que serão encadeadas uma na outra através das suas funções callback. No código a seguir apresentarei um exemplo desse caso, crie um arquivo chamado `callback_hell.js`, implemente e execute o código abaixo:
 

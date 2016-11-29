@@ -1,4 +1,4 @@
-![Vida de estagiário](images/estagiarios.jpg)
+![Vida de estagiário](../images/estagiarios.jpg)
 
 Atualmente sou desenvolvedor de software e já trabalhei antes em duas empresas como estagiário, o meu primeiro estágio foi como suporte técnico e o segundo foi como programador. Lembro muito bem que sofri bastante no meu primeiro emprego, pois por questões de desespero, aceitei-o sem antes analisar o plano de carreira de um suporte técnico. Já o meu segundo estágio foi exatamente a área que queria seguir e pelo qual é compatível com meu perfil e meus objetivos de vida, o Desenvolvedor de sistemas.
 

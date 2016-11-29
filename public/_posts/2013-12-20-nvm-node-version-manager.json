@@ -1,9 +1,0 @@
-{
-  "title": "NVM - Node Version Manager",
-  "tags": "Node.js",
-  "published": true,
-  "description": "O NVM é a solução perfeita pra você que precisa testar o comportamento do seus módulos em distintas versões Node. Ele também serve para a galera que curte testar ou colaborar utilizando versões unstables também.",
-  "image_url": "nodejs-logo.jpg",
-  "slug": "nvm-node-version-manager",
-  "created_at": "20/12/2013"
-}

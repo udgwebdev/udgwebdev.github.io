@@ -1,4 +1,4 @@
-![Escrevendo JavaScript melhor](images/es6-logo.jpg "Escrevendo JavaScript melhor")
+![Escrevendo JavaScript melhor](../images/es6-logo.jpg "Escrevendo JavaScript melhor")
 
 Esse post visa mostrar na prática como melhorar algumas gambiarras ou bad codes clássicas de se encontrar em qualquer projeto legado JavaScript.
 
@@ -75,8 +75,8 @@ Nesse caso, você pode deixar o código mais enxuto aplicando a função `reduce
 
 Veja também:
 
-*   [Escrevendo JavaScript melhor - Parte 2](escrevendo-javascript-melhor-parte-2 "Escrevendo JavaScript melhor - Parte 2")
-*   [Escrevendo JavaScript melhor - Parte 3](escrevendo-javascript-melhor-parte-3 "Escrevendo JavaScript melhor - Parte 3")
-*   [Escrevendo JavaScript melhor - Parte 4](escrevendo-javascript-melhor-parte-4 "Escrevendo JavaScript melhor - Parte 4")
+*   [Escrevendo JavaScript melhor - Parte 2](../escrevendo-javascript-melhor-parte-2 "Escrevendo JavaScript melhor - Parte 2")
+*   [Escrevendo JavaScript melhor - Parte 3](../escrevendo-javascript-melhor-parte-3 "Escrevendo JavaScript melhor - Parte 3")
+*   [Escrevendo JavaScript melhor - Parte 4](../escrevendo-javascript-melhor-parte-4 "Escrevendo JavaScript melhor - Parte 4")
 
 Caso você conheça algum código legado com dicas sobre como escrevê-lo melhor comente abaixo! Valeu!

@@ -1,4 +1,4 @@
-![Underground WebDev](images/udgwebdev-logo-128.png)
+![Underground WebDev](../images/udgwebdev-logo-128.png)
 
 Fala pessoal, para quem não me conhece meu nome é [Caio Ribeiro Pereira](https://twitter.com/crp_underground) autor desse blog. Escrevo esse post para falar um pouco sobre como surgiu esse blog e também comunicar algumas mudanças (que são melhorias!) que fiz neste blog durante esses meses.
 
@@ -10,9 +10,9 @@ O gosto por escrever foi grande, porém a audiência era pequena, queria muito v
 
 Depois de um certo tempo, entrei mais a fundo sobre assuntos focado em desenvolvimento web, com isso, criei esse **blog em Agosto de 2011**. O objetivo era compartilhar um pouco das minhas experiências sobre programação. No início era muito novato na área, e escrevi posts para iniciantes focado em Java, Git, JavaScript e recomendação de livros.
 Com o passar do tempo, fui evoluindo e me envolvendo cada vez mais nessa área, compartilhei um pouco sobre Ruby On Rails e em seguida resolvi aprender a fundo por conta própria o Node.js.
-Gostei tanto do Node.js que resolvi estudar por conta própria essa tecnologia, acompanhei o início dessa tecnologia, o quanto ela evoluiu, participei de alguns fóruns e escrevi vários posts sobre Node.js. Até criei um mini-curso chamado [Node.js para Leigos](nodejs#iniciantes "Node.js para Leigos") formado por 10 posts, e mesmo depois do mini-curso, continuei escrevendo assuntos do básico ao avançado sobre Node.js. Hoje o blog contém **56 posts** sobre essa tecnologia e pretendo escrever mais!
+Gostei tanto do Node.js que resolvi estudar por conta própria essa tecnologia, acompanhei o início dessa tecnologia, o quanto ela evoluiu, participei de alguns fóruns e escrevi vários posts sobre Node.js. Até criei um mini-curso chamado [Node.js para Leigos](../nodejs#iniciantes "Node.js para Leigos") formado por 10 posts, e mesmo depois do mini-curso, continuei escrevendo assuntos do básico ao avançado sobre Node.js. Hoje o blog contém **56 posts** sobre essa tecnologia e pretendo escrever mais!
 
-Foi graças aos meus posts sobre Node.js, que conheci por acaso o [Paulo Silveira](https://twitter.com/paulo_caelum) e [Adriano Almeida](https://twitter.com/adrianoalmeida7), fundadores da editora [Casa do Código](http://www.casadocodigo.com.br/), foi através dele tive a oportunidade de escrever meus 2 livros: um sobre [Node.js](https://casadocodigo.refersion.com/l/630.1389 "Aplicações web real-time com Node.js") e outro sobre o [framework Meteor](https://casadocodigo.refersion.com/l/d88.3525 "Criando aplicações web real-time com Meteor") (alias também escrevi alguns [posts sobre Meteor](meteor "Meteor") neste blog).
+Foi graças aos meus posts sobre Node.js, que conheci por acaso o [Paulo Silveira](https://twitter.com/paulo_caelum) e [Adriano Almeida](https://twitter.com/adrianoalmeida7), fundadores da editora [Casa do Código](http://www.casadocodigo.com.br/), foi através dele tive a oportunidade de escrever meus 2 livros: um sobre [Node.js](https://casadocodigo.refersion.com/l/630.1389 "Aplicações web real-time com Node.js") e outro sobre o [framework Meteor](https://casadocodigo.refersion.com/l/d88.3525 "Criando aplicações web real-time com Meteor") (alias também escrevi alguns [posts sobre Meteor](../meteor "Meteor") neste blog).
 
 ## Como está o blog hoje?
 
@@ -29,39 +29,39 @@ Desde o início de 2014 o blog passou por boas mudanças. Primeiro veio o novo l
 
 Abaixo estão todos os posts migrados para vocês acompanharem
 
-*   [Entrevistando de forma produtiva](entrevistando-de-forma-produtiva "Entrevistando de forma produtiva")
-*   [Dicas de terminal - Processos em background](dicas-de-terminal-processos-em-background "Dicas de terminal - Processos em background")
-*   [Dicas de terminal - Contador de arquivos](dicas-de-terminal-contador-de-arquivos "Dicas de terminal - Contador de arquivos")
-*   [Dicas de terminal - Histórico de comandos](dicas-de-terminal-historico-de-comandos "Dicas de terminal - Histórico de comandos")
-*   [Dicas de terminal - Identificando meu IP](dicas-de-terminal-identificando-meu-ip "Dicas de terminal - Identificando meu IP")
-*   [Dicas de terminal - Copiando arquivos via SCP](dicas-de-terminal-copiando-arquivos-via-scp "Dicas de terminal - Copiando arquivos via SCP")
-*   [Dicas de terminal - Processamento paralelo com xargs](dicas-de-terminal-processamento-paralelo-com-xargs "Dicas de terminal - Processamento paralelo com xargs")
-*   [Dicas de terminal - Múltiplos comandos](dicas-de-terminal-multiplos-comandos "Dicas de terminal - Múltiplos comandos")
-*   [Dicas de terminal - Matando processos da rede](dicas-de-terminal-matando-processos-da-rede "Dicas de terminal - Matando processos da rede")
-*   [Dicas de terminal - Criando um comando alias](dicas-de-terminal-criando-comando-alias "Dicas de terminal - Criando um comando alias")
-*   [Dicas de terminal - Trabalhando com SSH](dicas-de-terminal-trabalhando-com-ssh "Dicas de terminal - Trabalhando com SSH")
-*   [Terminal gerando arquivo de texto](terminal-gerando-arquivo-de-texto "Terminal gerando arquivo de texto")
-*   [Múltiplos diretórios em um comando](multiplos-diretorios-em-um-comando-dicas-de-terminal "Múltiplos diretórios em um comando")
-*   [Arch Linux Ultimate install](arch-linux-ultimate-install "Arch Linux Ultimate install")
-*   [Split e Join de arquivos com tar](split-e-join-de-arquivos-com-tar "Split e Join de arquivos com tar")
-*   [5 Motivos para instalar o Arch Linux](5-motivos-para-instalar-o-arch-linux "5 Motivos para instalar o Arch Linux")
-*   [Linux adequado para sua necessidade - Parte 1](linux-adequado-para-sua-necessidade-parte-1 "Linux adequado para sua necessidade - Parte 1")
-*   [Linux adequado para sua necessidade - Parte 2](linux-adequado-para-sua-necessidade-parte-2 "Linux adequado para sua necessidade - Parte 2")
-*   [Linux adequado para sua necessidade - Parte 3](linux-adequado-para-sua-necessidade-parte-3 "Linux adequado para sua necessidade - Parte 3")
-*   [Linux adequado para sua necessidade - Parte 4](linux-adequado-para-sua-necessidade-parte-4 "Linux adequado para sua necessidade - Parte 4")
-*   [Migrando de Windows Para Linux - Parte 1](migrando-de-windows-para-linux-parte-1 "Migrando de Windows Para Linux - Parte 1")
-*   [Migrando de Windows Para Linux - Parte 2](migrando-de-windows-para-linux-parte-2 "Migrando de Windows Para Linux - Parte 2")
-*   [Migrando de Windows Para Linux - Parte 3](migrando-de-windows-para-linux-parte-3 "Migrando de Windows Para Linux - Parte 3")
-*   [Migrando de Windows Para Linux - Parte 4](migrando-de-windows-para-linux-parte-4 "Migrando de Windows Para Linux - Parte 4")
-*   [Vantagens em utilizar Sistemas Linux](vantagens-em-utilizar-sistemas-linux "Vantagens em utilizar Sistemas Linux")
-*   [Os atuais defeitos nos sistemas operacionais](os-atuais-defeitos-nos-sistemas-operacionais "Os atuais defeitos nos sistemas operacionais")
-*   [Aprendendo um pouco sobre Terminal - Parte 1](aprendendo-um-pouco-sobre-terminal-parte-1 "Aprendendo um pouco sobre Terminal - Parte 1")
-*   [Aprendendo um pouco sobre Terminal - Parte 2](aprendendo-um-pouco-sobre-terminal-parte-2 "Aprendendo um pouco sobre Terminal - Parte 2")
-*   [Dicas para um estagiário - Parte 1](dicas-para-um-estagiario-parte-1 "Dicas para um estagiário - Parte 1")
-*   [Dicas para um estagiário - Parte 2](dicas-para-um-estagiario-parte-2 "Dicas para um estagiário - Parte 2")
-*   [Dicas para abrir um blog](dicas-para-abrir-um-blog "Dicas para abrir um blog")
-*   [Ferramentas essenciais para um blogueiro](ferramentas-essenciais-para-um-blogueiro "Ferramentas essenciais para um blogueiro")
-*   [Os atuais defeitos nos sistemas operacionais](os-atuais-defeitos-nos-sistemas-operacionais "Os atuais defeitos nos sistemas operacionais")
-*   [Simulador de recursos de Sistemas operacionais](simulador-de-recursos-de-sistemas-operacionais "Simulador de recursos de Sistemas operacionais")
+*   [Entrevistando de forma produtiva](../entrevistando-de-forma-produtiva "Entrevistando de forma produtiva")
+*   [Dicas de terminal - Processos em background](../dicas-de-terminal-processos-em-background "Dicas de terminal - Processos em background")
+*   [Dicas de terminal - Contador de arquivos](../dicas-de-terminal-contador-de-arquivos "Dicas de terminal - Contador de arquivos")
+*   [Dicas de terminal - Histórico de comandos](../dicas-de-terminal-historico-de-comandos "Dicas de terminal - Histórico de comandos")
+*   [Dicas de terminal - Identificando meu IP](../dicas-de-terminal-identificando-meu-ip "Dicas de terminal - Identificando meu IP")
+*   [Dicas de terminal - Copiando arquivos via SCP](../dicas-de-terminal-copiando-arquivos-via-scp "Dicas de terminal - Copiando arquivos via SCP")
+*   [Dicas de terminal - Processamento paralelo com xargs](../dicas-de-terminal-processamento-paralelo-com-xargs "Dicas de terminal - Processamento paralelo com xargs")
+*   [Dicas de terminal - Múltiplos comandos](../dicas-de-terminal-multiplos-comandos "Dicas de terminal - Múltiplos comandos")
+*   [Dicas de terminal - Matando processos da rede](../dicas-de-terminal-matando-processos-da-rede "Dicas de terminal - Matando processos da rede")
+*   [Dicas de terminal - Criando um comando alias](../dicas-de-terminal-criando-comando-alias "Dicas de terminal - Criando um comando alias")
+*   [Dicas de terminal - Trabalhando com SSH](../dicas-de-terminal-trabalhando-com-ssh "Dicas de terminal - Trabalhando com SSH")
+*   [Terminal gerando arquivo de texto](../terminal-gerando-arquivo-de-texto "Terminal gerando arquivo de texto")
+*   [Múltiplos diretórios em um comando](../multiplos-diretorios-em-um-comando-dicas-de-terminal "Múltiplos diretórios em um comando")
+*   [Arch Linux Ultimate install](../arch-linux-ultimate-install "Arch Linux Ultimate install")
+*   [Split e Join de arquivos com tar](../split-e-join-de-arquivos-com-tar "Split e Join de arquivos com tar")
+*   [5 Motivos para instalar o Arch Linux](../5-motivos-para-instalar-o-arch-linux "5 Motivos para instalar o Arch Linux")
+*   [Linux adequado para sua necessidade - Parte 1](../linux-adequado-para-sua-necessidade-parte-1 "Linux adequado para sua necessidade - Parte 1")
+*   [Linux adequado para sua necessidade - Parte 2](../linux-adequado-para-sua-necessidade-parte-2 "Linux adequado para sua necessidade - Parte 2")
+*   [Linux adequado para sua necessidade - Parte 3](../linux-adequado-para-sua-necessidade-parte-3 "Linux adequado para sua necessidade - Parte 3")
+*   [Linux adequado para sua necessidade - Parte 4](../linux-adequado-para-sua-necessidade-parte-4 "Linux adequado para sua necessidade - Parte 4")
+*   [Migrando de Windows Para Linux - Parte 1](../migrando-de-windows-para-linux-parte-1 "Migrando de Windows Para Linux - Parte 1")
+*   [Migrando de Windows Para Linux - Parte 2](../migrando-de-windows-para-linux-parte-2 "Migrando de Windows Para Linux - Parte 2")
+*   [Migrando de Windows Para Linux - Parte 3](../migrando-de-windows-para-linux-parte-3 "Migrando de Windows Para Linux - Parte 3")
+*   [Migrando de Windows Para Linux - Parte 4](../migrando-de-windows-para-linux-parte-4 "Migrando de Windows Para Linux - Parte 4")
+*   [Vantagens em utilizar Sistemas Linux](../vantagens-em-utilizar-sistemas-linux "Vantagens em utilizar Sistemas Linux")
+*   [Os atuais defeitos nos sistemas operacionais](../os-atuais-defeitos-nos-sistemas-operacionais "Os atuais defeitos nos sistemas operacionais")
+*   [Aprendendo um pouco sobre Terminal - Parte 1](../aprendendo-um-pouco-sobre-terminal-parte-1 "Aprendendo um pouco sobre Terminal - Parte 1")
+*   [Aprendendo um pouco sobre Terminal - Parte 2](../aprendendo-um-pouco-sobre-terminal-parte-2 "Aprendendo um pouco sobre Terminal - Parte 2")
+*   [Dicas para um estagiário - Parte 1](../dicas-para-um-estagiario-parte-1 "Dicas para um estagiário - Parte 1")
+*   [Dicas para um estagiário - Parte 2](../dicas-para-um-estagiario-parte-2 "Dicas para um estagiário - Parte 2")
+*   [Dicas para abrir um blog](../dicas-para-abrir-um-blog "Dicas para abrir um blog")
+*   [Ferramentas essenciais para um blogueiro](../ferramentas-essenciais-para-um-blogueiro "Ferramentas essenciais para um blogueiro")
+*   [Os atuais defeitos nos sistemas operacionais](../os-atuais-defeitos-nos-sistemas-operacionais "Os atuais defeitos nos sistemas operacionais")
+*   [Simulador de recursos de Sistemas operacionais](../simulador-de-recursos-de-sistemas-operacionais "Simulador de recursos de Sistemas operacionais")
 
 De qualquer forma quero agradecer a todos os leitores desse blog, que compartilham alguns dos meus posts, comentam aqui no blog, me ajudam a corrigir bugs que escrevo nos posts e principalmente me acompanham nas redes sociais. É muito gratificante ter o reconhecimento de vocês e isso me motiva cada vez mais a manter o blog no ar. Obrigado pessoal! :)

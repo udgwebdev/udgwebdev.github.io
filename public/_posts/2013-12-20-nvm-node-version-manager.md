@@ -1,4 +1,4 @@
-![NVM - Node Version Manager](images/nodejs-logo.jpg "NVM - Node Version Manager")
+![NVM - Node Version Manager](../images/nodejs-logo.jpg "NVM - Node Version Manager")
 
 Assim como o ruby possui o [RVM](http://rvm.io/) e [RBENV](http://rbenv.org/) para gerenciar múltiplas versões ruby da máquina, o Node.js também possui um chamado [NVM](https://github.com/creationix/nvm).
 
