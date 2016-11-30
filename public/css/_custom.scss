@@ -5,13 +5,131 @@ a {
 a:hover {
   text-decoration: none;
 }
+.page-404 {
+  margin: 150px auto;
+}
 .vertical-centralization {
-  margin-top: 60px;
+  margin-top: 100px;
 }
 .navbar-logo {
-  margin-top: 5px;
+  margin-top: 12px;
   margin-left: 10px;
 }
-.navbar-inverse {
+.navbar-inverse, .footer {
   background-color: rgb(186, 45, 39);
+  color: #fff;
+}
+.footer {
+  background-color: rgb(186, 45, 39);
+  padding: 20px;
+}
+.navbar-menu {
+  position: relative;
+  height: 6.5em;
+}
+.circle-menu {
+  position: relative;
+  background: #cd3e3d;
+  width: 4em;
+  height: 4em;
+  border-radius: 5em;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 5em;
+  cursor: pointer;
+  border: 1em solid #fdaead;
+  box-sizing: initial;
+}
+.circle-menu:after {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: 1em;
+  width: 2em;
+  height: 1.65em;
+  border-top: 1em double #fff;
+  border-bottom: 0.4em solid #fff;
+}
+.circle-menu li {
+  width: 6.5em;
+  height: 2.2em;
+  padding: 0.3em;
+  margin-top: 1.8em;
+  text-align: center;
+  border-radius: 0.5em;
+  transition: all 1s;
+  background: #fdaead;
+  opacity: 0;
+  z-index: -1;
+}
+.circle-menu:hover ul.show-menu li {
+  opacity: 1;
+}
+.circle-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.circle-menu ul:before.show-menu {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  left: 50%;
+  top: -5.0em;
+  border-width: 6.5em;
+  border-radius: 7.5em;
+  border-left: 0;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.01);
+  z-index: -1;
+  cursor: default;
+}
+.circle-menu ul {
+  transform: rotate(180deg) translateY(-2em);
+  transition: 1s all;
+}
+.circle-menu ul.show-menu {
+  transform: rotate(0deg) translateY(-1em);
+}
+.circle-menu a {
+  color: white;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+.circle-menu a {
+  color: white;
+  text-decoration: none;
+}
+.circle-menu ul.show-menu li:hover {
+  background: #cd3e3d;
+  z-index: 10;
+}
+.circle-menu li:nth-of-type(1) {
+  position: absolute;
+  left: -6.8em;
+  top: 0.3em;
+}
+.circle-menu li:nth-of-type(2) {
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -5.2em;
+  top: 4.1em;
+}
+.circle-menu li:nth-of-type(3) {
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -1.3em;
+  top: 5.7em;
+}
+.circle-menu li:nth-of-type(4) {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 2.8em;
+  top: 4.2em;
+}
+.circle-menu li:nth-of-type(5) {
+  position: absolute;
+  left: 4.4em;
+  top: 0.3em;
 }

@@ -1,4 +1,4 @@
-- var manifest_url = environment == "production" ? root_url[environment]+'manifest.appcache' : ''
+- var manifest_url = environment == "production" ? '/manifest.appcache' : ''
 doctype html
 html(lang="en" manifest="#{manifest_url}" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#")
   head
@@ -6,12 +6,16 @@ html(lang="en" manifest="#{manifest_url}" xmlns="http://www.w3.org/1999/xhtml" x
   body
     != partial("_shared/header")
     main.container.vertical-centralization(role="main")
-      .row
-        .col-xs-12.col-sm-9
+      h1 #{layout}
+      if (layout === "post")
+        article.col-xs-12.col-sm-9
           != yield
-          if (created_at && tags)
-            p.text-right Publicado em <strong>#{created_at}</strong>
-              <br>Tags: #{tags.toString().replace(',', ', ')}
-    script(src="#{root_url[environment]}js/main.js" async defer)
+          p.text-right Publicado em <strong><time datetime="#{created_at}" pubdate>#{created_at}</time></strong>
+            <br>Tags: <strong>#{tags.toString().replace(',', ', ')}</strong>
+      else
+        != yield
+    != partial("_shared/footer")
+    script(src="/js/scrollreveal.min.js")
+    script(src="/js/main.js")
     if environment == "production"
       != partial("_shared/google_analytics")

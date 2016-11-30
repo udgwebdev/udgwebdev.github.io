@@ -1,21 +1,15 @@
 nav.navbar.navbar-inverse.navbar-fixed-top
   .container
-    .navbar-header
-      button.navbar-toggle(type="button")
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a(href="#{root_url[environment]}" title="#{blog_name}" rel="me")
-        img.navbar-logo(src="#{root_url[environment]}images/#{main_image}" width="48" alt="#{blog_name}")
-    .navbar-collapse.collapse.in.hidden-xs
-      ul.nav.navbar-right.navbar-nav
-        li
-          <a href="#">JavaScript</a>
-        li
-          <a href="#">Meteor</a>
-        li
-          <a href="#">Node.js</a>
-        li
-          <a href="#">Terminal</a>
-        li
-          <a href="#">Sobre</a>
+    .navbar-menu
+      .circle-menu
+        ul
+          li
+            <a href="/">Home</a>
+          li
+            <a href="#">Terminal</a>
+          li
+            <a href="#">JavaScript</a>
+          li
+            <a href="#">Meteor</a>
+          li
+            <a href="#">Node.js</a>

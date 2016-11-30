@@ -1,22 +1,13 @@
 (function() {
-  var toggle = document.querySelector('.navbar-toggle');
-  var collapse = document.querySelector('.navbar-collapse');
-  var scrollLinks = document.querySelectorAll('[data-scroll]');
-
-  scrollLinks.forEach(function(scrollLink) {
-    scrollLink.addEventListener('click', function() {
-      collapse.classList.add('hidden-xs');
-    });
-  });
-
-  toggle.addEventListener('click', function() {
-    var classList = collapse.classList;
-    if (classList.contains('hidden-xs')) {
-      classList.remove('hidden-xs');
+  window.sr = new scrollReveal();
+  var circleMenu = document.querySelector('.circle-menu');
+  circleMenu.addEventListener('click', function(e) {
+    var classList = e.currentTarget.querySelector('ul').classList;
+    console.log(classList);
+    if (classList.contains('show-menu')) {
+      classList.remove('show-menu');
     } else {
-      classList.add('hidden-xs');
+      classList.add('show-menu');
     }
   });
-
-  smoothScroll.init();
 })();

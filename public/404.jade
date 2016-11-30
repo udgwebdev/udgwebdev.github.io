@@ -1,10 +1,11 @@
-.row-fluid
-  .col-xs-12
-    img(src="#{root_url[environment]}images/#{main_image}" width="256" class="img-responsive img-circle center-block")
-    p.text-center Página não encontrada, relax, vamos te <a href="#{root_url[environment]}" id="home_url">redirecionar pra home</a>.
-    script.
-      (function() {
-        setTimeout(function() {
-          window.location = document.getElementById('home_url').href;
-        }, 3000);
-      })()
+.row.page-404
+  .col-xs-12.text-center
+    img(src="/images/#{main_image}" width="256" class="img-responsive center-block")
+    h1.h3 #{blog_name}
+    h3.h4 Esta página não existe...relax! Vamos te <a href="/" id="home_url">redirecionar pra home</a>.
+script.
+  (function() {
+    setTimeout(function() {
+      window.location = document.getElementById('home_url').href;
+    }, 3000);
+  })();

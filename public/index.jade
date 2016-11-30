@@ -1,6 +1,7 @@
-h1.h2 #{blog_name}
-h2.h3 #{title}
-each post in public._data
-  h2
-    a(href="#{root_url[environment] + post.slug}" rel="me") #{post.title}
-  p #{post.description}
+.row
+  .col-xs-12.col-sm-9
+    each post in public._data
+      article(data-sr="true")
+        h2
+          a(href="/#{post.slug}" rel="me") #{post.title}
+        p #{post.description}
