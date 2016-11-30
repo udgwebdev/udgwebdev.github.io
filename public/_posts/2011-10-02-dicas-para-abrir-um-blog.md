@@ -1,5 +1,3 @@
-# Dicas para abrir um blog
-
 ![Gerenciadores de blogs](../images/gerenciadores-de-blogs.jpg)
 
 Para você que gosta de ler e principalmente escrever, gostaria de compartilhar e contribuir para o mundo com frases, textos, artigos, dicas, contar histórias, opinōes ou pensamentos para web, a melhor recomendação é montar um blog.

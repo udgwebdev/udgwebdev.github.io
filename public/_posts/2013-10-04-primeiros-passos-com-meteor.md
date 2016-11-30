@@ -1,5 +1,3 @@
-# Primeiros passos com Meteor
-
 [![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 Depois de um [post de introdução sobre Meteor](../introducao-sobre-meteor "Introdução sobre Meteor"), iremos neste post aprender na prática, os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor.

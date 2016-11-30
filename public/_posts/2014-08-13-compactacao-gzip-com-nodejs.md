@@ -1,5 +1,3 @@
-# Compactação gzip com Node.js
-
 ![Compactação gzip com Node.js](../images/nodejs-logo.jpg "Compactação gzip com Node.js")
 
 Para quem esta a procura de um framework extremamente leve e fácil de usar, recomendo utilizar o gzipme. Ele é um módulo Node.js que funciona via linha de comando (CLI) ou programaticamente via Node.js.

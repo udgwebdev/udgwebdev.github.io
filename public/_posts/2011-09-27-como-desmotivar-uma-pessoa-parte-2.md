@@ -1,5 +1,3 @@
-# Como desmotivar uma pessoa - Parte 2
-
 Olá pessoal! continuarei com a segunda parte desse post que fala sobre um assunto importante e que muitas empresas ainda pecam, que é sobre a motivação, continuarei falando sobre alguns outros problemas que desmotivam qualquer funcionário independente de seu cargo ou área de trabalho, lembrando que são apenas algumas das minhas considerações (opiniões) baseadas em situações que vivi ou que alguns amigos já viveram. Para quem não [leu a primeira parte](../como-desmotivar-uma-pessoa-parte-1 "Como desmotivar uma pessoa - Parte 1"), vale a pena conferir também!
 
 ![Ambiente desorganizado](../images/desorganizacao.jpg)

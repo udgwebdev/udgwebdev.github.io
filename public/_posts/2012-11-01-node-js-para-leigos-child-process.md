@@ -1,5 +1,3 @@
-# Node.js para leigos - Child process
-
 ![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Hoje estudaremos um assunto muito interessante em que no Node.js sua manipulação é simples de aprender e sua utilização é de extrema importância. Falarei sobre manipulação de processos do sistema operacional, através da API nativa chamada: **Child Process**.

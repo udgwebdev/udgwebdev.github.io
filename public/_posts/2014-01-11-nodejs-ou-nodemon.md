@@ -1,5 +1,3 @@
-# Node.js ou Nodemon?
-
 ![Node.js ou Nodemon?](../images/nodejs-logo.jpg "Node.js ou Nodemon?")
 
 O nodemon é uma daquelas ferramentas de grande utilidade para quem trabalha com Node.js.

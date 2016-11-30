@@ -1,5 +1,3 @@
-# Como desmotivar uma pessoa - Parte 1
-
 Olá pessoal, neste post falarei sobre um assunto muito sério pelo qual muitas empresas pecam fortemente, que é sobre como não motivar uma pessoa.
 
 Existem muitas teorias que são estudadas nas aulas de administração que falam sobre motivação e os fatores principais que motivam uma pessoa, geralmente utilizando como referência principal a famosa Pirâmide de Maslow, além de outros temas interessantes, enfim, não entrarei a fundo sobre motivação, pois não é o objetivo desse post e sim falarei um pouco sobre minhas experiências desmotivadoras que já tive em um ambiente de trabalho.

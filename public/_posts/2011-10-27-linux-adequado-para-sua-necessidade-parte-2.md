@@ -1,5 +1,3 @@
-# Linux adequado para sua necessidade - Parte 2
-
 ![Distribuições Linux](../images/distros-linux.jpg)
 
 Continuando esse post apresentarei alguns sistemas Linux para novas necessidades, quem sabe você não encontra uma distro que é totalmente compatível com suas necessidades? Para isso, recomendo que leia até o fim! Caso ainda não tenha visto, o link para a primeira parte desta saga é: [Linux adequado para sua necessidade - Parte 1](../linux-adequado-para-sua-necessidade-parte-1 "Linux adequado para sua necessidade - Parte 1").

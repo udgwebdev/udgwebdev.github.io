@@ -1,5 +1,3 @@
-# Jade, um ótimo template engine
-
 ![Jade Template Engine](../images/jade-logo.jpg "Jade Template Engine")
 
 Em época de desenvolvimento ágil, surgiram muitas técnicas e ferramentas que visam aumentar a **velocidade** no desenvolvimento, além de trazer **produtividade** para os programadores.

@@ -1,5 +1,3 @@
-# Introdução sobre Meteor
-
 [![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 Pra galera que estuda ou trabalha com Node.js, hoje apresentarei neste post uma nova plataforma Web Full-Stack totalmente Javascript, feita em cima do Node.js, seu nome é Meteor.

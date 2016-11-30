@@ -1,5 +1,3 @@
-# Baixando sites com comando wget
-
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Fazia um tempinho que não postava algo sobre dicas de terminal e hoje finalmente vou mostrar mais uma vez dica bem útil através de um simples comando. Vou mostrar para vocês como baixar um site inteiro usando o comando `wget`.

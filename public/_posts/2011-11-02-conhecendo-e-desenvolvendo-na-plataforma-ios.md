@@ -1,5 +1,3 @@
-# Palestra - Conhecendo e Desenvolvendo na Plataforma iOS
-
 Finalizando nas publicações de slides sobre o [2º Encontro DevInSantos](http://crpunderground.wordpress.com/2011/10/30/segundo-encontro-devinsantos "Post sobre o encontro DevInSantos") que foi realizado ontem dia 29 de outubro de 2011.
 
 Esse slide foi apresentado por Bruno Alvares da Costa - [@brunoadacosta](http://twitter.com/#!/brunoadacosta/ "Twitter de Bruno Alvares da Costa") que foi um **mix** de apresentação sobre a plataforma iOS, com um **hands-on** na prática utilizando **XCode**, desenvolvendo um mini-aplicativo para iPhone.

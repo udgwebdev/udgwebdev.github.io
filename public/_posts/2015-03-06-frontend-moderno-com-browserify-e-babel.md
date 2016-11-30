@@ -1,5 +1,3 @@
-# Frontend moderno com Browserify e Babel
-
 [![Browserify e Babelify](../images/browserify.jpg "Browserify e Babelify")](http://browserify.org/ "Browserify")
 
 Nos dois últimos posts, expliquei sobre as vantagens de usar o Browserify através do post: [Modularizando Frontend JavaScript com Browserify](../modularizando-frontend-javascript-com-browserify) e também fiz um tutorial muito útil sobre como usar ES6 sem se preocupar com compatibilidades de browsers no post [Frontend lindo usando Babel para rodar ES6](../frontend-lindo-usando-babel-para-rodar-es6).

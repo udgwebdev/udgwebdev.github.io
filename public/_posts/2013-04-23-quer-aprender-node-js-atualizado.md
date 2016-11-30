@@ -1,5 +1,3 @@
-# Quer aprender Node.js? (Atualizado)
-
 ![Quer aprender Node.js?](../images/nodejs-logo.jpg "Quer aprender Node.js?")
 
 Atualizando um antigo post do blog, hoje recomendarei para os entusiastas e evangelistas excelentes slides, cursos, fóruns, blogs, podcasts e screencasts pra te dar um pontapé inicial no mundo Node.js que esta cada vez mais conquistando novos projetos e desenvolvedores.

@@ -1,5 +1,3 @@
-# Livro Construindo APIs Rest com Node.js
-
 ![Livro: Construindo APIs Rest com Node.js](../images/nodejs-logo.jpg "Livro: Construindo APIs Rest com Node.js")
 
 Fala pessoal! Meu terceiro livro acabou de ser publicado mais uma vez pela editora [Casa do Código](http://www.casadocodigo.com.br). Dessa vez o assunto é sobre como construir APIs Rest usando Node.js e seus principais frameworks. O livro esta com conteúdo avançado e ficou sensacional.

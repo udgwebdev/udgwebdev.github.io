@@ -1,5 +1,3 @@
-# Dicas de terminal - Identificando meu IP
-
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Hoje a dica será rápida e muito legal! Vou lhe apresentar um comando alias que exibe o seu IP externo, muito útil quando precisando identificar nosso IP externo da internet.

@@ -1,5 +1,3 @@
-# Os 20 posts do ano
-
 ![Os 20 posts do ano](../images/trofeu.jpg "Os 20 posts do ano")
 
 2013 foi um ano sensacional para este blog! Vários posts sobre Node.js e também surgiram alguns posts sobre Meteor. O mais legal e motivador é ver a galera lendo diariamente o blog, buscando aprender mais sobre Node.js, comentando no blog suas dúvidas e experiências.

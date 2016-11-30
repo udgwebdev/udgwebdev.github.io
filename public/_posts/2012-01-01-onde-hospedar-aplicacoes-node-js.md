@@ -1,5 +1,3 @@
-# Onde hospedar aplicações Node.js
-
 Conheça quatro excelentes **PaaS (Plataform as a Service)** focadas em hospedagem de aplicações **Node.js**. Especificamente quero que conheçam as plataformas: [Getup Cloud](http://getupcloud.com "Getup Cloud"), [Appfog Nodester](http://nodester.com "Appfog Nodester"), [Nodejitsu](http://nodejitsu.com "Nodejitsu") e [Heroku](http://www.heroku.com "Heroku").
 
 ## Getup Cloud

@@ -1,5 +1,3 @@
-# Dicas para um estagiário - Parte 2
-
 ![Vida de estagiário](../images/estagiarios.jpg)
 
 Dando continuidade neste tema, irei continuar apresentando algumas dicas para você estagiário não ser apenas um “estagiário” qualquer e sim um aprendiz que deseja se torna um profissional e seguir uma carreira em uma empresa.

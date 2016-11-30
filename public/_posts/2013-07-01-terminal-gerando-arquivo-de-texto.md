@@ -1,5 +1,3 @@
-# Terminal gerando arquivo de texto
-
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Hoje apresentarei uma dica muito legal e fácil de implementar. Seu objetivo é de exportar os resultados de saída do terminal diretamente em um arquivo de texto. Para rodar este comando primeiro temos que utilizar um comando qualquer que imprima algum resultado no próprio terminal, para que no final deste comando seja incluído o caracter `> arquivo.txt` ou `>> arquivo.txt`. Veja exemplos desses dois comandos e a diferença deles:

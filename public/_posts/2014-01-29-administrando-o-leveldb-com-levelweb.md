@@ -1,5 +1,3 @@
-# Administrando o LevelDB com LevelWeb
-
 [![LevelWeb](../images/levelweb.png "LevelWeb")](https://github.com/hij1nx/levelweb) 
 
 Continuando minhas experiências com o NoSQL [LevelDB](http://code.google.com/p/leveldb), neste post apresentarei um simples web admin de fácil integração e quebra bem o galho na hora de usar uma ferramenta visual pra administrar dados deste banco.

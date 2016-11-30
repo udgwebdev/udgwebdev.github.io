@@ -8,7 +8,7 @@ const toMarkdown = require('to-markdown');
 const PUBLIC = path.join(__dirname, 'public');
 const OLD_POSTS = path.join(PUBLIC, '_oldposts');
 const NEW_POSTS = path.join(PUBLIC, '_posts');
-const META_OMIT = ['keywords'];
+const META_OMIT = ['layout', 'keywords'];
 const MARKDOWN_OPTS = {
   gfm: true,
   converters: [
@@ -52,9 +52,9 @@ _.eachRight(fs.readdirSync(OLD_POSTS), (postFile) => {
   try {
     const postMetaDataObj = YAML.parse(postDataSplitted[0]);
     const tags = _.isArray(postMetaDataObj.tags) ? postMetaDataObj.tags : [postMetaDataObj.tags];
-    const layout = postMetaDataObj.layout === 'redirect' ? 'post' : postMetaDataObj.layout;
+    const type = postMetaDataObj.layout === 'redirect' ? 'post' : postMetaDataObj.layout;
     const postMetaData = _.extend(_.omit(postMetaDataObj, META_OMIT), {
-      slug: postSlugTitle, created_at: postPubDate, tags, layout
+      slug: postSlugTitle, created_at: postPubDate, tags, type
     });
     if (!postMetaDataObj.alias_url && !postMetaDataObj.alias) {
       const postContentArray = postDataSplitted[1]
@@ -81,7 +81,7 @@ _.eachRight(fs.readdirSync(OLD_POSTS), (postFile) => {
         }
         return content;
       }).join('\n');
-      const postMarkdownData = `# ${postMetaData.title}\n\n${toMarkdown(postContentData, MARKDOWN_OPTS)}`;
+      const postMarkdownData = toMarkdown(postContentData, MARKDOWN_OPTS);
       fs.outputFileSync(path.join(NEW_POSTS, postFile.replace('.html', '.md')), postMarkdownData);
     }
     if (!postMetaDataObj.alias) {

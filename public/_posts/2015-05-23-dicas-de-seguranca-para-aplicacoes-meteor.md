@@ -1,5 +1,3 @@
-# Dicas de segurança para aplicações Meteor
-
 ![Meteor](../images/meteor-logo.jpg "Meteor")
 
 Se você esta desenvolvendo uma aplicação Meteor, é importante estar por dentro de como garantir segurança em sua aplicação. Nesse post mostrarei algumas dicas simples e de fácil execução para blindar seu projeto.

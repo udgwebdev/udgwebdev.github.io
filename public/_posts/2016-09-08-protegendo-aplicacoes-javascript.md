@@ -1,5 +1,3 @@
-# Protegendo aplicações JavaScript
-
 ![Protegendo aplicações JavaScript](../images/jscrambler-logo.png "Protegendo aplicações JavaScript")
 
 Atualmente no JavaScript surgiram vários frameworks (**React, Angular, Ember, Backbone, Vue e etc**) e a linguagem também evoluiu muito com as implementações ES6, ES7 e futuro ES8, isso tudo já nos permite criar aplicações web, mobile ou desktop bem complexas utilizando apenas JavaScript, porém, você já parou para questionar sobre como proteger toda integridade de códigos JavaScript?

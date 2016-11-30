@@ -1,5 +1,3 @@
-# Tunning em servidor Linux
-
 ![Tunning em servidor Linux](../images/terminal-console-linux.jpg)
 
 Hoje o assunto será sobre Linux, em especial vou listar neste post uma série de configurações que vale a pena aplicar em seus servidores Linux.

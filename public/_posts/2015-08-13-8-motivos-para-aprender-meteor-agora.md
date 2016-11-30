@@ -1,5 +1,3 @@
-# 8 Motivos para aprender Meteor agora
-
 ![Meteor](../images/meteor-logo.jpg "Meteor")
 
 Veja nesse post bons motivos para você aprender [Meteor]({{site.url}}/meteor) agora!

@@ -1,5 +1,3 @@
-# Nginx servindo Node.js
-
 ![Node.js e Nginx](../images/nodejs-nginx.jpg "Node.js e Nginx")
 
 Nesse post falarei um pouco mais sobre a união entre Node.js e Nginx, mostrando as vantagens desse casamento e como implementar essa dupla corretamente.

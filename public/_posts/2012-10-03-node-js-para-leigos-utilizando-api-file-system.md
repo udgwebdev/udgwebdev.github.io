@@ -1,5 +1,3 @@
-# Node.js para leigos - Utilizando API File System
-
 ![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Fala galera!! Realmente precisei do mês de setembro para resolver outras pendências, e isso me impossibilitou de continuar o mini-curso, mas enfim, vamos ao que interessa. Hoje o assunto será mais light, será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional - **[File System](http://nodejs.org/api/fs.html "Node.js File System API")**.

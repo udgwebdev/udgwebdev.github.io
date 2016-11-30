@@ -1,5 +1,3 @@
-# Node.js para leigos - Instalação e configuração
-
 ![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 E neste novo capítulo dessa consagrada série de posts sobre o [mini-cursinho de Node.js para leigos]({{site.url}}/nodejs), hoje o objetivo é passar algumas dicas de como **instalar e configurar um ambiente de desenvolvimento para essa tecnologia**, independente de qual sistema operacional você usa, as dicas serão as mesmas, é claro que, com **procedimentos diferentes (pelo menos no Windows haverá algumas diferenças de configuração, mas nada de grave!).**

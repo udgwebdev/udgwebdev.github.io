@@ -1,5 +1,3 @@
-# Quer aprender Meteor?
-
 [![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 ### Atualizado em 24/Março/2014

@@ -1,5 +1,3 @@
-# Escrevendo JavaScript melhor - Parte 2
-
 ![Escrevendo JavaScript melhor](../images/es6-logo.jpg "Escrevendo JavaScript melhor")
 
 Dando continuidade ao post: [Escrevendo JavaScript melhor - Parte 1](../escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1"), nesse post falarei sobre mais duas dicas úteis para melhorar seu código JavaScript.

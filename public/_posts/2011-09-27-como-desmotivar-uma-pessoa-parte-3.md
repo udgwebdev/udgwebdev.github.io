@@ -1,5 +1,3 @@
-# Como desmotivar uma pessoa - Parte 3
-
 Confesso que iria parar na [parte 2 desse tema](../como-desmotivar-uma-pessoa-parte-2 "Como desmotivar uma pessoa - Parte 2"), mas a inspiração é algo raro que tenho, então o melhor a fazer é aproveitá-la enquanto consigo.
 
 Voltando ao assunto citarei mais 3 situações desmotivadoras para qualquer profissional, independente de qual área exerce.

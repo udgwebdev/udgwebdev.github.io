@@ -1,5 +1,3 @@
-# Dicas de terminal - Trabalhando com SSH
-
 ![Trabalhando com SSH](../images/ssh.jpg)
 
 Ultimamente estou desenvolvendo um site pelo qual precisei muito trabalhar com **ssh** para transferir os arquivos. Com isso resolvi instalar o mínimo e necessário de ferramentas **ssh** para o meu **Arch**. Como utilizo o ambiente desktop **Gnome**, também configurei o **Nautilus** para trabalhar entre os arquivos de forma prática e visual. Praticamente instalei apenas duas ferramentas que são: **OpenSSH** que permite trabalhar com o protocolo **ssh** e o **RSSH** que habilita o suporte **SCP (Secure Copy Protocol)** e **SFTP (Security File Transfer Protocol)**. Então mãos a obra!

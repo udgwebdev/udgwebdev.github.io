@@ -1,5 +1,3 @@
-# O que devemos esperar de uma faculdade de TI
-
 Antes de começar, quero deixar bem claro que todo conteúdo desse post é um conjunto de algumas reflexões e opiniões minhas, baseadas em minhas experiências que tive na minha época de faculdade e principalmente baseada ao ver algumas pessoas reclamando do conteúdo que suas faculdades lhe ensinam.
 
 Não sei como são as faculdades de tecnologia fora do Brasil, mas sei que aqui no país a maioria delas (ou será que são todas?) elaboram uma ementa de matérias que em geral envolvem muita matemática, alguns cursos envolvem administração, conceitos de programação, conceitos de banco de dados, conceitos de redes e engenharia de software (que também são conceitos), é claro que pode existir outras matérias, mas apenas quero focar nessas principais.

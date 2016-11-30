@@ -1,5 +1,3 @@
-# NaN
-
 ![Criando um chat usando session do Express 4 no Socket.IO 1.0](../images/express-socketio.jpg "Criando um chat usando session do Express 4 no Socket.IO 1.0")
 
 Fala pessoal tudo bem? Se você utiliza Socket.IO e Express juntos, esse tutorial vai te ajudar a manter mais seguro o seu sistema, afinal vou te explicar como compartilhar dados de uma session do Express no Socket.IO, que é bem melhor do que aderir a ~~gambiarras~~ soluções paliativas.

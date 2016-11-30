@@ -1,5 +1,3 @@
-# Light Talk - Introdução sobre Node.js
-
 No meu blog pessoal, postei em detalhes algumas fotos e comentários sobre o [2º Encontro DevInSantos](http://crpunderground.wordpress.com/2011/10/30/segundo-encontro-devinsantos "Post sobre o encontro DevInSantos") que foi realizado ontem dia 29 de outubro de 2011.
 
 Agora como prometido apresentarei pra vocês o meu slide sobre o Light Talk: Introdução sobre Node.js, espero que gostem!!

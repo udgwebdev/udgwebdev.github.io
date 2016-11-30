@@ -1,5 +1,3 @@
-# Otimizando aplicações Node.js
-
 ![Otimizando aplicações Node.js](../images/nodejs-logo.jpg "Otimizando aplicações Node.js")
 
 Neste post apresentarei 10 dicas extremamente úteis para você aplicar em uma aplicação Node.js em produção.

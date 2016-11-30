@@ -1,5 +1,3 @@
-# 5 ebooks Node.js do Leanpub
-
 ![5 ebooks Node.js do Leanpub](../images/leanpub.jpg "5 ebooks Node.js do Leanpub")
 
 Neste post você verá um mini review de 5 bons ebooks para se baixar no [Leanpub](https://leanpub.com) sobre Node.js.

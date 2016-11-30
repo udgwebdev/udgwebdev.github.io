@@ -1,5 +1,3 @@
-# Node.js para leigos - Introdução
-
 ![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Bem-vindos ao cursinho de Node.js para leigos, neste primeiro post apresentarei uma introdução sobre como é o mundo dessa tecnologia, como surgiu Node.js e para o que ela foi desenvolvida, para finalizar mostrarei também as principais características que mais destacam essa tecnologia apresentando suas vantagens e desvantagens.

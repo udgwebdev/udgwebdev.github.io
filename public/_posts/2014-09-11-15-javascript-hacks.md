@@ -1,5 +1,3 @@
-# 15 JavaScript Hacks
-
 ![15 JavaScript Hacks](../images/javascript-logo.jpg "15 JavaScript Hacks")
 
 Neste post vou compartilhar 15 Hacks extremamente úteis para se aplicar em JavaScript. As dicas são um acumulado de magias avançadas que visam diminuir o tamanho do código ou realizar um código de forma muito eficiente. Então let's go hack!

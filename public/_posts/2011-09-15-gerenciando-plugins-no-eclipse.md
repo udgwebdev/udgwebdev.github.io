@@ -1,5 +1,3 @@
-# Gerenciando Plugins no Eclipse
-
 ![Gerenciando Plugins no Eclipse](../images/eclipse-logo.jpg "Gerenciando Plugins no Eclipse")
 
 Para quem não conhece o Eclipse é uma IDE de programação, amplamente utilizada pelos desenvolvedores open-source, por que ela dá suporte as principais linguagens que são: **Java, HTML, CSS, Javascript, Python, C/C++, Ruby, PHP e outras.**

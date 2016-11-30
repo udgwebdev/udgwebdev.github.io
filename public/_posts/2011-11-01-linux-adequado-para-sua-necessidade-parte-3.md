@@ -1,5 +1,3 @@
-# Linux adequado para sua necessidade - Parte 3
-
 ![Distribuições Linux](../images/distros-linux.jpg)
 
 Continuando o post em nosso terceiro capítulo da saga: **Linux Adequado a sua necessidade**. Hoje apresentarei três distros bem conhecidas mas que vale a pena salientar suas funcionalidades e seu objetivo no mundo open-source do Linux. Os subtópicos abordados nesse post serão sobre distribuições para: **servidores, auditoria e sistema minimalista.**

@@ -1,5 +1,3 @@
-# Linux adequado para sua necessidade - Parte 1
-
 ![Distribuições Linux](../images/distros-linux.jpg)
 
 Resolvi pesquisar a fundo sobre as diversas distribuições Linux, pois atualmente segundo o site [distrowatch.com](http://distrowatch.com/ "DistroWatch") existem **696 sistemas operacionais Linux no mundo.** Achei muito interessante essa informação e de fato me motivou a criar esse post com intuito de apresentar algumas distribuições linux para cada tipo de necessidade, seja ela acessibilidade, performance, gamers, programadores, usuários de computadores antigos e muito mais. Abaixo apresentarei uma necessidade e seu respectivo sistema linux que resolve esse problema. Então vamos lá!

@@ -1,5 +1,3 @@
-# Quer aprender Java?
-
 ![Plataforma Java](../images/java-logo.jpg "Plataforma Java")
 
 Bom a partir desse post irei começar mais uma área de recomendação de livros e ou apostilas para dar a você leitor uma estrutura completa de aprendizado sobre alguma tecnologia de mercado.

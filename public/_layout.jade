@@ -6,14 +6,15 @@ html(lang="en" manifest="#{manifest_url}" xmlns="http://www.w3.org/1999/xhtml" x
   body
     != partial("_shared/header")
     main.container.vertical-centralization(role="main")
-      h1 #{layout}
-      if (layout === "post")
-        article.col-xs-12.col-sm-9
+      .row
+        if type
+          article.col-xs-12.col-sm-9(class="#{type}")
+            h1 #{title}
+            if type === "post"
+              p Publicação: <strong><time datetime="#{created_at}" pubdate>#{created_at}</time></strong> | Tags: <strong>#{tags.toString().replace(',', ', ')}</strong>
+            != yield
+        else
           != yield
-          p.text-right Publicado em <strong><time datetime="#{created_at}" pubdate>#{created_at}</time></strong>
-            <br>Tags: <strong>#{tags.toString().replace(',', ', ')}</strong>
-      else
-        != yield
     != partial("_shared/footer")
     script(src="/js/scrollreveal.min.js")
     script(src="/js/main.js")

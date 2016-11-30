@@ -1,5 +1,3 @@
-# 6 Motivos para usar Node.js
-
 ![6 Motivos para usar Node.js](../images/nodejs-logo.jpg "6 Motivos para usar Node.js")
 
 Entenda nesse post as 6 vantagens sobre por que vale a pena estudar e usar Node.js

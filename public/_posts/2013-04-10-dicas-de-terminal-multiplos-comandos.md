@@ -1,5 +1,3 @@
-# Dicas de terminal - Múltiplos comandos
-
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Fala galera! Hoje a dica será bem simples de fazer e tão útil que vai te economizar tempo em frente o terminal console. Não falarei de nenhum comando específico e sim sobre como realizar múltiplas tarefas de forma ordenada em apenas uma linha de comando. Outro detalhe interessante é que essa dica também funciona no prompt de comandos do Windows, pois aplicamos apenas um conceito de lógica booleana entre os comandos para ele realizar várias tarefas.

@@ -1,5 +1,3 @@
-# Meteor.methods
-
 ![Meteor](../images/meteor-logo.jpg "Meteor")
 
 ## Introdução

@@ -1,5 +1,3 @@
-# Palestra - Software fácil de usar não é difícil de programar
-
 Estarei com o tempo apresentando os slides das palestras que foram ministradas no [2º Encontro DevInSantos](http://crpunderground.wordpress.com/2011/10/30/segundo-encontro-devinsantos "Post sobre o encontro DevInSantos") que foi realizado ontem dia 29 de outubro 2011.
 
 Neste post apresentarei os slides de Leandro Alvares da Costa - [@leandroadacosta](http://twitter.com/#!/leandroadacosta/ "Twitter do Leandro Alvares da Costa")

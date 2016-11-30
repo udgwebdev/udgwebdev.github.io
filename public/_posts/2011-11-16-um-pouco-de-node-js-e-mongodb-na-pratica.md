@@ -1,5 +1,3 @@
-# Node.js e MongoDB na prática!
-
 ![Node.js e MongoDB na prática!](../images/nodejs-e-mongodb.jpg "Node.js e MongoDB na prática!")
 
 Recentemente fiz uma mini-aplicação no meu trabalho, e resolvi aplicar na prática meus conhecimentos sobre **Node.js**. Com isso apenas precisava escolher um banco de dados que fosse tão simples e fácil quanto a própria linguagem da aplicação. Na verdade eu estava em busca de aprender um pouco sobre bancos **NoSQL** e a recomendação que me veio foi sobre o **MongoDB**.

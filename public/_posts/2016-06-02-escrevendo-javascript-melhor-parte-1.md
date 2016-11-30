@@ -1,5 +1,3 @@
-# Escrevendo JavaScript melhor - Parte 1
-
 ![Escrevendo JavaScript melhor](../images/es6-logo.jpg "Escrevendo JavaScript melhor")
 
 Esse post visa mostrar na prática como melhorar algumas gambiarras ou bad codes clássicas de se encontrar em qualquer projeto legado JavaScript.

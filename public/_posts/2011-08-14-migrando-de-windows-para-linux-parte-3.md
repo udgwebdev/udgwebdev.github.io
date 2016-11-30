@@ -1,5 +1,3 @@
-# Migrando Windows para Linux - Parte 3
-
 ![Migrando definitivamente para Linux](../images/mingrando-de-windows-para-linux.jpg)
 
 Continuando o post, agora falarei um pouco sobre os aplicativos de mensagem instantânea mais famosos do mundo Linux, que na minha opinião, de uma forma bem [KISS (Keep It Simple, Stupid!)](http://pt.wikipedia.org/wiki/Keep_It_Simple "Keep It Simple, Stupid!") me satisfaz por completo. E também apresentarei algumas aplicações básicas para edição e criação multimídia pro seu linux ficar perfeito.

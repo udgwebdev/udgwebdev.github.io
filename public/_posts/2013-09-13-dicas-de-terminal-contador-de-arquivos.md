@@ -1,5 +1,3 @@
-# Dicas de terminal - Contador de arquivos
-
 ![Terminal Console Linux](../images/terminal-console-linux.jpg)
 
 Hoje apresentarei um comando que realiza uma contagem de quantos arquivos existem em um determinado diretório. Na verdade o comando é a combinação de dois comandos: o comando **ls** (que lista todos os arquivos de uma pasta) e o comando **wc -l** (comando que faz contagem palavras).

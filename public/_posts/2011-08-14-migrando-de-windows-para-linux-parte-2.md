@@ -1,5 +1,3 @@
-# Migrando Windows para Linux - Parte 2
-
 ![Migrando definitivamente para Linux](../images/mingrando-de-windows-para-linux.jpg)
 
 Dando continuidade ao post, apresentarei mais alguns excelentes softwares livre, que além de ser totalmente de graça, possuem funcionalidades tão boas quanto as versões existentes para a plataforma windows.

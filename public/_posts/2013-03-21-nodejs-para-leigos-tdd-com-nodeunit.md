@@ -1,5 +1,3 @@
-# Node.js para leigos - TDD com Nodeunit
-
 ![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Olá pessoal! O assunto de hoje será sobre desenvolvimento de testes automatizados com Node.js. O objetivo aqui é apresentar as características do framework Nodeunit, explicando um pouco também sobre TDD (Test Driven-Development) mais conhecido como desenvolvimento orientado a testes, que é uma das boas práticas da metodologia agíl.

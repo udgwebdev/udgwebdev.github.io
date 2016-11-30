@@ -1,5 +1,3 @@
-# Frontend lindo usando Babel para rodar ES6
-
 [![Babel - The JavaScript transpiler](../images/babel.jpg "Babel - The JavaScript transpiler")](https://babeljs.io/ "Babel - The JavaScript transpiler")
 
 Se você esta curtindo a grande evolução da nova especificação do JavaScript, o EcmaScript 6 (ou ES6) e gostaria muito de usá-lo no front-end de seus projetos, de forma cross-browser e compatível inclusive com browser antigos e principalmente utilizando fallbacks on-demand que evitam overhead de código JavaScript no client-side, então apresento a vocês o transpiler que esta se tornando muito popular chamado Babel (também conhecido pelo antigo nome 6to5).
