@@ -1,5 +1,5 @@
 a {
-  color: rgb(186, 45, 39);
+  color: $main-color;
   text-decoration: none;
 }
 a:hover {
@@ -31,6 +31,10 @@ article.post pre code,
 article.page pre code {
   white-space: inherit;
 }
+article #disqus_thread {
+  margin: 30px 0 50px 0;
+  border-top: 1px solid $main-color;
+}
 .page-404 {
   margin: 150px auto;
 }
@@ -42,11 +46,11 @@ article.page pre code {
   margin-left: 10px;
 }
 .navbar-inverse, .footer {
-  background-color: rgb(186, 45, 39);
+  background-color: $main-color;
   color: #fff;
 }
 .footer {
-  background-color: rgb(186, 45, 39);
+  background-color: $main-color;
   padding: 20px;
 }
 .navbar-menu {

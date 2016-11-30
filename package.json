@@ -10,6 +10,7 @@
     "clean": "node clear_posts.js"
   },
   "dependencies": {
+    "cheerio": "0.22.0",
     "colors": "1.1.2",
     "eslint": "3.10.2",
     "eslint-config-airbnb-base": "10.0.1",
@@ -24,10 +25,12 @@
     "grunt-gh-pages": "2.0.0",
     "grunt-newer": "1.2.0",
     "grunt-shell": "2.1.0",
+    "grunt-sitemaps": "0.1.1",
     "grunt-sw-precache": "1.0.3",
     "harp": "0.22.0",
     "lodash": "4.17.2",
     "moment": "2.17.0",
+    "rss": "1.2.1",
     "to-markdown": "3.0.3",
     "yamljs": "0.2.8"
   }

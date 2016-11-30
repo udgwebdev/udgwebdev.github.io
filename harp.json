@@ -6,6 +6,7 @@
     "title": "Um blog para quem curte open-source, Linux e JavaScript",
     "description": "Um blog para quem curte open-source, Linux e JavaScript",
     "author": "Caio Ribeiro Pereira",
+    "author_email": "caio.ribeiro.pereira@gmail.com",
     "main_image": "udgwebdev-logo.png",
     "github_repo": "git@github.com:udgwebdev/udgwebdev.github.io.git",
     "google_plus": "https://plus.google.com/+CaioRibeiroPereira",

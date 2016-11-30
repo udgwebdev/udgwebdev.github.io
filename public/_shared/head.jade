@@ -1,15 +1,16 @@
 - var page_title = title + ' | ' + blog_name
 - var page_url = root_url[environment] + (slug || current.path)
+- var bar_color = '#BA2D27';
 meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
 meta(charset="utf-8")
 title #{page_title}
 meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no")
 meta(name="apple-mobile-web-app-capable" content="yes")
-meta(name="apple-mobile-web-app-status-bar-style" content="#FEFEFE")
+meta(name="apple-mobile-web-app-status-bar-style" content="#{bar_color}")
 meta(name="apple-mobile-web-app-title" content="#{app_name}")
 meta(name="mobile-web-app-capable" content="yes")
 meta(name="application-name" content="#{app_name}")
-meta(name="theme-color" content="#FEFEFE")
+meta(name="theme-color" content="#{bar_color}")
 meta(name="author" content="#{author}")
 meta(name="description" content="#{description}")
 meta(property="og:title" content="#{blog_name}")

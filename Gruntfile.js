@@ -42,8 +42,26 @@ module.exports = (grunt) => {
     },
     // Exec Feed Generator ===========================
     shell: {
+      feed: {
+        command: 'node feed.js'
+      },
       posts: {
         command: 'node posts.js'
+      }
+    },
+    // Sitemap =======================================
+    sitemaps: {
+      default: {
+        options: {
+          baseUrl: harp.globals.root_url.production,
+          contentRoot: 'www/',
+          dest: 'www/'
+        },
+        files: [{
+          expand: true,
+          cwd: 'www/',
+          src: '**/*.html'
+        }]
       }
     },
     // Manifest ======================================
@@ -98,12 +116,13 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-appcache');
+  grunt.loadNpmTasks('grunt-sitemaps');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sw-precache');
 
   grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin', 'shell:posts']);
   grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin', 'shell:posts']);
-  grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'compress']);
+  grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'compress', 'sitemaps', 'shell:feed']);
   grunt.registerTask('deploy:prod', ['gh-pages', 'clean']);
 };

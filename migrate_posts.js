@@ -52,7 +52,7 @@ _.eachRight(fs.readdirSync(OLD_POSTS), (postFile) => {
   try {
     const postMetaDataObj = YAML.parse(postDataSplitted[0]);
     const tags = _.isArray(postMetaDataObj.tags) ? postMetaDataObj.tags : [postMetaDataObj.tags];
-    const type = postMetaDataObj.layout === 'redirect' ? 'post' : postMetaDataObj.layout;
+    const type = postMetaDataObj.layout;
     const postMetaData = _.extend(_.omit(postMetaDataObj, META_OMIT), {
       slug: postSlugTitle, created_at: postPubDate, tags, type
     });
