@@ -1,6 +1,8 @@
-- var page_title = title + ' | ' + blog_name
+- var page_title = (title || blog_description) + ' | ' + blog_name
+- var meta_page_title = title || blog_name
 - var page_url = root_url[environment] + (slug || current.path)
-- var bar_color = '#BA2D27';
+- var bar_color = '#BA2D27'
+- var meta_description = description || blog_description
 meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
 meta(charset="utf-8")
 title #{page_title}
@@ -11,10 +13,11 @@ meta(name="apple-mobile-web-app-title" content="#{app_name}")
 meta(name="mobile-web-app-capable" content="yes")
 meta(name="application-name" content="#{app_name}")
 meta(name="theme-color" content="#{bar_color}")
+meta(name="title" content="#{meta_page_title}")
 meta(name="author" content="#{author}")
-meta(name="description" content="#{description}")
-meta(property="og:title" content="#{blog_name}")
-meta(property="og:description" content="#{description}")
+meta(name="description" content="#{meta_description}")
+meta(property="og:title" content="#{meta_page_title}")
+meta(property="og:description" content="#{meta_description}")
 meta(property="og:url" content="#{page_url}")
 meta(property="og:site_name" content="#{blog_name}")
 meta(property="og:image" content="#{root_url[environment]}images/#{main_image}")
@@ -24,15 +27,10 @@ meta(property="article:section" content="main")
 meta(name="twitter:creator" content="#{twitter}")
 meta(name="twitter:card" content="summary")
 meta(name="twitter:url" content="#{page_url}")
-meta(name="twitter:title" content="#{blog_name}")
-meta(name="twitter:description" content="#{description}")
+meta(name="twitter:title" content="#{meta_page_title}")
+meta(name="twitter:description" content="#{meta_description}")
 meta(name="twitter:image" content="#{root_url[environment]}images/#{main_image}")
 link(rel="manifest" href="/manifest.json")
 link(rel="stylesheet" href="/css/main.css" type="text/css")
 link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
 link(rel="canonical" href="#{page_url}")
-!= "<!--[if lt IE 8]>"
-  script(src="/js/html5shiv.min.js")
-  script(src="/js/aight.min.js")
-  script(src="/js/respond.min.js")
-!= "<![endif]-->"

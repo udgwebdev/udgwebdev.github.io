@@ -1,15 +1,34 @@
-nav.navbar.navbar-inverse.navbar-fixed-top
+nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
   .container
-    .navbar-menu
-      .circle-menu
-        ul
-          li
-            <a href="/">Home</a>
-          li
-            <a href="#">Terminal</a>
-          li
-            <a href="#">JavaScript</a>
-          li
-            <a href="#">Meteor</a>
-          li
-            <a href="#">Node.js</a>
+    .navbar-header
+      button.navbar-toggle.collapsed(type="button")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href="/")
+        img.navbar-logo(src="/images/#{main_image}" alt="#{blog_name}" width="48")
+    .navbar-right.navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li <a href="#"><i class="fa fa-code"></i>&nbsp;Node.js</a>
+        li <a href="#"><i class="fa fa-code"></i>&nbsp;Meteor</a>
+        li <a href="#"><i class="fa fa-terminal"></i>&nbsp;Terminal</a>
+nav.c-circle-menu.js-menu(role="navigation")
+  button.c-circle-menu__toggle.js-menu-toggle
+    span Toggle
+  ul.c-circle-menu__items
+    li.c-circle-menu__item
+      a.c-circle-menu__link(href="#")
+        i.icon.fa.fa-github
+    li.c-circle-menu__item
+      a.c-circle-menu__link(href="#")
+        i.icon.fa.fa-facebook-square
+    li.c-circle-menu__item
+      a.c-circle-menu__link(href="#")
+        i.icon.fa.fa-twitter-square
+    li.c-circle-menu__item
+      a.c-circle-menu__link(href="#")
+        i.icon.fa.fa-linkedin-square
+    li.c-circle-menu__item
+      a.c-circle-menu__link(href="#")
+        i.icon.fa.fa-rss
+  div.c-circle-menu__mask.js-menu-mask

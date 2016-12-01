@@ -1,8 +1,9 @@
 .col-xs-12.col-sm-9
-  - var index = 0
+  - var index = 0 
   each post in public._data
-    - var scroll = (index++) > 30 ? {'data-sr': true} : {}
-    article&attributes(scroll)
-      h2.h3
-        a(href="/#{post.slug}" rel="me") #{post.title}
-      p #{post.description}
+    if post.type === "post" || post.type === "redirect"
+      - var scroll = (index++) > 30 ? {'data-sr': true} : {}
+      article&attributes(scroll)
+        h2.h3
+          a(href="/#{post.slug}" rel="me") #{post.title}
+        p #{post.description}
