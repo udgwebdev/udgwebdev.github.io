@@ -25,4 +25,47 @@ _.forIn(posts, (postData, postKey) => {
   }
 });
 
+console.log('Preparing menu page...');
+
+const duplicatedPosts = _.chain(posts)
+  .filter(p => p.tags.length > 1)
+  .map((p) => {
+    const tags = _.clone(p.tags);
+    const duplicatedPost = _.map(tags, (tag) => {
+      const post = _.clone(p);
+      post.tags = [tag];
+      return post;
+    });
+    return duplicatedPost;
+  })
+  .value()
+;
+
+const menu = _.chain(posts)
+  .reject(p => p.tags.length > 1)
+  .concat(_.flatten(duplicatedPosts))
+  .groupBy('tags')
+  .map((post, t) => {
+    const orderedPosts = _.sortBy(post, p => moment(p.created_at, 'DD/MM/YYYY').toDate());
+    return { title: t, posts: orderedPosts.reverse(), total: orderedPosts.length };
+  })
+  .orderBy('title', 'asc')
+  .value()
+;
+
+const tags = menu.map((m) => {
+  return { title: m.title, total: m.total };
+});
+
+const menuData = {
+  index: {
+    title: 'Menu dos posts',
+    description: 'Menu com todos os artigos do blog organizado por tags',
+    tags,
+    menu
+  }
+};
+
+fs.outputJsonSync(path.join(PUBLIC_DIR, 'menu/_data.json'), menuData);
+
 console.log('Posts is successfully done!');

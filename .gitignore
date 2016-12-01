@@ -9,5 +9,9 @@ npm-debug.log
 !public/fonts/*
 !public/images/*
 !public/js/*
+!public/nodejs/*
+!public/meteor/*
+!public/dicas-de-terminal/*
+!public/menu/*
 public/**/index.md
 public/**/_data.json

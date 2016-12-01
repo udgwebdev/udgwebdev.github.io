@@ -1,10 +1,11 @@
 - var index = 0
 section.col-xs-12.col-sm-9
   each post in public._data
-    if post.type === "post" || post.type === "redirect"
+    if (post.type === "post" || post.type === "redirect") && post.published === true
       - var scroll = (index++) > 30 ? {'data-sr': true} : {}
       article&attributes(scroll)
         h2.h3
           a(href="/#{post.slug}" rel="me") #{post.title}
-        p #{post.description}
+        span.text-muted Publicação: <time datetime="#{created_at}" pubdate>#{post.created_at}</time> #{post.redirected_to ? '| Via: ' + post.redirected_to : ''}<br>
+        span #{post.description}
 != partial("_shared/side_menu")

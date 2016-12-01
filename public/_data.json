@@ -5,11 +5,12 @@
     "tags": [
       "Dicas de terminal"
     ],
-    "description": "Se você possui um mac e já tentou clonar uma distro linux para um cartão sd via comando dd e percebeu que demorava muito para fazer isso, veja nesse post uma simples solução que vai deixar 20x mais rápida a execução desse comando. (Publicado no Medium).",
+    "description": "Se você possui um mac e já tentou clonar uma distro linux para um cartão sd via comando dd e percebeu que demorava muito para fazer isso, veja nesse post uma simples solução que vai deixar 20x mais rápida a execução desse comando.",
     "alias_url": "https://medium.com/@crp_underground/acelerando-comando-dd-no-macos-15e982d03f38",
     "slug": "acelerando-comando-dd-no-macos",
     "created_at": "15/11/2016",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "Medium"
   },
   "dualboot-no-raspberry-com-berryboot": {
     "title": "Dualboot no raspberry com berryboot",
@@ -17,11 +18,12 @@
     "tags": [
       "IoT"
     ],
-    "description": "Neste post, explicarei como configurar um sistema gerenciador de boot muito foda, chamado BerryBoot, que vai permitir instalar múltiplos sistemas de forma muito fácil. (Publicado no Medium).",
+    "description": "Neste post, explicarei como configurar um sistema gerenciador de boot muito foda, chamado BerryBoot, que vai permitir instalar múltiplos sistemas de forma muito fácil.",
     "alias_url": "https://medium.com/p/dualboot-no-raspberry-com-berryboot-56a9cdcd4b6e",
     "slug": "dualboot-no-raspberry-com-berryboot",
     "created_at": "11/10/2016",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "Medium"
   },
   "criando-um-media-center-com-raspberry-pi": {
     "title": "Criando um media center com Raspberry Pi",
@@ -29,11 +31,12 @@
     "tags": [
       "IoT"
     ],
-    "description": "Veja nesse post como montar um media center completo capaz de ver canais abertos do mundo inteiro, além de fazer torrent streaming usando OSMC e um Raspberry Pi (Publicado no Medium).",
+    "description": "Veja nesse post como montar um media center completo capaz de ver canais abertos do mundo inteiro, além de fazer torrent streaming usando OSMC e um Raspberry Pi.",
     "alias_url": "https://medium.com/@crp_underground/criando-um-media-center-com-raspberry-pi-7841917464c0",
     "slug": "criando-um-media-center-com-raspberry-pi",
     "created_at": "06/10/2016",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "Medium"
   },
   "dicas-para-conquistar-um-bom-trampo-de-ti": {
     "title": "Dicas para conquistar um bom trampo em TI",
@@ -41,11 +44,12 @@
     "tags": [
       "Profissão"
     ],
-    "description": "Algumas dicas são simples de se começar a fazer agora mesmo, e espero que elas te ajudem, principalmente para você que esta começando na área de TI (Publicado no Medium).",
+    "description": "Algumas dicas são simples de se começar a fazer agora mesmo, e espero que elas te ajudem, principalmente para você que esta começando na área de TI.",
     "alias_url": "https://medium.com/@crp_underground/dicas-para-conquistar-um-bom-trampo-em-ti-41954c399375",
     "slug": "dicas-para-conquistar-um-bom-trampo-de-ti",
     "created_at": "02/10/2016",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "Medium"
   },
   "deletando-arquivos-repetitivos-no-terminal": {
     "title": "Deletando arquivos repetitivos pelo terminal",
@@ -54,7 +58,7 @@
     ],
     "published": true,
     "description": "Neste post a dica será bastante útil no seu dia-a-dia, basicamente você vai aprender a rodar um script que procura pastas e subpastas repetições de um determinado arquivo e em seguida apaga-os através da combinação dos comandos find e rm.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "deletando-arquivos-repetitivos-no-terminal",
     "created_at": "22/09/2016",
     "type": "post"
@@ -66,7 +70,7 @@
     ],
     "published": true,
     "description": "Conheça neste post uma ferramenta sensacional da Jscrambler para proteger seu código-fonte JavaScript.",
-    "image_url": "jscrambler-logo.png",
+    "feature_image": "jscrambler-logo.png",
     "slug": "protegendo-aplicacoes-javascript",
     "created_at": "08/09/2016",
     "type": "post"
@@ -74,11 +78,11 @@
   "escrevendo-javascript-melhor-parte-4": {
     "title": "Escrevendo JavaScript melhor - Parte 4",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "E mais uma vez, volto a falar desse assunto, já chegando na quarto episódio dessa série sobre boas práticas para escrever JavaScript melhor.",
-    "image_url": "es6-logo.jpg",
+    "feature_image": "es6-logo.jpg",
     "slug": "escrevendo-javascript-melhor-parte-4",
     "created_at": "06/08/2016",
     "type": "post"
@@ -90,7 +94,7 @@
     ],
     "published": true,
     "description": "Veja nesse post como modificar o resultado do comando npm init para automatizar a geração de package.json com dados customizados.",
-    "image_url": "npm-logo.png",
+    "feature_image": "npm-logo.png",
     "slug": "customizando-npm-init",
     "created_at": "03/08/2016",
     "type": "post"
@@ -98,11 +102,11 @@
   "escrevendo-javascript-melhor-parte-3": {
     "title": "Escrevendo JavaScript melhor - Parte 3",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais.",
-    "image_url": "es6-logo.jpg",
+    "feature_image": "es6-logo.jpg",
     "slug": "escrevendo-javascript-melhor-parte-3",
     "created_at": "29/07/2016",
     "type": "post"
@@ -114,7 +118,7 @@
     ],
     "published": true,
     "description": "Um quick post que explica na prática como montar um servidor de video streaming usando Node.js.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "video-streaming-com-nodejs",
     "created_at": "24/07/2016",
     "type": "post"
@@ -127,7 +131,7 @@
     ],
     "published": true,
     "description": "Se você precisa de um banco NoSQL que trabalhe com JSON, tenha suporte a consultas realtime e você quer expandir seus horizontes em conhecimentos que vão além de trabalhar apenas com MongoDB, uma boa opção é conhecer o RethinkDB.",
-    "image_url": "rethinkdb-logo.png",
+    "feature_image": "rethinkdb-logo.png",
     "slug": "realtime-com-rethinkdb",
     "created_at": "19/07/2016",
     "type": "post"
@@ -135,11 +139,11 @@
   "brincando-com-estruturas-imutaveis-usando-immutablejs": {
     "title": "Brincando com estruturas imutáveis usando Immutable.js",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "Neste post iremos aprender um pouco de conceitos sobre lidar com dados e estrutura de dados imutáveis usando Immutable.js, afinal a imutabilidade é uma das técnicas aplicadas no paradigma da programação funcional.",
-    "image_url": "immutable-logo.png",
+    "feature_image": "immutable-logo.png",
     "slug": "brincando-com-estruturas-imutaveis-usando-immutablejs",
     "created_at": "11/07/2016",
     "type": "post"
@@ -147,11 +151,11 @@
   "escrevendo-javascript-melhor-parte-2": {
     "title": "Escrevendo JavaScript melhor - Parte 2",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "Dando continuidade ao post Escrevendo JavaScript melhor - Parte 1, nesse post falarei duas dicas úteis para melhorar seu código JavaScript.",
-    "image_url": "es6-logo.jpg",
+    "feature_image": "es6-logo.jpg",
     "slug": "escrevendo-javascript-melhor-parte-2",
     "created_at": "27/06/2016",
     "type": "post"
@@ -159,11 +163,11 @@
   "escrevendo-javascript-melhor-parte-1": {
     "title": "Escrevendo JavaScript melhor - Parte 1",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "Esse post visa mostrar na prática como melhorar algumas gambiarras clássicas de se encontrar em qualquer projeto legado que utiliza JavaScript.",
-    "image_url": "es6-logo.jpg",
+    "feature_image": "es6-logo.jpg",
     "slug": "escrevendo-javascript-melhor-parte-1",
     "created_at": "02/06/2016",
     "type": "post"
@@ -175,7 +179,7 @@
     ],
     "published": true,
     "description": "Veja nesse post como estruturar sua aplicação Meteor 1.3 utilizando suas novas convenções oficiais.",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "estruturando-uma-aplicacao-meteor-1-3",
     "created_at": "13/05/2016",
     "type": "post"
@@ -183,11 +187,11 @@
   "usando-spread-operator-do-es6": {
     "title": "Usando Spread operator do ES6",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "Se você já trabalha com alguns recursos do ES6, recomendo a leitura desse post que vai falar sobre Spread Operator.",
-    "image_url": "es6-logo.jpg",
+    "feature_image": "es6-logo.jpg",
     "slug": "usando-spread-operator-do-es6",
     "created_at": "06/04/2016",
     "type": "post"
@@ -199,7 +203,7 @@
     ],
     "published": true,
     "description": "Veja nesse quick post como configurar um servidor Meteor no PaaS Heroku.",
-    "image_url": "heroku.jpg",
+    "feature_image": "heroku.jpg",
     "slug": "deploying-meteor-no-heroku",
     "created_at": "14/03/2016",
     "type": "post"
@@ -211,7 +215,7 @@
     ],
     "published": true,
     "description": "Meu terceiro livro acabou de ser publicado. Dessa vez o assunto é sobre como construir APIs Rest usando Node.js e seus principais frameworks. O livro esta com conteúdo avançado e ficou sensacional, veja detalhes nesse post.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "livro-construindo-apis-rest-com-nodejs",
     "created_at": "22/01/2016",
     "type": "post"
@@ -223,7 +227,7 @@
     ],
     "published": true,
     "description": "Neste post mostrarei como utilizar alguns recursos legais do ES6 (aka ES2015) em um projeto Meteor de versão 1.2 ou superior, pelo qual nessas versões essa implementação já se encontra nativo no Meteor.",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "brincando-de-es6-no-meteor",
     "created_at": "05/01/2016",
     "type": "post"
@@ -234,11 +238,12 @@
     "tags": [
       "Meteor"
     ],
-    "description": "Uma talk bacana que apresenta uma introdução sobre o que é e o poder do framework Meteor.js (Publicado no Youtube).",
+    "description": "Uma talk bacana que apresenta uma introdução sobre o que é e o poder do framework Meteor.js.",
     "alias_url": "https://www.youtube.com/watch?v=nrh9eN5HyXI",
     "slug": "talk-meteor-for-noobs-no-devinsantos",
     "created_at": "22/12/2015",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "Youtube"
   },
   "configurando-mobile-icons-e-launch-screens-no-meteor": {
     "title": "Configurando mobile icons e launch screens no Meteor",
@@ -247,7 +252,7 @@
     ],
     "published": true,
     "description": "Se você pretende construir uma aplicação mobile usando Meteor com Cordova, será necessário incluir no app todas as resoluções de ícones e launch screens necessárias para que seu app renderize essas imagens nas principais telas de smartphones e tablets Android, iPhone e iPads.",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "configurando-mobile-icons-e-launch-screens-no-meteor",
     "created_at": "10/11/2015",
     "type": "post"
@@ -259,7 +264,7 @@
     ],
     "published": true,
     "description": "Se você estiver construindo um mobile app para Android utilizando Meteor com Cordova, e necessite customizar o build do cordova em sua aplicação, então veja essa dica simples e rápida desse post.",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "customizando-build-do-cordova-no-meteor",
     "created_at": "27/10/2015",
     "type": "post"
@@ -271,7 +276,7 @@
     ],
     "published": true,
     "description": "Fala pessoal blz? Atualmente ando finalizando mais um livro, dessa vez será sobre como construi APIs REST utilizando Node.js, e tenho certeza que vocês vão gostar!",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "mais-um-livro-sobre-nodejs",
     "created_at": "23/10/2015",
     "type": "post"
@@ -283,7 +288,7 @@
     ],
     "published": true,
     "description": "Neste post vou explicar como organizar e rodar múltiplas funções assíncronas de forma que elas sejam otimizadas para serem executadas em paralelo.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "executando-funcoes-paralelas-com-modulo-async",
     "created_at": "28/09/2015",
     "type": "post"
@@ -295,7 +300,7 @@
     ],
     "published": true,
     "description": "Veja nesse post bons motivos para você aprender Meteor agora!",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "8-motivos-para-aprender-meteor-agora",
     "created_at": "13/08/2015",
     "type": "post"
@@ -307,7 +312,7 @@
     ],
     "published": true,
     "description": "Dando continuidade ao post Dicas de segurança para aplicações Meteor, apresentarei mais algumas dicas de fácil implementação e que vão manter sua aplicação Meteor blindada!",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "dicas-de-seguranca-para-aplicacoes-meteor-parte-2",
     "created_at": "12/07/2015",
     "type": "post"
@@ -319,7 +324,7 @@
     ],
     "published": true,
     "description": "Configurar um ambiente de CI (Continuos Integration) para um projeto Meteor com Velocity é muito fácil. Mais fácil ainda é se você for configurar tudo isso no serviço Travis-CI.",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "configurando-meteor-e-velocity-no-travis-ci",
     "created_at": "25/06/2015",
     "type": "post"
@@ -331,7 +336,7 @@
     ],
     "published": true,
     "description": "Nesse post vou te passar algumas dicas sobre quais serviços utilizar para sair barato (digo menos que 100R$ no início!) quando for construir o MVP de sua startup.",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "criando-uma-startup-com-pouca-grana",
     "created_at": "04/06/2015",
     "type": "post"
@@ -343,7 +348,7 @@
     ],
     "published": true,
     "description": "Se você esta desenvolvendo uma aplicação Meteor, é importante estar por dentro de como garantir segurança em sua aplicação. Nesse post mostrarei algumas dicas simples e de fácil execução para blindar seu projeto!",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "dicas-de-seguranca-para-aplicacoes-meteor",
     "created_at": "23/05/2015",
     "type": "post"
@@ -355,7 +360,7 @@
     ],
     "published": true,
     "description": "Este post é para quem esta desenvolvendo aplicações Meteor usando o auto-form e audit-argument-checks e anda recebendo warnings de que falta checar argumentos em um Meteor.methods().",
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "evitando-warnings-entre-audit-argument-checks-e-auto-form-do-meteor",
     "created_at": "06/05/2015",
     "type": "post"
@@ -367,7 +372,7 @@
     ],
     "published": true,
     "description": "O conteúdo desse post é um conjunto de algumas reflexões e opiniões minhas, baseadas em minhas experiências que tive na minha época de faculdade.",
-    "image_url": "ruidos-de-comunicacao.jpg",
+    "feature_image": "ruidos-de-comunicacao.jpg",
     "slug": "o-que-devemos-esperar-de-uma-faculdade-de-ti",
     "created_at": "29/03/2015",
     "type": "post"
@@ -379,7 +384,7 @@
     ],
     "published": true,
     "description": "Se você trabalha desenvolvendo aplicações com o incrível framework Meteor, com certeza você já deve ter questionado sobre como tornar minha aplicação SEO like, entenda nesse post como fazer isso.",
-    "image_url": "meteor-seo.jpg",
+    "feature_image": "meteor-seo.jpg",
     "slug": "meteor-e-seo",
     "created_at": "16/03/2015",
     "type": "post"
@@ -387,12 +392,12 @@
   "frontend-moderno-com-browserify-e-babel": {
     "title": "Frontend moderno com Browserify e Babel",
     "tags": [
-      "Javascript",
+      "JavaScript",
       "Node.js"
     ],
     "published": true,
     "description": "Neste post vou explicar de forma rápida e bem prática como usar o melhor do Browserify e Babel no frontend de sua aplicação usando o plugin Babelify.",
-    "image_url": "browserify.jpg",
+    "feature_image": "browserify.jpg",
     "slug": "frontend-moderno-com-browserify-e-babel",
     "created_at": "06/03/2015",
     "type": "post"
@@ -400,12 +405,12 @@
   "frontend-lindo-usando-babel-para-rodar-es6": {
     "title": "Frontend lindo usando Babel para rodar ES6",
     "tags": [
-      "Javascript",
+      "JavaScript",
       "Node.js"
     ],
     "published": true,
     "description": "Se você esta curtindo a grande evolução da nova especificação do JavaScript, o EcmaScript 6 (ou ES6) e gostaria muito de usá-lo no front-end de seus projetos, então conheça o Babel Transpiler.",
-    "image_url": "babel.jpg",
+    "feature_image": "babel.jpg",
     "slug": "frontend-lindo-usando-babel-para-rodar-es6",
     "created_at": "27/02/2015",
     "type": "post"
@@ -413,12 +418,12 @@
   "modularizando-frontend-javascript-com-browserify": {
     "title": "Modularizando Frontend JavaScript com Browserify",
     "tags": [
-      "Javascript",
+      "JavaScript",
       "Node.js"
     ],
     "published": true,
     "description": "Se você gosta de criar e organizar códigos JavaScript seguindo o padrão CommonJS, que é muito popular no Node.js, e gostaria de trabalhar com o mesmo padrão no front-end de sua aplicação, então esse post será de grande utilidade para você.",
-    "image_url": "browserify.jpg",
+    "feature_image": "browserify.jpg",
     "slug": "modularizando-frontend-javascript-com-browserify",
     "created_at": "24/02/2015",
     "type": "post"
@@ -430,7 +435,7 @@
     ],
     "published": true,
     "description": "Neste post você verá um mini review de 5 bons ebooks para se baixar no Leanpub sobre Node.js.",
-    "image_url": "leanpub.jpg",
+    "feature_image": "leanpub.jpg",
     "slug": "5-ebooks-nodejs-do-leanpub",
     "created_at": "20/02/2015",
     "type": "post"
@@ -442,7 +447,7 @@
     ],
     "published": true,
     "description": "Se você tem dúvida sobre como organizar os códigos de sua aplicação colocando-os em seus diretórios corretos, acompanhe neste post uma lista diretórios com seus respectivos significados.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "organizando-uma-aplicacao-nodejs",
     "created_at": "03/02/2015",
     "type": "post"
@@ -454,7 +459,7 @@
     ],
     "published": true,
     "description": "O assunto desse post será sobre o que é e como implementar middlewares em um aplicação web que utiliza o framework Express.",
-    "image_url": "express4.jpg",
+    "feature_image": "express4.jpg",
     "slug": "entendendo-como-funciona-os-middlewares-do-express",
     "created_at": "28/01/2015",
     "type": "post"
@@ -465,11 +470,12 @@
     "tags": [
       "Node.js"
     ],
-    "description": "O uso de template engines no desenvolvimento de aplicações web permite manipular e organizar conteúdo HTML de forma dinâmica. Neste artigo, vou apresentar um framework fortemente utilizado em projetos Node.js, chamado de Jade (Publicado no iMasters).",
+    "description": "O uso de template engines no desenvolvimento de aplicações web permite manipular e organizar conteúdo HTML de forma dinâmica. Neste artigo, vou apresentar um framework fortemente utilizado em projetos Node.js, chamado de Jade.",
     "alias_url": "http://imasters.com.br/desenvolvimento/brincando-com-o-template-engine-jade/",
     "slug": "brincando-com-o-template-engine-jade",
     "created_at": "27/01/2015",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "iMasters"
   },
   "otimizando-aplicacoes-nodejs": {
     "title": "Otimizando aplicações Node.js",
@@ -478,7 +484,7 @@
     ],
     "published": true,
     "description": "Neste post apresentarei 10 dicas extremamente úteis para você aplicar em uma aplicação Node.js em produção.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "otimizando-aplicacoes-nodejs",
     "created_at": "13/01/2015",
     "type": "post"
@@ -489,11 +495,12 @@
     "tags": [
       "Node.js"
     ],
-    "description": "Neste artigo vou apresentar uma ferramenta muito útil em meus projetos de API. Ela é uma CLI (Command Line Interface) escrita em Node.js e gera uma documentação bem amigável para APIs. Seu nome é ApiDoc.js (Publicado no iMasters).",
+    "description": "Neste artigo vou apresentar uma ferramenta muito útil em meus projetos de API. Ela é uma CLI (Command Line Interface) escrita em Node.js e gera uma documentação bem amigável para APIs. Seu nome é ApiDoc.js.",
     "alias_url": "http://imasters.com.br/front-end/javascript/documentando-apis-com-apidoc-js/",
     "slug": "documentando-apis-com-apidocjs",
     "created_at": "13/01/2015",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "iMasters"
   },
   "top-20-de-2014": {
     "title": "Top 20 de 2014",
@@ -502,7 +509,7 @@
     ],
     "published": true,
     "description": "Ano passado muitas mudanças nesse blog aconteceram, a mais impactante mudança foi o merge de posts dos meus antigos blogs para este, isso totalizou 145 posts e rendeu muitas novas visitas. Vejam os 20 posts mais acessados de 2014.",
-    "image_url": "udgwebdev-logo-128.png",
+    "feature_image": "udgwebdev-logo-128.png",
     "slug": "top-20-de-2014",
     "created_at": "03/01/2015",
     "type": "post"
@@ -514,7 +521,7 @@
     ],
     "published": true,
     "description": "Hoje apresentarei um comando que realiza uma contagem de quantos arquivos existem em um diretório.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "baixando-sites-com-comando-wget",
     "created_at": "27/11/2014",
     "type": "post"
@@ -526,7 +533,7 @@
     ],
     "published": true,
     "description": "Não só mantenho este blog, como também já publiquei alguns artigos e talks em outros sites, se você não viu veja todos eles neste post.",
-    "image_url": "udgwebdev-logo-128.png",
+    "feature_image": "udgwebdev-logo-128.png",
     "slug": "artigos-e-talks-fora-deste-blog",
     "created_at": "27/11/2014",
     "type": "post"
@@ -534,11 +541,11 @@
   "explorando-o-modulo-console-do-javascript": {
     "title": "Explorando o módulo console do JavaScript",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "Neste post vou apresentar algumas funcionalidades que são pouco conhecidas, mas que são bem úteis do módulo console.",
-    "image_url": "javascript-logo.jpg",
+    "feature_image": "javascript-logo.jpg",
     "slug": "explorando-o-modulo-console-do-javascript",
     "created_at": "25/11/2014",
     "type": "post"
@@ -550,7 +557,7 @@
     ],
     "published": true,
     "description": "Neste post apresentarei uma série de configurações que vale a pena aplicar em uma máquina Linux. Essas configurações, na maioria dos casos vão aumentar a performance de 10% à 40% em seu servidor.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "tunning-em-servidor-linux",
     "created_at": "24/10/2014",
     "type": "post"
@@ -562,7 +569,7 @@
     ],
     "published": true,
     "description": "Esse é um post de dicas simples de se fazer que vão exigir de você apenas algumas mudanças de hábito visando trazer mais produtividade em seu dia-a-dia.",
-    "image_url": "programador-produtivo.jpg",
+    "feature_image": "programador-produtivo.jpg",
     "slug": "programador-produtivo",
     "created_at": "23/09/2014",
     "type": "post"
@@ -570,11 +577,11 @@
   "15-javascript-hacks": {
     "title": "15 JavaScript Hacks",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "description": "Neste post vou compartilhar 15 Hacks extremamente úteis para se aplicar em JavaScript. As dicas são um acumulado de magias avançadas que visam diminuir o tamanho do código ou realizar um código de forma muito eficiente.",
-    "image_url": "javascript-logo.jpg",
+    "feature_image": "javascript-logo.jpg",
     "slug": "15-javascript-hacks",
     "created_at": "11/09/2014",
     "type": "post"
@@ -586,7 +593,7 @@
     ],
     "published": true,
     "description": "Para quem esta a procura de um framework extremamente leve e fácil de usar, recomendo utilizar o gzipme. Ele é um módulo Node.js que funciona via linha de comando (CLI) ou programaticamente via Node.js.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "compactacao-gzip-com-nodejs",
     "created_at": "13/08/2014",
     "type": "post"
@@ -598,7 +605,7 @@
     ],
     "published": true,
     "description": "Fala pessoal, escrevo esse post para falar um pouco sobre como surgiu esse blog e também comunicar algumas mudanças (que são melhorias!) que fiz neste blog durante esses meses.",
-    "image_url": "udgwebdev-logo-128.png",
+    "feature_image": "udgwebdev-logo-128.png",
     "slug": "a-historia-desse-blog-e-o-que-vem-pela-frente",
     "created_at": "09/08/2014",
     "type": "post"
@@ -632,7 +639,7 @@
     ],
     "description": "Entenda nesse post as 6 vantagens sobre por que vale a pena estudar e usar Node.js",
     "published": true,
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "6-motivos-para-usar-nodejs",
     "created_at": "04/07/2014",
     "type": "post"
@@ -644,7 +651,7 @@
     ],
     "published": true,
     "description": "Olá! Quero apresentar a vocês mais um novo livro que foi lançado sua versão final mês passado. Estou falando do livro que escrevi sobre o framework Meteor, que cada vez mais ganha espaço no mundo de aplicações web.",
-    "image_url": "entrevista-em-equipe.jpg",
+    "feature_image": "entrevista-em-equipe.jpg",
     "slug": "mais-um-livro-agora-e-sobre-meteor",
     "created_at": "05/06/2014",
     "type": "post"
@@ -656,7 +663,7 @@
     ],
     "description": "Hoje o post é rápido, quero apenas recomendar uma lista com alguns e-mail weeklys que acompanho e que valem a pena assinar.",
     "published": true,
-    "image_url": "email-weeklys.jpg",
+    "feature_image": "email-weeklys.jpg",
     "slug": "email-weeklys-para-devs",
     "created_at": "17/05/2014",
     "type": "post"
@@ -668,7 +675,7 @@
     ],
     "description": "O principal foco do Express é ser um framework minimalista. Neste post veja algumas mudanças e novos recursos, explorando na prática esse popular framework web do Node.js.",
     "published": true,
-    "image_url": "express4.jpg",
+    "feature_image": "express4.jpg",
     "slug": "primeiros-passos-com-express-4",
     "created_at": "10/05/2014",
     "type": "post"
@@ -680,7 +687,7 @@
     ],
     "description": "O PubSub (Publications and Subscriptions), para quem não conhece, é um pattern cujo conceito é realizar mensageria através de dois personagens um publisher (o publicador) e um subscriber (o assinante).",
     "published": true,
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "meteor-pubsub",
     "created_at": "06/05/2014",
     "type": "post"
@@ -691,11 +698,12 @@
     "tags": [
       "Node.js"
     ],
-    "description": "Boas práticas relativas ao desenvolvimento assíncrono em JavaScript, usando Node.js. Veremos desde os conceitos da tecnologia, as aplicações, como se acopla ao JavaScript, assim como o desenvolvimento do código referente ao assincronismo (Publicado no DevMedia).",
+    "description": "Boas práticas relativas ao desenvolvimento assíncrono em JavaScript, usando Node.js. Veremos desde os conceitos da tecnologia, as aplicações, como se acopla ao JavaScript, assim como o desenvolvimento do código referente ao assincronismo.",
     "alias_url": "http://www.devmedia.com.br/programacao-assincrona-com-node-js/31509",
     "slug": "programacao-assincrona-com-nodejs",
     "created_at": "05/05/2014",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "DevMedia"
   },
   "quer-aprender-meteor": {
     "title": "Quer aprender Meteor?",
@@ -704,7 +712,7 @@
     ],
     "description": "Veja links relevantes para você estudar e acompanhar todas as novidades sobre o framework Meteor.",
     "published": true,
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "quer-aprender-meteor",
     "created_at": "24/03/2014",
     "type": "post"
@@ -716,7 +724,7 @@
     ],
     "description": "Neste post falarei sobre a importância do Meteor.methods() e principalmente porque, quando e como utilizar ele junto com o Meteor.call().",
     "published": true,
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "meteor-methods",
     "created_at": "24/02/2014",
     "type": "post"
@@ -728,7 +736,7 @@
     ],
     "published": true,
     "description": "Nos últimos dias usei bastante o Getup Cloud, uma empresa brasileira de PaaS (Platform as a Service) e minha experiência ao usá-lo e principalmente o suporte me motivou a divulgar um pouco sobre essa startup.",
-    "image_url": "getup-cloud.jpg",
+    "feature_image": "getup-cloud.jpg",
     "slug": "hospedando-aplicacoes-node-js-na-getup-cloud",
     "created_at": "10/02/2014",
     "type": "post"
@@ -741,7 +749,7 @@
     ],
     "published": true,
     "description": "Continuando minhas experiências com o NoSQL LevelDB, neste post apresentarei um simples web admin de fácil integração e quebra bem o galho na hora de usar uma ferramenta visual pra administrar dados deste banco.",
-    "image_url": "levelweb.png",
+    "feature_image": "levelweb.png",
     "slug": "administrando-o-leveldb-com-levelweb",
     "created_at": "29/01/2014",
     "type": "post"
@@ -753,7 +761,7 @@
     ],
     "published": true,
     "description": "Se você precisa de uma interface admin para seu app, neste post explicarei como usar o Express Admin. Este framework ainda tem muito a evoluir, porém seus recursos atuais já quebram muito bem o galho. A começar ele é compatível com MySQL, MariaDB, SQLite e PostgresSQL.",
-    "image_url": "express-admin.jpg",
+    "feature_image": "express-admin.jpg",
     "slug": "administrando-dados-usando-express-admin",
     "created_at": "21/01/2014",
     "type": "post"
@@ -765,7 +773,7 @@
     ],
     "published": true,
     "description": "Generators é um recurso muito interessante que permite escrever funções assíncronas sem callbacks, utilizando uma síntaxe de código síncrono, retornando valores da função em um array que representa as variáveis do parâmetro de um callback.",
-    "image_url": "javascript-logo.jpg",
+    "feature_image": "javascript-logo.jpg",
     "slug": "evitando-callback-hell-usando-generators",
     "created_at": "18/01/2014",
     "type": "post"
@@ -777,7 +785,7 @@
     ],
     "published": true,
     "description": "O nodemon é uma daquelas ferramentas de grande utilidade para quem trabalha com Node.js.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "nodejs-ou-nodemon",
     "created_at": "11/01/2014",
     "type": "post"
@@ -790,7 +798,7 @@
     ],
     "published": true,
     "description": "O LevelDB é um banco de dados que possui uma forte ligação com Node.js. Ele basicamente é um banco semelhante ao SQLite, um embedded database, porém em NoSQL do tipo key-value.",
-    "image_url": "leveldb.jpg",
+    "feature_image": "leveldb.jpg",
     "slug": "brincando-com-leveldb",
     "created_at": "04/01/2014",
     "type": "post"
@@ -802,7 +810,7 @@
     ],
     "published": true,
     "description": "2013 foi um ano sensacional para este blog! Vários posts sobre Node.js e também surgiram alguns posts sobre Meteor. O mais legal e motivador é ver a galera lendo diariamente o blog, buscando aprender mais sobre Node.js, comentando no blog suas dúvidas e experiências.",
-    "image_url": "trofeu.jpg",
+    "feature_image": "trofeu.jpg",
     "slug": "os-20-posts-do-ano",
     "created_at": "29/12/2013",
     "type": "post"
@@ -814,7 +822,7 @@
     ],
     "published": true,
     "description": "WebScraping para quem não conhece, é uma técnica em que se extrai dados dentro de um documento, geralmente, documento HTML.",
-    "image_url": "web-scraping.jpg",
+    "feature_image": "web-scraping.jpg",
     "slug": "webscraping-com-node-js",
     "created_at": "24/12/2013",
     "type": "post"
@@ -826,7 +834,7 @@
     ],
     "published": true,
     "description": "O NVM é a solução perfeita pra você que precisa testar o comportamento do seus módulos em distintas versões Node. Ele também serve para a galera que curte testar ou colaborar utilizando versões unstables também.",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "nvm-node-version-manager",
     "created_at": "20/12/2013",
     "type": "post"
@@ -838,7 +846,7 @@
     ],
     "published": true,
     "description": "Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a documentação nos ensina, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca.",
-    "image_url": "socket-io.jpg",
+    "feature_image": "socket-io.jpg",
     "slug": "socket-io-com-redis",
     "created_at": "13/12/2013",
     "type": "post"
@@ -850,7 +858,7 @@
     ],
     "published": true,
     "description": "De vez enquando rodar aplicativos em background é vantajoso, pois possibilita no terminal executar N processos em paralelo, outra vantagem é que libera o terminal para executar outras tarefas.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-processos-em-background",
     "created_at": "10/12/2013",
     "type": "post"
@@ -862,7 +870,7 @@
     ],
     "published": true,
     "description": "Neste post vou compartilhar com vocês algumas dicas de como entrevistamos a galera, pelo qual esta sendo produtivo, assertivo e um pouco fora do convencional.",
-    "image_url": "entrevista-em-equipe.jpg",
+    "feature_image": "entrevista-em-equipe.jpg",
     "slug": "entrevistando-de-forma-produtiva",
     "created_at": "06/12/2013",
     "type": "post"
@@ -874,7 +882,7 @@
     ],
     "published": true,
     "description": "Hoje vou mostrar como visualizar todas os processos ativos que estão utilizando alguma porta da rede.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "visualizando-portas-da-rede-com-nmap",
     "created_at": "03/12/2013",
     "type": "post"
@@ -886,7 +894,7 @@
     ],
     "description": "Para quem não participou do evento DevInSantos, veja os slides da minha palestra pelo qual falei sobre um assunto que pelo qual me surpreendeu ver que na platéia da sala, ninguém conhecia o Meteor.",
     "published": true,
-    "image_url": "speakerdeck-meteor.jpg",
+    "feature_image": "speakerdeck-meteor.jpg",
     "slug": "meteor-um-overview-sobre-a-plataforma",
     "created_at": "26/11/2013",
     "type": "post"
@@ -898,7 +906,7 @@
     ],
     "description": "Eae pessoal, blz!! Hoje venho aqui falar um pouco sobre um evento bacana para desenvolvedores, estou falando 5° encontro de desenvolvedores da baixada santista, o DevInSantos.",
     "published": true,
-    "image_url": "devinsantos.png",
+    "feature_image": "devinsantos.png",
     "slug": "evento-devinsantos",
     "created_at": "19/11/2013",
     "type": "post"
@@ -910,7 +918,7 @@
     ],
     "description": "Módulos Node.js, Node.js, Frameworks para Node.js",
     "published": true,
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "modulos-essenciais-para-nodejs-parte-2",
     "created_at": "18/11/2013",
     "type": "post"
@@ -921,11 +929,12 @@
     "tags": [
       "Node.js"
     ],
-    "description": "Veja nesse post como funciona todo processamento assíncrono realizado no Node.js, entendendo o que é e o que faz o Event-loop (Publicado no iMasters).",
+    "description": "Veja nesse post como funciona todo processamento assíncrono realizado no Node.js, entendendo o que é e o que faz o Event-loop.",
     "alias_url": "http://imasters.com.br/front-end/javascript/entendendo-o-event-loop-do-node-js/",
     "slug": "entendendo-o-event-loop-do-nodejs",
     "created_at": "01/11/2013",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "iMasters"
   },
   "modulos-do-npm-no-meteor": {
     "title": "Módulos do NPM no Meteor",
@@ -934,7 +943,7 @@
     ],
     "description": "Como o Meteor é uma plataforma construída em cima do Node.js, é possível consumir o NPM, aumentando seu leque de ferramentas utilizando módulos do Node.js.",
     "published": true,
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "modulos-do-npm-no-meteor",
     "created_at": "25/10/2013",
     "type": "post"
@@ -946,7 +955,7 @@
     ],
     "description": "Neste post explicarei o significado das conveções de diretórios do Meteor, para você organizar projetos de larga-escala.",
     "published": true,
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "organizando-um-projeto-meteor",
     "created_at": "12/10/2013",
     "type": "post"
@@ -958,7 +967,7 @@
     ],
     "description": "Neste post vamos aprender na prática os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor.",
     "published": true,
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "primeiros-passos-com-meteor",
     "created_at": "04/10/2013",
     "type": "post"
@@ -970,7 +979,7 @@
     ],
     "description": "Pra galera que estuda ou trabalha com Node.js, hoje apresentarei neste post uma nova plataforma Web Full-Stack totalmente Javascript, feita em cima do Node.js, seu nome é Meteor.",
     "published": true,
-    "image_url": "meteor-logo.jpg",
+    "feature_image": "meteor-logo.jpg",
     "slug": "introducao-sobre-meteor",
     "created_at": "22/09/2013",
     "type": "post"
@@ -982,7 +991,7 @@
     ],
     "published": true,
     "description": "Hoje apresentarei um comando que realiza uma contagem de quantos arquivos existem em um diretório.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-contador-de-arquivos",
     "created_at": "13/09/2013",
     "type": "post"
@@ -993,11 +1002,12 @@
     "tags": [
       "Node.js"
     ],
-    "description": "Apesar do Node.js ser single-thread é possível sim, prepará-lo para trabalhar com processamento paralelo. Veja nesse post como trabalhar com processamento paraleleo usando o módulo nativo chamado cluster. (Publicado no iMasters).",
+    "description": "Apesar do Node.js ser single-thread é possível sim, prepará-lo para trabalhar com processamento paralelo. Veja nesse post como trabalhar com processamento paraleleo usando o módulo nativo chamado cluster.",
     "alias_url": "http://imasters.com.br/desenvolvimento/node-js-processando-em-paralelo/",
     "slug": "nodejs-processamento-em-paralelo",
     "created_at": "05/09/2013",
-    "type": "redirect"
+    "type": "redirect",
+    "redirected_to": "iMasters"
   },
   "dicas-de-terminal-historico-de-comandos": {
     "title": "Dicas de terminal - Histórico de comandos",
@@ -1006,7 +1016,7 @@
     ],
     "published": true,
     "description": "O comando history, simplesmente lista todos os comandos que já foram executados em seu terminal.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-historico-de-comandos",
     "created_at": "24/08/2013",
     "type": "post"
@@ -1018,7 +1028,7 @@
     ],
     "published": true,
     "description": "Fala pessoal, é com muito orgulho que venho divulgar aqui meu primeiro livro sobre Node.js que foi oficialmente lançado hoje.",
-    "image_url": "entrevista-em-equipe.jpg",
+    "feature_image": "entrevista-em-equipe.jpg",
     "slug": "lancamento-oficial-do-livro-de-nodejs",
     "created_at": "25/07/2013",
     "type": "post"
@@ -1030,7 +1040,7 @@
     ],
     "published": true,
     "description": "Dica rápida! Vou lhe apresentar um alias muito útil para criar identificar seu IP externo.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-identificando-meu-ip",
     "created_at": "23/07/2013",
     "type": "post"
@@ -1053,7 +1063,7 @@
     ],
     "description": "Módulos Node.js, Node.js, Frameworks para Node.js",
     "published": "tornou-se",
-    "image_url": "nodejs-logo.jpg",
+    "feature_image": "nodejs-logo.jpg",
     "slug": "modulos-essenciais-para-nodejs-parte-1",
     "created_at": "02/07/2013",
     "type": "post"
@@ -1065,7 +1075,7 @@
     ],
     "published": true,
     "description": "Hoje apresentarei uma dica muito legal e fácil de implementar. Seu objetivo é de exportar os resultados de saída do terminal diretamente em um arquivo de texto.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "terminal-gerando-arquivo-de-texto",
     "created_at": "01/07/2013",
     "type": "post"
@@ -1099,7 +1109,7 @@
     ],
     "published": true,
     "description": "Hoje a dica é bem simples e prática, utilizarei como exemplo um comando para criar diretórios, porém a técnica pode ser usada em outros comandos.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "multiplos-diretorios-em-um-comando-dicas-de-terminal",
     "created_at": "27/05/2013",
     "type": "post"
@@ -1122,7 +1132,7 @@
     ],
     "published": true,
     "description": "Fala galera! Hoje venho com novas dicas, especificamente sobre como copiar arquivos via SCP (Secure Copy Protocol).",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-copiando-arquivos-via-scp",
     "created_at": "11/05/2013",
     "type": "post"
@@ -1134,7 +1144,7 @@
     ],
     "published": true,
     "description": "A dica de hoje será bem útil, com ela você estará apto para manipular diversos arquivos de um diretório fazendo processamento paralelo e em lote deles.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-processamento-paralelo-com-xargs",
     "created_at": "27/04/2013",
     "type": "post"
@@ -1157,7 +1167,7 @@
     ],
     "published": true,
     "description": "Hoje a dica será simples de fazer e tão útil que vai te economizar tempo com console. Falarei sobre como realizar múltiplas tarefas no console.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-multiplos-comandos",
     "created_at": "10/04/2013",
     "type": "post"
@@ -1169,7 +1179,7 @@
     ],
     "published": true,
     "description": "A dica de hoje será sobre como descobrir e matar processos que utilizam uma porta específica da sua rede.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-matando-processos-da-rede",
     "created_at": "25/03/2013",
     "type": "post"
@@ -1324,7 +1334,7 @@
     ],
     "published": true,
     "description": "Confira todos os slides das palestras realizadas no 3˚ DevInSantos.",
-    "image_url": "devinsantos.png",
+    "feature_image": "devinsantos.png",
     "slug": "slides-do-3-devinsantos",
     "created_at": "13/05/2012",
     "type": "post"
@@ -1380,7 +1390,7 @@
     ],
     "published": true,
     "description": "Esse post tem como objetivo de apresentar para os novatos no mundo de blogs, as ferramentas gratuitas da web, que são essenciais para gerenciar não só o conteúdo do blog, mas também como melhorar a visibilidade dele na web.",
-    "image_url": "gerenciadores-de-blogs.jpg",
+    "feature_image": "gerenciadores-de-blogs.jpg",
     "slug": "ferramentas-essenciais-para-um-blogueiro",
     "created_at": "24/03/2012",
     "type": "post"
@@ -1414,7 +1424,7 @@
     ],
     "published": true,
     "description": "Veja 5 motivos para instalar essa excelente distro Linux chamada de Arch Linux e entenda por que cada vez mais ela ganha espaço entre os demais.",
-    "image_url": "arch-linux-logo.jpg",
+    "feature_image": "arch-linux-logo.jpg",
     "slug": "5-motivos-para-instalar-o-arch-linux",
     "created_at": "06/03/2012",
     "type": "post"
@@ -1426,7 +1436,7 @@
     ],
     "published": true,
     "description": "Achei que pararia com esse assunto sobre desmotivação, mas aproveitei o embalo da inspiração e finalmente consegui escrever mais alguns tópicos sobre desmotivação, espero que gostem e comentem!",
-    "image_url": "perda-de-foco.jpg",
+    "feature_image": "perda-de-foco.jpg",
     "slug": "como-desmotivar-uma-pessoa-parte-4",
     "created_at": "22/02/2012",
     "type": "post"
@@ -1449,7 +1459,7 @@
     ],
     "published": true,
     "description": "Dica muito boa sobre como fazer split e join de arquivos através do comando tar que existe nos sistemas operacionais Linux, MacOS e Unix.",
-    "image_url": "comando-tar.jpg",
+    "feature_image": "comando-tar.jpg",
     "slug": "split-e-join-de-arquivos-com-tar",
     "created_at": "09/02/2012",
     "type": "post"
@@ -1472,7 +1482,7 @@
     ],
     "published": true,
     "description": "Neste post explicarei como utilizar o Nautilus do Gnome para acessar diretórios via SSH.",
-    "image_url": "ssh.jpg",
+    "feature_image": "ssh.jpg",
     "slug": "dicas-de-terminal-trabalhando-com-ssh",
     "created_at": "27/01/2012",
     "type": "post"
@@ -1480,7 +1490,7 @@
   "design-patterns-para-javascript-parte-2": {
     "title": "Design Patterns para Javascript - Parte 2",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "description": "Continuando a série de posts relacionado a Design Patterns para Javascript, hoje apresentarei os patterns Module, Factory e Mixin.",
     "published": true,
@@ -1495,7 +1505,7 @@
     ],
     "published": true,
     "description": "Dando continuidade neste tema, irei continuar apresentando algumas dicas para você estagiário não ser apenas um “estagiário” qualquer e sim um aprendiz que deseja se torna um profissional e seguir uma carreira em uma empresa.",
-    "image_url": "estagiarios.jpg",
+    "feature_image": "estagiarios.jpg",
     "slug": "dicas-para-um-estagiario-parte-2",
     "created_at": "13/01/2012",
     "type": "post"
@@ -1507,7 +1517,7 @@
     ],
     "published": true,
     "description": "Se você está iniciando seu primeiro estágio, citarei algumas dicas que vão te ajudar a entrar no caminho certo.",
-    "image_url": "estagiarios.jpg",
+    "feature_image": "estagiarios.jpg",
     "slug": "dicas-para-um-estagiario-parte-1",
     "created_at": "08/01/2012",
     "type": "post"
@@ -1530,7 +1540,7 @@
     ],
     "published": true,
     "description": "Conheça quarto excelentes PaaS (Plataform as a Service) focadas em hospedagem de aplicações Node.js.",
-    "image_url": "getup-cloud.jpg",
+    "feature_image": "getup-cloud.jpg",
     "slug": "onde-hospedar-aplicacoes-node-js",
     "created_at": "01/01/2012",
     "type": "post"
@@ -1542,7 +1552,7 @@
     ],
     "published": true,
     "description": "Em mais uma capítulo de Linux adequado para sua necessidade, apresentarei as distribuições para smartphones, internet e computação em nuvem.",
-    "image_url": "distros-linux.jpg",
+    "feature_image": "distros-linux.jpg",
     "slug": "linux-adequado-a-sua-necessidade-parte-4",
     "created_at": "31/12/2011",
     "type": "post"
@@ -1551,7 +1561,7 @@
     "title": "Design Patterns para Javascript - Parte 1",
     "description": "Design Pattern para Javascript, neste post será explicado alguns dos importantes padrões Creational, Constructors e os Singleton.",
     "tags": [
-      "Javascript"
+      "JavaScript"
     ],
     "published": true,
     "slug": "design-patterns-para-javascript-parte-1",
@@ -1610,7 +1620,7 @@
     ],
     "published": true,
     "description": "Continuando em nosso terceiro capítulo da saga: Linux adequado a sua necessidade hoje apresentarei mais três tipos de distro bem conhecidas.",
-    "image_url": "distros-linux.jpg",
+    "feature_image": "distros-linux.jpg",
     "slug": "linux-adequado-para-sua-necessidade-parte-3",
     "created_at": "01/11/2011",
     "type": "post"
@@ -1633,7 +1643,7 @@
     ],
     "published": true,
     "description": "Apresentarei alguns sistemas Linux para diversas necessidades, quem sabe você não encontra a distro compatível com que deseja?",
-    "image_url": "distros-linux.jpg",
+    "feature_image": "distros-linux.jpg",
     "slug": "linux-adequado-para-sua-necessidade-parte-2",
     "created_at": "27/10/2011",
     "type": "post"
@@ -1645,7 +1655,7 @@
     ],
     "published": true,
     "description": "Matéria que apresenta os principais linux para cada tipo de necessidade, seja ele acessibilidade, perícia, servidor, gamers e outras.",
-    "image_url": "distros-linux.jpg",
+    "feature_image": "distros-linux.jpg",
     "slug": "linux-adequado-para-sua-necessidade-parte-1",
     "created_at": "23/10/2011",
     "type": "post"
@@ -1679,7 +1689,7 @@
     ],
     "published": true,
     "description": "Para você que gosta de ler e principalmente escrever, gostaria de compartilhar e contribuir para o mundo com frases, textos, artigos, dicas, contar histórias, opinōes ou pensamentos para web, a melhor recomendação é montar um blog.",
-    "image_url": "gerenciadores-de-blogs.jpg",
+    "feature_image": "gerenciadores-de-blogs.jpg",
     "slug": "dicas-para-abrir-um-blog",
     "created_at": "02/10/2011",
     "type": "post"
@@ -1691,7 +1701,7 @@
     ],
     "published": true,
     "description": "Voltando ao assunto citarei mais 3 situações desmotivadoras para qualquer profissional, independente de qual área exerce.",
-    "image_url": "falta-de-reconhecimento-profissional.jpg",
+    "feature_image": "falta-de-reconhecimento-profissional.jpg",
     "slug": "como-desmotivar-uma-pessoa-parte-3",
     "created_at": "27/09/2011",
     "type": "post"
@@ -1703,7 +1713,7 @@
     ],
     "published": true,
     "description": "Olá pessoal! continuarei com a segunda parte desse post que fala sobre um assunto importante e que muitas empresas ainda pecam, que é sobre a motivação, continuarei falando sobre alguns outros problemas que desmotivam qualquer funcionário independente de seu cargo ou área de trabalho.",
-    "image_url": "desorganizacao.jpg",
+    "feature_image": "desorganizacao.jpg",
     "slug": "como-desmotivar-uma-pessoa-parte-2",
     "created_at": "27/09/2011",
     "type": "post"
@@ -1715,7 +1725,7 @@
     ],
     "published": true,
     "description": "Olá pessoal, neste post falarei sobre um assunto muito sério pelo qual muitas empresas pecam fortemente, que é sobre como não motivar uma pessoa.",
-    "image_url": "pressao-no-trabalho.jpg",
+    "feature_image": "pressao-no-trabalho.jpg",
     "slug": "como-desmotivar-uma-pessoa-parte-1",
     "created_at": "27/09/2011",
     "type": "post"
@@ -1826,7 +1836,7 @@
     ],
     "published": true,
     "description": "Neste post não irei fazer nenhuma propaganda sobre o Linux e sim, levando em consideração vários aspectos, falarei sobre os defeitos que cada um dos sistemas atuais possuem.",
-    "image_url": "garoto-linux-windows-mac.jpg",
+    "feature_image": "garoto-linux-windows-mac.jpg",
     "slug": "os-atuais-defeitos-nos-sistemas-operacionais",
     "created_at": "08/09/2011",
     "type": "post"
@@ -1838,7 +1848,7 @@
     ],
     "published": true,
     "description": "Continuando com a segunda parte do post irei apresentar mais alguns comandos básicos e essenciais para você sobreviver em um ambiente Unix ou Linux.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "aprendendo-um-pouco-sobre-terminal-parte-2",
     "created_at": "23/08/2011",
     "type": "post"
@@ -1850,7 +1860,7 @@
     ],
     "published": true,
     "description": "Sou usuário linux desde o começo de 2011, pois por motivos profissionais fui obrigado a aprender na unha, um pouco sobre terminal, pois no meu trabalho utilizo MacOS X, que é uma excelente plataforma para desenvolvimento e multimídia, porém, como meu mundo não é perfeito, atualmente não estou financeiramente bem para ter uma das maravilhas Apple, e nisso surgiu a necessidade de instalar o Linux em meu notebook.",
-    "image_url": "gnu-linux.jpg",
+    "feature_image": "gnu-linux.jpg",
     "slug": "vantagens-em-utilizar-sistemas-linux",
     "created_at": "21/08/2011",
     "type": "post"
@@ -1862,7 +1872,7 @@
     ],
     "published": true,
     "description": "Para quem não sabe alias são atalhos de comandos realizados no terminal console Unix / Linux. Se você utiliza com frequência um mesmo comando, para aumento de produtividade é recomendado criar um alias para ele.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "dicas-de-terminal-criando-comando-alias",
     "created_at": "20/08/2011",
     "type": "post"
@@ -1874,7 +1884,7 @@
     ],
     "published": true,
     "description": "Nesta consagrada quarta parte do post, citarei mais alguns tipos de programas que irão te ajudar durante a migração para Linux para manuntenção do sistema e customização do ambiente de trabalho.",
-    "image_url": "mingrando-de-windows-para-linux.jpg",
+    "feature_image": "mingrando-de-windows-para-linux.jpg",
     "slug": "migrando-de-windows-para-linux-parte-4",
     "created_at": "18/08/2011",
     "type": "post"
@@ -1886,7 +1896,7 @@
     ],
     "published": true,
     "description": "Continuando o post, agora falarei um pouco sobre os aplicativos de mensagem instantânea mais famosos do mundo Linux, que na minha opinião, de uma forma bem KISS (Keep It Simple, Stupid!) me satisfaz por completo.",
-    "image_url": "mingrando-de-windows-para-linux.jpg",
+    "feature_image": "mingrando-de-windows-para-linux.jpg",
     "slug": "migrando-de-windows-para-linux-parte-3",
     "created_at": "14/08/2011",
     "type": "post"
@@ -1898,7 +1908,7 @@
     ],
     "published": true,
     "description": "Dando continuidade ao post, apresentarei mais alguns excelentes softwares livre, que além de ser totalmente de graça, possuem funcionalidades tão boas quanto as versões existentes para a plataforma windows.",
-    "image_url": "mingrando-de-windows-para-linux.jpg",
+    "feature_image": "mingrando-de-windows-para-linux.jpg",
     "slug": "migrando-de-windows-para-linux-parte-2",
     "created_at": "14/08/2011",
     "type": "post"
@@ -1910,7 +1920,7 @@
     ],
     "published": true,
     "description": "A idéia do post é apresentar alternativos aplicativos encontrados para qualquer distribuição, com intuito de ajudá-lo na migração para Linux.",
-    "image_url": "mingrando-de-windows-para-linux.jpg",
+    "feature_image": "mingrando-de-windows-para-linux.jpg",
     "slug": "migrando-de-windows-para-linux-parte-1",
     "created_at": "14/08/2011",
     "type": "post"
@@ -1922,7 +1932,7 @@
     ],
     "published": true,
     "description": "A proposta desse post é apresentar os comandos essenciais para sobreviver tanto em um ambiente Linux quanto Unix, pois os comandos na prática são os mesmos.",
-    "image_url": "terminal-console-linux.jpg",
+    "feature_image": "terminal-console-linux.jpg",
     "slug": "aprendendo-um-pouco-sobre-terminal-parte-1",
     "created_at": "14/08/2011",
     "type": "post"

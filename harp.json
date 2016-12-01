@@ -10,6 +10,7 @@
     "github_repo": "git@github.com:udgwebdev/udgwebdev.github.io.git",
     "google_plus": "https://plus.google.com/+CaioRibeiroPereira",
     "twitter": "@crp_underground",
+    "featured_tags": ["nodejs", "meteor", "dicas-de-terminal"],
     "root_url": {
       "development": "http://localhost:3000/",
       "production": "https://udgwebdev.com/"

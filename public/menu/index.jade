@@ -1,0 +1,9 @@
+h1.text-center #{title}
+p.text-center #{description}
+article.page.col-xs-12.col-sm-9
+  each m in menu
+    h1(id="#{m.title.toLowerCase().replace(/\s/g, '-')}") #{m.title} (#{m.total})
+    each post in m.posts
+      h4
+        a(href="/#{post.slug}" rel="me" title="#{post.title}") #{post.title}
+    hr

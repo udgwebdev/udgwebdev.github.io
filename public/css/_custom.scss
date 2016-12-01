@@ -5,6 +5,10 @@ a {
 a:hover {
   text-decoration: none;
 }
+.sidemenu li {
+  list-style: none;
+  margin-left: -20px;
+}
 .page-404 {
   margin: 150px auto;
 }

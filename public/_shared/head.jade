@@ -3,6 +3,7 @@
 - var page_url = root_url[environment] + (slug || current.path)
 - var bar_color = '#BA2D27'
 - var meta_description = description || blog_description
+- var page_image = feature_image || main_image
 meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
 meta(charset="utf-8")
 title #{page_title}
@@ -20,7 +21,7 @@ meta(property="og:title" content="#{meta_page_title}")
 meta(property="og:description" content="#{meta_description}")
 meta(property="og:url" content="#{page_url}")
 meta(property="og:site_name" content="#{blog_name}")
-meta(property="og:image" content="#{root_url[environment]}images/#{main_image}")
+meta(property="og:image" content="#{root_url[environment]}images/#{page_image}")
 meta(property="og:type" content="website")
 meta(property="article:author" content="#{google_plus}")
 meta(property="article:section" content="main")
@@ -29,7 +30,7 @@ meta(name="twitter:card" content="summary")
 meta(name="twitter:url" content="#{page_url}")
 meta(name="twitter:title" content="#{meta_page_title}")
 meta(name="twitter:description" content="#{meta_description}")
-meta(name="twitter:image" content="#{root_url[environment]}images/#{main_image}")
+meta(name="twitter:image" content="#{root_url[environment]}images/#{page_image}")
 link(rel="manifest" href="/manifest.json")
 link(rel="stylesheet" href="/css/main.css" type="text/css")
 link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")

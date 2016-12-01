@@ -1,2 +1,22 @@
-aside.col-xs-12.col-sm-3
-  h1 Sidemenu
+aside.sidemenu.col-xs-12.col-sm-3
+  section.hidden-xs
+    h2.h4 <i class="fa fa-bars"></i>&nbsp;Menu
+    ul
+      each tag in public.menu._data.index.tags
+        - var tagPath = tag.title.toLowerCase().replace(/\s/g, '-').replace(/\./g, '');
+        - var menuPath = featured_tags.includes(tagPath) ? '/' : '/menu/#';
+        li <a href="#{menuPath}#{tagPath}" rel="me" title="#{tag.title}"><i class="fa fa-folder-open"></i>&nbsp;#{tag.title} (#{tag.total})</a>
+  hr
+  section.hidden-xs
+    h2.h4 <i class="fa fa-users"></i>&nbsp;Conheça também
+    ul
+      li <a href="http://www.casadocodigo.com.br/products/livro-nodejs" target="_blank" title="Casa do Código" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;Casa do Código</a>
+      li <a href="https://devfreecasts.github.io" target="_blank" title="DevFreeCasts" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;DevFreeCasts</a>
+      li <a href="https://devfreebooks.github.io" target="_blank" title="DevFreeBooks" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;DevFreeBooks</a>
+      li <a href="https://devnewsletters.github.io" target="_blank" title="DevNewsletters" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;DevNewsletters</a>
+      li <a href="https://www.facebook.com/galera.soudev" target="_blank" title="SouDev" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;Fanpage SouDev</a>
+      li <a href="https://twitter.com/SouDev" target="_blank" title="SouDev" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;Twitter SouDev</a>
+      li <a href="https://www.facebook.com/diariobackend" target="_blank" title="Diário de um Backend" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;Fanpage Diário de um backend</a>
+      li <a href="https://twitter.com/diariobackend" target="_blank" title="Diário de um Backend" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;Twitter Diário de um backend</a>
+      li <a href="http://imasters.com.br/perfil/caio-ribeiro-pereira/" target="_blank" title="iMasters" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;iMasters</a>
+      li <a href="https://www.youtube.com/playlist?list=PLaZc7cC45NlNYMwfJhuLLIhLN20nMhxXx" target="_blank" title="Video-aulas de Node.js" rel="nofollow"><i class="fa fa-thumbs-o-up"></i>&nbsp;Video-aulas de Node.js</a>

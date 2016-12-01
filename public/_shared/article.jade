@@ -1,6 +1,10 @@
 article.col-xs-12.col-sm-9(class="#{type}" id="#{slug}")
   h1 #{title}
   if type === "post"
-    p Publicação: <strong><time datetime="#{created_at}" pubdate>#{created_at}</time></strong> | Tags: <strong>#{tags.toString().replace(',', ', ')}</strong>
+    - var tagLinks = tags.map(function(tag) {
+    -   return '<a href="/menu/#'+ tag.toLowerCase().replace(/\s/g, '-') +'" rel="me" title="Menu: '+ tag +'">'+ tag + '</a>';
+    - });
+    p.text-muted Publicação: <time datetime="#{created_at}" pubdate><b>#{created_at}</b></time> | Tags: !{tagLinks.toString().replace(',', ', ')}
   != yield
-  != partial("disqus")
+  if type === "post"
+    != partial("disqus")
