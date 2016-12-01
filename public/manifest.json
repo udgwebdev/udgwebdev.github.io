@@ -1,0 +1,16 @@
+{
+  "name": "UDGWebDev",
+  "short_name": "UDGWebDev",
+  "start_url": "/?via=webapp",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#BA2D27",
+  "background_color": "#BA2D27",
+  "icons": [
+    {
+      "src": "images/udgwebdev-logo-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
