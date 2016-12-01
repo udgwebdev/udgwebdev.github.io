@@ -3,3 +3,11 @@ www
 node_modules
 .grunt
 npm-debug.log
+!public/_posts/*
+!public/_shared/*
+!public/css/*
+!public/fonts/*
+!public/images/*
+!public/js/*
+public/**/index.md
+public/**/_data.json
