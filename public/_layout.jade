@@ -8,12 +8,8 @@ html(lang="en" manifest="#{manifest_url}" xmlns="http://www.w3.org/1999/xhtml" x
     main.container.vertical-centralization(role="main")
       .row
         if type
-          article.col-xs-12.col-sm-9(class="#{type}" id="#{slug}")
-            h1 #{title}
-            if type === "post"
-              p Publicação: <strong><time datetime="#{created_at}" pubdate>#{created_at}</time></strong> | Tags: <strong>#{tags.toString().replace(',', ', ')}</strong>
-            != yield
-            != partial("_shared/disqus")
+          != partial("_shared/article")
+          != partial("_shared/side_menu")
         else
           != yield
     != partial("_shared/footer")
