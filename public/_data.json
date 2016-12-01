@@ -622,7 +622,7 @@
     "type": "post"
   },
   "criando-um-chat-usando-session-do-express-4-no-socket-io-1-0": {
-    "title": null,
+    "title": "Criando um chat usando Session do Express 4 no Socket.IO 1.0",
     "tags": [
       "Node.js"
     ],
@@ -1115,7 +1115,7 @@
     "type": "post"
   },
   "nodejs-express-socketio-e-sessions": {
-    "title": null,
+    "title": "Node.js Express, Socket.IO e Sessions",
     "tags": [
       "Node.js"
     ],
