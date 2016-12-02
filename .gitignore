@@ -5,10 +5,7 @@ node_modules
 npm-debug.log
 !public/_posts/*
 !public/_shared/*
-!public/css/*
-!public/fonts/*
-!public/images/*
-!public/js/*
+!public/assets/*
 !public/nodejs/*
 !public/meteor/*
 !public/dicas-de-terminal/*

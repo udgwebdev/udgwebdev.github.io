@@ -1,5 +1,4 @@
 (function() {
-  window.sr = new scrollReveal();
   cssCircleMenu('.js-menu');
   var toggle = document.querySelector('.navbar-toggle');
   var collapse = document.querySelector('.navbar-collapse');

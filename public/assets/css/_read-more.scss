@@ -1,0 +1,30 @@
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .5s ease;
+  display: none;
+}
+
+.read-more-state:checked ~ .read-more-trigger {
+  display: none;
+  visibility: hidden;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+  display: block;
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
