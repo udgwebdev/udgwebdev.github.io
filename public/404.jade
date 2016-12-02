@@ -1,10 +1,11 @@
-.col-xs-12.text-center.page-404
+.col-xs-12.text-center.full-page
   img(src="/images/#{main_image}" width="256" class="img-responsive center-block")
   h3 Esta página não existe...relax!
-  h3 Vamos te <a href="/" id="home_url">redirecionar pra home</a>.
+  h3 Vamos te <a href="/">redirecionar pra home</a>.
+  p <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
 script.
   (function() {
     setTimeout(function() {
-      window.location = document.getElementById('home_url').href;
+      window.location = '/';
     }, 3000);
   })();

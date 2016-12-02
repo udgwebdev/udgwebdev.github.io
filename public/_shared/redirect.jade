@@ -1,0 +1,11 @@
+.col-xs-12.text-center.full-page
+  img(src="/images/#{main_image}" width="256" class="img-responsive center-block")
+  h1.h2 Post: #{title}
+  p Redirecionando para o endereço original do post, <a href="#{alias_url}" target="_blank" rel="me">clique aqui caso não seja redirecionado</a>.
+  p <i class="fa fa-refresh fa-spin fa-4x fa-fw"></i>
+script.
+  (function() {
+    setTimeout(function() {
+      window.location = '#{alias_url}';
+    }, 3000);
+  })();

@@ -16,7 +16,9 @@ _.forIn(posts, (postData, postKey) => {
     console.log(colors.green(`Published: ${postKey}`));
     fs.emptyDirSync(postPath);
     fs.outputJsonSync(path.join(postPath, '_data.json'), { index: postData });
-    if (!postData.alias_url) {
+    if (postData.type === 'redirect') {
+      fs.outputFileSync(path.join(postPath, 'index.jade'), '!= partial("../_shared/redirect")');
+    } else {
       const postFileToCopy = `${moment(postData.created_at, 'DD/MM/YYYY').format('YYYY-MM-DD')}-${postKey}.md`;
       fs.copySync(path.join(POSTS_DIR, postFileToCopy), path.join(postPath, 'index.md'));
     }

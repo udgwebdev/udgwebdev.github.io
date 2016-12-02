@@ -10,5 +10,6 @@ npm-debug.log
 !public/meteor/*
 !public/dicas-de-terminal/*
 !public/menu/*
+public/**/index.jade
 public/**/index.md
 public/**/_data.json
