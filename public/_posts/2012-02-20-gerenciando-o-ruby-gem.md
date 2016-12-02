@@ -1,4 +1,4 @@
-![Ruby Gems](../images/ruby.jpg "Ruby Gems")
+![Ruby Gems](/images/ruby.jpg "Ruby Gems")
 
 Recentemente voltei a estudar um pouco **Ruby**, motivo foi por que estou desenvolvendo um site dinâmico, estou aprendendo muito sobre **Ruby com framework Sinatra**, ambos possuem muitas funcionalidades semelhantes ao **Node.js com Express**, pelo qual já conheço melhor.
 

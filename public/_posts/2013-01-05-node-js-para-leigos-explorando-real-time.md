@@ -1,6 +1,6 @@
-![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](/images/nodejs-para-leigos.jpg "Curso de Node.js")
 
-Fala galera! O capítulo de hoje será muito interessante, falarei sobre um assunto que esta muito emergente nos sistemas web, que esta sendo largamente utilizado no [Node.js]({{site.url}}/nodejs), **o assunto é Real-time.**
+Fala galera! O capítulo de hoje será muito interessante, falarei sobre um assunto que esta muito emergente nos sistemas web, que esta sendo largamente utilizado no [Node.js](/nodejs), **o assunto é Real-time.**
 Quando se fala de aplicações real-time, estamos técnicamente falando de **conexões bi-direcionais**, que na prática, é uma **conexão que se mantem aberta (keep-alive)** para que os clientes interajam com o servidor em uma única conexão aberta. A grande vantagem disso é de não precisar mais das **requisições assíncronas (AJAX)** para simular uma **“ação quase real-time”**, digo quase pois **AJAX não é uma conexão bi-direcional** capaz de se manter aberta até o término de seu processamento.
 
 Node.js se tornou popular devido a sua facilidade em trabalhar com real-time, simplesmente por que o **protocolo WebSockets (Protocolo do HTML5 para conexões bi-direcionais)** utiliza-se Javascript também.
@@ -44,7 +44,9 @@ Para executar esse código, execute primeiro o comando:
      socket.broadcast.emit('toClient', msg);
    });
  });
-``` ``` html
+```
+
+``` html
  <!-- index.html -->
  <html>
    <head>
@@ -75,7 +77,7 @@ Para executar esse código, execute primeiro o comando:
      <div id="historico"></div>
    </body>
  </html>
-``` 
+```
 
 Acabamos de criar uma versão simples de um chat em real-time! No arquivo server.js somos obrigados a instanciar os módulos express, http e socket.io naquela ordem, pois é um motivo específico do próprio Socket.IO em que ele precisa escutar todas as ações do módulo http primeiro.
 
@@ -114,14 +116,14 @@ No client-side temos que adicionar o script:
 
 ``` html
  <script src="/socket.io/socket.io.js"></script>
-``` 
+```
 
 É automaticamente incluída pelo Socket.IO, não se preocupe em baixar esse arquivo apenas incluá-o em seu html.
 
 Bom galera, esse foi mais um capítulo do mini-curso, para melhores referências, segue abaixo os links utilizados:
 
-*   [Real-time com Socket.IO 1.0]({{site.url}}/real-time-com-socket-io-no-nodejs "Real-time com Socket.IO 1.0")
-*   [Criando um chat usando Session do Express 4 no Socket.IO 1.0]({{site.url}}/criando-um-chat-usando-session-do-express-4-no-socket-io-1-0 "Criando um chat usando Session do Express 4 no Socket.IO 1.0")
+*   [Real-time com Socket.IO 1.0](/real-time-com-socket-io-no-nodejs "Real-time com Socket.IO 1.0")
+*   [Criando um chat usando Session do Express 4 no Socket.IO 1.0](/criando-um-chat-usando-session-do-express-4-no-socket-io-1-0 "Criando um chat usando Session do Express 4 no Socket.IO 1.0")
 *   [Github do Socket.IO](https://github.com/LearnBoost/socket.io "Github do Socket.IO")
 *   [Socket.IO – Exposed Events](https://github.com/LearnBoost/socket.io/wiki/Exposed-events "Socket.IO – Exposed Events")
 

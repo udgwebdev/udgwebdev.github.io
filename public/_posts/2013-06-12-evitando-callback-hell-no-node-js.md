@@ -1,4 +1,4 @@
-![Evitando Callback Hell](../images/callback-hell.jpg "Evitando Callback Hell")
+![Evitando Callback Hell](/images/callback-hell.jpg "Evitando Callback Hell")
 
 De fato vimos o quanto é vantajoso e performático trabalhar de forma assíncrona, porém em certos momentos, inevitavelmente implementaremos diversas funções assíncronas, que serão encadeadas uma na outra através das suas funções callback. No código a seguir apresentarei um exemplo desse caso, crie um arquivo chamado `callback_hell.js`, implemente e execute o código abaixo:
 
@@ -51,4 +51,4 @@ Uma boa prática de código Javascript é criar funções que expressem seu obje
 
 Veja o quanto melhorou a legibilidade do seu código. Dessa forma foi possível reaproveitar a função `tratar(erro)` em dois locais do código, deixamos mais semântico e legível o nome das funções e diminuímos o encadeamento de callback das funções assíncronas. A boa prática é ter o bom senso de manter no máximo até dois encadeamentos de callbacks, ao passar disso significa que esta na hora de criar uma nova função fora externa para ser chamada no último callback, ao invés de continuar criando um **callback hell** em seu código.
 
-Fonte: [Aplicações web real-time com Node.js](https://casadocodigo.refersion.com/l/630.1389 "Aplicações web real-time com Node.js")
+Fonte: [Aplicações web real-time com Node.js](https://www.casadocodigo.com.br/products/livro-nodejs "Aplicações web real-time com Node.js")

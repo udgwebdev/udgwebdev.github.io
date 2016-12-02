@@ -1,4 +1,4 @@
-![Terminal Console Linux](../images/terminal-console-linux.jpg)
+![Terminal Console Linux](/images/terminal-console-linux.jpg)
 
 A dica de hoje será bem útil, com ela você estará apto para manipular diversos arquivos de um determinado diretório. Por exemplo, será possível processar em paralelo arquivos em lote e qualquer comando que você trabalhe com arquivos será possível aplicar esse conceito que explicarei abaixo.
 

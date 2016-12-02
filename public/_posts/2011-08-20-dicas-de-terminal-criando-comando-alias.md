@@ -1,4 +1,4 @@
-![Terminal console do Linux](../images/terminal-console-linux.jpg)
+![Terminal console do Linux](/images/terminal-console-linux.jpg)
 
 Para quem não sabe alias são atalhos de comandos realizados no terminal console Unix / Linux. Se você utiliza com frequência um mesmo comando, para aumento de produtividade é recomendado criar um alias para ele. O processo de customização é muito simples, e as dicas servem para configurar um alias em qualquer sistema Unix ou distro Linux:
 

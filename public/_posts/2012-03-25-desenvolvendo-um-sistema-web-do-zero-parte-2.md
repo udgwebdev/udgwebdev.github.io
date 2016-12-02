@@ -1,8 +1,8 @@
-![Desenvolvendo sistemas web](../images/sistemas-web.jpg "Desenvolvendo sistemas web")
+![Desenvolvendo sistemas web](/images/sistemas-web.jpg "Desenvolvendo sistemas web")
 
 Dando continuidade a esse post, apresentarei mais alguns conceitos essenciais que estudá-las profundamente irá trazê-lo bons conhecimentos para você ficar apto a desenvolver uma aplicação web com qualidade.
 
-Lembrando que é essencial você ler antes a primeira parte desse post: [Desenvolvendo um sistema web do zero - Parte 1](../desenvolvendo-um-sistema-web-do-zero-parte-1 "Desenvolvendo um sistema web do zero - Parte 1").
+Lembrando que é essencial você ler antes a primeira parte desse post: [Desenvolvendo um sistema web do zero - Parte 1](/desenvolvendo-um-sistema-web-do-zero-parte-1 "Desenvolvendo um sistema web do zero - Parte 1").
 
 **1 - Entenda banco de dados e comandos SQL:** Um banco de dados é essencial em qualquer aplicação, praticamente dominar comandos SQL será fundamental, pois a maioria dos gargalos serão identificados após sua aplicação obter uma base gigante de dados. Por isso, com o passar do tempo se sua aplicação possuir uma estrutura de banco de dados bem planejada, as consultas SQL serão eficientes e você terá menos preocupações com a escalabidade do sistema. Resumindo, entenda bem sobre banco de dados, pois toda modelagem do sistema será adaptada para utilizá-lo, pois o surgimento de problemas com a aplicação será de longo prazo.
 

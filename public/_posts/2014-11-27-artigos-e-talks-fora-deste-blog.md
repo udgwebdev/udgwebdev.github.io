@@ -1,4 +1,4 @@
-![Artigos e talks fora deste blog](../images/udgwebdev-logo-128.png)
+![Artigos e talks fora deste blog](/images/udgwebdev-logo-128.png)
 
 Não só mantenho este blog, como também já publiquei alguns artigos e talks em outros sites, se você não viu, tenha acesso a todos eles através dos links abaixo.
 

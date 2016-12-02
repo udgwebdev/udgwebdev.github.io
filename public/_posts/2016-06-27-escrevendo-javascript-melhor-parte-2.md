@@ -1,6 +1,6 @@
-![Escrevendo JavaScript melhor](../images/es6-logo.jpg "Escrevendo JavaScript melhor")
+![Escrevendo JavaScript melhor](/images/es6-logo.jpg "Escrevendo JavaScript melhor")
 
-Dando continuidade ao post: [Escrevendo JavaScript melhor - Parte 1](../escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1"), nesse post falarei sobre mais duas dicas úteis para melhorar seu código JavaScript.
+Dando continuidade ao post: [Escrevendo JavaScript melhor - Parte 1](/escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1"), nesse post falarei sobre mais duas dicas úteis para melhorar seu código JavaScript.
 
 ## 1) Use === no lugar de ==
 
@@ -63,8 +63,8 @@ Com o shorthand value você pode fazer uma formatação desse objeto cliente de 
 
 Veja também:
 
-*   [Escrevendo JavaScript melhor - Parte 1](../escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")
-*   [Escrevendo JavaScript melhor - Parte 3](../escrevendo-javascript-melhor-parte-3 "Escrevendo JavaScript melhor - Parte 3")
-*   [Escrevendo JavaScript melhor - Parte 4](../escrevendo-javascript-melhor-parte-4 "Escrevendo JavaScript melhor - Parte 4")
+*   [Escrevendo JavaScript melhor - Parte 1](/escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")
+*   [Escrevendo JavaScript melhor - Parte 3](/escrevendo-javascript-melhor-parte-3 "Escrevendo JavaScript melhor - Parte 3")
+*   [Escrevendo JavaScript melhor - Parte 4](/escrevendo-javascript-melhor-parte-4 "Escrevendo JavaScript melhor - Parte 4")
 
 See you later!

@@ -1,4 +1,4 @@
-![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](/images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Hoje apresentarei um íncrivel template engine para node.js, seu nome se chama Jade. Digo íncrivel por que com ele será possível desenvolver códigos html com uma síntaxe muito limpa, com regras de identação semelhantes a linguagem Python **(através de espaçamentos ou tabulações de código, porém jamais tente as duas regras no mesmo código!)**, integração com comandos do servidor e trabalhando de forma otimizada reaproveitando e extendendo trechos das views.
 
@@ -22,7 +22,7 @@ O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby, 
      </div>
    </body>
  </html>
-``` 
+```
 
 Ele foi substituído pelo código abaixo:
 
@@ -39,7 +39,7 @@ Ele foi substituído pelo código abaixo:
      h1 Template engine
      #container
        p Jade
-``` 
+```
 
 Algo que melhora drasticamente a legibilidade do código, permitindo que você desenvolva mais com menos esforço. Outro destaque do Jade é a possibilidade de trabalhar com código server-side junto ao código client-side, ou seja, código javascript server-side misturado com código html ou javascript client-side, para isso é necessário utilizar alguns comandos para **"escapar"** determinado comando de forma que o Jade reconheça quem é quem. Um bom exemplo disso é o código abaixo:
 
@@ -60,7 +60,7 @@ Algo que melhora drasticamente a legibilidade do código, permitindo que você d
          p #{usuario.nome}
        else
          p Não informado.
-``` 
+```
 
 O Jade possui alguns **shortcuts-commands**, que visam agilizar e reduzir a complexidade do seu código, abaixo listarei alguns comandos e seus respectivos shortcuts:
 
@@ -73,11 +73,15 @@ Trabalhando com Jade é possível desenvolver **views reaproveitáveis**, evitan
  // header.jade
  header
    h1 Hey this is Jade!
-``` ``` javascript
+```
+
+``` javascript
  // footer.jade
  footer
    small Bye! See you later!
-``` ``` javascript
+```
+
+``` javascript
  // main.jade
  doctype html
  html
@@ -88,7 +92,7 @@ Trabalhando com Jade é possível desenvolver **views reaproveitáveis**, evitan
      section
        p This is a post about jade template engine, enjoy it!
      include footer
-``` 
+```
 
 Repare que no código **main.jade** reaproveitamos o header e footer que são arquivos separados, e a inclusão foi feita através do **método include**. Outro meio de reaproveitar código é através dos comandos **extends e block**, que geralmente são utilizados para trabalhar com o conceito de **layout**, onde criamos uma página principal que receberá em alguns pontos outras views.
 
@@ -100,7 +104,7 @@ Repare que no código **main.jade** reaproveitamos o header e footer que são ar
      title Jade
    body
      block body
-``` 
+```
 
 Todas as demais views serão incluídas através do body via comando **block**, abaixo segue um exemplo em que a página extende o layout para ela mesma.
 
@@ -114,7 +118,7 @@ Todas as demais views serão incluídas através do body via comando **block**, 
      li Engine
      li For
      li Node.js
-``` 
+```
 
 Basicamente extendemos o **main_layout.jade** para o **list.jade** em que incluímos os componentes do html dentro do **block body**. Podemos até misturar ambos os comandos **include, extends e block**, fazendo com que o **list.jade** fique dessa maneira:
 
@@ -130,7 +134,7 @@ Basicamente extendemos o **main_layout.jade** para o **list.jade** em que inclu�
        li For
        li Node.js
    include footer
-``` 
+```
 
 Agora listarei algumas dicas, que serão essenciais para trabalhar de forma produtiva com Jade:
 
@@ -154,9 +158,11 @@ E modifique o **app.js**:
    app.use(express.bodyParser());
    app.use(express.methodOverride());
  });
-``` 
+```
 
-Agora vamos alterar as atuais views, primeiro renomeie as extensões dos arquivos: **index.ejs, edit.ejs, 500.ejs e 404.ejs** para **.jade**, e agora mãos a obra! ``` javascript
+Agora vamos alterar as atuais views, primeiro renomeie as extensões dos arquivos: **index.ejs, edit.ejs, 500.ejs e 404.ejs** para **.jade**, e agora mãos a obra!
+
+``` javascript
  // index.jade
  doctype html
  html
@@ -174,7 +180,9 @@ Agora vamos alterar as atuais views, primeiro renomeie as extensões dos arquivo
          li #{cliente.nome} - #{cliente.idade}
            a(href="/cliente/#{i}/editar") Editar
            a(href="/cliente/#{i}") Excluir
-``` ``` javascript
+```
+
+``` javascript
  // edit.jade
  doctype html
  html
@@ -187,7 +195,9 @@ Agora vamos alterar as atuais views, primeiro renomeie as extensões dos arquivo
        label Idade:
          input(type="text", name="cliente[idade]", value="#{cliente.idade}")
  button(type="submit") Enviar
-``` ``` javascript
+```
+
+``` javascript
  // 404.jade
  doctype html
  html
@@ -195,7 +205,7 @@ Agora vamos alterar as atuais views, primeiro renomeie as extensões dos arquivo
      title Página não encontrada.
    body
      h1 Página não encontrada.
-``` 
+```
 
 Para finalizar os refactorings de views...
 
@@ -208,7 +218,7 @@ Para finalizar os refactorings de views...
    body
      h1 Erro na aplicação.
      h3 Detalhes: #{error.message}
-``` 
+```
 
 E finalizamos mais uma saga dessa consagrada série de mini-curso Node.js para leigos.
 

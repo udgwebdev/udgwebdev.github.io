@@ -1545,18 +1545,6 @@
     "created_at": "01/01/2012",
     "type": "post"
   },
-  "linux-adequado-a-sua-necessidade-parte-4": {
-    "title": "Linux adequado a sua necessidade - Parte 4",
-    "tags": [
-      "Sistemas operacionais"
-    ],
-    "published": true,
-    "description": "Em mais uma capítulo de Linux adequado para sua necessidade, apresentarei as distribuições para smartphones, internet e computação em nuvem.",
-    "feature_image": "distros-linux.jpg",
-    "slug": "linux-adequado-a-sua-necessidade-parte-4",
-    "created_at": "31/12/2011",
-    "type": "post"
-  },
   "design-patterns-para-javascript-parte-1": {
     "title": "Design Patterns para Javascript - Parte 1",
     "description": "Design Pattern para Javascript, neste post será explicado alguns dos importantes padrões Creational, Constructors e os Singleton.",
@@ -1591,40 +1579,6 @@
     "created_at": "07/11/2011",
     "type": "post"
   },
-  "conhecendo-e-desenvolvendo-na-plataforma-ios": {
-    "title": "Palestra - Conhecendo e Desenvolvendo na Plataforma iOS",
-    "tags": [
-      "Slides"
-    ],
-    "description": "Slide apresentado por Bruno Alvares da Costa sobre a plataforma iOS.",
-    "published": true,
-    "slug": "conhecendo-e-desenvolvendo-na-plataforma-ios",
-    "created_at": "02/11/2011",
-    "type": "post"
-  },
-  "software-facil-de-usar-nao-e-dificil-de-programar": {
-    "title": "Palestra - Software fácil de usar não é difícil de programar",
-    "tags": [
-      "Slides"
-    ],
-    "description": "Slide apresentado por Leandro Alvares da Costa sobre software fácil de usar que não é difícil de programar.",
-    "published": true,
-    "slug": "software-facil-de-usar-nao-e-dificil-de-programar",
-    "created_at": "01/11/2011",
-    "type": "post"
-  },
-  "linux-adequado-para-sua-necessidade-parte-3": {
-    "title": "Linux adequado para sua necessidade - Parte 3",
-    "tags": [
-      "Sistemas operacionais"
-    ],
-    "published": true,
-    "description": "Continuando em nosso terceiro capítulo da saga: Linux adequado a sua necessidade hoje apresentarei mais três tipos de distro bem conhecidas.",
-    "feature_image": "distros-linux.jpg",
-    "slug": "linux-adequado-para-sua-necessidade-parte-3",
-    "created_at": "01/11/2011",
-    "type": "post"
-  },
   "light-talk-introducao-sobre-nodejs": {
     "title": "Light Talk - Introdução sobre Node.js",
     "tags": [
@@ -1634,30 +1588,6 @@
     "published": true,
     "slug": "light-talk-introducao-sobre-nodejs",
     "created_at": "30/10/2011",
-    "type": "post"
-  },
-  "linux-adequado-para-sua-necessidade-parte-2": {
-    "title": "Linux adequado para sua necessidade - Parte 2",
-    "tags": [
-      "Sistemas operacionais"
-    ],
-    "published": true,
-    "description": "Apresentarei alguns sistemas Linux para diversas necessidades, quem sabe você não encontra a distro compatível com que deseja?",
-    "feature_image": "distros-linux.jpg",
-    "slug": "linux-adequado-para-sua-necessidade-parte-2",
-    "created_at": "27/10/2011",
-    "type": "post"
-  },
-  "linux-adequado-para-sua-necessidade-parte-1": {
-    "title": "Linux adequado para sua necessidade - Parte 1",
-    "tags": [
-      "Sistemas operacionais"
-    ],
-    "published": true,
-    "description": "Matéria que apresenta os principais linux para cada tipo de necessidade, seja ele acessibilidade, perícia, servidor, gamers e outras.",
-    "feature_image": "distros-linux.jpg",
-    "slug": "linux-adequado-para-sua-necessidade-parte-1",
-    "created_at": "23/10/2011",
     "type": "post"
   },
   "nodejs-criando-um-mini-chat": {

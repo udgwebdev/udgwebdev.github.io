@@ -1,4 +1,4 @@
-![Middlewares do Express](../images/express4.jpg "Middlewares do Express")
+![Middlewares do Express](/images/express4.jpg "Middlewares do Express")
 
 Neste post vou explicar uma dica simples e extremamente útil para os devs que trampam com aplicações web para Node.js. O assunto será sobre o que é e como implementar middlewares em um aplicação web que utiliza o framework Express.
 

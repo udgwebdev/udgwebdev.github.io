@@ -1,4 +1,4 @@
-[![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
+[![Meteor](/images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 Pra galera que estuda ou trabalha com Node.js, hoje apresentarei neste post uma nova plataforma Web Full-Stack totalmente Javascript, feita em cima do Node.js, seu nome é Meteor.
 
@@ -19,4 +19,4 @@ Com apenas 3 arquivos **(1 html, 1 css e 1 js)** já é possível construir uma 
 7.  **Simplicity equals Productivity:** Seja produtivo! Desenvolva de forma simplificada, utilize APIs fáceis de aprender e implementar, afinal essa será a melhor forma de criar uma aplicação.
 
 Seu site oficial é [meteor.com](http://www.meteor.com). Lá você encontrará a documentação, alguns screencasts, aplicações de exemplo e o blog oficial para você ficar por dentro das novas versões, eventos e projetos da comunidade Meteor.
-Falarei mais sobre Meteor nos próximos posts, então não percam os futuros capítulos dessa nova série chamada Meteor. Enquanto isso caso queira aprender Meteor por conta própria, leia o post [Quer aprender Meteor?](../quer-aprender-meteor) e também veja [todos os posts sobre Meteor aqui do blog]({{site.url}}/meteor).
+Falarei mais sobre Meteor nos próximos posts, então não percam os futuros capítulos dessa nova série chamada Meteor. Enquanto isso caso queira aprender Meteor por conta própria, leia o post [Quer aprender Meteor?](/quer-aprender-meteor) e também veja [todos os posts sobre Meteor aqui do blog](/meteor).

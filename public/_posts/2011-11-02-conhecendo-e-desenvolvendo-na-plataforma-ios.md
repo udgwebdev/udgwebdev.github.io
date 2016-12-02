@@ -1,7 +1,0 @@
-Finalizando nas publicações de slides sobre o [2º Encontro DevInSantos](http://crpunderground.wordpress.com/2011/10/30/segundo-encontro-devinsantos "Post sobre o encontro DevInSantos") que foi realizado ontem dia 29 de outubro de 2011.
-
-Esse slide foi apresentado por Bruno Alvares da Costa - [@brunoadacosta](http://twitter.com/#!/brunoadacosta/ "Twitter de Bruno Alvares da Costa") que foi um **mix** de apresentação sobre a plataforma iOS, com um **hands-on** na prática utilizando **XCode**, desenvolvendo um mini-aplicativo para iPhone.
-
-[![Conhecendo e Desenvolvendo na Plataforma iOS](../images/slide-keynote-ios.jpg "Conhecendo e Desenvolvendo na Plataforma iOS")](http://www.slideshare.net/cocentotecnologia/keynote-ios-9960760)
-
-É isso ai pessoal! Espero todos vocês no próximo evento, para ficar por dentro dos próximos eventos, siga-nos na comunidade, é só acessar [http://www.meetup.com/devinsantos/](http://www.meetup.com/devinsantos/ "Perfil Meetup DevInSantos") para ficar atento para as próximas palestras, perfil no twitter [@devinsantos](http://twitter.com/#!/devinsantos "Twitter do DevInSantos") e participem também do fórum [Google Groups DevInSantos.](http://groups.google.com/group/devinsantos "Google Groups DevInSantos")

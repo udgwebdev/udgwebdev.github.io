@@ -1,4 +1,4 @@
-![Organizando aplicações Node.js](../images/nodejs-logo.jpg "Organizando aplicações Node.js")
+![Organizando aplicações Node.js](/images/nodejs-logo.jpg "Organizando aplicações Node.js")
 
 Se você esta começando com Node.js e esta trabalhando utilizando um framework minimalista like Express ou Hapi, com certeza você cairá na armadilha de organizar os módulos de sua aplicação do jeito que quiser ou até mesmo criar tudo num único arquivo `app.js`, `server.js`, `main.js`, `index.js` ou etc.
 
@@ -16,7 +16,7 @@ Se você tem dúvida sobre como organizar os códigos de sua aplicação colocan
 *   **views**: neste diretório deve manter arquivos de html dinâmico.
 *   **test**: o próprio nome já diz tudo! Nesta pasta deve ser mantido todo tipo de código de testes da sua aplicação.
 *   **initializer ou init**: neste diretório coloque apenas códigos que serão executados ao iniciar a aplicação.
-*   **middlewares**: este diretório é utilizado frequentemente pelas aplicações web, pois seu objetivo é manter apenas códigos que fazem interceptações nas requisições da aplicação, caso queria entender mais sobre middlewares, leia o post: [Entendendo como funciona os middlewares do Express](../entendendo-como-funciona-os-middlewares-do-express "Entendendo como funciona os middlewares do Express"), apesar do post focar no Express, os conceitos deste post servirão para aplicar em qualquer outro web framework de qualquer outra linguagem.
+*   **middlewares**: este diretório é utilizado frequentemente pelas aplicações web, pois seu objetivo é manter apenas códigos que fazem interceptações nas requisições da aplicação, caso queria entender mais sobre middlewares, leia o post: [Entendendo como funciona os middlewares do Express](/entendendo-como-funciona-os-middlewares-do-express "Entendendo como funciona os middlewares do Express"), apesar do post focar no Express, os conceitos deste post servirão para aplicar em qualquer outro web framework de qualquer outra linguagem.
 *   **bootstrap ou seed**: neste diretório coloque apenas scripts de população de base de dados, que são geralmente utilizados para criar bases com dados fakes para uso em ambiente de desenvolvimento.
 
 #### Fontes:

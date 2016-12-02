@@ -1,4 +1,4 @@
-[![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
+[![Meteor](/images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 ### Atualizado em 24/Março/2014
 
@@ -14,7 +14,7 @@ Para a galera que quer estudar ou apenas ficar por dentro do desse framework, ve
 *   [Blog MeteorHacks](http://meteorhacks.com)
 *   [Blog Discover Meteor](http://www.discovermeteor.com/blog)
 *   [Ebook Discover Meteor](http://www.discovermeteor.com)
-*   **[Ebook Aplicações web real-time com Meteor](https://casadocodigo.refersion.com/l/d88.3525)**
+*   **[Ebook Aplicações web real-time com Meteor](https://www.casadocodigo.com.br/products/livro-meteor)**
 *   **[Ebook Testing Meteor](http://testingmeteor.com)**
 *   [Google Groups Meteor Brasil (Novo)](http://groups.google.com/forum/#!forum/meteor-brasil)
 *   [Facebook Meteor Brasil (Novo)](https://www.facebook.com/groups/meteorbrasil/)

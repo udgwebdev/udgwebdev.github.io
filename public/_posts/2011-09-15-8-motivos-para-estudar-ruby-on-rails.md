@@ -1,4 +1,4 @@
-![Ruby On Rails](../images/rails-logo.jpg "Ruby On Rails")
+![Ruby On Rails](/images/rails-logo.jpg "Ruby On Rails")
 
 Venho aqui em mais um post falar sobre meus poucos, porém produtivos momentos que tive ao desenvolver utilizando a tecnologia web: Ruby On Rails.
 
@@ -15,4 +15,4 @@ E isso me motivou a citar em minha opinião 8 motivos, pelo qual espero que voc�
 
 Enfim, espero que este post lhe-motive a estudar não só Ruby, mas sempre que puder uma nova linguagem de programação, pois o intuito aqui não é dizer que Ruby On Rails será o mundo perfeito, tanto é que apenas citei um pouco sobre minhas experiências com este framework, e sempre é bom conhecer novos paradigmas de programação, pois permitirá resolver com sabedoria os problemas que enfrentamos ao desenvolver um projeto.
 
-Caso saiba outros motivos para aprender Ruby On Rails, comentem esse post! Depois que você dominar Ruby On Rails, veja também as [6 motivos para usar Node.js]({{site.url}}/6-motivos-para-usar-nodejs).
+Caso saiba outros motivos para aprender Ruby On Rails, comentem esse post! Depois que você dominar Ruby On Rails, veja também as [6 motivos para usar Node.js](/6-motivos-para-usar-nodejs).

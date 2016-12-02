@@ -1,4 +1,4 @@
-[![LevelWeb](../images/levelweb.png "LevelWeb")](https://github.com/hij1nx/levelweb) 
+[![LevelWeb](/images/levelweb.png "LevelWeb")](https://github.com/hij1nx/levelweb) 
 
 Continuando minhas experiências com o NoSQL [LevelDB](http://code.google.com/p/leveldb), neste post apresentarei um simples web admin de fácil integração e quebra bem o galho na hora de usar uma ferramenta visual pra administrar dados deste banco.
 
@@ -8,7 +8,7 @@ De funcionalidades ele é bem simples, tudo se resume em você rodar um comando 
 
 ## Screenshots
 
-[![LevelWeb](../images/levelweb-login-small.jpg "LevelWeb")](../images/levelweb-login.jpg)[![Visualizando dados](../images/levelweb-visualizando-dados-small.jpg "Visualizando dados")](../images/levelweb-visualizando-dados.jpg)[![Dados em gráfico de barra](../images/levelweb-grafico-de-barra-small.jpg "Dados em gráfico de barra")](../images/levelweb-grafico-de-barra.jpg)[![Dados em TreeMap](../images/levelweb-grafico-treemap-small.jpg "Dados em TreeMap")](../images/levelweb-grafico-treemap.jpg)[![Dados em gráfico de linha](../images/levelweb-grafico-de-linha-small.jpg "Dados em gráfico de linha")](../images/levelweb-grafico-de-linha.jpg)
+[![LevelWeb](/images/levelweb-login-small.jpg "LevelWeb")](/images/levelweb-login.jpg)[![Visualizando dados](/images/levelweb-visualizando-dados-small.jpg "Visualizando dados")](/images/levelweb-visualizando-dados.jpg)[![Dados em gráfico de barra](/images/levelweb-grafico-de-barra-small.jpg "Dados em gráfico de barra")](/images/levelweb-grafico-de-barra.jpg)[![Dados em TreeMap](/images/levelweb-grafico-treemap-small.jpg "Dados em TreeMap")](/images/levelweb-grafico-treemap.jpg)[![Dados em gráfico de linha](/images/levelweb-grafico-de-linha-small.jpg "Dados em gráfico de linha")](/images/levelweb-grafico-de-linha.jpg)
 
 ## Configuração
 

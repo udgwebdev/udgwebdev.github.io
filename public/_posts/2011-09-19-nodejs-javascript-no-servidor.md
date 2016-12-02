@@ -1,4 +1,4 @@
-![Node.js - Javascript no servidor](../images/nodejs-logo.jpg "Node.js - Javascript no servidor")
+![Node.js - Javascript no servidor](/images/nodejs-logo.jpg "Node.js - Javascript no servidor")
 
 A tecnologias para web estão cada vez mais inovando com frameworks para desenvolvimento ágil e de forma escalável. O Node.js é um exemplo disso. Ele é framework web server-side para linguagem Javascript, isso mesmo! Javascript no servidor.
 
@@ -33,7 +33,7 @@ Abaixo segue um código simples, um **Hello World** em **Node.js**:
 Em breve farei mais posts explorando essa incrível tecnologia. Enquanto isso listarei abaixo alguns links úteis para estudo:
 
 *   [Node.js Site oficial](http://nodejs.org/ "Site Oficial do Node.js")
-*   [Livro Aplicações web real-time com Node.js](https://casadocodigo.refersion.com/l/630.1389 "Livro Aplicações web real-time com Node.js")
+*   [Livro Aplicações web real-time com Node.js](https://www.casadocodigo.com.br/products/livro-nodejs "Livro Aplicações web real-time com Node.js")
 *   [Nettuts Plus](http://net.tutsplus.com/tutorials/javascript-ajax/this-time-youll-learn-node-js/ "Nettuts Plus - Node.js")
 *   [How To Node](http://howtonode.org/ "Blog How to Node")
 *   [Node Tuts Screencast](http://nodetuts.com/ "NodeTuts Screencasts")

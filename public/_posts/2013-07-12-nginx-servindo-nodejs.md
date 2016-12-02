@@ -1,4 +1,4 @@
-![Node.js e Nginx](../images/nodejs-nginx.jpg "Node.js e Nginx")
+![Node.js e Nginx](/images/nodejs-nginx.jpg "Node.js e Nginx")
 
 Nesse post falarei um pouco mais sobre a união entre Node.js e Nginx, mostrando as vantagens desse casamento e como implementar essa dupla corretamente.
 
@@ -77,14 +77,14 @@ Vamos criar o arquivo `nginx.html` dentro da pasta `/meuapp/public/static`, para
 
 Pronto! Criamos uma aplicação em Node.js que utiliza o Express, para rodá-lo, instale primeiro: `npm install express --save`
 Agora execute: `node app.js`.
-Acesse no seu browser: `http://localhost:3000` e clique em ambos os links. Veja dessa vez os logs registraram acessos nas rotas: `/node` e `/nginx.html`. [![Node.js servindo arquivo estático](../images/node-logger-sem-nginx-static-small.jpg)](../images/node-logger-sem-nginx-static.jpg)
+Acesse no seu browser: `http://localhost:3000` e clique em ambos os links. Veja dessa vez os logs registraram acessos nas rotas: `/node` e `/nginx.html`. [![Node.js servindo arquivo estático](/images/node-logger-sem-nginx-static-small.jpg)](/images/node-logger-sem-nginx-static.jpg)
 
-[](../images/node-logger-sem-nginx-static.jpg)
+[](/images/node-logger-sem-nginx-static.jpg)
 
 Isto é normal, visto que até agora o Node.js esta servindo arquivo estático e o Nginx não esta rodando seu **proxy server** por um motivo: você está acessando diretamente o servidor Node.js através da porta 3000.
 
 Agora que temos o Nginx configurado, que tal testar essa integração? Reinicie o Nginx através do comando: `nginx -s reload`. E acesse sua aplicação através do novo endereço: `http://localhost`.
 
-[![Nginx servindo arquivo estático](../images/node-logger-com-nginx-static-small.jpg)](../images/node-logger-com-nginx-static.jpg)
+[![Nginx servindo arquivo estático](/images/node-logger-com-nginx-static-small.jpg)](/images/node-logger-com-nginx-static.jpg)
 
 Dessa vez o seu log da aplicação Node.js vai apenas registrar acessos na rota `/node`, deixando que a rota `/nginx.html` seja acessada pelo Nginx.

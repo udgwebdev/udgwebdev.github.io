@@ -1,8 +1,8 @@
-![Compartilhando Session entre Express e Socket.IO](../images/express-socketio.jpg "Compartilhando Session entre Express e Socket.IO")
+![Compartilhando Session entre Express e Socket.IO](/images/express-socketio.jpg "Compartilhando Session entre Express e Socket.IO")
 
 ### Atenção
 
-Esse post esta utilizando versões antigas do Express e Socket.IO, **caso queira aplicar essa técnica nas versões Express 4 e Socket.IO 1.0**, recomendo que leiam esse post: [Criando um chat usando session do Express 4 no Socket.IO 1.0]({{site.url}}/criando-um-chat-usando-session-do-express-4-no-socket-io-1-0/ "Criando um chat usando session do Express 4 no Socket.IO 1.0").
+Esse post esta utilizando versões antigas do Express e Socket.IO, **caso queira aplicar essa técnica nas versões Express 4 e Socket.IO 1.0**, recomendo que leiam esse post: [Criando um chat usando session do Express 4 no Socket.IO 1.0](/criando-um-chat-usando-session-do-express-4-no-socket-io-1-0/ "Criando um chat usando session do Express 4 no Socket.IO 1.0").
 
 Irei compartilhar uma dica muito útil, pelo qual levei muitos dias quebrando a cabeça para fazer essa técnica funcionar! Se você utiliza Socket.IO e Express juntos, esse tutorial vai te ajudar a manter mais seguro o seu sistema, compartilhando Sessions do Express com Socket.IO ao invés de aderir a ~~gambiarras~~ soluções paliativas.
 

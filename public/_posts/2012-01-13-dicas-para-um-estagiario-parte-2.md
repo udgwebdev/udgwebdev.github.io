@@ -1,8 +1,8 @@
-![Vida de estagiário](../images/estagiarios.jpg)
+![Vida de estagiário](/images/estagiarios.jpg)
 
 Dando continuidade neste tema, irei continuar apresentando algumas dicas para você estagiário não ser apenas um “estagiário” qualquer e sim um aprendiz que deseja se torna um profissional e seguir uma carreira em uma empresa.
 
-Se você ainda não leu, recomendo que leia também a [primeira parte desse post](../dicas-para-um-estagiario-parte-1 "Dicas para um estagiário - Parte 1").
+Se você ainda não leu, recomendo que leia também a [primeira parte desse post](/dicas-para-um-estagiario-parte-1 "Dicas para um estagiário - Parte 1").
 
 1.  **Seja dedicado:** ter dedicação pelo que faz será a melhor maneira de construir uma carreira prazerosa e isso só atrairá coisas positivas para você. Praticar a empatia com os integrantes da equipe será um diferencial, além de garantir um ambiente agradavél de se trabalhar. Demonstrar pró-atividade nas tarefas e respeitar a todos será fundamental para garantir um bom trabalho, conquistar credibilidade e respeito dos demais.
 2.  **Humildade:** essa dica independente de qual área você exerce, é essencial para todo profissional, principalmente para você que esta começando no mercado de trabalho. Saiba que quando você começar a produzir para a empresa eles irão aumentar o seu ritmo e a demanda de tarefas. Se em algum momento você cometer um erro, dependendo do grau do erro, por ser estagiário você poderá na maioria dos casos ser absolvido, mas é claro que irá ouvir umas boas broncas, mas mantenha-se humildade diante dessas situações, pois saiba que você não será o dono da razão e demonstrar arrogância irá prejudicá-lo completamente. Saiba que alguns casos você terá que engolir cru muitas broncas e ou problemas no trabalho, mas também saiba que manter humilde perante essas situações irá te salvar em muitos casos. Resumindo seja humilde, mas jamais aceite ser humilhado, pois há uma grande diferença entre ambos.

@@ -1,4 +1,4 @@
-[![Getup Cloud](../images/getup-cloud.jpg "Getup Cloud")](http://getupcloud.com/?utm_source=udgwebdev&utm_medium=cadastro&utm_campaign=promo%20code%20ugwebdev "Getup Cloud") 
+[![Getup Cloud](/images/getup-cloud.jpg "Getup Cloud")](http://getupcloud.com/?utm_source=udgwebdev&utm_medium=cadastro&utm_campaign=promo%20code%20ugwebdev "Getup Cloud") 
 
 Nos últimos dias usei bastante o [Getup Cloud](http://getupcloud.com/?utm_source=udgwebdev&utm_medium=cadastro&utm_campaign=promo%20code%20ugwebdev "Getup Cloud"), uma empresa brasileira de PaaS - Platform as a Service - e minha experiência ao usá-lo e principalmente o suporte me motivou a divulgar um pouco sobre essa startup.
 

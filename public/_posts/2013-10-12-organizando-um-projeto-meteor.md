@@ -1,4 +1,4 @@
-[![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
+[![Meteor](/images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
 Uma dúvida muito recorrente para os iniciantes da plataforma Meteor, é sobre como organizar os diretórios do projeto.
 Acredito que muitos que começaram, se depararam com este problema. Afinal a documentação oficial não explica muito claro esses detalhes. Mas graças a [documentação não-oficial](https://github.com/oortcloud/unofficial-meteor-faq) aprendi as convenções desse framework, que são boas práticas para desenvolvimento de projeto de larga-escala. Hoje explicarei o significado das conveções de diretórios do Meteor.

@@ -1,10 +1,10 @@
-![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](/images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 ### Atenção
 
-As dicas desse post **são baseadas em uma versão antiga do Express 3.x**, porém os conceitos desse framework continuam intactos! Caso queira se **atualizar com o que há de novo na versão Express 4.x**, recomendo que leia esse post: [Primeiros passos com Express 4]({{site.url}}/primeiros-passos-com-express-4 "Primeiros passos com Express 4").
+As dicas desse post **são baseadas em uma versão antiga do Express 3.x**, porém os conceitos desse framework continuam intactos! Caso queira se **atualizar com o que há de novo na versão Express 4.x**, recomendo que leia esse post: [Primeiros passos com Express 4](/primeiros-passos-com-express-4 "Primeiros passos com Express 4").
 
-Após explicar um pouco sobre a [API HTTP nativa do node.js](../node-js-para-leigos-trabalhando-com-http "Node.js para leigos – Trabalhando com HTTP"), percebemos que ela não é apropriada para desenvolvimento de aplicações complexas, visto que todo gerenciamento de rotas e outros recursos desse módulo são tratados de maneira bem básica, sendo necessário aplicar diversos comandos **ifs e fors** para tratá-los.
+Após explicar um pouco sobre a [API HTTP nativa do node.js](/node-js-para-leigos-trabalhando-com-http "Node.js para leigos – Trabalhando com HTTP"), percebemos que ela não é apropriada para desenvolvimento de aplicações complexas, visto que todo gerenciamento de rotas e outros recursos desse módulo são tratados de maneira bem básica, sendo necessário aplicar diversos comandos **ifs e fors** para tratá-los.
 
 Vendo essa problema surgiram diversos web-frameworks e micro-frameworks, visando melhorar essas carências, trazendo mais produtividade no desenvolvimento de sistemas. O framework que irei apresentar, se chama [Express](http://expressjs.com/ "ExpressJS"), que foi inspirado pelo framework [Sinatra](http://www.sinatrarb.com/ "Sinatra") do Ruby.
 
@@ -35,7 +35,7 @@ Obs.: Irei usar em todos os exemplos códigos da **versão estável 2.x.x do Exp
    res.send('Hello World');
  });
  app.listen(3000);
-``` 
+```
 
 Esse exemplo mostra de forma mais enxuta uma simples aplicação sendo executada na **rota raíz '/'**. Não há muito segredo ou dicas para se passar com isso, mas aprofundando mais a nossa aplicação, irei criar mais rotas e algumas configurações relevantes para ele.
 
@@ -68,7 +68,7 @@ Esse exemplo mostra de forma mais enxuta uma simples aplicação sendo executada
    res.redirect('/');
  });
  app.listen(3000);
-``` 
+```
 
 Agora criamos um simples cadastro de clientes, em que estamos renderizando de forma básica um formulário HTML que abaixo dele aparece uma lista com os clientes cadastrados. Todos os dados são armazenados **In-Memory**, ou seja, estamos usando um simples array para controlar todos os registros, em outros posts aplicarei exemplos utilizando banco de dados com Node.js.
 
@@ -76,9 +76,11 @@ Na prática esse exemplo funciona e de comandos novos do Express, apenas cito o 
 
 O `express.bodyParser()` é uma função que facilita a construção de objetos JSON apartir de uma submissão de dados de um formulário html, ele simplesmente monta um objeto apartir dos valores do campo **name**, em que o campo **name** cria um objeto e atributos e o campo **value** insere valores nesses objetos.
 
-Na prática ao submeter a tag: ``` html
+Na prática ao submeter a tag:
+
+``` html
  <input type='text' name='cliente[nome]' value='Caio'>
-``` 
+```
 
 Faz o `express.bodyParser();` executar um parser desses valores criando o objeto JSON: `cliente.nome` com valor `'Caio'`. E para utilizar esse objeto você acessa através do `request.body.(nome do objeto)`, no nosso exemplo ele se encontra através da função `req.body.cliente`. A boa prática é sempre criar `objeto[atributo]`,
 
@@ -141,7 +143,7 @@ Complicando mais a nossa aplicação, que tal adicionarmos novas funcionalidades
    res.redirect('/');
  });
  app.listen(3000);
-``` 
+```
 
 Pronto agora sim, criamos um cadastro completo de clientes! Alguns detalhes em destaque para explicar...
 
@@ -155,7 +157,7 @@ Pronto agora sim, criamos um cadastro completo de clientes! Alguns detalhes em d
    var nome = req.query.nome; // valor: caio
    res.send('Cliente '+id+': '+nome);
  });
-``` 
+```
 
 `app.use(express.methodOverride())`: essa função que esta dentro do `app.configure`, permite que sua aplicação faça sobrescrita de rotas que utilizem métodos HTTP diferentes. Repare no código da nossa aplicação que a maioria das rotas possuem o mesmo nome, por exemplo a rota: `'/cliente/:id'`, porém são usadas em diferentes funções que vão entre o `get(), post(), put() e del()` que são as funções do **HTTP (GET, POST, PUT e DELETE)** essa é uma boa prática para quem pretende desenvolver aplicações que seguem o padrão [REST](http://pt.wikipedia.org/wiki/REST "Entendendo o cocento REST") que é muito utilizado na construção de **WebServices**.
 

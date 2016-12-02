@@ -1,4 +1,4 @@
-![TDD (Test Driven Development)](../images/TDD.jpg "TDD (Test Driven Development)")
+![TDD (Test Driven Development)](/images/TDD.jpg "TDD (Test Driven Development)")
 
 ## Sobre o TDD
 
@@ -8,7 +8,7 @@ Isso traz benefícios de garantia de que o seu código terá métodos claros e q
 
 Existem diversos frameworks especializados em testes unitários para cada linguagem de programação, principalmente para linguagens do paradigma orientado à objetos.
 
-![Ciclo de desenvolvimento do TDD](../images/ciclo-do-tdd.jpg "Ciclo de desenvolvimento do TDD")
+![Ciclo de desenvolvimento do TDD](/images/ciclo-do-tdd.jpg "Ciclo de desenvolvimento do TDD")
 
 O ciclo de desenvolvimento **TDD** consiste em três etapas:
 

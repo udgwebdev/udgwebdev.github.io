@@ -1,4 +1,4 @@
-![Seja livre use Linux!](../images/gnu-linux.jpg)
+![Seja livre use Linux!](/images/gnu-linux.jpg)
 
 Sou usuário linux desde o começo de 2011, pois por motivos profissionais fui obrigado a aprender na unha, um pouco sobre terminal, pois no meu trabalho utilizo MacOS X, que é uma excelente plataforma para desenvolvimento e multimídia, porém, como meu mundo não é perfeito, atualmente não estou financeiramente bem para ter uma das maravilhas Apple, e nisso surgiu a necessidade de instalar o Linux em meu notebook. Já havia utilizado Ubuntu desde a versão 8.04, porém eu nunca permanecia mais do que um mês usando Linux, isso porque eu só tinha a velha visão de usuário que só sabe gerenciar sistema através de interface gráfica.
 

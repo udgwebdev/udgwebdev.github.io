@@ -1,4 +1,4 @@
-![Compartilhando Session entre Express e Socket.IO](../images/socket-io.jpg "Socket.IO com Redis")
+![Compartilhando Session entre Express e Socket.IO](/images/socket-io.jpg "Socket.IO com Redis")
 
 Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a [documentação nos ensina](http://socket.io/#how-to-use), ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca, que por default é utilizado o **MemoryStore** (sessão em memória).
 

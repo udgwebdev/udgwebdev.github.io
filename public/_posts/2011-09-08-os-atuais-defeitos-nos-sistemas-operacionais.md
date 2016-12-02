@@ -1,4 +1,4 @@
-![Linux x Windows x Mac](../images/garoto-linux-windows-mac.jpg)
+![Linux x Windows x Mac](/images/garoto-linux-windows-mac.jpg)
 
 Apesar da minha opinião em defesa do Linux, neste post, não irei fazer nenhuma propaganda para usá-lo e sim, levando em consideração vários aspectos, falarei sobre os defeitos que cada um dos sistemas atuais mais utilizados possuem e espero que você leitor tente ponderar cada um desses defeitos.
 

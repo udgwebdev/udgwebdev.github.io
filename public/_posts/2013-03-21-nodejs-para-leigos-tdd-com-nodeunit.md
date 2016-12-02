@@ -1,4 +1,4 @@
-![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](/images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Olá pessoal! O assunto de hoje será sobre desenvolvimento de testes automatizados com Node.js. O objetivo aqui é apresentar as características do framework Nodeunit, explicando um pouco também sobre TDD (Test Driven-Development) mais conhecido como desenvolvimento orientado a testes, que é uma das boas práticas da metodologia agíl.
 
@@ -6,7 +6,7 @@ Antes de falar do Nodeunit, temos que entender como funciona o conceito de TDD. 
 
 Isso traz benefícios de garantia de que o seu código terá métodos claros e que funcionarão corretamente, pois se cria os casos de testes, depois elabora o código baseado no design do métodos que foram escritos nos testes. Isso te forçará a pensar mais sobre a implementação do seu código, na cobertura dos testes de falhas e no comportamento das regras de negócio. Outra vantagem é que se no futuro ocorrer uma manutenção naquela classe testada, os testes unitários informarão se a mudança no código sofrerá bugs com base nos casos de testes que falharam, fazendo com que o programador aplique as correções preventivas o quanto antes.
 
-![Ciclo de desenvolvimento do TDD](../images/ciclo-do-tdd.jpg "Ciclo de desenvolvimento do TDD")
+![Ciclo de desenvolvimento do TDD](/images/ciclo-do-tdd.jpg "Ciclo de desenvolvimento do TDD")
 
 Este ciclo consiste em três etapas:
 
@@ -106,7 +106,7 @@ Para rodarmos o teste, o código **cliente.js** precisa estar acima da pasta **t
 
 Se todos os testes passarem, será listado em seu terminal o nome dos testes marcado de verde semelhante a essa imagem:
 
-[![Caso de sucesso nos testes](../images/tdd-caso-de-sucesso-small.jpg "Caso de sucesso nos testes")](../images/tdd-caso-de-sucesso.jpg "Caso de sucesso nos testes")
+[![Caso de sucesso nos testes](/images/tdd-caso-de-sucesso-small.jpg "Caso de sucesso nos testes")](/images/tdd-caso-de-sucesso.jpg "Caso de sucesso nos testes")
 
 Esse framework possui muitas funcionalidades úteis que vale a pena estudar a fundo para montar um ambiente de testes em seu projeto Node.js. Lembrando que esse foi um exemplo com apenas um framework, e hoje já existem novos frameworks de testes para Node.js, para melhores detalhes segue abaixo os links:
 
@@ -116,7 +116,7 @@ Esse framework possui muitas funcionalidades úteis que vale a pena estudar a fu
 *   [Expresso](http://visionmedia.github.com/expresso/ "Github do Expresso")
 *   [Chai](http://chaijs.com/ "Github do Chai")
 
-Bom esse foi o último episódio da série [Node.js para leigos](../nodejs "Node.js para leigos"), espero que tenham gostado dessa iniciativa, galera compartilhem os links desse mini-curso.
+Bom esse foi o último episódio da série [Node.js para leigos](/nodejs "Node.js para leigos"), espero que tenham gostado dessa iniciativa, galera compartilhem os links desse mini-curso.
 
 Tive dificuldades em manter a disciplina de escrever periodicamente os posts e por isso peço desculpas pelos atrasos ocorridos nas etapas finais dessa série, pois realmente não foi fácil, mas consegui!
 

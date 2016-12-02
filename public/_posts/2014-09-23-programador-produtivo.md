@@ -1,4 +1,4 @@
-![Programador Produtivo](../images/programador-produtivo.jpg "Programador Produtivo")
+![Programador Produtivo](/images/programador-produtivo.jpg "Programador Produtivo")
 
 Esse é um post de dicas simples de se fazer que vão exigir de você apenas algumas mudanças de hábito que visa trazer como resultado, mais produtividade em seu dia-a-dia de programador.
 Espero que gostem e se você já pratica algumas dessas dicas ou quer recomendar algum bom hábito não citado aqui comente no final do post!

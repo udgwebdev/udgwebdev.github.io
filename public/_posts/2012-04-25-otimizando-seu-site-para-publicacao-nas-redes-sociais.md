@@ -1,4 +1,4 @@
-![Redes sociais](../images/redes-sociais.jpg "Redes sociais")
+![Redes sociais](/images/redes-sociais.jpg "Redes sociais")
 
 Hoje vou mostrar uma dica bem bacana para quem precisa divulgar de forma customizada seu próprio site ou blog nas redes sociais.
 

@@ -1,4 +1,4 @@
-![Validations com Rails](../images/rails-logo.jpg "Validations com Rails")
+![Validations com Rails](/images/rails-logo.jpg "Validations com Rails")
 
 Para quem já programa com Ruby On Rails, sabe o quão produtivo ele torna o desenvolvedor. O framework possui uma semântica e expressividade incrível, fazendo com que até os menos experientes na área tenha uma curva de aprendizado rápida. Irei apresentar alguns recursos interessantes do Rails para realizar validações em um determinado modelo. Você verá que é muito fácil programar em Rails, pois te economizará muitas linhas de códigos comparado com outras linguagens de mercado.
 

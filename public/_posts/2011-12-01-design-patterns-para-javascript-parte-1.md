@@ -1,4 +1,4 @@
-![Javascript Desing Pattenrs](../images/javascript-logo.jpg "Javascript Desing Pattenrs")
+![Javascript Desing Pattenrs](/images/javascript-logo.jpg "Javascript Desing Pattenrs")
 
 Começarei a partir de hoje uma série de posts relacionado a Design Pattern (Padrões de Projeto) para Javascript.
 

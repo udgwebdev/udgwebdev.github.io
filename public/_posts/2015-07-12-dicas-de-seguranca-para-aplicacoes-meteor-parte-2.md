@@ -1,6 +1,6 @@
-![Meteor](../images/meteor-logo.jpg "Meteor")
+![Meteor](/images/meteor-logo.jpg "Meteor")
 
-Dando continuidade ao post [Dicas de segurança para aplicações Meteor]({{site.url}}/dicas-de-seguranca-para-aplicacoes-meteor "Dicas de segurança para aplicações Meteor"), apresentarei mais algumas dicas de fácil implementação e que vão manter sua aplicação Meteor blindada!
+Dando continuidade ao post [Dicas de segurança para aplicações Meteor](/dicas-de-seguranca-para-aplicacoes-meteor "Dicas de segurança para aplicações Meteor"), apresentarei mais algumas dicas de fácil implementação e que vão manter sua aplicação Meteor blindada!
 
 ## Utilize corretamente o fields do MongoDB
 
@@ -13,7 +13,7 @@ Se você criar um `Meteor.publish` é de extrema importância que a query a ser 
      {fields: {name: 1, description: 1}}
    );
  });
-``` 
+```
 
 Neste caso quando o cliente executar `Meteor.subscribe("profile")`, toda execução de query do minimongo retornará um `Meteor.user` somente com os atributos `name` e `description`. Isso vai evitar por exemplo que essa query não vaze outros atributos sensíveis no client-side da aplicação.
 
@@ -31,7 +31,7 @@ Jamais deixe dados de configurações em código JavaScript, por mais que seja e
      }
    }
  );
-``` 
+```
 
 Ao invés de deixar esses campos de chaves secretas expostos no código JavaScript, utilize o padrão `Meteor.settings`. Para usá-lo é muito simples. Primeiro crie na raíz do seu projeto o arquivo `settings.json`, esse também pode ser criado com outro nome e também é possível ter múltiplos arquivos desse, cada um voltado para um ambiente da aplicação, exemplo: `settings.development.json`, `settings.staging.json` e `settings.production.json`. No nosso caso prático vamos apenas trabalhar com `settings.json`:
 
@@ -45,7 +45,7 @@ Ao invés de deixar esses campos de chaves secretas expostos no código JavaScri
      "appName": "My app"
    }
  }
-``` 
+```
 
 Neste `settings.json` você só precisa organizá-lo da seguinte maneira: Tudo que estiver dentro do atributo `"public"` será exposto no client-side, o resto somente será visualizado no server-side da aplicação. Para consumir os dados desse `settings.json` você pode usar o objeto `Meteor.settings` no server-side e `Meteor.settings.public` no client-side. Refatorando o código anterior, você pode fazer algo mais organizado seguindo esse código:
 
@@ -54,12 +54,12 @@ Neste `settings.json` você só precisa organizá-lo da seguinte maneira: Tudo q
    { service: "twitter" },
    { $set: Meteor.settings.twitter }
  );
-``` 
+```
 
 Para rodar sua aplicação já carregando os dados do arquivo `settings.json`, apenas execute o comando:
 
 ``` bash
  meteor --settings=settings.json
-``` 
+```
 
-Veja mais posts sobre [Meteor aqui]({{site.url}}/meteor). See ya!
+Veja mais posts sobre [Meteor aqui](/meteor). See ya!

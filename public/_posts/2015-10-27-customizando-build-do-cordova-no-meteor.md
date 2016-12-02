@@ -1,4 +1,4 @@
-![Customizando Build do Cordova no Meteor](../images/meteor-logo.jpg "Customizando Build do Cordova no Meteor")
+![Customizando Build do Cordova no Meteor](/images/meteor-logo.jpg "Customizando Build do Cordova no Meteor")
 
 Se você estiver construindo um mobile app para Android utilizando Meteor com Cordova, talvez em algum momento, possa surgir a necessidade de você sobreescrever ou customizar o build do cordova em sua aplicação.
 Para este caso, é possível fazer um override, extendendo funcionalidades de build do cordova criando na raíz do projeto a pasta `cordova-build-override`, pelo qual será responsável por sobreescrever qualquer arquivo default do build mobile.

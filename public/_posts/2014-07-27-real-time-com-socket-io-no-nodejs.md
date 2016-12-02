@@ -1,4 +1,4 @@
-![Real-time com Socket.IO](../images/socket-io.jpg "Real-time com Socket.IO")
+![Real-time com Socket.IO](/images/socket-io.jpg "Real-time com Socket.IO")
 
 Que tal implementar um simples contador de visitas que apresenta em **tempo real** o número de visitantes online, e seu respectivo browser e sistema operacional em seu site?
 
@@ -83,6 +83,6 @@ Para testar esse app, basta rodar o comando:
 
 Em seguida acesse em vários browsers ou abas do mesmo browser (para simular múltiplos usuários acessando o site) o endereço: **http://localhost:3000**
 
-Esta foi uma simples demonstração do poder real-time oferecido pelo [Node.js]({{site.url}}/nodejs) com **Socket.IO**.
+Esta foi uma simples demonstração do poder real-time oferecido pelo [Node.js](/nodejs) com **Socket.IO**.
 
 Para melhores referências, recomendo que estude a fundo o Socket.IO através de seu site oficial: [http://socket.io](http://socket.io/ "Site oficial do Socket.io")

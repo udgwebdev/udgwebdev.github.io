@@ -1,4 +1,4 @@
-![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](/images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Hoje estudaremos um assunto muito interessante em que no Node.js sua manipulação é simples de aprender e sua utilização é de extrema importância. Falarei sobre manipulação de processos do sistema operacional, através da API nativa chamada: **Child Process**.
 
@@ -18,7 +18,7 @@ Na prática, compartilhar memória entre processos seria basicamente compartilha
  exec('pwd', function(error, stdout, stderr){
    console.log(stdout);
  });
-``` 
+```
 
 Para quem não sabe, o **comando pwd é exclusivo dos sistemas UNIX**, e ele apenas informa o diretório atual que o usuário esta acessando. Repare também que a função callback do comando exec, retorna obrigatoriamente 3 variáveis: **error, stdout e stderr**. Respetivamente elas significam: **erro de execução (lança uma exceção), mensagem de saída, mensagem de erro.**
 
@@ -31,7 +31,7 @@ Para quem não sabe, o **comando pwd é exclusivo dos sistemas UNIX**, e ele ape
  pwd.stdout.on('data', function(data){
    console.log(data);
  });
-``` 
+```
 
 Neste exemplo, executamos o mesmo comando, porém fazendo um spawn de processos. A grande diferença entre **exec e spawn**, é que o exec faz uma execução simples e o spawn possui funções e eventos mais completos para realizar uma execução complexa de processos. É necessário informar o encoding no método **setEncoding()** para a variável **data** retornar uma String, **senão será retornado um objeto Buffer**. Outro detalhe é que o spawn possui as funções: **stdout, stderr, stdin, kill e pid**.
 
@@ -47,7 +47,7 @@ Todas elas funcionam através dos eventos: **on(‘data’), on(‘exit’), on(
  pwd.stdout.on('data', function(data){
    console.log(data)
  });
-``` 
+```
 
 Com isso, podemos cria aplicações que utilizem programas ou comandos do sistema operacional. Para finalizar, mostrarei uma simples aplicação de logger em tempo real, que basicamente faz um spawn de processos, executando o comando **tail -f** de um arquivo de logs gerado por uma outra aplicação.
 
@@ -74,7 +74,9 @@ Para executar esse código, execute primeiro o comando:
  app.listen(3000, function(){
    console.log('Hello world running...');
  });
-``` ``` javascript
+```
+
+``` javascript
  // log.js
  var spawn = require('child_process').spawn
    , tail = spawn('tail', ['-f', './app.log']);
@@ -82,7 +84,7 @@ Para executar esse código, execute primeiro o comando:
  tail.stdout.on('data', function(data){
    console.log(data);
  });
-``` 
+```
 
 Abra dois consoles: um para executar o comando a aplicação web: `node app.js)` e no outro inicie a aplicação de logger: `node log.js`.
 

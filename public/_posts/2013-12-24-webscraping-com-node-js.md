@@ -1,4 +1,4 @@
-![WebScraping com Node.js](../images/web-scraping.jpg "WebScraping com Node.js")
+![WebScraping com Node.js](/images/web-scraping.jpg "WebScraping com Node.js")
 
 WebScraping para quem não conhece, é uma **técnica em que se extrai dados dentro de um documento, geralmente, documento HTML.**
 Primeiro você analisa a estrutura de uma página para identificar padrões de dados que deseja extrair e em seguida faz um scraping disso.

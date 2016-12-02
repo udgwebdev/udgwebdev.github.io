@@ -1,4 +1,4 @@
-![Node.js](../images/nodejs-logo.jpg "Node.js")
+![Node.js](/images/nodejs-logo.jpg "Node.js")
 
 Andei estudando um pouco mais sobre DSLs para **Node.js** e descobri que existem **3 maneiras de trabalhar com Node.js** e que visa facilitar que programadores de outras linguagens se adaptem facilmente nessa plataforma.
 
@@ -18,7 +18,7 @@ Por padrão **Node.js** compila código **Javascript** que é a sua **DSL nativa
  );
  server.listen(4000);
  console.log('Hello World executando em http://localhost:4000');
-``` 
+```
 
 #### CoffeeScript
 
@@ -31,7 +31,7 @@ Se você adora trabalhar com uma síntaxe mais enxuta, inspirada nas linguagens 
    res.end 'Hello, World!'
  .listen 4000
  console.log 'Hello World executando em http://localhost:4000'
-``` 
+```
 
 #### HaxeNode
 
@@ -39,7 +39,20 @@ Confesso que essa DSL me surpreendeu, totalmente nova e veio com intuito de cati
 
 De fato, com ele você conseguirá utilizar **Generics, Tipagem forte de variáveis, Enumerators, declaração e pacotamento de classes, Iterators, Classes Inline e Interfaces.** Para finalizar segue abaixo um exemplo de Hello World feito com HaxeNode:
 
-{% highlight java%} import js.Node; class Hello { public static function main() { var server = Node.http.createServer(function(req:NodeHttpServerReq, res:NodeHttpServerResp){ res.setHeader("Content-Type","text/plain"); res.writeHead(200); res.end('Hello World\n'); }); server.listen(4000,"localhost"); trace('Hello World executando em http://127.0.0.1:1337/'); } }
+``` java
+import js.Node;
+class Hello {
+  public static function main() {
+    var server = Node.http.createServer(function(req:NodeHttpServerReq, res:NodeHttpServerResp) {
+      res.setHeader("Content-Type","text/plain");
+      res.writeHead(200);
+      res.end('Hello World\n');
+    });
+    server.listen(4000,"localhost");
+    trace('Hello World executando em http://127.0.0.1:1337/');
+  }
+}
+```
 
 #### Referências
 

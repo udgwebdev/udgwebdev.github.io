@@ -1,4 +1,4 @@
-![Quer aprender Node.js?](../images/nodejs-logo.jpg "Quer aprender Node.js?")
+![Quer aprender Node.js?](/images/nodejs-logo.jpg "Quer aprender Node.js?")
 
 Atualizando um antigo post do blog, hoje recomendarei para os entusiastas e evangelistas excelentes slides, cursos, fóruns, blogs, podcasts e screencasts pra te dar um pontapé inicial no mundo Node.js que esta cada vez mais conquistando novos projetos e desenvolvedores.
 
@@ -7,7 +7,7 @@ Atualizando um antigo post do blog, hoje recomendarei para os entusiastas e evan
 *   [Codeschool - Real-time web with Node.js](http://www.codeschool.com/courses/real-time-web-with-nodejs "Codeschool - Real-time web with Node.js")
 *   [Node.js by Edukee](http://www.edukee.com/pt/curso/nodejs "Node.js by Edukee")
 *   [How to code - Aprenda Node.js](http://howtocode.com.br/cursos/nodejs "How to code - Aprenda Node.js")
-*   [Underground WebDev - Node.js para leigos]({{site.url}}/nodejs "Underground WebDev - Node.js para leigos")
+*   [Underground WebDev - Node.js para leigos](/nodejs "Underground WebDev - Node.js para leigos")
 *   [Tuts+ Courses - Introduction to Node.js](https://tutsplus.com/course/introduction-to-node-js/ "Tuts+ Courses - Introduction to Node.js")
 *   [Tuts+ Courses - Building web apps in Node and Express](https://tutsplus.com/course/building-web-apps-in-node-and-express/ "Tuts+ Courses - Building web apps in Node and Express")
 
@@ -46,4 +46,4 @@ Atualizando um antigo post do blog, hoje recomendarei para os entusiastas e evan
 *   [GrokPodcast - Node.js Parte 2](http://www.grokpodcast.com/2011/02/24/episodio-20-node-js-parte-2/ "GrokPodcast Node.js Parte 2")
 *   [GrokPodcast - Node.js Parte 3](http://www.grokpodcast.com/2011/03/03/episodio-21-node-js-parte-3/ "GrokPodcast Node.js Parte 3")
 
-Bom, não recomendei livros nesta atualização, pois muita coisa mudou recentemente no Node.js e praticamente não encontrei livros atualizados para recomendação neste post, [mas em breve isso irá mudar!](../livro-de-nodejs "Livro: Aplicações web real-time com Node.js") Eae quer aprender Node.js? Bons estudos!
+Bom, não recomendei livros nesta atualização, pois muita coisa mudou recentemente no Node.js e praticamente não encontrei livros atualizados para recomendação neste post, [mas em breve isso irá mudar!](/nodejs "Livro: Aplicações web real-time com Node.js") Eae quer aprender Node.js? Bons estudos!

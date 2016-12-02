@@ -1,4 +1,4 @@
-![Plataforma Java](../images/java-logo.jpg "Plataforma Java")
+![Plataforma Java](/images/java-logo.jpg "Plataforma Java")
 
 Bom a partir desse post irei começar mais uma área de recomendação de livros e ou apostilas para dar a você leitor uma estrutura completa de aprendizado sobre alguma tecnologia de mercado.
 Irei apresentar algumas recomendações básicas de grande importância para te prepará-lo a programar com Java.
@@ -21,19 +21,19 @@ A melhor e mais completa instituição de ensino tanto para Java quanto para out
 
 **Boas recomendações de livros:**
 
-[![Programação Java Para Web.](../images/livro-java-web.jpg)](http://www.novatec.com.br/livros/javaparaweb/)
+[![Programação Java Para Web.](/images/livro-java-web.jpg)](http://www.novatec.com.br/livros/javaparaweb/)
 
 Livro completíssimo, pois aborda todos os principais conceitos do desenvolvimento web. Com este livro você aprenderá os seguintes frameworks de mercado: JSP, JSF, Hibernate, JDBC, Tomcat e muito mais. O livro aborda do começo ao fim essas tecnologias aplicando na prática um estudo de caso de uma aplicação financeira.
 
-[![Google Android 2° Edição.](../images/livro-de-android.jpg)](http://www.novatec.com.br/livros/googleand2/)
+[![Google Android 2° Edição.](/images/livro-de-android.jpg)](http://www.novatec.com.br/livros/googleand2/)
 
 Para quem curte aplicação mobile, esse livro ensinará todas as técnicas para o desenvolvimento da plataforma que mais cresce no mercado - Android.
 
-[![Desenvolvendo Aplicações Web com JSP e JSTL](../images/livro-jsp-jstl.jpg)](http://www.novatec.com.br/livros/jspejstl/)
+[![Desenvolvendo Aplicações Web com JSP e JSTL](/images/livro-jsp-jstl.jpg)](http://www.novatec.com.br/livros/jspejstl/)
 
 Livro totalmente especializado em programação dinâmica no front-end, ele ensina todos os métodos para programar com as tecnologias JSP e JSTL, tirando o máximo aproveito delas.
 
-[![Java Efetivo 2° Edição.](../images/livro-java-efetivo.jpg)](http://www.livrariasaraiva.com.br/produto/2624886/java-efetivo-2-ed/)
+[![Java Efetivo 2° Edição.](/images/livro-java-efetivo.jpg)](http://www.livrariasaraiva.com.br/produto/2624886/java-efetivo-2-ed/)
 
 Direto dos autores da linguagem, este livro apresenta todos as técnicas e padrões de otimização de código com a linguagem Java, essencial para pessoas avançadas ou que desejam se tornar uma.
 

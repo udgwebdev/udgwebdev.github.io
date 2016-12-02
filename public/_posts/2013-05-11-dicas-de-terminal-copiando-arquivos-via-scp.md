@@ -1,4 +1,4 @@
-![Terminal Console Linux](../images/terminal-console-linux.jpg)
+![Terminal Console Linux](/images/terminal-console-linux.jpg)
 
 Fala galera! Hoje venho com novas dicas, especificamente sobre como copiar arquivos via **SCP (Secure Copy Protocol)**. Para quem não sabe, SCP é um protocolo que permite copiar arquivos entre um servidor SSH e uma máquina local. Para funcionar o comando **scp** é necessário que já tenha configurado uma conexão SSH com um servidor remoto, feito isso, veja os exemplos na prática abaixo:
 
@@ -13,4 +13,4 @@ Copiando pastas e subpastas do servidor remoto para máquina local:
 Enviando pastas e subpastas da máquina local para o servidor remoto:
 `scp -r /pasta-local/ user@domain:/pasta-remota/`
 
-É isso ae pessoal! Até a próxima com mais [dicas de terminal](../dicas-de-terminal "Dicas de terminal").
+É isso ae pessoal! Até a próxima com mais [dicas de terminal](/dicas-de-terminal "Dicas de terminal").

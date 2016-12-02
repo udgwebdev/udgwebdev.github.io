@@ -1,6 +1,6 @@
-![Terminal Console Linux](../images/terminal-console-linux.jpg)
+![Terminal Console Linux](/images/terminal-console-linux.jpg)
 
-Depois de um bom tempo sem [dicas de terminal](../dicas-de-terminal "Dicas de terminal"), eis que volta das cinzas essa categoria com um novo post, pelo qual a dica será bastante útil no seu dia-a-dia, basicamente é um script que procura pastas e subpastas repetições de um determinado arquivo e em seguida apaga-os, isso ocorre através da combinação do comando `find` + `rm`.
+Depois de um bom tempo sem [dicas de terminal](/dicas-de-terminal "Dicas de terminal"), eis que volta das cinzas essa categoria com um novo post, pelo qual a dica será bastante útil no seu dia-a-dia, basicamente é um script que procura pastas e subpastas repetições de um determinado arquivo e em seguida apaga-os, isso ocorre através da combinação do comando `find` + `rm`.
 
 O comando é basicamente esse:
 
@@ -22,4 +22,4 @@ No meu caso, estou usando esse comando para apagar o maldito arquivo chato `.DS_
 
 Dessa forma esse comando vai procurar e apagar todos os `.DS_Store` existentes nas subpastas, com base na pasta atual (Pois usei o `find .` para referenciar a pasta atual) que eu rodar esse comando.
 
-Veja também outras [dicas de terminal](../dicas-de-terminal "Dicas de terminal").
+Veja também outras [dicas de terminal](/dicas-de-terminal "Dicas de terminal").

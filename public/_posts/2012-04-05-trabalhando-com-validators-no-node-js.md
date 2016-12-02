@@ -1,4 +1,4 @@
-![Validators no Node.js](../images/nodejs-logo.jpg "Validators no Node.js")
+![Validators no Node.js](/images/nodejs-logo.jpg "Validators no Node.js")
 
 Trabalhar com validators é algo muito importante no desenvolvimento de uma aplicação web, pois ele mantém o projeto organizado e padronizado, evitando a utilização de comandos **if e else** como validadores de dados.
 

@@ -1,6 +1,6 @@
-![Meteor](../images/meteor-logo.jpg "Meteor")
+![Meteor](/images/meteor-logo.jpg "Meteor")
 
-Veja nesse post bons motivos para você aprender [Meteor]({{site.url}}/meteor) agora!
+Veja nesse post bons motivos para você aprender [Meteor](/meteor) agora!
 
 ## Fullstack JavaScript
 
@@ -16,7 +16,7 @@ Este é um framework focado em prototipagem rápida, ou seja, você passará mai
 
 ## Mobile ready
 
-Desde a versão 1.0, o [Meteor]({{site.url}}/meteor) fez uma integração inteligente com o Cordova (que também é utilizado pelo Phonegap). Isso permitiu que em poucas configurações você desenvolva aplicações mobile híbridas. [Basta criar sua webapp e em poucos comandos, você consegue fazer um build do front-end da aplicação para Android e ou iOS](https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration). E também você pode utilizar plugins do phonegap em seu app meteor.
+Desde a versão 1.0, o [Meteor](/meteor) fez uma integração inteligente com o Cordova (que também é utilizado pelo Phonegap). Isso permitiu que em poucas configurações você desenvolva aplicações mobile híbridas. [Basta criar sua webapp e em poucos comandos, você consegue fazer um build do front-end da aplicação para Android e ou iOS](https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration). E também você pode utilizar plugins do phonegap em seu app meteor.
 
 ## Realtime e reativo por default
 
@@ -28,10 +28,10 @@ Você pode lançar uma versão beta ou staging de [sua aplicação através da i
 
 ## Framework Front-end flexível
 
-O [Meteor]({{site.url}}/meteor) possui um front-end flexível, ou seja, não necessariamente você precisa trabalhar com o framework default Blaze, se você quiser, você pode [facilmente substituí-lo pelo Angular ou React](http://info.meteor.com/blog/comparing-performance-of-blaze-react-angular-meteor-and-angular-2-with-meteor), que são frameworks frontend populares.
+O [Meteor](/meteor) possui um front-end flexível, ou seja, não necessariamente você precisa trabalhar com o framework default Blaze, se você quiser, você pode [facilmente substituí-lo pelo Angular ou React](http://info.meteor.com/blog/comparing-performance-of-blaze-react-angular-meteor-and-angular-2-with-meteor), que são frameworks frontend populares.
 
 ## Tem seu próprio package manager
 
-Apesar do [Meteor]({{site.url}}/meteor) ser escrito em [Node.js]({{site.url}}/nodejs), ele possui seu próprio package manager, oficialmente conhecido pelo nome [Atmosphere](http://atmospherejs.com/). Com uma lista grande de componentes prontos para você incluir em seus apps de forma simples e fácil. E você também pode utilizar módulos do NPM, desde que esses módulos sejam compatíveis com o contexto do [Meteor]({{site.url}}/meteor).
+Apesar do [Meteor](/meteor) ser escrito em [Node.js](/nodejs), ele possui seu próprio package manager, oficialmente conhecido pelo nome [Atmosphere](http://atmospherejs.com/). Com uma lista grande de componentes prontos para você incluir em seus apps de forma simples e fácil. E você também pode utilizar módulos do NPM, desde que esses módulos sejam compatíveis com o contexto do [Meteor](/meteor).
 
-Gostou desse posts? Conheça [6 cases Meteor made in Brazil]({{site.url}}/6-cases-meteor-made-in-brazil) e veja mais posts sobre [Meteor aqui]({{site.url}}/meteor). See ya!
+Gostou desse posts? Conheça [6 cases Meteor made in Brazil](/6-cases-meteor-made-in-brazil) e veja mais posts sobre [Meteor aqui](/meteor). See ya!

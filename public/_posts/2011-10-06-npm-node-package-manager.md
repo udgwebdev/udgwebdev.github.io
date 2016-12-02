@@ -1,4 +1,4 @@
-![NPM - Node Package Manager](../images/npm.jpg "NPM - Node Package Manager")
+![NPM - Node Package Manager](/images/npm.jpg "NPM - Node Package Manager")
 
 Continuando mais um post sobre meus estudos com o Node.js, hoje apresentarei um aplicativo muito útil para gerenciar módulos.
 

@@ -1,4 +1,4 @@
-[![DevInSantos](../images/devinsantos.png "DevInSantos")](http://www.devinsantos.com.br/)
+[![DevInSantos](/images/devinsantos.png "DevInSantos")](http://www.devinsantos.com.br/)
 
 Eae pessoal, blz!! Hoje venho aqui falar um pouco sobre um evento bacana para desenvolvedores, estou falando 5° encontro de desenvolvedores da baixada santista, o [DevInSantos](http://www.devinsantos.com.br/).
 

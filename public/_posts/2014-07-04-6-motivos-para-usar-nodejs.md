@@ -1,4 +1,4 @@
-![6 Motivos para usar Node.js](../images/nodejs-logo.jpg "6 Motivos para usar Node.js")
+![6 Motivos para usar Node.js](/images/nodejs-logo.jpg "6 Motivos para usar Node.js")
 
 Entenda nesse post as 6 vantagens sobre por que vale a pena estudar e usar Node.js
 
@@ -9,4 +9,4 @@ Entenda nesse post as 6 vantagens sobre por que vale a pena estudar e usar Node.
 5.  **Ready for real-time:** O Node.js ficou popular graças aos seus frameworks que interagem em real-time entre cliente e servidor. [SockJS](https://github.com/sockjs), [Socket.IO](https://github.com/Automattic/socket.io), [Engine.IO](https://github.com/automattic/engine.io) são alguns exemplos disso. Eles são compatíveis com o novo protocolo WebSockets e permitem trafegar dados através de uma única conexão bi-direcional, tratando as mensagens via eventos no JavaScript.
 6.  **Big players usando:** [LinkedIn](https://engineering.linkedin.com/nodejs/blazing-fast-nodejs-10-performance-tips-linkedin-mobile), [Wallmart](http://venturebeat.com/2012/01/24/why-walmart-is-using-node-js/), [Groupon](http://www.datacenterknowledge.com/archives/2013/12/06/need-speed-groupon-migrated-node-js/), [Microsoft](http://techcrunch.com/2013/11/21/microsoft-launches-node-js-tools-for-visual-studio/) e [Paypal](https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/) são algumas das empresas usando Node.js atualmente, e tem mais [um monte de outras empresas e aplicações neste link](https://github.com/joyent/node/wiki/Projects%2C-Applications%2C-and-Companies-Using-Node).
 
-Veja também os [8 motivos para estudar Ruby On Rails](../8-motivos-para-estudar-ruby-on-rails "8 motivos para estudar Ruby On Rails"). See ya folks, até o próximo post! :)
+Veja também os [8 motivos para estudar Ruby On Rails](/8-motivos-para-estudar-ruby-on-rails "8 motivos para estudar Ruby On Rails"). See ya folks, até o próximo post! :)

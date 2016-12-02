@@ -1,4 +1,4 @@
-![Terminal Console Linux](../images/terminal-console-linux.jpg)
+![Terminal Console Linux](/images/terminal-console-linux.jpg)
 
 Fala galera! Acabei tirando férias aqui neste blog, mas hoje volto com uma nova dica de terminal muito útil para quem trabalha com administração de redes. Hoje vou mostrar como visualizar todas os processos ativos que estão utilizando alguma porta da rede.
 Para realizar esta tarefa é necessário instalar o nmap **(Network Mapper)** que faz um port scan em qualquer máquina da rede. Algo muito útil para verificar quais aplicativos utilizam a rede e principalmente se existe algum vírus ou bot infectando as máquinas de uma rede.
@@ -32,4 +32,4 @@ Para conhecer mais utilidades dessa poderosa ferramenta, digite:
  nmap -h
 ``` 
 
-Veja também outras [dicas de terminal](../dicas-de-terminal "Dicas de terminal").
+Veja também outras [dicas de terminal](/dicas-de-terminal "Dicas de terminal").

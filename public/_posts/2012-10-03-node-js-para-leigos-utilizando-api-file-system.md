@@ -1,4 +1,4 @@
-![Curso de Node.js](../images/nodejs-para-leigos.jpg "Curso de Node.js")
+![Curso de Node.js](/images/nodejs-para-leigos.jpg "Curso de Node.js")
 
 Fala galera!! Realmente precisei do mês de setembro para resolver outras pendências, e isso me impossibilitou de continuar o mini-curso, mas enfim, vamos ao que interessa. Hoje o assunto será mais light, será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional - **[File System](http://nodejs.org/api/fs.html "Node.js File System API")**.
 
@@ -15,7 +15,7 @@ Uma das vantagens dessa API e também de muitas outras nativas do Node.js é a p
  // A mesma função, executada de forma Bloqueante.
  var files = fs.readdirSync("/home/user");
  console.log(files);
-``` 
+```
 
 Como disse antes e volto a afirmar, para se tirar melhor proveito do **processamento I/O do servidor**, é recomendado trabalhar com funções **não-bloqueantes**, afinal, pensem comigo no seguinte cenário: é criado um sistema em Node.js para realizar **upload intensivo de arquivos**, com isso se utilizar **métodos bloqueantes (métodos síncronos)**, quando houver um erro de leitura ou escrita dos arquivos o sistema todo irá travar, já a utilização dos **métodos não-bloqueantes** garantirão um **processamento assíncrono**, fazendo com que qualquer erro não trave o sistema inteiro e permitirá que os demais usuários utilizem normalmente o sistema. Outro detalhe neste cenário é que a resposta será mais rápida para os usuários, afinal o **processamento será feito em background**, semelhante as requisições [AJAX](http://pt.wikipedia.org/wiki/AJAX_(programa%C3%A7%C3%A3o) "Wiki AJAX").
 
@@ -69,7 +69,9 @@ Vou mostrar em código, um exemplo bacana, uma galeria de fotos, nela o usuário
  app.listen(3000, function() {
    console.log('Galeria de fotos em execucao...');
  });
-``` ``` javascript
+```
+
+``` javascript
  // index.jade
  !!! 5
  html
@@ -97,6 +99,6 @@ Vou mostrar em código, um exemplo bacana, uma galeria de fotos, nela o usuário
        each foto, i in fotos
          .foto
            img(src='/#{foto}', width='240', height='120', border='0', alt='#{foto}')
-``` 
+```
 
-Pronto e feito! Esse foi mais um capítulo do [Curso Node.js para leigos](../nodejs), espero que tenham gostado desse artigo, e para melhores detalhes sobre o File System, segue o link da documentação: [http://nodejs.org/api/fs.html](http://nodejs.org/api/fs.html "Node.js File System API"). See you on my next post!
+Pronto e feito! Esse foi mais um capítulo do [Curso Node.js para leigos](/nodejs), espero que tenham gostado desse artigo, e para melhores detalhes sobre o File System, segue o link da documentação: [http://nodejs.org/api/fs.html](http://nodejs.org/api/fs.html "Node.js File System API"). See you on my next post!

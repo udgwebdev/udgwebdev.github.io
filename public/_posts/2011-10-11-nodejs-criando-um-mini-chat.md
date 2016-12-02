@@ -1,4 +1,4 @@
-![Node.js - Criando Mini-chat via Telnet](../images/nodejs-logo.jpg "Node.js - Criando Mini-chat via Telnet")
+![Node.js - Criando Mini-chat via Telnet](/images/nodejs-logo.jpg "Node.js - Criando Mini-chat via Telnet")
 
 Continuando os estudos sobre Node.js, hoje apresentarei um simples tutorial para desenvolver um mini-chat rodando via [telnet](http://pt.wikipedia.org/wiki/Telnet "Telnet"), para executá-lo através do protocolo TCP/IP.
 
@@ -57,7 +57,7 @@ Abaixo apresentarei passo-a-passo o tutorial, lembrando que o próprio código e
 
 Para iniciar, será necessário instalar o módulo [Carrier](https://github.com/pgte/carrier "Node JS Carrier."), que irá ajudá-lo a gerenciar os múltiplos envios dos clientes para o servidor, separando-os linha a linha cada envio.
 
-Via comando [NPM](../npm-node-package-manager/ "NPM – Node Package Manager") instale esse módulo:
+Via comando [NPM](/npm-node-package-manager/ "NPM – Node Package Manager") instale esse módulo:
 
 ``` bash
  npm install carrier

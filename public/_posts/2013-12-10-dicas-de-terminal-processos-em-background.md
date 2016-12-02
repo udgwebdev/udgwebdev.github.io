@@ -1,4 +1,4 @@
-![Terminal Console Linux](../images/terminal-console-linux.jpg)
+![Terminal Console Linux](/images/terminal-console-linux.jpg)
 
 De vez enquando rodar aplicativos em background é vantajoso, pois possibilita no terminal **executar N processos em paralelo**, outra vantagem é que libera o terminal para executar outras tarefas.
 
@@ -28,4 +28,4 @@ Este comando permite salvar toda saída dos processos em background sejam enviad
  nohup [COMANDO] > ./saida.log &
 ``` 
 
-Veja também outras [dicas de terminal](../dicas-de-terminal "Dicas de terminal").
+Veja também outras [dicas de terminal](/dicas-de-terminal "Dicas de terminal").

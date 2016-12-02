@@ -1,6 +1,6 @@
-![Node.js](../images/nodejs-logo.jpg "Node.js")
+![Node.js](/images/nodejs-logo.jpg "Node.js")
 
-Dando [continuidade ao post anterior](../modulos-essenciais-para-nodejs-parte-1), apresentarei mais alguns essenciais módulos do Node.js. Afinal eles serão de grande utilidade para você no decorrer do desenvolvimento de sua aplicação com Node.js. Veja abaixo quem são:
+Dando [continuidade ao post anterior](/modulos-essenciais-para-nodejs-parte-1), apresentarei mais alguns essenciais módulos do Node.js. Afinal eles serão de grande utilidade para você no decorrer do desenvolvimento de sua aplicação com Node.js. Veja abaixo quem são:
 
 #### Mocha
 

@@ -1,10 +1,10 @@
-[![Meteor](../images/meteor-logo.jpg "Meteor")](http://meteor.com) 
+[![Meteor](/images/meteor-logo.jpg "Meteor")](http://meteor.com) 
 
-Depois de um [post de introdução sobre Meteor](../introducao-sobre-meteor "Introdução sobre Meteor"), iremos neste post aprender na prática, os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor.
+Depois de um [post de introdução sobre Meteor](/introducao-sobre-meteor "Introdução sobre Meteor"), iremos neste post aprender na prática, os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor.
 
 Construiremos um simples micro-blog, semelhante ao twitter, em que as **atualizações da timeline pública serão em real-time**. Outro detalhe faremos essa aplicação utilizando os conceitos básicos do Meteor, ou seja, não entraremos em detalhes com boas práticas e organizações de código (afinal esse será assunto para um próximo post), o projeto será criado com apenas **3 arquivos (1 HTML, 1 CSS e 1 Javascript)**.
 
-Bom vamos começar? Instale o Meteor é super simples, para ele funcionar é necessário ter o Node e MongoDB instalado primeiro, caso não tenha o Node.js, veja nesse post: [Node.js para leigos instalação e configuração](../node-js-para-leigos-instalacao-e-configuracao "Node.js para leigos - Instalação e configuração") como instalá-lo e sobre o MongoDB recomendo que acesse seu site oficial e leia o [manual de instalação MongoDB](http://docs.mongodb.org/manual/installation/ "MongoDB Installation Guides").
+Bom vamos começar? Instale o Meteor é super simples, para ele funcionar é necessário ter o Node e MongoDB instalado primeiro, caso não tenha o Node.js, veja nesse post: [Node.js para leigos instalação e configuração](/node-js-para-leigos-instalacao-e-configuracao "Node.js para leigos - Instalação e configuração") como instalá-lo e sobre o MongoDB recomendo que acesse seu site oficial e leia o [manual de instalação MongoDB](http://docs.mongodb.org/manual/installation/ "MongoDB Installation Guides").
 
 **Atenção: O Meteor ainda não possui versão compatível com Windows, somente Mac, Linux e Unix. Este problema será resolvido apartir da versão 1.0, [prevista para o começo de 2014](http://www.meteor.com/blog/2013/10/01/geoff-schmidt-at-devshop-8-getting-meteor-to-10).**
 

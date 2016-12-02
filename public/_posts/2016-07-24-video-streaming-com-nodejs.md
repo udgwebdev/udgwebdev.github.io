@@ -1,4 +1,4 @@
-![Video Streaming com Node.js](../images/nodejs-logo.jpg "Video Streaming com Node.js")
+![Video Streaming com Node.js](/images/nodejs-logo.jpg "Video Streaming com Node.js")
 
 Streaming de videos é algo muito comum nos dias de hoje, afinal quem é que não conhece Netflix, Vimeo ou pelo menos Youtube? (E o Redtube e XVideos? hahahaha) Em geral o que todos esses sites tem em comum é que possuem servidores que realizam streaming de video.
 

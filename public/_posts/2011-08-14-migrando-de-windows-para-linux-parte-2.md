@@ -1,4 +1,4 @@
-![Migrando definitivamente para Linux](../images/mingrando-de-windows-para-linux.jpg)
+![Migrando definitivamente para Linux](/images/mingrando-de-windows-para-linux.jpg)
 
 Dando continuidade ao post, apresentarei mais alguns excelentes softwares livre, que além de ser totalmente de graça, possuem funcionalidades tão boas quanto as versões existentes para a plataforma windows.
 
@@ -18,4 +18,4 @@ Na prática nós usuários Linux possui uma certa vantagem sobre segurança, poi
 *   [Firestarter:](http://www.fs-security.com/ "Firestarter") Possui uma interface gráfica simples e intuitiva, recomendado para iniciantes e possui as funcionalidades essenciais de um firewall.
 *   [Firewall Builder:](http://www.fwbuilder.org/ "Firewall Builder") Este é um firewall que possui características de um firewall completo, recomendado para qualquer nível de usuário, pois o mesmo permite configurar regras básicas até regras avançadas porque ele herda a maioria das funcionalidades do IPTables.
 
-Mais uma vez, obrigado pela leitura e dúvidas, sugestões ou críticas, comente abaixo! Em breve continuarei com a terceira parte desse post, se você ainda não leu a primeira parte [clique aqui.](../migrando-de-windows-para-linux-parte-1 "Migrando de Windows para Linux – Parte 1")
+Mais uma vez, obrigado pela leitura e dúvidas, sugestões ou críticas, comente abaixo! Em breve continuarei com a terceira parte desse post, se você ainda não leu a primeira parte [clique aqui.](/migrando-de-windows-para-linux-parte-1 "Migrando de Windows para Linux – Parte 1")
