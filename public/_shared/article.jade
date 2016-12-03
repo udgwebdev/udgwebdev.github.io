@@ -8,3 +8,19 @@ article.col-xs-12.col-sm-9(class="#{type}" id="#{slug}")
   != yield
   if type === "post"
     != partial("disqus")
+    script(type="application/ld+json").
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "#{title}",
+        "image": "#{root_url[environment]}images/#{feature_image || main_image}",
+        "publisher": "#{blog_name}",
+        "url": "#{root_url[environment] + slug}",
+        "datePublished": "#{created_at.replace(/([\d]{2})\/([\d]{2})\/([\d]{4})/, '$3-$2-$1')}",
+        "dateCreated": "#{created_at.replace(/([\d]{2})\/([\d]{2})\/([\d]{4})/, '$3-$2-$1')}",
+        "description": "#{description}",
+        "author": {
+          "@type": "Person",
+          "name": "#{author}"
+        }
+      }

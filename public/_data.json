@@ -428,18 +428,6 @@
     "created_at": "24/02/2015",
     "type": "post"
   },
-  "5-ebooks-nodejs-do-leanpub": {
-    "title": "5 ebooks Node.js do Leanpub",
-    "tags": [
-      "Node.js"
-    ],
-    "published": true,
-    "description": "Neste post você verá um mini review de 5 bons ebooks para se baixar no Leanpub sobre Node.js.",
-    "feature_image": "leanpub.jpg",
-    "slug": "5-ebooks-nodejs-do-leanpub",
-    "created_at": "20/02/2015",
-    "type": "post"
-  },
   "organizando-uma-aplicacao-nodejs": {
     "title": "Organizando aplicações Node.js",
     "tags": [
@@ -897,18 +885,6 @@
     "feature_image": "speakerdeck-meteor.jpg",
     "slug": "meteor-um-overview-sobre-a-plataforma",
     "created_at": "26/11/2013",
-    "type": "post"
-  },
-  "evento-devinsantos": {
-    "title": "Evento DevInSantos",
-    "tags": [
-      "SouDev"
-    ],
-    "description": "Eae pessoal, blz!! Hoje venho aqui falar um pouco sobre um evento bacana para desenvolvedores, estou falando 5° encontro de desenvolvedores da baixada santista, o DevInSantos.",
-    "published": true,
-    "feature_image": "devinsantos.png",
-    "slug": "evento-devinsantos",
-    "created_at": "19/11/2013",
     "type": "post"
   },
   "modulos-essenciais-para-nodejs-parte-2": {
