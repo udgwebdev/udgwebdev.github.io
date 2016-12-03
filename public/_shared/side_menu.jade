@@ -6,7 +6,7 @@ aside.sidemenu.col-xs-12.col-sm-3
         - var tagPath = tag.title.toLowerCase().replace(/\s/g, '-').replace(/\./g, '');
         - var menuPath = featured_tags.includes(tagPath) ? '/' : '/menu/#';
         li <a href="#{menuPath}#{tagPath}" rel="me" title="#{tag.title}"><i class="fa fa-folder-open"></i>&nbsp;#{tag.title} (#{tag.total})</a>
-  hr
+  hr.hidden-xs
   section.hidden-xs
     h2.h4 <i class="fa fa-users"></i>&nbsp;Conheça também
     ul
