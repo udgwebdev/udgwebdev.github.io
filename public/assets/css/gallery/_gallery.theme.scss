@@ -1,0 +1,61 @@
+@import "variables";
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+
+.gallery {
+	position: relative;
+
+  .item {
+		height: auto;
+		overflow: hidden;
+		text-align: center;
+
+		img {
+			border: 1px solid rgba(50,50,50,0.3);
+		}
+	}
+	.controls {
+		width: 100%;
+		text-align: center;
+	}
+
+	.control-button {
+		i {
+			color: $second-color;
+			opacity: 0.5;
+		}
+		display: inline-block;
+		margin: 5px .3em .3em;
+		font-size: 1.5em;
+
+		@extend %inactive-button;
+
+		text-align: center;
+		text-decoration: none;
+		transition: color .1s;
+
+		&:hover { @extend %active-button; }
+	}
+}
+
+@media (max-width: 480px) {
+	.gallery {
+		.item img {
+			width: 50% !important;
+			max-width: 50% !important;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.gallery {
+		.item img {
+			width: 35% !important;
+			max-width: 35% !important;
+			margin: 0 auto;
+		}
+	}
+}

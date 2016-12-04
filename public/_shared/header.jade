@@ -8,15 +8,10 @@ nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
       a.navbar-brand(href="/")
         img.navbar-logo(src="/images/#{main_image}" alt="#{blog_name}" width="48")
     .navbar-right.navbar-collapse.collapse
-      ul.nav.navbar-nav.hidden-xs
+      ul.nav.navbar-nav
         li <a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a>
         li <a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a>
         li <a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a>
-      ul.nav.navbar-nav.visible-xs
-        each tag in public.menu._data.index.tags
-          - var tagPath = tag.title.toLowerCase().replace(/\s/g, '-').replace(/\./g, '');
-          - var menuPath = featured_tags.includes(tagPath) ? '/' : '/menu/#';
-          li <a href="#{menuPath}#{tagPath}" rel="me" title="#{tag.title}"><i class="fa fa-code"></i>&nbsp;Posts sobre #{tag.title} (#{tag.total})</a>
 nav.c-circle-menu.js-menu(role="navigation")
   button.c-circle-menu__toggle.js-menu-toggle
     span Toggle

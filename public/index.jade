@@ -1,5 +1,8 @@
 - var index = 0
+!= partial("_shared/side_menu_left")
 section.col-xs-12.col-sm-9
+  hr.visible-xs
+  h2.h4.text-center <i class="fa fa-code"></i>&nbsp;Posts do blog
   input.read-more-state#read-more(type="checkbox")
   .read-more-wrap
     each post in public._data
@@ -11,4 +14,4 @@ section.col-xs-12.col-sm-9
           span.text-muted Publicação: <time datetime="#{created_at}" pubdate>#{post.created_at}</time> #{post.redirected_to ? '| Via: ' + post.redirected_to : ''}<br>
           span #{post.description}
   label.btn.btn-lg.btn-primary.read-more-trigger(for="read-more") Ver todos os posts
-!= partial("_shared/side_menu")
+!= partial("_shared/side_menu_right")
