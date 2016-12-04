@@ -85,11 +85,12 @@
 </code></pre>
 <p>Neste código temos dois detalhes interessantes a citar, primeiro é a constante global chamada <strong>__dirname</strong> que retona uma string referente ao endereço raíz da aplicação, é uma variável muito útil, pois através dela podemos referenciar pastas e arquivos internos.</p>
 <p>Outro detalhe é o método <strong>fs.readFile()</strong>, repare que o resultado da leitura do <strong>arquivo index.html</strong> é enviado via <strong>função de callback</strong>, ou seja através da <strong>function(erro, html) que é um parâmetro da função fs.readFile()</strong>, na prática diversos módulos trabalham dessa forma no Node.js, pois o retorno de resultados através de funções callbacks são tratados de forma assíncrona <strong>(característica principal do Javascript)</strong> e isso é algo muito interessante pois permite tratar a execução das rotinas da aplicação de forma paralela, e isso você usará frequentemente no Node.js. Alguns módulos apresentam em suas documentações duas alternativas de trabalhar com uma mesma função, são elas conhecidas como <strong>execução síncrona e assíncrona.</strong> Sempre que puder <strong>utilize as versões assíncronas</strong> em seus projetos, pois as <strong>execuções assíncronas são mais perfomáticas</strong> e normalmente <strong>não bloqueiam</strong> a execução de outras <strong>rotinas síncronas</strong> do seu sistema, mesmo quando ocorrem problemas durante suas execuções.</p>
-<p>Por hoje é só galera, passei o básico e essencial guia de sobrevivência Node.js com protocolo HTTP, espero que tenham gostado, se surgir dúvidas, problemas ou sugestões, comentem abaixo ou entrem em contato comigo, ok? Até a próxima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Por hoje é só galera, passei o básico e essencial guia de sobrevivência Node.js com protocolo HTTP, espero que tenham gostado, se surgir dúvidas, problemas ou sugestões, comentem abaixo ou entrem em contato comigo, ok? Até a próxima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/node-js-para-leigos-trabalhando-com-http';
+  this.page.identifier = 'node-js-para-leigos-trabalhando-com-http';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

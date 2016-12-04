@@ -29,11 +29,12 @@ Para demonstrar um exemplo simples de NoSQL Injection veja o código abaixo:</p>
 </code></pre>
 <p>Esse padrão permite que seu app acesse qualquer url e qualquer url scheme, e consequentemente isso pode gerar possíveis brechas de segurança em seu app.
 Hey! Esse post tem continuação: <a href="/dicas-de-seguranca-para-aplicacoes-meteor-parte-2">Dicas de segurança para aplicações Meteor - Parte 2</a>.</p>
-<p><strong>Fonte:</strong> <a href="http://www.1pxsolidtomato.com/2015/04/06/nosql-injection-or-always-check-your-arguments/">NoSQL Injection - Or, Always Check Your Arguments!</a></p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p><strong>Fonte:</strong> <a href="http://www.1pxsolidtomato.com/2015/04/06/nosql-injection-or-always-check-your-arguments/">NoSQL Injection - Or, Always Check Your Arguments!</a></p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/dicas-de-seguranca-para-aplicacoes-meteor';
+  this.page.identifier = 'dicas-de-seguranca-para-aplicacoes-meteor';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

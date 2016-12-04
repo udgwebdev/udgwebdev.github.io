@@ -55,11 +55,12 @@
 <li>Abra um novo console para executar um cliente e execute o comando: <code>telnet [IP] [Porta]</code>, por exemplo: <code>telnet 127.0.0.1 4000</code></li>
 <li>E brinque com o chat iniciando uma conversa entre dois consoles telnet.</li>
 </ol>
-<p>Espero que tenham gostado e nos próximos posts mostrarei mais exemplos práticos explorando essa tecnologia. Obrigado e até a próxima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Espero que tenham gostado e nos próximos posts mostrarei mais exemplos práticos explorando essa tecnologia. Obrigado e até a próxima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/nodejs-criando-um-mini-chat';
+  this.page.identifier = 'nodejs-criando-um-mini-chat';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

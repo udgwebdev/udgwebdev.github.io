@@ -52,11 +52,12 @@ Caso você precise informar um endereço específico de um servidor Redis extern
  });
 </code></pre>
 <p>Com esse upgrade implementado o seu sistema vai rodar perfeitamente em clusters, sem causar bugs no controle de session, pois as sessions serão compartilhadas entre os clusters existentes.</p>
-<p>Outro ponto forte é que sua aplicação consumirá menos memória, afinal a memória dedicada para as Sessions foi delegada para o Redis, e este banco mantém em curtos períodos os dados da Session em disco.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Outro ponto forte é que sua aplicação consumirá menos memória, afinal a memória dedicada para as Sessions foi delegada para o Redis, e este banco mantém em curtos períodos os dados da Session em disco.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/socket-io-com-redis';
+  this.page.identifier = 'socket-io-com-redis';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

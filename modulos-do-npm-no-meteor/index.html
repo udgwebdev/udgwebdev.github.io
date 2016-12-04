@@ -21,11 +21,12 @@ Para resolver esse problema execute essas funções assíncronas como callback d
  });
  console.log(result);</code> </p>
 <p>Para finalizar, quando for fazer deploy para produção, utilize o <a href="http://blog.modulus.io/demeteorizer" title="Demeteorizer">Demeteorizer</a> para que ele envie os módulos do Node via <code>meteor bundle</code>.
-Com essas dicas em ação você terá +40000 módulos disponíveis para sua aplicação Meteor.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+Com essas dicas em ação você terá +40000 módulos disponíveis para sua aplicação Meteor.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/modulos-do-npm-no-meteor';
+  this.page.identifier = 'modulos-do-npm-no-meteor';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

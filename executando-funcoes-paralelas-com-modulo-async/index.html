@@ -47,11 +47,12 @@
 <a href="/images/async-vs-parallel.png" title="Resultado do benchmark: async vs parallel"><img src="/images/async-vs-parallel-small.png" alt="Resultado do benchmark: async vs parallel"></a></p>
 <p><a href="/images/async-vs-parallel.png" title="Resultado do benchmark: async vs parallel"></a></p>
 <p><strong>Conclusão:</strong> Sempre que puder, otimize processamento de suas funções no Node.js utilizando o módulo <a href="https://github.com/caolan/async" title="Github do async">async</a> via função <code>async.paralell</code> para obter um ganho em performance.
-<strong>Observação:</strong> Um detalhe bacana que o <a href="https://disqus.com/by/ItacirPompeu/">Itacir Pompeu</a> comentou abaixo é que esse módulo <a href="https://github.com/caolan/async" title="Github do async">async</a> também pode ser usado no client-side de uma aplicação.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<strong>Observação:</strong> Um detalhe bacana que o <a href="https://disqus.com/by/ItacirPompeu/">Itacir Pompeu</a> comentou abaixo é que esse módulo <a href="https://github.com/caolan/async" title="Github do async">async</a> também pode ser usado no client-side de uma aplicação.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/executando-funcoes-paralelas-com-modulo-async';
+  this.page.identifier = 'executando-funcoes-paralelas-com-modulo-async';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

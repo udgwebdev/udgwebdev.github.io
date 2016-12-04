@@ -13,11 +13,12 @@
 <pre><code class="language-bash"> alias ds_clear=&quot;find . -name &#39;.DS_Store&#39; -exec rm {} \;&quot;
 </code></pre>
 <p>Dessa forma esse comando vai procurar e apagar todos os <code>.DS_Store</code> existentes nas subpastas, com base na pasta atual (Pois usei o <code>find .</code> para referenciar a pasta atual) que eu rodar esse comando.</p>
-<p>Veja também outras <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Veja também outras <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/deletando-arquivos-repetitivos-no-terminal';
+  this.page.identifier = 'deletando-arquivos-repetitivos-no-terminal';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

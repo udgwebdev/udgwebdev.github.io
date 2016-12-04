@@ -11,11 +11,12 @@ Mais fácil ainda é se você for configurar tudo isso no serviço Travis-CI.</p
  script:
  - &quot;meteor --test --once&quot;
 </code></pre>
-<p>Após criar esse arquivo, recomendo que crie uma conta ou use uma conta existente do <a href="http://travis-ci.org">TravisCI</a> (é necessário ter uma conta e repositório no <a href="https://github.com">Github</a> para usar esse serviço). Ao acessá-lo, basta incluir o repositório que deseja executar builds e em seguida basta enviar novos commits no projeto, para automaticamente executar os builds.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Após criar esse arquivo, recomendo que crie uma conta ou use uma conta existente do <a href="http://travis-ci.org">TravisCI</a> (é necessário ter uma conta e repositório no <a href="https://github.com">Github</a> para usar esse serviço). Ao acessá-lo, basta incluir o repositório que deseja executar builds e em seguida basta enviar novos commits no projeto, para automaticamente executar os builds.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/configurando-meteor-e-velocity-no-travis-ci';
+  this.page.identifier = 'configurando-meteor-e-velocity-no-travis-ci';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

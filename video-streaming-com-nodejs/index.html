@@ -69,11 +69,12 @@
    &lt;/body&gt;
  &lt;/html&gt;
 </code></pre>
-<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 será renderizado no seu browser, permitindo que você visualize o filme que você incluir no seu servidor. Até a próxima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 será renderizado no seu browser, permitindo que você visualize o filme que você incluir no seu servidor. Até a próxima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/video-streaming-com-nodejs';
+  this.page.identifier = 'video-streaming-com-nodejs';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

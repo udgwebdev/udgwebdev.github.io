@@ -27,11 +27,12 @@ Outro detalhe mais legal, é que é possível deixar algumas das principais perg
 <p>Com isso, praticamente você nem terá mais que responder as principais perguntas, pois elas já serão pré-definidas pelos valores existentes no <code>~/.npmrc</code>, tanto é que elas são acessadas magicamente pela função <code>config.get(&#39;nome-de-uma-key&#39;)</code>.</p>
 <p>Agora se você criar um novo projeto e rodar o comando <code>npm init</code> você terá um resultado semelhante a este:</p>
 <p><a href="/images/npm-init.png"><img src="/images/npm-init-small.png" alt="Clique na imagem para ampliar" title="Clique na imagem para ampliar"></a></p>
-<p>See you in the next post!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>See you in the next post!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/customizando-npm-init';
+  this.page.identifier = 'customizando-npm-init';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Sun, 04 Dec 2016 20:09:57 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 04 Dec 2016 20:09:57 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Acelerando comando dd no MacOS]]></title><description><![CDATA[Se você possui um mac e já tentou clonar uma distro linux para um cartão sd via comando dd e percebeu que demorava muito para fazer isso, veja nesse post uma simples solução que vai deixar 20x mais rápida a execução desse comando.]]></description><link>https://udgwebdev.com/acelerando-comando-dd-no-macos</link><guid isPermaLink="true">https://udgwebdev.com/acelerando-comando-dd-no-macos</guid><category><![CDATA[Dicas de terminal]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 15 Nov   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[Dualboot no raspberry com berryboot]]></title><description><![CDATA[Neste post, explicarei como configurar um sistema gerenciador de boot muito foda, chamado BerryBoot, que vai permitir instalar múltiplos sistemas de forma muito fácil.]]></description><link>https://udgwebdev.com/dualboot-no-raspberry-com-berryboot</link><guid isPermaLink="true">https://udgwebdev.com/dualboot-no-raspberry-com-berryboot</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 11 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Criando um media center com Raspberry Pi]]></title><description><![CDATA[Veja nesse post como montar um media center completo capaz de ver canais abertos do mundo inteiro, além de fazer torrent streaming usando OSMC e um Raspberry Pi.]]></description><link>https://udgwebdev.com/criando-um-media-center-com-raspberry-pi</link><guid isPermaLink="true">https://udgwebdev.com/criando-um-media-center-com-raspberry-pi</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 06 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Dicas para conquistar um bom trampo em TI]]></title><description><![CDATA[Algumas dicas são simples de se começar a fazer agora mesmo, e espero que elas te ajudem, principalmente para você que esta começando na área de TI.]]></description><link>https://udgwebdev.com/dicas-para-conquistar-um-bom-trampo-de-ti</link><guid isPermaLink="true">https://udgwebdev.com/dicas-para-conquistar-um-bom-trampo-de-ti</guid><category><![CDATA[Profissão]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 02 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Deletando arquivos repetitivos pelo terminal]]></title><description><![CDATA[<h1>Deletando arquivos repetitivos pelo terminal</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/09/2016" pubdate=""><b>22/09/2016</b></time> | Tags: <a href="/menu/#dicas-de-terminal" rel="me" title="Menu: Dicas de terminal">Dicas de terminal</a></p><p><img src="/images/terminal-console-linux.jpg" alt="Terminal Console Linux"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Sun, 04 Dec 2016 20:22:41 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 04 Dec 2016 20:22:41 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Acelerando comando dd no MacOS]]></title><description><![CDATA[Se você possui um mac e já tentou clonar uma distro linux para um cartão sd via comando dd e percebeu que demorava muito para fazer isso, veja nesse post uma simples solução que vai deixar 20x mais rápida a execução desse comando.]]></description><link>https://udgwebdev.com/acelerando-comando-dd-no-macos</link><guid isPermaLink="true">https://udgwebdev.com/acelerando-comando-dd-no-macos</guid><category><![CDATA[Dicas de terminal]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 15 Nov   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[Dualboot no raspberry com berryboot]]></title><description><![CDATA[Neste post, explicarei como configurar um sistema gerenciador de boot muito foda, chamado BerryBoot, que vai permitir instalar múltiplos sistemas de forma muito fácil.]]></description><link>https://udgwebdev.com/dualboot-no-raspberry-com-berryboot</link><guid isPermaLink="true">https://udgwebdev.com/dualboot-no-raspberry-com-berryboot</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 11 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Criando um media center com Raspberry Pi]]></title><description><![CDATA[Veja nesse post como montar um media center completo capaz de ver canais abertos do mundo inteiro, além de fazer torrent streaming usando OSMC e um Raspberry Pi.]]></description><link>https://udgwebdev.com/criando-um-media-center-com-raspberry-pi</link><guid isPermaLink="true">https://udgwebdev.com/criando-um-media-center-com-raspberry-pi</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 06 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Dicas para conquistar um bom trampo em TI]]></title><description><![CDATA[Algumas dicas são simples de se começar a fazer agora mesmo, e espero que elas te ajudem, principalmente para você que esta começando na área de TI.]]></description><link>https://udgwebdev.com/dicas-para-conquistar-um-bom-trampo-de-ti</link><guid isPermaLink="true">https://udgwebdev.com/dicas-para-conquistar-um-bom-trampo-de-ti</guid><category><![CDATA[Profissão]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 02 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Deletando arquivos repetitivos pelo terminal]]></title><description><![CDATA[<h1>Deletando arquivos repetitivos pelo terminal</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/09/2016" pubdate=""><b>22/09/2016</b></time> | Tags: <a href="/menu/#dicas-de-terminal" rel="me" title="Menu: Dicas de terminal">Dicas de terminal</a></p><p><img src="/images/terminal-console-linux.jpg" alt="Terminal Console Linux"></p>
 <p>Depois de um bom tempo sem <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>, eis que volta das cinzas essa categoria com um novo post, pelo qual a dica ser&#xE1; bastante &#xFA;til no seu dia-a-dia, basicamente &#xE9; um script que procura pastas e subpastas repeti&#xE7;&#xF5;es de um determinado arquivo e em seguida apaga-os, isso ocorre atrav&#xE9;s da combina&#xE7;&#xE3;o do comando <code>find</code> + <code>rm</code>.</p>
 <p>O comando &#xE9; basicamente esse:</p>
 <pre><code class="language-bash"> find nome_da_pasta -name &apos;nome_do_arquivo&apos; -exec rm {} \;
@@ -13,11 +13,12 @@
 <pre><code class="language-bash"> alias ds_clear=&quot;find . -name &apos;.DS_Store&apos; -exec rm {} \;&quot;
 </code></pre>
 <p>Dessa forma esse comando vai procurar e apagar todos os <code>.DS_Store</code> existentes nas subpastas, com base na pasta atual (Pois usei o <code>find .</code> para referenciar a pasta atual) que eu rodar esse comando.</p>
-<p>Veja tamb&#xE9;m outras <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Veja tamb&#xE9;m outras <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/deletando-arquivos-repetitivos-no-terminal';
+  this.page.identifier = 'deletando-arquivos-repetitivos-no-terminal';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -56,11 +57,12 @@ Um servi&#xE7;o que se destaca entre os demais nesta &#xE1;rea, &#xE9; o da <a h
 </ul>
 <p>Caso tenha interesse, voc&#xEA; pode <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">testar a vers&#xE3;o trial</a> que em poucos minutos voc&#xEA; j&#xE1; configura sua aplica&#xE7;&#xE3;o na plataforma para aplicar prote&#xE7;&#xE3;o no c&#xF3;digo-fonte de seus projetos.</p>
 <p>A Jscrambler j&#xE1; conta com mais de 25 mil usu&#xE1;rios, developers e empresas de todo o mundo, que usam o servi&#xE7;o para proteger os seus recursos propriet&#xE1;rios, desde startups a organiza&#xE7;&#xF5;es como a Fortune 500.
-Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a seguran&#xE7;a &#xE9; um fator fundamental, ou seja, aplica&#xE7;&#xF5;es internet banking, games, streaming de video propriet&#xE1;rio e etc. Se este for o seu caso, <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">ent&#xE3;o vale a pena testar essa plataforma</a>.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a seguran&#xE7;a &#xE9; um fator fundamental, ou seja, aplica&#xE7;&#xF5;es internet banking, games, streaming de video propriet&#xE1;rio e etc. Se este for o seu caso, <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">ent&#xE3;o vale a pena testar essa plataforma</a>.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/protegendo-aplicacoes-javascript';
+  this.page.identifier = 'protegendo-aplicacoes-javascript';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -115,11 +117,12 @@ Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a se
 <li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
 </ul>
-<p>Estou adorando escrever sobre esse assunto, caso voc&#xEA; tenha uma dica boa sobre como escrever JavaScript melhor comente abaixo que farei quest&#xE3;o de estudar e escrever no pr&#xF3;ximo post, e &#xE9; claro, citando o nome do autor da dica, at&#xE9; o pr&#xF3;ximo post!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Estou adorando escrever sobre esse assunto, caso voc&#xEA; tenha uma dica boa sobre como escrever JavaScript melhor comente abaixo que farei quest&#xE3;o de estudar e escrever no pr&#xF3;ximo post, e &#xE9; claro, citando o nome do autor da dica, at&#xE9; o pr&#xF3;ximo post!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-4';
+  this.page.identifier = 'escrevendo-javascript-melhor-parte-4';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -163,11 +166,12 @@ Outro detalhe mais legal, &#xE9; que &#xE9; poss&#xED;vel deixar algumas das pri
 <p>Com isso, praticamente voc&#xEA; nem ter&#xE1; mais que responder as principais perguntas, pois elas j&#xE1; ser&#xE3;o pr&#xE9;-definidas pelos valores existentes no <code>~/.npmrc</code>, tanto &#xE9; que elas s&#xE3;o acessadas magicamente pela fun&#xE7;&#xE3;o <code>config.get(&apos;nome-de-uma-key&apos;)</code>.</p>
 <p>Agora se voc&#xEA; criar um novo projeto e rodar o comando <code>npm init</code> voc&#xEA; ter&#xE1; um resultado semelhante a este:</p>
 <p><a href="/images/npm-init.png"><img src="/images/npm-init-small.png" alt="Clique na imagem para ampliar" title="Clique na imagem para ampliar"></a></p>
-<p>See you in the next post!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>See you in the next post!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/customizando-npm-init';
+  this.page.identifier = 'customizando-npm-init';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -229,11 +233,12 @@ Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" ti
 <li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>At&#xE9; a pr&#xF3;xima galera!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>At&#xE9; a pr&#xF3;xima galera!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-3';
+  this.page.identifier = 'escrevendo-javascript-melhor-parte-3';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -319,11 +324,12 @@ Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" ti
    &lt;/body&gt;
  &lt;/html&gt;
 </code></pre>
-<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/video-streaming-com-nodejs';
+  this.page.identifier = 'video-streaming-com-nodejs';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -501,11 +507,12 @@ Em primeiro lugar, praticamente grande parte das fun&#xE7;&#xF5;es desse m&#xF3;
 <pre><code class="language-bash"> node index.js
 </code></pre>
 <p>E brincar com sua nova aplica&#xE7;&#xE3;o realtime acessando <a href="http://localhost:3000">http://localhost:3000</a>.</p>
-<p>See ya!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>See ya!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/realtime-com-rethinkdb';
+  this.page.identifier = 'realtime-com-rethinkdb';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -627,11 +634,12 @@ Quando se trabalha com immutabilidade, compiladores e interpretadores ganham alg
  console.log(mary.toJSON()); // Object { nome: &apos;Mary&apos;, idade: 20 }
 </code></pre>
 <p>Para mais detalhes dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Record">facebook.github.io/immutable-js/docs/#/Record</a>.</p>
-<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs';
+  this.page.identifier = 'brincando-com-estruturas-imutaveis-usando-immutablejs';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -694,11 +702,12 @@ Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhe
 <li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>See you later!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>See you later!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-2';
+  this.page.identifier = 'escrevendo-javascript-melhor-parte-2';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -767,11 +776,12 @@ Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhe
 <li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>Caso voc&#xEA; conhe&#xE7;a algum c&#xF3;digo legado com dicas sobre como escrev&#xEA;-lo melhor comente abaixo! Valeu!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Caso voc&#xEA; conhe&#xE7;a algum c&#xF3;digo legado com dicas sobre como escrev&#xEA;-lo melhor comente abaixo! Valeu!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-1';
+  this.page.identifier = 'escrevendo-javascript-melhor-parte-1';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -817,11 +827,12 @@ Veja nesse post como estruturar sua aplica&#xE7;&#xE3;o Meteor 1.3 utilizando su
 </code></pre>
 <p>Essa nova estrutura ficou muito mais clara e tudo esta orientado aos comandos <strong>import</strong> e <strong>export</strong> do ES6, facilitando a organiza&#xE7;&#xE3;o clean do projeto e eliminando a m&#xE1; conven&#xE7;&#xE3;o do uso de c&#xF3;digos globais.
 Para mais detalhes, recomendo a leitura desse link: <a href="http://guide.meteor.com/structure.html" title="Meteor Application Structure">Meteor Application Structure</a>.
-At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3';
+  this.page.identifier = 'estruturando-uma-aplicacao-meteor-1-3';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -863,11 +874,12 @@ E o Spread operator? Aahhhh esse sim &#xE9; o melhor de todos, veja:</p>
 <p>Basicamente voc&#xEA; tudo se resolve com a s&#xED;ntaxe: <strong>...array</strong> para que ele quebre o array em argumentos e dessa forma voc&#xEA; obtem uma forma mais elegante e enxuta de usar arrays como argumentos.</p>
 <h3>Melhor refer&#xEA;ncia!</h3><ul>
 <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator">MDN - Spread operator</a></li>
-</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+</ul><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/usando-spread-operator-do-es6';
+  this.page.identifier = 'usando-spread-operator-do-es6';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -908,11 +920,12 @@ Com isso, acabei migrando alguns dos meus pequenos projetos para o Heroku, e com
 <p><strong>Pronto! Servidor configurado e ready for production.</strong></p>
 <h3>Refer&#xEA;ncias</h3><ul>
 <li><a href="http://justmeteor.com/blog/deploy-to-production-on-heroku">Meteor.js - Deploy to production on Heroku</a></li>
-</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+</ul><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/deploying-meteor-no-heroku';
+  this.page.identifier = 'deploying-meteor-no-heroku';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -940,11 +953,12 @@ O projeto ser&#xE1; integrado com banco de dados relacional atrav&#xE9;s do Sequ
 </ul>
 <p>Se precisar de alguma ajuda, ou reportar algum feedback voc&#xEA; pode participar do grupo desse livro atrav&#xE9;s desse link: <a href="https://groups.google.com/forum/#!forum/apis-nodejs">Google Groups APIs Node.js</a></p>
 <p>Se curtiu o livro voc&#xEA; pode compr&#xE1;-lo atrav&#xE9;s desse link: <a href="http://www.casadocodigo.com.br/products/livro-apis-nodejs">Construindo APIs Rest com Node.js</a>, lembrando que o livro &#xE9; recomendado para desenvolvedores j&#xE1; familiarizados com Node.js, caso voc&#xEA; queira aprender do in&#xED;cio, recomendo que leia o meu primeiro livro: <a href="http://www.casadocodigo.com.br/products/livro-nodejs">Aplica&#xE7;&#xF5;es web real-time com Node.js</a>.
-At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs';
+  this.page.identifier = 'livro-construindo-apis-rest-com-nodejs';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
@@ -1025,11 +1039,12 @@ At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script async="async" 
 <h4>Boas refer&#xEA;cias:</h4><ul>
 <li><a href="http://info.meteor.com/blog/es2015-get-started">Get started with ES2015 (ES6) and Meteor</a></li>
 <li><a href="https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa">Real-World ES6 Examples in Meteor</a></li>
-</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+</ul><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/brincando-de-es6-no-meteor';
+  this.page.identifier = 'brincando-de-es6-no-meteor';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",

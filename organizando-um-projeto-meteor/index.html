@@ -22,11 +22,12 @@ Acredito que muitos que começaram, se depararam com este problema. Afinal a doc
 <li><strong>public</strong>: Pasta de arquivos estáticos: imagens, fontes e outros arquivos que serão servidos estaticamente.</li>
 <li><strong>tests</strong>: Diretório para criação de testes unitários (por default eles não serão carregados nem no cliente e nem no servidor, somente utilizando um framework de testes).</li>
 </ul>
-<p>Até a próxima galera! Continuem acompanhando o blog, novos posts sobre Meteor estão por vir.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
-  var disqus_shortname = 'udgwebdev';
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+<p>Até a próxima galera! Continuem acompanhando o blog, novos posts sobre Meteor estão por vir.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://udgwebdev.com/organizando-um-projeto-meteor';
+  this.page.identifier = 'organizando-um-projeto-meteor';
+};
+(function() {
+  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
 })();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
