@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Evitando Callback Hell usando Generators | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Evitando Callback Hell usando Generators"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Generators é um recurso muito interessante que permite escrever funções assíncronas sem callbacks, utilizando uma síntaxe de código síncrono, retornando valores da função em um array que representa as variáveis do parâmetro de um callback."/><meta property="og:title" content="Evitando Callback Hell usando Generators"/><meta property="og:description" content="Generators é um recurso muito interessante que permite escrever funções assíncronas sem callbacks, utilizando uma síntaxe de código síncrono, retornando valores da função em um array que representa as variáveis do parâmetro de um callback."/><meta property="og:url" content="https://udgwebdev.com/evitando-callback-hell-usando-generators"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/javascript-logo.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/evitando-callback-hell-usando-generators"/><meta name="twitter:title" content="Evitando Callback Hell usando Generators"/><meta name="twitter:description" content="Generators é um recurso muito interessante que permite escrever funções assíncronas sem callbacks, utilizando uma síntaxe de código síncrono, retornando valores da função em um array que representa as variáveis do parâmetro de um callback."/><meta name="twitter:image" content="https://udgwebdev.com/images/javascript-logo.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/evitando-callback-hell-usando-generators"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="evitando-callback-hell-usando-generators" class="col-xs-12 col-sm-9 post"><h1>Evitando Callback Hell usando Generators</h1><p class="text-muted">Publicação: <time datetime="18/01/2014" pubdate><b>18/01/2014</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/javascript-logo.jpg" alt="Evitando Callback Hell usando Generators" title="Evitando Callback Hell usando Generators"></p>
+<p>Muitos recursos interessantes estão surgindo do ECMAScript6 para o Javascript, o Generators é um deles e será o assunto desse post.</p>
+<p>Em resumo generators é um recurso muito interessante que permite escrever funções assíncronas sem callbacks, utilizando uma síntaxe de código síncrono, <strong>retornando valores da função em um array que representa as variáveis do parâmetro de uma função callback</strong>.</p>
+<p>Como essa feature ainda não é oficial, somente alguns browser (últimas versões do Chrome e Firefox) utilizam no client-side. Já no server-side temos que habilitar no Node.js, porém só existe nas versões instáveis: <strong>0.11.X.</strong> e será oficializada na próxima versão estável: <strong>0.12.x</strong>.</p>
+<p>Caso queira brincar com versões instáveis de forma simples e de fácil instalação/desinstalação, veja neste post como utilizar o <a href="/nvm-node-version-manager" title="NVM - Node Version Manager">NVM - Node Version Manager</a>.</p>
+<p>Para habilitá-lo no Node.js, basta utilizar a flag <code>--harmony</code> no comando <code>node</code>, por exemplo:</p>
+<pre><code class="language-bash"> node --harmony app.js
+</code></pre>
+<p>Com harmony habilitado, agora teremos que usar alguma <strong>biblioteca de controle async</strong>. Utilizarei o <a href="https://github.com/jmar777/suspend">suspend</a> que é um módulo fácil de implementar generators.</p>
+<p>Abaixo mostrarei dois códigos que fazem a mesma coisa, o primeiro utilizando callbacks e o segundo implementando generators, veja a diferença:</p>
+<h2>Usando callbacks</h2><pre><code class="language-javascript"> var
+   fs = require(&quot;fs&quot;),
+   time = new Date().getTime()
+ ;
+ fs.writeFile(&quot;log.txt&quot;, time, function(err) {
+   console.log(&quot;Iniciando log&quot;);
+   fs.readFile(&quot;log.txt&quot;, function(err, text) {
+     console.log(&quot;Timestamp: &quot; + text);
+     fs.unlink(&quot;log.txt&quot;, function() {
+       console.log(&quot;Log finalizado&quot;);
+     });
+   });
+ });
+</code></pre>
+<h2>Usando generators</h2><p>Instale o módulo suspend:</p>
+<pre><code class="language-bash"> npm install suspend --save
+</code></pre>
+<pre><code class="language-javascript"> var
+   fs = require(&#39;fs&#39;),
+   suspend = require(&#39;suspend&#39;),
+   resume = suspend.resume,
+   time = new Date().getTime()
+ ;
+ suspend(function* (){
+   yield fs.writeFile(&quot;log.txt&quot;, time, resume());
+   console.log(&quot;Iniciando log&quot;);
+   var text = yield fs.readFile(&quot;log.txt&quot;, resume());
+   console.log(&quot;Timestamp&quot; + text);
+   yield fs.unlink(&quot;log.txt&quot;, resume());
+   console.log(&quot;Log finalizado&quot;);
+ })();
+</code></pre>
+<p>Referências:</p>
+<ul>
+<li><a href="https://github.com/jmar777/suspend" title="Github do Suspend">Github do Suspend</a></li>
+<li><a href="http://caba.re/usando-generators-para-botar-a-casa-em-ordem" title="Usando generators para botar a casa em ordem">Cabaré - Usando generators para botar a casa em ordem</a></li>
+<li><a href="http://howtonode.org/generators-vs-fibers" title="How to Node - Generators vs Fibers">How to Node - Generators vs Fibers</a></li>
+<li><a href="http://jlongster.com/2012/10/05/javascript-yield.html" title="Javascript&#39;s Future: Generators">James Long - Javascript&#39;s Future: Generators</a></li>
+</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Evitando Callback Hell usando Generators",
+  "image": "https://udgwebdev.com/images/javascript-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/evitando-callback-hell-usando-generators",
+  "datePublished": "2014-01-18",
+  "dateCreated": "2014-01-18",
+  "description": "Generators é um recurso muito interessante que permite escrever funções assíncronas sem callbacks, utilizando uma síntaxe de código síncrono, retornando valores da função em um array que representa as variáveis do parâmetro de um callback.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

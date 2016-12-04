@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Node.js para leigos - Framework Express Parte 1 | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Node.js para leigos - Framework Express Parte 1"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="O framework que irei apresentar, se chama Express e foi inspirado pelo framework Sinatra do Ruby."/><meta property="og:title" content="Node.js para leigos - Framework Express Parte 1"/><meta property="og:description" content="O framework que irei apresentar, se chama Express e foi inspirado pelo framework Sinatra do Ruby."/><meta property="og:url" content="https://udgwebdev.com/node-js-para-leigos-framework-express-parte-1"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/node-js-para-leigos-framework-express-parte-1"/><meta name="twitter:title" content="Node.js para leigos - Framework Express Parte 1"/><meta name="twitter:description" content="O framework que irei apresentar, se chama Express e foi inspirado pelo framework Sinatra do Ruby."/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/node-js-para-leigos-framework-express-parte-1"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="node-js-para-leigos-framework-express-parte-1" class="col-xs-12 col-sm-9 post"><h1>Node.js para leigos - Framework Express Parte 1</h1><p class="text-muted">Publicação: <time datetime="30/07/2012" pubdate><b>30/07/2012</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-para-leigos.jpg" alt="Curso de Node.js" title="Curso de Node.js"></p>
+<h3>Atenção</h3><p>As dicas desse post <strong>são baseadas em uma versão antiga do Express 3.x</strong>, porém os conceitos desse framework continuam intactos! Caso queira se <strong>atualizar com o que há de novo na versão Express 4.x</strong>, recomendo que leia esse post: <a href="/primeiros-passos-com-express-4" title="Primeiros passos com Express 4">Primeiros passos com Express 4</a>.</p>
+<p>Após explicar um pouco sobre a <a href="/node-js-para-leigos-trabalhando-com-http" title="Node.js para leigos – Trabalhando com HTTP">API HTTP nativa do node.js</a>, percebemos que ela não é apropriada para desenvolvimento de aplicações complexas, visto que todo gerenciamento de rotas e outros recursos desse módulo são tratados de maneira bem básica, sendo necessário aplicar diversos comandos <strong>ifs e fors</strong> para tratá-los.</p>
+<p>Vendo essa problema surgiram diversos web-frameworks e micro-frameworks, visando melhorar essas carências, trazendo mais produtividade no desenvolvimento de sistemas. O framework que irei apresentar, se chama <a href="http://expressjs.com/" title="ExpressJS">Express</a>, que foi inspirado pelo framework <a href="http://www.sinatrarb.com/" title="Sinatra">Sinatra</a> do Ruby.</p>
+<p>Alguns recursos em destaque desse framework são:</p>
+<ul>
+<li>Routing robusto</li>
+<li>Redirecionador para Helpers</li>
+<li>Dynamic View Helpers</li>
+<li>Integração View Template Engine</li>
+<li>Content negotiation (RESTFul)</li>
+<li>Application mounting</li>
+<li>Focado em alta performance</li>
+<li>Renderizador de Views</li>
+<li>Suporte a Partials</li>
+<li>Configuração baseado no ambiente do sistema operacional</li>
+<li>Desenvolvido com a base no <a href="http://www.senchalabs.org/connect/" title="Middleware Connect">Middleware Connect</a></li>
+</ul>
+<p>Com ele será possível desenvolver uma aplicação complexa e de forma totalmente controlada pelo desenvolvedor. Antes mais nada, após criar uma pasta para aplicar na prática os códigos abaixo, execute essa linha de comando para <strong>instalar o framework Express</strong>:</p>
+<p><code>npm install express</code></p>
+<p>Obs.: Irei usar em todos os exemplos códigos da <strong>versão estável 2.x.x do Express</strong>, muitos dos exemplos poderão ou não sofrer mudanças na <strong>versão 3.x.x</strong>. Caso queira adaptar para nova versão veja este link: <a href="https://github.com/visionmedia/express/wiki/Migrating-from-2.x-to-3.x" title="Migrando Express de 2.x para 3.x">Migrando Express de 2.x para 3.x</a>. Veja um exemplo abaixo de <strong>Hello World</strong>:</p>
+<pre><code class="language-javascript"> var express = require(&#39;express&#39;)
+   , app = express();
+ app.get(&#39;/&#39;, function(req, res){
+   res.send(&#39;Hello World&#39;);
+ });
+ app.listen(3000);
+</code></pre>
+<p>Esse exemplo mostra de forma mais enxuta uma simples aplicação sendo executada na <strong>rota raíz &#39;/&#39;</strong>. Não há muito segredo ou dicas para se passar com isso, mas aprofundando mais a nossa aplicação, irei criar mais rotas e algumas configurações relevantes para ele.</p>
+<pre><code class="language-javascript"> var express = require(&#39;express&#39;)
+   , app = express();
+ app.configure(function(){
+   app.use(express.bodyParser());
+ });
+ var clientes = [];
+ app.get(&#39;/&#39;, function(req, res){
+   html = &#39;&lt;html&gt;&lt;body&gt;&#39;;
+   html += &#39;&lt;form action=&quot;/cliente&quot; method=&quot;post&quot;&gt;&#39;;
+   html += &#39;&lt;label&gt;Nome: &lt;input type=&quot;text&quot; name=&quot;cliente[nome]&quot;&gt;&lt;/label&gt;&lt;br&gt;&#39;;
+   html += &#39;&lt;label&gt;Idade: &lt;input type=&quot;text&quot; name=&quot;cliente[idade]&quot;&gt;&lt;/label&gt;&lt;br&gt;&#39;;
+   html += &#39;&lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;&#39;;
+   html += &#39;&lt;/form&gt;&#39;;
+   html += &#39;&lt;br&gt;&#39;;
+   html += &#39;&lt;h1&gt;Lista de clientes&lt;/h1&gt;&#39;;
+   html += &#39;&lt;ul&gt;&#39;;
+   for(var i = 0; i &lt; clientes.length; i++){
+     html += &#39;&lt;li&gt;&#39;+clientes[i].nome+&#39; | &#39;+clientes[i].idade+&#39;&lt;/li&gt;&#39;;
+   }
+   html += &#39;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;&#39;;
+   res.send(html);
+ });
+ app.post(&#39;/cliente&#39;, function(req, res){
+   var cliente = req.body.cliente;
+   clientes.push(cliente);
+   res.redirect(&#39;/&#39;);
+ });
+ app.listen(3000);
+</code></pre>
+<p>Agora criamos um simples cadastro de clientes, em que estamos renderizando de forma básica um formulário HTML que abaixo dele aparece uma lista com os clientes cadastrados. Todos os dados são armazenados <strong>In-Memory</strong>, ou seja, estamos usando um simples array para controlar todos os registros, em outros posts aplicarei exemplos utilizando banco de dados com Node.js.</p>
+<p>Na prática esse exemplo funciona e de comandos novos do Express, apenas cito o <strong>app.configure</strong>, nele sempre coloque antes de implementar as rotas, Javascript da prioridade a cada linha de forma ordenada, ou seja, se você colocar o <strong>app.configure</strong> no final do código nenhuma configuração inserida nele funcionará. O mesmo ocorre na ordem que cada item dentro do configurador é inserido, é claro que nesse exemplo existe apenas o <code>app.use(express.bodyParser())</code>, porém em aplicações mais complexas que exigem diversos tipos de configurações cada item colocado na ordem correta evitará possíveis problemas em sua aplicação. Ao decorrer dos exemplos irei mostrar em detalhes alguns dos possíveis problemas sobre o quão importante é a colocar na ordem certa possíveis configurações que dependem uma da outra, o mais importante é conhecer bem os tipos de configurações no Express para saber a prioridade certa de cada item, muitas vezes a própria documentação te ajudará, porém em casos que você instale itens de frameworks de terceiros para integrarem com Express é necessário entendê-lo melhor para saber em qual ordem incluí-lo.</p>
+<p>O <code>express.bodyParser()</code> é uma função que facilita a construção de objetos JSON apartir de uma submissão de dados de um formulário html, ele simplesmente monta um objeto apartir dos valores do campo <strong>name</strong>, em que o campo <strong>name</strong> cria um objeto e atributos e o campo <strong>value</strong> insere valores nesses objetos.</p>
+<p>Na prática ao submeter a tag:</p>
+<pre><code class="language-html"> &lt;input type=&#39;text&#39; name=&#39;cliente[nome]&#39; value=&#39;Caio&#39;&gt;
+</code></pre>
+<p>Faz o <code>express.bodyParser();</code> executar um parser desses valores criando o objeto JSON: <code>cliente.nome</code> com valor <code>&#39;Caio&#39;</code>. E para utilizar esse objeto você acessa através do <code>request.body.(nome do objeto)</code>, no nosso exemplo ele se encontra através da função <code>req.body.cliente</code>. A boa prática é sempre criar <code>objeto[atributo]</code>,</p>
+<p>ojetos mais complexos são criados da seguinte maneira: <code>cliente[endereco][rua] = cliente.endereco.rua</code> e por ai vai.</p>
+<p>Complicando mais a nossa aplicação, que tal adicionarmos novas funcionalidades a esse cadastro, vamos implementar uma rota para excluir um registro, uma para possibilitar a edição de um registro existente e uma para submeter a atualização dos registros editados.</p>
+<pre><code class="language-javascript"> var express = require(&#39;express&#39;)
+   , app = express();
+ app.configure(function(){
+   app.use(express.bodyParser());
+   app.use(express.methodOverride());
+ });
+ var clientes = [];
+ app.get(&#39;/&#39;, function(req, res){
+   var html = &#39;&lt;html&gt;&lt;body&gt;&#39;;
+   html += &#39;&lt;form action=&quot;/cliente&quot; method=&quot;post&quot;&gt;&#39;;
+   html += &#39;&lt;label&gt;Nome: &lt;input type=&quot;text&quot; name=&quot;cliente[nome]&quot;&gt;&lt;/label&gt;&lt;br&gt;&#39;;
+   html += &#39;&lt;label&gt;Idade: &lt;input type=&quot;text&quot; name=&quot;cliente[idade]&quot;&gt;&lt;/label&gt;&lt;br&gt;&#39;;
+   html += &#39;&lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;&#39;;
+   html += &#39;&lt;/form&gt;&#39;;
+   html += &#39;&lt;br&gt;&#39;;
+   html += &#39;&lt;h1&gt;Lista de clientes&lt;/h1&gt;&#39;;
+   html += &#39;&lt;ul&gt;&#39;;
+   for(var i = 0; i &lt; clientes.length; i++){
+     html += &#39;&lt;li&gt;&#39;+clientes[i].nome+&#39; | &#39;+clientes[i].idade;
+     html += &#39;&lt;a href=&quot;/cliente/&#39;+i+&#39;/editar&quot;&gt;Editar&lt;/a&gt; | &#39;;
+     html += &#39;&lt;a href=&quot;/cliente/&#39;+i+&#39;&quot;&gt;Excluir&lt;/a&gt;&lt;/li&gt;&#39;;
+   }
+   html += &#39;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;&#39;;
+   res.send(html);
+ });
+ app.post(&#39;/cliente&#39;, function(req, res){
+   var cliente = req.body.cliente;
+   clientes.push(cliente);
+   res.redirect(&#39;/&#39;);
+ });
+ app.get(&#39;/cliente/:id/editar&#39;, function(req, res){
+   var id = req.params.id;
+   var html = &#39;&lt;html&gt;&lt;body&gt;&#39;;
+   html += &#39;&lt;h1&gt;Editar dados do cliente: &#39;+clientes[id].nome+&#39;&lt;/h1&gt;&#39;;
+   html += &#39;&lt;form action=&quot;/cliente/&#39;+ id +&#39;&quot; method=&quot;post&quot;&gt;&#39;;
+   html += &#39;&lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;put&quot;&gt;&#39;; // Força o formulário realizar um comando PUT no submit.
+   html += &#39;&lt;label&gt;Nome: &lt;input type=&quot;text&quot; name=&quot;cliente[nome]&quot; value=&quot;&#39;+clientes[id].nome+&#39;&quot;&gt;&lt;/label&gt;&#39;;
+   html += &#39;&lt;label&gt;Idade: &lt;input type=&quot;text&quot; name=&quot;cliente[idade]&quot; value=&quot;&#39;+clientes[id].idade+&#39;&quot;&gt;&lt;/label&gt;&#39;;
+   html += &#39;&lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;&#39;;
+   html += &#39;&lt;/form&gt;&#39;;
+   html += &#39;&lt;/html&gt;&#39;;
+   res.send(html);
+ });
+ app.put(&#39;/cliente/:id&#39;, function(req, res){
+   var id = req.params.id;
+   clientes[id] = req.body.cliente;
+   res.redirect(&#39;/&#39;);
+ });
+ app.del(&#39;/cliente/:id&#39;, function(req, res){
+   var id = req.params.id;
+   clientes.splice(id, 1);
+   res.redirect(&#39;/&#39;);
+ });
+ app.listen(3000);
+</code></pre>
+<p>Pronto agora sim, criamos um cadastro completo de clientes! Alguns detalhes em destaque para explicar...</p>
+<p><strong>req.params.id</strong>: a função params de uma request, pega valores criados através de uma URL porém apenas valores que estejam citados explicitamente na string da rota, como por exemplo <code>&#39;/cliente/:id&#39;</code> que automaticamente criará uma variável com o nome id em que qualquer valor passado por este padrão será o valor dessa variável. Lembresse, <strong>Params</strong> é totalmente diferente de <strong>QueryString</strong>, em que para capturar valores via QueryStrings, basta utilizar a função <strong>request.query.nome_da_variavel</strong> veja esse exemplo:</p>
+<pre><code class="language-javascript"> // Ao executar a url dessa forma: http://localhost:3000/cliente/1?nome=caio
+ // Através dessa rota é possível pegar os seguintes valores dessa url.
+ app.get(&#39;/cliente/:id&#39;, function(req, res){
+   var id = req.params.id; // valor: 1
+   var nome = req.query.nome; // valor: caio
+   res.send(&#39;Cliente &#39;+id+&#39;: &#39;+nome);
+ });
+</code></pre>
+<p><code>app.use(express.methodOverride())</code>: essa função que esta dentro do <code>app.configure</code>, permite que sua aplicação faça sobrescrita de rotas que utilizem métodos HTTP diferentes. Repare no código da nossa aplicação que a maioria das rotas possuem o mesmo nome, por exemplo a rota: <code>&#39;/cliente/:id&#39;</code>, porém são usadas em diferentes funções que vão entre o <code>get(), post(), put() e del()</code> que são as funções do <strong>HTTP (GET, POST, PUT e DELETE)</strong> essa é uma boa prática para quem pretende desenvolver aplicações que seguem o padrão <a href="http://pt.wikipedia.org/wiki/REST" title="Entendendo o cocento REST">REST</a> que é muito utilizado na construção de <strong>WebServices</strong>.</p>
+<p>No próximo post irei continuar com a segunda parte otimizando esse mesmo projeto de cadastro de clientes, incluindo novas configurações, separando o código html do código server-side, além de utilizar novos recursos do Express, não percam!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Node.js para leigos - Framework Express Parte 1",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/node-js-para-leigos-framework-express-parte-1",
+  "datePublished": "2012-07-30",
+  "dateCreated": "2012-07-30",
+  "description": "O framework que irei apresentar, se chama Express e foi inspirado pelo framework Sinatra do Ruby.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

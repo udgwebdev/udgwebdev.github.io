@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Node.js para leigos - Trabalhando com HTTP | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Node.js para leigos - Trabalhando com HTTP"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Node.js é uma plataforma multiprotocolo, ou seja, com ele será possível trabalhar com HTTP, DNS, TCP, WebSockets e muito mais."/><meta property="og:title" content="Node.js para leigos - Trabalhando com HTTP"/><meta property="og:description" content="Node.js é uma plataforma multiprotocolo, ou seja, com ele será possível trabalhar com HTTP, DNS, TCP, WebSockets e muito mais."/><meta property="og:url" content="https://udgwebdev.com/node-js-para-leigos-trabalhando-com-http"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/node-js-para-leigos-trabalhando-com-http"/><meta name="twitter:title" content="Node.js para leigos - Trabalhando com HTTP"/><meta name="twitter:description" content="Node.js é uma plataforma multiprotocolo, ou seja, com ele será possível trabalhar com HTTP, DNS, TCP, WebSockets e muito mais."/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/node-js-para-leigos-trabalhando-com-http"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="node-js-para-leigos-trabalhando-com-http" class="col-xs-12 col-sm-9 post"><h1>Node.js para leigos - Trabalhando com HTTP</h1><p class="text-muted">Publicação: <time datetime="15/07/2012" pubdate><b>15/07/2012</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-para-leigos.jpg" alt="Curso de Node.js" title="Curso de Node.js"></p>
+<p>Node.js é uma plataforma multiprotocolo, ou seja, com ele será possível trabalhar com HTTP, DNS, TCP, WebSockets e muito mais. Porém um dos protocolos mais usados para desenvolver sistemas web é o protocolo HTTP, de fato é o protocolo com a maior quantidade de módulos disponíveis para trabalhar no Node.js.</p>
+<p>Hoje apresentarei um pouco sobre como desenvolver uma aplicação HTTP, na prática desenvolveremos um simples sistema web utilizando o módulo nativo HTTP e também apresentando alguns módulos mais estruturados para desenvolver aplicações complexas.</p>
+<p>Toda aplicação web necessita de um servidor web em execução para disponibilizar todos os seus recursos, na prática você irá desenvolver uma <strong>aplicação servidora</strong>, ou seja, além de programar todas funcionalidades da sua aplicação você também terá que configurar na própria aplicação aspectos sobre como <strong>ela servirar seus recursos para o cliente</strong> quando for executá-la. Essas <strong>configurações são conhecidas como middleware</strong>, é claro que é um trabalho dobrado no começo, mas isso traz a liberdade de configurar cada mínimo detalhe do sistema, ou seja, permite desenvolver algo mais performático e controlado pelo programador. Caso performance não seja prioridade no desenvolvimento do seu sistema, recomendo que utilize alguns módulos famosos que já vem com o mínimo necessário de configurações prontas para não perder tempo trabalhando sobre esse aspecto, alguns módulos conhecidos são: <a href="http://www.senchalabs.org/connect/" title="Connect">Connect</a>, <a href="http://expressjs.com/" title="ExpressJS">Express</a>, <a href="http://geddyjs.org/" title="Geddy">Geddy</a> <a href="https://github.com/joyent/node/wiki/Modules#wiki-web-frameworks" title="Node.js Web Frameworks">e muito mais aqui</a>. Esses módulos já são preparados para trabalhar desde uma <strong>infraestrutura mínima e básica (Microframeworks)</strong> até uma <strong>infraestrutura mais enxuta com padrões do tipo MVC (Model-View-Controller) e outros padrões de projetos (MVC Frameworks).</strong></p>
+<p>De ínicio usaremos apenas o <strong><a href="http://nodejs.org/api/http.html" title="Documentação da API HTTP">módulo nativo HTTP</a></strong>, pois precisamos entender todo conceito do mesmo, visto que todos os frameworks citados acima utilizam ele como estrutura inicial em seus projetos.</p>
+<pre><code class="language-javascript"> var http = require(&#39;http&#39;);
+ var server = http.createServer(function(request, response){
+   response.writeHead(200, {&quot;Content-Type&quot;: &quot;text/html&quot;});
+   response.write(&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Olá Node.js!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);
+   response.end();
+ });
+ server.listen(3000, function(){
+   console.log(&#39;Executando Servidor HTTP&#39;);
+ });
+</code></pre>
+<p>Esse é um exemplo clássico e simples de um servidor web sendo executado na <strong>porta 3000</strong>, respondendo por padrão na <strong>rota raíz &quot;/&quot;</strong> um resultado em <strong>formato html</strong> com a mensagem <strong>Olá Node.js!</strong>.</p>
+<p>Agora complicando mais, vamos adicionar duas rotas nesse sistema, uma rota para página de erro e também um link em cada página html para intergir uma com a outra:</p>
+<pre><code class="language-javascript"> var http = require(&#39;http&#39;);
+ var server = http.createServer(function(request, response){
+   response.writeHead(200, {&quot;Content-Type&quot;: &quot;text/html&quot;});
+   if(request.url == &quot;/&quot;){
+     response.write(&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Olá Node.js!&lt;/h1&gt;&quot;);
+     response.write(&quot;&lt;a href=&#39;/bemvindo&#39;&gt;Bem vindo&lt;/a&gt;&quot;);
+     response.write(&quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+   }else if(request.url == &quot;/bemvindo&quot;){
+     response.write(&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Bem-vindo ao Node.js!&lt;/h1&gt;&quot;);
+     response.write(&quot;&lt;a href=&#39;/&#39;&gt;Olá Node.js&lt;/a&gt;&quot;);
+     response.write(&quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+   }else{
+     response.write(&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Página não encontrada!&lt;/h1&gt;&quot;);
+     response.write(&quot;&lt;a href=&#39;/&#39;&gt;Voltar para o início&lt;/a&gt;&quot;);
+     response.write(&quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+   }
+   response.end();
+ });
+ server.listen(3000, function(){
+   console.log(&#39;Executando Servidor HTTP&#39;);
+ });
+</code></pre>
+<p>Todo leitura de url é obtida através do método <strong>request.url</strong> que retorna uma string sobre o que foi digitado no endereço url do seu browser. Endereços urls do protocolo http possui alguns padrões como <strong>query strings (?nome=joao)</strong> e <strong>pathnames (/admin)</strong> e sinceramente tratar toda string url seria trabalhoso demais, sendo que já existem diversos exemplos prontos para isso. No Node.js existe o <strong><a href="http://nodejs.org/api/url.html" title="Documentação da API URL">módulo chamado url</a></strong> responsável por realizar um <strong>parser e formatação de strings url</strong>, veja como um exemplo abaixo:</p>
+<pre><code class="language-javascript"> var http = require(&#39;http&#39;);
+ var url = require(&#39;url&#39;);
+ var server = http.createServer(function(request, response){
+   // Faz um parse da string url digitada.
+   var result = url.parse(request.url, true);
+   response.writeHead(200, {&quot;Content-Type&quot;: &quot;text/html&quot;});
+   response.write(&quot;&lt;html&gt;&lt;body&gt;&quot;);
+   response.write(&quot;&lt;h1&gt;Dados da query string&lt;/h1&gt;&quot;);
+   // Itera o resultado de parâmetros passados via query string.
+   for(var key in result.query){
+     response.write(&quot;&lt;h2&gt;&quot;+key+&quot; : &quot;+result.query[key]+&quot;&lt;/h2&gt;&quot;);
+   }
+   response.write(&quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+   response.end();
+ });
+ server.listen(3000, function(){
+   console.log(&#39;Executando Servidor HTTP&#39;);
+ });
+</code></pre>
+<p>Digite no seu browser a url: <strong><a href="http://localhost:3000/?nome=joao&amp;idade=22&amp;email=joao@mail.net">http://localhost:3000/?nome=joao&amp;idade=22&amp;email=joao@mail.net</a></strong> para ver os resultados tratados pelo <strong>parse de url</strong>. Agora vamos separar o código HTML do código Node.js em arquivos distintos, para isso utilizaremos o <strong><a href="http://nodejs.org/api/fs.html" title="Documentação da API FS">módulo nativo FS (File System)</a></strong> que faz tratamento de arquivos, que no nosso caso será leitura de arquivo HTML.</p>
+<pre><code class="language-javascript"> // app.js
+ var http = require(&#39;http&#39;);
+ var fs = require(&#39;fs&#39;);
+ var server = http.createServer(function(request, response){
+   fs.readFile(__dirname + &#39;/index.html&#39;, function(err, html){
+     response.writeHeader(200, {&#39;Content-Type&#39;: &#39;text/html&#39;});
+     response.write(html);
+     response.end();
+   });
+ });
+ server.listen(3000, function(){
+   console.log(&#39;Executando Servidor HTTP&#39;);
+ });
+</code></pre>
+<pre><code class="language-html"> &lt;!-- index.html --&gt;
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+   &lt;head&gt;
+     &lt;title&gt;Hello World&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;h1&gt;Hello World&lt;/h1&gt;
+   &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+<p>Neste código temos dois detalhes interessantes a citar, primeiro é a constante global chamada <strong>__dirname</strong> que retona uma string referente ao endereço raíz da aplicação, é uma variável muito útil, pois através dela podemos referenciar pastas e arquivos internos.</p>
+<p>Outro detalhe é o método <strong>fs.readFile()</strong>, repare que o resultado da leitura do <strong>arquivo index.html</strong> é enviado via <strong>função de callback</strong>, ou seja através da <strong>function(erro, html) que é um parâmetro da função fs.readFile()</strong>, na prática diversos módulos trabalham dessa forma no Node.js, pois o retorno de resultados através de funções callbacks são tratados de forma assíncrona <strong>(característica principal do Javascript)</strong> e isso é algo muito interessante pois permite tratar a execução das rotinas da aplicação de forma paralela, e isso você usará frequentemente no Node.js. Alguns módulos apresentam em suas documentações duas alternativas de trabalhar com uma mesma função, são elas conhecidas como <strong>execução síncrona e assíncrona.</strong> Sempre que puder <strong>utilize as versões assíncronas</strong> em seus projetos, pois as <strong>execuções assíncronas são mais perfomáticas</strong> e normalmente <strong>não bloqueiam</strong> a execução de outras <strong>rotinas síncronas</strong> do seu sistema, mesmo quando ocorrem problemas durante suas execuções.</p>
+<p>Por hoje é só galera, passei o básico e essencial guia de sobrevivência Node.js com protocolo HTTP, espero que tenham gostado, se surgir dúvidas, problemas ou sugestões, comentem abaixo ou entrem em contato comigo, ok? Até a próxima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Node.js para leigos - Trabalhando com HTTP",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/node-js-para-leigos-trabalhando-com-http",
+  "datePublished": "2012-07-15",
+  "dateCreated": "2012-07-15",
+  "description": "Node.js é uma plataforma multiprotocolo, ou seja, com ele será possível trabalhar com HTTP, DNS, TCP, WebSockets e muito mais.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

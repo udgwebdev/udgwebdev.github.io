@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Primeiros passos com Meteor | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Primeiros passos com Meteor"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Neste post vamos aprender na prática os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor."/><meta property="og:title" content="Primeiros passos com Meteor"/><meta property="og:description" content="Neste post vamos aprender na prática os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor."/><meta property="og:url" content="https://udgwebdev.com/primeiros-passos-com-meteor"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/meteor-logo.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/primeiros-passos-com-meteor"/><meta name="twitter:title" content="Primeiros passos com Meteor"/><meta name="twitter:description" content="Neste post vamos aprender na prática os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor."/><meta name="twitter:image" content="https://udgwebdev.com/images/meteor-logo.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/primeiros-passos-com-meteor"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="primeiros-passos-com-meteor" class="col-xs-12 col-sm-9 post"><h1>Primeiros passos com Meteor</h1><p class="text-muted">Publicação: <time datetime="04/10/2013" pubdate><b>04/10/2013</b></time> | Tags: <a href="/menu/#meteor" rel="me" title="Menu: Meteor">Meteor</a></p><p><a href="http://meteor.com"><img src="/images/meteor-logo.jpg" alt="Meteor" title="Meteor"></a> </p>
+<p>Depois de um <a href="/introducao-sobre-meteor" title="Introdução sobre Meteor">post de introdução sobre Meteor</a>, iremos neste post aprender na prática, os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor.</p>
+<p>Construiremos um simples micro-blog, semelhante ao twitter, em que as <strong>atualizações da timeline pública serão em real-time</strong>. Outro detalhe faremos essa aplicação utilizando os conceitos básicos do Meteor, ou seja, não entraremos em detalhes com boas práticas e organizações de código (afinal esse será assunto para um próximo post), o projeto será criado com apenas <strong>3 arquivos (1 HTML, 1 CSS e 1 Javascript)</strong>.</p>
+<p>Bom vamos começar? Instale o Meteor é super simples, para ele funcionar é necessário ter o Node e MongoDB instalado primeiro, caso não tenha o Node.js, veja nesse post: <a href="/node-js-para-leigos-instalacao-e-configuracao" title="Node.js para leigos - Instalação e configuração">Node.js para leigos instalação e configuração</a> como instalá-lo e sobre o MongoDB recomendo que acesse seu site oficial e leia o <a href="http://docs.mongodb.org/manual/installation/" title="MongoDB Installation Guides">manual de instalação MongoDB</a>.</p>
+<p><strong>Atenção: O Meteor ainda não possui versão compatível com Windows, somente Mac, Linux e Unix. Este problema será resolvido apartir da versão 1.0, <a href="http://www.meteor.com/blog/2013/10/01/geoff-schmidt-at-devshop-8-getting-meteor-to-10">prevista para o começo de 2014</a>.</strong></p>
+<p>Com o Node.js e MongoDB instalado execute os comandos abaixo para instalar o Meteor:</p>
+<pre><code class="language-bash"> curl https://install.meteor.com | /bin/sh
+</code></pre>
+<p>Agora que temos o ambiente configurado, vamos criar o nosso micro-blog, chamarei nossa aplicação de <strong>&quot;microtwitter&quot;</strong>, mas você pode chamá-la do que quiser, apenas siga os comandos abaixo para criar o projeto:</p>
+<pre><code class="language-bash"> meteor create microtwitter
+ cd microtwitter
+</code></pre>
+<p>Repare que por default o Meteor criou os 3 arquivos iniciais (1 HTML, 1 CSS e 1 Javascript) e será em cima deles que codificaremos nosso app.</p>
+<p>Vamos implementar inicialmente o layout da aplicação. Toda interação real-time no front-end é realizada através de um template engine. Criaremos os templates para cada área interativa do nosso sistema utilizando o template padrão do Meteor, o <a href="http://handlebarsjs.com">Handlebars</a>. No nosso app teremos um formulário para envio de mensagem e uma área de timeline de mensagens públicas. Edite o arquivo <strong>microtwitter.html</strong> inserindo o código abaixo:</p>
+<pre><code class="language-html"> &lt;head&gt;
+   &lt;title&gt;MicroTwitter&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  {{&gt; formulario }}
+  {{&gt; mensagens }}
+ &lt;/body&gt;
+ &lt;template name=&quot;formulario&quot;&gt;&lt;/template&gt;
+ &lt;template name=&quot;mensagens&quot;&gt;&lt;/template&gt;
+</code></pre>
+<p>Essa será a estrutura do nosso layout, o que faremos agora é implementar os 2 templates internos. Então continuando no mesmo arquivo, criaremos o template de formulário:</p>
+<pre><code class="language-html"> &lt;template name=&quot;formulario&quot;&gt;
+   &lt;div class=&quot;formulario&quot;&gt;
+     &lt;h1&gt;MicroTwitter&lt;/h1&gt;
+     &lt;input type=&quot;text&quot; id=&quot;nome&quot; name=&quot;nome&quot; placeholder=&quot;Nome&quot;&gt;
+     &lt;textarea id=&quot;conteudo&quot; name=&quot;conteudo&quot; placeholder=&quot;Mensagem&quot; maxlength=&quot;140&quot;&gt;&lt;/textarea&gt;
+     &lt;button id=&quot;enviar&quot;&gt;Enviar&lt;/button&gt;
+   &lt;/div&gt;
+ &lt;/template&gt;
+</code></pre>
+<p>Em seguida, criaremos o template da timeline de mensagens:</p>
+<pre><code class="language-html"> &lt;template name=&quot;mensagens&quot;&gt;
+   &lt;div class=&quot;timeline&quot;&gt;
+     &lt;h1&gt;Timeline&lt;/h1&gt;
+     {{#each timeline}}
+       &lt;hr&gt;
+       &lt;p class=&quot;mensagem&quot;&gt;
+         {{conteudo}}
+         &lt;br&gt;
+         &lt;small&gt;{{nome}} {{data}}&lt;/small&gt;
+       &lt;/p&gt;
+     {{else}}
+       &lt;p class=&quot;info&quot;&gt;
+         &lt;small&gt;Nenhuma mensagem publicada.&lt;/small&gt;
+       &lt;/p&gt;
+     {{/each}}
+   &lt;/div&gt;
+ &lt;/template&gt;
+</code></pre>
+<p>Caso queira adicionar um estilo no seu app, edite o <strong>microtwitter.css</strong> aplicando o CSS que desejar ou <a href="https://github.com/caio-ribeiro-pereira/microtwitter/blob/master/microtwitter.css">utilize como referência esse aqui do meu Github</a>, pelo qual utilizei para criar essa aplicação.</p>
+<p>Nesta última etapa implementaremos as regras de negócio. A regra será simples, criaremos um formulário que em seu submit enviará os <strong>campos nome e mensagem</strong> para o banco de dados, que automaticamente atualizará a <strong>timeline mensagens</strong>. Essa atualização acontecerá em real-time sem criar código adicional para realizar a atualização, isso ocorre graças <a href="http://docs.meteor.com/#reactivity">ao conceito de reactive programming</a> do Meteor, pelo qual alguns componentes já vem nativo esse pattern, no nosso código o namespace <code>Template</code> é 100% reativo. Vamos criar toda lógica dentro do <strong>microtwitter.js</strong>, pelo qual teremos nele, código compartilhado entre <strong>client-side e server-side</strong>. Veja como será o código do nosso app abaixo:</p>
+<pre><code class="language-javascript"> Mensagem = new Meteor.Collection(&#39;mensagem&#39;);
+ if (Meteor.isClient) {
+   Template.formulario.events({
+     &#39;click #enviar&#39;: function(event, template) {
+       var nome = template.find(&#39;#nome&#39;).value;
+       var conteudo = template.find(&#39;#conteudo&#39;).value;
+       Mensagem.insert({ nome: nome,
+                         conteudo: conteudo,
+                         data: new Date().toLocaleString() });
+       event.preventDefault();
+     }
+   });
+   Template.mensagens.timeline = function() {
+     return Mensagem.find();
+   };
+ }
+ if (Meteor.isServer) {
+   Meteor.startup(function () {
+     Mensagem.remove({});
+     console.log(&quot;Rodando MicroTwitter&quot;);
+   });
+ }
+</code></pre>
+<p>Tecnicamente, o Meteor possui duas variáveis que informa se um trecho de código será executado no cliente (<code>Meteor.isClient</code>) ou no servidor (<code>Meteor.isServer</code>). No desenvolvimento de projetos grandes, essa não é a melhor prática, pois criaremos um código repleto de condicionais, mas fique tranquilo! Nos próximos posts exploraremos as boas práticas de organização e desenvolvimento com Meteor.</p>
+<p>Uma das vantagens do Meteor é o compartilhamento de código entre cliente-servidor, ele faz essa magia através das variáveis globais do JavaScript, por exemplo, no nosso código a collection <code>Mensagem</code> esta compartilhada, e isso possibilitou executar queries tanto no cliente como no servidor utilizando apenas uma única instância.</p>
+<p>Cada template possui funções <strong>helpers e events</strong>.</p>
+<p>A convenção de helpers funciona da seguinte forma: <code>Template.nome_do_template.nome_do_helper</code> e no html do template você acessa esse helper chamando-a via tags do Handlebars, por exemplo, estamos chamando o helper <code>Template.mensagens.timeline</code> dentro da tag <template name="mensagens"> através do comando: <code>{{#each timeline}}</code>.</template></p>
+<p>Já os <code>events</code> permite criar eventos para os elementos interno de um template. Ele segue a seguinte convenção: <code>Template.nome_do_template.events()</code>. Em seu paramêtro enviamos um objeto chave-valor, em que cada chave é referente a um <code>evento + elemento</code> do template a ser tratado e o valor é uma função callback do evento. No nosso app, criamos apenas um evento:</p>
+<pre><code class="language-javascript"> Template.formulario.events({
+   &#39;click #enviar&#39;: function(event, template) {
+     //... callback do evento
+   }
+ });
+</code></pre>
+<p>Outro detalhe é que por default no client-side já temos habilitado o jQuery e Underscore, e isso facilita capturar e manipular objetos DOM do HTML, como por exemplo, capturamos os os valores dos <strong>campos nome e mensagem</strong> do formulário.</p>
+<p>Agora que terminamos nosso app, que tal testá-lo?
+Para levantar o servidor execute o comando: <code>meteor</code> e em seguida acesse: <a href="http://localhost:3000">http://localhost:3000</a> para brincar a aplicação. :)</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Primeiros passos com Meteor",
+  "image": "https://udgwebdev.com/images/meteor-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/primeiros-passos-com-meteor",
+  "datePublished": "2013-10-04",
+  "dateCreated": "2013-10-04",
+  "description": "Neste post vamos aprender na prática os primeiros passos sobre como construir uma aplicação utilizando o framework Meteor.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

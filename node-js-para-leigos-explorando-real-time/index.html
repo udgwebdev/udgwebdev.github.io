@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Node.js para leigos - Explorando real-time | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Node.js para leigos - Explorando real-time"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="O capítulo de hoje será muito interessante, falarei sobre um assunto emergente nos sistemas web, que esta sendo largamente utilizado com Node.js, o assunto é Real-time."/><meta property="og:title" content="Node.js para leigos - Explorando real-time"/><meta property="og:description" content="O capítulo de hoje será muito interessante, falarei sobre um assunto emergente nos sistemas web, que esta sendo largamente utilizado com Node.js, o assunto é Real-time."/><meta property="og:url" content="https://udgwebdev.com/node-js-para-leigos-explorando-real-time"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/node-js-para-leigos-explorando-real-time"/><meta name="twitter:title" content="Node.js para leigos - Explorando real-time"/><meta name="twitter:description" content="O capítulo de hoje será muito interessante, falarei sobre um assunto emergente nos sistemas web, que esta sendo largamente utilizado com Node.js, o assunto é Real-time."/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/node-js-para-leigos-explorando-real-time"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="node-js-para-leigos-explorando-real-time" class="col-xs-12 col-sm-9 post"><h1>Node.js para leigos - Explorando real-time</h1><p class="text-muted">Publicação: <time datetime="05/01/2013" pubdate><b>05/01/2013</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-para-leigos.jpg" alt="Curso de Node.js" title="Curso de Node.js"></p>
+<p>Fala galera! O capítulo de hoje será muito interessante, falarei sobre um assunto que esta muito emergente nos sistemas web, que esta sendo largamente utilizado no <a href="/nodejs">Node.js</a>, <strong>o assunto é Real-time.</strong>
+Quando se fala de aplicações real-time, estamos técnicamente falando de <strong>conexões bi-direcionais</strong>, que na prática, é uma <strong>conexão que se mantem aberta (keep-alive)</strong> para que os clientes interajam com o servidor em uma única conexão aberta. A grande vantagem disso é de não precisar mais das <strong>requisições assíncronas (AJAX)</strong> para simular uma <strong>“ação quase real-time”</strong>, digo quase pois <strong>AJAX não é uma conexão bi-direcional</strong> capaz de se manter aberta até o término de seu processamento.</p>
+<p>Node.js se tornou popular devido a sua facilidade em trabalhar com real-time, simplesmente por que o <strong>protocolo WebSockets (Protocolo do HTML5 para conexões bi-direcionais)</strong> utiliza-se Javascript também.
+O único problema em desenvolver aplicações real-time é que <strong>nem todos os browsers suportam o protocolo WebSockets</strong>, com isso ainda é <strong>inviável desenvolver uma aplicação 100% WebSockets</strong>. Diante desse problema <strong>surgiu um framework chamado Socket.IO</strong> cuja sua idéia resolve esse problema nos browsers antigos, <strong>emulando outras técnicas de comunicação real-time</strong> de forma totalmente abstrata para o desenvolvedor.
+Basicamente ele possui um script no client-side que detecta o browser e a compatibilidade adequada de comunicação.
+Ele tenta na seguinte ordem escolher qual técnica de comunicação será viável com o browser:</p>
+<ol>
+<li>WebSocket</li>
+<li>Adobe® Flash® Socket</li>
+<li>AJAX long polling</li>
+<li>AJAX multipart streaming</li>
+<li>Forever Iframe</li>
+<li>JSONP Polling</li>
+</ol>
+<p>Com isso se o navegador for o mais recente Firefox ou Chrome e no server-side estiver habilitado o WebSockets, a comunicação será feita através desse protocolo. Porém se o usuário estiver no <strong>IE 6 sem o adobe flash player</strong> instalado, o nível de comunicação cai para <strong>Ajax long polling ou até JSONP polling</strong>, vai depender da decisão que é automática do Socket.IO client-side. Na maioria dos casos atuais, a conexão será através do <strong>Adobe Flash Player ou AJAX Long polling.</strong></p>
+<p>O legal de tudo isso é que programar com Socket.IO é muito simples e toda decisão complexa é abstraída para o programador.</p>
+<p>Abaixo, vejam uma versão simplificada de um chat real-time:</p>
+<p>Para executar esse código, execute primeiro o comando:
+<strong>npm install express socket.io</strong></p>
+<pre><code class="language-javascript"> // server.js
+ // É necessário instanciar os módulos abaixo nessa ordem!
+ var app = require(&#39;express&#39;)()
+   , server = require(&#39;http&#39;).createServer(app)
+   , io = require(&#39;socket.io&#39;).listen(server);
+ server.listen(3000, function(){
+   console.log(&quot;Chat real-time...&quot;);
+ });
+ app.get(&#39;/&#39;, function (req, res) {
+   res.sendfile(__dirname + &#39;/index.html&#39;);
+ });
+ // Eventos do Socket.IO
+ io.sockets.on(&#39;connection&#39;, function (socket) {
+   socket.on(&#39;toServer&#39;, function (data) {
+     var msg = data.nome+&quot;:&quot;+data.msg;
+     socket.emit(&#39;toClient&#39;, msg);
+     socket.broadcast.emit(&#39;toClient&#39;, msg);
+   });
+ });
+</code></pre>
+<pre><code class="language-html"> &lt;!-- index.html --&gt;
+ &lt;html&gt;
+   &lt;head&gt;
+     &lt;title&gt;Chat Real-time&lt;/title&gt;
+     &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+     &lt;script&gt;
+       var socket = io.connect(&#39;http://localhost&#39;);
+       socket.on(&#39;toClient&#39;, function (msg) {
+         document.getElementById(&#39;historico&#39;).innerHTML += msg;
+       });
+       var enviar = function(){
+         var nome = document.getElementById(&#39;nome&#39;).value;
+         var msg = document.getElementById(&#39;mensagem&#39;).value;
+         socket.emit(&#39;toServer&#39;, {nome: nome, msg: msg});
+       };
+     &lt;/script&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;h1&gt;Chat Real-time&lt;/h1&gt;
+     &lt;label&gt;Nome:
+       &lt;input type=&quot;text&quot; id=&quot;nome&quot; size=&quot;3&quot;&gt;
+     &lt;/label&gt;
+     &lt;label&gt;Mensagem:
+       &lt;input type=&quot;text&quot; id=&quot;mensagem&quot; size=&quot;10&quot;&gt;
+     &lt;/label&gt;
+     &lt;button id=&quot;enviar&quot; onclick=&quot;enviar();&quot;&gt;Enviar&lt;/button&gt;
+     &lt;hr&gt;
+     &lt;div id=&quot;historico&quot;&gt;&lt;/div&gt;
+   &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+<p>Acabamos de criar uma versão simples de um chat em real-time! No arquivo server.js somos obrigados a instanciar os módulos express, http e socket.io naquela ordem, pois é um motivo específico do próprio Socket.IO em que ele precisa escutar todas as ações do módulo http primeiro.</p>
+<p>Lembrando que estamos usando as últimas versões de todos esses módulos: <code>Express 3 e Socket.IO 0.9.x</code>. A boa prática é seguir exatamente a ordem apresentada neste exemplo anterior, que seria instanciar os módulos já deixando o express e socket.io executando seus métodos de listen(), depois criamos as rotas do express e por último os eventos real-time do socket.io.</p>
+<h4>Eventos server-side</h4><ul>
+<li><code>io.sockets.on(‘connection’, function(socket))</code> - Ocorre quando o servidor recebe uma nova conexão de cliente.</li>
+<li><code>socket.on(‘message’, function(mensagem, callback))</code> - Ocorre quando um cliente usa a função send();, o callback desse evento serve para automaticamente responder o cliente no final da execução deste evento.</li>
+<li><code>socket.on(‘qualquer-nome-de-evento’, function(data))</code> - Eventos customizados pelo desenvolvedor, qualquer nome pode ser apelidado aqui e o seu comportamento é de apenas receber através do data dados enviados pelo cliente. No nosso exemplo prático, criamos o evento toServer.</li>
+<li><code>socket.on(‘disconnect’)</code> - Ocorre quando um cliente sai da área conectada ou emite o evento disconnect para o servidor.</li>
+</ul>
+<h4>Mensageria server-side</h4><ul>
+<li><code>socket.emit(‘evento’, variaveis)</code> - Envia uma mensagem para o cliente que se comunicou com o servidor.</li>
+<li><code>socket.broadcast.emit(‘evento’, variaveis)</code> - Envia uma mensagem para todos os clientes conectados ao servidor, exceto o cliente que se comunicou com o servidor, ou seja, se numa sala de chat temos 4 clientes e o cliente X emitiu uma mensagem ao servidor, os outros 3 clientes receberão o retorno de uma mensagem menos o cliente X.</li>
+</ul>
+<h4>Eventos client-side</h4><ul>
+<li><code>socket.on(‘connect’)</code> – Ocorre quando o cliente se conecta ao servidor.</li>
+<li><code>socket.on(‘connecting’)</code> – Ocorre quando o cliente esta se conectando ao servidor.</li>
+<li><code>socket.on(‘disconnect’)</code> – Ocorre quando o cliente deseja se desconectar do servidor.</li>
+<li><code>socket.on(‘connect_failed’)</code> – Ocorre quando o cliente não conseguiu se conectar no servidor.</li>
+<li><code>socket.on(‘error’)</code> – Ocorre quando o cliente já se conectou, porém ocorreu um erro grave no servidor durante as trocas de mensagens.</li>
+<li><code>socket.on(‘message’, function (message, callback))</code> – Ocorre quando o cliente envia uma mensagem de resposta rápida ao servidor, cuja resposta acontece através da função de callback.</li>
+<li><code>socket.on(‘qualquer-nome-de-evento’, function(data))</code> – Evento customizado pelo desenvolvedor. No nosso exemplo criamos o evento toClient.</li>
+<li><code>socket.on(‘reconnect_failed’)</code> – Ocorre quando o cliente não consegue se reconectar ao servidor.</li>
+<li><code>socket.on(‘reconnect’)</code> – Ocorre quando o cliente se reconecta ao servidor.</li>
+<li><code>socket.on(‘reconnecting’)</code> – Ocorre quando o cliente esta se reconectando ao servidor.</li>
+</ul>
+<h4>Mensageria client-side</h4><ul>
+<li><code>socket.emit(‘evento’, variaveis)</code> - Envia uma mensagem para o cliente que se comunicou com o servidor.</li>
+</ul>
+<p>No client-side temos que adicionar o script:</p>
+<pre><code class="language-html"> &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>É automaticamente incluída pelo Socket.IO, não se preocupe em baixar esse arquivo apenas incluá-o em seu html.</p>
+<p>Bom galera, esse foi mais um capítulo do mini-curso, para melhores referências, segue abaixo os links utilizados:</p>
+<ul>
+<li><a href="/real-time-com-socket-io-no-nodejs" title="Real-time com Socket.IO 1.0">Real-time com Socket.IO 1.0</a></li>
+<li><a href="/criando-um-chat-usando-session-do-express-4-no-socket-io-1-0" title="Criando um chat usando Session do Express 4 no Socket.IO 1.0">Criando um chat usando Session do Express 4 no Socket.IO 1.0</a></li>
+<li><a href="https://github.com/LearnBoost/socket.io" title="Github do Socket.IO">Github do Socket.IO</a></li>
+<li><a href="https://github.com/LearnBoost/socket.io/wiki/Exposed-events" title="Socket.IO – Exposed Events">Socket.IO – Exposed Events</a></li>
+</ul>
+<p>Feliz 2013 a todos!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Node.js para leigos - Explorando real-time",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/node-js-para-leigos-explorando-real-time",
+  "datePublished": "2013-01-05",
+  "dateCreated": "2013-01-05",
+  "description": "O capítulo de hoje será muito interessante, falarei sobre um assunto emergente nos sistemas web, que esta sendo largamente utilizado com Node.js, o assunto é Real-time.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

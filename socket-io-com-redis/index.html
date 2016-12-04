@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Socket.IO com Redis | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Socket.IO com Redis"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a documentação nos ensina, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca."/><meta property="og:title" content="Socket.IO com Redis"/><meta property="og:description" content="Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a documentação nos ensina, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca."/><meta property="og:url" content="https://udgwebdev.com/socket-io-com-redis"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/socket-io.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/socket-io-com-redis"/><meta name="twitter:title" content="Socket.IO com Redis"/><meta name="twitter:description" content="Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a documentação nos ensina, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca."/><meta name="twitter:image" content="https://udgwebdev.com/images/socket-io.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/socket-io-com-redis"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="socket-io-com-redis" class="col-xs-12 col-sm-9 post"><h1>Socket.IO com Redis</h1><p class="text-muted">Publicação: <time datetime="13/12/2013" pubdate><b>13/12/2013</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/socket-io.jpg" alt="Compartilhando Session entre Express e Socket.IO" title="Socket.IO com Redis"></p>
+<p>Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a <a href="http://socket.io/#how-to-use">documentação nos ensina</a>, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca, que por default é utilizado o <strong>MemoryStore</strong> (sessão em memória).</p>
+<p>Este controle não é recomendável em ambiente de produção, pois além da Session, o Socket.IO mantém em memória conexões dos usuários online na aplicação e outros recursos internos.</p>
+<p>Outro problema do MemoryStore é que ele não permite que sua aplicação trabalhe com <a href="http://nodejs.org/api/cluster.html">clusters</a>, por que cada cluster vai alterar a session de outro cluster sem ter um controle exato sobre qual session pertece a qual cluster, e por causa disso, comportamentos anormais ocorrerão em sua aplicação.</p>
+<p>A solução é utilizar uma session em banco de dados, o Socket.IO já vem com suporte ao Redis, e aplicar essa adaptação é bem simples.</p>
+<p>Para isso utilizaremos o seu módulo nativo, o <a href="https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO">RedisStore</a>, ele permite gerenciar sessions via banco de dados Redis, que é um NoSQL extremamente rápido!</p>
+<p>Para seguir as dicas desse post será necessário configurar o Redis, se você não tem ele em sua máquina <a href="http://redis.io/">acesse seu site oficial para instalá-lo</a>.</p>
+<p>Com o Redis rodando, vamos ao que interessa! Criaremos um simples servidor, utilizando apenas o Socket.IO para demonstrar essa dica.</p>
+<p>Para criar uma nova aplicação, execute:</p>
+<pre><code class="language-bash"> npm init
+</code></pre>
+<p>Responda as perguntas deste comando do jeito que quiser, por exemplo, o nome do meu app será <strong>&quot;socket-redis&quot;</strong>, versão: <strong>&quot;0.0.1&quot;</strong> e o resto apenas deixe em branco para finalizar e criar o <strong>package.json</strong> corretamente.</p>
+<p>Feito isso, vamos instalar os módulos do nosso app, digite:</p>
+<pre><code class="language-bash"> npm install socket.io redis --save
+</code></pre>
+<p>Agora que temos tudo preparado, vamos ao que interessa:</p>
+<pre><code class="language-javascript"> var io = require(&#39;socket.io&#39;).listen(80);
+ io.sockets.on(&#39;connection&#39;, function(socket) {
+   socket.on(&#39;msg&#39;, function (data) {
+     socket.broadcast.emit(data);
+   });
+ });
+</code></pre>
+<p>Para simplificar este post criei um simples <strong>emissor de mensageria broadcast</strong>, ou seja, o usuário emite um <strong>&#39;msg&#39;</strong> e o servidor envia esta mensagem para todos os demais usuários conectados.
+Não entrarei em detalhes sobre o front-end da aplicação, pois o foco aqui é otimizar o back-end, então fique a vontade para criar a view que envia mensagens para este servidor.</p>
+<p>O código anterior esta bem simplificado e por default ele já esta <strong>pré-configurado para MemoryStore</strong>, para adaptar este código para <strong>RedisStore</strong>, faça as seguintes modificações:</p>
+<pre><code class="language-javascript"> var SocketIO = require(&#39;socket.io&#39;)
+   , io = SocketIO.listen(80)
+ ;
+ io.set(&#39;store&#39;, new SocketIO.RedisStore);
+ io.sockets.on(&#39;connection&#39;, function(socket) {
+   socket.on(&#39;msg&#39;, function (data) {
+     socket.broadcast.emit(data);
+   });
+ });
+</code></pre>
+<p>Essa simples modificação funcionará somente se o Redis estiver rodando na mesma máquina da aplicação, pois por default o <strong>cliente Redis interno</strong> se conectará no <strong><a href="http://localhost:6379">http://localhost:6379</a></strong>.
+Caso você precise informar um endereço específico de um servidor Redis externo, você terá que adicionar um pouco mais de código:</p>
+<pre><code class="language-javascript"> var redis = require(&#39;redis&#39;)
+   , SocketIO = require(&#39;socket.io&#39;)
+   , io = SocketIO.listen(80)
+ ;
+ io.set(&#39;store&#39;, new SocketIO.RedisStore({
+    redisPub: redis.createClient(/* Porta,Host */)
+   ,redisSub: redis.createClient(/* Porta,Host */)
+   ,redisClient: redis.createClient(/* Porta,Host */)
+ }));
+ io.sockets.on(&#39;connection&#39;, function(socket) {
+   socket.on(&#39;msg&#39;, function (data) {
+     socket.broadcast.emit(data);
+   });
+ });
+</code></pre>
+<p>Com esse upgrade implementado o seu sistema vai rodar perfeitamente em clusters, sem causar bugs no controle de session, pois as sessions serão compartilhadas entre os clusters existentes.</p>
+<p>Outro ponto forte é que sua aplicação consumirá menos memória, afinal a memória dedicada para as Sessions foi delegada para o Redis, e este banco mantém em curtos períodos os dados da Session em disco.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Socket.IO com Redis",
+  "image": "https://udgwebdev.com/images/socket-io.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/socket-io-com-redis",
+  "datePublished": "2013-12-13",
+  "dateCreated": "2013-12-13",
+  "description": "Quando desenvolvemos uma aplicação real-time com Socket.IO, muitas vezes seguimos o que a documentação nos ensina, ou seja, poucas configurações, foco nos eventos e trabalhando com uma session fraca.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

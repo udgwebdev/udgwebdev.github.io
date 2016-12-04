@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Node.js para leigos - Jade Template Engine | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Node.js para leigos - Jade Template Engine"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby. Sua síntaxe é totalmente diferente do HTML convencional."/><meta property="og:title" content="Node.js para leigos - Jade Template Engine"/><meta property="og:description" content="O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby. Sua síntaxe é totalmente diferente do HTML convencional."/><meta property="og:url" content="https://udgwebdev.com/node-js-para-leigos-jade-template-engine"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/node-js-para-leigos-jade-template-engine"/><meta name="twitter:title" content="Node.js para leigos - Jade Template Engine"/><meta name="twitter:description" content="O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby. Sua síntaxe é totalmente diferente do HTML convencional."/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/node-js-para-leigos-jade-template-engine"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="node-js-para-leigos-jade-template-engine" class="col-xs-12 col-sm-9 post"><h1>Node.js para leigos - Jade Template Engine</h1><p class="text-muted">Publicação: <time datetime="01/09/2012" pubdate><b>01/09/2012</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-para-leigos.jpg" alt="Curso de Node.js" title="Curso de Node.js"></p>
+<p>Hoje apresentarei um íncrivel template engine para node.js, seu nome se chama Jade. Digo íncrivel por que com ele será possível desenvolver códigos html com uma síntaxe muito limpa, com regras de identação semelhantes a linguagem Python <strong>(através de espaçamentos ou tabulações de código, porém jamais tente as duas regras no mesmo código!)</strong>, integração com comandos do servidor e trabalhando de forma otimizada reaproveitando e extendendo trechos das views.</p>
+<p>O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby, sua sintaxe é totalmente diferente do HTML convencional, veja o código abaixo:</p>
+<pre><code class="language-html"> &lt;!DOCTYPE html&gt;
+ &lt;html lang=&quot;en&quot;&gt;
+   &lt;head&gt;
+     &lt;title&gt;Jade&lt;/title&gt;
+     &lt;script&gt;
+       if (foo) {
+         bar();
+       }
+     &lt;/script&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;h1&gt;Template engine&lt;/h1&gt;
+     &lt;div id=&quot;container&quot;&gt;
+       &lt;p&gt;Jade&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+<p>Ele foi substituído pelo código abaixo:</p>
+<pre><code class="language-javascript"> doctype html
+ html(lang=&quot;en&quot;)
+   head
+     title Jade
+     script
+       if (foo) {
+         bar();
+       }
+   body
+     h1 Template engine
+     #container
+       p Jade
+</code></pre>
+<p>Algo que melhora drasticamente a legibilidade do código, permitindo que você desenvolva mais com menos esforço. Outro destaque do Jade é a possibilidade de trabalhar com código server-side junto ao código client-side, ou seja, código javascript server-side misturado com código html ou javascript client-side, para isso é necessário utilizar alguns comandos para <strong>&quot;escapar&quot;</strong> determinado comando de forma que o Jade reconheça quem é quem. Um bom exemplo disso é o código abaixo:</p>
+<pre><code class="language-javascript"> doctype html
+ html(lang=&quot;en&quot;)
+   head
+     title Jade
+     script
+       // #{usuario.nome} é uma variável do server-side.
+       var nome = &#39;#{usuario.nome}&#39;;
+       // Nome é variável client-side
+       alert(nome);
+   body
+     #container
+       // Comando server-side para exibição do nome do usuário.
+       if(usuario)
+         p #{usuario.nome}
+       else
+         p Não informado.
+</code></pre>
+<p>O Jade possui alguns <strong>shortcuts-commands</strong>, que visam agilizar e reduzir a complexidade do seu código, abaixo listarei alguns comandos e seus respectivos shortcuts:</p>
+<ul>
+<li><code>div(id=&#39;containter&#39;, class=&#39;menu&#39;)</code> =&gt; <code>#container.menu</code></li>
+<li>p= nome =&gt; <code>p #{nome}</code></li>
+</ul>
+<p>Trabalhando com Jade é possível desenvolver <strong>views reaproveitáveis</strong>, evitando o desperdício de repetir código em diversas partes do layout da aplicação.</p>
+<pre><code class="language-javascript"> // header.jade
+ header
+   h1 Hey this is Jade!
+</code></pre>
+<pre><code class="language-javascript"> // footer.jade
+ footer
+   small Bye! See you later!
+</code></pre>
+<pre><code class="language-javascript"> // main.jade
+ doctype html
+ html
+   head
+     title This is Jade
+   body
+     include header
+     section
+       p This is a post about jade template engine, enjoy it!
+     include footer
+</code></pre>
+<p>Repare que no código <strong>main.jade</strong> reaproveitamos o header e footer que são arquivos separados, e a inclusão foi feita através do <strong>método include</strong>. Outro meio de reaproveitar código é através dos comandos <strong>extends e block</strong>, que geralmente são utilizados para trabalhar com o conceito de <strong>layout</strong>, onde criamos uma página principal que receberá em alguns pontos outras views.</p>
+<pre><code class="language-javascript"> // main.jade
+ doctype html
+ html
+   head
+     title Jade
+   body
+     block body
+</code></pre>
+<p>Todas as demais views serão incluídas através do body via comando <strong>block</strong>, abaixo segue um exemplo em que a página extende o layout para ela mesma.</p>
+<pre><code class="language-javascript"> // list.jade
+ extends main_layout
+ block body
+   ul
+     li Jade
+     li Template
+     li Engine
+     li For
+     li Node.js
+</code></pre>
+<p>Basicamente extendemos o <strong>main_layout.jade</strong> para o <strong>list.jade</strong> em que incluímos os componentes do html dentro do <strong>block body</strong>. Podemos até misturar ambos os comandos <strong>include, extends e block</strong>, fazendo com que o <strong>list.jade</strong> fique dessa maneira:</p>
+<pre><code class="language-javascript"> extends main_layout
+ block body
+   include header
+   section
+     ul
+       li Jade
+       li Template
+       li Engine
+       li For
+       li Node.js
+   include footer
+</code></pre>
+<p>Agora listarei algumas dicas, que serão essenciais para trabalhar de forma produtiva com Jade:</p>
+<ul>
+<li>Respeite a regra de identação utilize espaçamento ou tabulação e NUNCA os dois no mesmo código.</li>
+<li>Código Javascript client-side também precisa respeitar a regra de identação para evitar problemas com Jade.</li>
+<li>Utilize comandos <strong>shortcuts-commands</strong> na medida do possível, para diminuir o número de códigos.</li>
+<li>Trabalhe com os comandos <strong>include</strong>, <strong>block</strong> e <strong>extends</strong> para separar códigos que possam ser reaproveitados em mais de uma view, para isso, identifique em suas views quais trechos de código html ou javascript se repetem com frequência e aplique esses conceitos de <strong>extensão e reaproveitamento das views.</strong></li>
+</ul>
+<p>Voltando a nossa mini-aplicação de cadastro de clientes, agora implementaremos as views utilizando o Jade no lugar do atual EJS. O primeiro passo é configurar no Express o template engine Jade. Execute o comando no terminal console ou prompt de comando:</p>
+<p><code>npm install jade</code></p>
+<p>E modifique o <strong>app.js</strong>:</p>
+<pre><code class="language-javascript"> app.configure(function(){
+   app.set(&#39;views&#39;, __dirname + &#39;/views&#39;);
+   // Apenas modifique de ejs para jade.
+   app.set(&#39;view engine&#39;, &#39;jade&#39;);
+   app.set(&#39;view options&#39;, {layout: false});
+   app.use(express.bodyParser());
+   app.use(express.methodOverride());
+ });
+</code></pre>
+<p>Agora vamos alterar as atuais views, primeiro renomeie as extensões dos arquivos: <strong>index.ejs, edit.ejs, 500.ejs e 404.ejs</strong> para <strong>.jade</strong>, e agora mãos a obra!</p>
+<pre><code class="language-javascript"> // index.jade
+ doctype html
+ html
+   body
+     h1 Cadastro de cliente
+     form(action=&quot;/cliente&quot;, method=&quot;post&quot;)
+       label Nome:
+         input(type=&quot;text&quot;, name=&quot;cliente[nome]&quot;)
+       label Idade:
+         input(type=&quot;text&quot;, name=&quot;cliente[idade]&quot;)
+       button(type=&quot;submit&quot;) Enviar
+     h1 Lista de clientes
+     ul
+       each cliente, i in clientes
+         li #{cliente.nome} - #{cliente.idade}
+           a(href=&quot;/cliente/#{i}/editar&quot;) Editar
+           a(href=&quot;/cliente/#{i}&quot;) Excluir
+</code></pre>
+<pre><code class="language-javascript"> // edit.jade
+ doctype html
+ html
+   body
+     h1 Editar dados do cliente: #{cliente.nome}
+     form(action=&quot;/cliente/#{id}&quot;, method=&quot;post&quot;)
+       input(type=&quot;hidden&quot;, name=&quot;_method&quot;, value=&quot;put&quot;)
+       label Nome:
+         input(type=&quot;text&quot;, name=&quot;cliente[nome]&quot;, value=&quot;#{cliente.nome}&quot;)
+       label Idade:
+         input(type=&quot;text&quot;, name=&quot;cliente[idade]&quot;, value=&quot;#{cliente.idade}&quot;)
+ button(type=&quot;submit&quot;) Enviar
+</code></pre>
+<pre><code class="language-javascript"> // 404.jade
+ doctype html
+ html
+   head
+     title Página não encontrada.
+   body
+     h1 Página não encontrada.
+</code></pre>
+<p>Para finalizar os refactorings de views...</p>
+<pre><code class="language-javascript"> // 500.jade
+ doctype html
+ html
+   head
+     title Erro na aplicação.
+   body
+     h1 Erro na aplicação.
+     h3 Detalhes: #{error.message}
+</code></pre>
+<p>E finalizamos mais uma saga dessa consagrada série de mini-curso Node.js para leigos.</p>
+<h4>Quero propor um desafio para vocês!</h4><p>Refaçam esses <strong>layouts tornando-os reaproveitáveis</strong>. Utilizam qualquer um dos comandos que citei: <strong>extends, block ou include</strong>.</p>
+<p><strong>Dica: identifique os possíveis pontos que podem futuramente se repetir ou simplesmente separe cada componente em arquivos diferentes com o intuito de organizar suas views.</strong> Por exemplo: separe em um arquivo o form e em outro arquivo você lista todos os clientes e no final unifique-os numa mesma view.</p>
+<p>Até a próxima pessoal e um grande abraço a todos!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Node.js para leigos - Jade Template Engine",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/node-js-para-leigos-jade-template-engine",
+  "datePublished": "2012-09-01",
+  "dateCreated": "2012-09-01",
+  "description": "O Jade é um template engine exclusivo para Node.js, inspirado no Haml do Ruby. Sua síntaxe é totalmente diferente do HTML convencional.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

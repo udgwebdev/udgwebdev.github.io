@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Trabalhando com validators no Node.js | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Trabalhando com validators no Node.js"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Trabalhar com validators é muito importante no tratamento de dados, pois ele mantém o projeto organizado e padronizado, evitando ifs e elses"/><meta property="og:title" content="Trabalhando com validators no Node.js"/><meta property="og:description" content="Trabalhar com validators é muito importante no tratamento de dados, pois ele mantém o projeto organizado e padronizado, evitando ifs e elses"/><meta property="og:url" content="https://udgwebdev.com/trabalhando-com-validators-no-node-js"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/trabalhando-com-validators-no-node-js"/><meta name="twitter:title" content="Trabalhando com validators no Node.js"/><meta name="twitter:description" content="Trabalhar com validators é muito importante no tratamento de dados, pois ele mantém o projeto organizado e padronizado, evitando ifs e elses"/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/trabalhando-com-validators-no-node-js"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="trabalhando-com-validators-no-node-js" class="col-xs-12 col-sm-9 post"><h1>Trabalhando com validators no Node.js</h1><p class="text-muted">Publicação: <time datetime="05/04/2012" pubdate><b>05/04/2012</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-logo.jpg" alt="Validators no Node.js" title="Validators no Node.js"></p>
+<p>Trabalhar com validators é algo muito importante no desenvolvimento de uma aplicação web, pois ele mantém o projeto organizado e padronizado, evitando a utilização de comandos <strong>if e else</strong> como validadores de dados.</p>
+<p>No mundo Java, existem diversos frameworks como <a href="http://vraptor.caelum.com.br/" title="VRaptor">VRaptor</a>, <a href="http://struts.apache.org/" title="Struts">Struts</a>, <a href="http://www.springsource.org/" title="Spring">Spring</a>, <a href="http://www.hibernate.org/" title="Hibernate">Hibernate</a> com validators.</p>
+<p>No Ruby, <a href="http://www.sinatrarb.com/" title="Sinatra">Sinatra</a> e <a href="http://rubyonrails.org/" title="Ruby On Rails">Rails</a> possuem validators nativos.</p>
+<p>Agora, e no mundo <a href="http://nodejs.org/" title="Node.js">Node.js</a>, existem validators? Sim!</p>
+<p>O <a href="http://geddyjs.org/" title="Geddy">Geddy</a> possui validators nativos, porém atualmente o <a href="http://expressjs.com/" title="ExpressJS">Express</a> não, mas já existem módulos de terceiro que cumpre esse papel para ele. Até para quem utiliza banco de dados <a href="http://www.mongodb.org/" title="MongoDB">MongoDB</a>, existe um módulo chamado <a href="http://mongoosejs.com/" title="MongooseJS">Mongoose</a>, que permite modelar sua base de dados e toda modelagem pode incluir validators também.</p>
+<p>Praticamente toda plataforma de programação possui um framework para validação de dados.</p>
+<p>Para trabalhar com Node.js recomendo o módulo <strong>node-validator</strong> ou <strong>express-validator</strong>.</p>
+<p>Ele possui funções tanto para validações quanto tratamento de dados, é um ótimo framework e as validações são integradas nas requests da sua aplicação.</p>
+<p>O <strong>Node-Validator</strong> é uma biblioteca perfeita para validação, filtragem e tratamento de dados.</p>
+<p>Com ele é possível verificar desde a validação de campos como <strong>email, ip, data, url</strong> até o tratamento de possíveis <strong>ataques de XSS (Cross-site scripting)</strong> em seus parâmetros. Veja um exemplo utilizando o <strong>Express-Validator</strong>:</p>
+<h4>Formulário html</h4><pre><code class="language-html"> &lt;form action=&quot;/cadastro&quot; method=&quot;post&quot;&gt;
+ Nome: &lt;input type=&quot;text&quot; name=&quot;usuario[nome]&quot;&gt;
+ Email: &lt;input type=&quot;text&quot; name=&quot;usuario[email]&quot;&gt;
+ Idade: &lt;input type=&quot;text&quot; name=&quot;usuario[idade]&quot;&gt;
+ &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+ &lt;/form&gt;
+</code></pre>
+<h4>Servidor que receberá os dados do formulário</h4><pre><code class="language-javascript"> var express = require(&#39;express&#39;)
+   , expressValidator = require(&#39;express-validator&#39;)
+   , app = express();
+ app.use(express.bodyParser());
+ app.use(expressValidator);
+ app.post(&#39;/cadastro&#39;, function(req, res) {
+   // Array de erros para feedback do servidor.
+   var errors = [];
+   // Evento para capturar mensagens de erros e adicioná-las ao array de erros.
+   req.onValidationError(function(erro) {
+     console.log(&#39;Validation error: &#39; + erro);
+     errors.push(erro);
+     return this;
+   });
+   // Dados do formulário submetido.
+   var usuario = req.body.usuario;
+   // Validando dados.
+   req.assert(usuario.idade, &#39;Idade esta vazio&#39;).isEmpty();
+   req.assert(parseInt(usuario.idade), &#39;Menor de idade&#39;).min(18);
+   req.assert(usuario.nome, &#39;Nome esta vazio&#39;).isEmpty();
+   req.assert(usuario.email, &#39;Email invalido&#39;).isEmail();
+   // Preparando mensagem de sucesso e erro.
+   if (errors.length) {
+     res.send(&#39;Erros: &#39; + errors.join(&#39;, &#39;), 500);
+   }else{
+     res.send(&#39;Dados validado com sucesso&#39;, 200);
+   }
+ });
+ app.listen(8888);
+</code></pre>
+<p>Também é possível utilizar seus métodos no client-side da aplicação, para isso basta incluir o <a href="https://github.com/chriso/node-validator/blob/master/validator-min.js" title="Validator no Client-Side">validator-min.js</a>.</p>
+<p>Para conhecer todos os recursos e principalmente o próprio projeto segue abaixo os links desse módulo:</p>
+<ul>
+<li><a href="https://github.com/chriso/node-validator" title="https://github.com/chriso/node-validator">Github do node-validator</a></li>
+<li><a href="https://github.com/ctavan/express-validator" title="https://github.com/ctavan/express-validator">Github do express-validator</a></li>
+</ul>
+<p>Então é isso pessoal, fica ai a dica e até a próxima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Trabalhando com validators no Node.js",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/trabalhando-com-validators-no-node-js",
+  "datePublished": "2012-04-05",
+  "dateCreated": "2012-04-05",
+  "description": "Trabalhar com validators é muito importante no tratamento de dados, pois ele mantém o projeto organizado e padronizado, evitando ifs e elses",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

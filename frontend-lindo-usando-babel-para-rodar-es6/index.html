@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Frontend lindo usando Babel para rodar ES6 | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Frontend lindo usando Babel para rodar ES6"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Se você esta curtindo a grande evolução da nova especificação do JavaScript, o EcmaScript 6 (ou ES6) e gostaria muito de usá-lo no front-end de seus projetos, então conheça o Babel Transpiler."/><meta property="og:title" content="Frontend lindo usando Babel para rodar ES6"/><meta property="og:description" content="Se você esta curtindo a grande evolução da nova especificação do JavaScript, o EcmaScript 6 (ou ES6) e gostaria muito de usá-lo no front-end de seus projetos, então conheça o Babel Transpiler."/><meta property="og:url" content="https://udgwebdev.com/frontend-lindo-usando-babel-para-rodar-es6"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/babel.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/frontend-lindo-usando-babel-para-rodar-es6"/><meta name="twitter:title" content="Frontend lindo usando Babel para rodar ES6"/><meta name="twitter:description" content="Se você esta curtindo a grande evolução da nova especificação do JavaScript, o EcmaScript 6 (ou ES6) e gostaria muito de usá-lo no front-end de seus projetos, então conheça o Babel Transpiler."/><meta name="twitter:image" content="https://udgwebdev.com/images/babel.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/frontend-lindo-usando-babel-para-rodar-es6"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="frontend-lindo-usando-babel-para-rodar-es6" class="col-xs-12 col-sm-9 post"><h1>Frontend lindo usando Babel para rodar ES6</h1><p class="text-muted">Publicação: <time datetime="27/02/2015" pubdate><b>27/02/2015</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><a href="https://babeljs.io/" title="Babel - The JavaScript transpiler"><img src="/images/babel.jpg" alt="Babel - The JavaScript transpiler" title="Babel - The JavaScript transpiler"></a></p>
+<p>Se você esta curtindo a grande evolução da nova especificação do JavaScript, o EcmaScript 6 (ou ES6) e gostaria muito de usá-lo no front-end de seus projetos, de forma cross-browser e compatível inclusive com browser antigos e principalmente utilizando fallbacks on-demand que evitam overhead de código JavaScript no client-side, então apresento a vocês o transpiler que esta se tornando muito popular chamado Babel (também conhecido pelo antigo nome 6to5).</p>
+<p>Com ele você poderá usar <a href="https://babeljs.io/docs/learn-es6/" title="Veja neste link os recursos de compilação do Babel">os novos recursos do ES6</a>, <a href="https://babeljs.io/docs/usage/experimental/">alguns experimentos do ES7</a> e <a href="https://babeljs.io/docs/usage/jsx/">também o JSX do React</a>. Como resultado final ele compila uma versão JavaScript cross-browser para você, seu mecanismo de compilação (o transpiler) converte de forma eficiente um código ES6 para ES5 como resultado final. Esse processo de compilação você faz através de seu CLI, mas também é possível usá-lo diretamente como um plugin pro <a href="https://babeljs.io/docs/using-babel/" title="Veja neste link as diversas formas de usar o Babel">Grunt, Gulp, Sprockets, Meteor, Webpack, Makefile e mais outros</a>.</p>
+<p>Que tal testarmos na prática para ver como funciona? Instale-o via comando:</p>
+<pre><code class="language-bash"> npm install -g babel
+</code></pre>
+<p>Em seguida crie o seguinte código:</p>
+<pre><code class="language-javascript"> class Cliente {
+   constructor(nome, email) {
+     this.nome = nome;
+     this.email = email;
+   }
+   hello() {
+     return `Olá ${this.nome} tudo bem?`
+   }
+   send() {
+     return `Enviando email para ${this.email}...`
+   }
+ }
+</code></pre>
+<p>Acabamos de criar uma classe usando o padrão ES6 com o nome de arquivo <code>cliente.es6</code>, o código ficou muito lindo, não é?
+Para compilar esta classe usando o Babel, basta rodar esse simples comando:</p>
+<pre><code class="language-bash"> babel cliente.es6 --out-file cliente.js
+</code></pre>
+<p>Como resultado final você terá como output esse código grande, que esta em versão ES5 compatível com os principais browsers:</p>
+<pre><code class="language-javascript"> &quot;use strict&quot;;
+ var _prototypeProperties = function (child, staticProps, instanceProps) { if (staticProps) Object.defineProperties(child, staticProps); if (instanceProps) Object.defineProperties(child.prototype, instanceProps); };
+ var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&quot;Cannot call a class as a function&quot;); } };
+ var Cliente = (function () {
+   function Cliente(nome, email) {
+     _classCallCheck(this, Cliente);
+     this.nome = nome;
+     this.email = email;
+   }
+   _prototypeProperties(Cliente, null, {
+     hello: {
+       value: function hello() {
+         return &quot;Olá &quot; + this.nome + &quot; tudo bem?&quot;;
+       },
+       writable: true,
+       configurable: true
+     },
+     send: {
+       value: function send() {
+         return &quot;Enviando email para &quot; + this.email + &quot;...&quot;;
+       },
+       writable: true,
+       configurable: true
+     }
+   });
+   return Cliente;
+ })();
+</code></pre>
+<p>Sim, o código está um pouco grande e complexo, porém ele ainda está bem melhor do que usando script de fallback que carrega desnecessariamente inúmeros recursos do ES6 no client-side.</p>
+<p>Um detalhe legal é que se você estiver usando vários códigos modularizados, o babel também permite concatenar e compilar uma pasta inteira, gerando um único código, supondo que você tem uma pasta <code>src</code> que contém vários códigos <code>.es6</code> você precisa apenas rodar esse comando:</p>
+<pre><code class="language-bash"> babel src --out-file main.js
+</code></pre>
+<p>E outro recurso legal do Babel é que você pode deixar rodando em background um comando file watcher que recompila toda vez que um determinado arquivo sofre alteração, veja o comando:</p>
+<pre><code class="language-bash"> babel src --watch --out-file main.js
+</code></pre>
+<p>Esse post foi apenas uma demonstração mínima do poderoso Babel, se quiser aprender mais sobre ele recomendo a leitura dos seguintes links:</p>
+<ul>
+<li><a href="https://babeljs.io/">Site oficial do Babel</a></li>
+<li><a href="https://babeljs.io/repl/">Testando Babel no browser</a></li>
+</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Frontend lindo usando Babel para rodar ES6",
+  "image": "https://udgwebdev.com/images/babel.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/frontend-lindo-usando-babel-para-rodar-es6",
+  "datePublished": "2015-02-27",
+  "dateCreated": "2015-02-27",
+  "description": "Se você esta curtindo a grande evolução da nova especificação do JavaScript, o EcmaScript 6 (ou ES6) e gostaria muito de usá-lo no front-end de seus projetos, então conheça o Babel Transpiler.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

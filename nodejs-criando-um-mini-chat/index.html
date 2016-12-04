@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Node.js - Criando Mini-chat via Telnet | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Node.js - Criando Mini-chat via Telnet"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Continuando os estudos sobre Node.js, apresentarei um tutorial para desenvolver um mini-chat rodando via telnet, para executá-lo no protocolo TCP/IP."/><meta property="og:title" content="Node.js - Criando Mini-chat via Telnet"/><meta property="og:description" content="Continuando os estudos sobre Node.js, apresentarei um tutorial para desenvolver um mini-chat rodando via telnet, para executá-lo no protocolo TCP/IP."/><meta property="og:url" content="https://udgwebdev.com/nodejs-criando-um-mini-chat"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/nodejs-criando-um-mini-chat"/><meta name="twitter:title" content="Node.js - Criando Mini-chat via Telnet"/><meta name="twitter:description" content="Continuando os estudos sobre Node.js, apresentarei um tutorial para desenvolver um mini-chat rodando via telnet, para executá-lo no protocolo TCP/IP."/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/nodejs-criando-um-mini-chat"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="nodejs-criando-um-mini-chat" class="col-xs-12 col-sm-9 post"><h1>Node.js - Criando Mini-chat via Telnet</h1><p class="text-muted">Publicação: <time datetime="11/10/2011" pubdate><b>11/10/2011</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-logo.jpg" alt="Node.js - Criando Mini-chat via Telnet" title="Node.js - Criando Mini-chat via Telnet"></p>
+<p>Continuando os estudos sobre Node.js, hoje apresentarei um simples tutorial para desenvolver um mini-chat rodando via <a href="http://pt.wikipedia.org/wiki/Telnet" title="Telnet">telnet</a>, para executá-lo através do protocolo TCP/IP.</p>
+<p>Abaixo apresentarei passo-a-passo o tutorial, lembrando que o próprio código e seus respectivos comentários já dizem por si só o objetivo principal, mas caso tenha dúvidas entre em contato comigo ou deixe um comentário no final do post.</p>
+<h2>Código-fonte:</h2><pre><code class="language-javascript"> var net = require(&#39;net&#39;); // Carrega o módulo TCP.
+ var carrier = require(&#39;carrier&#39;); // Carrega o módulo Carrier.
+ var connections = []; // Cria um array de conexões.
+ // Inicia o servidor.
+ var server = net.createServer(function(conn){
+   // Adiciona no array uma conexão de um usuário.
+   connections.push(conn);
+   // Evento que remove o usuário do array quando ele é desconectado.
+   conn.on(&#39;close&#39;, function(){
+     var pos = connections.indexOf(conn);
+     if(pos &gt;= 0){
+       connections.splice(pos, 1);
+     }
+   });
+   //Imprime no cliente a mensagem de início no mini-chat.
+   conn.write(&#39;Node ChatnName: &#39;);
+   // Variável para identificar o nome do usuário conectado.
+   var username;
+   // No evento carry é que o mini-chat acontece.
+   // A variável line é responsável por carregar as mensagens do chat.
+   carrier.carry(conn, function(line){
+     // Se a variável username estiver nula, é definido o um nome para ela.
+     if(!username){
+       username = line;
+       conn.write(&quot;Hi! &quot;+ username +&quot;\n&quot;);
+       return;
+     }
+     // Aqui comparo o valor de line com as palavras-chaves &quot;end&quot;,&quot;quit&quot; e &quot;exit&quot; que irão finalizar uma conexão.
+     if(line == &#39;end&#39; || line == &#39;quit&#39; || line == &#39;exit&#39;){
+       conn.end();
+       return;
+     }
+     // Se nenhuma das condições acontecer, então preparamos uma mensagem de feedback.
+     var feedback = username +&quot;: &quot;+ line +&quot;\n&quot;;
+     //Aqui ocorre o loop de distribuição de mensageria.
+     connections.forEach(function(one_connection){
+       one_connection.write(feedback);
+     });
+   });
+ });
+ // Inicia o servidor na porta 4000.
+ server.listen(4000);
+ // Mensagem de servidor ligado.
+ console.log(&quot;Servidor mini-chat em execução.&quot;);
+</code></pre>
+<h2>Configurando</h2><p>Para iniciar, será necessário instalar o módulo <a href="https://github.com/pgte/carrier" title="Node JS Carrier.">Carrier</a>, que irá ajudá-lo a gerenciar os múltiplos envios dos clientes para o servidor, separando-os linha a linha cada envio.</p>
+<p>Via comando <a href="/npm-node-package-manager/" title="NPM – Node Package Manager">NPM</a> instale esse módulo:</p>
+<pre><code class="language-bash"> npm install carrier
+</code></pre>
+<h2>Executando</h2><ol>
+<li>Inicie o servidor: <code>node mini-chat.js</code></li>
+<li>Abra um novo console para executar um cliente e execute o comando: <code>telnet [IP] [Porta]</code>, por exemplo: <code>telnet 127.0.0.1 4000</code></li>
+<li>E brinque com o chat iniciando uma conversa entre dois consoles telnet.</li>
+</ol>
+<p>Espero que tenham gostado e nos próximos posts mostrarei mais exemplos práticos explorando essa tecnologia. Obrigado e até a próxima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Node.js - Criando Mini-chat via Telnet",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/nodejs-criando-um-mini-chat",
+  "datePublished": "2011-10-11",
+  "dateCreated": "2011-10-11",
+  "description": "Continuando os estudos sobre Node.js, apresentarei um tutorial para desenvolver um mini-chat rodando via telnet, para executá-lo no protocolo TCP/IP.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

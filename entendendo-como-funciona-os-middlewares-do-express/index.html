@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Entendendo como funciona os middlewares do Express | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Entendendo como funciona os middlewares do Express"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="O assunto desse post será sobre o que é e como implementar middlewares em um aplicação web que utiliza o framework Express."/><meta property="og:title" content="Entendendo como funciona os middlewares do Express"/><meta property="og:description" content="O assunto desse post será sobre o que é e como implementar middlewares em um aplicação web que utiliza o framework Express."/><meta property="og:url" content="https://udgwebdev.com/entendendo-como-funciona-os-middlewares-do-express"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/express4.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/entendendo-como-funciona-os-middlewares-do-express"/><meta name="twitter:title" content="Entendendo como funciona os middlewares do Express"/><meta name="twitter:description" content="O assunto desse post será sobre o que é e como implementar middlewares em um aplicação web que utiliza o framework Express."/><meta name="twitter:image" content="https://udgwebdev.com/images/express4.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/entendendo-como-funciona-os-middlewares-do-express"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="entendendo-como-funciona-os-middlewares-do-express" class="col-xs-12 col-sm-9 post"><h1>Entendendo como funciona os middlewares do Express</h1><p class="text-muted">Publicação: <time datetime="28/01/2015" pubdate><b>28/01/2015</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/express4.jpg" alt="Middlewares do Express" title="Middlewares do Express"></p>
+<p>Neste post vou explicar uma dica simples e extremamente útil para os devs que trampam com aplicações web para Node.js. O assunto será sobre o que é e como implementar middlewares em um aplicação web que utiliza o framework Express.</p>
+<h2>O que são middlewares?</h2><p>Quando você cria uma rota em sua aplicação web, por exemplo:</p>
+<pre><code class="language-javascript"> app.get(&quot;/home&quot;, function(request, response) {
+   response.end(&quot;HOME&quot;);
+ });
+</code></pre>
+<p>Você libera uma área de sua aplicação para que usuários acessem via browser ou outras aplicações acessem através de algum framework http client.
+Quando essa rota é acessada, dois objetos principais surgem no callback dessa função, eles são:</p>
+<ol>
+<li><strong>request</strong>: ele é responsável por carregar dados da requisição que esta sendo realizada, geralmente vem com dados do cliente e algums parâmetros de input, como querystrings, parâmetros de rotas e body de um formulário. Em resumo, este objeto contém diversos dados do cliente.</li>
+<li><strong>response</strong>: este objeto permite que o servidor envie uma resposta para o cliente que realizou uma requisição. Aqui você pode enviar um html, json, dados via header, redirecionar a resposta para uma outra requisição, em geral este é um objeto focado em dar uma resposta para o cliente.</li>
+</ol>
+<p>Este conceito de requisição e resposta não é do Express, e sim do <a href="http://pt.wikipedia.org/wiki/Hypertext_Transfer_Protocol">protocolo HTTP</a>, ou seja, outras plataformas e linguagens de programação que trabalham com este protocolo seguem essa mesmo mecanismo.
+Geralmente quando criamos uma aplicação web, queremos não só criar rotas na aplicação como também queremos tratar de uma forma padrão todas as requisições e respostas das rotas, sem precisar tratar repetitivamente todos os códigos das rotas. Por exemplo, se quero configurar que todas as rotas retornem uma resposta em formato gzip, praticamente não é necessário rodar uma função de gzip no final de todas as rotas, você pode injetar uma função que intercepte todas as requisições de forma que converta uma resposta em gzip. Esse conceito de interceptar requisições é o que chamamos de middleware. Os middlewares são funções que podem tratar os inputs e outputs das rotas antes e ou depois que uma rota é processada, ou seja, você pode criar um middleware que intercepta e verificar se uma requisição esta enviando um header específico e que caso o mesmo não esteja enviando o header ela retorne uma tela de erro para o usuário, negando a requisição de acessar uma determinada rota da aplicação, neste caso você criou e inejtou um middleware que trata uma pré-requisição. Você também pode criar um middleware que no final de cada resposta de uma rota, retorne também um header com metadados da resposta, por exemplo, headers de paginação de dados. Neste caso estamos criando um middleware de pós-requisição. Não há limites ao injetar middlewares, você pode criar e configurar N middlewares em sua aplicação, porém é sempre bom entender o que são cada middlewares e principalmente a ordem que cada middleware é injetado afeta no processamento de uma rota, ou seja, caso você injete middlewares em uma ordem errada, como efeito colateral sua aplicação pode responder ou até mesmo não processar corretamente suas rotas, por isso é extremamente importante entender o que cada middleware faz e em que ordem injetá-los.</p>
+<h2>Identificando os middlewares</h2><p>Se você já criou alguma vez um app usando Express, consequentemente você precisou configurar alguns middlewares e talvez nem tinha percebido que eram middlewares. Veja o exemplo abaixo:</p>
+<pre><code class="language-javascript"> var express = require(&quot;express&quot;);
+ var morgan = require(&quot;morgan&quot;);
+ var compression = require(&quot;compression&quot;);
+ var app = express();
+ // injetando alguns middlewares...
+ app.use(morgan());
+ app.use(compression());
+ // criando a rota principal
+ app.get(&quot;/&quot;, function(req, res) {
+   res.json({status: &quot;Hello!&quot;});
+ });
+ app.listen(3000, function() {
+   console.log(&quot;Servidor rodando!&quot;);
+ });
+</code></pre>
+<p>Neste exemplo criei um simples app Express, usando 2 middlewares, um middleware é o módulo <a href="https://www.npmjs.com/package/compression">compression</a> que compacta as respostas para formato gzip e o outro middleware é o módulo <a href="https://www.npmjs.com/package/morgan">morgan</a> responsável por gerar logs de requisição.
+Por último, criei uma rota que apenas retornar o json <code>{status: &quot;Hello!&quot;}</code> quando é acessado seu endereço <a href="http://localhost:3000/">http://localhost:3000/</a>.
+<strong>Obs.:</strong> Caso queira rodar esse server, salve esse código com o nome <code>app.js</code>, em seguida rode os comandos:</p>
+<pre><code class="language-bash"> npm install express compression morgan
+ node app.js
+</code></pre>
+<p>Por último acesse no browser o endereço: <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
+<p>Como já tinha dito antes, é muito importante entender o que cada middleware faz e principalmente se eles estão sendo injetados em uma ordem correta, senão um middleware vai sobreescrever a ação do outro ou sua aplicação vai responder de forma inesperada.
+Quer ver na prática? Faça a seguinte alteração, mude o seu app.js para o seguinte código:</p>
+<pre><code class="language-javascript"> var express = require(&quot;express&quot;);
+ var morgan = require(&quot;morgan&quot;);
+ var compression = require(&quot;compression&quot;);
+ var app = express();
+ app.get(&quot;/&quot;, function(req, res) {
+   res.json({status: &quot;Hello!&quot;});
+ });
+ app.use(morgan());
+ app.use(compression());
+ app.listen(3000, function() {
+   console.log(&quot;Servidor rodando!&quot;);
+ });
+</code></pre>
+<p>Neste caso mudei a ordem dos middlewares morgan e compression, injetando-o depois da rota &quot;/&quot;, ou seja, neste caso esses middlewares não irão gerar logs e respectivamente compactar a resposta para gzip, pois a rota vai responder antes da execução desses middlewares. Afinal uma rota também é considerada como um middleware.</p>
+<h2>Implementando um middleware</h2><p>Ao criar um app Express, de início você usará vários middlewares prontos, afinal é normal que sua aplicação gere logs de requisição, libere arquivos estáticos, reconheça alguns formatos de hypermidia (JSON, XML, HTML), converta dados de um formulário HTML para objeto JSON e faça várias outras tarefas que não listei aqui, assim como também execute tarefas específicas de sua aplicação.</p>
+<p>Neste último caso é mais provavel que você crie o seu próprio middleware e injete-o em seu app Express. Para isso você precisa apenas criar uma função que contenha os parâmetros &quot;function(request, response, next)&quot;, pois ela será usada como callback dentro da função app.use(). É importante que seu middleware dê continuidade aos próximos fluxos de middlewares da aplicação, e para isso você apenas precisa executar a função next() que dita que seu middleware terminou com sucesso seu processamento e repassa a vez para um outro middleware ou rota continuar sua execução. Caso você queira cancelar o fluxo de execução dos próximos middlewares (geralmente porque violou alguma regra de negócio da aplicação ou um erro inesperado aconteceu) você pode finalizá-lo executando alguma função de resposta através do objeto response. Agora chega de palavras, vamos direto ao código! A seguir criaremos um middleware verifica se uma requisição contém a querystring version, caso ela não seja detectada o middleware cancelará o fluxo retornando um json de erro com status 500.</p>
+<pre><code class="language-javascript"> var express = require(&quot;express&quot;);
+ var morgan = require(&quot;morgan&quot;);
+ var compression = require(&quot;compression&quot;);
+ var app = express();
+ app.use(morgan());
+ app.use(compression());
+ app.use(function(req, res, next) {
+   if (req.query.version) {
+     next();
+   } else {
+     res.status(500).json({status: &quot;Acesso negado!&quot;});
+   }
+ });
+ app.get(&quot;/&quot;, function(req, res) {
+   res.json({status: &quot;Hello!&quot;});
+ });
+ app.listen(3000, function() {
+   console.log(&quot;Servidor rodando!&quot;);
+ });
+</code></pre>
+<p>Para testar, veja os resultados ao acessar <a href="http://localhost:3000/">http://localhost:3000/</a> e <a href="http://localhost:3000/?version=1">http://localhost:3000/?version=1</a>.
+Espero que tenham curtido o post e feedbacks serão sempre bem-vindos nos comentários abaixo! Até a próxima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Entendendo como funciona os middlewares do Express",
+  "image": "https://udgwebdev.com/images/express4.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/entendendo-como-funciona-os-middlewares-do-express",
+  "datePublished": "2015-01-28",
+  "dateCreated": "2015-01-28",
+  "description": "O assunto desse post será sobre o que é e como implementar middlewares em um aplicação web que utiliza o framework Express.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

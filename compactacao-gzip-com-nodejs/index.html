@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Compactação gzip com Node.js | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Compactação gzip com Node.js"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Para quem esta a procura de um framework extremamente leve e fácil de usar, recomendo utilizar o gzipme. Ele é um módulo Node.js que funciona via linha de comando (CLI) ou programaticamente via Node.js."/><meta property="og:title" content="Compactação gzip com Node.js"/><meta property="og:description" content="Para quem esta a procura de um framework extremamente leve e fácil de usar, recomendo utilizar o gzipme. Ele é um módulo Node.js que funciona via linha de comando (CLI) ou programaticamente via Node.js."/><meta property="og:url" content="https://udgwebdev.com/compactacao-gzip-com-nodejs"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/nodejs-logo.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/compactacao-gzip-com-nodejs"/><meta name="twitter:title" content="Compactação gzip com Node.js"/><meta name="twitter:description" content="Para quem esta a procura de um framework extremamente leve e fácil de usar, recomendo utilizar o gzipme. Ele é um módulo Node.js que funciona via linha de comando (CLI) ou programaticamente via Node.js."/><meta name="twitter:image" content="https://udgwebdev.com/images/nodejs-logo.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/compactacao-gzip-com-nodejs"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="compactacao-gzip-com-nodejs" class="col-xs-12 col-sm-9 post"><h1>Compactação gzip com Node.js</h1><p class="text-muted">Publicação: <time datetime="13/08/2014" pubdate><b>13/08/2014</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-logo.jpg" alt="Compactação gzip com Node.js" title="Compactação gzip com Node.js"></p>
+<p>Para quem esta a procura de um framework extremamente leve e fácil de usar, recomendo utilizar o gzipme. Ele é um módulo Node.js que funciona via linha de comando (CLI) ou programaticamente via Node.js.
+Seu objetivo é compactar arquivos em formato gzip seja via node.js, grunt ou até mesmo via terminal.
+O projeto é recém nascido mas tem muito a ser desenvolvido. A princípio ele possui funções específicas para compactação gzip. Veja abaixo como utilizá-lo em uma aplicação Node.js.</p>
+<p>Dentro do diretório raíz do seu projeto, acesse o terminal, instale-o via comando:</p>
+<pre><code class="language-bash"> npm install gzipme --save
+</code></pre>
+<p>E utilize suas funções: ``` javascript
+ // Carrega o módulo.
+ var gzipme = require(&#39;gzipme&#39;);
+ // Gera um gzip com o nome &#39;file.txt.gz&#39;.
+ gzipme(&quot;file.txt&quot;);
+ // Gera um gzip sobreescrevendo o arquivo em parâmetro.
+ gzipme(&quot;file.txt&quot;, true);
+ // Gera um gzip com nome customizado.
+ gzipme(&quot;file.txt&quot;,&quot;compress.txt&quot;);
+ // Gera um gzip em modo Best Compress, que diminui o tamanho, porém a compressão é lenta.
+ gzipme(&quot;file.txt&quot;, false, &quot;best&quot;);
+ // Gera um gzip em modo Fast Compress, que compressão é rápida, porém o tamanho do arquivo é maior.
+ gzipme(&quot;file.txt&quot;, false, &quot;fast&quot;);</p>
+<pre><code>
+Caso queira utilizar seu CLI instale-o em modo global:
+
+``` bash
+ npm install -g gzipme
+</code></pre><p>Em modo CLI seus comandos são:</p>
+<pre><code class="language-bash"> # Faz o mesmo que: &#39;gzipme(&quot;file.txt&quot;)&#39;.
+ gzipme file.txt
+ # Faz o mesmo que: &#39;gzipme(&quot;file.txt&quot;, true)&#39;.
+ gzipme -o file.txt
+ # Faz o mesmo que: &#39;gzipme(&quot;file.txt&quot;, &quot;compressed.txt&quot;)&#39;.
+ gzipme -O compressed.txt file.txt
+ # Faz o mesmo que: &#39;gzipme(&quot;file.txt&quot;, false, &quot;best&quot;)&#39;.
+ gzipme -c best file.txt
+ # Faz o mesmo que: &#39;gzipme(&quot;file.txt&quot;, false, &quot;fast&quot;)&#39;.
+ gzipme -c fast file.txt
+</code></pre>
+<p><a href="http://github.com/caio-ribeiro-pereira/gzipme">Em seu repositório github</a> tem mais informações sobre suas releases e um todo-list com futuras features a serem implementadas.</p>
+<p>Site oficial: <a href="http://caio-ribeiro-pereira.github.io/gzipme">http://caio-ribeiro-pereira.github.io/gzipme</a>.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Compactação gzip com Node.js",
+  "image": "https://udgwebdev.com/images/nodejs-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/compactacao-gzip-com-nodejs",
+  "datePublished": "2014-08-13",
+  "dateCreated": "2014-08-13",
+  "description": "Para quem esta a procura de um framework extremamente leve e fácil de usar, recomendo utilizar o gzipme. Ele é um módulo Node.js que funciona via linha de comando (CLI) ou programaticamente via Node.js.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

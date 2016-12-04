@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Node.js para leigos - Utilizando API File System | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Node.js para leigos - Utilizando API File System"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Hoje o assunto será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional, a File System."/><meta property="og:title" content="Node.js para leigos - Utilizando API File System"/><meta property="og:description" content="Hoje o assunto será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional, a File System."/><meta property="og:url" content="https://udgwebdev.com/node-js-para-leigos-utilizando-api-file-system"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/node-js-para-leigos-utilizando-api-file-system"/><meta name="twitter:title" content="Node.js para leigos - Utilizando API File System"/><meta name="twitter:description" content="Hoje o assunto será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional, a File System."/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/node-js-para-leigos-utilizando-api-file-system"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="node-js-para-leigos-utilizando-api-file-system" class="col-xs-12 col-sm-9 post"><h1>Node.js para leigos - Utilizando API File System</h1><p class="text-muted">Publicação: <time datetime="03/10/2012" pubdate><b>03/10/2012</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-para-leigos.jpg" alt="Curso de Node.js" title="Curso de Node.js"></p>
+<p>Fala galera!! Realmente precisei do mês de setembro para resolver outras pendências, e isso me impossibilitou de continuar o mini-curso, mas enfim, vamos ao que interessa. Hoje o assunto será mais light, será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional - <strong><a href="http://nodejs.org/api/fs.html" title="Node.js File System API">File System</a></strong>.</p>
+<p>Uma das vantagens dessa API e também de muitas outras nativas do Node.js é a possibilidade de trabalhar tanto de forma <strong>bloqueante (sync)</strong> quanto <strong>não-bloqueante (async)</strong>, lembrando que é <strong>altamente recomendável trabalhar de forma não-bloqueante</strong>, afinal essa é a característica principal do Node.js, mas caso queira trabalhar de forma bloqueantes com essa API, simplesmente utilize os métodos com <strong>sufixo Sync</strong>, por exemplo: <strong>fs.openSync()</strong> - faz leitura de arquivos em <strong>modo bloqueante, ou seja, de forma síncrona.</strong> Veja um exemplo prático abaixo:</p>
+<pre><code class="language-javascript"> // Carregando o File System
+ var fs = require(&quot;fs&quot;);
+ // Lê o conteúdo do diretório retornando um array de string de arquivos.
+ // Obs.: Essa leitura é Não-Bloqueante, por isso retorna via callback.
+ fs.readdir(&quot;/home/user&quot;, function(err, files){
+   console.log(files);
+ });
+ // A mesma função, executada de forma Bloqueante.
+ var files = fs.readdirSync(&quot;/home/user&quot;);
+ console.log(files);
+</code></pre>
+<p>Como disse antes e volto a afirmar, para se tirar melhor proveito do <strong>processamento I/O do servidor</strong>, é recomendado trabalhar com funções <strong>não-bloqueantes</strong>, afinal, pensem comigo no seguinte cenário: é criado um sistema em Node.js para realizar <strong>upload intensivo de arquivos</strong>, com isso se utilizar <strong>métodos bloqueantes (métodos síncronos)</strong>, quando houver um erro de leitura ou escrita dos arquivos o sistema todo irá travar, já a utilização dos <strong>métodos não-bloqueantes</strong> garantirão um <strong>processamento assíncrono</strong>, fazendo com que qualquer erro não trave o sistema inteiro e permitirá que os demais usuários utilizem normalmente o sistema. Outro detalhe neste cenário é que a resposta será mais rápida para os usuários, afinal o <strong>processamento será feito em background</strong>, semelhante as requisições <a href="http://pt.wikipedia.org/wiki/AJAX_(programa%C3%A7%C3%A3o">AJAX</a> &quot;Wiki AJAX&quot;).</p>
+<p>No File System muitos dos seus métodos são inspirados em comandos do <strong>sistema UNIX</strong>, ou seja, algumas funções não funcionarão em um ambiente Windows, por exemplo, realizar a função <strong>fs.chown() não funcionará no Windows</strong>, visto é uma particularidade do Unix. Tirando esse detalhe, o essencial da api é compatível com qualquer ambiente operacional.</p>
+<h4>O que podemos fazer com tudo isso?</h4><p><strong>Sistemas para upload intesivo de arquivos</strong>, <strong>Sincronizadores de arquivos</strong>, <strong>Streaming de audio ou vídeo</strong>, muita coisa é possível com essa API, vai depender da sua necessidade e principalmente da sua <strong>criatividade</strong>.</p>
+<p>Vou mostrar em código, um exemplo bacana, uma galeria de fotos, nela o usuário faz upload de fotos e depois são visualizados todas as fotos na página principal. Primeiro instale as dependências que serão usados neste exemplo:</p>
+<p><code>npm install express jade</code></p>
+<pre><code class="language-javascript"> // app.js
+ // Utilizaremos: Express, Jade e File System.
+ var express = require(&#39;express&#39;)
+   , fs = require(&#39;fs&#39;)
+   , app = express();
+ // Path da pasta pública que armazenará as fotos.
+ var path_public = __dirname + &#39;/public&#39;;
+ // Configurações mínimas no Express
+ app.configure(function(){
+   app.set(&#39;views&#39;, __dirname + &#39;/views&#39;);
+   app.set(&#39;view engine&#39;, &#39;jade&#39;);
+   app.set(&#39;view options&#39;, {layout: false});
+   app.use(express.static(path_public));
+   app.use(express.bodyParser());
+   app.use(express.methodOverride());
+   app.use(app.router);
+ });
+ // Rota da página inicial.
+ app.get(&#39;/&#39;, function(req, res){
+   // Retorna um array com string dos arquivos da pasta pública.
+   fs.readdir(path_public, function(err, fotos){
+     res.render(&#39;index&#39;, {fotos: fotos});
+   });
+ });
+ // Rota que recebe upload das fotos.
+ app.post(&#39;/enviar-foto&#39;, function(req, res){
+   var path_atual = req.files.foto.path;
+   var path_image = path_public + &#39;/&#39; + req.files.foto.name;
+   // Move a foto atual para a pasta pública.
+   fs.rename(path_atual, path_image, function(err){
+     // Exclui a foto da pasta temporária.
+     fs.unlink(path_atual, function(err){
+       res.redirect(&#39;/&#39;);
+     });
+   });
+ });
+ app.listen(3000, function() {
+   console.log(&#39;Galeria de fotos em execucao...&#39;);
+ });
+</code></pre>
+<pre><code class="language-javascript"> // index.jade
+ !!! 5
+ html
+   head
+     title Galeria de fotos
+     style
+       .galeria{
+         width: 90%
+         margin: 0 auto;
+         text-align: center;
+ }
+       .foto {
+         padding: 10px;
+ float: left;
+       }
+   body
+     .galeria
+       h3 Galeria de fotos
+       fieldset
+         legend Adicionar foto
+         form(action=&#39;/enviar-foto&#39;, method=&#39;post&#39;, enctype=&#39;multipart/form-data&#39;)
+           label Foto:
+             input(type=&#39;file&#39;, name=&#39;foto&#39;)
+           button(type=&#39;submit&#39;) Enviar
+       each foto, i in fotos
+         .foto
+           img(src=&#39;/#{foto}&#39;, width=&#39;240&#39;, height=&#39;120&#39;, border=&#39;0&#39;, alt=&#39;#{foto}&#39;)
+</code></pre>
+<p>Pronto e feito! Esse foi mais um capítulo do <a href="/nodejs">Curso Node.js para leigos</a>, espero que tenham gostado desse artigo, e para melhores detalhes sobre o File System, segue o link da documentação: <a href="http://nodejs.org/api/fs.html" title="Node.js File System API">http://nodejs.org/api/fs.html</a>. See you on my next post!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Node.js para leigos - Utilizando API File System",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/node-js-para-leigos-utilizando-api-file-system",
+  "datePublished": "2012-10-03",
+  "dateCreated": "2012-10-03",
+  "description": "Hoje o assunto será sobre uma biblioteca nativa do Node.js responsável por manipular arquivos e diretórios do sistema operacional, a File System.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Brincando com LevelDB | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Brincando com LevelDB"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="O LevelDB é um banco de dados que possui uma forte ligação com Node.js. Ele basicamente é um banco semelhante ao SQLite, um embedded database, porém em NoSQL do tipo key-value."/><meta property="og:title" content="Brincando com LevelDB"/><meta property="og:description" content="O LevelDB é um banco de dados que possui uma forte ligação com Node.js. Ele basicamente é um banco semelhante ao SQLite, um embedded database, porém em NoSQL do tipo key-value."/><meta property="og:url" content="https://udgwebdev.com/brincando-com-leveldb"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/leveldb.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/brincando-com-leveldb"/><meta name="twitter:title" content="Brincando com LevelDB"/><meta name="twitter:description" content="O LevelDB é um banco de dados que possui uma forte ligação com Node.js. Ele basicamente é um banco semelhante ao SQLite, um embedded database, porém em NoSQL do tipo key-value."/><meta name="twitter:image" content="https://udgwebdev.com/images/leveldb.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/brincando-com-leveldb"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="brincando-com-leveldb" class="col-xs-12 col-sm-9 post"><h1>Brincando com LevelDB</h1><p class="text-muted">Publicação: <time datetime="04/01/2014" pubdate><b>04/01/2014</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a>, <a href="/menu/#nosql" rel="me" title="Menu: NoSQL">NoSQL</a></p><p><img src="/images/leveldb.jpg" alt="Brincando com LevelDB" title="Brincando com LevelDB"></p>
+<p>O LevelDB é um banco de dados que possui uma forte ligação com Node.js. Ele basicamente é um banco semelhante ao <a href="http://www.sqlite.org/">SQLite</a>, um embedded database, porém em NoSQL do tipo key-value.</p>
+<p>Este é um projeto open source criado pelo Google, afinal de início, o objetivo inicial era de criar um db nativo para o Chrome, em que levasse algumas características de <a href="http://pt.wikipedia.org/wiki/BigTable">BigTable</a>, e assim surgiu o <a href="http://www.html5rocks.com/pt/tutorials/indexeddb/todo">IndexedDB</a>.</p>
+<p>O LevelDB ficou tão popular que algumas empresas fizeram forks dele. E assim surgiu o <a href="http://basho.com/riak/">Riak</a> um DB escrito em Erlang pela empresa Basho, surgiu o <a href="http://wordpress.org/plugins/hyperdb">HyperDB</a> da empresa Hyperdex e o <a href="http://rocksdb.org/">RocksDB</a> que é mantido pela equipe do Facebook.</p>
+<p>Para a comunidade Node.js, existe o <a href="https://github.com/rvagg/node-leveldown">LevelDown</a> (versão baixo nível em linguagem C compilado para rodar no Node.js) e o <a href="https://github.com/rvagg/node-levelup">LevelUP</a> (API Node que executa as funcionalidades do LevelDown). Esses dois módulos você os encontram ao instalar o módulo level (via <code>npm install level</code>), sem a necessidade de instalar algo adicional em seu projeto Node.js.</p>
+<p>A comunidade Node também faz sua parte criando plugins, alguns em destaque são:</p>
+<ul>
+<li><a href="https://github.com/dominictarr/level-sublevel">Level-Sublevel</a> - cria registros JSON parecido com as collections do MongoDB;</li>
+<li><a href="https://github.com/dominictarr/level-inverted-index">Level-Inverted-Index</a> - realiza Full-Text Search nos registros;</li>
+<li><a href="https://github.com/eugeneware/jsonquery-engine">JSONQuery-Engine</a> - plugin para criar queries estilo MongoDB;</li>
+<li><a href="https://github.com/juliangruber/level-schedule">Level-Scheduler</a> - Schedule Jobs via LevelDB;</li>
+<li><a href="https://github.com/rvagg/node-level-multiply">Level-Multiply</a> - plugin para realizar queries com múltiplos dados;</li>
+</ul>
+<p>Neste link tem muito mais: <a href="https://github.com/rvagg/node-levelup/wiki/Modules">https://github.com/rvagg/node-levelup/wiki/Modules</a>.</p>
+<p>Para finalizar este post, mostrarei um pouco de código, criaremos um CRUD de cadastro de usuários, que será uma API em <a href="https://github.com/visionmedia/express">Express</a> com <a href="https://github.com/rvagg/node-levelup">LevelUP</a>.</p>
+<p>Crie o arquivo app.js incluindo o código abaixo:</p>
+<pre><code class="language-javascript"> var
+   express = require(&#39;express&#39;),
+   uuid = require(&#39;node-uuid&#39;),
+   level = require(&#39;level&#39;),
+   db = level(&#39;./users.db&#39;),
+   app = express()
+ ;
+ app.set(&#39;port&#39;, process.env.PORT || 3000);
+ app.use(express.logger());
+ app.use(express.json());
+ app.use(app.router);
+ app.get(&#39;/&#39;, function(req, res) {
+   var users = [];
+   var stream = db.createReadStream();
+   stream.on(&#39;data&#39;, function (data) {
+     users.push(data);
+   });
+   stream.on(&#39;error&#39;, function (err) {
+     return res.json(500, err);
+   })
+   stream.on(&#39;end&#39;, function () {
+     return res.json(200, users);
+   });
+ });
+ app.get(&#39;/user/:id&#39;, function(req, res) {
+   db.get(req.params.id, function(err, user) {
+     if (err) return res.json(500, err);
+     return res.json(200,user);
+   });
+ });
+ app.post(&#39;/user&#39;, function(req, res) {
+   db.put(uuid.v1(), req.body.user, function(err) {
+     if (err) return res.json(500, err);
+     return res.json(200);
+   });
+ });
+ app.del(&#39;/user/:code&#39;, function(req, res) {
+   db.del(req.params.code, function(err) {
+     if (err) return res.json(500, err);
+     return res.json(200);
+   });
+ });
+ app.listen(app.get(&#39;port&#39;), function() {
+   console.log(&quot;API LevelDB na porta %d&quot;, app.get(&#39;port&#39;));
+ });
+</code></pre>
+<p>Agora para criar a aplicação, execute:</p>
+<pre><code class="language-bash"> npm init
+</code></pre>
+<p>Responda as perguntas desse comando para no final gerar o <code>package.json</code> corretamente.</p>
+<p>Em seguida instale as dependências via comando:</p>
+<pre><code class="language-bash"> npm install express node-uuid level --save
+</code></pre>
+<p>Para ver sua API funcionando rode:</p>
+<pre><code class="language-bash"> node app
+</code></pre>
+<p>Se quiser testar sua API, utilize qualquer REST Client, como por exemplo o <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm">POSTMAN no Google Chrome</a>.</p>
+<p>Com esse rascunho de API, você já estará preparado para criar um front-end dessa aplicação. E caso queira aprofundar seus estudos em LevelDB junto com Node.js, acesse seu github: <a href="https://github.com/rvagg/node-levelup">https://github.com/rvagg/node-levelup</a></p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Brincando com LevelDB",
+  "image": "https://udgwebdev.com/images/leveldb.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/brincando-com-leveldb",
+  "datePublished": "2014-01-04",
+  "dateCreated": "2014-01-04",
+  "description": "O LevelDB é um banco de dados que possui uma forte ligação com Node.js. Ele basicamente é um banco semelhante ao SQLite, um embedded database, porém em NoSQL do tipo key-value.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

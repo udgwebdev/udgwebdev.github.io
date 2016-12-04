@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Sun, 04 Dec 2016 19:48:24 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 04 Dec 2016 19:48:24 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Acelerando comando dd no MacOS]]></title><description><![CDATA[Se você possui um mac e já tentou clonar uma distro linux para um cartão sd via comando dd e percebeu que demorava muito para fazer isso, veja nesse post uma simples solução que vai deixar 20x mais rápida a execução desse comando.]]></description><link>https://udgwebdev.com/acelerando-comando-dd-no-macos</link><guid isPermaLink="true">https://udgwebdev.com/acelerando-comando-dd-no-macos</guid><category><![CDATA[Dicas de terminal]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 15 Nov   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[Dualboot no raspberry com berryboot]]></title><description><![CDATA[Neste post, explicarei como configurar um sistema gerenciador de boot muito foda, chamado BerryBoot, que vai permitir instalar múltiplos sistemas de forma muito fácil.]]></description><link>https://udgwebdev.com/dualboot-no-raspberry-com-berryboot</link><guid isPermaLink="true">https://udgwebdev.com/dualboot-no-raspberry-com-berryboot</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 11 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Criando um media center com Raspberry Pi]]></title><description><![CDATA[Veja nesse post como montar um media center completo capaz de ver canais abertos do mundo inteiro, além de fazer torrent streaming usando OSMC e um Raspberry Pi.]]></description><link>https://udgwebdev.com/criando-um-media-center-com-raspberry-pi</link><guid isPermaLink="true">https://udgwebdev.com/criando-um-media-center-com-raspberry-pi</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 06 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Dicas para conquistar um bom trampo em TI]]></title><description><![CDATA[Algumas dicas são simples de se começar a fazer agora mesmo, e espero que elas te ajudem, principalmente para você que esta começando na área de TI.]]></description><link>https://udgwebdev.com/dicas-para-conquistar-um-bom-trampo-de-ti</link><guid isPermaLink="true">https://udgwebdev.com/dicas-para-conquistar-um-bom-trampo-de-ti</guid><category><![CDATA[Profissão]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 02 Oct   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Deletando arquivos repetitivos pelo terminal]]></title><description><![CDATA[<h1>Deletando arquivos repetitivos pelo terminal</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/09/2016" pubdate=""><b>22/09/2016</b></time> | Tags: <a href="/menu/#dicas-de-terminal" rel="me" title="Menu: Dicas de terminal">Dicas de terminal</a></p><p><img src="/images/terminal-console-linux.jpg" alt="Terminal Console Linux"></p>
+<p>Depois de um bom tempo sem <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>, eis que volta das cinzas essa categoria com um novo post, pelo qual a dica ser&#xE1; bastante &#xFA;til no seu dia-a-dia, basicamente &#xE9; um script que procura pastas e subpastas repeti&#xE7;&#xF5;es de um determinado arquivo e em seguida apaga-os, isso ocorre atrav&#xE9;s da combina&#xE7;&#xE3;o do comando <code>find</code> + <code>rm</code>.</p>
+<p>O comando &#xE9; basicamente esse:</p>
+<pre><code class="language-bash"> find nome_da_pasta -name &apos;nome_do_arquivo&apos; -exec rm {} \;
+</code></pre>
+<p>Para entender melhor os par&#xE2;metros desse comando:</p>
+<ul>
+<li><code>find nome_da_pasta</code>: vai iniciar uma busca a partir do nome da pasta indicada;</li>
+<li><code>-name</code>: nome do arquivo a ser procurado;</li>
+<li><code>-exec</code>: executa um comando bash qualquer, neste caso ser&#xE1; o comando <code>rm {} \</code>, pelo qual vai excluir cada arquivo encontrado pelo comando <code>find</code>;</li>
+</ul>
+<p>No meu caso, estou usando esse comando para apagar o maldito arquivo chato <code>.DS_Store</code> que &#xE9; gerado direto nos meus projetos pelo MacOSX, ent&#xE3;o resolvi criar o seguinte comando alias:</p>
+<pre><code class="language-bash"> alias ds_clear=&quot;find . -name &apos;.DS_Store&apos; -exec rm {} \;&quot;
+</code></pre>
+<p>Dessa forma esse comando vai procurar e apagar todos os <code>.DS_Store</code> existentes nas subpastas, com base na pasta atual (Pois usei o <code>find .</code> para referenciar a pasta atual) que eu rodar esse comando.</p>
+<p>Veja tamb&#xE9;m outras <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Deletando arquivos repetitivos pelo terminal",
+  "image": "https://udgwebdev.com/images/terminal-console-linux.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/deletando-arquivos-repetitivos-no-terminal",
+  "datePublished": "2016-09-22",
+  "dateCreated": "2016-09-22",
+  "description": "Neste post a dica será bastante útil no seu dia-a-dia, basicamente você vai aprender a rodar um script que procura pastas e subpastas repetições de um determinado arquivo e em seguida apaga-os através da combinação dos comandos find e rm.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/deletando-arquivos-repetitivos-no-terminal</link><guid isPermaLink="true">https://udgwebdev.com/deletando-arquivos-repetitivos-no-terminal</guid><category><![CDATA[Dicas de terminal]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 22 Sep   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Protegendo aplicações JavaScript]]></title><description><![CDATA[<h1>Protegendo aplica&#xE7;&#xF5;es JavaScript</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="08/09/2016" pubdate=""><b>08/09/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/jscrambler-logo.png" alt="Protegendo aplica&#xE7;&#xF5;es JavaScript" title="Protegendo aplica&#xE7;&#xF5;es JavaScript"></p>
+<p>Atualmente no JavaScript surgiram v&#xE1;rios frameworks (<strong>React, Angular, Ember, Backbone, Vue e etc</strong>) e a linguagem tamb&#xE9;m evoluiu muito com as implementa&#xE7;&#xF5;es ES6, ES7 e futuro ES8, isso tudo j&#xE1; nos permite criar aplica&#xE7;&#xF5;es web, mobile ou desktop bem complexas utilizando apenas JavaScript, por&#xE9;m, voc&#xEA; j&#xE1; parou para questionar sobre como proteger toda integridade de c&#xF3;digos JavaScript?</p>
+<p>Quando se fala de proteger c&#xF3;digo JavaScript, existem dois caminhos:</p>
+<ol>
+<li>Proteger seu c&#xF3;digo contra invas&#xE3;o de hackers;</li>
+<li>Proteger seu c&#xF3;digo propriet&#xE1;rio de ser copiado ilegalmente;</li>
+</ol>
+<p>JavaScript &#xE9; uma linguagem poderosa, por&#xE9;m no quesito seguran&#xE7;a ela tem o problema de ser uma linguagem interpretada. Afinal linguagens compiladas geram c&#xF3;digo bin&#xE1;rio antes de serem executadas, o que fornece uma camada extra contra leitura indevida do c&#xF3;digo-fonte, por&#xE9;m como o JavaScript &#xE9; executado em runtime, sem gerar bin&#xE1;rios, ou seja, todo c&#xF3;digo fica exposto, dando f&#xE1;cil visualiza&#xE7;&#xE3;o e compreens&#xE3;o tanto para m&#xE1;quinas quanto para humanos. Por exemplo, &#xE9; poss&#xED;vel visualizar nos browsers todo c&#xF3;digo-fonte client-side deste post, todo browser permite a visualiza&#xE7;&#xE3;o desses c&#xF3;digos.</p>
+<p>E quando criamos aplica&#xE7;&#xF5;es mobile usando PhoneGap ou aplica&#xE7;&#xF5;es desktop usando Electron, tais aplica&#xE7;&#xF5;es que permitem a manipula&#xE7;&#xE3;o de <strong>informa&#xE7;&#xF5;es sens&#xED;veis do smartphone como camera, GPS, bluetooth, wifi</strong> e outras coisas, tudo isso, fica facilmente exposto no c&#xF3;digo-fonte JavaScript, e isso acaba se tornando um grande facilitador para hackers brincarem com sua aplica&#xE7;&#xE3;o. Um grande exemplo atual &#xE9; o jogo <strong>Pokemon GO</strong> pelo qual a comunidade hacker facilmente descobriu como manipular o jogo e criou bibliotecas para diversas linguagens, com intuito de facilitar a <strong>cria&#xE7;&#xE3;o de bots para o jogo</strong>.</p>
+<p>Isso tudo n&#xE3;o teria acontecido se este jogo aplicasse uma prote&#xE7;&#xE3;o de integridade do c&#xF3;digo. Existem v&#xE1;rias ferramentas e/ou servi&#xE7;os na &#xE1;rea de ciber-seguran&#xE7;a que permitem n&#xE3;o s&#xF3; minificar, mas tamb&#xE9;m esconder partes sens&#xED;veis do c&#xF3;digo-fonte. Isso n&#xE3;o &#xE9; suficiente para garantir a prote&#xE7;&#xE3;o do mesmo, pois essas solu&#xE7;&#xF5;es s&#xE3;o permite aplicar engenharia reversa facilmente e sem grande esfor&#xE7;o. Para assegurar que sua aplica&#xE7;&#xE3;o n&#xE3;o seja adulterada, voc&#xEA; precisa adotar servi&#xE7;os que aplicam t&#xE9;cnicas de <strong>obfusca&#xE7;&#xE3;o resiliente com camadas adicionais de serguran&#xE7;a</strong>.
+Um servi&#xE7;o que se destaca entre os demais nesta &#xE1;rea, &#xE9; o da <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">Jscrambler</a>, que &#xE9; uma solu&#xE7;&#xE3;o completa para prote&#xE7;&#xE3;o de c&#xF3;digo <strong>JavaScript multi-plataforma</strong>, ou seja, ele aplica prote&#xE7;&#xE3;o de integridade para aplica&#xE7;&#xF5;es mobile, desktop, web e server-side, sem degradar performance e sem prejudicar a funcionalidade de sua aplica&#xE7;&#xE3;o.</p>
+<p>Esse servi&#xE7;o possui as seguintes caracter&#xED;sticas de prote&#xE7;&#xE3;o:</p>
+<ul>
+<li>JavaScript obfuscation;</li>
+<li>Minification de c&#xF3;digo;</li>
+<li>Inser&#xE7;&#xE3;o de dead code;</li>
+<li>Function outlining;</li>
+<li>Locking de browser e ou domain;</li>
+<li>Data de expira&#xE7;&#xE3;o de c&#xF3;digo;</li>
+<li>Servi&#xE7;o de anti-adult&#xE9;rio de c&#xF3;digo;</li>
+<li>Oculta&#xE7;&#xE3;o de dados sens&#xED;veis no c&#xF3;digo;</li>
+</ul>
+<p>Caso tenha interesse, voc&#xEA; pode <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">testar a vers&#xE3;o trial</a> que em poucos minutos voc&#xEA; j&#xE1; configura sua aplica&#xE7;&#xE3;o na plataforma para aplicar prote&#xE7;&#xE3;o no c&#xF3;digo-fonte de seus projetos.</p>
+<p>A Jscrambler j&#xE1; conta com mais de 25 mil usu&#xE1;rios, developers e empresas de todo o mundo, que usam o servi&#xE7;o para proteger os seus recursos propriet&#xE1;rios, desde startups a organiza&#xE7;&#xF5;es como a Fortune 500.
+Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a seguran&#xE7;a &#xE9; um fator fundamental, ou seja, aplica&#xE7;&#xF5;es internet banking, games, streaming de video propriet&#xE1;rio e etc. Se este for o seu caso, <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">ent&#xE3;o vale a pena testar essa plataforma</a>.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Protegendo aplicações JavaScript",
+  "image": "https://udgwebdev.com/images/jscrambler-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/protegendo-aplicacoes-javascript",
+  "datePublished": "2016-09-08",
+  "dateCreated": "2016-09-08",
+  "description": "Conheça neste post uma ferramenta sensacional da Jscrambler para proteger seu código-fonte JavaScript.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/protegendo-aplicacoes-javascript</link><guid isPermaLink="true">https://udgwebdev.com/protegendo-aplicacoes-javascript</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 08 Sep   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 4]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 4</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="06/08/2016" pubdate=""><b>06/08/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>E mais uma vez, volto a falar desse assunto, j&#xE1; chegando na quarto epis&#xF3;dio dessa s&#xE9;rie sobre boas pr&#xE1;ticas para escrever JavaScript melhor.</p>
+<h2>1) Trocando valores entre duas vari&#xE1;veis</h2><p>Se voc&#xEA; j&#xE1; precisou trocar valores entre duas vari&#xE1;veis, &#xE9; bem prov&#xE1;vel que voc&#xEA; j&#xE1; tenha feito um c&#xF3;digo parecido com esse:</p>
+<pre><code class="language-javascript"> let x = 10;
+ let y = 20;
+ let aux = x;
+ x = y;
+ y = aux;
+ console.log(x); // 20;
+ console.log(y); // 10;
+</code></pre>
+<p>Hoje, gra&#xE7;as ao ES6, temos o <code>Destructuring Assignment</code> que &#xE9; uma feature bem legal, que permite fazer essa troca de valores <strong>em apenas 1 linha de c&#xF3;digo!</strong> Veja:</p>
+<pre><code class="language-javascript"> let x = 10;
+ let y = 20;
+ [x, y] = [y, x];
+ console.log(x); // 20;
+ console.log(y); // 10;
+</code></pre>
+<p>Ele usa uma s&#xED;ntaxe parecida com array para definir os novos valores. E &#xE9; poss&#xED;vel fazer muito mais com esse recurso, recomendo fortemente a leitura desse artigo para se aprofundar mais nele: <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Mozilla Developers - Destructuring Assignment</a></p>
+<h2>2) Movendo o primeiro item para &#xFA;ltima posi&#xE7;&#xE3;o do array</h2><p>Se voc&#xEA; precisar mover o primeiro item de um array para a &#xFA;ltima posi&#xE7;&#xE3;o, siga essa simples dica, use o retorno da fun&#xE7;&#xE3;o <code>array.shift()</code> como entrada para fun&#xE7;&#xE3;o <code>array.push()</code>, veja:</p>
+<pre><code class="language-javascript"> const array = [1, 2, 3, 4, 5];
+ array.push(array.shift());
+ console.log(array); // [2, 3, 4, 5, 1];
+</code></pre>
+<h2>3) Movendo o &#xFA;ltimo item para primeira posi&#xE7;&#xE3;o do array</h2><p>Caso precise fazer o movimento inverso, basta usar o retorno de <code>array.pop()</code> como entrada para a fun&#xE7;&#xE3;o <code>array.unshift()</code>:</p>
+<pre><code class="language-javascript"> const array = [1, 2, 3, 4, 5];
+ array.unshift(array.pop());
+ console.log(array); // [5, 1, 2, 3, 4]
+</code></pre>
+<h2>4) Limpando valores nulos de um array</h2><p>A fun&#xE7;&#xE3;o <code>array.filter()</code>, retorna um novo array com base no callback de filtro que voc&#xEA; estabelecer como regra, nesse caso voc&#xEA; pode incluir qualquer regra como retorno de seu callback, para que seja aplicado o filtro, por&#xE9;m existe um shortcut de filtro para limpar valores do tipo: <code>undefined</code>, <code>null</code>, <code>&quot;&quot;</code> ou <code>0</code>, neste caso basta incluir a keyword <code>Boolean</code>, veja:</p>
+<pre><code class="language-javascript"> const array = [undefined, &apos;apple&apos;, &apos;orange&apos;, &apos;&apos;, &apos;kiwi&apos;, &apos;pumpkin&apos;, &apos;grape&apos;, &apos;&apos;, 0, null];
+ const novoArray = array.filter(Boolean);
+ console.log(novoArray); // [&apos;apple&apos;, &apos;orange&apos;, &apos;kiwi&apos;, &apos;pumpkin&apos;, &apos;grape&apos;];
+</code></pre>
+<p>Veja tamb&#xE9;m:</p>
+<ul>
+<li><a href="/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+</ul>
+<p>Estou adorando escrever sobre esse assunto, caso voc&#xEA; tenha uma dica boa sobre como escrever JavaScript melhor comente abaixo que farei quest&#xE3;o de estudar e escrever no pr&#xF3;ximo post, e &#xE9; claro, citando o nome do autor da dica, at&#xE9; o pr&#xF3;ximo post!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Escrevendo JavaScript melhor - Parte 4",
+  "image": "https://udgwebdev.com/images/es6-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/escrevendo-javascript-melhor-parte-4",
+  "datePublished": "2016-08-06",
+  "dateCreated": "2016-08-06",
+  "description": "E mais uma vez, volto a falar desse assunto, já chegando na quarto episódio dessa série sobre boas práticas para escrever JavaScript melhor.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-4</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-4</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sat, 06 Aug   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Customizando npm init]]></title><description><![CDATA[<h1>Customizando npm init</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/08/2016" pubdate=""><b>03/08/2016</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/npm-logo.png" alt="Customizando npm init" title="Customizando npm init"></p>
+<p>Para quem n&#xE3;o conhece esse comando, o <code>npm init</code> apresenta um simples question&#xE1;rio para descrever informa&#xE7;&#xF5;es b&#xE1;sica de um m&#xF3;dulo Node.js, pelo qual seu resultado final &#xE9; gerar o arquivo <code>package.json</code>.</p>
+<p>Por&#xE9;m, &#xE9; poss&#xED;vel customizar o resultado desse comando, incrementando novas informa&#xE7;&#xF5;es para agilizar na gera&#xE7;&#xE3;o do <code>package.json</code> a cada novo projeto. Para fazer essa simples customiza&#xE7;&#xE3;o, basta criar na pasta ra&#xED;z de usu&#xE1;rio do sistema o arquivo: <code>~/.npm-init.js</code>, nele voc&#xEA; pode injetar valores pr&#xE9;-definidos para alguns campos chaves na gera&#xE7;&#xE3;o de um <code>package.json</code>, veja esse exemplo:</p>
+<pre><code class="language-javascript"> exports.name = prompt(&apos;Name&apos;, basename);
+ exports.description = prompt(&apos;Description&apos;, &apos;&apos;);
+ exports.version = prompt(&apos;Version&apos;, config.get(&apos;init-version&apos;));
+ exports.main = config.get(&apos;main-file&apos;);
+ exports.license = config.get(&apos;init-license&apos;);
+ exports.author = config.get(&apos;init-author-name&apos;) + &apos;&lt;&apos;+config.get(&apos;init-author-email&apos;)+&apos;&gt;&apos;;
+ exports.scripts = {
+   start: &apos;node &apos; + config.get(&apos;main-file&apos;),
+   prestart: &apos;npm install&apos;
+ };
+ exports.engines = {
+   node: &apos;&gt;= 4.4.7&apos;,
+   npm: &apos;&gt;= 2.15.8&apos;
+ };
+</code></pre>
+<p>Cada <code>exports.chave</code> &#xE9; referente a um atributo a ser inclu&#xED;do no <code>package.json</code>.
+Outro detalhe mais legal, &#xE9; que &#xE9; poss&#xED;vel deixar algumas das principais perguntas j&#xE1; respondidas com valores default, para isso basta editar o arquivo <code>~/.npmrc</code>, incluindo nele algums campos, como por exemplo:</p>
+<pre><code class="language-bash"> init-license=&apos;MIT&apos;
+ init-author-name=&apos;Caio Ribeiro Pereira&apos;
+ init-author-email=&apos;caio.ribeiro.pereira@gmail.com&apos;
+ init-version=&apos;0.0.1&apos;
+ main-file=&apos;index.js&apos;
+</code></pre>
+<p>Com isso, praticamente voc&#xEA; nem ter&#xE1; mais que responder as principais perguntas, pois elas j&#xE1; ser&#xE3;o pr&#xE9;-definidas pelos valores existentes no <code>~/.npmrc</code>, tanto &#xE9; que elas s&#xE3;o acessadas magicamente pela fun&#xE7;&#xE3;o <code>config.get(&apos;nome-de-uma-key&apos;)</code>.</p>
+<p>Agora se voc&#xEA; criar um novo projeto e rodar o comando <code>npm init</code> voc&#xEA; ter&#xE1; um resultado semelhante a este:</p>
+<p><a href="/images/npm-init.png"><img src="/images/npm-init-small.png" alt="Clique na imagem para ampliar" title="Clique na imagem para ampliar"></a></p>
+<p>See you in the next post!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Customizando npm init",
+  "image": "https://udgwebdev.com/images/npm-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/customizando-npm-init",
+  "datePublished": "2016-08-03",
+  "dateCreated": "2016-08-03",
+  "description": "Veja nesse post como modificar o resultado do comando npm init para automatizar a geração de package.json com dados customizados.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/customizando-npm-init</link><guid isPermaLink="true">https://udgwebdev.com/customizando-npm-init</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 03 Aug   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 3]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 3</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="29/07/2016" pubdate=""><b>29/07/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>E mais uma vez, continuando essa s&#xE9;rie de posts sobre dicas para escrever c&#xF3;digo JavaScript melhor, nesse post vejam mais quatro dicas bem legais.</p>
+<h2>1) Verificando se um item existe em um array</h2><p>Para verificar se um determinado item existe em um array, praticamente muita gente j&#xE1; deve ter feito algo parecido com isso:</p>
+<pre><code class="language-javascript"> var itens = [1,2,3,4,6];
+ var item = 4;
+ var existe = false;
+ for (var i = 0; i &lt; itens.length; i++) {
+    if (itens[i] === item) {
+        existe = true;
+        break;
+    }
+ }
+</code></pre>
+<p>Com certeza voc&#xEA; j&#xE1; deve ter feito ou visto isso, seja em projetos grandes ou mini-projetos de li&#xE7;&#xE3;o de casa na faculdade!</p>
+<p>&#xC9; muito comum uma implementa&#xE7;&#xE3;o desse tipo para verificar se um determinado item existe em um array, por&#xE9;m caso n&#xE3;o conhe&#xE7;a, no ES6 existe uma fun&#xE7;&#xE3;o muito enxuta para fazer esse tipo de checagem, se chama <code>includes()</code>, veja como us&#xE1;-la:</p>
+<pre><code class="language-javascript"> var itens = [1,2,3,4,6];
+ var item = 6;
+ itens.includes(6); // Retorna true
+</code></pre>
+<h2>2) Simplificando compara&#xE7;&#xF5;es nulas</h2><p>O JavaScript &#xE9; uma linguagem em que quando queremos verificar se tal vari&#xE1;vel n&#xE3;o possui um valor, elas geralmente podem ter valores do tipo: <code>null</code>, <code>undefined</code>, <code>&quot;&quot;</code> ou <code>false</code>.</p>
+<p>Nesses casos &#xE9; muito comum projetos verificarem esses valores da seguinte maneira:</p>
+<pre><code class="language-javascript"> if (foo !== null &amp;&amp; foo !== undefined &amp;&amp; foo !== &quot;&quot;) {
+    fazerAlgo();
+ }
+</code></pre>
+<p>Por favor, parem de escrever desse jeito! O c&#xF3;digo fica muiiiiitoooo feio!!!
+Caso n&#xE3;o saiba, existe um simples shortcut l&#xF3;gico para verificar esses a exist&#xEA;ncia desses valores no JavaScript, basta utilizar o operador l&#xF3;gico de nega&#xE7;&#xE3;o ou dupla nega&#xE7;&#xE3;o:</p>
+<pre><code class="language-javascript"> if (!!foo) {
+    fazerAlgo();
+ }
+</code></pre>
+<p>Neste caso, se <code>foo</code> possuir um valor diferente de: <code>null</code>, <code>undefined</code>, <code>false</code>, <code>0</code> ou <code>&quot;&quot;</code> ent&#xE3;o ele possui um valor v&#xE1;lido, suficiente para retornar true nessa condicional.
+Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" title="15 JavaScript Hacks">15 JavaScript Hacks</a></p>
+<h2>3) Aplicando substring corretamente</h2><p>Em primeiro lugar, acredito que muita gente aplica substring corretamente, por&#xE9;m voc&#xEA; sabe as diferen&#xE7;as entre as fun&#xE7;&#xF5;es: <code>substring()</code> e <code>substr()</code>?</p>
+<p>Basicamente ambas fun&#xE7;&#xF5;es utilizam a mesma entrada de argumentos, o primeiro argumento &#xE9; o ind&#xED;ce de ponto de partida, por&#xE9;m a diferen&#xE7;a esta na sem&#xE2;ntica do segundo argumento de ambas fun&#xE7;&#xF5;es, veja.</p>
+<pre><code class="language-javascript"> &quot;JavaScript&quot;.substr(4, 6); // &quot;Script&quot;
+ &quot;JavaScript&quot;.substring(4, 6); // &quot;Sc&quot;
+</code></pre>
+<p>Em <code>substr(index, qtd)</code> o segundo par&#xE2;metro retorna a quantidade de caracteres a partir do index</p>
+<p>Em <code>substring(start, end)</code> o segundo par&#xE2;metro retorna a posi&#xE7;&#xE3;o final da string, ou seja, essa fun&#xE7;&#xE3;o retorna a substring com base na posi&#xE7;&#xE3;o inicial at&#xE9; final</p>
+<p>.</p>
+<p>Veja tamb&#xE9;m:</p>
+<ul>
+<li><a href="/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+</ul>
+<p>At&#xE9; a pr&#xF3;xima galera!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Escrevendo JavaScript melhor - Parte 3",
+  "image": "https://udgwebdev.com/images/es6-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/escrevendo-javascript-melhor-parte-3",
+  "datePublished": "2016-07-29",
+  "dateCreated": "2016-07-29",
+  "description": "E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 29 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Video Streaming com Node.js]]></title><description><![CDATA[<h1>Video Streaming com Node.js</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="24/07/2016" pubdate=""><b>24/07/2016</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-logo.jpg" alt="Video Streaming com Node.js" title="Video Streaming com Node.js"></p>
+<p>Streaming de videos &#xE9; algo muito comum nos dias de hoje, afinal quem &#xE9; que n&#xE3;o conhece Netflix, Vimeo ou pelo menos Youtube? (E o Redtube e XVideos? hahahaha) Em geral o que todos esses sites tem em comum &#xE9; que possuem servidores que realizam streaming de video.</p>
+<p>Mas o que &#xE9; Streaming? N&#xE3;o sou expert nesse assunto, mas basicamente o Streaming &#xE9; uma funcionalidade de processar dados (geralmente grandes) em peda&#xE7;os, para que eles sejam enviados ou escritos aos poucos. Um bom exemplo disso s&#xE3;o os videos e audios, eles geralmente s&#xE3;o arquivos grandes, algo que realizando um download normal, vai te fazer esperar alguns minutos ou horas (dependendo do tamanho do arquivo e principalmente da velocidade de sua banda larga). Nesse caso o uso do streaming, vai te permitir consumir esses arquivos aos poucos, sem esperar muito tempo comparado com o download normal, afinal ser&#xE1; feito downloads de peda&#xE7;os menores desse arquivo que ser&#xE1; suficiente para voc&#xEA; ir consumindo-o aos poucos tamb&#xE9;m.</p>
+<p>Por exemplo: Quem nunca viu o youtube carregando partes de um video, suficiente para que voc&#xEA; j&#xE1; assista os primeiros segundos desse video, enquanto ele vai baixando mais peda&#xE7;os desse video, at&#xE9; montar completamente o video? Quem nunca viu um video travar pois ele carregou poucos dados pelo qual voc&#xEA; j&#xE1; assistiu e teve que esperar o carregamento de mais dados durante uma tela congelada?</p>
+<p>Tudo isso foi realizado via servidor de streaming de dados aliado com o recurso de <a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked Transfer Encoding</a> do protocolo HTTP 1.1.</p>
+<p>O Node.js possui nativamente o m&#xF3;dulo <a href="https://nodejs.org/api/stream.html">Stream</a> que permite trabalhar com streaming de arquivos, tamb&#xE9;m existe um ebook free criado pelo @substack, que realmente explica bem detalhado como trabalhar com streaming no Node.js, recomendo muito essa leitura: <a href="https://github.com/substack/stream-handbook">stream-handbook</a>.</p>
+<p>Depois dessa introdu&#xE7;&#xE3;o, vou mostrar em c&#xF3;digo um simples servidor de video streaming que voc&#xEA; pode criar e usar em sua casa, para por exemplo renderizar seus videos em sua rede wifi.</p>
+<p>Para come&#xE7;ar, rode esses comandos para criar o projeto inicial:</p>
+<pre><code class="language-bash"> mkdir videoflix
+ cd videoflix
+ npm init
+</code></pre>
+<p>Ap&#xF3;s preencher os campos para criar o <code>package.json</code>, instale o <a href="https://expressjs.com/">Express</a> para que possamos criar algumas rotas din&#xE2;micas em nossa aplica&#xE7;&#xE3;o:</p>
+<pre><code class="language-bash"> npm install --save express
+</code></pre>
+<p>Agora crie o <code>index.js</code> que ser&#xE1; o c&#xF3;digo backend do nosso servidor de streaming</p>
+<pre><code class="language-javascript"> const fs = require(&apos;fs&apos;);
+ const express = require(&apos;express&apos;);
+ const app = express();
+ app.get(&apos;/&apos;, (req, res) =&gt; {
+   fs.readFile(&apos;./index.html&apos;, (err, html) =&gt; res.end(html));
+ });
+ app.get(&apos;/movies/:movieName&apos;, (req, res) =&gt; {
+   const { movieName } = req.params;
+   const movieFile = `./movies/${movieName}`;
+   fs.stat(movieFile, (err, stats) =&gt; {
+     if (err) {
+       console.log(err);
+       return res.status(404).end(&apos;&lt;h1&gt;Movie Not found&lt;/h1&gt;&apos;);
+     }
+     // Vari&#xE1;veis necess&#xE1;rias para montar o chunk header corretamente
+     const { range } = req.headers;
+     const { size } = stats;
+     const start = Number((range || &apos;&apos;).replace(/bytes=/, &apos;&apos;).split(&apos;-&apos;)[0]);
+     const end = size - 1;
+     const chunkSize = (end - start) + 1;
+     // Definindo headers de chunk
+     res.set({
+       &apos;Content-Range&apos;: `bytes ${start}-${end}/${size}`,
+       &apos;Accept-Ranges&apos;: &apos;bytes&apos;,
+       &apos;Content-Length&apos;: chunkSize,
+       &apos;Content-Type&apos;: &apos;video/mp4&apos;
+     });
+     // &#xC9; importante usar status 206 - Partial Content para o streaming funcionar
+     res.status(206);
+     // Utilizando ReadStream do Node.js
+     // Ele vai ler um arquivo e envi&#xE1;-lo em partes via stream.pipe()
+     const stream = fs.createReadStream(movieFile, { start, end });
+     stream.on(&apos;open&apos;, () =&gt; stream.pipe(res));
+     stream.on(&apos;error&apos;, (streamErr) =&gt; res.end(streamErr));
+   });
+ });
+ app.listen(3000, () =&gt; console.log(&apos;VideoFlix Server!&apos;));
+</code></pre>
+<p>Para garantir que o servidor funcione, crie a pasta <code>movies</code> na ra&#xED;z do projeto, e inclua alguns videos em formato MP4. Para evitar problemas com nomes de arquivos, recomendo que renomeie os videos de mp4 de forma que n&#xE3;o contenha espa&#xE7;os em branco.</p>
+<p>Em seguida, crie o <code>index.html</code> que ter&#xE1; a parte visual para renderizar o player de video gerado nativamente pelo HTML5:</p>
+<pre><code class="language-html"> &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+   &lt;head&gt;
+     &lt;meta charset=&quot;utf-8&quot;&gt;
+     &lt;title&gt;VideoFlix&lt;/title&gt;
+     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+   &lt;/head&gt;
+   &lt;body style=&quot;text-align:center&quot;&gt;
+     &lt;div style=&quot;margin:0 auto;&quot;&gt;
+       &lt;!-- Mude o src dessa tag para o nome do video que voc&#xEA; possuir --&gt;
+       &lt;video src=&quot;/movies/300.mp4&quot; controls width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/video&gt;
+     &lt;/div&gt;
+   &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Video Streaming com Node.js",
+  "image": "https://udgwebdev.com/images/nodejs-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/video-streaming-com-nodejs",
+  "datePublished": "2016-07-24",
+  "dateCreated": "2016-07-24",
+  "description": "Um quick post que explica na prática como montar um servidor de video streaming usando Node.js.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/video-streaming-com-nodejs</link><guid isPermaLink="true">https://udgwebdev.com/video-streaming-com-nodejs</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 24 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Realtime com RethinkDB]]></title><description><![CDATA[<h1>Realtime com RethinkDB</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="19/07/2016" pubdate=""><b>19/07/2016</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a>, <a href="/menu/#nosql" rel="me" title="Menu: NoSQL">NoSQL</a></p><p><img src="/images/rethinkdb-logo.png" alt="Realtime com RethinkDB" title="Realtime com RethinkDB"></p>
+<p>Se voc&#xEA; precisa de um banco NoSQL que trabalhe com JSON, tenha suporte a consultas realtime e voc&#xEA; quer expandir seus horizontes em conhecimentos que v&#xE3;o al&#xE9;m de trabalhar apenas com MongoDB, uma boa op&#xE7;&#xE3;o &#xE9; conhecer o RethinkDB.</p>
+<p>RethinkDB &#xE9; um banco open-source, que trabalha com dados JSON, por&#xE9;m ele organiza os dados em tabelas igual um banco SQL tradicional, permitindo tamb&#xE9;m realizar consultas entre v&#xE1;rias tabelas atrav&#xE9;s do cl&#xE1;ssico comando join. Ele tamb&#xE9;m oferece persist&#xEA;ncia de arrays e sub-documentos dentro de um registro, que &#xE9; algo muito utilizado no MongoDB e CouchDB, que tamb&#xE9;m &#xE9; muito &#xFA;til quando pretende persistir dados complexos em uma &#xFA;nica tabela, ao inv&#xE9;s de fazer joins entre m&#xFA;ltiplas tabelas.</p>
+<p>Abaixo veja algumas caracter&#xED;sticas legais do RethinkDB:</p>
+<ul>
+<li>Suporte Geospartial;</li>
+<li>API para tratamento de Strings, Dates, Booleans e Documentos (objetos);</li>
+<li>API para realizar c&#xE1;lculos matem&#xE1;ticos;</li>
+<li>Map-reduce;</li>
+<li>Possui cliente HTTP</li>
+<li>Dashboard admin de databases via <a href="http://localhost:8080">localhost:8080</a></li>
+<li>Consulta via streaming realtime atrav&#xE9;s do changefeeds;</li>
+<li>Cria&#xE7;&#xE3;o de index simples, index composto e multi index (baseado em arrays);</li>
+</ul>
+<p>Partindo para o lado pr&#xE1;tico, que tal criarmos uma simples aplica&#xE7;&#xE3;o usando RethinkDB? Para explorarmos o suporte changefeed de consultas realtime, vamos criar uma simples timeline, em que todo mundo posta mensagens para uma timeline global.</p>
+<p><strong>Aten&#xE7;&#xE3;o:</strong> Em primeiro lugar, &#xE9; necess&#xE1;rio que voc&#xEA; tenha em sua m&#xE1;quina o RethinkDB instalado e rodando corretamente para em seguida criarmos o projeto abaixo, caso n&#xE3;o tenha instalado, recomendo que voc&#xEA; <a href="http://rethinkdb.com/docs/install/">siga as instru&#xE7;&#xF5;es do site oficial do RethinkDB</a>, afinal l&#xE1; tem um vasto tutorial para instala&#xE7;&#xE3;o em diversos sistemas operacionais</p>
+<p>Para come&#xE7;ar o projeto, rode os seguintes comandos no seu terminal:</p>
+<pre><code class="language-bash"> mkdir timeline
+ cd timeline
+ npm init
+</code></pre>
+<p>Responda como quiser as perguntas do <code>npm init</code>, afinal ser&#xE1; usado apenas para criar o <code>package.json</code>, em seguida instale as seguintes depend&#xEA;ncias:</p>
+<pre><code class="language-bash"> npm install --save express socket.io rethinkdb
+</code></pre>
+<p>Agora m&#xE3;os a obra! Como ser&#xE1; uma aplica&#xE7;&#xE3;o simples, vamos codar todo projeto em um &#xFA;nico arquivo e <strong>usaremos algumas features do ES6 nativas do Node v6.x</strong>. Caso precise um projeto bem estruturado que utilize RethinkDB + Express como base para seus novos projetos, recentemente criei novo projetinho chamado <a href="https://github.com/caio-ribeiro-pereira/node-api-examples">node-api-examples</a> que &#xE9; um conjunto de APIs simples e bem estruturada, em que cada projeto tem usa uma varia&#xE7;&#xE3;o de web router e banco de dados, l&#xE1; temos algumas vers&#xF5;es de APIs usando RethinkDB com Express, Koa.js e Hapi.js. Da uma olhada l&#xE1;!
+Voltando ao foco desse post, crie o <code>index.js</code> da seguinte maneira:</p>
+<pre><code class="language-javascript"> const http = require(&apos;http&apos;);
+ const fs = require(&apos;fs&apos;);
+ const express = require(&apos;express&apos;);
+ const socketIO = require(&apos;socket.io&apos;);
+ const r = require(&apos;rethinkdb&apos;);
+ const config = require(&apos;./config.json&apos;);
+ // Carregando Express, HTTP, SocketIO e DB config
+ const db = Object.assign(config.rethinkdb, { db: &apos;timeline&apos; });
+ const app = express();
+ const server = http.Server(app);
+ const io = socketIO(server);
+ r.connect(db)
+   .then(conn =&gt; {
+     // Rota para carregar pagina inicial
+     app.get(&apos;/&apos;, (req, res) =&gt; {
+       fs.readFile(`${__dirname}/index.html`, (err, html) =&gt; {
+         res.end(html || err);
+       });
+     });
+     // Listando novas mensagens via changefeed + socket.io
+     r.table(&apos;messages&apos;)
+       .changes()
+       .run(conn)
+       .then(cursor =&gt; {
+         cursor.each((err, data) =&gt; {
+           const message = data.new_val;
+           io.sockets.emit(&apos;/messages&apos;, message);
+         });
+       })
+     ;
+     // Cadastro de novas mensagens via socket.io
+     io.on(&apos;connection&apos;, (client) =&gt; {
+       r.table(&apos;messages&apos;)
+         .run(conn)
+         .then(cursor =&gt; {
+           cursor.each((err, message) =&gt; {
+             io.sockets.emit(&apos;/messages&apos;, message);
+           });
+         })
+       ;
+       client.on(&apos;/messages&apos;, (body) =&gt; {
+         const { name, message } = body;
+         const data = { name, message, date: new Date() };
+         r.table(&apos;messages&apos;).insert(data).run(conn);
+       });
+     });
+     server.listen(3000, () =&gt; console.log(&apos;Timeline Server!&apos;));
+   })
+   .error(err =&gt; {
+     console.log(&apos;Erro ao se conectar com rethinkdb&apos;);
+     throw err;
+   })
+ ;
+</code></pre>
+<p>Alguns detalhes s&#xE3;o importantes saber quando vai trabalhar com RethinkDB
+Em primeiro lugar, praticamente grande parte das fun&#xE7;&#xF5;es desse m&#xF3;dulo &#xE9; baseado em <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> e nisso vai te permitir escrever um c&#xF3;digo ass&#xED;crono mais estruturado e com melhor controle no tratamento de erros.</p>
+<p>A query que realiza um <a href="http://rethinkdb.com/docs/changefeeds/javascript/">changefeed</a> &#xE9; praticamente um subscriber do banco, em que registra uma query observadora para retornar qualquer altera&#xE7;&#xE3;o de dados de uma tabela, a combina&#xE7;&#xE3;o disso junto com a fun&#xE7;&#xE3;o <code>io.sockets.emit()</code> vai permitir que a aplica&#xE7;&#xE3;o retorne dados em tempo real para o cliente.</p>
+<p>Para preparar o banco de dados dessa aplica&#xE7;&#xE3;o, vamos criar um simples script que cria database e tables para usarmos nesse projeto, crie o arquivo <code>database.js</code> da seguinte maneira:</p>
+<pre><code class="language-javascript"> const r = require(&apos;rethinkdb&apos;);
+ const config = require(&apos;./config.json&apos;);
+ let conn;
+ r.connect(config.rethinkdb)
+   .then(connection =&gt; {
+     console.log(&apos;Conectado no RethinkDB...&apos;);
+     conn = connection;
+     return r.dbCreate(&apos;timeline&apos;).run(conn);
+   })
+   .then(() =&gt; {
+     console.log(&apos;Database &quot;timeline&quot; criado com sucesso!&apos;);
+     return r.db(&apos;timeline&apos;).tableCreate(&apos;messages&apos;).run(conn);
+   })
+   .then(() =&gt; console.log(&apos;Tabela &quot;messages&quot; criada com sucesso!&apos;))
+   .error(err =&gt; console.log(err))
+   .finally(() =&gt; process.exit(0))
+ ;
+</code></pre>
+<p>Em seguida, crie tamb&#xE9;m o arquivo <code>config.json</code> que vai conter dados de conex&#xE3;o com banco RethinkDB:</p>
+<pre><code class="language-javascript"> {
+   &quot;rethinkdb&quot;: {
+     &quot;host&quot;: &quot;localhost&quot;,
+     &quot;port&quot;: 28015
+   }
+ }
+</code></pre>
+<p>Para finalizar nossa aplica&#xE7;&#xE3;o, crie a p&#xE1;gina <code>index.html</code> que ser&#xE1; a interface da timeline para os usu&#xE1;rios brincarem:</p>
+<pre><code class="language-html"> &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+   &lt;head&gt;
+     &lt;meta charset=&quot;utf-8&quot;&gt;
+     &lt;title&gt;Timeline&lt;/title&gt;
+     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+     &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;form style=&quot;text-align:center;margin:50px 0&quot;&gt;
+       &lt;label for=&quot;name&quot;&gt;Nome:&lt;/label&gt;
+       &lt;input type=&quot;text&quot; id=&quot;name&quot;/&gt;
+       &lt;label for=&quot;message&quot;&gt;Mensagem:&lt;/label&gt;
+       &lt;input type=&quot;text&quot; id=&quot;message&quot;/&gt;
+       &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+     &lt;/form&gt;
+     &lt;fieldset style=&quot;padding: 20px;width:50%;margin:0 auto&quot;&gt;
+       &lt;legend style=&quot;text-align:center&quot;&gt;Timeline&lt;/legend&gt;
+       &lt;p id=&quot;messages&quot;&gt;&lt;/p&gt;
+     &lt;/fieldset&gt;
+     &lt;script&gt;
+       (function() {
+         var socket = io();
+         var form = document.querySelector(&apos;form&apos;);
+         form.addEventListener(&apos;submit&apos;, function(e) {
+           e.preventDefault();
+           var name = e.target.querySelector(&apos;#name&apos;);
+           var message = e.target.querySelector(&apos;#message&apos;);
+           var data = {
+             name: name.value,
+             message: message.value
+           };
+           socket.emit(&apos;/messages&apos;, data);
+           e.target.reset();
+         });
+         socket.on(&apos;/messages&apos;, function(data) {
+           var messages = document.querySelector(&apos;#messages&apos;);
+           var message = &apos;&lt;b&gt;&apos;+ data.name +&apos;:&lt;/b&gt; &apos;+ data.message +&apos;&lt;br /&gt;&apos;;
+           messages.innerHTML += message;
+         });
+       })();
+     &lt;/script&gt;
+   &lt;/body&gt;
+ &lt;/html&gt;
+</code></pre>
+<p>Pronto! Finalizamos a implementa&#xE7;&#xE3;o de nossa timeline! Agora falta rodar a aplica&#xE7;&#xE3;o, para isso, na primeira vez ser&#xE1; necess&#xE1;rio rodar os scripts de prepara&#xE7;&#xE3;o do database do projeto, ent&#xE3;o rode:</p>
+<pre><code class="language-bash"> node database.js
+</code></pre>
+<p>Se tudo estiver, ok! Ent&#xE3;o voc&#xEA; j&#xE1; pode iniciar o server rodando comando:</p>
+<pre><code class="language-bash"> node index.js
+</code></pre>
+<p>E brincar com sua nova aplica&#xE7;&#xE3;o realtime acessando <a href="http://localhost:3000">http://localhost:3000</a>.</p>
+<p>See ya!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Realtime com RethinkDB",
+  "image": "https://udgwebdev.com/images/rethinkdb-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/realtime-com-rethinkdb",
+  "datePublished": "2016-07-19",
+  "dateCreated": "2016-07-19",
+  "description": "Se você precisa de um banco NoSQL que trabalhe com JSON, tenha suporte a consultas realtime e você quer expandir seus horizontes em conhecimentos que vão além de trabalhar apenas com MongoDB, uma boa opção é conhecer o RethinkDB.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/realtime-com-rethinkdb</link><guid isPermaLink="true">https://udgwebdev.com/realtime-com-rethinkdb</guid><category><![CDATA[Node.js]]></category><category><![CDATA[NoSQL]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 19 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Brincando com estruturas imutáveis usando Immutable.js]]></title><description><![CDATA[<h1>Brincando com estruturas imut&#xE1;veis usando Immutable.js</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="11/07/2016" pubdate=""><b>11/07/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/immutable-logo.png" alt="Brincando com estruturas imut&#xE1;veis usando Immutable.js" title="Brincando com estruturas imut&#xE1;veis usando Immutable.js"></p>
+<p>Neste post iremos aprender um pouco de conceitos sobre lidar com dados e estrutura de dados imut&#xE1;veis usando Immutable.js, afinal a imutabilidade &#xE9; uma das t&#xE9;cnicas aplicadas no paradigma da programa&#xE7;&#xE3;o funcional.</p>
+<p>A imutabilidade de dados &#xE9; o comportamento que ocorre quando uma vari&#xE1;vel recebe pela primeira vez um valor qualquer, e nunca mais poder&#xE1; mudar de valor, ou seja, n&#xE3;o permite uma muta&#xE7;&#xE3;o de estado.
+Quando se trabalha com immutabilidade, compiladores e interpretadores ganham alguns benef&#xED;cios:</p>
+<ul>
+<li>Persist&#xEA;ncia f&#xE1;cil de manter;</li>
+<li>Copiar/Clonar dados se uma opera&#xE7;&#xE3;o torna constante, afinal voc&#xEA; n&#xE3;o pode mudar internamente o estado de um dado, voc&#xEA; s&#xF3; pode criar uma nova refer&#xEA;ncia baseada em um dado atual, ou seja, voc&#xEA; cria uma vers&#xE3;o modificada se baseando em um dado atual;</li>
+<li>N&#xE3;o se trabalha com <strong>locks</strong> de vari&#xE1;veis no sincronismo de dados entre threads, afinal os dados n&#xE3;o v&#xE3;o mudar de estado;</li>
+</ul>
+<p>O Immutable.js &#xE9; uma biblioteca JavaScript criada e mantida pelo Facebook focada em trabalhar com estrutura de dados imut&#xE1;veis, atualmente ela trabalha com as seguintes estruturas: <code>List, Stack, Map, OrderedMap, Set, OrderedSet e Record</code>.</p>
+<h3>Brincando com Immutable.js</h3><p>Existem v&#xE1;rias formas de instalar essa lib, para escolher uma forma mais adequada para seus projetos veja esse link: <a href="https://facebook.github.io/immutable-js">facebook.github.io/immutable-js</a>. Nos exemplos desse post, vamos instalar via NPM para testar c&#xF3;digos via Node.js REPL, caso queria fazer o mesmo, primeiro rode esse comando:</p>
+<pre><code class="language-bash"> npm install immutable
+</code></pre>
+<p>Para testarmos, vamos criar um simples Map para entendermos os principais comportamentos e regras de se trabalhar com essa library.</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ var cliente = Immutable.Map({ nome: &apos;John Connor&apos;, email: &apos;john@connor.net&apos; });
+ console.log(cliente.get(&apos;nome&apos;)); // &apos;John Connor&apos;
+ console.log(cliente.get(&apos;email&apos;)); // &apos;john@connor.net&apos;
+</code></pre>
+<p>Ap&#xF3;s criar um Map, voc&#xEA; pode acessar suas chaves atrav&#xE9;s da fun&#xE7;&#xE3;o <code>map.get(&apos;chave&apos;)</code>. Se for necess&#xE1;rio atualizar os dados de uma chave do Map, voc&#xEA; pode usar a fun&#xE7;&#xE3;o <code>map.set(&apos;chave&apos;)</code>, por&#xE9;m n&#xE3;o ser&#xE1; modificado o estado do map atual, na verdade essa fun&#xE7;&#xE3;o vai retornar um novo map com os dados atualizado, afinal essa estrutura aplica o conceito de imutabilidade, ent&#xE3;o ao inv&#xE9;s de mudar internamente, &#xE9; criado uma nova estrutura modificada com base na estrutura atual. Veja esse exemplo:</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ var cliente = Immutable.Map({ nome: &apos;John Connor&apos;, email: &apos;john@connor.net&apos; });
+ console.log(cliente.get(&apos;nome&apos;)); // &apos;John Connor&apos;
+ console.log(cliente.get(&apos;email&apos;)); // &apos;john@connor.net&apos;
+ // Com retorno encadeado do map.set() &#xE9; poss&#xED;vel mudar m&#xFA;ltiplas chaves!
+ var novoCliente = cliente.set(&apos;nome&apos;, &apos;Sarah Connor&apos;)
+                          .set(&apos;email&apos;, &apos;sarah@connor.net&apos;);
+ console.log(novoCliente.get(&apos;nome&apos;)); // &apos;Sarah Connor&apos;
+ console.log(novoCliente.get(&apos;email&apos;)); // &apos;sarah@connor.net&apos;
+</code></pre>
+<p>As vezes, monitorar e manter estado se torna uma tarefa dif&#xED;cil e cansativa de lidar. Ao trabalhar com dados imut&#xE1;veis voc&#xEA; elimina essa tarefa chata, e passa a pensar em uma nova forma mais controlada e precisa de trabalhar com os dados de uma aplica&#xE7;&#xE3;o. Conceitualmente cole&#xE7;&#xF5;es imut&#xE1;veis devem serem tratadas como <strong>valores</strong> ao inv&#xE9;s de <strong>objetos</strong>. Pois os <strong>objetos</strong> representam um conjunto de dados que <strong>mudam com o passar do tempo</strong>, j&#xE1; os <strong>valores</strong> representam um <strong>estado particular em uma inst&#xE2;ncia de tempo</strong>. E &#xE9; com base nesse princ&#xED;pio que melhora o entendimento sobre dados imut&#xE1;veis.</p>
+<h3>Explorando as estruturas imut&#xE1;veis</h3><p><code>List</code>: &#xE9; uma representa&#xE7;&#xE3;o imut&#xE1;vel de um array, ou seja, ela possui as principais fun&#xE7;&#xF5;es de um array do JavaScript, veja:</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ var scores1 = Immutable.List([2, 4, 6, 8]);
+ console.log(scores1.size); // 4
+ var scores2 = scores1.push(10); // [2,4,6,8,10]
+ var scores3 = scores2.pop().pop(); // [2,4,6]
+ var scores4 = scores3.shift(); // [4,6]
+ var scores5 = scores4.concat(10, 12, 14); // [4,6,10,12,14]
+</code></pre>
+<p>Para conhecer em mais fun&#xE7;&#xF5;es dessa estrutura veja: <a href="https://facebook.github.io/immutable-js/docs/#/List">facebook.github.io/immutable-js/docs/#/List</a>.</p>
+<p><code>Stack</code>: esta &#xE9; a implementa&#xE7;&#xE3;o cl&#xE1;ssica de Pilha (FILO - First In, Last Out), para manipular essa Stack voc&#xEA; pode usar fun&#xE7;&#xF5;es do tipo <code>stack.push()</code> e <code>stack.pop()</code> e para acessar os itens de uma pilha utilize a fun&#xE7;&#xE3;o <code>stack.get(index)</code>:</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ var stack = Immutable.Stack();
+ var pontuacoes = stack.push(10, 12, 14);
+ console.log(pontuacoes.size); // 3
+ // pontuacoes.get() e pontuacoes.get(0) retornam os mesmos resultados
+ console.log(pontuacoes.get()); // 10
+ console.log(pontuacoes.get(0)); // 10
+ console.log(pontuacoes.get(1)); // 12
+ console.log(pontuacoes.get(2)); // 14
+ var novaPontuacao = pontuacoes.pop(); // [10, 12]
+ console.log(novaPontuacao.get(0)); // 10
+ console.log(novaPontuacao.get(1)); // 12
+</code></pre>
+<p>Para conhecer em mais fun&#xE7;&#xF5;es dessa estrutura veja: <a href="https://facebook.github.io/immutable-js/docs/#/Stack">facebook.github.io/immutable-js/docs/#/Stack</a>.</p>
+<p><code>Map</code>: &#xE9; uma estrutura do tipo <strong>chave-valor</strong>, praticamente ela representa um objeto JavaScript, por&#xE9;m imut&#xE1;vel n&#xE9;! Voc&#xEA; pode definir todos os dados do Map em seu construtor. Como j&#xE1; foi apresentado essa estrutura na se&#xE7;&#xE3;o anterior, ent&#xE3;o apenas recomendo que veja esse link para conhecer todas suas fun&#xE7;&#xF5;es de manipula&#xE7;&#xE3;o: <a href="https://facebook.github.io/immutable-js/docs/#/Map">facebook.github.io/immutable-js/docs/#/Map</a>.</p>
+<p><code>OrderedMap</code>: esta estrutura &#xE9; um mix de objetos e arrays. Afinal ela manipula seus itens utilizando estrutura de Maps, exemplo as fun&#xE7;&#xF5;es <code>orderedMap.get(&apos;chave&apos;)</code> e <code>orderedMap.set(&apos;chave&apos;, valor)</code>, e tamb&#xE9;m essa estrutura mant&#xE9;m uma ordem dos itens que s&#xE3;o inclu&#xED;dos, permitindo utilizar fun&#xE7;&#xF5;es do tipo <code>orderedMap.first()</code> e <code>orderedMap.last()</code> que s&#xE3;o pr&#xF3;prias para manipular arrays. Tamb&#xE9;m &#xE9; poss&#xED;vel redefinir a ordem das chaves utilizando as fun&#xE7;&#xF5;es: <code>orderedMap.sort()</code> e <code>orderedMap.sortBy()</code> que v&#xE3;o retornar um novo map ordenado.</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ // M&#xFA;ltiplos inserts utilizando set() encadeado
+ var clientes = Immutable.OrderedMap()
+                       .set(&apos;John&apos;, 25)
+                       .set(&apos;Mary&apos;, 27);
+ console.log(clientes.first(), clientes.last()); // 25, 27
+ console.log(JSON.stringify(clientes)); // &apos;{&quot;John&quot;: 25, &quot;Mary&quot;: 27}&apos;
+ // Reordenando o map
+ var clientesMaisVelhos = clientes.sortBy(function(value, key) {
+   return -value;
+ });
+ console.log(JSON.stringify(clientesMaisVelhos)); // &apos;{&quot;Mary&quot;: 27, &quot;John&quot;: 25}&apos;
+</code></pre>
+<p>Para conhecer em mais fun&#xE7;&#xF5;es dessa estrutura veja: <a href="https://facebook.github.io/immutable-js/docs/#/OrderedMap">facebook.github.io/immutable-js/docs/#/OrderedMap</a>.</p>
+<p><code>Set</code>: &#xE9; um array de elementos &#xFA;nicos, ou seja, n&#xE3;o &#xE9; permitido valores duplicados. Se voc&#xEA; incluir um valor repetido, o primeiro valor ser&#xE1; mantido e o segundo ignorado.</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ var set1 = Immutable.Set([1, 2, 3, 3]);
+ var set2 = Immutable.Set([4, 5, 5]);
+ console.log(set1.count()); // 3
+ console.log(set1.toArray()); // [1,2,3]
+ console.log(set2.count()); // 2
+ console.log(set2.toArray()); // [4,5]
+ var union = set1.union(set2);
+ console.log(union.count()); // 5
+ console.log(union.toArray()); // [1,2,3,4,5]
+</code></pre>
+<p>Veja mais fun&#xE7;&#xF5;es dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Set">facebook.github.io/immutable-js/docs/#/Set</a>.</p>
+<p><code>OrderedSet</code>: &#xE9; uma varia&#xE7;&#xE3;o do Set em que os dados s&#xE3;o ordenados e reordenados.</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ var orderedSet1 = Immutable.OrderedSet([1, 2, 2]);
+ var orderedSet2 = Immutable.OrderedSet([2, 1, 2]);
+ console.log(orderedSet1.count()); // 2
+ console.log(orderedSet1.toArray()); // [1,2]
+ console.log(orderedSet2.count()); // 2
+ console.log(orderedSet2.toArray()); // [2,1]
+ var intersected = orderedSet1.intersect(orderedSet2);
+ console.log(intersected.count()); // 2
+ console.log(intersected.toArray()); // [1,2]
+</code></pre>
+<p>Veja mais fun&#xE7;&#xF5;es dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/OrderedSet">facebook.github.io/immutable-js/docs/#/OrderedSet</a>.</p>
+<p><code>Record</code>: &#xE9; praticamente um construtor de objetos imut&#xE1;veis. Nele tamb&#xE9;m &#xE9; poss&#xED;vel definir valores default, em casos campos sem valores.</p>
+<pre><code class="language-javascript"> var Immutable = require(&apos;immutable&apos;);
+ var Cliente = Immutable.Record({ nome: &apos;John&apos;, idade: 25 });
+ var john = new Cliente();
+ console.log(john.toJSON()); // Object { nome: &apos;John&apos;, idade: 25 }
+ var mary = new Cliente({ nome: &apos;Mary&apos;, idade: 20 });
+ console.log(mary.toJSON()); // Object { nome: &apos;Mary&apos;, idade: 20 }
+</code></pre>
+<p>Para mais detalhes dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Record">facebook.github.io/immutable-js/docs/#/Record</a>.</p>
+<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Brincando com estruturas imutáveis usando Immutable.js",
+  "image": "https://udgwebdev.com/images/immutable-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs",
+  "datePublished": "2016-07-11",
+  "dateCreated": "2016-07-11",
+  "description": "Neste post iremos aprender um pouco de conceitos sobre lidar com dados e estrutura de dados imutáveis usando Immutable.js, afinal a imutabilidade é uma das técnicas aplicadas no paradigma da programação funcional.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</link><guid isPermaLink="true">https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 11 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 2]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 2</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="27/06/2016" pubdate=""><b>27/06/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>Dando continuidade ao post: <a href="/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a>, nesse post falarei sobre mais duas dicas &#xFA;teis para melhorar seu c&#xF3;digo JavaScript.</p>
+<h2>1) Use === no lugar de ==</h2><p>De fato, ainda &#xE9; muito comum ver aplica&#xE7;&#xF5;es JavaScript utilizando <code>==</code> ou <code>!=</code> na compara&#xE7;&#xE3;o entre duas vari&#xE1;veis, apesar desses operadores realizarem a compara&#xE7;&#xE3;o de valores corretamente, eles ignoram a compara&#xE7;&#xE3;o do tipo de dado, ou seja:</p>
+<pre><code class="language-javascript"> // Aqui a compara&#xE7;&#xE3;o esta correta
+ console.log(1 == 1) // true
+ // Aqui a compara&#xE7;&#xE3;o n&#xE3;o deveria retornar true
+ console.log(&apos;1&apos; == 1) // true
+</code></pre>
+<p>Para evitar esse tipo de problemas &#xE9; recomendado utilizar os operadores <code>===</code> e <code>!==</code> para que a compara&#xE7;&#xE3;o seja justa em comparar se os valores s&#xE3;o iguais e principalmente se os tipos de dados s&#xE3;o os mesmos, veja:</p>
+<pre><code class="language-javascript"> // Aqui a compara&#xE7;&#xE3;o esta correta
+ console.log(1 === 1) // true
+ // Aqui tamb&#xE9;m!
+ console.log(&apos;1&apos; === 1) // false
+</code></pre>
+<h2>2) Filtre campos usando shorthand value</h2><p>Essa dica s&#xF3; funciona com ES6 habilitado, e &#xE9; bem &#xFA;til!
+Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhecido <strong>Object destructuring assignment</strong> do ES6, permite extrair campos de um objeto de forma mais elegante:</p>
+<pre><code class="language-javascript"> // &#xC9; muito comum fazer isso
+ var nome = cliente.nome;
+ // Com shorthand value voc&#xEA; pode fazer isso
+ var { nome } = cliente;
+</code></pre>
+<p>Com shorthand value &#xE9; poss&#xED;vel extrair em v&#xE1;riaveis os atributos de um objeto, ou seja, imagine um sistema externo enviando para seu sistema objetos com v&#xE1;rios campos, por&#xE9;m voc&#xEA; somente precisa de apenas alguns campos, nesse caso &#xE9; muito comum voc&#xEA; fazer algo semelhante a isso:</p>
+<pre><code class="language-javascript"> // Imagine que este cliente possua +10 campos
+ function formatar(cliente) {
+    // Por&#xE9;m voc&#xEA; s&#xF3; quer retornar nome e email do cliente
+    var nome = cliente.nome;
+    var email = cliente.email;
+    return {
+        nome: nome,
+        email: email
+    };
+ }
+</code></pre>
+<p>Com o shorthand value voc&#xEA; pode fazer uma formata&#xE7;&#xE3;o desse objeto cliente de forma mais enxuta, sem contar que essa funcionalidade tamb&#xE9;m serve para criar um novo objeto sem a necessidade de repetir a chave e valor que possua o mesmo nome, ou seja, o retorno dessa fun&#xE7;&#xE3;o pode se resumir da seguinte maneira:</p>
+<pre><code class="language-javascript"> // Esse cliente tamb&#xE9;m possui +10 campos, ok?
+ function formatar(cliente) {
+     // Dessa vez, vamos filtrar os campos usando shorthand value
+     var { nome, email } = cliente;
+     // E tamb&#xE9;m ser&#xE1; usado shorthand value no novo objeto
+     return { nome, email };
+ }
+</code></pre>
+<p>Veja tamb&#xE9;m:</p>
+<ul>
+<li><a href="/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+</ul>
+<p>See you later!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Escrevendo JavaScript melhor - Parte 2",
+  "image": "https://udgwebdev.com/images/es6-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/escrevendo-javascript-melhor-parte-2",
+  "datePublished": "2016-06-27",
+  "dateCreated": "2016-06-27",
+  "description": "Dando continuidade ao post Escrevendo JavaScript melhor - Parte 1, nesse post falarei duas dicas úteis para melhorar seu código JavaScript.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 27 Jun   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 1]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 1</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/06/2016" pubdate=""><b>02/06/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>Esse post visa mostrar na pr&#xE1;tica como melhorar algumas gambiarras ou bad codes cl&#xE1;ssicas de se encontrar em qualquer projeto legado JavaScript.</p>
+<p>Com certeza voc&#xEA; j&#xE1; deve ter visto ou escrito alguns dos c&#xF3;digos abaixo, e simplesmente n&#xE3;o fez um refactoring nele, seja por falta de tempo, ou principalmente pelo fato de n&#xE3;o conhecer uma forma mais elegante.</p>
+<h3>1) Mapeando arrays</h3><p>Acredito que esse exemplo &#xE9; o mais cl&#xE1;ssico de todos, e o cen&#xE1;rio &#xE9; o seguinte: voc&#xEA; tem um array de objetos com tamanho X e precisa gerar um novo array com mesmo tamanho, por&#xE9;m aplicando novos campos nesses objetos, modificando alguns dos campos atuais ou caso seja um array de dados primitivos (String, Number ou Date) voc&#xEA; precisa, por exemplo, calcular o valor de cada item do array. Se voc&#xEA; j&#xE1; se deparou com esse cen&#xE1;rio alguma vez na vida, provavelmente voc&#xEA; j&#xE1; viu ou fez um c&#xF3;digo semelhante a este:</p>
+<pre><code class="language-javascript"> // Esse c&#xF3;digo basicamente vai multiplicar por 3 cada valor do array scores
+ var scores = [2, 4, 6, 8, 10];
+ var newScores = [];
+ for(var i = 0; i &lt; scores.length; i++) {
+     newScores.push(scores[i] * 3);
+ }
+ console.log(newScores); // [6, 12, 18, 24, 30]
+</code></pre>
+<p>Nesse caso, foi necess&#xE1;rio criar um novo array e um loop que percorreu todos os items do primeiro array (<code>scores</code>) para calcular os valores e em seguida inserir seus resultados dentro do array <code>newScores</code>. Mas existe uma forma mais elegante para isso, a solu&#xE7;&#xE3;o &#xE9; usar a fun&#xE7;&#xE3;o <code>Array.prototype.map()</code>, veja como fica:</p>
+<pre><code class="language-javascript"> var scores = [2, 4, 6, 8, 10];
+ var newScores = scores.map(score =&gt; score * 3);
+ console.log(newScores); // [6, 12, 18, 24, 30]
+</code></pre>
+<h3>2) Interpolando dados em uma string</h3><p>Essa &#xE9; outra cl&#xE1;ssica, que gra&#xE7;as ao ES6 j&#xE1; &#xE9; poss&#xED;vel aplicar concatena&#xE7;&#xE3;o de dados com strings de forma mais elegante, provavelmente voc&#xEA; j&#xE1; deve ter visto muito um c&#xF3;digo parecido com esse:</p>
+<pre><code class="language-javascript"> var name = &quot;John Connor&quot;;
+ var message = &quot;I came from future!&quot;;
+ var template = &quot;&lt;p&gt;&quot;;
+ template += &quot;&lt;h3&gt;&quot;+ name + &quot;&lt;/h3&gt;&quot;;
+ template += &quot;&lt;span&gt;&quot;+ message + &quot;&lt;/span&gt;&quot;;
+ template += &quot;&lt;/p&gt;&quot;;
+</code></pre>
+<p>Hoje j&#xE1; &#xE9; poss&#xED;vel trabalhar com Template Strings do ES6, permitindo interpolar dados com strings de forma mais elegante, sem precisar concatenar strings utilizando operador &quot;+&quot;, veja como fazer isso:</p>
+<pre><code class="language-javascript"> var name = &quot;John Connor&quot;;
+ var message = &quot;I came from future!&quot;;
+ var template = `
+ &lt;p&gt;
+    &lt;h3&gt;${name}&lt;/h3&gt;
+    &lt;span&gt;${message}&lt;/span&gt;
+ &lt;/p&gt;`;
+</code></pre>
+<h3>3) Calculando m&#xE9;dias</h3><p>Fazer c&#xE1;lculos de m&#xE9;dia, em muitos casos voc&#xEA; j&#xE1; deve ter visto c&#xF3;digos parecidos como esse:</p>
+<pre><code class="language-javascript"> var scores = [1, 4, 6, 8];
+ var result = 0;
+ for (var i = 0; i &lt; scores.length; i++) {
+   result += scores[i];
+ }
+ result = result / scores.length;
+ console.log(result); // 4.75
+</code></pre>
+<p>Nesse caso, voc&#xEA; pode deixar o c&#xF3;digo mais enxuto aplicando a fun&#xE7;&#xE3;o <code>reduce()</code> e no final aplicar a divis&#xE3;o do resultado obtido pelo <code>reduce()</code> com tamanho do array de scores, veja:</p>
+<pre><code class="language-javascript"> var scores = [1, 4, 6, 8];
+ var result = scores.reduce((total, score) =&gt; total + score) / scores.length;
+ console.log(result); // 4.75
+</code></pre>
+<p>Veja tamb&#xE9;m:</p>
+<ul>
+<li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+</ul>
+<p>Caso voc&#xEA; conhe&#xE7;a algum c&#xF3;digo legado com dicas sobre como escrev&#xEA;-lo melhor comente abaixo! Valeu!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Escrevendo JavaScript melhor - Parte 1",
+  "image": "https://udgwebdev.com/images/es6-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/escrevendo-javascript-melhor-parte-1",
+  "datePublished": "2016-06-02",
+  "dateCreated": "2016-06-02",
+  "description": "Esse post visa mostrar na prática como melhorar algumas gambiarras clássicas de se encontrar em qualquer projeto legado que utiliza JavaScript.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-1</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-1</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 02 Jun   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Estruturando uma aplicação Meteor 1.3]]></title><description><![CDATA[<h1>Estruturando uma aplica&#xE7;&#xE3;o Meteor 1.3</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="13/05/2016" pubdate=""><b>13/05/2016</b></time> | Tags: <a href="/menu/#meteor" rel="me" title="Menu: Meteor">Meteor</a></p><p><img src="/images/meteor-logo.jpg" alt="Estruturando uma aplica&#xE7;&#xE3;o Meteor 1.3" title="Estruturando uma aplica&#xE7;&#xE3;o Meteor 1.3"></p>
+<p>Desde a vers&#xE3;o 1.3 do Meteor muitas melhorias surgiram, uma das principais mudan&#xE7;as foi a ado&#xE7;&#xE3;o do ES6, integra&#xE7;&#xE3;o completa com NPM e uma nova estrutura de conven&#xE7;&#xF5;es de pastas para organizar sua aplica&#xE7;&#xE3;o Meteor.
+Veja nesse post como estruturar sua aplica&#xE7;&#xE3;o Meteor 1.3 utilizando suas novas conven&#xE7;&#xF5;es oficiais:</p>
+<pre><code class="language-bash"> imports/
+   startup/ # Pasta referente a c&#xF3;digos que ser&#xE3;o executados no startup do cliente e ou servidor
+     client/
+       index.js # Entry point respons&#xE1;vel por carregar c&#xF3;digos client-side da pasta imports/ui/**/*
+       routes.js # C&#xF3;digo respons&#xE1;vel por definir rotas na aplica&#xE7;&#xE3;o
+     server/
+       fixtures.js # C&#xF3;digo respons&#xE1;vel por alimentar o banco de dados em ambiente dev
+       index.js # Entry point respons&#xE1;vel por carregar c&#xF3;digos server-side da pasta imports/api/**/*
+   api/ # Pasta para regras de neg&#xF3;cio
+     lists/ # Pasta referente a um model (ou collection)
+       server/
+         publications.js # Define publications do model
+         publications.tests.js # C&#xF3;digo de testes para publications do model
+       lists.js # Defini&#xE7;&#xE3;o do model
+       lists.tests.js # C&#xF3;digo de testes para o model
+       methods.js # Methods para o model
+       methods.tests.js # C&#xF3;digo de testes para methods do model
+   ui/ # Pasta sobre layouts e componentes para o cliente
+     components/ # Pasta para componentes reus&#xE1;veis
+     layouts/ # Pasta com wrappers de componentes entre visual e comportamental
+     pages/ # Entry point para renderiza&#xE7;&#xE3;o de p&#xE1;ginas orientadas por routers
+ client/
+   main.js # Entry point client-side respons&#xE1;vel por carregar o imports/startup/client/index.js
+ server/
+   main.js # Entry point server-side respons&#xE1;vel por carregar o imports/startup/server/index.js
+</code></pre>
+<p>Essa nova estrutura ficou muito mais clara e tudo esta orientado aos comandos <strong>import</strong> e <strong>export</strong> do ES6, facilitando a organiza&#xE7;&#xE3;o clean do projeto e eliminando a m&#xE1; conven&#xE7;&#xE3;o do uso de c&#xF3;digos globais.
+Para mais detalhes, recomendo a leitura desse link: <a href="http://guide.meteor.com/structure.html" title="Meteor Application Structure">Meteor Application Structure</a>.
+At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Estruturando uma aplicação Meteor 1.3",
+  "image": "https://udgwebdev.com/images/meteor-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3",
+  "datePublished": "2016-05-13",
+  "dateCreated": "2016-05-13",
+  "description": "Veja nesse post como estruturar sua aplicação Meteor 1.3 utilizando suas novas convenções oficiais.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3</link><guid isPermaLink="true">https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 13 May   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Usando Spread operator do ES6]]></title><description><![CDATA[<h1>Usando Spread operator do ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="06/04/2016" pubdate=""><b>06/04/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Usando Spread operator do ES6" title="Usando Spread operator do ES6"></p>
+<p>Se voc&#xEA; j&#xE1; trabalha com alguns recursos do ES6, recomendo a leitura desse post que vai falar sobre Spread Operator.
+O Spread Operator basicamente converte um array em argumentos, ele &#xE9; muito &#xFA;til quando se precisar quebrar um array para passar seus valores para uma fun&#xE7;&#xE3;o ou construtor de um objeto como argumentos de valores separados.
+Para exemplificar na pr&#xE1;tica, vamos criar uma simples fun&#xE7;&#xE3;o de soma, que precisa de 2 argumentos como par&#xE2;metro de entrada em sua fun&#xE7;&#xE3;o:</p>
+<pre><code class="language-javascript"> function soma(a, b) {
+     return a + b;
+   }
+</code></pre>
+<p>At&#xE9; aqui n&#xE3;o h&#xE1; nenhum segredo nessa simples fun&#xE7;&#xE3;o que retorna a soma de dois valores. Se voc&#xEA; pretende usar essa fun&#xE7;&#xE3;o voc&#xEA; pode simplesmente fazer:</p>
+<pre><code class="language-javascript"> soma(1, 2); // retorna: 3
+</code></pre>
+<p>E se voc&#xEA; pretende usar um array? Como passar 2 valores de um array como argumento? O jeito mais &#xF3;bvio seria:</p>
+<pre><code class="language-javascript"> var arr = [1, 2];
+ soma(arr[0], arr[1]); // retorna: 3
+</code></pre>
+<p>Tem um jeito mais elegante? Tem! Voc&#xEA; pode usar <code>soma.apply(null, arr)</code> para invocar essa fun&#xE7;&#xE3;o:</p>
+<pre><code class="language-javascript"> var arr = [1, 2];
+ soma.apply(null, arr); // retorna: 3
+</code></pre>
+<p>Obs.: O primeiro par&#xE2;metro null, &#xE9; referente ao contexto <strong>this</strong> que seria usado internamente na fun&#xE7;&#xE3;o <code>soma()</code>, como n&#xE3;o &#xE9; utilizado <strong>this</strong> nessa fun&#xE7;&#xE3;o, voc&#xEA; pode deixar como <strong>null</strong> que ele utilizar&#xE1; o contexto <strong>this</strong> default da fun&#xE7;&#xE3;o.
+E o Spread operator? Aahhhh esse sim &#xE9; o melhor de todos, veja:</p>
+<pre><code class="language-javascript"> var arr = [1, 2];
+ soma(...arr); // retorna: 3
+</code></pre>
+<p>Basicamente voc&#xEA; tudo se resolve com a s&#xED;ntaxe: <strong>...array</strong> para que ele quebre o array em argumentos e dessa forma voc&#xEA; obtem uma forma mais elegante e enxuta de usar arrays como argumentos.</p>
+<h3>Melhor refer&#xEA;ncia!</h3><ul>
+<li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator">MDN - Spread operator</a></li>
+</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Usando Spread operator do ES6",
+  "image": "https://udgwebdev.com/images/es6-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/usando-spread-operator-do-es6",
+  "datePublished": "2016-04-06",
+  "dateCreated": "2016-04-06",
+  "description": "Se você já trabalha com alguns recursos do ES6, recomendo a leitura desse post que vai falar sobre Spread Operator.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/usando-spread-operator-do-es6</link><guid isPermaLink="true">https://udgwebdev.com/usando-spread-operator-do-es6</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 06 Apr   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Deploying Meteor no Heroku]]></title><description><![CDATA[<h1>Deploying Meteor no Heroku</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="14/03/2016" pubdate=""><b>14/03/2016</b></time> | Tags: <a href="/menu/#meteor" rel="me" title="Menu: Meteor">Meteor</a></p><p><img src="/images/heroku.jpg" alt="Deploying Meteor no Heroku" title="Deploying Meteor no Heroku"></p>
+<p>Recentemente, a equipe do Meteor, publicou em sua newsletter que vai descontinuar os servidores free que s&#xE3;o fornecidos atrav&#xE9;s do comando meteor deploy.
+Com isso, acabei migrando alguns dos meus pequenos projetos para o Heroku, e com isso resolvi criar esse post explicando passo-a-passo como fazer deploy para o Heroku.</p>
+<h3>Setup do Heroku</h3><p>Em primeiro lugar, crie uma conta no <a href="https://heroku.com">heroku.com</a> e em seguida instale seu CLI (veja nesse link <a href="https://toolbelt.heroku.com">toolbelt.heroku.com</a>) para liberar o comando heroku em seu terminal.</p>
+<h3>Setup da aplica&#xE7;&#xE3;o</h3><p>Agora com o ambiente heroku configurado em sua m&#xE1;quina, execute o comando:</p>
+<pre><code class="language-bash"> heroku create nome-da-aplicacao
+</code></pre>
+<p>Em seguida, instale o buildpack do Meteor para configurar os scripts de deploy necess&#xE1;rios para uma aplica&#xE7;&#xE3;o Meteor compilar e gerar uma vers&#xE3;o Node.js pronta para os servidores do Heroku, para isso, rode o comando:</p>
+<pre><code class="language-bash"> heroku buildpacks:set https://github.com/AdmitHub/meteor-buildpack-horse.git
+</code></pre>
+<p>Agora, instale o MongoLabs, que &#xE9; um servi&#xE7;o PaaS para o MongoDB, ele tem uma vers&#xE3;o free que oferece at&#xE9; <strong>500MB de persist&#xEA;ncia de dados</strong>, para isso rode o comando:</p>
+<pre><code class="language-bash"> heroku addons:create mongolab
+</code></pre>
+<p>Para finalizar a configura&#xE7;&#xE3;o do ambiente, configure a vari&#xE1;vel de ambiente ROOT_URL com o endere&#xE7;o da sua aplica&#xE7;&#xE3;o heroku:</p>
+<pre><code class="language-bash"> heroku config:set ROOT_URL=https://nome-da-aplicacao.herokuapp.com
+</code></pre>
+<p><strong>Obs.:</strong> O Heroku j&#xE1; fornece suporte gratuito ao protocolo HTTPS.</p>
+<h3>Configura&#xE7;&#xE3;o extra</h3><p>Como dica adicional, caso no futuro voc&#xEA; tenha a necessidade de incluir novos dynos, que s&#xE3;o servidores dentro do load balancer do Heroku, voc&#xEA; provavelmente sofrer&#xE1; um problema de sua aplica&#xE7;&#xE3;o Meteor n&#xE3;o garantir sess&#xE3;o correta entre usu&#xE1;rios, para resolver esse problema de <strong>sticky session</strong>, voc&#xEA; pode instalar esse plugin adicional gratuitamente:</p>
+<pre><code class="language-bash"> heroku labs:enable http-session-affinity
+</code></pre>
+<h3>Deploying</h3><p>Para realizar o primeiro deploy do seu projeto para o Heroku, basta fazer um <strong>git push</strong> no <strong>remote heroku</strong>, que foi configurado automaticamente quando voc&#xEA; criou uma aplica&#xE7;&#xE3;o pelo comando <strong>heroku create</strong>, ou seja, rode o comando:</p>
+<pre><code class="language-bash"> git push heroku master
+</code></pre>
+<p><strong>Pronto! Servidor configurado e ready for production.</strong></p>
+<h3>Refer&#xEA;ncias</h3><ul>
+<li><a href="http://justmeteor.com/blog/deploy-to-production-on-heroku">Meteor.js - Deploy to production on Heroku</a></li>
+</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Deploying Meteor no Heroku",
+  "image": "https://udgwebdev.com/images/heroku.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/deploying-meteor-no-heroku",
+  "datePublished": "2016-03-14",
+  "dateCreated": "2016-03-14",
+  "description": "Veja nesse quick post como configurar um servidor Meteor no PaaS Heroku.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/deploying-meteor-no-heroku</link><guid isPermaLink="true">https://udgwebdev.com/deploying-meteor-no-heroku</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 14 Mar   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Livro Construindo APIs Rest com Node.js]]></title><description><![CDATA[<h1>Livro Construindo APIs Rest com Node.js</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/01/2016" pubdate=""><b>22/01/2016</b></time> | Tags: <a href="/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="/images/nodejs-logo.jpg" alt="Livro: Construindo APIs Rest com Node.js" title="Livro: Construindo APIs Rest com Node.js"></p>
+<p>Fala pessoal! Meu terceiro livro acabou de ser publicado mais uma vez pela editora <a href="http://www.casadocodigo.com.br">Casa do C&#xF3;digo</a>. Dessa vez o assunto &#xE9; sobre como construir APIs Rest usando Node.js e seus principais frameworks. O livro esta com conte&#xFA;do avan&#xE7;ado e ficou sensacional.</p>
+<p><a href="http://www.casadocodigo.com.br/products/livro-apis-nodejs"><img src="/images/livro-construindo-apis-rest-com-nodejs.jpeg" alt=""></a> </p>
+<p>Sinopse: Hoje em dia, &#xE9; muito comum criar aplica&#xE7;&#xF5;es client-side para web e mobile que consomem dados de uma API (Application Programming Interface), que s&#xE3;o sistemas back-end focados apenas no processamento e envio de dados, de forma centralizada. Isso permite que sejam desenvolvidas m&#xFA;ltiplas aplica&#xE7;&#xF5;es clientes com interfaces espec&#xED;ficas para usu&#xE1;rios mobile, desktop ou web. Desde 2010, o Node.js provou ser uma excelente plataforma escal&#xE1;vel na solu&#xE7;&#xE3;o de diversos problemas, principalmente para constru&#xE7;&#xE3;o de APIs RESTful.
+Neste livro, Caio Ribeiro Pereira mostra na pr&#xE1;tica os motivos por que optar pelo Node.js, que &#xE9; uma plataforma altamente escal&#xE1;vel e de baixo n&#xED;vel. Nele, voc&#xEA; vai aprender boas pr&#xE1;ticas sobre como construir uma API utilizando c&#xF3;digo ECMAScript 2015 (aka ES6) e frameworks populares como Express, Passport, Apidoc, Mocha e muito mais.
+O projeto ser&#xE1; integrado com banco de dados relacional atrav&#xE9;s do Sequelize.js e, para finalizar, ser&#xE1; constru&#xED;da uma aplica&#xE7;&#xE3;o cliente web em formato SPA (Single Page Application) utilizando apenas o melhor do mais puro Vanilla JavaScript.</p>
+<p>Os c&#xF3;digos-fontes dos projetos usados no livro est&#xE3;o publicados neste link:</p>
+<ul>
+<li><a href="https://github.com/caio-ribeiro-pereira/ntask-api">NTask API</a></li>
+<li><a href="https://github.com/caio-ribeiro-pereira/ntask-web">NTask Web</a></li>
+</ul>
+<p>Se precisar de alguma ajuda, ou reportar algum feedback voc&#xEA; pode participar do grupo desse livro atrav&#xE9;s desse link: <a href="https://groups.google.com/forum/#!forum/apis-nodejs">Google Groups APIs Node.js</a></p>
+<p>Se curtiu o livro voc&#xEA; pode compr&#xE1;-lo atrav&#xE9;s desse link: <a href="http://www.casadocodigo.com.br/products/livro-apis-nodejs">Construindo APIs Rest com Node.js</a>, lembrando que o livro &#xE9; recomendado para desenvolvedores j&#xE1; familiarizados com Node.js, caso voc&#xEA; queira aprender do in&#xED;cio, recomendo que leia o meu primeiro livro: <a href="http://www.casadocodigo.com.br/products/livro-nodejs">Aplica&#xE7;&#xF5;es web real-time com Node.js</a>.
+At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Livro Construindo APIs Rest com Node.js",
+  "image": "https://udgwebdev.com/images/nodejs-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs",
+  "datePublished": "2016-01-22",
+  "dateCreated": "2016-01-22",
+  "description": "Meu terceiro livro acabou de ser publicado. Dessa vez o assunto é sobre como construir APIs Rest usando Node.js e seus principais frameworks. O livro esta com conteúdo avançado e ficou sensacional, veja detalhes nesse post.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs</link><guid isPermaLink="true">https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 22 Jan   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[Brincando de ES6 no Meteor]]></title><description><![CDATA[<h1>Brincando de ES6 no Meteor</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/01/2016" pubdate=""><b>05/01/2016</b></time> | Tags: <a href="/menu/#meteor" rel="me" title="Menu: Meteor">Meteor</a></p><p><img src="/images/meteor-logo.jpg" alt="Brincando de ES6 no Meteor" title="Brincando de ES6 no Meteor"></p>
+<p>De volta a ativa no blog, hoje mostrarei como utilizar alguns recursos legais do ES6 em um projeto Meteor de vers&#xE3;o 1.2 ou superior, pelo qual nessas vers&#xF5;es o ES6 j&#xE1; esta nativo para uso.</p>
+<h2>Use const ou let no lugar de var</h2><p>Agora no ES6 &#xE9; poss&#xED;vel criar constantes (<code>const</code>), que &#xE9; um tipo de vari&#xE1;vel imut&#xE1;vel, ou seja, voc&#xEA; define uma &#xFA;nica vez o valor de uma constante e nunca mais poder&#xE1; mudar seu valor, aplicar esse recurso faz seu sistema utilizar menos mem&#xF3;ria, e toda vez que precisar criar uma vari&#xE1;vel mut&#xE1;vel utilize o <code>let</code> no lugar do antigo <code>var</code>, outro detalhe importante &#xE9; que ambos <code>const</code> e <code>let</code> s&#xE3;o <strong>blocked-scoped</strong> e isso impedir&#xE1; que a vari&#xE1;vel escape de seu escopo atual, evitando problemas de <a href="http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/">scope e hoisting</a>. Veja um exemplo:</p>
+<h4>Usando var</h4><pre><code class="language-javascript"> for (var i = 1; i &lt; 3; i++) {
+   Meteor.setTimeout(function () {
+     console.log(i);
+   }, 0); // 3 3 3 - Bug estranho!
+ }
+ console.log(i); // 3 - A vari&#xE1;vel i vazou de seu escopo
+</code></pre>
+<h4>Usando let</h4><pre><code class="language-javascript"> for (let i = 1; i &lt; 3; i++) {
+   Meteor.setTimeout(function () {
+     console.log(i);
+   }, 0); // 1 2 3 - Agora o resultado veio correto!
+ }
+ console.log(i); // undefined
+</code></pre>
+<h2>Use arrow-function no lugar de var self = this</h2><p>O recurso <strong>arrow-function</strong> &#xE9; sensacional! Al&#xE9;m de encurtar o c&#xF3;digo na declara&#xE7;&#xE3;o de fun&#xE7;&#xF5;es e fun&#xE7;&#xF5;es callback substituindo a keyword <code>function() {}</code> por <code>() =&gt; {}</code>, ele permite compartilhar atrav&#xE9;s do <code>this</code> atributos e fun&#xE7;&#xF5;es entre uma fun&#xE7;&#xE3;o pai com uma fun&#xE7;&#xE3;o filha, removendo o workaround de criar uma var&#xED;avel com o estado do objeto pai (<code>var self = this;</code>). Veja o exemplo:</p>
+<h4>Sem arrow-function</h4><pre><code class="language-javascript"> Template.dashboard.onRendered(function() {
+   this.msg = &quot;Ola!&quot;;
+   var self = this;
+   Meteor.setTimeout(function() {
+     console.log(self.msg);
+   }, 1000);
+ });
+</code></pre>
+<h4>Com arrow-function</h4><pre><code class="language-javascript"> Template.dashboard.onRendered(() =&gt; {
+   this.msg = &quot;Ola!&quot;;
+   Meteor.setTimeout(() =&gt; {
+     console.log(this.msg);
+   }, 1000);
+ });
+</code></pre>
+<p><strong>Obs.:</strong> Aten&#xE7;&#xE3;o na vers&#xE3;o Meteor 1.2 existe um bug que n&#xE3;o permite usar <strong>arrow-function</strong> dentro da fun&#xE7;&#xE3;o <code>Meteor.publish()</code>, fazendo com que <code>this.userId</code> retorne <code>undefined</code>.</p>
+<h2>Template Strings</h2><p>Template strings &#xE9; um outro recurso bem legal, que ao inv&#xE9;s de concatenar strings com vari&#xE1;veis, voc&#xEA; simplesmente interpola as vari&#xE1;veis dentro da string, deixando-as mais elegante e leg&#xED;vel. Para us&#xE1;-lo, basta declarar uma string entre crases <code>(</code>String<code>)</code> e a interpola&#xE7;&#xE3;o das vari&#xE1;veis &#xE9; feita atrav&#xE9;s da <code>${variavel}</code>, veja um exemplo:</p>
+<h4>Concatenando string</h4><pre><code class="language-javascript"> var ano = 2016;
+ console.log(&quot;Feliz &quot; + ano + &quot;!&quot;);
+</code></pre>
+<h4>Interpolando string</h4><pre><code class="language-javascript"> var ano = 2016;
+ console.log(`Feliz ${ano}!`);
+</code></pre>
+<h2>Object Method</h2><p>Object methods &#xE9; apenas um <strong>syntax sugar</strong>, um encurtador de declara&#xE7;&#xE3;o de fun&#xE7;&#xF5;es bem &#xFA;til e facil de aplicar, veja:</p>
+<h4>Sem object method</h4><pre><code class="language-javascript"> Template.body.helpers({
+   users: function() {
+     return Meteor.users.find({});
+   }
+ });
+</code></pre>
+<h4>Com object method</h4><pre><code class="language-javascript"> Template.body.helpers({
+   users() {
+     return Meteor.users.find({});
+   }
+ });
+</code></pre>
+<h2>Criando Classes</h2><p>Agora no ES6 voc&#xEA; pode criar classes, deixando seu projeto mais orientado &#xE0; objetos, no Meteor &#xE9; poss&#xED;vel fazer isso tamb&#xE9;m, por&#xE9;m a maneira como voc&#xEA; exporta uma classe no Meteor, ficou um pouco estranha devido ao seu contexto, veja:</p>
+<pre><code class="language-javascript"> Cliente = class Cliente {
+   constructor(nome) {
+     this.nome = nome;
+   }
+ }
+</code></pre>
+<p><strong>Obs.:</strong> Se voc&#xEA; deixar apenas <code>class Cliente</code> ela n&#xE3;o ser&#xE1; global, impossibilitando seu uso em outros pontos da aplica&#xE7;&#xE3;o, como solu&#xE7;&#xE3;o workaround voc&#xEA; ter&#xE1; que declarar estranhamente <code>Cliente = class Cliente</code> para que seja criado uma vari&#xE1;vel global dessa classe.</p>
+<p>Por enquanto &#xE9; isso pessoal, feliz ano novo, at&#xE9; a pr&#xF3;xima!</p>
+<h4>Boas refer&#xEA;cias:</h4><ul>
+<li><a href="http://info.meteor.com/blog/es2015-get-started">Get started with ES2015 (ES6) and Meteor</a></li>
+<li><a href="https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa">Real-World ES6 Examples in Meteor</a></li>
+</ul><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Brincando de ES6 no Meteor",
+  "image": "https://udgwebdev.com/images/meteor-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/brincando-de-es6-no-meteor",
+  "datePublished": "2016-01-05",
+  "dateCreated": "2016-01-05",
+  "description": "Neste post mostrarei como utilizar alguns recursos legais do ES6 (aka ES2015) em um projeto Meteor de versão 1.2 ou superior, pelo qual nessas versões essa implementação já se encontra nativo no Meteor.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script>]]></description><link>https://udgwebdev.com/brincando-de-es6-no-meteor</link><guid isPermaLink="true">https://udgwebdev.com/brincando-de-es6-no-meteor</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 05 Jan   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[Talk Meteor for noobs no DevInSantos]]></title><description><![CDATA[Uma talk bacana que apresenta uma introdução sobre o que é e o poder do framework Meteor.js.]]></description><link>https://udgwebdev.com/talk-meteor-for-noobs-no-devinsantos</link><guid isPermaLink="true">https://udgwebdev.com/talk-meteor-for-noobs-no-devinsantos</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 22 Dec   15 02:00:00 GMT</pubDate></item></channel></rss>

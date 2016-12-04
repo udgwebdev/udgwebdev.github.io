@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Design Patterns para Javascript - Parte 1 | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Design Patterns para Javascript - Parte 1"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="Design Pattern para Javascript, neste post será explicado alguns dos importantes padrões Creational, Constructors e os Singleton."/><meta property="og:title" content="Design Patterns para Javascript - Parte 1"/><meta property="og:description" content="Design Pattern para Javascript, neste post será explicado alguns dos importantes padrões Creational, Constructors e os Singleton."/><meta property="og:url" content="https://udgwebdev.com/design-patterns-para-javascript-parte-1"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/design-patterns-para-javascript-parte-1"/><meta name="twitter:title" content="Design Patterns para Javascript - Parte 1"/><meta name="twitter:description" content="Design Pattern para Javascript, neste post será explicado alguns dos importantes padrões Creational, Constructors e os Singleton."/><meta name="twitter:image" content="https://udgwebdev.com/images/udgwebdev-logo.png"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/design-patterns-para-javascript-parte-1"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="design-patterns-para-javascript-parte-1" class="col-xs-12 col-sm-9 post"><h1>Design Patterns para Javascript - Parte 1</h1><p class="text-muted">Publicação: <time datetime="01/12/2011" pubdate><b>01/12/2011</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/javascript-logo.jpg" alt="Javascript Desing Pattenrs" title="Javascript Desing Pattenrs"></p>
+<p>Começarei a partir de hoje uma série de posts relacionado a Design Pattern (Padrões de Projeto) para Javascript.</p>
+<p>E para começar hoje irei abordar alguns, que especificamente serão os padrões: <strong>Creational, Constructors e os Singleton.</strong></p>
+<h2>Pattern Creational</h2><p>Este é o padrão inicial, base responsável por permitir a construção de outros padrões e objetos. O seu conceito é o mais simples dos demais, ele permite instanciar um objeto ou uma coleção de objetos na aplicação. Abaixo, segue um exemplo que demonstra a maneira tradicional de implementar este padrão:</p>
+<pre><code class="language-javascript"> // Instanciando um objeto.
+ var objeto = new Objeto();
+ // Instanciando uma coleção e adicionando um objeto a ela.
+ var colecaoObjetos = {};
+ colecaoObjetos[0] = objeto;
+</code></pre>
+<h2>Pattern Constructor</h2><h6>Constructor Básico</h6><p>Em Javascript, um constructor é uma função responsável por implementar um objeto com atributos. Porém esses objetos não são considerados como classes igual o <strong>Java, C#</strong> e outras linguagens <strong>orientadas à objetos</strong> consideram. Apenas são construtores especiais para uma função, pois Javascript é uma linguagem <strong>orientada à protótipos</strong>. A palavra-chave <strong>new</strong> permite instanciar um objeto passando por parâmetros atributos para eles.</p>
+<p>E esses construtores armazenam em seus objetos atributos e funções que são referenciadas através da palavra-chave <strong>this</strong>. Veja um exemplo básico de um constructor e como instanciar um objeto apartir dele:</p>
+<pre><code class="language-javascript"> // Constructor do objeto Cliente.
+ function Cliente(nome, idade) {
+   this.nome = nome;
+   this.idade = idadeidade;
+   // Função toString
+   this.toString = function() {
+     return &#39;Cliente: &#39;+this.nome+&#39;, idade: &#39;+this.idade+&#39; ano(s)&#39;;
+   };
+ };
+ // Instanciando objeto Cliente.
+ var cliente = new Cliente(&#39;João&#39;, 33);
+ var cliente = new Cliente(&#39;Maria&#39;, 29);
+ // toString&#39; é carregado a cada nova instância de um Cliente.
+ console.log(cliente.toString());
+</code></pre>
+<p>Esta foi uma simples versão do padrão constructor, porém ele possui alguns problemas: Há problemas em implementá-la utilizando herança e neste exemplo a função <strong>toString()</strong> será criada sempre que um novo objeto for criado, sendo uma má prática quando há necessidade de implementar funções compartilhadas pelas distintas instâncias de um mesmo objeto.</p>
+<h6>Constructor Protótipo</h6><p>Uma boa prática no Javascript para contructors é a implementação conhecida como <strong>Prototype</strong>. Essa prática permite criar funções compartilhadas pelos objetos do mesmo tipo, ou seja, a cada nova instância de um objeto Cliente, somente será instanciado suas respectivas funções apenas uma vez, sendo reutilizada por todos os objetos do mesmo constructor. O exemplo abaixo simplifica esse conceito:</p>
+<pre><code class="language-javascript"> // Constructor do objeto Cliente.
+ function Cliente(nome, idade) {
+   this.nome = nome;
+   this.idade = idade;
+ };
+ // Implementando função prototype.
+ Cliente.prototype.toString = function() {
+   return &#39;Cliente: &#39;+ this.nome +&#39;, idade: &#39;+ this.idade +&#39; ano(s)&#39;;
+ };
+ // Instanciando dois Cliente.
+ var cliente1 = new Cliente(&#39;João&#39;, 33);
+ var cliente2 = new Cliente(&#39;Maria&#39;, 29);
+ // toString() será carregada uma vez e compartilhada pelos objetos.
+ console.log(cliente1.toString());
+ console.log(cliente2.toString());
+</code></pre>
+<h2>Pattern Singleton</h2><p>Este padrão é implementado para criar uma única instância de objeto, pelo qual será reaproveitado por toda a aplicação. Por que na prática esta função irá retornar uma instância já existente do objeto. Resumindo o <strong>Singleton</strong> restringe o número de criações de um objeto para apenas uma única instância.</p>
+<p>Existem diversas formas de implementar este padrão, abaixo apresentarei alguns exemplos de como implementá-lo:</p>
+<pre><code class="language-javascript"> // Implementando um singleton simples.
+ var clienteSingleton = {
+   nome: &quot;Joao&quot;,
+   email: &quot;joao@mail.com&quot;,
+   getMessage: function() {
+     console.log(&#39;Nome: &#39;+ this.nome +&#39; Email: &#39;+ this.email);
+   }
+ };
+</code></pre>
+<p>Se desejar extender esse objeto, você pode adicionar atributos e métodos privados para este <strong>Singleton:</strong></p>
+<pre><code class="language-javascript"> // Implementando um singleton com atributos privados.
+ var clienteSingleton = function() {
+   // Área privada de atributos e funções.
+   var atributoPrivado = &#39;Variavel privada&#39;;
+   function mostrarVariavel() {
+     console.log(atributoPrivado);
+   }
+   // Área pública de atributos e funções.
+   // Esta área pode ser acessada pela área privada.
+   return {
+     funcaoPublica: function() {
+       mostrarVariavel();
+     },
+     atributoPublico: &#39;Variável Pública&#39;
+   };
+ };
+ // Executando o Singleton.
+ var cliente = clienteSingleton();
+ // imprimindo &#39;Variavel privada&#39;
+ cliente.funcaoPublica();
+ // imprimindo &#39;Variável Pública&#39;
+ console.log(cliente.atributoPublico);
+</code></pre>
+<p>Na prática a maior utilidade em aplicar um Singleton é quando se há a necessidade de utilizar uma única instância de objeto sendo reaproveitada por todo o percuso do sistema, abaixo existe mais um exemplo desse pattern...</p>
+<pre><code class="language-javascript"> var Singleton = (function() {
+   //args: um objeto contedo argumentos para um Singleton
+   function Singleton(args) {
+     //define o valor vindo de args em parâmetro ou cria um objeto vazio.
+     var args = args || {};
+     this.name = &#39;SingletonTester&#39;;
+     this.pointX = args.pointX || 6;
+     this.pointY = args.pointY || 10;
+   }
+   //variável de controle de instâncias do Singleton.
+   var instance;
+   var _static = {
+     name: &#39;SingletonTester&#39;,
+     //Retorna uma instância de um Singleton através de um objeto singleton da variável args.
+     getInstance: function (args) {
+        if (instance === undefined) {
+          instance = new Singleton(args);
+        }
+        return instance;
+     }
+   };
+   return _static;
+ })();
+ //Instanciando um singleton.
+ var singletonTest = Singleton.getInstance({pointX: 5});
+ // imprime 5
+ console.log(singletonTest.pointX);
+</code></pre>
+<p>Por enquanto é isso pessoal! Nos próximos posts publicarei novos patterns para javascript.</p>
+<p>Fonte: <a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/" title="Essetial Design Patterns - Addy Osmani">Essential Design Patterns - Addy Osmani</a></p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Design Patterns para Javascript - Parte 1",
+  "image": "https://udgwebdev.com/images/udgwebdev-logo.png",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/design-patterns-para-javascript-parte-1",
+  "datePublished": "2011-12-01",
+  "dateCreated": "2011-12-01",
+  "description": "Design Pattern para Javascript, neste post será explicado alguns dos importantes padrões Creational, Constructors e os Singleton.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>

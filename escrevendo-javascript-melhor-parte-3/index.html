@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en" manifest="/manifest.appcache" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/><meta charset="utf-8"/><title>Escrevendo JavaScript melhor - Parte 3 | Underground WebDev</title><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#BA2D27"/><meta name="apple-mobile-web-app-title" content="UDGWebDev"/><meta name="msapplication-TileImage" content="https://udgwebdev.com/images/undefined-128.png"/><meta name="msapplication-TileColor" content="#BA2D27"/><meta name="msapplication-tap-highlight" content="no"/><meta name="mobile-web-app-capable" content="yes"/><meta name="application-name" content="UDGWebDev"/><meta name="theme-color" content="#BA2D27"/><meta name="title" content="Escrevendo JavaScript melhor - Parte 3"/><meta name="author" content="Caio Ribeiro Pereira"/><meta name="description" content="E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais."/><meta property="og:title" content="Escrevendo JavaScript melhor - Parte 3"/><meta property="og:description" content="E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais."/><meta property="og:url" content="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3"/><meta property="og:site_name" content="Underground WebDev"/><meta property="og:image" content="https://udgwebdev.com/images/es6-logo.jpg"/><meta property="og:type" content="website"/><meta property="article:author" content="https://plus.google.com/+CaioRibeiroPereira"/><meta property="article:section" content="main"/><meta name="twitter:creator" content="@crp_underground"/><meta name="twitter:card" content="summary"/><meta name="twitter:url" content="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3"/><meta name="twitter:title" content="Escrevendo JavaScript melhor - Parte 3"/><meta name="twitter:description" content="E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais."/><meta name="twitter:image" content="https://udgwebdev.com/images/es6-logo.jpg"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/assets/css/main.css" type="text/css"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/><link rel="canonical" href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3"/></head><body><nav role="navigation" class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand"><img src="/images/udgwebdev-logo.png" alt="Underground WebDev" width="48" class="navbar-logo"/></a></div><div class="navbar-right navbar-collapse collapse"><ul class="nav navbar-nav"><li><a href="/nodejs"><i class="fa fa-code"></i>&nbsp;Node.js</a></li><li><a href="/meteor"><i class="fa fa-code"></i>&nbsp;Meteor</a></li><li><a href="/dicas-de-terminal"><i class="fa fa-terminal"></i>&nbsp;Terminal</a></li></ul></div></div></nav><nav role="navigation" class="c-circle-menu js-menu"><button class="c-circle-menu__toggle js-menu-toggle"><span>Toggle</span></button><ul class="c-circle-menu__items"><li class="c-circle-menu__item"><a href="http://feeds.feedburner.com/UndergroundWebDev" target="_blank" rel="nofollow" title="Feed" class="c-circle-menu__link"><i class="icon fa fa-rss"></i></a></li><li class="c-circle-menu__item"><a href="https://github.com/caio-ribeiro-pereira" target="_blank" rel="nofollow" title="Github" class="c-circle-menu__link"><i class="icon fa fa-github"></i></a></li><li class="c-circle-menu__item"><a href="https://www.facebook.com/udgwebdev" target="_blank" rel="nofollow" title="Fanpage" class="c-circle-menu__link"><i class="icon fa fa-facebook-square"></i></a></li><li class="c-circle-menu__item"><a href="http://twitter.com/crp_underground" target="_blank" rel="nofollow" title="Twitter" class="c-circle-menu__link"><i class="icon fa fa-twitter-square"></i></a></li><li class="c-circle-menu__item"><a href="https://www.linkedin.com/in/caioribeiropereira" target="_blank" rel="nofollow" title="LinkedIn" class="c-circle-menu__link"><i class="icon fa fa-linkedin-square"></i></a></li></ul><div class="c-circle-menu__mask js-menu-mask"></div></nav><main role="main" class="container vertical-centralization"><div class="row"><article id="escrevendo-javascript-melhor-parte-3" class="col-xs-12 col-sm-9 post"><h1>Escrevendo JavaScript melhor - Parte 3</h1><p class="text-muted">Publicação: <time datetime="29/07/2016" pubdate><b>29/07/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais.</p>
+<h2>1) Verificando se um item existe em um array</h2><p>Para verificar se um determinado item existe em um array, praticamente muita gente já deve ter feito algo parecido com isso:</p>
+<pre><code class="language-javascript"> var itens = [1,2,3,4,6];
+ var item = 4;
+ var existe = false;
+ for (var i = 0; i &lt; itens.length; i++) {
+    if (itens[i] === item) {
+        existe = true;
+        break;
+    }
+ }
+</code></pre>
+<p>Com certeza você já deve ter feito ou visto isso, seja em projetos grandes ou mini-projetos de lição de casa na faculdade!</p>
+<p>É muito comum uma implementação desse tipo para verificar se um determinado item existe em um array, porém caso não conheça, no ES6 existe uma função muito enxuta para fazer esse tipo de checagem, se chama <code>includes()</code>, veja como usá-la:</p>
+<pre><code class="language-javascript"> var itens = [1,2,3,4,6];
+ var item = 6;
+ itens.includes(6); // Retorna true
+</code></pre>
+<h2>2) Simplificando comparações nulas</h2><p>O JavaScript é uma linguagem em que quando queremos verificar se tal variável não possui um valor, elas geralmente podem ter valores do tipo: <code>null</code>, <code>undefined</code>, <code>&quot;&quot;</code> ou <code>false</code>.</p>
+<p>Nesses casos é muito comum projetos verificarem esses valores da seguinte maneira:</p>
+<pre><code class="language-javascript"> if (foo !== null &amp;&amp; foo !== undefined &amp;&amp; foo !== &quot;&quot;) {
+    fazerAlgo();
+ }
+</code></pre>
+<p>Por favor, parem de escrever desse jeito! O código fica muiiiiitoooo feio!!!
+Caso não saiba, existe um simples shortcut lógico para verificar esses a existência desses valores no JavaScript, basta utilizar o operador lógico de negação ou dupla negação:</p>
+<pre><code class="language-javascript"> if (!!foo) {
+    fazerAlgo();
+ }
+</code></pre>
+<p>Neste caso, se <code>foo</code> possuir um valor diferente de: <code>null</code>, <code>undefined</code>, <code>false</code>, <code>0</code> ou <code>&quot;&quot;</code> então ele possui um valor válido, suficiente para retornar true nessa condicional.
+Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" title="15 JavaScript Hacks">15 JavaScript Hacks</a></p>
+<h2>3) Aplicando substring corretamente</h2><p>Em primeiro lugar, acredito que muita gente aplica substring corretamente, porém você sabe as diferenças entre as funções: <code>substring()</code> e <code>substr()</code>?</p>
+<p>Basicamente ambas funções utilizam a mesma entrada de argumentos, o primeiro argumento é o indíce de ponto de partida, porém a diferença esta na semântica do segundo argumento de ambas funções, veja.</p>
+<pre><code class="language-javascript"> &quot;JavaScript&quot;.substr(4, 6); // &quot;Script&quot;
+ &quot;JavaScript&quot;.substring(4, 6); // &quot;Sc&quot;
+</code></pre>
+<p>Em <code>substr(index, qtd)</code> o segundo parâmetro retorna a quantidade de caracteres a partir do index</p>
+<p>Em <code>substring(start, end)</code> o segundo parâmetro retorna a posição final da string, ou seja, essa função retorna a substring com base na posição inicial até final</p>
+<p>.</p>
+<p>Veja também:</p>
+<ul>
+<li><a href="/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+</ul>
+<p>Até a próxima galera!</p><div id="disqus_thread"></div><script async="async" defer="defer">(function() {
+  var disqus_shortname = 'udgwebdev';
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Escrevendo JavaScript melhor - Parte 3",
+  "image": "https://udgwebdev.com/images/es6-logo.jpg",
+  "publisher": "Underground WebDev",
+  "url": "https://udgwebdev.com/escrevendo-javascript-melhor-parte-3",
+  "datePublished": "2016-07-29",
+  "dateCreated": "2016-07-29",
+  "description": "E mais uma vez, continuando essa série de posts sobre dicas para escrever código JavaScript melhor, nesse post vejam mais quatro dicas bem legais.",
+  "author": {
+    "@type": "Person",
+    "name": "Caio Ribeiro Pereira"
+  }
+}</script></article></div></main><footer class="footer text-center"><p><small><i class="fa fa-trophy"></i>&nbsp;Powered by <a href="https://pages.github.com" rel="nofollow" target="_blank" title="Github Pages">Github Pages</a>, <a href="http://gruntjs.com" rel="nofollow" target="_blank" title="Grunt">Grunt</a> and <a href="http://harpjs.com" rel="nofollow" target="_blank" title="Harp.js">Harp.js</a>.</small><br/><small>Autor: <a href="https://crpwebdev.github.io" rel="me" target="_blank" title="Caio Ribeiro Pereira">Caio Ribeiro Pereira</a>.</small></p></footer><script src="/assets/js/circlemenu.min.js"></script><script src="/assets/js/main.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-25728091-2', 'auto');
+ga('send', 'pageview');</script></body></html>
