@@ -9,7 +9,8 @@ html(lang="en" manifest="#{manifest_url}" xmlns="http://www.w3.org/1999/xhtml" x
       .row
         if type === 'post' || type === 'page'
           != partial("_shared/article")
-          != partial("_shared/side_menu")
+          != partial("_shared/side_menu_left")
+          != partial("_shared/side_menu_right")
         else
           != yield
     != partial("_shared/footer")
