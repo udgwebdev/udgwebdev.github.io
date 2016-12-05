@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# rev 1 - 2016-12-04T20:22:41.324Z
+# rev 1 - 2016-12-05T14:36:07.507Z
 
 CACHE:
 15-javascript-hacks/index.html
@@ -290,6 +290,7 @@ nodejs-processamento-em-paralelo/index.html
 nodejs/index.html
 npm-node-package-manager/index.html
 nvm-node-version-manager/index.html
+o-blog-esta-de-cara-nova/index.html
 o-que-devemos-esperar-de-uma-faculdade-de-ti/index.html
 onde-hospedar-aplicacoes-node-js/index.html
 organizando-um-projeto-meteor/index.html
