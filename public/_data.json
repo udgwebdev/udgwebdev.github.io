@@ -1,4 +1,15 @@
 {
+  "o-blog-esta-de-cara-nova": {
+    "title": "O blog esta de cara nova!",
+    "published": true,
+    "tags": [
+      "Comunicado"
+    ],
+    "description": "O blog esta de cara nova! Com novo layout, micro interactions, novo build usando grunt, novo static generator usando harp.js e muito mais, veja em detalhes nesse post.",
+    "slug": "o-blog-esta-de-cara-nova",
+    "created_at": "05/12/2016",
+    "type": "post"
+  },
   "acelerando-comando-dd-no-macos": {
     "title": "Acelerando comando dd no MacOS",
     "published": true,

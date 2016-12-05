@@ -14,6 +14,20 @@
     "root_url": {
       "development": "http://localhost:3000/",
       "production": "https://udgwebdev.com/"
-    }
+    },
+    "bonus_data": [
+      {
+        "title": "Ganhe 500MB no Dropbox",
+        "description": "Cadastre-se no Dropbox usando este link e ganhe 500MB extra na sua conta.",
+        "icon": "fa-dropbox",
+        "url": "https://www.dropbox.com/referrals/AACvNp7tQFPbtLr3kbKTYg30m8DdacNXj4g?src=global9"
+      },
+      {
+        "title": "Ganhe 25$ no Payoneer",
+        "description": "Cadastre-se no Payoneer usando este link e ganhe 25$ após efetuar uma transação de 100$ ou superior na plataforma.",
+        "icon": "fa-money",
+        "url": "https://share.payoneer.com/nav/93TW1Pv35NgZNvqPxvjr9l4A1MCLYpkkSV-Eiv1HhB0kN3V0GO2liT1E9Of4O5Uv0ufiAhVOlJog_pFpqqROWg2"
+      }
+    ]
   }
 }

@@ -47,6 +47,9 @@ module.exports = (grunt) => {
       },
       posts: {
         command: 'node posts.js'
+      },
+      clear: {
+        command: 'node clear_posts.js'
       }
     },
     // Sitemap =======================================
@@ -124,5 +127,5 @@ module.exports = (grunt) => {
   grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin', 'shell:posts']);
   grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin', 'shell:posts']);
   grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'compress', 'sitemaps', 'shell:feed']);
-  grunt.registerTask('deploy:prod', ['gh-pages', 'clean']);
+  grunt.registerTask('deploy:prod', ['gh-pages', 'clean', 'shell:clear']);
 };
