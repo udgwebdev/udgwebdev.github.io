@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# rev 1 - 2016-12-05T14:36:07.507Z
+# rev 1 - 2016-12-05T21:46:53.985Z
 
 CACHE:
 15-javascript-hacks/index.html
@@ -38,6 +38,7 @@ assets/fonts/ubuntu-latin-ext.woff2
 assets/fonts/ubuntu-latin.woff2
 assets/js/circlemenu.min.js
 assets/js/main.js
+assets/js/tooltip.min.js
 baixando-sites-com-comando-wget/index.html
 brincando-com-estruturas-imutaveis-usando-immutablejs/index.html
 brincando-com-leveldb/index.html
