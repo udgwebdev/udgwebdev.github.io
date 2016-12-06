@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Dec 2016 13:13:08 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 06 Dec 2016 13:13:08 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate=""><b>05/12/2016</b></time> | Tags: <a href="/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Dec 2016 19:12:07 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 06 Dec 2016 19:12:07 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Como obter conta bancária estrangeira sem sair do Brasil]]></title><description><![CDATA[Sim, este post vai te explicar de um jeito simples sobre como criar uma conta bancária simples, para receber grana do exterior, sem precisar sair do Brasil e sem precisar ir numa casa de câmbio.]]></description><link>https://udgwebdev.com/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</link><guid isPermaLink="true">https://udgwebdev.com/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</guid><category><![CDATA[Profissão]]></category><category><![CDATA[Money]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 06 Dec   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate=""><b>05/12/2016</b></time> | Tags: <a href="/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
 <p>Fala galera! Depois de duas semanas trabalhando nos tempos livres, finalmente lancei uma nova cara pro blog!<br>Dessa vez o blog conta com os seguintes improvements:  </p>
 <ul>
 <li><p><strong>Migra&#xE7;&#xE3;o do static generator Jekyll para Harp.js</strong>: Gostei muito da simplicidade do <a href="http://harpjs.com/">Harp.js</a>, ele possui uma documenta&#xE7;&#xE3;o bem clara, boas conven&#xE7;&#xF5;es para organizar dados e metadados das p&#xE1;ginas, e o que mais acho dahora nele, &#xE9; que ele j&#xE1; internamente com compila&#xE7;&#xE3;o para Markdown, EJS ou Jade para HTML, Stylus, Sass ou Less para CSS e tamb&#xE9;m CoffeeScript para JS, no caso deste blog, estou usando Jade para p&#xE1;ginas din&#xE2;micas, Markdown para conte&#xFA;do dos posts e Sass para organizar todo CSS. Ele possui uma engine totalmente diferente do Jekyll, e por isso tive um certo trabalho criando scripts para migrar todos os posts. Caso voc&#xEA; queira migrar de Jekyll para uma engine mais pr&#xF3;xima dele existente no Node.js, recomendo que utilize o <a href="https://hexo.io/">Hexo</a>.</p>
@@ -1009,90 +1009,4 @@ At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_con
     "@type": "Person",
     "name": "Caio Ribeiro Pereira"
   }
-}</script>]]></description><link>https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs</link><guid isPermaLink="true">https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 22 Jan   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[Brincando de ES6 no Meteor]]></title><description><![CDATA[<h1>Brincando de ES6 no Meteor</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/01/2016" pubdate=""><b>05/01/2016</b></time> | Tags: <a href="/menu/#meteor" rel="me" title="Menu: Meteor">Meteor</a></p><p><img src="/images/meteor-logo.jpg" alt="Brincando de ES6 no Meteor" title="Brincando de ES6 no Meteor"></p>
-<p>De volta a ativa no blog, hoje mostrarei como utilizar alguns recursos legais do ES6 em um projeto Meteor de vers&#xE3;o 1.2 ou superior, pelo qual nessas vers&#xF5;es o ES6 j&#xE1; esta nativo para uso.</p>
-<h2>Use const ou let no lugar de var</h2><p>Agora no ES6 &#xE9; poss&#xED;vel criar constantes (<code>const</code>), que &#xE9; um tipo de vari&#xE1;vel imut&#xE1;vel, ou seja, voc&#xEA; define uma &#xFA;nica vez o valor de uma constante e nunca mais poder&#xE1; mudar seu valor, aplicar esse recurso faz seu sistema utilizar menos mem&#xF3;ria, e toda vez que precisar criar uma vari&#xE1;vel mut&#xE1;vel utilize o <code>let</code> no lugar do antigo <code>var</code>, outro detalhe importante &#xE9; que ambos <code>const</code> e <code>let</code> s&#xE3;o <strong>blocked-scoped</strong> e isso impedir&#xE1; que a vari&#xE1;vel escape de seu escopo atual, evitando problemas de <a href="http://www.sitepoint.com/demystifying-javascript-variable-scope-hoisting/">scope e hoisting</a>. Veja um exemplo:</p>
-<h4>Usando var</h4><pre><code class="language-javascript"> for (var i = 1; i &lt; 3; i++) {
-   Meteor.setTimeout(function () {
-     console.log(i);
-   }, 0); // 3 3 3 - Bug estranho!
- }
- console.log(i); // 3 - A vari&#xE1;vel i vazou de seu escopo
-</code></pre>
-<h4>Usando let</h4><pre><code class="language-javascript"> for (let i = 1; i &lt; 3; i++) {
-   Meteor.setTimeout(function () {
-     console.log(i);
-   }, 0); // 1 2 3 - Agora o resultado veio correto!
- }
- console.log(i); // undefined
-</code></pre>
-<h2>Use arrow-function no lugar de var self = this</h2><p>O recurso <strong>arrow-function</strong> &#xE9; sensacional! Al&#xE9;m de encurtar o c&#xF3;digo na declara&#xE7;&#xE3;o de fun&#xE7;&#xF5;es e fun&#xE7;&#xF5;es callback substituindo a keyword <code>function() {}</code> por <code>() =&gt; {}</code>, ele permite compartilhar atrav&#xE9;s do <code>this</code> atributos e fun&#xE7;&#xF5;es entre uma fun&#xE7;&#xE3;o pai com uma fun&#xE7;&#xE3;o filha, removendo o workaround de criar uma var&#xED;avel com o estado do objeto pai (<code>var self = this;</code>). Veja o exemplo:</p>
-<h4>Sem arrow-function</h4><pre><code class="language-javascript"> Template.dashboard.onRendered(function() {
-   this.msg = &quot;Ola!&quot;;
-   var self = this;
-   Meteor.setTimeout(function() {
-     console.log(self.msg);
-   }, 1000);
- });
-</code></pre>
-<h4>Com arrow-function</h4><pre><code class="language-javascript"> Template.dashboard.onRendered(() =&gt; {
-   this.msg = &quot;Ola!&quot;;
-   Meteor.setTimeout(() =&gt; {
-     console.log(this.msg);
-   }, 1000);
- });
-</code></pre>
-<p><strong>Obs.:</strong> Aten&#xE7;&#xE3;o na vers&#xE3;o Meteor 1.2 existe um bug que n&#xE3;o permite usar <strong>arrow-function</strong> dentro da fun&#xE7;&#xE3;o <code>Meteor.publish()</code>, fazendo com que <code>this.userId</code> retorne <code>undefined</code>.</p>
-<h2>Template Strings</h2><p>Template strings &#xE9; um outro recurso bem legal, que ao inv&#xE9;s de concatenar strings com vari&#xE1;veis, voc&#xEA; simplesmente interpola as vari&#xE1;veis dentro da string, deixando-as mais elegante e leg&#xED;vel. Para us&#xE1;-lo, basta declarar uma string entre crases <code>(</code>String<code>)</code> e a interpola&#xE7;&#xE3;o das vari&#xE1;veis &#xE9; feita atrav&#xE9;s da <code>${variavel}</code>, veja um exemplo:</p>
-<h4>Concatenando string</h4><pre><code class="language-javascript"> var ano = 2016;
- console.log(&quot;Feliz &quot; + ano + &quot;!&quot;);
-</code></pre>
-<h4>Interpolando string</h4><pre><code class="language-javascript"> var ano = 2016;
- console.log(`Feliz ${ano}!`);
-</code></pre>
-<h2>Object Method</h2><p>Object methods &#xE9; apenas um <strong>syntax sugar</strong>, um encurtador de declara&#xE7;&#xE3;o de fun&#xE7;&#xF5;es bem &#xFA;til e facil de aplicar, veja:</p>
-<h4>Sem object method</h4><pre><code class="language-javascript"> Template.body.helpers({
-   users: function() {
-     return Meteor.users.find({});
-   }
- });
-</code></pre>
-<h4>Com object method</h4><pre><code class="language-javascript"> Template.body.helpers({
-   users() {
-     return Meteor.users.find({});
-   }
- });
-</code></pre>
-<h2>Criando Classes</h2><p>Agora no ES6 voc&#xEA; pode criar classes, deixando seu projeto mais orientado &#xE0; objetos, no Meteor &#xE9; poss&#xED;vel fazer isso tamb&#xE9;m, por&#xE9;m a maneira como voc&#xEA; exporta uma classe no Meteor, ficou um pouco estranha devido ao seu contexto, veja:</p>
-<pre><code class="language-javascript"> Cliente = class Cliente {
-   constructor(nome) {
-     this.nome = nome;
-   }
- }
-</code></pre>
-<p><strong>Obs.:</strong> Se voc&#xEA; deixar apenas <code>class Cliente</code> ela n&#xE3;o ser&#xE1; global, impossibilitando seu uso em outros pontos da aplica&#xE7;&#xE3;o, como solu&#xE7;&#xE3;o workaround voc&#xEA; ter&#xE1; que declarar estranhamente <code>Cliente = class Cliente</code> para que seja criado uma vari&#xE1;vel global dessa classe.</p>
-<p>Por enquanto &#xE9; isso pessoal, feliz ano novo, at&#xE9; a pr&#xF3;xima!</p>
-<h4>Boas refer&#xEA;cias:</h4><ul>
-<li><a href="http://info.meteor.com/blog/es2015-get-started">Get started with ES2015 (ES6) and Meteor</a></li>
-<li><a href="https://medium.com/@dferber90/real-world-es6-examples-in-meteor-a834c6073daa">Real-World ES6 Examples in Meteor</a></li>
-</ul><div id="disqus_thread"></div><script>var disqus_config = function () {
-  this.page.url = 'https://udgwebdev.com/brincando-de-es6-no-meteor';
-  this.page.identifier = 'brincando-de-es6-no-meteor';
-};
-(function() {
-  var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><script type="application/ld+json">{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Brincando de ES6 no Meteor",
-  "image": "https://udgwebdev.com/images/meteor-logo.jpg",
-  "publisher": "Underground WebDev",
-  "url": "https://udgwebdev.com/brincando-de-es6-no-meteor",
-  "datePublished": "2016-01-05",
-  "dateCreated": "2016-01-05",
-  "description": "Neste post mostrarei como utilizar alguns recursos legais do ES6 (aka ES2015) em um projeto Meteor de versão 1.2 ou superior, pelo qual nessas versões essa implementação já se encontra nativo no Meteor.",
-  "author": {
-    "@type": "Person",
-    "name": "Caio Ribeiro Pereira"
-  }
-}</script>]]></description><link>https://udgwebdev.com/brincando-de-es6-no-meteor</link><guid isPermaLink="true">https://udgwebdev.com/brincando-de-es6-no-meteor</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 05 Jan   16 02:00:00 GMT</pubDate></item></channel></rss>
+}</script>]]></description><link>https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs</link><guid isPermaLink="true">https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 22 Jan   16 02:00:00 GMT</pubDate></item></channel></rss>
