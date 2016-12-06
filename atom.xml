@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Mon, 05 Dec 2016 23:01:21 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 05 Dec 2016 23:01:20 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate=""><b>05/12/2016</b></time> | Tags: <a href="/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 06 Dec 2016 13:13:08 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 06 Dec 2016 13:13:08 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate=""><b>05/12/2016</b></time> | Tags: <a href="/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
 <p>Fala galera! Depois de duas semanas trabalhando nos tempos livres, finalmente lancei uma nova cara pro blog!<br>Dessa vez o blog conta com os seguintes improvements:  </p>
 <ul>
 <li><p><strong>Migra&#xE7;&#xE3;o do static generator Jekyll para Harp.js</strong>: Gostei muito da simplicidade do <a href="http://harpjs.com/">Harp.js</a>, ele possui uma documenta&#xE7;&#xE3;o bem clara, boas conven&#xE7;&#xF5;es para organizar dados e metadados das p&#xE1;ginas, e o que mais acho dahora nele, &#xE9; que ele j&#xE1; internamente com compila&#xE7;&#xE3;o para Markdown, EJS ou Jade para HTML, Stylus, Sass ou Less para CSS e tamb&#xE9;m CoffeeScript para JS, no caso deste blog, estou usando Jade para p&#xE1;ginas din&#xE2;micas, Markdown para conte&#xFA;do dos posts e Sass para organizar todo CSS. Ele possui uma engine totalmente diferente do Jekyll, e por isso tive um certo trabalho criando scripts para migrar todos os posts. Caso voc&#xEA; queira migrar de Jekyll para uma engine mais pr&#xF3;xima dele existente no Node.js, recomendo que utilize o <a href="https://hexo.io/">Hexo</a>.</p>
@@ -20,7 +20,7 @@
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "O blog esta de cara nova!",
@@ -55,7 +55,7 @@
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Deletando arquivos repetitivos pelo terminal",
@@ -99,7 +99,7 @@ Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a se
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Protegendo aplicações JavaScript",
@@ -159,7 +159,7 @@ Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a se
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Escrevendo JavaScript melhor - Parte 4",
@@ -208,7 +208,7 @@ Outro detalhe mais legal, &#xE9; que &#xE9; poss&#xED;vel deixar algumas das pri
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Customizando npm init",
@@ -275,7 +275,7 @@ Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" ti
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Escrevendo JavaScript melhor - Parte 3",
@@ -366,7 +366,7 @@ Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" ti
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Video Streaming com Node.js",
@@ -549,7 +549,7 @@ Em primeiro lugar, praticamente grande parte das fun&#xE7;&#xF5;es desse m&#xF3;
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Realtime com RethinkDB",
@@ -676,7 +676,7 @@ Quando se trabalha com immutabilidade, compiladores e interpretadores ganham alg
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Brincando com estruturas imutáveis usando Immutable.js",
@@ -744,7 +744,7 @@ Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhe
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Escrevendo JavaScript melhor - Parte 2",
@@ -818,7 +818,7 @@ Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhe
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Escrevendo JavaScript melhor - Parte 1",
@@ -869,7 +869,7 @@ At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_con
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Estruturando uma aplicação Meteor 1.3",
@@ -916,7 +916,7 @@ E o Spread operator? Aahhhh esse sim &#xE9; o melhor de todos, veja:</p>
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Usando Spread operator do ES6",
@@ -962,7 +962,7 @@ Com isso, acabei migrando alguns dos meus pequenos projetos para o Heroku, e com
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Deploying Meteor no Heroku",
@@ -995,7 +995,7 @@ At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_con
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Livro Construindo APIs Rest com Node.js",
@@ -1081,7 +1081,7 @@ At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_con
 };
 (function() {
   var d = document, s = d.createElement('script');s.src = '//udgwebdev.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);
-})();</script><noscript>Por favor, habilite o JavaScript no seu browser para visualizar os comentários deste post.</noscript><script type="application/ld+json">{
+})();</script><script type="application/ld+json">{
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Brincando de ES6 no Meteor",
