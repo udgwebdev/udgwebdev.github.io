@@ -131,7 +131,7 @@
  });
 </code></pre>
 <p><code>app.use(express.methodOverride())</code>: essa função que esta dentro do <code>app.configure</code>, permite que sua aplicação faça sobrescrita de rotas que utilizem métodos HTTP diferentes. Repare no código da nossa aplicação que a maioria das rotas possuem o mesmo nome, por exemplo a rota: <code>&#39;/cliente/:id&#39;</code>, porém são usadas em diferentes funções que vão entre o <code>get(), post(), put() e del()</code> que são as funções do <strong>HTTP (GET, POST, PUT e DELETE)</strong> essa é uma boa prática para quem pretende desenvolver aplicações que seguem o padrão <a href="http://pt.wikipedia.org/wiki/REST" title="Entendendo o cocento REST">REST</a> que é muito utilizado na construção de <strong>WebServices</strong>.</p>
-<p>No próximo post irei continuar com a segunda parte otimizando esse mesmo projeto de cadastro de clientes, incluindo novas configurações, separando o código html do código server-side, além de utilizar novos recursos do Express, não percam!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>No próximo post irei continuar com a segunda parte otimizando esse mesmo projeto de cadastro de clientes, incluindo novas configurações, separando o código html do código server-side, além de utilizar novos recursos do Express, não percam!</p><hr/><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/node-js-para-leigos-framework-express-parte-1';
   this.page.identifier = 'node-js-para-leigos-framework-express-parte-1';
 };

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 07 Dec 2016 12:38:13 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 07 Dec 2016 12:38:13 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Como obter conta bancária estrangeira sem sair do Brasil]]></title><description><![CDATA[Sim, este post vai te explicar de um jeito simples sobre como criar uma conta bancária simples, para receber grana do exterior, sem precisar sair do Brasil e sem precisar ir numa casa de câmbio.]]></description><link>https://udgwebdev.com/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</link><guid isPermaLink="true">https://udgwebdev.com/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</guid><category><![CDATA[Profissão]]></category><category><![CDATA[Money]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 06 Dec   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate=""><b>05/12/2016</b></time> | Tags: <a href="/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 07 Dec 2016 16:59:36 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 07 Dec 2016 16:59:36 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Como obter conta bancária estrangeira sem sair do Brasil]]></title><description><![CDATA[Sim, este post vai te explicar de um jeito simples sobre como criar uma conta bancária simples, para receber grana do exterior, sem precisar sair do Brasil e sem precisar ir numa casa de câmbio.]]></description><link>https://udgwebdev.com/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</link><guid isPermaLink="true">https://udgwebdev.com/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</guid><category><![CDATA[Profissão]]></category><category><![CDATA[Money]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 06 Dec   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate=""><b>05/12/2016</b></time> | Tags: <a href="/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
 <p>Fala galera! Depois de duas semanas trabalhando nos tempos livres, finalmente lancei uma nova cara pro blog!<br>Dessa vez o blog conta com os seguintes improvements:  </p>
 <ul>
 <li><p><strong>Migra&#xE7;&#xE3;o do static generator Jekyll para Harp.js</strong>: Gostei muito da simplicidade do <a href="http://harpjs.com/">Harp.js</a>, ele possui uma documenta&#xE7;&#xE3;o bem clara, boas conven&#xE7;&#xF5;es para organizar dados e metadados das p&#xE1;ginas, e o que mais acho dahora nele, &#xE9; que ele j&#xE1; internamente com compila&#xE7;&#xE3;o para Markdown, EJS ou Jade para HTML, Stylus, Sass ou Less para CSS e tamb&#xE9;m CoffeeScript para JS, no caso deste blog, estou usando Jade para p&#xE1;ginas din&#xE2;micas, Markdown para conte&#xFA;do dos posts e Sass para organizar todo CSS. Ele possui uma engine totalmente diferente do Jekyll, e por isso tive um certo trabalho criando scripts para migrar todos os posts. Caso voc&#xEA; queira migrar de Jekyll para uma engine mais pr&#xF3;xima dele existente no Node.js, recomendo que utilize o <a href="https://hexo.io/">Hexo</a>.</p>
@@ -14,7 +14,7 @@
 <li><p><strong>Yarn</strong>: Como essa nova vers&#xE3;o do blog esta 100% Node.js, resolvi testar o <a href="https://yarnpkg.com/">yarn</a> no lugar do <a href="http://npmjs.com/">npm</a>, e achei sensacional, ele baixa os m&#xF3;dulos mais r&#xE1;pido do que no npm, e o que achei mais interessante o cache dos m&#xF3;dulos que ele faz, que permite de instalar esses m&#xF3;dulos em modo offline, realmente vale a pena usar ele.</p>
 </li>
 </ul>
-<p>Curtiu as mudan&#xE7;as? Para ver o c&#xF3;digo-fonte acesse: <a href="https://github.com/udgwebdev/udgwebdev.github.io">https://github.com/udgwebdev/udgwebdev.github.io</a></p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>Curtiu as mudan&#xE7;as? Para ver o c&#xF3;digo-fonte acesse: <a href="https://github.com/udgwebdev/udgwebdev.github.io">https://github.com/udgwebdev/udgwebdev.github.io</a></p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/o-blog-esta-de-cara-nova';
   this.page.identifier = 'o-blog-esta-de-cara-nova';
 };
@@ -49,7 +49,7 @@
 <pre><code class="language-bash"> alias ds_clear=&quot;find . -name &apos;.DS_Store&apos; -exec rm {} \;&quot;
 </code></pre>
 <p>Dessa forma esse comando vai procurar e apagar todos os <code>.DS_Store</code> existentes nas subpastas, com base na pasta atual (Pois usei o <code>find .</code> para referenciar a pasta atual) que eu rodar esse comando.</p>
-<p>Veja tamb&#xE9;m outras <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>Veja tamb&#xE9;m outras <a href="/dicas-de-terminal" title="Dicas de terminal">dicas de terminal</a>.</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/deletando-arquivos-repetitivos-no-terminal';
   this.page.identifier = 'deletando-arquivos-repetitivos-no-terminal';
 };
@@ -93,7 +93,7 @@ Um servi&#xE7;o que se destaca entre os demais nesta &#xE1;rea, &#xE9; o da <a h
 </ul>
 <p>Caso tenha interesse, voc&#xEA; pode <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">testar a vers&#xE3;o trial</a> que em poucos minutos voc&#xEA; j&#xE1; configura sua aplica&#xE7;&#xE3;o na plataforma para aplicar prote&#xE7;&#xE3;o no c&#xF3;digo-fonte de seus projetos.</p>
 <p>A Jscrambler j&#xE1; conta com mais de 25 mil usu&#xE1;rios, developers e empresas de todo o mundo, que usam o servi&#xE7;o para proteger os seus recursos propriet&#xE1;rios, desde startups a organiza&#xE7;&#xF5;es como a Fortune 500.
-Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a seguran&#xE7;a &#xE9; um fator fundamental, ou seja, aplica&#xE7;&#xF5;es internet banking, games, streaming de video propriet&#xE1;rio e etc. Se este for o seu caso, <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">ent&#xE3;o vale a pena testar essa plataforma</a>.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a seguran&#xE7;a &#xE9; um fator fundamental, ou seja, aplica&#xE7;&#xF5;es internet banking, games, streaming de video propriet&#xE1;rio e etc. Se este for o seu caso, <a href="https://jscrambler.com/en/?ref=https://udgwebdev.com" title="Jscrambler - Make your JavaScript Application Protect Itself">ent&#xE3;o vale a pena testar essa plataforma</a>.</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/protegendo-aplicacoes-javascript';
   this.page.identifier = 'protegendo-aplicacoes-javascript';
 };
@@ -153,7 +153,7 @@ Esse servi&#xE7;o &#xE9; de grande utilidade para aplica&#xE7;&#xF5;es cuja a se
 <li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
 </ul>
-<p>Estou adorando escrever sobre esse assunto, caso voc&#xEA; tenha uma dica boa sobre como escrever JavaScript melhor comente abaixo que farei quest&#xE3;o de estudar e escrever no pr&#xF3;ximo post, e &#xE9; claro, citando o nome do autor da dica, at&#xE9; o pr&#xF3;ximo post!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>Estou adorando escrever sobre esse assunto, caso voc&#xEA; tenha uma dica boa sobre como escrever JavaScript melhor comente abaixo que farei quest&#xE3;o de estudar e escrever no pr&#xF3;ximo post, e &#xE9; claro, citando o nome do autor da dica, at&#xE9; o pr&#xF3;ximo post!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-4';
   this.page.identifier = 'escrevendo-javascript-melhor-parte-4';
 };
@@ -202,7 +202,7 @@ Outro detalhe mais legal, &#xE9; que &#xE9; poss&#xED;vel deixar algumas das pri
 <p>Com isso, praticamente voc&#xEA; nem ter&#xE1; mais que responder as principais perguntas, pois elas j&#xE1; ser&#xE3;o pr&#xE9;-definidas pelos valores existentes no <code>~/.npmrc</code>, tanto &#xE9; que elas s&#xE3;o acessadas magicamente pela fun&#xE7;&#xE3;o <code>config.get(&apos;nome-de-uma-key&apos;)</code>.</p>
 <p>Agora se voc&#xEA; criar um novo projeto e rodar o comando <code>npm init</code> voc&#xEA; ter&#xE1; um resultado semelhante a este:</p>
 <p><a href="/images/npm-init.png"><img src="/images/npm-init-small.png" alt="Clique na imagem para ampliar" title="Clique na imagem para ampliar"></a></p>
-<p>See you in the next post!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>See you in the next post!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/customizando-npm-init';
   this.page.identifier = 'customizando-npm-init';
 };
@@ -269,7 +269,7 @@ Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" ti
 <li><a href="/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>At&#xE9; a pr&#xF3;xima galera!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>At&#xE9; a pr&#xF3;xima galera!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-3';
   this.page.identifier = 'escrevendo-javascript-melhor-parte-3';
 };
@@ -360,7 +360,7 @@ Veja mais detalhes sobre essa dica nesse post: <a href="/15-javascript-hacks" ti
    &lt;/body&gt;
  &lt;/html&gt;
 </code></pre>
-<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/video-streaming-com-nodejs';
   this.page.identifier = 'video-streaming-com-nodejs';
 };
@@ -543,7 +543,7 @@ Em primeiro lugar, praticamente grande parte das fun&#xE7;&#xF5;es desse m&#xF3;
 <pre><code class="language-bash"> node index.js
 </code></pre>
 <p>E brincar com sua nova aplica&#xE7;&#xE3;o realtime acessando <a href="http://localhost:3000">http://localhost:3000</a>.</p>
-<p>See ya!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>See ya!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/realtime-com-rethinkdb';
   this.page.identifier = 'realtime-com-rethinkdb';
 };
@@ -670,7 +670,7 @@ Quando se trabalha com immutabilidade, compiladores e interpretadores ganham alg
  console.log(mary.toJSON()); // Object { nome: &apos;Mary&apos;, idade: 20 }
 </code></pre>
 <p>Para mais detalhes dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Record">facebook.github.io/immutable-js/docs/#/Record</a>.</p>
-<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs';
   this.page.identifier = 'brincando-com-estruturas-imutaveis-usando-immutablejs';
 };
@@ -738,7 +738,7 @@ Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhe
 <li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>See you later!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>See you later!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-2';
   this.page.identifier = 'escrevendo-javascript-melhor-parte-2';
 };
@@ -812,7 +812,7 @@ Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhe
 <li><a href="/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
 <li><a href="/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>Caso voc&#xEA; conhe&#xE7;a algum c&#xF3;digo legado com dicas sobre como escrev&#xEA;-lo melhor comente abaixo! Valeu!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>Caso voc&#xEA; conhe&#xE7;a algum c&#xF3;digo legado com dicas sobre como escrev&#xEA;-lo melhor comente abaixo! Valeu!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/escrevendo-javascript-melhor-parte-1';
   this.page.identifier = 'escrevendo-javascript-melhor-parte-1';
 };
@@ -863,7 +863,7 @@ Veja nesse post como estruturar sua aplica&#xE7;&#xE3;o Meteor 1.3 utilizando su
 </code></pre>
 <p>Essa nova estrutura ficou muito mais clara e tudo esta orientado aos comandos <strong>import</strong> e <strong>export</strong> do ES6, facilitando a organiza&#xE7;&#xE3;o clean do projeto e eliminando a m&#xE1; conven&#xE7;&#xE3;o do uso de c&#xF3;digos globais.
 Para mais detalhes, recomendo a leitura desse link: <a href="http://guide.meteor.com/structure.html" title="Meteor Application Structure">Meteor Application Structure</a>.
-At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+At&#xE9; a pr&#xF3;xima!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3';
   this.page.identifier = 'estruturando-uma-aplicacao-meteor-1-3';
 };
@@ -910,7 +910,7 @@ E o Spread operator? Aahhhh esse sim &#xE9; o melhor de todos, veja:</p>
 <p>Basicamente voc&#xEA; tudo se resolve com a s&#xED;ntaxe: <strong>...array</strong> para que ele quebre o array em argumentos e dessa forma voc&#xEA; obtem uma forma mais elegante e enxuta de usar arrays como argumentos.</p>
 <h3>Melhor refer&#xEA;ncia!</h3><ul>
 <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator">MDN - Spread operator</a></li>
-</ul><div id="disqus_thread"></div><script>var disqus_config = function () {
+</ul><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/usando-spread-operator-do-es6';
   this.page.identifier = 'usando-spread-operator-do-es6';
 };
@@ -956,7 +956,7 @@ Com isso, acabei migrando alguns dos meus pequenos projetos para o Heroku, e com
 <p><strong>Pronto! Servidor configurado e ready for production.</strong></p>
 <h3>Refer&#xEA;ncias</h3><ul>
 <li><a href="http://justmeteor.com/blog/deploy-to-production-on-heroku">Meteor.js - Deploy to production on Heroku</a></li>
-</ul><div id="disqus_thread"></div><script>var disqus_config = function () {
+</ul><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/deploying-meteor-no-heroku';
   this.page.identifier = 'deploying-meteor-no-heroku';
 };
@@ -989,7 +989,7 @@ O projeto ser&#xE1; integrado com banco de dados relacional atrav&#xE9;s do Sequ
 </ul>
 <p>Se precisar de alguma ajuda, ou reportar algum feedback voc&#xEA; pode participar do grupo desse livro atrav&#xE9;s desse link: <a href="https://groups.google.com/forum/#!forum/apis-nodejs">Google Groups APIs Node.js</a></p>
 <p>Se curtiu o livro voc&#xEA; pode compr&#xE1;-lo atrav&#xE9;s desse link: <a href="http://www.casadocodigo.com.br/products/livro-apis-nodejs">Construindo APIs Rest com Node.js</a>, lembrando que o livro &#xE9; recomendado para desenvolvedores j&#xE1; familiarizados com Node.js, caso voc&#xEA; queira aprender do in&#xED;cio, recomendo que leia o meu primeiro livro: <a href="http://www.casadocodigo.com.br/products/livro-nodejs">Aplica&#xE7;&#xF5;es web real-time com Node.js</a>.
-At&#xE9; a pr&#xF3;xima!</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+At&#xE9; a pr&#xF3;xima!</p><hr><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/livro-construindo-apis-rest-com-nodejs';
   this.page.identifier = 'livro-construindo-apis-rest-com-nodejs';
 };

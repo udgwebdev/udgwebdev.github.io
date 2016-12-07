@@ -41,7 +41,7 @@
  lerDiretorio();
 </code></pre>
 <p>Veja o quanto melhorou a legibilidade do seu código. Dessa forma foi possível reaproveitar a função <code>tratar(erro)</code> em dois locais do código, deixamos mais semântico e legível o nome das funções e diminuímos o encadeamento de callback das funções assíncronas. A boa prática é ter o bom senso de manter no máximo até dois encadeamentos de callbacks, ao passar disso significa que esta na hora de criar uma nova função fora externa para ser chamada no último callback, ao invés de continuar criando um <strong>callback hell</strong> em seu código.</p>
-<p>Fonte: <a href="https://www.casadocodigo.com.br/products/livro-nodejs" title="Aplicações web real-time com Node.js">Aplicações web real-time com Node.js</a></p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>Fonte: <a href="https://www.casadocodigo.com.br/products/livro-nodejs" title="Aplicações web real-time com Node.js">Aplicações web real-time com Node.js</a></p><hr/><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/evitando-callback-hell-no-node-js';
   this.page.identifier = 'evitando-callback-hell-no-node-js';
 };

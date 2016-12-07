@@ -65,7 +65,7 @@ Acesse no seu browser: <code>http://localhost:3000</code> e clique em ambos os l
 <p>Isto é normal, visto que até agora o Node.js esta servindo arquivo estático e o Nginx não esta rodando seu <strong>proxy server</strong> por um motivo: você está acessando diretamente o servidor Node.js através da porta 3000.</p>
 <p>Agora que temos o Nginx configurado, que tal testar essa integração? Reinicie o Nginx através do comando: <code>nginx -s reload</code>. E acesse sua aplicação através do novo endereço: <code>http://localhost</code>.</p>
 <p><a href="/images/node-logger-com-nginx-static.jpg"><img src="/images/node-logger-com-nginx-static-small.jpg" alt="Nginx servindo arquivo estático"></a></p>
-<p>Dessa vez o seu log da aplicação Node.js vai apenas registrar acessos na rota <code>/node</code>, deixando que a rota <code>/nginx.html</code> seja acessada pelo Nginx.</p><div id="disqus_thread"></div><script>var disqus_config = function () {
+<p>Dessa vez o seu log da aplicação Node.js vai apenas registrar acessos na rota <code>/node</code>, deixando que a rota <code>/nginx.html</code> seja acessada pelo Nginx.</p><hr/><div id="disqus_thread"></div><script>var disqus_config = function () {
   this.page.url = 'https://udgwebdev.com/nginx-servindo-nodejs';
   this.page.identifier = 'nginx-servindo-nodejs';
 };
