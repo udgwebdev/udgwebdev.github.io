@@ -14,6 +14,9 @@
 
 		img {
 			border: 1px solid rgba(50,50,50,0.3);
+			width: 60% !important;
+			max-width: 60% !important;
+			margin: 0 auto;
 		}
 	}
 	.controls {
@@ -45,7 +48,6 @@
 		.item img {
 			width: 50% !important;
 			max-width: 50% !important;
-			margin: 0 auto;
 		}
 	}
 }
@@ -55,7 +57,15 @@
 		.item img {
 			width: 35% !important;
 			max-width: 35% !important;
-			margin: 0 auto;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+	.gallery {
+		.item img {
+			width: 100% !important;
+			max-width: 100% !important;
 		}
 	}
 }
