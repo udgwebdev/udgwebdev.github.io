@@ -6,8 +6,7 @@ article.col-xs-12.col-sm-9(class="#{type}" id="#{slug}")
     - });
     p.text-muted Publicação: <time datetime="#{created_at}" pubdate><b>#{created_at}</b></time> | Tags: !{tagLinks.toString().replace(',', ', ')}
   != yield
-  if type === "post" && type === "page"
-    hr
+  if type === "post" || type === "page"
     != partial("share")
   if type === "post"
     hr
