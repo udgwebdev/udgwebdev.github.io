@@ -9,14 +9,16 @@
   });
   if (sidemenu) {
     window.addEventListener('scroll', function(e) {
-      const isSticky = sidemenu.classList.contains('sticky');
-      if (window.scrollY >= 1000 && !isSticky) {
-        sidemenu.classList.add('sticky');
-        sidemenu.classList.add('fadeInDown');
-      }
-      if (window.scrollY < 1000 && isSticky) {
-        sidemenu.classList.remove('sticky');
-        sidemenu.classList.remove('fadeInDown');
+      if ((window.innerWidth || document.body.clientWidth) >= 960) {
+        const isSticky = sidemenu.classList.contains('sticky');
+        if (window.scrollY >= 1000 && !isSticky) {
+          sidemenu.classList.add('sticky');
+          sidemenu.classList.add('fadeInDown');
+        }
+        if (window.scrollY < 1000 && isSticky) {
+          sidemenu.classList.remove('sticky');
+          sidemenu.classList.remove('fadeInDown');
+        }
       }
     });
   }

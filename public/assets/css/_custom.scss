@@ -7,9 +7,26 @@ a:hover {
 }
 .sticky {
   position: fixed;
+  max-width: 25%;
+  margin: -10px 0 250px 0;
+}
+.sticky .gallery .item img {
+  width: 60% !important;
+  max-width: 60% !important;
 }
 .sticky .hidden-sticky {
   display: none;
+}
+@media (max-width: 960px) {
+  .sticky {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+
+    .hidden-sticky {
+      display: block;
+    }
+  }
 }
 .sidemenu li {
   list-style: none;
