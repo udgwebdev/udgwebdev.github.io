@@ -48,5 +48,6 @@ _.chain(posts)
   .value()
 ;
 
-fs.outputFileSync(path.join(WWW_DIR, 'atom.xml'), feed.xml());
-console.log('Feed is done!');
+const outputFile = path.join(WWW_DIR, 'atom.xml');
+fs.outputFileSync(outputFile, feed.xml());
+console.log(`Feed created ${outputFile}`);

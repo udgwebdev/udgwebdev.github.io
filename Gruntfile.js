@@ -24,8 +24,8 @@ module.exports = (grunt) => {
           pretty: true
         },
         files: [
-          { expand: true, flatten: true, src: ['www/js/*.js'], dest: 'www/js', ext: '.gz.js' },
-          { expand: true, flatten: true, src: ['www/css/*.css'], dest: 'www/css', ext: '.gz.css' }
+          { expand: true, flatten: true, src: ['www/assets/js/*'], dest: 'www/assets/js', ext: '.gz.js' },
+          { expand: true, flatten: true, src: ['www/assets/css/*'], dest: 'www/assets/css', ext: '.gz.css' }
         ]
       }
     },
@@ -67,6 +67,30 @@ module.exports = (grunt) => {
         }]
       }
     },
+    // CSSMin =========================================
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'www/assets/css',
+          src: ['main.css'],
+          dest: 'www/assets/css',
+          ext: '.css'
+        }]
+      }
+    },
+    // PurifyCSS =====================================
+    purifycss: {
+      target: {
+        src: ['www/**/*.{html,js}'],
+        css: ['www/assets/css/main.css'],
+        dest: 'www/assets/css/main.css'
+      }
+    },
     // Manifest ======================================
     appcache: {
       options: {
@@ -75,7 +99,14 @@ module.exports = (grunt) => {
       },
       all: {
         dest: 'www/manifest.appcache',
-        cache: 'www/**/*',
+        cache: [
+          'www/**/*.{css,js,woff,ttf,svg,eot,gif,png,jpg,jpeg}',
+          'www/index.html',
+          'www/404.html',
+          'www/manifest.json',
+          'www/favicon.ico',
+          'www/robots.txt'
+        ],
         network: '*'
       }
     },
@@ -96,7 +127,7 @@ module.exports = (grunt) => {
           'robots.txt',
           'manifest.appcache',
           'favicon.ico',
-          '**/*.{html,css,js,woff,ttf,svg,eot,gif,png,jpg,jpeg}'
+          '**/*.{css,js,woff,ttf,svg,eot,gif,png,jpg,jpeg}'
         ]
       }
     },
@@ -122,10 +153,12 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-sitemaps');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-purifycss');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-sw-precache');
 
   grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin', 'shell:posts']);
   grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin', 'shell:posts']);
-  grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'compress', 'sitemaps', 'shell:feed']);
+  grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'purifycss', 'cssmin', 'compress', 'sitemaps', 'shell:feed']);
   grunt.registerTask('deploy:prod', ['gh-pages', 'clean', 'shell:clear']);
 };
