@@ -1,7 +1,5 @@
-/* global cssCircleMenu, Tooltip */
 (function() {
   cssCircleMenu('.js-menu');
-  new Tooltip().init({ opacity: '.90', hideOnMouseOut: true });
   var toggle = document.querySelector('.navbar-toggle');
   var collapse = document.querySelector('.navbar-collapse');
   var sidemenu = document.querySelector('[data-sticky-sidemenu]');

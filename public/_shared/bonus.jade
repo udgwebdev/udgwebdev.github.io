@@ -1,5 +1,5 @@
 ul
   each bonus in bonus_data
     li
-      i.fa.fa-info-circle.tooltipr(style="margin-right:5px;" data-tt-type="attr" data-title="#{bonus.description}")
+      a(href="javascript:void(0);" class="text-success" data-tooltipr="#{bonus.description}") <i class="fa fa-info-circle" style="margin-right:5px;font-size:1.7em;"></i>
       a(href="#{bonus.url}" rel="nofollow" target="_blank" title="#{bonus.description}") <i class="fa #{bonus.icon}"></i>&nbsp;#{bonus.title}

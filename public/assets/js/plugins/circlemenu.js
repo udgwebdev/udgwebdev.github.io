@@ -1,1 +1,45 @@
-!function(e){"use strict";e.cssCircleMenu=function(e){function s(){a.addEventListener("click",function(e){e.preventDefault(),t()})}function t(){a.classList.contains("is-active")?c():i()}function i(){n.classList.add("is-active"),a.classList.add("is-active"),o.classList.add("is-active")}function c(){n.classList.remove("is-active"),a.classList.remove("is-active"),o.classList.remove("is-active")}var n=document.querySelector(e),a=n?n.querySelector(".js-menu-toggle"):void 0,o=n?n.querySelector(".js-menu-mask"):void 0;if(!(n&&a&&o))throw new Error("Invalid elements, check the structure.");return s(),{openMenu:i,closeMenu:c}}}(window);
+(function(window) {
+  'use strict';
+
+  window.cssCircleMenu = function(el) {
+    var $menu = document.querySelector(el);
+    var $menuToggle = $menu ? $menu.querySelector('.js-menu-toggle') : undefined;
+    var $menuMask = $menu ? $menu.querySelector('.js-menu-mask') : undefined;
+
+    if (!$menu || !$menuToggle || !$menuMask) {
+      throw new Error('Invalid elements, check the structure.');
+    } else {
+      init();
+    }
+
+    return {
+      openMenu: openMenu,
+      closeMenu: closeMenu
+    };
+
+    function init() {
+      $menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleMenu();
+      });
+    }
+
+    function toggleMenu() {
+      $menuToggle.classList.contains('is-active')
+        ? closeMenu()
+        : openMenu();
+    }
+
+    function openMenu() {
+      $menu.classList.add('is-active');
+      $menuToggle.classList.add('is-active');
+      $menuMask.classList.add('is-active');
+    }
+
+    function closeMenu() {
+      $menu.classList.remove('is-active');
+      $menuToggle.classList.remove('is-active');
+      $menuMask.classList.remove('is-active');
+    }
+  };
+})(window);
