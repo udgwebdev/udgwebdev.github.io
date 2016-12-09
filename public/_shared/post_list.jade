@@ -1,0 +1,13 @@
+h2.h3.text-center <i class="fa fa-code"></i>&nbsp;Posts do blog
+input.read-more-state#read-more(type="checkbox")
+.read-more-wrap
+  - var index = 0
+  each post in public._data
+    if (post.type === "post" || post.type === "redirect") && post.published === true
+      - var show_more = (index++) > 15 ? {class: 'read-more-target'} : {}
+      article&attributes(show_more)
+        h2.h3
+          a(href="/#{post.slug}" rel="me") #{post.title}
+        span.text-muted Publicação: <time datetime="#{created_at}" pubdate>#{post.created_at}</time> #{post.redirected_to ? '| Via: ' + post.redirected_to : ''}<br>
+        span #{post.description}
+label.btn.btn-lg.btn-primary.read-more-trigger(for="read-more") Ver mais posts...

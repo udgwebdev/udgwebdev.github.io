@@ -15,6 +15,32 @@ module.exports = (grunt) => {
         NODE_ENV: 'production'
       }
     },
+    // Concat =========================================
+    concat: {
+      options: {
+        separator: ';'
+      },
+      main: {
+        src: ['www/assets/js/plugins/*.js', 'www/assets/js/main.js'],
+        dest: 'www/assets/js/main.js'
+      }
+    },
+    // Uglify ========================================
+    uglify: {
+      options: {
+        compress: {
+          drop_console: true
+        }
+      },
+      main: {
+        files: [{
+          expand: true,
+          cwd: 'www/assets/js',
+          src: ['main.js'],
+          dest: 'www/assets/js'
+        }]
+      }
+    },
     // Compress ======================================
     compress: {
       main: {
@@ -149,16 +175,18 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-appcache');
   grunt.loadNpmTasks('grunt-sitemaps');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-purifycss');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-sw-precache');
 
   grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin', 'shell:posts']);
   grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin', 'shell:posts']);
-  grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'purifycss', 'cssmin', 'compress', 'sitemaps', 'shell:feed']);
+  grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'concat', 'uglify', 'purifycss', 'cssmin', 'compress', 'sitemaps', 'shell:feed']);
   grunt.registerTask('deploy:prod', ['gh-pages', 'clean', 'shell:clear']);
 };

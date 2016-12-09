@@ -3,38 +3,31 @@
 @mixin gallery( $item-count ) {
 	$total-duration: $display-duration * $item-count;
 
-	@keyframes controlAnimation-#{$item-count} {
-		0% { @include inactive-button; }
-	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { @include active-button; }
-	  #{100% * ($display-duration + $transition-duration) / $total-duration},
-	  100% { @include inactive-button; }
-	}
-
 	@keyframes galleryAnimation-#{$item-count} {
-	  0% { opacity: 0; }
+	  0% { opacity: 0; z-index: -1; }
 	  #{100% * $transition-duration / $total-duration},
-	  #{100% * $display-duration / $total-duration} { opacity: 1; }
+	  #{100% * $display-duration / $total-duration} { opacity: 1; z-index: 1; }
 	  #{100% * ($display-duration + $transition-duration) / $total-duration},
-	  100% { opacity: 0; }
+	  100% { opacity: 0; z-index: -1; }
 	}
 
 	.gallery {
 		@for $j from 1 through $item-count {
-			.control-operator:nth-of-type(#{$j}):target ~ .item:nth-of-type(#{$j}) { pointer-events: auto; opacity: 1; }
-			.control-operator:nth-of-type(#{$j}):target ~ .controls .control-button:nth-of-type(#{$j}) { @extend %active-button; }
+			.control-operator:nth-of-type(#{$j}):target ~ .item:nth-of-type(#{$j}) {
+				pointer-events: auto;
+				opacity: 1;
+				z-index: 1;
+			}
 		}
 	}
 
 	.items-#{$item-count} {
-		&.autoplay .control-button { animation: controlAnimation-#{$item-count} #{$total-duration}s infinite; }
-		&.autoplay .item { animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite; }
-
+		&.autoplay .item {
+			animation: galleryAnimation-#{$item-count} #{$total-duration}s infinite;
+		}
 		@for $j from 1 through $item-count {
-			.control-button:nth-of-type(#{$j}),
 			.item:nth-of-type(#{$j}) {
 				$delay: #{($j - 1) * ($display-duration) - $transition-duration}s;
-
 				animation-delay: #{$delay};
 			}
 		}
@@ -42,13 +35,65 @@
 }
 
 .gallery {
-	.item:first-of-type { position: static; pointer-events: auto; opacity: 1; } // Set the first item to be visible
-	.item { position: absolute; top: 0; left: 0; width: 100%; height: 100%;  pointer-events: none; opacity: 0; transition: opacity .5s; }
+	.item:first-of-type {
+		position: static;
+		opacity: 1;
+		z-index: 1;
+		pointer-events: auto;
+	}
+	.item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		z-index: -1;
+		transition: opacity .5s !important;
+		pointer-events: auto;
+	}
+}
 
-	.control-operator { display: none; } // Stop hash links from scrolling up and down
+.gallery {
+	position: relative;
 
-	.control-operator:target ~ .item { pointer-events: none; opacity: 0; animation: none; } // Unselected image
+  .item {
+		height: auto;
+		overflow: hidden;
+		text-align: center;
 
-	.control-button:first-of-type { @extend %active-button; }
-	.control-operator:target ~ .controls .control-button { @extend %inactive-button; animation: none; } // Kill button animation when there is a selected image
+		img {
+			border: 1px solid rgba(50,50,50,0.3);
+			width: 60% !important;
+			max-width: 60% !important;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.gallery {
+		.item img {
+			width: 50% !important;
+			max-width: 50% !important;
+		}
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.gallery {
+		.item img {
+			width: 35% !important;
+			max-width: 35% !important;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+	.gallery {
+		.item img {
+			width: 100% !important;
+			max-width: 100% !important;
+		}
+	}
 }

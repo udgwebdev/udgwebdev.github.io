@@ -32,6 +32,11 @@ a:hover {
   list-style: none;
   margin-left: -20px;
 }
+@media (max-width: 768px) {
+  .sidemenu li {
+    font-size: 1.4em;
+  }
+}
 .full-page {
   margin: 150px auto 220px;
 }

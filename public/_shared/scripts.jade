@@ -1,5 +1,7 @@
-script(src="/assets/js/circlemenu.js")
-script(src="/assets/js/tooltip.js")
-script(src="/assets/js/main.js")
+if environment == "development"
+  script(src="/assets/js/plugins/circlemenu.js")
+  script(src="/assets/js/plugins/tooltip.js")
+  script(src="/assets/js/main.js")
 if environment == "production"
+  script(src="/assets/js/main.js" async defer)
   != partial("google_analytics")
