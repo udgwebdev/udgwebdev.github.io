@@ -2,3 +2,9 @@
   img(src="/images/#{main_image}" width="128" class="img-responsive center-block")
   h3 Redirecionando post, <a href="#{alias_url}" target="_blank" rel="me">clique aqui caso não seja redirecionado</a>.
   p <i class="fa fa-refresh fa-spin fa-4x fa-fw"></i>
+script.
+  (function() {
+    setTimeout(function() {
+      window.location = '#{alias_url}';
+    }, 3000);
+  })();
