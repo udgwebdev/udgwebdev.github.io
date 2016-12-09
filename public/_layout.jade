@@ -8,9 +8,11 @@ html(lang="en" manifest="#{manifest_url}" xmlns="http://www.w3.org/1999/xhtml" x
     main.container.vertical-centralization(role="main")
       .row
         if type === 'post' || type === 'page'
-          != partial("_shared/article")
-          != partial("_shared/side_menu_left")
-          != partial("_shared/side_menu_right")
+          section.col-xs-12.col-sm-9
+            != partial("_shared/article")  
+          aside.col-xs-12.col-sm-3
+            != partial("_shared/side_menu_left")
+            != partial("_shared/side_menu_right")
         else
           != yield
     != partial("_shared/footer")

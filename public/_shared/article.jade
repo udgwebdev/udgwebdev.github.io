@@ -1,4 +1,4 @@
-article.col-xs-12.col-sm-9(class="#{type}" id="#{slug}")
+article(class="#{type}" id="#{slug}")
   if type === "post"
     h1 #{title}
     - var tagLinks = tags.map(function(tag) {
