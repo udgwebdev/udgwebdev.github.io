@@ -11,6 +11,12 @@ a {
 a:hover {
   text-decoration: none;
 }
+.ads-img {
+  width: 1px;
+  height: 1px;
+  border: none !important;
+  margin: 0px !important;
+}
 .sticky {
   position: fixed;
   max-width: 25%;
