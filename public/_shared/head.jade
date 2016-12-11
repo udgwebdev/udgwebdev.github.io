@@ -1,6 +1,6 @@
 - var page_title = (title || blog_description) + ' | ' + blog_name
 - var meta_page_title = title || blog_name
-- var page_url = root_url[environment] + (slug || current.path)
+- var page_url = root_url[environment] + (slug || (current.path === 'index' ? '' : current.path))
 - var bar_color = '#BA2D27'
 - var meta_description = description || blog_description
 - var page_image = feature_image || main_image
