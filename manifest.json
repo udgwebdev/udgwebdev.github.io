@@ -1,6 +1,6 @@
 {
-  "name": "UDGWebDev",
-  "short_name": "UDGWebDev",
+  "name": "Blog",
+  "short_name": "Blog",
   "start_url": "/?via=webapp",
   "display": "standalone",
   "orientation": "portrait",
