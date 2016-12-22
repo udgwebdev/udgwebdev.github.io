@@ -1,11 +1,12 @@
 article(class="#{type}" id="#{slug}")
-  if type === "post"
-    h1 #{title}
-    - var tagLinks = tags.map(function(tag) {
-    -   return '<a href="/menu/#'+ tag.toLowerCase().replace(/\s/g, '-') +'" rel="me" title="Menu: '+ tag +'">'+ tag + '</a>';
-    - });
-    p.text-muted Publicação: <time datetime="#{created_at}" pubdate><b>#{created_at}</b></time> | Tags: !{tagLinks.toString().replace(',', ', ')}
-  != yield
+  div(data-article="#{slug}")
+    if type === "post"
+      h1 #{title}
+      - var tagLinks = tags.map(function(tag) {
+      -   return '<a href="/menu/#'+ tag.toLowerCase().replace(/\s/g, '-') +'" rel="me" title="Menu: '+ tag +'">'+ tag + '</a>';
+      - });
+      p.text-muted Publicação: <time datetime="#{created_at}" pubdate><b>#{created_at}</b></time> | Tags: !{tagLinks.toString().replace(',', ', ')}
+    != yield
   if type === "post" || type === "page"
     != partial("share")
   if type === "post"

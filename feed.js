@@ -34,7 +34,8 @@ _.chain(posts)
       const postFile = path.join(WWW_DIR, `${post.slug}/index.html`);
       const postContent = fs.readFileSync(postFile, 'utf8');
       const $ = cheerio.load(postContent);
-      post.description = $(`article#${post.slug}`).html();
+      const content = $(`div[data-article="${post.slug}"]`).html();
+      post.description = content;
     }
     feed.item({
       title: post.title,
