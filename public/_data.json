@@ -1,4 +1,16 @@
 {
+  "escrevendo-javascript-melhor-parte-5": {
+    "title": "Escrevendo JavaScript melhor - Parte 5",
+    "tags": [
+      "JavaScript"
+    ],
+    "published": true,
+    "description": "Nesse post vou mostrar algumas dicas sensacionais que já é possível aplicar usando JavaScript puro.",
+    "feature_image": "es6-logo.jpg",
+    "slug": "escrevendo-javascript-melhor-parte-5",
+    "created_at": "22/12/2016",
+    "type": "post"
+  },
   "como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil": {
     "title": "Como obter conta bancária estrangeira sem sair do Brasil",
     "published": true,
