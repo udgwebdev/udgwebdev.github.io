@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Sat, 24 Dec 2016 12:38:47 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 24 Dec 2016 12:38:46 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 5]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 5</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/12/2016" pubdate=""><b>22/12/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Sat, 24 Dec 2016 14:08:41 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 24 Dec 2016 14:08:41 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Quando não usar Arrow Functions]]></title><description><![CDATA[<h1>Quando n&#xE3;o usar Arrow Functions</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="24/12/2016" pubdate=""><b>24/12/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="ES6 Arrow Functions" title="ES6 Arrow Functions"></p>
+<p>Infelizmente, apesar do <strong>Arrow Function</strong> ser uma feature muito bacana e &#xFA;til do ES6, saiba que nem sempre ser&#xE1; poss&#xED;vel utilizar ela, pois ela n&#xE3;o foi feita para substituir 100% a declara&#xE7;&#xE3;o de function principal, o arrow function, apesar de trazer um <strong>syntax sugar</strong> e algumas utilidades como, por exemplo, compartilhamento de contextos, voc&#xEA; precisa antes de us&#xE1;-la, aprender tamb&#xE9;m quando n&#xE3;o us&#xE1;-la para que voc&#xEA; n&#xE3;o fique perdido na procura de um bug de dif&#xED;cil de resolver, veja a seguir uma lista com poss&#xED;veis situa&#xE7;&#xF5;es para <strong>N&#xC3;O USAR</strong> arrow funcition.</p>
+<h2>Click handlers</h2><p>Para exemplificar, vamos supor que existe temos um bot&#xE3;o pelo qual queremos mudar sua cor entre azul e vermelho, conforme ele &#xE9; clicado, para isso temos o seguinte html:</p>
+<pre><code class="language-html">&lt;style&gt;
+  button { background-color: blue; }
+  .on { background-color: red; }
+&lt;/style&gt;
+&lt;button id=&quot;click_here&quot;&gt;CLIQUE AQUI!&lt;/button&gt;
+</code></pre>
+<p>Agora vamos programar o evento de click desse bot&#xE3;o, usando arrow function:</p>
+<pre><code class="language-javascript">const button = document.querySelector(&apos;#click_here&apos;);
+button.addEventListener(&apos;click&apos;, () =&gt; {
+  this.classList.toggle(&apos;on&apos;);
+});
+</code></pre>
+<p>Se voc&#xEA; testar esse bot&#xE3;o, vai gerar o erro: <code>TypeError, cannot read property &apos;toggle&apos; of undefined</code></p>
+<p>Isso ocorre pois o <code>this</code> de <code>this.classList.toggle(&apos;on&apos;)</code> compartilha os atributos de <code>window</code> e n&#xE3;o do evento. E com isso nesse caso o ideal &#xE9; utilizar a declara&#xE7;&#xE3;o de function:</p>
+<pre><code class="language-javascript">const button = document.querySelector(&apos;#click_here&apos;);
+button.addEventListener(&apos;click&apos;, function() {
+  this.classList.toggle(&apos;on&apos;);
+});
+</code></pre>
+<h2>Object methods</h2><p>Se voc&#xEA; pretende criar um <strong>object methods no frontend</strong>, n&#xE3;o &#xE9; recomendado utilizar arrow functions em seus m&#xE9;todos, entenda o porque vendo esse exemplo:</p>
+<pre><code class="language-javascript">const Usuario = {
+  pontos: 20,
+  ganhou: () =&gt; {
+    this.pontos++;
+  }
+}
+</code></pre>
+<p>Se voc&#xEA; rodar <code>Usuario.ganhou()</code>, algumas vezes, a expectativa &#xE9; que os <code>pontos</code> esteja com valores acima do que foi estabelecido em seu estado inicial, ou seja, maior que 20.</p>
+<p>Mas se voc&#xEA; acessar: <code>Usuario.pontos</code> seu valor vai continuar 20, e isso ocorre pelo fato de que o <code>this</code>, estar&#xE1; sendo referenciado ao objeto <code>window</code> do browser, herdando seu escopo.</p>
+<p>Para resolver esse problema, voc&#xEA; pode tanto usar a declara&#xE7;&#xE3;o cl&#xE1;ssica de <code>function</code>, quanto usar a declara&#xE7;&#xE3;o de m&#xE9;todos do <strong>Object methods</strong>:</p>
+<pre><code class="language-javascript">// Declarando com function
+const Usuario = {
+  pontos: 20,
+  ganhou: function() {
+    this.pontos++;
+  }
+}
+// Utilizando Object methods
+const Usuario = {
+  pontos: 20,
+  ganhou() {
+    this.pontos++;
+  }
+}
+</code></pre>
+<h2>Argumentos de um objeto</h2><p>Quando se cria uma fun&#xE7;&#xE3;o que trabalhe com <code>arguments</code>, caso voc&#xEA; precise tratar esses arguments em uma fun&#xE7;&#xE3;o interna, tamb&#xE9;m n&#xE3;o &#xE9; recomendado usar arrow function, veja esse exemplo:</p>
+<pre><code class="language-javascript">const ordernaPlayers = () =&gt; {
+  const players = Array.from(arguments);
+  return players.map((player, i) =&gt; {
+    return `${player} chegou em #${i + 1}`;
+  })
+  console.log(arguments);
+}
+</code></pre>
+<p>O problema nesse exemplo &#xE9; que a fun&#xE7;&#xE3;o <code>ordernaPlayers()</code> vai gerar o erro: <code>ReferenceError, arguments is not defined.</code>, esse erro ocorrer&#xE1; pelo simples fato de que <code>arguments</code> vai retornar um array e arrays n&#xE3;o trabalham com a keyword <code>this</code>, e mesmo n&#xE3;o utilizando essa keyword, vai ocorrer esse erro, para resolver esse bug, basta aplicar function na fun&#xE7;&#xE3;o pai, a <code>ordernaPlayers()</code>:</p>
+<pre><code class="language-javascript">const ordernaPlayers = function() {
+  const players = Array.from(arguments);
+  return players.map((player, i) =&gt; {
+    return `${player} chegou em #${i + 1}`;
+  })
+  console.log(arguments);
+}
+</code></pre>
+<h2>Prototypes</h2><p>Jamais use arrow function em fun&#xE7;&#xF5;es prototype de um objeto, simplesmente os atributos n&#xE3;o ser&#xE3;o definidos mesmo instanciando o objeto corretamente, veja esse exemplo:</p>
+<pre><code class="language-javascript">class Cliente {
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }  
+}
+Cliente.prototype.apresentar = () =&gt; {
+  return `Cliente: ${this.nome} | Idade: ${this.idade}`;
+};
+</code></pre>
+<p>Agora tente instanciar um cliente e em seguida se voc&#xEA; invocar a fun&#xE7;&#xE3;o <code>Cliente.prototype.apresentar()</code> a interpola&#xE7;&#xE3;o de seus atributos no resultado final ser&#xE1; simplesmente <code>undefined</code>.</p>
+<pre><code class="language-javascript">const john = new Cliente(&apos;John Connor&apos;, 25);
+const mary = new Cliente(&apos;Mary Jane&apos;, 20);
+
+john.apresentar(); // &apos;Cliente: undefined | Idade: undefined&apos;
+mary.apresentar(); // &apos;Cliente: undefined | Idade: undefined&apos;
+</code></pre>
+<p>Simplesmente o arrow function para fun&#xE7;&#xF5;es de um objeto prototype n&#xE3;o mant&#xE9;m estado ap&#xF3;s instanciado. O ideal nesse caso &#xE9; manter a declara&#xE7;&#xE3;o de <code>function</code> normal:</p>
+<pre><code class="language-javascript">Cliente.prototype.apresentar = function() {
+  return `Cliente: ${this.nome} | Idade: ${this.idade}`;
+};
+</code></pre>
+<p>Fontes: <a href="http://wesbos.com/arrow-function-no-no/">When Not to use an Arrow Function</a></p>]]></description><link>https://udgwebdev.com/quando-nao-usar-arrow-functions</link><guid isPermaLink="true">https://udgwebdev.com/quando-nao-usar-arrow-functions</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sat, 24 Dec   16 02:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 5]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 5</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/12/2016" pubdate=""><b>22/12/2016</b></time> | Tags: <a href="/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
 <p>Sim! Esse post vai ter parte 5 sim! E a id&#xE9;ia &#xE9; que no futuro tenha mais posts desse assunto. Nesse post vou mostrar algumas dicas sensacionais que j&#xE1; &#xE9; poss&#xED;vel aplicar usando JavaScript puro.</p>
 <h2>Convertendo n&#xFA;meros para moeda sem framework</h2><p>Agora com ES6 j&#xE1; &#xE9; poss&#xED;vel converter Number para String currency nativo, usando apenas a fun&#xE7;&#xE3;o toLocaleString(). Veja:</p>
 <pre><code class="language-javascript">(10.9).toLocaleString(); // &quot;10,90&quot;
@@ -739,30 +828,4 @@ E o Spread operator? Aahhhh esse sim &#xE9; o melhor de todos, veja:</p>
 <p>Basicamente voc&#xEA; tudo se resolve com a s&#xED;ntaxe: <strong>...array</strong> para que ele quebre o array em argumentos e dessa forma voc&#xEA; obtem uma forma mais elegante e enxuta de usar arrays como argumentos.</p>
 <h3>Melhor refer&#xEA;ncia!</h3><ul>
 <li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator">MDN - Spread operator</a></li>
-</ul>]]></description><link>https://udgwebdev.com/usando-spread-operator-do-es6</link><guid isPermaLink="true">https://udgwebdev.com/usando-spread-operator-do-es6</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 06 Apr   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Deploying Meteor no Heroku]]></title><description><![CDATA[<h1>Deploying Meteor no Heroku</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="14/03/2016" pubdate=""><b>14/03/2016</b></time> | Tags: <a href="/menu/#meteor" rel="me" title="Menu: Meteor">Meteor</a></p><p><img src="/images/heroku.jpg" alt="Deploying Meteor no Heroku" title="Deploying Meteor no Heroku"></p>
-<p>Recentemente, a equipe do Meteor, publicou em sua newsletter que vai descontinuar os servidores free que s&#xE3;o fornecidos atrav&#xE9;s do comando meteor deploy.
-Com isso, acabei migrando alguns dos meus pequenos projetos para o Heroku, e com isso resolvi criar esse post explicando passo-a-passo como fazer deploy para o Heroku.</p>
-<h3>Setup do Heroku</h3><p>Em primeiro lugar, crie uma conta no <a href="https://heroku.com">heroku.com</a> e em seguida instale seu CLI (veja nesse link <a href="https://toolbelt.heroku.com">toolbelt.heroku.com</a>) para liberar o comando heroku em seu terminal.</p>
-<h3>Setup da aplica&#xE7;&#xE3;o</h3><p>Agora com o ambiente heroku configurado em sua m&#xE1;quina, execute o comando:</p>
-<pre><code class="language-bash"> heroku create nome-da-aplicacao
-</code></pre>
-<p>Em seguida, instale o buildpack do Meteor para configurar os scripts de deploy necess&#xE1;rios para uma aplica&#xE7;&#xE3;o Meteor compilar e gerar uma vers&#xE3;o Node.js pronta para os servidores do Heroku, para isso, rode o comando:</p>
-<pre><code class="language-bash"> heroku buildpacks:set https://github.com/AdmitHub/meteor-buildpack-horse.git
-</code></pre>
-<p>Agora, instale o MongoLabs, que &#xE9; um servi&#xE7;o PaaS para o MongoDB, ele tem uma vers&#xE3;o free que oferece at&#xE9; <strong>500MB de persist&#xEA;ncia de dados</strong>, para isso rode o comando:</p>
-<pre><code class="language-bash"> heroku addons:create mongolab
-</code></pre>
-<p>Para finalizar a configura&#xE7;&#xE3;o do ambiente, configure a vari&#xE1;vel de ambiente ROOT_URL com o endere&#xE7;o da sua aplica&#xE7;&#xE3;o heroku:</p>
-<pre><code class="language-bash"> heroku config:set ROOT_URL=https://nome-da-aplicacao.herokuapp.com
-</code></pre>
-<p><strong>Obs.:</strong> O Heroku j&#xE1; fornece suporte gratuito ao protocolo HTTPS.</p>
-<h3>Configura&#xE7;&#xE3;o extra</h3><p>Como dica adicional, caso no futuro voc&#xEA; tenha a necessidade de incluir novos dynos, que s&#xE3;o servidores dentro do load balancer do Heroku, voc&#xEA; provavelmente sofrer&#xE1; um problema de sua aplica&#xE7;&#xE3;o Meteor n&#xE3;o garantir sess&#xE3;o correta entre usu&#xE1;rios, para resolver esse problema de <strong>sticky session</strong>, voc&#xEA; pode instalar esse plugin adicional gratuitamente:</p>
-<pre><code class="language-bash"> heroku labs:enable http-session-affinity
-</code></pre>
-<h3>Deploying</h3><p>Para realizar o primeiro deploy do seu projeto para o Heroku, basta fazer um <strong>git push</strong> no <strong>remote heroku</strong>, que foi configurado automaticamente quando voc&#xEA; criou uma aplica&#xE7;&#xE3;o pelo comando <strong>heroku create</strong>, ou seja, rode o comando:</p>
-<pre><code class="language-bash"> git push heroku master
-</code></pre>
-<p><strong>Pronto! Servidor configurado e ready for production.</strong></p>
-<h3>Refer&#xEA;ncias</h3><ul>
-<li><a href="http://justmeteor.com/blog/deploy-to-production-on-heroku">Meteor.js - Deploy to production on Heroku</a></li>
-</ul>]]></description><link>https://udgwebdev.com/deploying-meteor-no-heroku</link><guid isPermaLink="true">https://udgwebdev.com/deploying-meteor-no-heroku</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 14 Mar   16 03:00:00 GMT</pubDate></item></channel></rss>
+</ul>]]></description><link>https://udgwebdev.com/usando-spread-operator-do-es6</link><guid isPermaLink="true">https://udgwebdev.com/usando-spread-operator-do-es6</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 06 Apr   16 03:00:00 GMT</pubDate></item></channel></rss>
