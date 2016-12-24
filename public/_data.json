@@ -1,4 +1,16 @@
 {
+  "quando-nao-usar-arrow-functions": {
+    "title": "Quando não usar Arrow Functions",
+    "tags": [
+      "JavaScript"
+    ],
+    "published": true,
+    "description": "Infelizmente, apesar do Arrow Function ser uma feature muito bacana e útil do ES6, saiba que nem sempre será possível utilizar ela, veja nesse post algumas situações que será necessária evitar sua implementação.",
+    "feature_image": "es6-logo.jpg",
+    "slug": "quando-nao-usar-arrow-functions",
+    "created_at": "24/12/2016",
+    "type": "post"
+  },
   "escrevendo-javascript-melhor-parte-5": {
     "title": "Escrevendo JavaScript melhor - Parte 5",
     "tags": [
