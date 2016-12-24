@@ -16,7 +16,7 @@ Agora com ES6 já é possível converter Number para String currency nativo, usa
 });
 ```
 
-O melhor disso, é que dessa forma você evita fazer as gambiarras clássicas em usar Math.random() ou .toFixed() do JavaScript.
+O melhor disso, é que dessa forma você evita fazer as gambiarras clássicas em usar `Math.abs()` ou `Number.prototype.toFixed()` do JavaScript.
 
 E outro detalhe legal, esta seguro contra o bug do ponto flutuante:
 
