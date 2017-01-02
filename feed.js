@@ -35,7 +35,11 @@ _.chain(posts)
       const postContent = fs.readFileSync(postFile, 'utf8');
       const $ = cheerio.load(postContent);
       const content = $(`div[data-article="${post.slug}"]`).html();
-      post.description = content;
+      post.description = content
+        .replace(/(<img src="\/images\/)/g, `<img src="${ROOT_URL}images/`)
+        .replace(/(href="\/)/g, `href="${ROOT_URL}`)
+      ;
+      console.log(post.description);
     }
     feed.item({
       title: post.title,
