@@ -59,6 +59,13 @@
     ],
     "bonus_data": [
       {
+        "title": "Doe para o blog!",
+        "description": "Conheça mais sobre a história desse blog e veja também como fazer uma doação.",
+        "icon": "fa-thumbs-o-up",
+        "url": "/doacoes",
+        "internal": true
+      },
+      {
         "title": "Trabalhe em TI no Canadá!",
         "description": "VanHack é um site que reune empresas e profissionais de TI para trabalhar e morar no Canadá, se cadastrando no conteúdo Premium, você terá mentores que vão te preparar desde o inglês, entrevistas de trabalho, até fazer o processo de imigração para você conquistar um novo trabalho em TI já morando no Canadá!",
         "icon": "fa-plane",
@@ -86,25 +93,13 @@
         "title": "Ganhe 500MB no Dropbox!",
         "description": "Cadastre-se no Dropbox usando este link e ganhe 500MB extra na sua conta.",
         "icon": "fa-dropbox",
-        "url": "https://www.dropbox.com/referrals/AACvNp7tQFPbtLr3kbKTYg30m8DdacNXj4g?src=global9"
+        "url": "https://www.dropbox.com/referrals/AACzIz5ORPxOc1R-j0zOlAW-SqUDK8_UcAs?src=global9"
       },
       {
         "title": "Ganhe 25$ no Payoneer!",
         "description": "Cadastre-se no Payoneer usando este link e ganhe 25$ após efetuar uma transação de 100$ ou superior na plataforma.",
         "icon": "fa-money",
         "url": "https://share.payoneer.com/nav/93TW1Pv35NgZNvqPxvjr9l4A1MCLYpkkSV-Eiv1HhB0kN3V0GO2liT1E9Of4O5Uv0ufiAhVOlJog_pFpqqROWg2"
-      },
-      {
-        "title": "Ganhe R$10 no Uber!",
-        "description": "Cadastre-se no Uber usando este link e ganhe grátis R$10 em crédito para usar no Uber.",
-        "icon": "fa-car",
-        "url": "https://www.uber.com/invite/caior139ue"
-      },
-      {
-        "title": "Quer um cartão Nubank?",
-        "description": "Através desse link você será convidado para se cadastrar e obter um cartão de crédito Nubank, que é livre de anuidade.",
-        "icon": "fa-credit-card",
-        "url": "https://sconta.nubank.com.br/referral.html?id=Lx3buFSXsRcAAAFY0PfT4A&msg=a33ed"
       }
     ]
   }
