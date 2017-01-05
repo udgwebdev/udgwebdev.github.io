@@ -37,9 +37,8 @@ _.chain(posts)
       const content = $(`div[data-article="${post.slug}"]`).html();
       post.description = content
         .replace(/(<img src="\/images\/)/g, `<img src="${ROOT_URL}images/`)
-        .replace(/(href="\/)/g, `href="${ROOT_URL}`)
+        .replace(/(href=\"\/)/g, `href="${ROOT_URL}`)
       ;
-      console.log(post.description);
     }
     feed.item({
       title: post.title,
