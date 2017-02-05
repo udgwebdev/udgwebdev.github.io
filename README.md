@@ -10,9 +10,9 @@ Entretanto, aceitamos doações, com intuito de manter o blog no ar e se possív
 
 Qualquer quantia será bem-vinda e para realizar doações, você pode escolher as seguintes opções:
 
-Doação em bitcoins: **12uZ7UpUvvTgDbP95ZSuBg38LyoEUJLaSd**
-Doação em ethereum: **0x75b8eA6c67b3b21F420f974CD9495Ce6EF6fCdaa**
-Doação em dinheiro: [Paypal](https://www.paypal.com/br/cgi-bin/webscr?cmd=_flow&SESSION=aes9atAIZyqEfnOX7Ggk3ti3kQnUh1rcNOjmqwkcznMkORQxqA7ZrqkdVZC&dispatch=5885d80a13c0db1f8e263663d3faee8d333dc9aadeed3fe0b5b299d55fd35542)
+Doação em bitcoins: **12uZ7UpUvvTgDbP95ZSuBg38LyoEUJLaSd**  
+Doação em ethereum: **0x75b8eA6c67b3b21F420f974CD9495Ce6EF6fCdaa**  
+Doação em dinheiro: [Paypal](https://www.paypal.com/br/cgi-bin/webscr?cmd=_flow&SESSION=aes9atAIZyqEfnOX7Ggk3ti3kQnUh1rcNOjmqwkcznMkORQxqA7ZrqkdVZC&dispatch=5885d80a13c0db1f8e263663d3faee8d333dc9aadeed3fe0b5b299d55fd35542)  
 
 ## Autor
 
