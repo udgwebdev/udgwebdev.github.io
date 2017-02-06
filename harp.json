@@ -59,11 +59,17 @@
     ],
     "bonus_data": [
       {
-        "title": "Doe para o blog!",
+        "title": "Aceitamos doações!",
         "description": "Conheça mais sobre a história desse blog e veja também como fazer uma doação.",
         "icon": "fa-thumbs-o-up",
         "url": "/doacoes",
         "internal": true
+      },
+      {
+        "title": "Cotação de bitcoins em realtime",
+        "description": "Acompanhe cotações de bitcoins e outras altcoins em tempo real de traders brasileiras através do WatchCoins",
+        "icon": "fa-btc",
+        "url": "https://watchcoins.herokuapp.com"
       },
       {
         "title": "Trabalhe em TI no Canadá!",
