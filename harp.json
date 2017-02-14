@@ -15,48 +15,6 @@
       "development": "http://localhost:3000/",
       "production": "https://udgwebdev.com/"
     },
-    "books": [
-      {
-        "title": "Rework: Mude sua maneira de trabalhar",
-        "url": "https://www.amazon.com.br/gp/product/B00A3CSMZK/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00A3CSMZK&linkCode=as2&tag=undewebd-20&linkId=CJFEWTOU6M7PBBP4",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=B00A3CSMZK"
-      },
-      {
-        "title": "Remote: Office Not Required",
-        "url": "https://www.amazon.com.br/gp/product/B00C0ALZ0W/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00C0ALZ0W&linkCode=as2&tag=undewebd-20&linkId=S6JYDTJVQARG5NOB",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=B00C0ALZ0W"
-      },
-      {
-        "title": "O Clique de 1 Bilhão de Dólares",
-        "url": "https://www.amazon.com.br/gp/product/8580577500/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8580577500&linkCode=as2&tag=undewebd-20&linkId=5EKJ7VYRS4S5YSZD",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=8580577500"
-      },
-      {
-        "title": "A Loja De Tudo. Jeff Bezos E A Era Da Amazon",
-        "url": "https://www.amazon.com.br/gp/product/8580574897/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8580574897&linkCode=as2&tag=undewebd-20&linkId=2CRGV7EL5BXGOJ6V",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=8580574897"
-      },
-      {
-        "title": "A Startup Enxuta",
-        "url": "https://www.amazon.com.br/gp/product/B00A3C4GAK/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00A3C4GAK&linkCode=as2&tag=undewebd-20&linkId=E67PC7HZ5TE6DLGL",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=B00A3C4GAK"
-      },
-      {
-        "title": "De zero a um",
-        "url": "https://www.amazon.com.br/gp/product/B00O7ZN5KQ/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00O7ZN5KQ&linkCode=as2&tag=undewebd-20&linkId=CZLT5243NUELNU52",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=B00O7ZN5KQ"
-      },
-      {
-        "title": "Running Lean",
-        "url": "https://www.amazon.com.br/gp/product/B006UKFFE0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B006UKFFE0&linkCode=as2&tag=undewebd-20&linkId=L4ETVFTGT3P4GXOU",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=B006UKFFE0"
-      },
-      {
-        "title": "Criatividade S/A",
-        "url": "https://www.amazon.com.br/gp/product/8532529569/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8532529569&linkCode=as2&tag=undewebd-20&linkId=MDNVUVSG4XO4WPIA",
-        "id_url": "http://ir-br.amazon-adsystem.com/e/ir?t=undewebd-20&l=as2&o=33&a=8532529569"
-      }
-    ],
     "bonus_data": [
       {
         "title": "Aceitamos doações!",
@@ -69,7 +27,7 @@
         "title": "Cotação de bitcoins em realtime",
         "description": "Acompanhe cotações de bitcoins e outras altcoins em tempo real de traders brasileiras através do WatchCoins",
         "icon": "fa-btc",
-        "url": "https://watchcoins.herokuapp.com"
+        "url": "https://watchcoins.net"
       },
       {
         "title": "Trabalhe em TI no Canadá!",
