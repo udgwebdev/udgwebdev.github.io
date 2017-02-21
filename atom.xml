@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 14 Feb 2017 20:15:07 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 14 Feb 2017 20:15:07 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Quando não usar Arrow Functions]]></title><description><![CDATA[<h1>Quando n&#xE3;o usar Arrow Functions</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="24/12/2016" pubdate=""><b>24/12/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="ES6 Arrow Functions" title="ES6 Arrow Functions"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 21 Feb 2017 00:52:39 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 21 Feb 2017 00:52:38 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Aumentando performance do Socket.IO]]></title><description><![CDATA[<h1>Aumentando performance do Socket.IO</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="20/02/2017" pubdate=""><b>20/02/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/socket-io.jpg" alt="Aumentando performance do Socket.IO" title="Aumentando performance do Socket.IO"></p>
+<p>Fala galera! Ultimamente andei sem muito tempo para me dedicar no blog aqui, mas hoje venho com um post bacana para compens&#xE1;-los!<br>Esse post ter&#xE1; uma implementa&#xE7;&#xE3;o bem simples e r&#xE1;pida de se fazer, e os ganhos em performance ser&#xE3;o gigantescos para uma aplica&#xE7;&#xE3;o Node.js que utilize Socket.IO.</p>
+<p>Para quem n&#xE3;o conhece, o Socket.IO &#xE9; um framework bem popular no Node.js, sua fun&#xE7;&#xE3;o &#xE9; fornecer uma comunica&#xE7;&#xE3;o bidirecional entre cliente e servidor, pelo qual permite implementar intera&#xE7;&#xF5;es realtime na aplica&#xE7;&#xE3;o.<br>Aqui no blog h&#xE1; alguns posts sobre Socket.IO, ent&#xE3;o caso queria conhec&#xEA;-lo na pr&#xE1;tica, recomendo a leitura desses posts:</p>
+<ul>
+<li><a href="https://udgwebdev.com/real-time-com-socket-io-no-nodejs" title="Real-time com Socket.IO no Node.js">Real-time com Socket.IO no Node.js</a></li>
+<li><a href="https://udgwebdev.com/criando-um-chat-usando-session-do-express-4-no-socket-io-1-0" title="Criando um chat usando Session do Express 4 no Socket.IO 1.0">Criando um chat usando Session do Express 4 no Socket.IO 1.0</a></li>
+<li><a href="https://udgwebdev.com/socket-io-com-redis" title="Socket.IO com Redis">Socket.IO com Redis</a></li>
+<li><a href="https://udgwebdev.com/nodejs-express-socketio-e-sessions" title="Node.js Express, Socket.IO e Sessions">Node.js Express, Socket.IO e Sessions</a></li>
+<li><a href="https://udgwebdev.com/node-js-para-leigos-explorando-real-time" title="Node.js para leigos - Explorando real-time">Node.js para leigos - Explorando real-time</a></li>
+</ul>
+<h2>Aumentando performance usando uWebSocket</h2><p>Como disse no come&#xE7;o, esse post ser&#xE1; bem r&#xE1;pido, pr&#xE1;tico e com um resultado sensacional no final, se voc&#xEA; j&#xE1; possui uma aplica&#xE7;&#xE3;o com Socket.IO, e j&#xE1; utiliza suas principais features, e gostaria de aumentar performance, sem ter a necessidade de aplicar grandes modifica&#xE7;&#xF5;es na aplica&#xE7;&#xE3;o, para isso basta instalar o m&#xF3;dulo <code>uws</code>, conhecido como uWebSocket.</p>
+<pre><code class="language-bash">npm install uws --save
+</code></pre>
+<p>Em resumo, este m&#xF3;dulo &#xE9; uma vers&#xE3;o otimizada do WebSockets, t&#xE3;o otimizado que foi escrito em C/C++ e esta dispon&#xED;vel tamb&#xE9;m como addon para o Node.js. Ele possui a mesma interface do WebSocket convencional, tanto &#xE9; que se voc&#xEA; possui no server-side o m&#xF3;dulo <code>ws</code>, voc&#xEA; s&#xF3; ter&#xE1; o simples trabalho de remov&#xEA;-lo, instalar o <code>uws</code> e mudar no carregamento de seu m&#xF3;dulo, de <code>require(&apos;ws&apos;)</code> para <code>require(&apos;uws&apos;)</code>.</p>
+<p>No nosso caso, vamos supor que temos uma aplica&#xE7;&#xE3;o que utilize o Socket.IO.</p>
+<pre><code class="language-javascript">const http = require(&apos;http&apos;);
+const express = require(&apos;express&apos;);
+const socketIO = require(&apos;socket.io&apos;);
+
+const app = express();
+const server = http.Server(app);
+const io = socketIO(server);
+
+io.on(&apos;connection&apos;, (socket) =&gt; {
+  // Enviando &apos;hello!&apos; para todos os clientes conectados
+  io.emit(&apos;data&apos;, &apos;hello!&apos;); 
+});
+
+server.listen(3000, () =&gt; console.log(&apos;Socket.IO Running...&apos;));
+</code></pre>
+<p>Neste caso, para adotar uma implementa&#xE7;&#xE3;o WebSockets diferente da convencional no Socket.IO, basta fazer as seguintes modifica&#xE7;&#xF5;es:</p>
+<pre><code class="language-javascript">const http = require(&apos;http&apos;);
+const express = require(&apos;express&apos;);
+const socketIO = require(&apos;socket.io&apos;);
+const uws = require(&apos;uws&apos;);
+
+const app = express();
+const server = http.Server(app);
+const io = socketIO(server);
+
+// O atributo io.ws &#xE9; o respons&#xE1;vel pela implementa&#xE7;&#xE3;o WebSockets.
+// No Socket.IO &#xE9; necess&#xE1;rio desativar &apos;perMessageDeflate&apos; 
+io.ws = new uws.Server({ perMessageDeflate: false });
+
+io.on(&apos;connection&apos;, (socket) =&gt; {
+  io.emit(&apos;data&apos;, &apos;hello!&apos;); 
+});
+
+server.listen(3000, () =&gt; console.log(&apos;Socket.IO Running...&apos;));
+</code></pre>
+<p>Com essa simples mudan&#xE7;a, sua aplica&#xE7;&#xE3;o Socket.IO estar&#xE1; <strong>62x mais eficiente no consumo de mem&#xF3;ria, 42x melhor na gest&#xE3;o de conex&#xF5;es e 61x mais r&#xE1;pido no throughput de mensagens curtas</strong>.<br>Esses dados, est&#xE3;o no readme do <a href="https://github.com/uWebSockets/uWebSockets">github uWebSockets</a>, l&#xE1; tem mais detalhes sobre features desse m&#xF3;dulo e tamb&#xE9;m h&#xE1; um benchmark comparando uWebSockets com outros m&#xF3;dulos populares.</p>
+<p>At&#xE9; a pr&#xF3;xima!</p>]]></description><link>https://udgwebdev.com/aumentando-performance-do-socketio</link><guid isPermaLink="true">https://udgwebdev.com/aumentando-performance-do-socketio</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 20 Feb   17 02:00:00 GMT</pubDate></item><item><title><![CDATA[Quando não usar Arrow Functions]]></title><description><![CDATA[<h1>Quando n&#xE3;o usar Arrow Functions</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="24/12/2016" pubdate=""><b>24/12/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="ES6 Arrow Functions" title="ES6 Arrow Functions"></p>
 <p>Infelizmente, apesar do <strong>Arrow Function</strong> ser uma feature muito bacana e &#xFA;til do ES6, saiba que nem sempre ser&#xE1; poss&#xED;vel utilizar ela, pois ela n&#xE3;o foi feita para substituir 100% a declara&#xE7;&#xE3;o de function principal, o arrow function, apesar de trazer um <strong>syntax sugar</strong> e algumas utilidades como, por exemplo, compartilhamento de contextos, voc&#xEA; precisa antes de us&#xE1;-la, aprender tamb&#xE9;m quando n&#xE3;o us&#xE1;-la para que voc&#xEA; n&#xE3;o fique perdido na procura de um bug de dif&#xED;cil de resolver, veja a seguir uma lista com poss&#xED;veis situa&#xE7;&#xF5;es para <strong>N&#xC3;O USAR</strong> arrow funcition.</p>
 <h2>Click handlers</h2><p>Para exemplificar, vamos supor que existe temos um bot&#xE3;o pelo qual queremos mudar sua cor entre azul e vermelho, conforme ele &#xE9; clicado, para isso temos o seguinte html:</p>
 <pre><code class="language-html">&lt;style&gt;
@@ -801,31 +852,4 @@ Veja nesse post como estruturar sua aplica&#xE7;&#xE3;o Meteor 1.3 utilizando su
 </code></pre>
 <p>Essa nova estrutura ficou muito mais clara e tudo esta orientado aos comandos <strong>import</strong> e <strong>export</strong> do ES6, facilitando a organiza&#xE7;&#xE3;o clean do projeto e eliminando a m&#xE1; conven&#xE7;&#xE3;o do uso de c&#xF3;digos globais.
 Para mais detalhes, recomendo a leitura desse link: <a href="http://guide.meteor.com/structure.html" title="Meteor Application Structure">Meteor Application Structure</a>.
-At&#xE9; a pr&#xF3;xima!</p>]]></description><link>https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3</link><guid isPermaLink="true">https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 13 May   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Usando Spread operator do ES6]]></title><description><![CDATA[<h1>Usando Spread operator do ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="06/04/2016" pubdate=""><b>06/04/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Usando Spread operator do ES6" title="Usando Spread operator do ES6"></p>
-<p>Se voc&#xEA; j&#xE1; trabalha com alguns recursos do ES6, recomendo a leitura desse post que vai falar sobre Spread Operator.
-O Spread Operator basicamente converte um array em argumentos, ele &#xE9; muito &#xFA;til quando se precisar quebrar um array para passar seus valores para uma fun&#xE7;&#xE3;o ou construtor de um objeto como argumentos de valores separados.
-Para exemplificar na pr&#xE1;tica, vamos criar uma simples fun&#xE7;&#xE3;o de soma, que precisa de 2 argumentos como par&#xE2;metro de entrada em sua fun&#xE7;&#xE3;o:</p>
-<pre><code class="language-javascript"> function soma(a, b) {
-     return a + b;
-   }
-</code></pre>
-<p>At&#xE9; aqui n&#xE3;o h&#xE1; nenhum segredo nessa simples fun&#xE7;&#xE3;o que retorna a soma de dois valores. Se voc&#xEA; pretende usar essa fun&#xE7;&#xE3;o voc&#xEA; pode simplesmente fazer:</p>
-<pre><code class="language-javascript"> soma(1, 2); // retorna: 3
-</code></pre>
-<p>E se voc&#xEA; pretende usar um array? Como passar 2 valores de um array como argumento? O jeito mais &#xF3;bvio seria:</p>
-<pre><code class="language-javascript"> var arr = [1, 2];
- soma(arr[0], arr[1]); // retorna: 3
-</code></pre>
-<p>Tem um jeito mais elegante? Tem! Voc&#xEA; pode usar <code>soma.apply(null, arr)</code> para invocar essa fun&#xE7;&#xE3;o:</p>
-<pre><code class="language-javascript"> var arr = [1, 2];
- soma.apply(null, arr); // retorna: 3
-</code></pre>
-<p>Obs.: O primeiro par&#xE2;metro null, &#xE9; referente ao contexto <strong>this</strong> que seria usado internamente na fun&#xE7;&#xE3;o <code>soma()</code>, como n&#xE3;o &#xE9; utilizado <strong>this</strong> nessa fun&#xE7;&#xE3;o, voc&#xEA; pode deixar como <strong>null</strong> que ele utilizar&#xE1; o contexto <strong>this</strong> default da fun&#xE7;&#xE3;o.
-E o Spread operator? Aahhhh esse sim &#xE9; o melhor de todos, veja:</p>
-<pre><code class="language-javascript"> var arr = [1, 2];
- soma(...arr); // retorna: 3
-</code></pre>
-<p>Basicamente voc&#xEA; tudo se resolve com a s&#xED;ntaxe: <strong>...array</strong> para que ele quebre o array em argumentos e dessa forma voc&#xEA; obtem uma forma mais elegante e enxuta de usar arrays como argumentos.</p>
-<h3>Melhor refer&#xEA;ncia!</h3><ul>
-<li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator">MDN - Spread operator</a></li>
-</ul>]]></description><link>https://udgwebdev.com/usando-spread-operator-do-es6</link><guid isPermaLink="true">https://udgwebdev.com/usando-spread-operator-do-es6</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 06 Apr   16 03:00:00 GMT</pubDate></item></channel></rss>
+At&#xE9; a pr&#xF3;xima!</p>]]></description><link>https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3</link><guid isPermaLink="true">https://udgwebdev.com/estruturando-uma-aplicacao-meteor-1-3</guid><category><![CDATA[Meteor]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 13 May   16 03:00:00 GMT</pubDate></item></channel></rss>
