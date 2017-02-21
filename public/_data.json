@@ -1,4 +1,17 @@
 {
+  "aumentando-performance-do-socketio": {
+    "title": "Aumentando performance do Socket.IO",
+    "tags": [
+      "JavaScript",
+      "Node.js"
+    ],
+    "published": true,
+    "description": "Veja nesse post como fazer uma simples mudança, que visa aumentar e muito a performance numa aplicação Socket.IO, apenas mudando a implementação WebSockets para o addon uWebSockets.",
+    "feature_image": "socket-io.jpg",
+    "slug": "aumentando-performance-do-socketio",
+    "created_at": "20/02/2017",
+    "type": "post"
+  },
   "quando-nao-usar-arrow-functions": {
     "title": "Quando não usar Arrow Functions",
     "tags": [
