@@ -1,4 +1,17 @@
 {
+  "voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes": {
+    "title": "Você pode colaborar em projetos open-source fazendo doações",
+    "published": true,
+    "tags": [
+      "SouDev"
+    ],
+    "description": "Um post não técnico que tem o objetivo de estimular as pessoas a reconhecerem mais os projetos open-source que elas curtem usar através da simples atitude em realizar uma doação.",
+    "alias_url": "https://medium.com/@crp_underground/você-pode-colaborar-em-projetos-open-source-fazendo-doações-d719e87a27cd",
+    "slug": "voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes",
+    "created_at": "26/02/2017",
+    "type": "redirect",
+    "redirected_to": "Medium"
+  },
   "aumentando-performance-do-socketio": {
     "title": "Aumentando performance do Socket.IO",
     "tags": [
