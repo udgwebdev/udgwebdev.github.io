@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Node.js",
+    "description": "Veja nessa página um compilado com diversos posts sobre Node.js, incluindo também os meus livros: Aplicações web realtime com Node.js e Construindo APIs com Node.js, bons estudos!",
+    "published": true,
+    "slug": "nodejs",
+    "feature_image": "nodejs-para-leigos.jpg",
+    "type": "page"
+  }
+}

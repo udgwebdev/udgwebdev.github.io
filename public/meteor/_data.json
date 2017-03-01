@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Meteor",
+    "description": "Depois de falar muito sobre Node.js, estou abrindo no blog uma nova página com conteúdo dedicado sobre o framework Meteor.",
+    "published": true,
+    "slug": "meteor",
+    "feature_image": "meteor-logo.jpg",
+    "type": "page"
+  }
+}

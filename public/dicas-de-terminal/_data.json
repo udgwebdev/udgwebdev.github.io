@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Dicas de Terminal",
+    "description": "Com objetivo de apresentar pra galera o maravilhoso mundo da tela preta, publicarei algumas dicas de terminal que visa facilitar o seu trabalho no Linux.",
+    "published": true,
+    "slug": "dicas-de-terminal",
+    "feature_image": "terminal-console-linux.jpg",
+    "type": "page"
+  }
+}

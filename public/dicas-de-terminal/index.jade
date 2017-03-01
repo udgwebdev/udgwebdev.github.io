@@ -1,0 +1,14 @@
+h1 Dicas de Terminal
+
+p.text-center
+  img(src="/images/terminal-console-linux.jpg" alt="Terminal console do Linux" width="200" height="200")
+
+p Com objetivo de apresentar pra galera linux o maravilhoso mundo da tela preta (terminal console), passarei a postar algumas dicas simples que visam agilizar e facilitar muito o seu trabalho usando <strong>Linux, Unix ou MacOS</strong>. Este post não pretende ter fim, a idéia é sempre que surgir uma dica legal irei publicar no blog e atualizar essa página.
+
+h3 Posts sobre dicas de terminal
+each menu in public.menu._data.index.menu
+  if (menu.title === "Dicas de terminal")
+    ul
+      each post in menu.posts
+        li
+          a(href="/#{post.slug}" rel="me" title="#{post.title}") #{post.title}
