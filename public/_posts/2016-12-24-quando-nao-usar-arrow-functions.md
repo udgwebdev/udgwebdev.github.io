@@ -4,7 +4,7 @@ Infelizmente, apesar do **Arrow Function** ser uma feature muito bacana e útil 
 
 ## Click handlers
 
-Para exemplificar, vamos supor que existe temos um botão pelo qual queremos mudar sua cor entre azul e vermelho, conforme ele é clicado, para isso temos o seguinte html:
+Para exemplificar, vamos supor que existe um botão pelo qual queremos mudar sua cor entre azul e vermelho, conforme ele é clicado, para isso temos o seguinte html:
 
 ``` html
 <style>
