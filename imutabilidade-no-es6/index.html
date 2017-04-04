@@ -3,13 +3,13 @@
 <pre><code class="language-javascript">const score = 10;
 console.log(score); // 10
 
-score = 9; // TypeError: Assignment to constant variable.
+score = 9; // TypeError: Assignment to constant variable
 </code></pre>
-<p>Até aqui tudo ok, foi criado uma constante <code>score</code> com valor <code>10</code>, e ao tentar modificar seu valor para <code>9</code>, ocorreu o erro: <code>TypeError: Assignment to constant variable.</code>, que basicamente é um erro referente a não permissão de mudança de valores em uma constante.</p>
-<p>Outro detalhe do <code>const</code>, você não pode criar uma constante sem valor, pois vai gerar o seguinte erro:</p>
+<p>Até aqui tudo ok, foi criado uma constante <code>score</code> com valor <code>10</code>, e ao tentar modificar seu valor para <code>9</code>, ocorreu o erro: <code>TypeError: Assignment to constant variable</code>, que basicamente é um erro referente a não permissão de mudança de valores em uma variável que já possui um valor.</p>
+<p>Outro detalhe da <code>const</code>, você não pode criá-la sem definir um valor, pois vai gerar o seguinte erro:</p>
 <pre><code class="language-javascript">const score; // SyntaxError: Missing initializer in const declaration
 </code></pre>
-<p>É regra básica, não se pode criar constante sem definir seu estado inicial, pois <code>undefined</code> não é definição de um bom estado, não é?</p>
+<p>É regra básica, não se pode criar constante sem definir seu estado inicial, pois <code>undefined</code> não é uma definição de um bom estado, não é?</p>
 <p>Porém voltando a pergunta inicial, usar <code>const</code> torna qualquer tipo de dado do JavaScript imutável? NÃO!<br>Somente dados primitivos: <strong>String, Number, Date, Boolean</strong>, serão imútaveis, se você usar objeto ou array, facilmente você poderá modificar os atributos internos deles, o que teoricamente deveria ser imútavel também.</p>
 <pre><code class="language-javascript">const scores = [];
 scores.push(1);
@@ -23,7 +23,7 @@ player.name = &#39;John Connor&#39;;
 player.age = 25;
 console.log(player); // { name: &#39;John Connor&#39;, age: 25 }
 </code></pre>
-<p>Nestes dois cenários, seus atributos internos foram modificados e nenhum erro ocorreu, afinal o <code>const</code> somente torna <strong>imútavel as atribuições das variáveis</strong>, ou seja, tudo aquilo que for atribuído usando <code>=</code> na inicialização de uma variável será imútavel ao usar o <code>const</code>. </p>
+<p>Nestes dois cenários, seus atributos internos foram modificados e nenhum erro ocorreu, afinal o <code>const</code> somente torna <strong>imútavel as atribuições das variáveis</strong>, ou seja, tudo aquilo que for atribuído usando <code>=</code> na inicialização de uma variável, qualquer atribuição em propriedades de um objeto serão ignorados.</p>
 <h2>Como tornar objetos e arrays imútaveis??</h2><p>Graças ao ES6, existe uma função chamada <code>Object.freeze()</code> que congela o estado interno de um objeto ou array, ou seja, seus atributos jamais serão modificados, congelando seu estado, e não permitindo a inclusão, alteração e exclusão de seus atributos internos, entenda nesse exemplo:</p>
 <pre><code class="language-javascript">const player = { name: &#39;John Connor&#39; };
 Object.freeze(player);
