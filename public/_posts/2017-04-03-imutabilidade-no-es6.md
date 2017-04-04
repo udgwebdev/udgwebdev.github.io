@@ -6,18 +6,18 @@ Caso você já esteja por dentro sobre o **ES6/7/8/9/100000**, você já deve es
 const score = 10;
 console.log(score); // 10
 
-score = 9; // TypeError: Assignment to constant variable.
+score = 9; // TypeError: Assignment to constant variable
 ```
 
-Até aqui tudo ok, foi criado uma constante `score` com valor `10`, e ao tentar modificar seu valor para `9`, ocorreu o erro: `TypeError: Assignment to constant variable.`, que basicamente é um erro referente a não permissão de mudança de valores em uma constante.
+Até aqui tudo ok, foi criado uma constante `score` com valor `10`, e ao tentar modificar seu valor para `9`, ocorreu o erro: `TypeError: Assignment to constant variable`, que basicamente é um erro referente a não permissão de mudança de valores em uma variável que já possui um valor.
 
-Outro detalhe do `const`, você não pode criar uma constante sem valor, pois vai gerar o seguinte erro:
+Outro detalhe da `const`, você não pode criá-la sem definir um valor, pois vai gerar o seguinte erro:
 
 ``` javascript
 const score; // SyntaxError: Missing initializer in const declaration
 ```
 
-É regra básica, não se pode criar constante sem definir seu estado inicial, pois `undefined` não é definição de um bom estado, não é?
+É regra básica, não se pode criar constante sem definir seu estado inicial, pois `undefined` não é uma definição de um bom estado, não é?
 
 Porém voltando a pergunta inicial, usar `const` torna qualquer tipo de dado do JavaScript imutável? NÃO!  
 Somente dados primitivos: **String, Number, Date, Boolean**, serão imútaveis, se você usar objeto ou array, facilmente você poderá modificar os atributos internos deles, o que teoricamente deveria ser imútavel também.
@@ -39,7 +39,7 @@ player.age = 25;
 console.log(player); // { name: 'John Connor', age: 25 }
 ```
 
-Nestes dois cenários, seus atributos internos foram modificados e nenhum erro ocorreu, afinal o `const` somente torna **imútavel as atribuições das variáveis**, ou seja, tudo aquilo que for atribuído usando `=` na inicialização de uma variável será imútavel ao usar o `const`. 
+Nestes dois cenários, seus atributos internos foram modificados e nenhum erro ocorreu, afinal o `const` somente torna **imútavel as atribuições das variáveis**, ou seja, tudo aquilo que for atribuído usando `=` na inicialização de uma variável, qualquer atribuição em propriedades de um objeto serão ignorados.
 
 ## Como tornar objetos e arrays imútaveis??
 
