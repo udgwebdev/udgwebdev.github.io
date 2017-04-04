@@ -1,4 +1,17 @@
 {
+  "imutabilidade-no-es6": {
+    "title": "Imutabilidade no ES6",
+    "tags": [
+      "JavaScript",
+      "Node.js"
+    ],
+    "published": true,
+    "description": "Aprenda nesse post como trabalhar com imutabilidade não só para dados primitivos (string, number, boolean, date), mas também objetos e arrays do ES6.",
+    "feature_image": "es6-logo.jpg",
+    "slug": "imutabilidade-no-es6",
+    "created_at": "03/04/2017",
+    "type": "post"
+  },
   "voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes": {
     "title": "Você pode colaborar em projetos open-source fazendo doações",
     "published": true,
