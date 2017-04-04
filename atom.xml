@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 22 Mar 2017 14:54:50 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 22 Mar 2017 14:54:49 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Você pode colaborar em projetos open-source fazendo doações]]></title><description><![CDATA[Um post não técnico que tem o objetivo de estimular as pessoas a reconhecerem mais os projetos open-source que elas curtem usar através da simples atitude em realizar uma doação.]]></description><link>https://udgwebdev.com/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</link><guid isPermaLink="true">https://udgwebdev.com/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</guid><category><![CDATA[SouDev]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 26 Feb   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Aumentando performance do Socket.IO]]></title><description><![CDATA[<h1>Aumentando performance do Socket.IO</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="20/02/2017" pubdate=""><b>20/02/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/socket-io.jpg" alt="Aumentando performance do Socket.IO" title="Aumentando performance do Socket.IO"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Apr 2017 01:01:31 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 04 Apr 2017 01:01:30 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Imutabilidade no ES6]]></title><description><![CDATA[<h1>Imutabilidade no ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/04/2017" pubdate=""><b>03/04/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Imutabilidade no ES6" title="Imutabilidade no ES6"></p>
+<p>Caso voc&#xEA; j&#xE1; esteja por dentro sobre o <strong>ES6/7/8/9/100000</strong>, voc&#xEA; j&#xE1; deve estar bem ciente de como trabalhar com imutabilidade usando a keyword <code>const</code> para declarar var&#xED;aveis im&#xFA;taveis. De fato n&#xE3;o h&#xE1; nenhum segredo nisso, basicamente voc&#xEA; declara qualquer <strong>tipo de dados</strong> usando <code>const</code> e nunca mais seu estado inicial ser&#xE1; modificado, correto? Veja esse exemplo:</p>
+<pre><code class="language-javascript">const score = 10;
+console.log(score); // 10
+
+score = 9; // TypeError: Assignment to constant variable.
+</code></pre>
+<p>At&#xE9; aqui tudo ok, foi criado uma constante <code>score</code> com valor <code>10</code>, e ao tentar modificar seu valor para <code>9</code>, ocorreu o erro: <code>TypeError: Assignment to constant variable.</code>, que basicamente &#xE9; um erro referente a n&#xE3;o permiss&#xE3;o de mudan&#xE7;a de valores em uma constante.</p>
+<p>Outro detalhe do <code>const</code>, voc&#xEA; n&#xE3;o pode criar uma constante sem valor, pois vai gerar o seguinte erro:</p>
+<pre><code class="language-javascript">const score; // SyntaxError: Missing initializer in const declaration
+</code></pre>
+<p>&#xC9; regra b&#xE1;sica, n&#xE3;o se pode criar constante sem definir seu estado inicial, pois <code>undefined</code> n&#xE3;o &#xE9; defini&#xE7;&#xE3;o de um bom estado, n&#xE3;o &#xE9;?</p>
+<p>Por&#xE9;m voltando a pergunta inicial, usar <code>const</code> torna qualquer tipo de dado do JavaScript imut&#xE1;vel? N&#xC3;O!<br>Somente dados primitivos: <strong>String, Number, Date, Boolean</strong>, ser&#xE3;o im&#xFA;taveis, se voc&#xEA; usar objeto ou array, facilmente voc&#xEA; poder&#xE1; modificar os atributos internos deles, o que teoricamente deveria ser im&#xFA;tavel tamb&#xE9;m.</p>
+<pre><code class="language-javascript">const scores = [];
+scores.push(1);
+scores.push(3);
+scores.push(4);
+console.log(scores); /// [1, 3, 4]
+</code></pre>
+<p>O mesmo cen&#xE1;rio ocorre para objetos:</p>
+<pre><code class="language-javascript">const player = {};
+player.name = &apos;John Connor&apos;;
+player.age = 25;
+console.log(player); // { name: &apos;John Connor&apos;, age: 25 }
+</code></pre>
+<p>Nestes dois cen&#xE1;rios, seus atributos internos foram modificados e nenhum erro ocorreu, afinal o <code>const</code> somente torna <strong>im&#xFA;tavel as atribui&#xE7;&#xF5;es das vari&#xE1;veis</strong>, ou seja, tudo aquilo que for atribu&#xED;do usando <code>=</code> na inicializa&#xE7;&#xE3;o de uma vari&#xE1;vel ser&#xE1; im&#xFA;tavel ao usar o <code>const</code>. </p>
+<h2>Como tornar objetos e arrays im&#xFA;taveis??</h2><p>Gra&#xE7;as ao ES6, existe uma fun&#xE7;&#xE3;o chamada <code>Object.freeze()</code> que congela o estado interno de um objeto ou array, ou seja, seus atributos jamais ser&#xE3;o modificados, congelando seu estado, e n&#xE3;o permitindo a inclus&#xE3;o, altera&#xE7;&#xE3;o e exclus&#xE3;o de seus atributos internos, entenda nesse exemplo:</p>
+<pre><code class="language-javascript">const player = { name: &apos;John Connor&apos; };
+Object.freeze(player);
+// Silenciosamente n&#xE3;o vai acontecer nenhum erro
+player.age = 25; 
+// Por&#xE9;m n&#xE3;o ser&#xE1; inclu&#xED;do o atributo age no objeto que foi congelado!
+console.log(player); // Object { name: &apos;John Connor&apos; }
+</code></pre>
+<p>No caso do array, qualquer modifica&#xE7;&#xE3;o vai gerar um erro, veja:</p>
+<pre><code class="language-javascript">const scores = [1, 2, 3];
+Object.freeze(scores);
+scores.push(10); // TypeError: Can&apos;t add property 10, object is not extensible
+</code></pre>
+<p>Caso seja necess&#xE1;rio visualizar um erro na modifica&#xE7;&#xE3;o de um objeto, basta usar <code>&apos;use strict&apos;</code> no topo do c&#xF3;digo:</p>
+<pre><code class="language-javascript">&apos;use strict&apos;;
+const player = { name: &apos;John Connor&apos; };
+Object.freeze(player);
+player.age = 25; // TypeError: Can&apos;t add property age, object is not extensible
+</code></pre>
+<h2>Conclus&#xE3;o</h2><p>Se voc&#xEA; pretende trabalhar 100% com dados im&#xFA;taveis e isso inclui tanto dados primitivos quanto objetos e arrays, basta usar <code>const</code> para as vari&#xE1;veis primitivas e <code>const</code> + <code>Object.freeze()</code> para objetos e ou arrays.</p>
+<p>Fonte: <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">MDN - Object.freeze()</a></p>]]></description><link>https://udgwebdev.com/imutabilidade-no-es6</link><guid isPermaLink="true">https://udgwebdev.com/imutabilidade-no-es6</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 03 Apr   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Você pode colaborar em projetos open-source fazendo doações]]></title><description><![CDATA[Um post não técnico que tem o objetivo de estimular as pessoas a reconhecerem mais os projetos open-source que elas curtem usar através da simples atitude em realizar uma doação.]]></description><link>https://udgwebdev.com/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</link><guid isPermaLink="true">https://udgwebdev.com/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</guid><category><![CDATA[SouDev]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 26 Feb   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Aumentando performance do Socket.IO]]></title><description><![CDATA[<h1>Aumentando performance do Socket.IO</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="20/02/2017" pubdate=""><b>20/02/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/socket-io.jpg" alt="Aumentando performance do Socket.IO" title="Aumentando performance do Socket.IO"></p>
 <p>Fala galera! Ultimamente andei sem muito tempo para me dedicar no blog aqui, mas hoje venho com um post bacana para compens&#xE1;-los!<br>Esse post ter&#xE1; uma implementa&#xE7;&#xE3;o bem simples e r&#xE1;pida de se fazer, e os ganhos em performance ser&#xE3;o gigantescos para uma aplica&#xE7;&#xE3;o Node.js que utilize Socket.IO.</p>
 <p>Para quem n&#xE3;o conhece, o Socket.IO &#xE9; um framework bem popular no Node.js, sua fun&#xE7;&#xE3;o &#xE9; fornecer uma comunica&#xE7;&#xE3;o bidirecional entre cliente e servidor, pelo qual permite implementar intera&#xE7;&#xF5;es realtime na aplica&#xE7;&#xE3;o.<br>Aqui no blog h&#xE1; alguns posts sobre Socket.IO, ent&#xE3;o caso queria conhec&#xEA;-lo na pr&#xE1;tica, recomendo a leitura desses posts:</p>
 <ul>
@@ -767,58 +813,4 @@ Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhe
 <li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
 <li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>See you later!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 27 Jun   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 1]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 1</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/06/2016" pubdate=""><b>02/06/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
-<p>Esse post visa mostrar na pr&#xE1;tica como melhorar algumas gambiarras ou bad codes cl&#xE1;ssicas de se encontrar em qualquer projeto legado JavaScript.</p>
-<p>Com certeza voc&#xEA; j&#xE1; deve ter visto ou escrito alguns dos c&#xF3;digos abaixo, e simplesmente n&#xE3;o fez um refactoring nele, seja por falta de tempo, ou principalmente pelo fato de n&#xE3;o conhecer uma forma mais elegante.</p>
-<h3>1) Mapeando arrays</h3><p>Acredito que esse exemplo &#xE9; o mais cl&#xE1;ssico de todos, e o cen&#xE1;rio &#xE9; o seguinte: voc&#xEA; tem um array de objetos com tamanho X e precisa gerar um novo array com mesmo tamanho, por&#xE9;m aplicando novos campos nesses objetos, modificando alguns dos campos atuais ou caso seja um array de dados primitivos (String, Number ou Date) voc&#xEA; precisa, por exemplo, calcular o valor de cada item do array. Se voc&#xEA; j&#xE1; se deparou com esse cen&#xE1;rio alguma vez na vida, provavelmente voc&#xEA; j&#xE1; viu ou fez um c&#xF3;digo semelhante a este:</p>
-<pre><code class="language-javascript"> // Esse c&#xF3;digo basicamente vai multiplicar por 3 cada valor do array scores
- var scores = [2, 4, 6, 8, 10];
- var newScores = [];
- for(var i = 0; i &lt; scores.length; i++) {
-     newScores.push(scores[i] * 3);
- }
- console.log(newScores); // [6, 12, 18, 24, 30]
-</code></pre>
-<p>Nesse caso, foi necess&#xE1;rio criar um novo array e um loop que percorreu todos os items do primeiro array (<code>scores</code>) para calcular os valores e em seguida inserir seus resultados dentro do array <code>newScores</code>. Mas existe uma forma mais elegante para isso, a solu&#xE7;&#xE3;o &#xE9; usar a fun&#xE7;&#xE3;o <code>Array.prototype.map()</code>, veja como fica:</p>
-<pre><code class="language-javascript"> var scores = [2, 4, 6, 8, 10];
- var newScores = scores.map(score =&gt; score * 3);
- console.log(newScores); // [6, 12, 18, 24, 30]
-</code></pre>
-<h3>2) Interpolando dados em uma string</h3><p>Essa &#xE9; outra cl&#xE1;ssica, que gra&#xE7;as ao ES6 j&#xE1; &#xE9; poss&#xED;vel aplicar concatena&#xE7;&#xE3;o de dados com strings de forma mais elegante, provavelmente voc&#xEA; j&#xE1; deve ter visto muito um c&#xF3;digo parecido com esse:</p>
-<pre><code class="language-javascript"> var name = &quot;John Connor&quot;;
- var message = &quot;I came from future!&quot;;
- var template = &quot;&lt;p&gt;&quot;;
- template += &quot;&lt;h3&gt;&quot;+ name + &quot;&lt;/h3&gt;&quot;;
- template += &quot;&lt;span&gt;&quot;+ message + &quot;&lt;/span&gt;&quot;;
- template += &quot;&lt;/p&gt;&quot;;
-</code></pre>
-<p>Hoje j&#xE1; &#xE9; poss&#xED;vel trabalhar com Template Strings do ES6, permitindo interpolar dados com strings de forma mais elegante, sem precisar concatenar strings utilizando operador &quot;+&quot;, veja como fazer isso:</p>
-<pre><code class="language-javascript"> var name = &quot;John Connor&quot;;
- var message = &quot;I came from future!&quot;;
- var template = `
- &lt;p&gt;
-    &lt;h3&gt;${name}&lt;/h3&gt;
-    &lt;span&gt;${message}&lt;/span&gt;
- &lt;/p&gt;`;
-</code></pre>
-<h3>3) Calculando m&#xE9;dias</h3><p>Fazer c&#xE1;lculos de m&#xE9;dia, em muitos casos voc&#xEA; j&#xE1; deve ter visto c&#xF3;digos parecidos como esse:</p>
-<pre><code class="language-javascript"> var scores = [1, 4, 6, 8];
- var result = 0;
- for (var i = 0; i &lt; scores.length; i++) {
-   result += scores[i];
- }
- result = result / scores.length;
- console.log(result); // 4.75
-</code></pre>
-<p>Nesse caso, voc&#xEA; pode deixar o c&#xF3;digo mais enxuto aplicando a fun&#xE7;&#xE3;o <code>reduce()</code> e no final aplicar a divis&#xE3;o do resultado obtido pelo <code>reduce()</code> com tamanho do array de scores, veja:</p>
-<pre><code class="language-javascript"> var scores = [1, 4, 6, 8];
- var result = scores.reduce((total, score) =&gt; total + score) / scores.length;
- console.log(result); // 4.75
-</code></pre>
-<p>Veja tamb&#xE9;m:</p>
-<ul>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
-</ul>
-<p>Caso voc&#xEA; conhe&#xE7;a algum c&#xF3;digo legado com dicas sobre como escrev&#xEA;-lo melhor comente abaixo! Valeu!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-1</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-1</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 02 Jun   16 03:00:00 GMT</pubDate></item></channel></rss>
+<p>See you later!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 27 Jun   16 03:00:00 GMT</pubDate></item></channel></rss>
