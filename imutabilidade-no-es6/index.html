@@ -24,7 +24,7 @@ player.age = 25;
 console.log(player); // { name: &#39;John Connor&#39;, age: 25 }
 </code></pre>
 <p>Nestes dois cenários, seus atributos internos foram modificados e nenhum erro ocorreu, afinal o <code>const</code> somente torna <strong>imútavel as atribuições das variáveis</strong>, ou seja, tudo aquilo que for atribuído usando <code>=</code> na inicialização de uma variável, qualquer atribuição em propriedades de um objeto serão ignorados.</p>
-<h2>Como tornar objetos e arrays imútaveis??</h2><p>Graças ao ES6, existe uma função chamada <code>Object.freeze()</code> que congela o estado interno de um objeto ou array, ou seja, seus atributos jamais serão modificados, congelando seu estado, e não permitindo a inclusão, alteração e exclusão de seus atributos internos, entenda nesse exemplo:</p>
+<h2>Como tornar objetos e arrays imútaveis??</h2><p>Desde o ES5, já existia uma função chamada <code>Object.freeze()</code> que congela o estado interno de um objeto ou array, ou seja, seus atributos jamais serão modificados, congelando seu estado, e não permitindo a inclusão, alteração e exclusão de seus atributos internos, entenda nesse exemplo:</p>
 <pre><code class="language-javascript">const player = { name: &#39;John Connor&#39; };
 Object.freeze(player);
 // Silenciosamente não vai acontecer nenhum erro
