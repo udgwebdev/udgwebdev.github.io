@@ -43,7 +43,7 @@ Nestes dois cenários, seus atributos internos foram modificados e nenhum erro o
 
 ## Como tornar objetos e arrays imútaveis??
 
-Graças ao ES6, existe uma função chamada `Object.freeze()` que congela o estado interno de um objeto ou array, ou seja, seus atributos jamais serão modificados, congelando seu estado, e não permitindo a inclusão, alteração e exclusão de seus atributos internos, entenda nesse exemplo:
+Desde o ES5, já existia uma função chamada `Object.freeze()` que congela o estado interno de um objeto ou array, ou seja, seus atributos jamais serão modificados, congelando seu estado, e não permitindo a inclusão, alteração e exclusão de seus atributos internos, entenda nesse exemplo:
 
 ``` javascript
 const player = { name: 'John Connor' };
