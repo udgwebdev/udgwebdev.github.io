@@ -1,4 +1,17 @@
 {
+  "sorteio-de-caneca-javascript": {
+    "title": "Sorteio de caneca JavaScript",
+    "tags": [
+      "JavaScript",
+      "Comunicado"
+    ],
+    "published": true,
+    "description": "Dia 22 de maio estarei sorteando em parceria com a loja Eu compraria uma caneca Javascript, veja em detalhes nesse post como participar do sorteio!",
+    "feature_image": "caneca-javascript.jpg",
+    "slug": "sorteio-de-caneca-javascript",
+    "created_at": "02/05/2017",
+    "type": "post"
+  },
   "imutabilidade-no-es6": {
     "title": "Imutabilidade no ES6",
     "tags": [

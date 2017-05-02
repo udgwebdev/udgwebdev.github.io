@@ -5,7 +5,7 @@
     "tags": [
       {
         "title": "Comunicado",
-        "total": 3
+        "total": 4
       },
       {
         "title": "Dicas de terminal",
@@ -33,7 +33,7 @@
       },
       {
         "title": "JavaScript",
-        "total": 18
+        "total": 19
       },
       {
         "title": "Meteor",
@@ -85,6 +85,18 @@
         "title": "Comunicado",
         "posts": [
           {
+            "title": "Sorteio de caneca JavaScript",
+            "tags": [
+              "Comunicado"
+            ],
+            "published": true,
+            "description": "Dia 22 de maio estarei sorteando em parceria com a loja Eu compraria uma caneca Javascript, veja em detalhes nesse post como participar do sorteio!",
+            "feature_image": "caneca-javascript.jpg",
+            "slug": "sorteio-de-caneca-javascript",
+            "created_at": "02/05/2017",
+            "type": "post"
+          },
+          {
             "title": "O blog esta de cara nova!",
             "published": true,
             "tags": [
@@ -120,7 +132,7 @@
             "type": "post"
           }
         ],
-        "total": 3
+        "total": 4
       },
       {
         "title": "Dicas de terminal",
@@ -506,6 +518,18 @@
         "title": "JavaScript",
         "posts": [
           {
+            "title": "Sorteio de caneca JavaScript",
+            "tags": [
+              "JavaScript"
+            ],
+            "published": true,
+            "description": "Dia 22 de maio estarei sorteando em parceria com a loja Eu compraria uma caneca Javascript, veja em detalhes nesse post como participar do sorteio!",
+            "feature_image": "caneca-javascript.jpg",
+            "slug": "sorteio-de-caneca-javascript",
+            "created_at": "02/05/2017",
+            "type": "post"
+          },
+          {
             "title": "Imutabilidade no ES6",
             "tags": [
               "JavaScript"
@@ -720,7 +744,7 @@
             "type": "post"
           }
         ],
-        "total": 18
+        "total": 19
       },
       {
         "title": "Meteor",
