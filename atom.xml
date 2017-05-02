@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 19 Apr 2017 15:01:41 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 19 Apr 2017 15:01:41 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Imutabilidade no ES6]]></title><description><![CDATA[<h1>Imutabilidade no ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/04/2017" pubdate=""><b>03/04/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Imutabilidade no ES6" title="Imutabilidade no ES6"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 02 May 2017 16:58:13 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 02 May 2017 16:58:13 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Sorteio de caneca JavaScript]]></title><description><![CDATA[<h1>Sorteio de caneca JavaScript</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/05/2017" pubdate=""><b>02/05/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="https://udgwebdev.com/images/caneca-javascript.jpg" alt="Sorteio de caneca em parceria com a Eu compraria" title="Sorteio de caneca em parceria com a Eu compraria"></p>
+<p>Fala galera belezinha? Faz um tempinho que n&#xE3;o publico aqui no blog, pois ando muito <a href="https://watchcoins.net">focado em outros projetos</a>, mas fiquem tranquilos que n&#xE3;o abandonarei esse blog t&#xE3;o cedo!</p>
+<p>E para provar que n&#xE3;o esqueci do blog, fechamos uma parceria bacana com a loja geek <a href="https://www.eucompraria.com.br">Eu compraria</a>, pelo qual eles liberaram uma caneca bacana com logo do JavaScript para sortear aqui no blog, e com certeza recomendo a todos que participem deste sorteio!</p>
+<h2>Pr&#xEA;mio</h2><p>O pr&#xEA;mio ser&#xE1; uma caneca com s&#xED;mbolo do JavaScript, com as seguintes caracter&#xED;sticas:</p>
+<ul>
+<li>Material: Cer&#xE2;mica branca</li>
+<li>Estampa: Sublima&#xE7;&#xE3;o de alta qualidade</li>
+<li>Altura: 9,5cm</li>
+<li>Di&#xE2;metro: 8 cm</li>
+<li>Capacidade para 350ml</li>
+</ul>
+<p>Para mais detalhes da caneca acesse: <a href="https://www.eucompraria.com.br/caneca-js-javascript">https://www.eucompraria.com.br/caneca-js-javascript</a></p>
+<h2>Como participar</h2><p>Para participar desse sorteio &#xE9; bem simples, voc&#xEA; precisa fazer as seguintes tarefas:</p>
+<ul>
+<li><a href="https://www.facebook.com/udgwebdev">Curtir a fanpage desse blog</a>, se voc&#xEA; j&#xE1; curte essa fanpage, j&#xE1; completou o passo 1;</li>
+<li><a href="https://www.facebook.com/eucompraria">Curtir a fanpage da loja Eu Compraria</a>, se voc&#xEA; j&#xE1; curte essa fanpage, j&#xE1; completou o passo 2;</li>
+<li>Preencher o <a href="https://www.eucompraria.com.br/pagina/promocao-caneca-javascript.html">form&#xFA;lario do sorteio</a> com seu nome e email para confirmar sua participa&#xE7;&#xE3;o.</li>
+<li>Postar no Facebook a mensagem: <strong>Quero ganhar caneca JavaScript da @eucompraria com blog @udgwebdev: <a href="http://bit.ly/2pjLOnD">http://bit.ly/2pjLOnD</a></strong></li>
+</ul>
+<h2>Regras do sorteio</h2><ul>
+<li>O prazo para participar do sorteio vai at&#xE9; o dia <strong>21 de maio de 2017 at&#xE9; 15:00 da tarde</strong>;</li>
+<li>A data sorteio ser&#xE1; em <strong>22 de maio de 2017 &#xE0;s 11:00 da manh&#xE3;</strong>;</li>
+<li>Somente quem <strong>mora no Brasil</strong> poder&#xE1; participar deste sorteio;</li>
+<li>Divulgaremos o email do sorteado pela <a href="https://www.facebook.com/udgwebdev">fanpage desse blog</a>, e entraremos em contato com o vencedor atrav&#xE9;s do seu email, pelo qual <strong>o vencedor ter&#xE1; at&#xE9; 48 horas para retornar o contato, caso contr&#xE1;rio ser&#xE1; desclassificado e um novo sorteio ser&#xE1; realizado</strong>;</li>
+</ul>
+<h3>Boa sorte! :D</h3>]]></description><link>https://udgwebdev.com/sorteio-de-caneca-javascript</link><guid isPermaLink="true">https://udgwebdev.com/sorteio-de-caneca-javascript</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Comunicado]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 02 May   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Imutabilidade no ES6]]></title><description><![CDATA[<h1>Imutabilidade no ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/04/2017" pubdate=""><b>03/04/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Imutabilidade no ES6" title="Imutabilidade no ES6"></p>
 <p>Caso voc&#xEA; j&#xE1; esteja por dentro sobre o <strong>ES6/7/8/9/100000</strong>, voc&#xEA; j&#xE1; deve estar bem ciente de como trabalhar com imutabilidade usando a keyword <code>const</code> para declarar var&#xED;aveis im&#xFA;taveis. De fato n&#xE3;o h&#xE1; nenhum segredo nisso, basicamente voc&#xEA; declara qualquer <strong>tipo de dados</strong> usando <code>const</code> e nunca mais seu estado inicial ser&#xE1; modificado, correto? Veja esse exemplo:</p>
 <pre><code class="language-javascript">const score = 10;
 console.log(score); // 10
@@ -765,52 +790,4 @@ Quando se trabalha com immutabilidade, compiladores e interpretadores ganham alg
  console.log(mary.toJSON()); // Object { nome: &apos;Mary&apos;, idade: 20 }
 </code></pre>
 <p>Para mais detalhes dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Record">facebook.github.io/immutable-js/docs/#/Record</a>.</p>
-<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p>]]></description><link>https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</link><guid isPermaLink="true">https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 11 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 2]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 2</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="27/06/2016" pubdate=""><b>27/06/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
-<p>Dando continuidade ao post: <a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a>, nesse post falarei sobre mais duas dicas &#xFA;teis para melhorar seu c&#xF3;digo JavaScript.</p>
-<h2>1) Use === no lugar de ==</h2><p>De fato, ainda &#xE9; muito comum ver aplica&#xE7;&#xF5;es JavaScript utilizando <code>==</code> ou <code>!=</code> na compara&#xE7;&#xE3;o entre duas vari&#xE1;veis, apesar desses operadores realizarem a compara&#xE7;&#xE3;o de valores corretamente, eles ignoram a compara&#xE7;&#xE3;o do tipo de dado, ou seja:</p>
-<pre><code class="language-javascript"> // Aqui a compara&#xE7;&#xE3;o esta correta
- console.log(1 == 1) // true
- // Aqui a compara&#xE7;&#xE3;o n&#xE3;o deveria retornar true
- console.log(&apos;1&apos; == 1) // true
-</code></pre>
-<p>Para evitar esse tipo de problemas &#xE9; recomendado utilizar os operadores <code>===</code> e <code>!==</code> para que a compara&#xE7;&#xE3;o seja justa em comparar se os valores s&#xE3;o iguais e principalmente se os tipos de dados s&#xE3;o os mesmos, veja:</p>
-<pre><code class="language-javascript"> // Aqui a compara&#xE7;&#xE3;o esta correta
- console.log(1 === 1) // true
- // Aqui tamb&#xE9;m!
- console.log(&apos;1&apos; === 1) // false
-</code></pre>
-<h2>2) Filtre campos usando shorthand value</h2><p>Essa dica s&#xF3; funciona com ES6 habilitado, e &#xE9; bem &#xFA;til!
-Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhecido <strong>Object destructuring assignment</strong> do ES6, permite extrair campos de um objeto de forma mais elegante:</p>
-<pre><code class="language-javascript"> // &#xC9; muito comum fazer isso
- var nome = cliente.nome;
- // Com shorthand value voc&#xEA; pode fazer isso
- var { nome } = cliente;
-</code></pre>
-<p>Com shorthand value &#xE9; poss&#xED;vel extrair em v&#xE1;riaveis os atributos de um objeto, ou seja, imagine um sistema externo enviando para seu sistema objetos com v&#xE1;rios campos, por&#xE9;m voc&#xEA; somente precisa de apenas alguns campos, nesse caso &#xE9; muito comum voc&#xEA; fazer algo semelhante a isso:</p>
-<pre><code class="language-javascript"> // Imagine que este cliente possua +10 campos
- function formatar(cliente) {
-    // Por&#xE9;m voc&#xEA; s&#xF3; quer retornar nome e email do cliente
-    var nome = cliente.nome;
-    var email = cliente.email;
-    return {
-        nome: nome,
-        email: email
-    };
- }
-</code></pre>
-<p>Com o shorthand value voc&#xEA; pode fazer uma formata&#xE7;&#xE3;o desse objeto cliente de forma mais enxuta, sem contar que essa funcionalidade tamb&#xE9;m serve para criar um novo objeto sem a necessidade de repetir a chave e valor que possua o mesmo nome, ou seja, o retorno dessa fun&#xE7;&#xE3;o pode se resumir da seguinte maneira:</p>
-<pre><code class="language-javascript"> // Esse cliente tamb&#xE9;m possui +10 campos, ok?
- function formatar(cliente) {
-     // Dessa vez, vamos filtrar os campos usando shorthand value
-     var { nome, email } = cliente;
-     // E tamb&#xE9;m ser&#xE1; usado shorthand value no novo objeto
-     return { nome, email };
- }
-</code></pre>
-<p>Veja tamb&#xE9;m:</p>
-<ul>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
-</ul>
-<p>See you later!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 27 Jun   16 03:00:00 GMT</pubDate></item></channel></rss>
+<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p>]]></description><link>https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</link><guid isPermaLink="true">https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 11 Jul   16 03:00:00 GMT</pubDate></item></channel></rss>
