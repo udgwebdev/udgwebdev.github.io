@@ -33,7 +33,7 @@
       },
       {
         "title": "JavaScript",
-        "total": 18
+        "total": 19
       },
       {
         "title": "Meteor",
@@ -49,7 +49,7 @@
       },
       {
         "title": "Node.js",
-        "total": 61
+        "total": 62
       },
       {
         "title": "PaaS",
@@ -506,6 +506,18 @@
         "title": "JavaScript",
         "posts": [
           {
+            "title": "Variáveis e escopos do ES6",
+            "tags": [
+              "JavaScript"
+            ],
+            "published": true,
+            "description": "Entenda na prática como funciona o novo padrão de escopos e declaração de variáveis do ES6",
+            "feature_image": "es6-logo.jpg",
+            "slug": "variaveis-e-escopos-do-es6",
+            "created_at": "12/06/2017",
+            "type": "post"
+          },
+          {
             "title": "Imutabilidade no ES6",
             "tags": [
               "JavaScript"
@@ -720,7 +732,7 @@
             "type": "post"
           }
         ],
-        "total": 18
+        "total": 19
       },
       {
         "title": "Meteor",
@@ -1056,6 +1068,18 @@
       {
         "title": "Node.js",
         "posts": [
+          {
+            "title": "Variáveis e escopos do ES6",
+            "tags": [
+              "Node.js"
+            ],
+            "published": true,
+            "description": "Entenda na prática como funciona o novo padrão de escopos e declaração de variáveis do ES6",
+            "feature_image": "es6-logo.jpg",
+            "slug": "variaveis-e-escopos-do-es6",
+            "created_at": "12/06/2017",
+            "type": "post"
+          },
           {
             "title": "Imutabilidade no ES6",
             "tags": [
@@ -1767,7 +1791,7 @@
             "type": "post"
           }
         ],
-        "total": 61
+        "total": 62
       },
       {
         "title": "PaaS",
