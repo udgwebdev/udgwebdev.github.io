@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 23 May 2017 13:59:25 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 23 May 2017 13:59:25 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Imutabilidade no ES6]]></title><description><![CDATA[<h1>Imutabilidade no ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/04/2017" pubdate=""><b>03/04/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Imutabilidade no ES6" title="Imutabilidade no ES6"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Mon, 12 Jun 2017 15:51:35 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 12 Jun 2017 15:51:35 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Variáveis e escopos do ES6]]></title><description><![CDATA[<h1>Vari&#xE1;veis e escopos do ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/06/2017" pubdate=""><b>12/06/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Vari&#xE1;veis e escopos do ES6" title="Vari&#xE1;veis e escopos do ES6"></p>
+<p>Desde o in&#xED;cio do JavaScript sempre foi muito comum declarar vari&#xE1;veis ou constantes usando a keyword <code>var</code>. &#xC9; importante saber que ao declarar vari&#xE1;veis usando <code>var</code> elas ser&#xE3;o <em>function-scoped</em>, ou seja, s&#xE3;o vis&#xED;veis dentro de um escopo de fun&#xE7;&#xE3;o e tamb&#xE9;m dentro de fun&#xE7;&#xF5;es filhas deste escopo. Isso pode ser um problema pois este comportamento pode se tornar bem confuso. Por exemplo:</p>
+<pre><code class="language-javascript">var msg = &apos;Ol&#xE1; ...&apos;;
+function helloMsg(string) {
+  if (string) {
+    var msg = `Ol&#xE1; ${string}`;
+    return msg;
+  }
+  return msg;
+}
+helloMsg();
+</code></pre>
+<p>Ao olhar a simples l&#xF3;gica voc&#xEA; diria: ah, essa &#xE9; f&#xE1;cil, vai retornar a string <code>&apos;Ol&#xE1; ...&apos;</code>, pois &#xE9;, para nossa surpresa ao executar o comando <code>helloMsg();</code> foi retornado <code>undefined</code>. Isso se deve pelo fato de que o escopo vale para fun&#xE7;&#xE3;o <code>helloMsg()</code> como um todo - mesmo sem esta linha ter sido executada por conta do <code>if (string)</code>. Para voc&#xEA; entender, &#xE9; como se o interpretador JavaScript tivesse lido o c&#xF3;digo todo como o seguinte:</p>
+<pre><code class="language-javascript">var msg = &apos;Ol&#xE1; ...&apos;;
+function helloMsg(string) {
+  // Internamente o interpretador vai criar uma var&#xED;avel undefined no escopo da function
+  var msg; 
+  if (string) {
+    var msg = `Ol&#xE1; ${string}`;
+    return msg;
+  }
+  return msg;
+}
+helloMsg();
+</code></pre>
+<h2>Escopo de bloco com let e const</h2><p>No ES6 existem duas novas formas para declarar vari&#xE1;veis, s&#xE3;o <code>let</code> e <code>const</code>. Diferente de <code>var</code>, essas vari&#xE1;veis s&#xE3;o <em>block-scoped</em>, ou seja, elas s&#xE3;o vis&#xED;veis dentro de um escopo de bloco e tamb&#xE9;m dentro de blocos filhos deste escopo. Este comportamento se aproxima de outras linguagens de programa&#xE7;&#xE3;o, como por exemplo <em>Ruby</em>.</p>
+<h3>Usando let</h3><p><code>let</code> funciona como <code>var</code>, mas como escopo de bloco em vez de escopo de fun&#xE7;&#xE3;o. Perceba no c&#xF3;digo abaixo que a vari&#xE1;vel <code>tmp</code> s&#xF3; existe dentro do bloco do if:</p>
+<pre><code class="language-javascript">function nomeEditora(string) {
+  if (string) {
+    let tmp = string;
+  }
+  console.log(tmp);
+  // ReferenceError: tmp is not defined
+  return string;
+}
+</code></pre>
+<h3>Usando const</h3><p><em>const</em> funciona similar a <em>let</em>, com a diferen&#xE7;a que voc&#xEA; j&#xE1; precisa iniciar com um valor fixo na sua declara&#xE7;&#xE3;o, e este valor n&#xE3;o poder&#xE1; ser trocado depois, ou seja, as constantes s&#xE3;o imut&#xE1;veis (<em>immutable variables</em>). Exemplo:</p>
+<pre><code class="language-javascript">const nome;
+// SyntaxError: Missing initializer in const declaration
+
+const nome = &apos;John Connor&apos;;
+nome = &apos;Sarah Connor&apos;;
+// TypeError: Assignment to constant variable.
+</code></pre>
+<h2>Quando usar const ou let</h2><p>Recomendamos que use sempre <code>let</code> ou <code>const</code>, e evite <code>var</code>. Quando voc&#xEA; souber que o valor da var&#xED;avel n&#xE3;o ir&#xE1; mudar, ou seja, a constante nunca poder&#xE1; receber outro valor ou ser usada com opera&#xE7;&#xF5;es usando <code>++</code> ou <code>--</code>, use <code>const</code>. &#xC9; importante saber que o objeto e array que for uma constante pode se alterar em seus atributos internos sem problemas, exemplo:</p>
+<pre><code class="language-javascript">const usuario = {};
+usuario.nome = &apos;John Connor&apos;;
+console.log(usuario.nome); // John Connor
+
+const scores = [];
+scores.push(1);
+scores.push(3);
+scores.push(2);
+console.log(scores); // [1, 3, 2]
+</code></pre>
+<p>Ao usar a fun&#xE7;&#xE3;o <code>for</code> tamb&#xE9;m prefira us&#xE1;-la com <code>const</code>. O compilador do ES6 associar&#xE1; um valor imut&#xE1;vel a constante para cada loop. Lembrando que o valor da constante x dentro do bloco do <code>for</code> n&#xE3;o poder&#xE1; ser alterada:</p>
+<pre><code class="language-javascript">for (const x of [&apos;a&apos;, &apos;b&apos;]) {
+  console.log(x);
+}
+</code></pre>
+<p>Entretando, use <code>let</code> quando o valor inicial de uma var&#xED;avel ir&#xE1; mudar. Por exemplo:</p>
+<pre><code class="language-javascript">let counter = 0;
+// initial value
+counter++;
+// change
+
+let obj = {};
+// initial value
+obj = { foo: 123 };
+// change
+</code></pre>
+<p>Se voc&#xEA; seguir esses conselhos, voc&#xEA; n&#xE3;o ter&#xE1; mais a keyword <code>var</code> em seus futuros projetos JavaScript.</p>]]></description><link>https://udgwebdev.com/variaveis-e-escopos-do-es6</link><guid isPermaLink="true">https://udgwebdev.com/variaveis-e-escopos-do-es6</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 12 Jun   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Imutabilidade no ES6]]></title><description><![CDATA[<h1>Imutabilidade no ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/04/2017" pubdate=""><b>03/04/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Imutabilidade no ES6" title="Imutabilidade no ES6"></p>
 <p>Caso voc&#xEA; j&#xE1; esteja por dentro sobre o <strong>ES6/7/8/9/100000</strong>, voc&#xEA; j&#xE1; deve estar bem ciente de como trabalhar com imutabilidade usando a keyword <code>const</code> para declarar var&#xED;aveis im&#xFA;taveis. De fato n&#xE3;o h&#xE1; nenhum segredo nisso, basicamente voc&#xEA; declara qualquer <strong>tipo de dados</strong> usando <code>const</code> e nunca mais seu estado inicial ser&#xE1; modificado, correto? Veja esse exemplo:</p>
 <pre><code class="language-javascript">const score = 10;
 console.log(score); // 10
@@ -765,52 +836,4 @@ Quando se trabalha com immutabilidade, compiladores e interpretadores ganham alg
  console.log(mary.toJSON()); // Object { nome: &apos;Mary&apos;, idade: 20 }
 </code></pre>
 <p>Para mais detalhes dessa estrutura: <a href="https://facebook.github.io/immutable-js/docs/#/Record">facebook.github.io/immutable-js/docs/#/Record</a>.</p>
-<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p>]]></description><link>https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</link><guid isPermaLink="true">https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 11 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 2]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 2</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="27/06/2016" pubdate=""><b>27/06/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
-<p>Dando continuidade ao post: <a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a>, nesse post falarei sobre mais duas dicas &#xFA;teis para melhorar seu c&#xF3;digo JavaScript.</p>
-<h2>1) Use === no lugar de ==</h2><p>De fato, ainda &#xE9; muito comum ver aplica&#xE7;&#xF5;es JavaScript utilizando <code>==</code> ou <code>!=</code> na compara&#xE7;&#xE3;o entre duas vari&#xE1;veis, apesar desses operadores realizarem a compara&#xE7;&#xE3;o de valores corretamente, eles ignoram a compara&#xE7;&#xE3;o do tipo de dado, ou seja:</p>
-<pre><code class="language-javascript"> // Aqui a compara&#xE7;&#xE3;o esta correta
- console.log(1 == 1) // true
- // Aqui a compara&#xE7;&#xE3;o n&#xE3;o deveria retornar true
- console.log(&apos;1&apos; == 1) // true
-</code></pre>
-<p>Para evitar esse tipo de problemas &#xE9; recomendado utilizar os operadores <code>===</code> e <code>!==</code> para que a compara&#xE7;&#xE3;o seja justa em comparar se os valores s&#xE3;o iguais e principalmente se os tipos de dados s&#xE3;o os mesmos, veja:</p>
-<pre><code class="language-javascript"> // Aqui a compara&#xE7;&#xE3;o esta correta
- console.log(1 === 1) // true
- // Aqui tamb&#xE9;m!
- console.log(&apos;1&apos; === 1) // false
-</code></pre>
-<h2>2) Filtre campos usando shorthand value</h2><p>Essa dica s&#xF3; funciona com ES6 habilitado, e &#xE9; bem &#xFA;til!
-Caso n&#xE3;o conhe&#xE7;a o <strong>shorthand value</strong>, tamb&#xE9;m conhecido <strong>Object destructuring assignment</strong> do ES6, permite extrair campos de um objeto de forma mais elegante:</p>
-<pre><code class="language-javascript"> // &#xC9; muito comum fazer isso
- var nome = cliente.nome;
- // Com shorthand value voc&#xEA; pode fazer isso
- var { nome } = cliente;
-</code></pre>
-<p>Com shorthand value &#xE9; poss&#xED;vel extrair em v&#xE1;riaveis os atributos de um objeto, ou seja, imagine um sistema externo enviando para seu sistema objetos com v&#xE1;rios campos, por&#xE9;m voc&#xEA; somente precisa de apenas alguns campos, nesse caso &#xE9; muito comum voc&#xEA; fazer algo semelhante a isso:</p>
-<pre><code class="language-javascript"> // Imagine que este cliente possua +10 campos
- function formatar(cliente) {
-    // Por&#xE9;m voc&#xEA; s&#xF3; quer retornar nome e email do cliente
-    var nome = cliente.nome;
-    var email = cliente.email;
-    return {
-        nome: nome,
-        email: email
-    };
- }
-</code></pre>
-<p>Com o shorthand value voc&#xEA; pode fazer uma formata&#xE7;&#xE3;o desse objeto cliente de forma mais enxuta, sem contar que essa funcionalidade tamb&#xE9;m serve para criar um novo objeto sem a necessidade de repetir a chave e valor que possua o mesmo nome, ou seja, o retorno dessa fun&#xE7;&#xE3;o pode se resumir da seguinte maneira:</p>
-<pre><code class="language-javascript"> // Esse cliente tamb&#xE9;m possui +10 campos, ok?
- function formatar(cliente) {
-     // Dessa vez, vamos filtrar os campos usando shorthand value
-     var { nome, email } = cliente;
-     // E tamb&#xE9;m ser&#xE1; usado shorthand value no novo objeto
-     return { nome, email };
- }
-</code></pre>
-<p>Veja tamb&#xE9;m:</p>
-<ul>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
-</ul>
-<p>See you later!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-2</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 27 Jun   16 03:00:00 GMT</pubDate></item></channel></rss>
+<h3>Conclus&#xE3;o</h3><p>Esta &#xE9; uma incr&#xED;vel e poderosa biblioteca quando se trata de manipular estruturas de dados imut&#xE1;veis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, at&#xE9; mesmo seu nome <strong>Immutable.js</strong> que reflete bem o prop&#xF3;sito de manipular estruturas imut&#xE1;veis.</p>]]></description><link>https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</link><guid isPermaLink="true">https://udgwebdev.com/brincando-com-estruturas-imutaveis-usando-immutablejs</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 11 Jul   16 03:00:00 GMT</pubDate></item></channel></rss>
