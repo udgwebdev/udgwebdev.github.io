@@ -69,7 +69,7 @@
       },
       {
         "title": "Sistemas operacionais",
-        "total": 8
+        "total": 9
       },
       {
         "title": "Slides",
@@ -2045,6 +2045,19 @@
         "title": "Sistemas operacionais",
         "posts": [
           {
+            "title": "Habilitando stealth mode no MacOS",
+            "published": true,
+            "tags": [
+              "Sistemas operacionais"
+            ],
+            "description": "A dica desse post é bem rápida e super simples de se aplicar. E vem com uma vantagem muito relevante para deixar mais seguro o sistema operacional MacOS no momento em que ele se conectar a qualquer rede.",
+            "alias_url": "https://medium.com/@crp_underground/habilitando-stealth-mode-no-macos-8efee4e2e9d6",
+            "slug": "habilitando-stealth-mode-no-macos",
+            "created_at": "25/07/2017",
+            "type": "redirect",
+            "redirected_to": "Medium"
+          },
+          {
             "title": "Tunning em servidor Linux",
             "tags": [
               "Sistemas operacionais"
@@ -2141,7 +2154,7 @@
             "type": "post"
           }
         ],
-        "total": 8
+        "total": 9
       },
       {
         "title": "Slides",
