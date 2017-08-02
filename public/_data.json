@@ -1,4 +1,16 @@
 {
+  "deploying-nodejs-na-umbler": {
+    "title": "Deploying Node.js na Umbler",
+    "published": true,
+    "tags": [
+      "Node.js"
+    ],
+    "description": "Se você esta procurando um host Node.js aqui no Brasil e precisa de um serviço bem prático em que toda orquestração dos servers você faz em um Saas com um visual bem intuitivo, atualmente recomendo que teste a cloud on-demand bem bacana chamada Umbler.",
+    "slug": "deploying-nodejs-na-umbler",
+    "feature_image": "umbler-logo.png",
+    "created_at": "02/08/2017",
+    "type": "post"
+  },
   "habilitando-stealth-mode-no-macos": {
     "title": "Habilitando stealth mode no MacOS",
     "published": true,

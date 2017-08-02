@@ -49,7 +49,7 @@
       },
       {
         "title": "Node.js",
-        "total": 62
+        "total": 63
       },
       {
         "title": "PaaS",
@@ -1069,6 +1069,18 @@
         "title": "Node.js",
         "posts": [
           {
+            "title": "Deploying Node.js na Umbler",
+            "published": true,
+            "tags": [
+              "Node.js"
+            ],
+            "description": "Se você esta procurando um host Node.js aqui no Brasil e precisam de um serviço bem prático em que toda orquestração dos servers você faz em um Saas com um visual bem intuitivo, atualmente recomendo que teste a cloud on-demand bem bacana chamada Umbler.",
+            "slug": "deploying-nodejs-na-umbler",
+            "feature_image": "umbler-logo.png",
+            "created_at": "02/08/2017",
+            "type": "post"
+          },
+          {
             "title": "Variáveis e escopos do ES6",
             "tags": [
               "Node.js"
@@ -1791,7 +1803,7 @@
             "type": "post"
           }
         ],
-        "total": 62
+        "total": 63
       },
       {
         "title": "PaaS",
