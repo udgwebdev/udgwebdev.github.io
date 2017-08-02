@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Jul 2017 01:17:37 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 26 Jul 2017 01:17:37 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Habilitando stealth mode no MacOS]]></title><description><![CDATA[A dica desse post é bem rápida e super simples de se aplicar. E vem com uma vantagem muito relevante para deixar mais seguro o sistema operacional MacOS no momento em que ele se conectar a qualquer rede.]]></description><link>https://udgwebdev.com/habilitando-stealth-mode-no-macos</link><guid isPermaLink="true">https://udgwebdev.com/habilitando-stealth-mode-no-macos</guid><category><![CDATA[Sistemas operacionais]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 25 Jul   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Variáveis e escopos do ES6]]></title><description><![CDATA[<h1>Vari&#xE1;veis e escopos do ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/06/2017" pubdate=""><b>12/06/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Vari&#xE1;veis e escopos do ES6" title="Vari&#xE1;veis e escopos do ES6"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 02 Aug 2017 13:54:16 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 02 Aug 2017 13:54:16 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Deploying Node.js na Umbler]]></title><description><![CDATA[<h1>Deploying Node.js na Umbler</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/08/2017" pubdate=""><b>02/08/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/umbler-logo.png" alt="Deploying Node.js na Umbler" title="Deploying Node.js na Umbler"></p>
+<p>Se voc&#xEA; esta procurando um host Node.js aqui no Brasil e precisa de um servi&#xE7;o bem pr&#xE1;tico em que toda orquestra&#xE7;&#xE3;o dos servers voc&#xEA; faz em um Saas com um visual bem intuitivo, atualmente recomendo que teste a cloud on-demand bem bacana chamada Umbler.</p>
+<p>Eles al&#xE9;m de darem suporte a Node.js, trabalham com PHP e ASP.Net (E em breve ter&#xE1; suporte a Ruby/Python/Java tamb&#xE9;m!) e o foco deles &#xE9; facilitar a vida de quem desenvolve para a web, por isso tornaram todo o processo de deploy muito simplificado para voc&#xEA; gastar tempo e energia no que mais agrega valor, que &#xE9; o desenvolvimento da sua aplica&#xE7;&#xE3;o.</p>
+<p>Falando em deploy r&#xE1;pido, para comprovar isso, veja a seguir, um tutorial sobre como botar uma aplica&#xE7;&#xE3;o Node.js:</p>
+<p>Vamos supor, que voc&#xEA; j&#xE1; se <a href="https://www.umbler.com/br/hospedagem-nodejs">cadastrou na Umbler</a>, e criou o projeto <code>hello-umbler</code>, com isso, ele vai liberar para voc&#xEA; uma git url para viabilizar que voc&#xEA; fa&#xE7;a push de novas altera&#xE7;&#xF5;es, que ser&#xE3;o refletidas em um novo deploy no servidor. Se voc&#xEA; j&#xE1; criou no painel de controle da umbler, basta abrir o terminal para rodar os comandos a seguir:</p>
+<pre><code class="language-bash">mkdir hello-umbler
+cd hello-umbler
+npm init
+</code></pre>
+<p>Preencha o question&#xE1;rio do npm init para gerar o <code>package.json</code> no final. Ap&#xF3;s essa etapa, ser&#xE1; necess&#xE1;rio iniciar o git nesse projeto e incluir a url remota do git do servidor, para isso execute:</p>
+<pre><code class="language-bash">git init
+git remote add umbler GIT_URL_DO_SERVER_UMBLER
+</code></pre>
+<p><em>Obs.:</em> Troque <code>GIT_URL_DO_SERVER_UMBLER</code> pela git url gerada na sua conta umbler, ok?<br>Agora que temos integrado no git a url do servidor remoto, podemos criar nosso projeto da maneira que quiser, para exemplificar, crie o c&#xF3;digo <code>app.js</code>:</p>
+<pre><code class="language-javascript">const http = require(&apos;http&apos;);
+
+const server = http.createServer((req, res) =&gt; {
+  res.setHeader(&apos;Content-Type&apos;, &apos;text/plain&apos;);
+  res.end(&apos;Hello Umbler!&apos;);
+});
+
+const port = process.env.PORT || 3000;
+
+server.listen(port, () =&gt; console.log(`Umbler server at port:${port}`));
+</code></pre>
+<p>Agora edite o <code>package.json</code> para incluir o comando <code>npm start</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;hello-umbler&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;description&quot;: &quot;Hello Umbler&quot;,
+  &quot;main&quot;: &quot;app.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;node app.js&quot;,
+  },
+  &quot;author&quot;: &quot;Caio R. Pereira&quot;,
+  &quot;license&quot;: &quot;MIT&quot;
+}
+</code></pre>
+<p>Ap&#xF3;s criar esse simples server, voc&#xEA; pode testar se o mesmo esta executando corretamente atrav&#xE9;s do comando <code>npm start</code>, supondo que tudo esteja ok, vamos para a parte do deploy, para isso, basta rodar esses comandos git:</p>
+<pre><code class="language-bash">git add .
+git commit -m &quot;First commit&quot;
+git push umbler master
+</code></pre>
+<p>Ao realizar um push no remote <code>umbler</code>, automaticamente ser&#xE1; realizado um deploy Node.js no servidor deles, afinal tudo que ele vai precisar &#xE9; do <code>package.json</code> configurado corretamente para identificar os metadados necess&#xE1;rios para instalar vers&#xE3;o node.js desejada, suas depend&#xEA;ncias para no final ser executado o comando <code>npm start</code>, que &#xE9; gerado no atributo <code>script: { start: &quot;node app&quot; }</code> do package.json.</p>
+<p>Outro detalhe bacana &#xE9; que se voc&#xEA; possuir o arquivo <code>yarn.lock</code> na ra&#xED;z do projeto, o processo de deployment vai usar <code>yarn</code> no lugar de <code>npm</code> no momento da instala&#xE7;&#xE3;o das deped&#xEA;ncias.</p>
+<p>No final, sua aplica&#xE7;&#xE3;o ser&#xE1; publicada no domain que voc&#xEA; configurou no painel da umbler.</p>
+<p>Outras funcionalidades que esse servi&#xE7;o possui:</p>
+<ul>
+<li>Suporte aos bancos MongoDB, MySQL e SQL Server (Em breve Redis e Postgres)</li>
+<li>Suporte aos cms Wordpress, Drupal, Joomla, Prestashop, Opencart e muitos outros</li>
+<li>Monitora&#xE7;&#xE3;o de CPU/Ram do servidor em tempo real</li>
+<li>SSH de dupla autentica&#xE7;&#xE3;o 2FA</li>
+<li>Ambiente de testes para publicar vers&#xF5;es betas de sua aplica&#xE7;&#xE3;o</li>
+<li>Certificados SSL</li>
+<li>Suporte a publica&#xE7;&#xE3;o e instala&#xE7;&#xE3;o de addons</li>
+<li>Suporte a deploy via Git, FTP e at&#xE9; mesmo via Dropbox</li>
+</ul>
+<p>Vale a pena testar! Aqui voc&#xEA; visualiza os planos e pre&#xE7;os que eles oferecem, e desde o <a href="https://www.umbler.com/br/hospedagem-nodejs">sign-up at&#xE9; chegar no passo final que &#xE9; o deploy voc&#xEA; vai ganhando b&#xF4;nus at&#xE9; completar o m&#xE1;ximo de 100R$ para usar nesta plataforma</a>.</p>]]></description><link>https://udgwebdev.com/deploying-nodejs-na-umbler</link><guid isPermaLink="true">https://udgwebdev.com/deploying-nodejs-na-umbler</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 02 Aug   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Habilitando stealth mode no MacOS]]></title><description><![CDATA[A dica desse post é bem rápida e super simples de se aplicar. E vem com uma vantagem muito relevante para deixar mais seguro o sistema operacional MacOS no momento em que ele se conectar a qualquer rede.]]></description><link>https://udgwebdev.com/habilitando-stealth-mode-no-macos</link><guid isPermaLink="true">https://udgwebdev.com/habilitando-stealth-mode-no-macos</guid><category><![CDATA[Sistemas operacionais]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 25 Jul   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Variáveis e escopos do ES6]]></title><description><![CDATA[<h1>Vari&#xE1;veis e escopos do ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/06/2017" pubdate=""><b>12/06/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Vari&#xE1;veis e escopos do ES6" title="Vari&#xE1;veis e escopos do ES6"></p>
 <p>Desde o in&#xED;cio do JavaScript sempre foi muito comum declarar vari&#xE1;veis ou constantes usando a keyword <code>var</code>. &#xC9; importante saber que ao declarar vari&#xE1;veis usando <code>var</code> elas ser&#xE3;o <em>function-scoped</em>, ou seja, s&#xE3;o vis&#xED;veis dentro de um escopo de fun&#xE7;&#xE3;o e tamb&#xE9;m dentro de fun&#xE7;&#xF5;es filhas deste escopo. Isso pode ser um problema pois este comportamento pode se tornar bem confuso. Por exemplo:</p>
 <pre><code class="language-javascript">var msg = &apos;Ol&#xE1; ...&apos;;
 function helloMsg(string) {
@@ -566,167 +623,4 @@ Veja mais detalhes sobre essa dica nesse post: <a href="https://udgwebdev.com/15
    &lt;/body&gt;
  &lt;/html&gt;
 </code></pre>
-<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p>]]></description><link>https://udgwebdev.com/video-streaming-com-nodejs</link><guid isPermaLink="true">https://udgwebdev.com/video-streaming-com-nodejs</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 24 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Realtime com RethinkDB]]></title><description><![CDATA[<h1>Realtime com RethinkDB</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="19/07/2016" pubdate=""><b>19/07/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a>, <a href="https://udgwebdev.com/menu/#nosql" rel="me" title="Menu: NoSQL">NoSQL</a></p><p><img src="https://udgwebdev.com/images/rethinkdb-logo.png" alt="Realtime com RethinkDB" title="Realtime com RethinkDB"></p>
-<p>Se voc&#xEA; precisa de um banco NoSQL que trabalhe com JSON, tenha suporte a consultas realtime e voc&#xEA; quer expandir seus horizontes em conhecimentos que v&#xE3;o al&#xE9;m de trabalhar apenas com MongoDB, uma boa op&#xE7;&#xE3;o &#xE9; conhecer o RethinkDB.</p>
-<p>RethinkDB &#xE9; um banco open-source, que trabalha com dados JSON, por&#xE9;m ele organiza os dados em tabelas igual um banco SQL tradicional, permitindo tamb&#xE9;m realizar consultas entre v&#xE1;rias tabelas atrav&#xE9;s do cl&#xE1;ssico comando join. Ele tamb&#xE9;m oferece persist&#xEA;ncia de arrays e sub-documentos dentro de um registro, que &#xE9; algo muito utilizado no MongoDB e CouchDB, que tamb&#xE9;m &#xE9; muito &#xFA;til quando pretende persistir dados complexos em uma &#xFA;nica tabela, ao inv&#xE9;s de fazer joins entre m&#xFA;ltiplas tabelas.</p>
-<p>Abaixo veja algumas caracter&#xED;sticas legais do RethinkDB:</p>
-<ul>
-<li>Suporte Geospartial;</li>
-<li>API para tratamento de Strings, Dates, Booleans e Documentos (objetos);</li>
-<li>API para realizar c&#xE1;lculos matem&#xE1;ticos;</li>
-<li>Map-reduce;</li>
-<li>Possui cliente HTTP</li>
-<li>Dashboard admin de databases via <a href="http://localhost:8080">localhost:8080</a></li>
-<li>Consulta via streaming realtime atrav&#xE9;s do changefeeds;</li>
-<li>Cria&#xE7;&#xE3;o de index simples, index composto e multi index (baseado em arrays);</li>
-</ul>
-<p>Partindo para o lado pr&#xE1;tico, que tal criarmos uma simples aplica&#xE7;&#xE3;o usando RethinkDB? Para explorarmos o suporte changefeed de consultas realtime, vamos criar uma simples timeline, em que todo mundo posta mensagens para uma timeline global.</p>
-<p><strong>Aten&#xE7;&#xE3;o:</strong> Em primeiro lugar, &#xE9; necess&#xE1;rio que voc&#xEA; tenha em sua m&#xE1;quina o RethinkDB instalado e rodando corretamente para em seguida criarmos o projeto abaixo, caso n&#xE3;o tenha instalado, recomendo que voc&#xEA; <a href="http://rethinkdb.com/docs/install/">siga as instru&#xE7;&#xF5;es do site oficial do RethinkDB</a>, afinal l&#xE1; tem um vasto tutorial para instala&#xE7;&#xE3;o em diversos sistemas operacionais</p>
-<p>Para come&#xE7;ar o projeto, rode os seguintes comandos no seu terminal:</p>
-<pre><code class="language-bash"> mkdir timeline
- cd timeline
- npm init
-</code></pre>
-<p>Responda como quiser as perguntas do <code>npm init</code>, afinal ser&#xE1; usado apenas para criar o <code>package.json</code>, em seguida instale as seguintes depend&#xEA;ncias:</p>
-<pre><code class="language-bash"> npm install --save express socket.io rethinkdb
-</code></pre>
-<p>Agora m&#xE3;os a obra! Como ser&#xE1; uma aplica&#xE7;&#xE3;o simples, vamos codar todo projeto em um &#xFA;nico arquivo e <strong>usaremos algumas features do ES6 nativas do Node v6.x</strong>. Caso precise um projeto bem estruturado que utilize RethinkDB + Express como base para seus novos projetos, recentemente criei novo projetinho chamado <a href="https://github.com/caio-ribeiro-pereira/node-api-examples">node-api-examples</a> que &#xE9; um conjunto de APIs simples e bem estruturada, em que cada projeto tem usa uma varia&#xE7;&#xE3;o de web router e banco de dados, l&#xE1; temos algumas vers&#xF5;es de APIs usando RethinkDB com Express, Koa.js e Hapi.js. Da uma olhada l&#xE1;!
-Voltando ao foco desse post, crie o <code>index.js</code> da seguinte maneira:</p>
-<pre><code class="language-javascript"> const http = require(&apos;http&apos;);
- const fs = require(&apos;fs&apos;);
- const express = require(&apos;express&apos;);
- const socketIO = require(&apos;socket.io&apos;);
- const r = require(&apos;rethinkdb&apos;);
- const config = require(&apos;./config.json&apos;);
- // Carregando Express, HTTP, SocketIO e DB config
- const db = Object.assign(config.rethinkdb, { db: &apos;timeline&apos; });
- const app = express();
- const server = http.Server(app);
- const io = socketIO(server);
- r.connect(db)
-   .then(conn =&gt; {
-     // Rota para carregar pagina inicial
-     app.get(&apos;/&apos;, (req, res) =&gt; {
-       fs.readFile(`${__dirname}/index.html`, (err, html) =&gt; {
-         res.end(html || err);
-       });
-     });
-     // Listando novas mensagens via changefeed + socket.io
-     r.table(&apos;messages&apos;)
-       .changes()
-       .run(conn)
-       .then(cursor =&gt; {
-         cursor.each((err, data) =&gt; {
-           const message = data.new_val;
-           io.sockets.emit(&apos;/messages&apos;, message);
-         });
-       })
-     ;
-     // Cadastro de novas mensagens via socket.io
-     io.on(&apos;connection&apos;, (client) =&gt; {
-       r.table(&apos;messages&apos;)
-         .run(conn)
-         .then(cursor =&gt; {
-           cursor.each((err, message) =&gt; {
-             io.sockets.emit(&apos;/messages&apos;, message);
-           });
-         })
-       ;
-       client.on(&apos;/messages&apos;, (body) =&gt; {
-         const { name, message } = body;
-         const data = { name, message, date: new Date() };
-         r.table(&apos;messages&apos;).insert(data).run(conn);
-       });
-     });
-     server.listen(3000, () =&gt; console.log(&apos;Timeline Server!&apos;));
-   })
-   .error(err =&gt; {
-     console.log(&apos;Erro ao se conectar com rethinkdb&apos;);
-     throw err;
-   })
- ;
-</code></pre>
-<p>Alguns detalhes s&#xE3;o importantes saber quando vai trabalhar com RethinkDB
-Em primeiro lugar, praticamente grande parte das fun&#xE7;&#xF5;es desse m&#xF3;dulo &#xE9; baseado em <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> e nisso vai te permitir escrever um c&#xF3;digo ass&#xED;crono mais estruturado e com melhor controle no tratamento de erros.</p>
-<p>A query que realiza um <a href="http://rethinkdb.com/docs/changefeeds/javascript/">changefeed</a> &#xE9; praticamente um subscriber do banco, em que registra uma query observadora para retornar qualquer altera&#xE7;&#xE3;o de dados de uma tabela, a combina&#xE7;&#xE3;o disso junto com a fun&#xE7;&#xE3;o <code>io.sockets.emit()</code> vai permitir que a aplica&#xE7;&#xE3;o retorne dados em tempo real para o cliente.</p>
-<p>Para preparar o banco de dados dessa aplica&#xE7;&#xE3;o, vamos criar um simples script que cria database e tables para usarmos nesse projeto, crie o arquivo <code>database.js</code> da seguinte maneira:</p>
-<pre><code class="language-javascript"> const r = require(&apos;rethinkdb&apos;);
- const config = require(&apos;./config.json&apos;);
- let conn;
- r.connect(config.rethinkdb)
-   .then(connection =&gt; {
-     console.log(&apos;Conectado no RethinkDB...&apos;);
-     conn = connection;
-     return r.dbCreate(&apos;timeline&apos;).run(conn);
-   })
-   .then(() =&gt; {
-     console.log(&apos;Database &quot;timeline&quot; criado com sucesso!&apos;);
-     return r.db(&apos;timeline&apos;).tableCreate(&apos;messages&apos;).run(conn);
-   })
-   .then(() =&gt; console.log(&apos;Tabela &quot;messages&quot; criada com sucesso!&apos;))
-   .error(err =&gt; console.log(err))
-   .finally(() =&gt; process.exit(0))
- ;
-</code></pre>
-<p>Em seguida, crie tamb&#xE9;m o arquivo <code>config.json</code> que vai conter dados de conex&#xE3;o com banco RethinkDB:</p>
-<pre><code class="language-javascript"> {
-   &quot;rethinkdb&quot;: {
-     &quot;host&quot;: &quot;localhost&quot;,
-     &quot;port&quot;: 28015
-   }
- }
-</code></pre>
-<p>Para finalizar nossa aplica&#xE7;&#xE3;o, crie a p&#xE1;gina <code>index.html</code> que ser&#xE1; a interface da timeline para os usu&#xE1;rios brincarem:</p>
-<pre><code class="language-html"> &lt;!DOCTYPE html&gt;
- &lt;html&gt;
-   &lt;head&gt;
-     &lt;meta charset=&quot;utf-8&quot;&gt;
-     &lt;title&gt;Timeline&lt;/title&gt;
-     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
-     &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-     &lt;form style=&quot;text-align:center;margin:50px 0&quot;&gt;
-       &lt;label for=&quot;name&quot;&gt;Nome:&lt;/label&gt;
-       &lt;input type=&quot;text&quot; id=&quot;name&quot;/&gt;
-       &lt;label for=&quot;message&quot;&gt;Mensagem:&lt;/label&gt;
-       &lt;input type=&quot;text&quot; id=&quot;message&quot;/&gt;
-       &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
-     &lt;/form&gt;
-     &lt;fieldset style=&quot;padding: 20px;width:50%;margin:0 auto&quot;&gt;
-       &lt;legend style=&quot;text-align:center&quot;&gt;Timeline&lt;/legend&gt;
-       &lt;p id=&quot;messages&quot;&gt;&lt;/p&gt;
-     &lt;/fieldset&gt;
-     &lt;script&gt;
-       (function() {
-         var socket = io();
-         var form = document.querySelector(&apos;form&apos;);
-         form.addEventListener(&apos;submit&apos;, function(e) {
-           e.preventDefault();
-           var name = e.target.querySelector(&apos;#name&apos;);
-           var message = e.target.querySelector(&apos;#message&apos;);
-           var data = {
-             name: name.value,
-             message: message.value
-           };
-           socket.emit(&apos;/messages&apos;, data);
-           e.target.reset();
-         });
-         socket.on(&apos;/messages&apos;, function(data) {
-           var messages = document.querySelector(&apos;#messages&apos;);
-           var message = &apos;&lt;b&gt;&apos;+ data.name +&apos;:&lt;/b&gt; &apos;+ data.message +&apos;&lt;br /&gt;&apos;;
-           messages.innerHTML += message;
-         });
-       })();
-     &lt;/script&gt;
-   &lt;/body&gt;
- &lt;/html&gt;
-</code></pre>
-<p>Pronto! Finalizamos a implementa&#xE7;&#xE3;o de nossa timeline! Agora falta rodar a aplica&#xE7;&#xE3;o, para isso, na primeira vez ser&#xE1; necess&#xE1;rio rodar os scripts de prepara&#xE7;&#xE3;o do database do projeto, ent&#xE3;o rode:</p>
-<pre><code class="language-bash"> node database.js
-</code></pre>
-<p>Se tudo estiver, ok! Ent&#xE3;o voc&#xEA; j&#xE1; pode iniciar o server rodando comando:</p>
-<pre><code class="language-bash"> node index.js
-</code></pre>
-<p>E brincar com sua nova aplica&#xE7;&#xE3;o realtime acessando <a href="http://localhost:3000">http://localhost:3000</a>.</p>
-<p>See ya!</p>]]></description><link>https://udgwebdev.com/realtime-com-rethinkdb</link><guid isPermaLink="true">https://udgwebdev.com/realtime-com-rethinkdb</guid><category><![CDATA[Node.js]]></category><category><![CDATA[NoSQL]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 19 Jul   16 03:00:00 GMT</pubDate></item></channel></rss>
+<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p>]]></description><link>https://udgwebdev.com/video-streaming-com-nodejs</link><guid isPermaLink="true">https://udgwebdev.com/video-streaming-com-nodejs</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 24 Jul   16 03:00:00 GMT</pubDate></item></channel></rss>
