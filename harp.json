@@ -58,6 +58,13 @@
         "description": "Cadastre-se no Payoneer usando este link e ganhe 25$ após efetuar uma transação de 100$ ou superior na plataforma.",
         "icon": "fa-money",
         "url": "https://share.payoneer.com/nav/93TW1Pv35NgZNvqPxvjr9l4A1MCLYpkkSV-Eiv1HhB0kN3V0GO2liT1E9Of4O5Uv0ufiAhVOlJog_pFpqqROWg2"
+      },
+      {
+        "title": "Termos de uso deste blog",
+        "description": "Conheça os termos de uso e direitos autorais deste blog.",
+        "icon": "fa-exclamation-triangle",
+        "url": "/termos-deste-blog",
+        "internal": true
       }
     ]
   }
