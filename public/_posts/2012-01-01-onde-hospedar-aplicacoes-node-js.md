@@ -1,4 +1,16 @@
-Conheça quatro excelentes **PaaS (Plataform as a Service)** focadas em hospedagem de aplicações **Node.js**. Especificamente quero que conheçam as plataformas: [Getup Cloud](http://getupcloud.com "Getup Cloud"), [Appfog Nodester](http://nodester.com "Appfog Nodester"), [Nodejitsu](http://nodejitsu.com "Nodejitsu") e [Heroku](http://www.heroku.com "Heroku").
+Conheça quatro excelentes **PaaS (Plataform as a Service)** focadas em hospedagem de aplicações **Node.js**. Especificamente quero que conheçam as plataformas: [Hostinger](https://www.hostinger.com.br/servidor-vps?utm_source=referral&utm_medium=backlink&utm_campaign=tabeless_servidor), [Getup Cloud](http://getupcloud.com "Getup Cloud"), [Appfog Nodester](http://nodester.com "Appfog Nodester"), [Nodejitsu](http://nodejitsu.com "Nodejitsu") e [Heroku](http://www.heroku.com "Heroku").
+
+## Hostinger
+
+[![Hostinger](/images/hostinger-logo.jpg "Hostinger")](https://www.hostinger.com.br/servidor-vps?utm_source=referral&utm_medium=backlink&utm_campaign=tabeless_servidor "Hostinger") 
+
+Antes de tudo queria falar um pouco dessas empresas que fiz os testes e achei uma ótima opção para a hospedagem vps. 
+
+A Hostinger fornece VPS a um preço bem bacana, nesse caso ela é uma ótima opção para você montar e customizar seu próprio servidor Node.js. Seus planos são mensais, [nesse link há uma tabela de preços com todos os planos de hospedagem vps](https://www.hostinger.com.br/servidor-vps?utm_source=referral&utm_medium=backlink&utm_campaign=tabeless_servidor) que ela fornece, e o mais interessante é que são servidores brasileiros, ótimo para diminuir latência entre sua aplicação com seus usuários.
+
+O formato de pagamento é via: **Bcash**, **cartão de crédito (Visa, Elo, Mastercard, Maestro)**, **Bitcoin**, **Boleto** e **Paypal**
+
+Site oficial: [Hostinger](https://www.hostinger.com.br/servidor-vps?utm_source=referral&utm_medium=backlink&utm_campaign=tabeless_servidor "Hostinger")
 
 ## Getup Cloud
 
