@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 23 Nov 2017 15:35:38 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 23 Nov 2017 15:35:38 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Deploying Node.js na Umbler]]></title><description><![CDATA[<h1>Deploying Node.js na Umbler</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/08/2017" pubdate=""><b>02/08/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/umbler-logo.png" alt="Deploying Node.js na Umbler" title="Deploying Node.js na Umbler"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 12 Dec 2017 19:00:02 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 12 Dec 2017 19:00:02 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Evite erros comuns ao criar um site]]></title><description><![CDATA[<h1>Evite erros comuns ao criar um site</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/12/2017" pubdate=""><b>12/12/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#seo" rel="me" title="Menu: SEO">SEO</a></p><p><img src="https://udgwebdev.com/images/weblink.jpg" alt="Evite erros comuns ao criar um site" title="Evite erros comuns ao criar um site"></p>
+<p>Toda empresa precisa de um site, independente do seu nicho e tipo de cliente, afinal o site &#xE9; um cart&#xE3;o de visitas, a vitrine que todo neg&#xF3;cio que preza o profissionalismo e credibilidade deve ter. E investir em estrat&#xE9;gias digitais &#xE9; sempre uma boa op&#xE7;&#xE3;o. </p>
+<p>Seja qual for seu ramo de atua&#xE7;&#xE3;o, ou modelo de neg&#xF3;cio, a visibilidade adquirida por meio da internet &#xE9; capaz de fazer verdadeiros &quot;milagres&quot; por sua empresa. Se ainda n&#xE3;o investe nisso, uma dica &#xE9; come&#xE7;ar a pensar.</p>
+<p>E como toda estrat&#xE9;gia parte de algum fundamento, o primeiro passo &#xE9; ter aten&#xE7;&#xE3;o e tamb&#xE9;m tomar certos cuidados para que a cria&#xE7;&#xE3;o do seu site seja realizada da melhor maneira poss&#xED;vel. </p>
+<p>Alguns erros b&#xE1;sicos podem interferir na imagem que a empresa deseja transmitir, bem como em sua comunica&#xE7;&#xE3;o com os clientes.</p>
+<p>Neste artigo, vamos abordar quais s&#xE3;o os erros mais comuns ao criar um site e como &#xE9; poss&#xED;vel evit&#xE1;-los. Claro, que existem muitos outros erros, por&#xE9;m buscamos apresentar os principais.</p>
+<p>Saiba como prevenir os erros que podem atrapalhar a cria&#xE7;&#xE3;o do seu site e proporcionar problemas para sua empresa. Que tal aplicar essas dicas para otimizar o seu neg&#xF3;cio?</p>
+<h3>Identidade visual gera reconhecimento de marca</h3><p>Se voc&#xEA; est&#xE1; come&#xE7;ando agora no meio digital &#xE9; muito prov&#xE1;vel que sua marca n&#xE3;o seja forte ou at&#xE9; mesmo reconhecida. O reconhecimento da sua marca, al&#xE9;m de conferir credibilidade a sua empresa, tamb&#xE9;m favorece seu posicionamento nos buscadores, aumentando assim suas chances de vendas.</p>
+<p>Ent&#xE3;o, antes de iniciar a constru&#xE7;&#xE3;o do seu site, tenha &quot;desenhadas&quot; todas as ideias referente a comunica&#xE7;&#xE3;o visual da marca. Pense, pesquise e repense. A identidade visual de sua empresa &#xE9; de suma import&#xE2;ncia para o seu neg&#xF3;cio e deve transmitir com o m&#xE1;ximo de clareza a sua miss&#xE3;o e os servi&#xE7;os ou produtos que s&#xE3;o oferecidos .</p>
+<p>Ao fazer essa escolha, leve em considera&#xE7;&#xE3;o a miss&#xE3;o e valores da empresa, prefer&#xEA;ncias do p&#xFA;blico-alvo, tend&#xEA;ncias de mercado e abordagem da concorr&#xEA;ncia - sim, acompanhe de perto seus &quot;vizinhos&quot; e saiba o que eles est&#xE3;o fazendo e como est&#xE3;o atuando.</p>
+<h3>Mantenha a uniformidade e jamais copie</h3><p>O sonho de toda grande marca &#xE9; ser refer&#xEA;ncia. Sua identidade deve ser &#xFA;nica, portanto, utilize elementos marcantes que far&#xE3;o o cliente perceber sua identidade, independente de onde ela esteja. Isso far&#xE1; que clientes e usu&#xE1;rios possam se lembrar ou associar a sua marca em diferentes ocasi&#xF5;es. </p>
+<p>Agora, se sua empresa j&#xE1; possui uma identidade visual, o seu site deve manter a mesma comunica&#xE7;&#xE3;o visual. Seu site deve promover, literalmente, identifica&#xE7;&#xE3;o ao usu&#xE1;rio, ele &#xE9; a extens&#xE3;o da sua marca e n&#xE3;o algo apartado da sua empresa, 
+portanto, deve seguir os mesmos elementos visuais.</p>
+<h3>Evite exageros no design: seu foco &#xE9; conquistar o cliente</h3><p>&#xC9; essencial <a href="https://www.weblink.com.br/blog/seo/o-que-e-ux-design?utm_source=udgwebdev">construir um site se preocupando em como ser&#xE1; experi&#xEA;ncia de seus clientes</a>. Voc&#xEA; n&#xE3;o vai querer que um potencial cliente visite seu site e tenha uma p&#xE9;ssima impress&#xE3;o, se isso acontecer, provavelmente ele n&#xE3;o ir&#xE1; visit&#xE1;-lo novamente.</p>
+<p>Evite cores muito chamativas, pois depois ser&#xE1; dif&#xED;cil combin&#xE1;-las com os demais elementos do site. Banners em excesso tamb&#xE9;m n&#xE3;o chamam a aten&#xE7;&#xE3;o do cliente e sim desviam sua aten&#xE7;&#xE3;o do que realmente interessa.</p>
+<p>O cliente n&#xE3;o conseguir&#xE1; prestar aten&#xE7;&#xE3;o em nenhuma das informa&#xE7;&#xF5;es se houver pop ups e banners piscando todo o tempo durante a navega&#xE7;&#xE3;o. Lembre-se que voc&#xEA; n&#xE3;o deseja importunar o visitante e sim acolh&#xEA;-lo.</p>
+<p>As imagens escolhidas tamb&#xE9;m s&#xE3;o muito importantes, devem ser n&#xED;tidas, em alta resolu&#xE7;&#xE3;o e sempre condizentes com o conte&#xFA;do da p&#xE1;gina a qual est&#xE1; inserida.</p>
+<h3>Escolha um layout que facilite a distribui&#xE7;&#xE3;o das informa&#xE7;&#xF5;es</h3><p>Menus organizados onde o cliente poder&#xE1; encontrar facilmente o que procura, estrutura adequada ao estilo de design adotado no site, cores que n&#xE3;o sobreponham os demais elementos ou atrapalhem a leitura, s&#xE3;o pontos a serem observados.</p>
+<p>Nada de informa&#xE7;&#xF5;es dispersas ou em locais incorretos, utilize fontes que tenham uma tipografia de f&#xE1;cil visualiza&#xE7;&#xE3;o e que sejam leg&#xED;veis dentro do layout escolhido.</p>
+<p>E uma dica valiosa: <strong>deixe os contatos de sua empresa sempre vis&#xED;veis!</strong> O cliente deve conseguir localizar rapidamente o n&#xFA;mero de telefone, e-mail, endere&#xE7;o e at&#xE9; mesmo formul&#xE1;rios de solicita&#xE7;&#xE3;o de contato.</p>
+<p>Facilite a navega&#xE7;&#xE3;o do cliente para que, em caso de interesse, ele chegue at&#xE9; voc&#xEA; sem nenhuma dificuldade.</p>
+<h3>Invista na vers&#xE3;o mobile do site</h3><p>N&#xE3;o caia no erro de n&#xE3;o adaptar seu site para ser responsivo. Hoje em dia, as pessoas passam horas no celular, imagine que algu&#xE9;m tem interesse em conhecer um pouco mais de sua empresa, mas somente poder&#xE1; fazer essa pesquisa se tiver utilizando o desktop.</p>
+<p>A realidade &#xE9; que numa rotina t&#xE3;o acelerada, as pessoas t&#xEA;m recorrido aos smartphones para realizar todas as atividades de seu dia a dia, buscar dados sobre empresas, realizar pesquisas por determinada informa&#xE7;&#xE3;o, inclusive realizar compras.</p>
+<p><a href="https://www.weblink.com.br/blog/artigos/o-que-e-design-responsivo-e-por-que-seu-site-precisa-disso?utm_source=udgwebdev">Leia aqui a import&#xE2;ncia de investir em um site mobile</a></p>
+<p>Se o seu site n&#xE3;o for responsivo voc&#xEA; perder&#xE1; uma parcela bem grande de usu&#xE1;rios. H&#xE1; algumas plataformas para sites que viabilizam o layout adaptado para mobile, por&#xE9;m algumas funcionalidades s&#xE3;o limitadas. Sendo assim, ter um site responsivo &#xE9; praticamente obrigat&#xF3;rio nos dias de hoje.</p>
+<h3>Dom&#xED;nio: Opte por nomes que facilitem a identifica&#xE7;&#xE3;o</h3><p>O dom&#xED;nio escolhido pode facilitar, ou n&#xE3;o, na identifica&#xE7;&#xE3;o do site. Ele deve ser condizente para evitar que o usu&#xE1;rio fique confuso. &#xC9; seu endere&#xE7;o na web, basicamente, o local onde as pessoas ir&#xE3;o encontr&#xE1;-lo.</p>
+<p>Optar por nomes extensos ou estrangeiros n&#xE3;o &#xE9; interessante e, muitas vezes, deixam o dom&#xED;nio totalmente desconexo.</p>
+<p>Ao registrar um dom&#xED;nio, tenha a certeza de que houve o planejamento necess&#xE1;rio para que a escolha n&#xE3;o venha atrapalhar ou causar perdas de tempo.</p>
+<p><a href="https://www.weblink.com.br/blog/artigos/10-dicas-para-escolher-o-melhor-nome-de-dominio?utm_source=udgwebdev">Saiba mais nesse artigo como escolher um bom dom&#xED;nio para sua empresa</a>.</p>
+<h3>Escolha bem a hospedagem do site para prevenir preju&#xED;zos</h3><p>Quer evitar dores de cabe&#xE7;a e preju&#xED;zos? Claro, que a resposta &#xE9; sim! Ent&#xE3;o, na escolha de uma hospedagem de sites, evite levar em considera&#xE7;&#xE3;o somente o benef&#xED;cio de economia, avalie os recursos oferecidos e como eles facilitar&#xE3;o o seu neg&#xF3;cio.</p>
+<p>Uma boa hospedagem oferece suporte ininterrupto, ou seja, voc&#xEA; nunca ficar&#xE1; na m&#xE3;o caso precise de uma solu&#xE7;&#xE3;o emergencial. Seu site deve ficar online de prefer&#xEA;ncia <strong>99,9% do tempo</strong> operando com agilidade e sem quedas.</p>
+<p>Contar com servi&#xE7;os adicionais &#xE9; sempre uma excelente op&#xE7;&#xE3;o. Al&#xE9;m de suporte, seu site precisar&#xE1; de recursos que otimizem n&#xE3;o s&#xF3; sua opera&#xE7;&#xE3;o, mas tamb&#xE9;m o acompanhamento e gerenciamento.</p>
+<p>A hospedagem do site pode oferecer muitos benef&#xED;cios, inclusive contribuir para uma estrat&#xE9;gia assertiva. Veja tamb&#xE9;m, <a href="https://www.weblink.com.br/blog/hospedagem-de-sites/otimize-o-seu-site-com-uma-empresa-de-hospedagem?utm_source=udgwebdev">como uma empresa de hospedagem pode ajudar a otimizar o seu site</a>.</p>
+<h3>Forne&#xE7;a informa&#xE7;&#xF5;es relevantes</h3><p>Oferecer um design criativo, um layout bem feito e solu&#xE7;&#xF5;es inovadoras, n&#xE3;o s&#xE3;o os &#xFA;nicos fatores capazes de &quot;prender&quot; a aten&#xE7;&#xE3;o do usu&#xE1;rio ao realizar uma visita no site. Ter um conte&#xFA;do elaborado e rico em informa&#xE7;&#xF5;es &#xE9; primordial.</p>
+<p>Um visitante do site localizou rapidamente a p&#xE1;gina na qual tem interesse, por&#xE9;m chegando l&#xE1;, n&#xE3;o encontra nenhuma informa&#xE7;&#xE3;o que esclare&#xE7;a suas d&#xFA;vidas ou que chame sua aten&#xE7;&#xE3;o o suficiente para continuar navegando ou que o instigue a entrar em contato com a empresa.</p>
+<p>Este &#xE9; um exemplo muito comum que, infelizmente, ainda ocorre muito. O site deve sempre contar com conte&#xFA;dos de qualidade que justifiquem o interesse do usu&#xE1;rio. </p>
+<p>Os conte&#xFA;dos de um site deve buscar transmitir as principais informa&#xE7;&#xF5;es sobre a empresa, estar em harmonia com os demais elementos e estrategicamente dispostos. </p>
+<h4>Cuidado para n&#xE3;o exagerar!</h4><p>Aten&#xE7;&#xE3;o ao excesso de imagens e exagero na abordagem escrita. Uma p&#xE1;gina que contenha textos e imagens - o que &#xE9; altamente recomendado - deve organizar estes elementos em harmonia para que fa&#xE7;am sentido.</p>
+<p>Um bom conte&#xFA;do deve ser o mais objetivo poss&#xED;vel, coeso e conciso, al&#xE9;m de transmitir adequadamente a mensagem de interesse.</p>
+<h3>Conclus&#xE3;o</h3><p>Vale a ressalva de que buscamos apresentar os fatores mais comuns e principais pontos a serem analisados na cria&#xE7;&#xE3;o de um site, mas &#xE9; importante manter-se informado para evitar os demais erros que podem vir a acontecer.</p>
+<p>Em resumo, para ter um bom site, livre dos erros mais comuns, realizar uma avalia&#xE7;&#xE3;o pr&#xE9;via, definir um planejamento estruturado e evitar exageros, &#xE9; o caminho mais vi&#xE1;vel que se pode escolher.</p>
+<p>Um site precisa oferecer ao usu&#xE1;rio uma experi&#xEA;ncia enriquecedora, uma navega&#xE7;&#xE3;o simplificada e solu&#xE7;&#xF5;es para o que ele pesquisou, principalmente se a inten&#xE7;&#xE3;o &#xE9; que este usu&#xE1;rio se torne um potencial cliente. </p>
+<p>Esperamos que tenha gostado e que agora possa evitar os erros mais comuns ao criar um site.</p>
+<p>Post powered by <a href="https://www.weblink.com.br?utm_source=udgwebdev">WebLink</a></p>]]></description><link>https://udgwebdev.com/evite-erros-comuns-ao-criar-um-site</link><guid isPermaLink="true">https://udgwebdev.com/evite-erros-comuns-ao-criar-um-site</guid><category><![CDATA[SEO]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 12 Dec   17 02:00:00 GMT</pubDate></item><item><title><![CDATA[Deploying Node.js na Umbler]]></title><description><![CDATA[<h1>Deploying Node.js na Umbler</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/08/2017" pubdate=""><b>02/08/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/umbler-logo.png" alt="Deploying Node.js na Umbler" title="Deploying Node.js na Umbler"></p>
 <p>Se voc&#xEA; esta procurando um host Node.js aqui no Brasil e precisa de um servi&#xE7;o bem pr&#xE1;tico em que toda orquestra&#xE7;&#xE3;o dos servers voc&#xEA; faz em um Saas com um visual bem intuitivo, atualmente recomendo que teste a cloud on-demand bem bacana chamada Umbler.</p>
 <p>Eles al&#xE9;m de darem suporte a Node.js, trabalham com PHP e ASP.Net (E em breve ter&#xE1; suporte a Ruby/Python/Java tamb&#xE9;m!) e o foco deles &#xE9; facilitar a vida de quem desenvolve para a web, por isso tornaram todo o processo de deploy muito simplificado para voc&#xEA; gastar tempo e energia no que mais agrega valor, que &#xE9; o desenvolvimento da sua aplica&#xE7;&#xE3;o.</p>
 <p>Falando em deploy r&#xE1;pido, para comprovar isso, veja a seguir, um tutorial sobre como botar uma aplica&#xE7;&#xE3;o Node.js:</p>
@@ -552,75 +595,4 @@ Veja mais detalhes sobre essa dica nesse post: <a href="https://udgwebdev.com/15
 <li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
 <li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
-<p>At&#xE9; a pr&#xF3;xima galera!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 29 Jul   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Video Streaming com Node.js]]></title><description><![CDATA[<h1>Video Streaming com Node.js</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="24/07/2016" pubdate=""><b>24/07/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/nodejs-logo.jpg" alt="Video Streaming com Node.js" title="Video Streaming com Node.js"></p>
-<p>Streaming de videos &#xE9; algo muito comum nos dias de hoje, afinal quem &#xE9; que n&#xE3;o conhece Netflix, Vimeo ou pelo menos Youtube? (E o Redtube e XVideos? hahahaha) Em geral o que todos esses sites tem em comum &#xE9; que possuem servidores que realizam streaming de video.</p>
-<p>Mas o que &#xE9; Streaming? N&#xE3;o sou expert nesse assunto, mas basicamente o Streaming &#xE9; uma funcionalidade de processar dados (geralmente grandes) em peda&#xE7;os, para que eles sejam enviados ou escritos aos poucos. Um bom exemplo disso s&#xE3;o os videos e audios, eles geralmente s&#xE3;o arquivos grandes, algo que realizando um download normal, vai te fazer esperar alguns minutos ou horas (dependendo do tamanho do arquivo e principalmente da velocidade de sua banda larga). Nesse caso o uso do streaming, vai te permitir consumir esses arquivos aos poucos, sem esperar muito tempo comparado com o download normal, afinal ser&#xE1; feito downloads de peda&#xE7;os menores desse arquivo que ser&#xE1; suficiente para voc&#xEA; ir consumindo-o aos poucos tamb&#xE9;m.</p>
-<p>Por exemplo: Quem nunca viu o youtube carregando partes de um video, suficiente para que voc&#xEA; j&#xE1; assista os primeiros segundos desse video, enquanto ele vai baixando mais peda&#xE7;os desse video, at&#xE9; montar completamente o video? Quem nunca viu um video travar pois ele carregou poucos dados pelo qual voc&#xEA; j&#xE1; assistiu e teve que esperar o carregamento de mais dados durante uma tela congelada?</p>
-<p>Tudo isso foi realizado via servidor de streaming de dados aliado com o recurso de <a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked Transfer Encoding</a> do protocolo HTTP 1.1.</p>
-<p>O Node.js possui nativamente o m&#xF3;dulo <a href="https://nodejs.org/api/stream.html">Stream</a> que permite trabalhar com streaming de arquivos, tamb&#xE9;m existe um ebook free criado pelo @substack, que realmente explica bem detalhado como trabalhar com streaming no Node.js, recomendo muito essa leitura: <a href="https://github.com/substack/stream-handbook">stream-handbook</a>.</p>
-<p>Depois dessa introdu&#xE7;&#xE3;o, vou mostrar em c&#xF3;digo um simples servidor de video streaming que voc&#xEA; pode criar e usar em sua casa, para por exemplo renderizar seus videos em sua rede wifi.</p>
-<p>Para come&#xE7;ar, rode esses comandos para criar o projeto inicial:</p>
-<pre><code class="language-bash"> mkdir videoflix
- cd videoflix
- npm init
-</code></pre>
-<p>Ap&#xF3;s preencher os campos para criar o <code>package.json</code>, instale o <a href="https://expressjs.com/">Express</a> para que possamos criar algumas rotas din&#xE2;micas em nossa aplica&#xE7;&#xE3;o:</p>
-<pre><code class="language-bash"> npm install --save express
-</code></pre>
-<p>Agora crie o <code>index.js</code> que ser&#xE1; o c&#xF3;digo backend do nosso servidor de streaming</p>
-<pre><code class="language-javascript"> const fs = require(&apos;fs&apos;);
- const express = require(&apos;express&apos;);
- const app = express();
- app.get(&apos;/&apos;, (req, res) =&gt; {
-   fs.readFile(&apos;./index.html&apos;, (err, html) =&gt; res.end(html));
- });
- app.get(&apos;/movies/:movieName&apos;, (req, res) =&gt; {
-   const { movieName } = req.params;
-   const movieFile = `./movies/${movieName}`;
-   fs.stat(movieFile, (err, stats) =&gt; {
-     if (err) {
-       console.log(err);
-       return res.status(404).end(&apos;&lt;h1&gt;Movie Not found&lt;/h1&gt;&apos;);
-     }
-     // Vari&#xE1;veis necess&#xE1;rias para montar o chunk header corretamente
-     const { range } = req.headers;
-     const { size } = stats;
-     const start = Number((range || &apos;&apos;).replace(/bytes=/, &apos;&apos;).split(&apos;-&apos;)[0]);
-     const end = size - 1;
-     const chunkSize = (end - start) + 1;
-     // Definindo headers de chunk
-     res.set({
-       &apos;Content-Range&apos;: `bytes ${start}-${end}/${size}`,
-       &apos;Accept-Ranges&apos;: &apos;bytes&apos;,
-       &apos;Content-Length&apos;: chunkSize,
-       &apos;Content-Type&apos;: &apos;video/mp4&apos;
-     });
-     // &#xC9; importante usar status 206 - Partial Content para o streaming funcionar
-     res.status(206);
-     // Utilizando ReadStream do Node.js
-     // Ele vai ler um arquivo e envi&#xE1;-lo em partes via stream.pipe()
-     const stream = fs.createReadStream(movieFile, { start, end });
-     stream.on(&apos;open&apos;, () =&gt; stream.pipe(res));
-     stream.on(&apos;error&apos;, (streamErr) =&gt; res.end(streamErr));
-   });
- });
- app.listen(3000, () =&gt; console.log(&apos;VideoFlix Server!&apos;));
-</code></pre>
-<p>Para garantir que o servidor funcione, crie a pasta <code>movies</code> na ra&#xED;z do projeto, e inclua alguns videos em formato MP4. Para evitar problemas com nomes de arquivos, recomendo que renomeie os videos de mp4 de forma que n&#xE3;o contenha espa&#xE7;os em branco.</p>
-<p>Em seguida, crie o <code>index.html</code> que ter&#xE1; a parte visual para renderizar o player de video gerado nativamente pelo HTML5:</p>
-<pre><code class="language-html"> &lt;!DOCTYPE html&gt;
- &lt;html&gt;
-   &lt;head&gt;
-     &lt;meta charset=&quot;utf-8&quot;&gt;
-     &lt;title&gt;VideoFlix&lt;/title&gt;
-     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
-   &lt;/head&gt;
-   &lt;body style=&quot;text-align:center&quot;&gt;
-     &lt;div style=&quot;margin:0 auto;&quot;&gt;
-       &lt;!-- Mude o src dessa tag para o nome do video que voc&#xEA; possuir --&gt;
-       &lt;video src=&quot;/movies/300.mp4&quot; controls width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/video&gt;
-     &lt;/div&gt;
-   &lt;/body&gt;
- &lt;/html&gt;
-</code></pre>
-<p>Para testar esse server, rode o comando <code>node index.js</code>, acesse <a href="http://localhost:3000">localhost:3000</a>, se tudo estiver ok, um player do HTML5 ser&#xE1; renderizado no seu browser, permitindo que voc&#xEA; visualize o filme que voc&#xEA; incluir no seu servidor. At&#xE9; a pr&#xF3;xima!</p>]]></description><link>https://udgwebdev.com/video-streaming-com-nodejs</link><guid isPermaLink="true">https://udgwebdev.com/video-streaming-com-nodejs</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 24 Jul   16 03:00:00 GMT</pubDate></item></channel></rss>
+<p>At&#xE9; a pr&#xF3;xima galera!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 29 Jul   16 03:00:00 GMT</pubDate></item></channel></rss>
