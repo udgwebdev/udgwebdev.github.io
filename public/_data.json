@@ -1,4 +1,16 @@
 {
+  "evite-erros-comuns-ao-criar-um-site": {
+    "title": "Evite erros comuns ao criar um site",
+    "published": true,
+    "tags": [
+      "SEO"
+    ],
+    "description": "Antes de criar um site, entenda quais os erros comuns, e como evitá-los para garantir uma audiência de qualidade para o seu site.",
+    "slug": "evite-erros-comuns-ao-criar-um-site",
+    "feature_image": "weblink.jpg",
+    "created_at": "12/12/2017",
+    "type": "post"
+  },
   "deploying-nodejs-na-umbler": {
     "title": "Deploying Node.js na Umbler",
     "published": true,

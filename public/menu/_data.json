@@ -65,7 +65,7 @@
       },
       {
         "title": "SEO",
-        "total": 3
+        "total": 4
       },
       {
         "title": "Sistemas operacionais",
@@ -2016,6 +2016,18 @@
         "title": "SEO",
         "posts": [
           {
+            "title": "Evite erros comuns ao criar um site",
+            "published": true,
+            "tags": [
+              "SEO"
+            ],
+            "description": "Antes de criar um site, entenda quais os erros comuns, e como evitá-los para garantir uma audiência de qualidade para o seu site.",
+            "slug": "evite-erros-comuns-ao-criar-um-site",
+            "feature_image": "weblink.jpg",
+            "created_at": "12/12/2017",
+            "type": "post"
+          },
+          {
             "title": "Otimizando seu site para publicação nas redes sociais",
             "tags": [
               "SEO"
@@ -2051,7 +2063,7 @@
             "type": "post"
           }
         ],
-        "total": 3
+        "total": 4
       },
       {
         "title": "Sistemas operacionais",
