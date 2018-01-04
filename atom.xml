@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 03 Jan 2018 18:59:16 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 03 Jan 2018 18:59:16 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Evite erros comuns ao criar um site]]></title><description><![CDATA[<h1>Evite erros comuns ao criar um site</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/12/2017" pubdate=""><b>12/12/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#seo" rel="me" title="Menu: SEO">SEO</a></p><p><img src="https://udgwebdev.com/images/weblink.jpg" alt="Evite erros comuns ao criar um site" title="Evite erros comuns ao criar um site"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 04 Jan 2018 14:07:38 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 04 Jan 2018 14:07:38 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 6]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="04/01/2018" pubdate=""><b>04/01/2018</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>Sim, e mais uma vez continuaremos com essa s&#xE9;rie de posts, j&#xE1; estamos no sexto post! \o/</p>
+<p>Feliz 2018! Fiquem tranquilos que este blog n&#xE3;o morreu, e n&#xE3;o pretendo parar em compartilhar conhecimento por aqui, no m&#xE1;ximo o ritmo de posts aqui ser&#xE3;o apenas menores, devido a minha dedica&#xE7;&#xE3;o maior que tenho hoje trabalhando para startup <a href="https://watchcoins.net">WatchCoins</a>.</p>
+<p>Hoje o post ser&#xE1; bem curto, mas ter&#xE1; um conte&#xFA;do bem bacana. Basicamente vamos aprender como criar uma fun&#xE7;&#xE3;o uniqueList combinando Spread Operator + Set, e tamb&#xE9;m como criar uma fun&#xE7;&#xE3;o sleep usando Promises + Async/Await, ambas fun&#xE7;&#xF5;es ser&#xE3;o escritas em uma &#xFA;nica linha de c&#xF3;digo!</p>
+<h3>Fun&#xE7;&#xE3;o para manter itens &#xFA;nicos no array</h3><p>A combina&#xE7;&#xE3;o de spread operator + objeto Set, nos permite criar uma fun&#xE7;&#xE3;o que mant&#xE9;m itens &#xFA;nicos em um array, o famoso unique(), essa fun&#xE7;&#xE3;o &#xE9; muito &#xFA;til e pode ser feita em uma &#xFA;nica linha, veja:</p>
+<pre><code class="language-javascript">const unique = array =&gt; [...new Set(array)];
+</code></pre>
+<p>Usar essa fun&#xE7;&#xE3;o &#xE9; bem simples, veja:</p>
+<pre><code class="language-javascript">const array = [1,2,3,3,3,4,5,6];
+const uniqList = unique(array);
+console.log(uniqList); // [1,2,3,4,5,6];
+</code></pre>
+<h3>Fun&#xE7;&#xE3;o sleep usando Promises + Async/Await</h3><p>Se voc&#xEA; utilizar Promise + Async/Await para encapsular a fun&#xE7;&#xE3;o setTimeout, &#xE9; poss&#xED;vel criar a cl&#xE1;ssica fun&#xE7;&#xE3;o sleep, cuja, sua funcionalidade &#xE9; criar um delay com base no milisegundos passado em par&#xE2;metro, apesar do setTimeout fazer esse papel de forma ass&#xED;ncrona, podemos criar uma fun&#xE7;&#xE3;o sleep de forma que mantenha todo c&#xF3;digo limpo e no estilo s&#xED;ncrono, mesmo que por de baixo dos panos a execu&#xE7;&#xE3;o seja ass&#xED;ncrona, e tudo isso pode ser feito em uma &#xFA;nica linha tamb&#xE9;m, veja:</p>
+<pre><code class="language-javascript">const sleep = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+</code></pre>
+<p>Para us&#xE1;-lo, &#xE9; necess&#xE1;rio incluir essa fun&#xE7;&#xE3;o, dentro de um escopo de uma fun&#xE7;&#xE3;o que utilize async/await, exemplo:</p>
+<pre><code class="language-javascript">async function delaySomething() {
+    console.log(&apos;iniciando delay!&apos;);
+    await sleep(1000);
+    console.log(&apos;finalizando delay!&apos;);
+}
+
+delaySomething();
+// iniciando delay!
+// espera 1 segundo
+// finalizando delay!
+</code></pre>
+<p>Caso n&#xE3;o tenha visto, recomendo que leia tamb&#xE9;m as dicas anteriores, dessa s&#xE9;rie:</p>
+<ul>
+<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-5" title="Escrevendo JavaScript melhor - Parte 5">Escrevendo JavaScript melhor - Parte 5</a></li>
+</ul>
+<p>Fontes:</p>
+<ul>
+<li><a href="https://www.facebook.com/addyosmaniofficial">Fanpage do Addy Osmani</a></li>
+</ul>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-6</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-6</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 04 Jan   18 02:00:00 GMT</pubDate></item><item><title><![CDATA[Evite erros comuns ao criar um site]]></title><description><![CDATA[<h1>Evite erros comuns ao criar um site</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/12/2017" pubdate=""><b>12/12/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#seo" rel="me" title="Menu: SEO">SEO</a></p><p><img src="https://udgwebdev.com/images/weblink.jpg" alt="Evite erros comuns ao criar um site" title="Evite erros comuns ao criar um site"></p>
 <p>Toda empresa precisa de um site, independente do seu nicho e tipo de cliente, afinal o site &#xE9; um cart&#xE3;o de visitas, a vitrine que todo neg&#xF3;cio que preza o profissionalismo e credibilidade deve ter. E investir em estrat&#xE9;gias digitais &#xE9; sempre uma boa op&#xE7;&#xE3;o. </p>
 <p>Seja qual for seu ramo de atua&#xE7;&#xE3;o, ou modelo de neg&#xF3;cio, a visibilidade adquirida por meio da internet &#xE9; capaz de fazer verdadeiros &quot;milagres&quot; por sua empresa. Se ainda n&#xE3;o investe nisso, uma dica &#xE9; come&#xE7;ar a pensar.</p>
 <p>E como toda estrat&#xE9;gia parte de algum fundamento, o primeiro passo &#xE9; ter aten&#xE7;&#xE3;o e tamb&#xE9;m tomar certos cuidados para que a cria&#xE7;&#xE3;o do seu site seja realizada da melhor maneira poss&#xED;vel. </p>
@@ -548,51 +586,4 @@ Outro detalhe mais legal, &#xE9; que &#xE9; poss&#xED;vel deixar algumas das pri
 <p>Com isso, praticamente voc&#xEA; nem ter&#xE1; mais que responder as principais perguntas, pois elas j&#xE1; ser&#xE3;o pr&#xE9;-definidas pelos valores existentes no <code>~/.npmrc</code>, tanto &#xE9; que elas s&#xE3;o acessadas magicamente pela fun&#xE7;&#xE3;o <code>config.get(&apos;nome-de-uma-key&apos;)</code>.</p>
 <p>Agora se voc&#xEA; criar um novo projeto e rodar o comando <code>npm init</code> voc&#xEA; ter&#xE1; um resultado semelhante a este:</p>
 <p><a href="https://udgwebdev.com/images/npm-init.png"><img src="https://udgwebdev.com/images/npm-init-small.png" alt="Clique na imagem para ampliar" title="Clique na imagem para ampliar"></a></p>
-<p>See you in the next post!</p>]]></description><link>https://udgwebdev.com/customizando-npm-init</link><guid isPermaLink="true">https://udgwebdev.com/customizando-npm-init</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 03 Aug   16 03:00:00 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 3]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 3</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="29/07/2016" pubdate=""><b>29/07/2016</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
-<p>E mais uma vez, continuando essa s&#xE9;rie de posts sobre dicas para escrever c&#xF3;digo JavaScript melhor, nesse post vejam mais quatro dicas bem legais.</p>
-<h2>1) Verificando se um item existe em um array</h2><p>Para verificar se um determinado item existe em um array, praticamente muita gente j&#xE1; deve ter feito algo parecido com isso:</p>
-<pre><code class="language-javascript"> var itens = [1,2,3,4,6];
- var item = 4;
- var existe = false;
- for (var i = 0; i &lt; itens.length; i++) {
-    if (itens[i] === item) {
-        existe = true;
-        break;
-    }
- }
-</code></pre>
-<p>Com certeza voc&#xEA; j&#xE1; deve ter feito ou visto isso, seja em projetos grandes ou mini-projetos de li&#xE7;&#xE3;o de casa na faculdade!</p>
-<p>&#xC9; muito comum uma implementa&#xE7;&#xE3;o desse tipo para verificar se um determinado item existe em um array, por&#xE9;m caso n&#xE3;o conhe&#xE7;a, no ES6 existe uma fun&#xE7;&#xE3;o muito enxuta para fazer esse tipo de checagem, se chama <code>includes()</code>, veja como us&#xE1;-la:</p>
-<pre><code class="language-javascript"> var itens = [1,2,3,4,6];
- var item = 6;
- itens.includes(6); // Retorna true
-</code></pre>
-<h2>2) Simplificando compara&#xE7;&#xF5;es nulas</h2><p>O JavaScript &#xE9; uma linguagem em que quando queremos verificar se tal vari&#xE1;vel n&#xE3;o possui um valor, elas geralmente podem ter valores do tipo: <code>null</code>, <code>undefined</code>, <code>&quot;&quot;</code> ou <code>false</code>.</p>
-<p>Nesses casos &#xE9; muito comum projetos verificarem esses valores da seguinte maneira:</p>
-<pre><code class="language-javascript"> if (foo !== null &amp;&amp; foo !== undefined &amp;&amp; foo !== &quot;&quot;) {
-    fazerAlgo();
- }
-</code></pre>
-<p>Por favor, parem de escrever desse jeito! O c&#xF3;digo fica muiiiiitoooo feio!!!
-Caso n&#xE3;o saiba, existe um simples shortcut l&#xF3;gico para verificar esses a exist&#xEA;ncia desses valores no JavaScript, basta utilizar o operador l&#xF3;gico de nega&#xE7;&#xE3;o ou dupla nega&#xE7;&#xE3;o:</p>
-<pre><code class="language-javascript"> if (!!foo) {
-    fazerAlgo();
- }
-</code></pre>
-<p>Neste caso, se <code>foo</code> possuir um valor diferente de: <code>null</code>, <code>undefined</code>, <code>false</code>, <code>0</code> ou <code>&quot;&quot;</code> ent&#xE3;o ele possui um valor v&#xE1;lido, suficiente para retornar true nessa condicional.
-Veja mais detalhes sobre essa dica nesse post: <a href="https://udgwebdev.com/15-javascript-hacks" title="15 JavaScript Hacks">15 JavaScript Hacks</a></p>
-<h2>3) Aplicando substring corretamente</h2><p>Em primeiro lugar, acredito que muita gente aplica substring corretamente, por&#xE9;m voc&#xEA; sabe as diferen&#xE7;as entre as fun&#xE7;&#xF5;es: <code>substring()</code> e <code>substr()</code>?</p>
-<p>Basicamente ambas fun&#xE7;&#xF5;es utilizam a mesma entrada de argumentos, o primeiro argumento &#xE9; o ind&#xED;ce de ponto de partida, por&#xE9;m a diferen&#xE7;a esta na sem&#xE2;ntica do segundo argumento de ambas fun&#xE7;&#xF5;es, veja.</p>
-<pre><code class="language-javascript"> &quot;JavaScript&quot;.substr(4, 6); // &quot;Script&quot;
- &quot;JavaScript&quot;.substring(4, 6); // &quot;Sc&quot;
-</code></pre>
-<p>Em <code>substr(index, qtd)</code> o segundo par&#xE2;metro retorna a quantidade de caracteres a partir do index</p>
-<p>Em <code>substring(start, end)</code> o segundo par&#xE2;metro retorna a posi&#xE7;&#xE3;o final da string, ou seja, essa fun&#xE7;&#xE3;o retorna a substring com base na posi&#xE7;&#xE3;o inicial at&#xE9; final</p>
-<p>.</p>
-<p>Veja tamb&#xE9;m:</p>
-<ul>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
-<li><a href="https://udgwebdev.com/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
-</ul>
-<p>At&#xE9; a pr&#xF3;xima galera!</p>]]></description><link>https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</link><guid isPermaLink="true">https://udgwebdev.com/escrevendo-javascript-melhor-parte-3</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Fri, 29 Jul   16 03:00:00 GMT</pubDate></item></channel></rss>
+<p>See you in the next post!</p>]]></description><link>https://udgwebdev.com/customizando-npm-init</link><guid isPermaLink="true">https://udgwebdev.com/customizando-npm-init</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 03 Aug   16 03:00:00 GMT</pubDate></item></channel></rss>
