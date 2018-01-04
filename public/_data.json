@@ -1,4 +1,16 @@
 {
+  "escrevendo-javascript-melhor-parte-6": {
+    "title": "Escrevendo JavaScript melhor - Parte 6",
+    "tags": [
+      "JavaScript"
+    ],
+    "published": true,
+    "description": "Veja como criar uma função uniqueList combinando Spread Operator + Set, e também como criar uma função sleep usando Promises + Async/Await, ambas funções são escritas em uma única linha de código!",
+    "feature_image": "es6-logo.jpg",
+    "slug": "escrevendo-javascript-melhor-parte-6",
+    "created_at": "04/01/2018",
+    "type": "post"
+  },
   "evite-erros-comuns-ao-criar-um-site": {
     "title": "Evite erros comuns ao criar um site",
     "published": true,
