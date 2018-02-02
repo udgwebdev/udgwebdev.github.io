@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 13:58:40 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 02 Feb 2018 13:58:40 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 6]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="04/01/2018" pubdate=""><b>04/01/2018</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.com/</link><image><url>https://udgwebdev.com/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.com/</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 14:11:19 GMT</lastBuildDate><atom:link href="https://udgwebdev.com/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 02 Feb 2018 14:11:18 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 6]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="04/01/2018" pubdate=""><b>04/01/2018</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.com/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
 <p>Sim, e mais uma vez continuaremos com essa s&#xE9;rie de posts, j&#xE1; estamos no sexto post! \o/</p>
 <p>Feliz 2018! Fiquem tranquilos que este blog n&#xE3;o morreu, e n&#xE3;o pretendo parar em compartilhar conhecimento por aqui, no m&#xE1;ximo o ritmo de posts aqui ser&#xE3;o apenas menores, devido a minha dedica&#xE7;&#xE3;o maior que tenho hoje trabalhando para startup <a href="https://watchcoins.net">WatchCoins</a>.</p>
 <p>Hoje o post ser&#xE1; bem curto, mas ter&#xE1; um conte&#xFA;do bem bacana. Basicamente vamos aprender como criar uma fun&#xE7;&#xE3;o uniqueList combinando Spread Operator + Set, e tamb&#xE9;m como criar uma fun&#xE7;&#xE3;o sleep usando Promises + Async/Await, ambas fun&#xE7;&#xF5;es ser&#xE3;o escritas em uma &#xFA;nica linha de c&#xF3;digo!</p>
@@ -251,6 +251,35 @@ scores.push(10); // TypeError: Can&apos;t add property 10, object is not extensi
 const player = { name: &apos;John Connor&apos; };
 Object.freeze(player);
 player.age = 25; // TypeError: Can&apos;t add property age, object is not extensible
+</code></pre>
+<h2>Aplicando deep frezzing recursivo</h2><p>Mesmo usando <code>Object.freeze()</code> para congelar o estado do objeto ou array, sub-atributos ou sub-objetos v&#xE3;o continuar m&#xFA;taveis, para realmente criar um objeto/array profundamente im&#xFA;tavel, &#xE9; necess&#xE1;rio criar uma fun&#xE7;&#xE3;o recursiva para aplicar o conceito de <code>deep freezing</code>, veja abaixo como fazer isso:</p>
+<pre><code class="language-javascript">function deepFreeze(obj) {
+  const props = Object.getOwnPropertyNames(obj);
+  props.forEach(function(name) {
+    const prop = obj[name];
+    if (typeof prop === &apos;object&apos; &amp;&amp; prop !== null) {
+      deepFreeze(prop);
+    }
+  });
+  return Object.freeze(obj);
+}
+</code></pre>
+<p>Agora com essa fun&#xE7;&#xE3;o declarada, voc&#xEA; n&#xE3;o vai conseguir modificar subatributos dos subatributos dos subatributos, que todos eles ser&#xE3;o im&#xFA;taveis, veja:</p>
+<pre><code class="language-javascript">const data = {
+  cliente: {
+    nome: &apos;John Connor&apos;
+  }
+}
+
+// Usando apenas Object.freeze()
+Object.freeze(data);
+data.cliente.nome = &apos;Sarah Connor&apos;
+console.log(data.cliente.nome); // Sarah Connor
+
+// Usando fun&#xE7;&#xE3;o deepFreeze()
+deepFreeze(data);
+data.cliente.nome = &apos;Sarah Connor&apos;
+console.log(data.cliente.nome); // John Connor
 </code></pre>
 <h2>Conclus&#xE3;o</h2><p>Se voc&#xEA; pretende trabalhar 100% com dados im&#xFA;taveis e isso inclui tanto dados primitivos quanto objetos e arrays, basta usar <code>const</code> para as vari&#xE1;veis primitivas e <code>const</code> + <code>Object.freeze()</code> para objetos e ou arrays.</p>
 <p>Fonte: <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">MDN - Object.freeze()</a></p>]]></description><link>https://udgwebdev.com/imutabilidade-no-es6</link><guid isPermaLink="true">https://udgwebdev.com/imutabilidade-no-es6</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 03 Apr   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Você pode colaborar em projetos open-source fazendo doações]]></title><description><![CDATA[Um post não técnico que tem o objetivo de estimular as pessoas a reconhecerem mais os projetos open-source que elas curtem usar através da simples atitude em realizar uma doação.]]></description><link>https://udgwebdev.com/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</link><guid isPermaLink="true">https://udgwebdev.com/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</guid><category><![CDATA[SouDev]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 26 Feb   17 03:00:00 GMT</pubDate></item><item><title><![CDATA[Aumentando performance do Socket.IO]]></title><description><![CDATA[<h1>Aumentando performance do Socket.IO</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="20/02/2017" pubdate=""><b>20/02/2017</b></time> | Tags: <a href="https://udgwebdev.com/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.com/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.com/images/socket-io.jpg" alt="Aumentando performance do Socket.IO" title="Aumentando performance do Socket.IO"></p>

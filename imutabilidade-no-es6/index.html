@@ -43,6 +43,35 @@ const player = { name: &#39;John Connor&#39; };
 Object.freeze(player);
 player.age = 25; // TypeError: Can&#39;t add property age, object is not extensible
 </code></pre>
+<h2>Aplicando deep frezzing recursivo</h2><p>Mesmo usando <code>Object.freeze()</code> para congelar o estado do objeto ou array, sub-atributos ou sub-objetos vão continuar mútaveis, para realmente criar um objeto/array profundamente imútavel, é necessário criar uma função recursiva para aplicar o conceito de <code>deep freezing</code>, veja abaixo como fazer isso:</p>
+<pre><code class="language-javascript">function deepFreeze(obj) {
+  const props = Object.getOwnPropertyNames(obj);
+  props.forEach(function(name) {
+    const prop = obj[name];
+    if (typeof prop === &#39;object&#39; &amp;&amp; prop !== null) {
+      deepFreeze(prop);
+    }
+  });
+  return Object.freeze(obj);
+}
+</code></pre>
+<p>Agora com essa função declarada, você não vai conseguir modificar subatributos dos subatributos dos subatributos, que todos eles serão imútaveis, veja:</p>
+<pre><code class="language-javascript">const data = {
+  cliente: {
+    nome: &#39;John Connor&#39;
+  }
+}
+
+// Usando apenas Object.freeze()
+Object.freeze(data);
+data.cliente.nome = &#39;Sarah Connor&#39;
+console.log(data.cliente.nome); // Sarah Connor
+
+// Usando função deepFreeze()
+deepFreeze(data);
+data.cliente.nome = &#39;Sarah Connor&#39;
+console.log(data.cliente.nome); // John Connor
+</code></pre>
 <h2>Conclusão</h2><p>Se você pretende trabalhar 100% com dados imútaveis e isso inclui tanto dados primitivos quanto objetos e arrays, basta usar <code>const</code> para as variáveis primitivas e <code>const</code> + <code>Object.freeze()</code> para objetos e ou arrays.</p>
 <p>Fonte: <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">MDN - Object.freeze()</a></p></div><div class="row-fluid hidden-sm hidden-xs"><div class="col-xs-12"><a href="https://watchcoins.net" title="Acompanhe cotações de bitcoins e altcoins em tempo real" rel="me" target="_blank"><img src="/images/watchcoins-banner.png" alt="Acompanhe cotações de bitcoins e altcoins em tempo real" style="border:1px solid #AAA;" class="center-block img-responsive"/></a></div></div><h4 class="text-center">Compartilhe este post</h4><div class="text-center"><div class="row-fluid"><a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fudgwebdev.com%2Fimutabilidade-no-es6" target="_blank" aria-label="Compartilhe no Facebook" class="resp-sharing-button__link"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle"><svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M15.595,11.5H13.5c0,3.013,0,7,0,7h-3 c0,0,0-3.951,0-7h-2v-2h2V8.336c0-1.1,0.352-2.819,2.649-2.819L15.5,5.524V7.83c0,0-1.163,0-1.408,0 c-0.244,0-0.592,0.124-0.592,0.647V9.5h2.339L15.595,11.5z"></div></svg><span>Facebook</span></div></a><a href="https://twitter.com/intent/tweet/?text=Imutabilidade%20no%20ES6&amp;url=https%3A%2F%2Fudgwebdev.com%2Fimutabilidade-no-es6" target="_blank" aria-label="Compartilhe no Twitter" class="resp-sharing-button__link"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle"><svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
