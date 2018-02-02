@@ -10,6 +10,8 @@ A Hostinger fornece VPS a um preço bem bacana, nesse caso ela é uma ótima op�
 
 O formato de pagamento é via: **Bcash**, **cartão de crédito (Visa, Elo, Mastercard, Maestro)**, **Bitcoin**, **Boleto** e **Paypal**
 
+Para mais detalhes, veja nesse [site uma análise sobre a Hostinger](https://www.melhorhospedagemdesites.com/provedor-de-hospedagem/hostinger).
+
 Site oficial: [Hostinger](https://www.hostinger.com.br/servidor-vps?utm_source=referral&utm_medium=backlink&utm_campaign=tabeless_servidor "Hostinger")
 
 ## Getup Cloud
