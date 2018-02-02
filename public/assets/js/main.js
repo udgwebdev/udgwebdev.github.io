@@ -17,7 +17,7 @@
 
   window.addEventListener('scroll', function(e) {
     if (sidemenu && (window.innerWidth || document.body.clientWidth) >= 960) {
-      const isSticky = sidemenu.classList.contains('sticky');
+      var isSticky = sidemenu.classList.contains('sticky');
       if (window.scrollY >= 1000 && !isSticky) {
         sidemenu.classList.add('sticky');
         sidemenu.classList.add('fadeInDown');

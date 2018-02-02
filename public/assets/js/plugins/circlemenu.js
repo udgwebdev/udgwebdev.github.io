@@ -18,11 +18,11 @@
     };
 
     function init() {
-      menuMask.addEventListener('click', (e) => {
+      menuMask.addEventListener('click', function(e) {
         e.preventDefault();
         closeMenu();
       });
-      menuToggle.addEventListener('click', (e) => {
+      menuToggle.addEventListener('click', function(e) {
         e.preventDefault();
         toggleMenu();
       });
