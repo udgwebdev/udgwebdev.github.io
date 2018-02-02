@@ -71,6 +71,43 @@ Object.freeze(player);
 player.age = 25; // TypeError: Can't add property age, object is not extensible
 ```
 
+## Aplicando deep frezzing recursivo
+
+Mesmo usando `Object.freeze()` para congelar o estado do objeto ou array, sub-atributos ou sub-objetos vão continuar mútaveis, para realmente criar um objeto/array profundamente imútavel, é necessário criar uma função recursiva para aplicar o conceito de `deep freezing`, veja abaixo como fazer isso:
+
+``` javascript
+function deepFreeze(obj) {
+  const props = Object.getOwnPropertyNames(obj);
+  props.forEach(function(name) {
+    const prop = obj[name];
+    if (typeof prop === 'object' && prop !== null) {
+      deepFreeze(prop);
+    }
+  });
+  return Object.freeze(obj);
+}
+```
+
+Agora com essa função declarada, você não vai conseguir modificar subatributos dos subatributos dos subatributos, que todos eles serão imútaveis, veja:
+
+``` javascript
+const data = {
+  cliente: {
+    nome: 'John Connor'
+  }
+}
+
+// Usando apenas Object.freeze()
+Object.freeze(data);
+data.cliente.nome = 'Sarah Connor'
+console.log(data.cliente.nome); // Sarah Connor
+
+// Usando função deepFreeze()
+deepFreeze(data);
+data.cliente.nome = 'Sarah Connor'
+console.log(data.cliente.nome); // John Connor
+```
+
 ## Conclusão
 
 Se você pretende trabalhar 100% com dados imútaveis e isso inclui tanto dados primitivos quanto objetos e arrays, basta usar `const` para as variáveis primitivas e `const` + `Object.freeze()` para objetos e ou arrays.
