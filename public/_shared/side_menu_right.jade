@@ -3,13 +3,6 @@
     h2.h3.text-center <i class="fa fa-book"></i>&nbsp;Indicação de livros
     != partial("book_gallery")
   section.hidden-xs
-    h2.h3.text-center <i class="fa fa-trophy"></i>&nbsp;Parceria
-    != partial("ads")
-  section
-    h2.h3.text-center <i class="fa fa-paper-plane-o"></i>&nbsp;UDGWebDev Weekly
-    p.text-center
-      a.btn.btn-primary.btn-md.btn-block(href="https://weekly.udgwebdev.com" target="_blank" title="Assinar newsletter UDGWebDev Weekly" rel="noopener noreferrer") <i class="fa fa-sign-in"></i>&nbsp;Receba news sobre JavaScript
-  section.hidden-sticky
     h2.h3.text-center <i class="fa fa-gift"></i>&nbsp;Bônus
     != partial("bonus")
   section.hidden-sticky
@@ -19,6 +12,6 @@
         - var tagPath = tag.title.toLowerCase().replace(/\s/g, '-').replace(/\./g, '');
         - var menuPath = featured_tags.includes(tagPath) ? '/' : '/menu/#';
         li <a href="#{menuPath}#{tagPath}" rel="me" title="#{tag.title}"><i class="fa fa-folder-open"></i>&nbsp;#{tag.title} (#{tag.total})</a>
-  section.hidden-sticky
+  section.hidden-xs
     h2.h3.text-center <i class="fa fa-users"></i>&nbsp;Conheça também
     != partial("friend_links")

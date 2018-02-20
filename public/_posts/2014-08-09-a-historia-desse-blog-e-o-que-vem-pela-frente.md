@@ -18,10 +18,10 @@ Foi graças aos meus posts sobre Node.js, que conheci por acaso o [Paulo Silveir
 
 Hoje o ritmo deste blog anda um pouco baixo, mas fique tranquilo, **NÃO PRETENDO** parar com esse blog tão cedo. Pelo contrário tenho uma listinha de posts com alguns drafts no Google Keep para lançar no futuro. Mas o motivo pelo qual o ritmo esta baixo aqui é que meu trabalho tem sido mais puxado e também ando me dedicando em outros projetos, um deles em destaque são:
 
-*   [UDGWebDev Weekly](http://weekly.udgwebdev.com/ "UDGWebDev Weekly"): que é uma newsletter focada compartilhar novidades sobre o mundo do desenvolvimento web, lá estou divulgando semanalmente posts, recomendando frameworks open-source, vídeos e outros links relevantes para os devs de plantão.
-*   [DevFreeCasts](http://caio-ribeiro-pereira.github.io/devfreecasts/ "DevFreeCasts"): um site que apresenta uma lista de screencasts gratuitos sobre desenvolvimento, lá tem videos para **Node.js, Meteor, JavaScript, Ruby, PHP, Elixir, Angular, Grails, Android** e pretendo incluir mais tecnologias (alias caso você tenha um screencast e quer divulgar no site é possível também).
-*   [VanillaMasker](http://bankfacil.github.io/vanilla-masker/ "VanillaMasker"): uma biblioteca JavaScript focada em mascarar inputs de formulários. É claro que já existem várias bibliotecas que fazem isso, mas o seu diferencial é que ela é 100% JavaScript, e não precisa de jQuery ou Zepto como dependência.
-*   [Node Web Modules](http://nodewebmodules-webapp.getup.io/ "Node Web Modules"): um simples site que aprensenta frameworks webs do Node.js, listando em ordem dos mais popular.
+*   **UDGWebDev Weekly**: que é uma newsletter focada compartilhar novidades sobre o mundo do desenvolvimento web, lá estou divulgando semanalmente posts, recomendando frameworks open-source, vídeos e outros links relevantes para os devs de plantão.
+*   **DevFreeBooks**: um site que apresenta uma lista de screencasts gratuitos sobre desenvolvimento, lá tem videos para **Node.js, Meteor, JavaScript, Ruby, PHP, Elixir, Angular, Grails, Android** e pretendo incluir mais tecnologias (alias caso você tenha um screencast e quer divulgar no site é possível também).
+*   **VanillaMasker**: uma biblioteca JavaScript focada em mascarar inputs de formulários. É claro que já existem várias bibliotecas que fazem isso, mas o seu diferencial é que ela é 100% JavaScript, e não precisa de jQuery ou Zepto como dependência.
+*   **Node Web Modules**: um simples site que aprensenta frameworks webs do Node.js, listando em ordem dos mais popular.
 
 ## Quais são as mudanças no blog?
 
