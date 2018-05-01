@@ -1,4 +1,16 @@
 {
+  "escrevendo-javascript-melhor-parte-7": {
+    "title": "Escrevendo JavaScript melhor - Parte 7",
+    "tags": [
+      "JavaScript"
+    ],
+    "published": true,
+    "description": "Nesse artigo vamos explicar cinco dicas bem legais sobre como criar em poucas linhas de código a função compact() e diff(), novas maneiras de concatenar arrays, como executar funções em paralelo e como tornar parâmetros obrigatórios no default parameter.",
+    "feature_image": "es6-logo.jpg",
+    "slug": "escrevendo-javascript-melhor-parte-7",
+    "created_at": "01/05/2018",
+    "type": "post"
+  },
   "escrevendo-javascript-melhor-parte-6": {
     "title": "Escrevendo JavaScript melhor - Parte 6",
     "tags": [
