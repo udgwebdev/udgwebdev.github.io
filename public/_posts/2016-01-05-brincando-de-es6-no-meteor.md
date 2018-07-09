@@ -115,6 +115,8 @@ Agora no ES6 você pode criar classes, deixando seu projeto mais orientado à ob
 
 Por enquanto é isso pessoal, feliz ano novo, até a próxima!
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 #### Boas referêcias:
 
 *   [Get started with ES2015 (ES6) and Meteor](http://info.meteor.com/blog/es2015-get-started)

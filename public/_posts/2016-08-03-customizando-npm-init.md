@@ -38,4 +38,6 @@ Agora se você criar um novo projeto e rodar o comando `npm init` você terá um
 
 [![Clique na imagem para ampliar](/images/npm-init-small.png "Clique na imagem para ampliar")](/images/npm-init.png)
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 See you in the next post!

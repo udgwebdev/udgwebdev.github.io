@@ -59,7 +59,9 @@ Com o shorthand value você pode fazer uma formatação desse objeto cliente de 
      // E também será usado shorthand value no novo objeto
      return { nome, email };
  }
-``` 
+```
+
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
 
 Veja também:
 

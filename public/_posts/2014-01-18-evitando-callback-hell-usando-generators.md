@@ -61,6 +61,8 @@ Instale o módulo suspend:
  })();
 ```
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 Referências:
 
 *   [Github do Suspend](https://github.com/jmar777/suspend "Github do Suspend")

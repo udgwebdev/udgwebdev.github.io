@@ -101,3 +101,5 @@ obj = { foo: 123 };
 ```
 
 Se você seguir esses conselhos, você não terá mais a keyword `var` em seus futuros projetos JavaScript.
+
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!

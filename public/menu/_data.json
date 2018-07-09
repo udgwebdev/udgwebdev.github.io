@@ -33,7 +33,7 @@
       },
       {
         "title": "JavaScript",
-        "total": 21
+        "total": 22
       },
       {
         "title": "Meteor",
@@ -506,6 +506,18 @@
         "title": "JavaScript",
         "posts": [
           {
+            "title": "Ebook: JavaScript Awesome Tips (Br version)",
+            "tags": [
+              "JavaScript"
+            ],
+            "published": true,
+            "description": "Fala galera tudo bem? Recentemente lancei um novo ebook, dessa vez um mini ebook, extremamente minimalista e com uma abordagem diferente dos livros convencionais de programação. Seu título: JavaScript Awesome Tips (Br version).",
+            "feature_image": "livro-javascript-awesome-tips.jpg",
+            "slug": "ebook-javascript-awesome-tips-br-version",
+            "created_at": "09/07/2018",
+            "type": "post"
+          },
+          {
             "title": "Escrevendo JavaScript melhor - Parte 7",
             "tags": [
               "JavaScript"
@@ -756,7 +768,7 @@
             "type": "post"
           }
         ],
-        "total": 21
+        "total": 22
       },
       {
         "title": "Meteor",

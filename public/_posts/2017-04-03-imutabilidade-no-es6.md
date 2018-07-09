@@ -112,4 +112,6 @@ console.log(data.cliente.nome); // John Connor
 
 Se você pretende trabalhar 100% com dados imútaveis e isso inclui tanto dados primitivos quanto objetos e arrays, basta usar `const` para as variáveis primitivas e `const` + `Object.freeze()` para objetos e ou arrays.
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 Fonte: [MDN - Object.freeze()](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)

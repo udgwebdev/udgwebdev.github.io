@@ -225,6 +225,8 @@ Se você um dia precisar criar uma função que calcule a idade com base em uma 
 
 Essa função eu achei no link: [http://jsperf.com/birthday-calculation](http://jsperf.com/birthday-calculation) e desde então passei a usá-la como referência, pois obteve uma alta performance em um código minimalista.
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 **Referências:**
 
 *   [https://code.google.com/p/jslibs/wiki/JavascriptTips](https://code.google.com/p/jslibs/wiki/JavascriptTips)

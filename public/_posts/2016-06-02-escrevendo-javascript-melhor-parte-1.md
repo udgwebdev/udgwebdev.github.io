@@ -71,7 +71,9 @@ Nesse caso, você pode deixar o código mais enxuto aplicando a função `reduce
  var scores = [1, 4, 6, 8];
  var result = scores.reduce((total, score) => total + score) / scores.length;
  console.log(result); // 4.75
-``` 
+```
+
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
 
 Veja também:
 

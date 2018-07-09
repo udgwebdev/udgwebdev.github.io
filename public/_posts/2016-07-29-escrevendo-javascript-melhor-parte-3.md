@@ -65,9 +65,9 @@ Basicamente ambas funções utilizam a mesma entrada de argumentos, o primeiro a
 
 Em `substr(index, qtd)` o segundo parâmetro retorna a quantidade de caracteres a partir do index
 
-Em `substring(start, end)` o segundo parâmetro retorna a posição final da string, ou seja, essa função retorna a substring com base na posição inicial até final
+Em `substring(start, end)` o segundo parâmetro retorna a posição final da string, ou seja, essa função retorna a substring com base na posição inicial até final.
 
-.
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
 
 Veja também:
 

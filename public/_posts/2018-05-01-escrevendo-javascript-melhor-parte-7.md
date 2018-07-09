@@ -68,6 +68,8 @@ function add(a = required(), b = required()) {
 
 E mais uma vez um novo post publicado sobre dicas para escrever javascript melhor, até a próxima!
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 Caso não tenha visto, recomendo que leia também as dicas anteriores, dessa série:
 
 *   [Escrevendo JavaScript melhor - Parte 1](/escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")

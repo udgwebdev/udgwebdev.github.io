@@ -58,6 +58,8 @@ A função `array.filter()`, retorna um novo array com base no callback de filtr
  console.log(novoArray); // ['apple', 'orange', 'kiwi', 'pumpkin', 'grape'];
 ``` 
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 Veja também:
 
 *   [Escrevendo JavaScript melhor - Parte 1](/escrevendo-javascript-melhor-parte-1 "Escrevendo JavaScript melhor - Parte 1")

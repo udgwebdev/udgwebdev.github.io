@@ -148,3 +148,5 @@ Para mais detalhes dessa estrutura: [facebook.github.io/immutable-js/docs/#/Reco
 ### Conclusão
 
 Esta é uma incrível e poderosa biblioteca quando se trata de manipular estruturas de dados imutáveis. Diferente do Lodash e Underscore, ela aplica 100% com imutabilidade, até mesmo seu nome **Immutable.js** que reflete bem o propósito de manipular estruturas imutáveis.
+
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!

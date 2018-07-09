@@ -130,4 +130,6 @@ Cliente.prototype.apresentar = function() {
 };
 ```
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 Fontes: [When Not to use an Arrow Function](http://wesbos.com/arrow-function-no-no/)

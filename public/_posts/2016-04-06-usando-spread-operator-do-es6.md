@@ -40,6 +40,8 @@ E o Spread operator? Aahhhh esse sim é o melhor de todos, veja:
 
 Basicamente você tudo se resolve com a síntaxe: **...array** para que ele quebre o array em argumentos e dessa forma você obtem uma forma mais elegante e enxuta de usar arrays como argumentos.
 
+Recentemente lancei o ebook [JavaScript Awesome Tips (Br version)](https://leanpub.com/javascript-awesome-tips-br-version) com diversas dicas sobre JavaScript, vale a pena a leitura!
+
 ### Melhor referência!
 
 *   [MDN - Spread operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator)
