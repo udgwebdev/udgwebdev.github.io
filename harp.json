@@ -54,10 +54,16 @@
         "url": "http://cupong.me/doar"
       },
       {
-        "title": "Ganhe 25$ no Payoneer!",
-        "description": "Cadastre-se no Payoneer usando este link e ganhe 25$ após efetuar uma transação de 100$ ou superior na plataforma.",
+        "title": "Ganhe $25 no Payoneer!",
+        "description": "Cadastre-se no Payoneer usando este link e ganhe $25 após efetuar uma transação de $1000 ou superior na plataforma.",
         "icon": "fa-money",
         "url": "https://share.payoneer.com/nav/93TW1Pv35NgZNvqPxvjr9l4A1MCLYpkkSV-Eiv1HhB0kN3V0GO2liT1E9Of4O5Uv0ufiAhVOlJog_pFpqqROWg2"
+      },
+      {
+        "title": "Ganhe $10 na Digital Ocean!",
+        "description": "Cadastre-se na Digital Ocean por esse link e ganha $10 após confirmar investir $25 em um servidor.",
+        "icon": "fa-server",
+        "url": "https://m.do.co/c/e62dcba33da7"
       },
       {
         "title": "Termos de uso deste blog",
