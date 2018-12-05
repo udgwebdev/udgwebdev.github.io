@@ -33,7 +33,7 @@
       },
       {
         "title": "JavaScript",
-        "total": 22
+        "total": 23
       },
       {
         "title": "Meteor",
@@ -506,6 +506,19 @@
         "title": "JavaScript",
         "posts": [
           {
+            "title": "Criando um simples Voice Recognition com JavaScript",
+            "published": true,
+            "tags": [
+              "JavaScript"
+            ],
+            "description": "Nesse post será explicado como construir um simples comando de voz com JavaScript usando API do WebKit. Na prática, vamos criar um simples código que vai capturar tudo que for falado no microfone, e como resultado final qualquer frase dita será transcrito em uma string.",
+            "alias_url": "https://medium.com/@crp_underground/criando-um-simples-voice-recognition-com-javascript-51fded1cc8d1",
+            "slug": "criando-um-simples-voice-recognition-com-javascript",
+            "created_at": "05/12/2018",
+            "type": "redirect",
+            "redirected_to": "Medium"
+          },
+          {
             "title": "Ebook: JavaScript Awesome Tips (Br version)",
             "tags": [
               "JavaScript"
@@ -768,7 +781,7 @@
             "type": "post"
           }
         ],
-        "total": 22
+        "total": 23
       },
       {
         "title": "Meteor",
