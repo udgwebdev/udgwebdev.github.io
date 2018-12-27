@@ -1,4 +1,17 @@
 {
+  "4-dicas-uteis-de-strings-para-javascript": {
+    "title": "4 Dicas úteis de strings para JavaScript",
+    "published": true,
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "Um compilado com 4 dicas úteis para manipular Strings no JavaScript, cada dica visa resolver um determinado problema usando o mais puro do vanilla JS, sem uso de lib third-party, enjoy it!",
+    "alias_url": "https://medium.com/@crp_underground/4-dicas-%C3%BAteis-de-strings-para-javascript-78cd20954cf2",
+    "slug": "4-dicas-uteis-de-strings-para-javascript",
+    "created_at": "27/12/2018",
+    "type": "redirect",
+    "redirected_to": "Medium"
+  },
   "criando-um-simples-voice-recognition-com-javascript": {
     "title": "Criando um simples Voice Recognition com JavaScript",
     "published": true,
