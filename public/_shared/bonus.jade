@@ -1,5 +1,4 @@
 ul
   each bonus in bonus_data
     li
-      a(href="javascript:void(0);" class="text-success" data-tooltipr="#{bonus.description}") <i class="fa fa-info-circle" style="margin-right:5px;font-size:1.7em;"></i>
-      a(href="#{bonus.url}" rel="nofollow" target="#{bonus.internal ? '_self' : '_blank'}" title="#{bonus.description}") <i class="fa #{bonus.icon}"></i>&nbsp;#{bonus.title}
+      a(href="#{bonus.url}" rel="nofollow" data-tooltipr="#{bonus.description}" target="#{bonus.internal ? '_self' : '_blank'}" title="#{bonus.description}") <i class="fa #{bonus.icon}"></i>&nbsp;#{bonus.title}

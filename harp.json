@@ -24,16 +24,10 @@
         "internal": true
       },
       {
-        "title": "Cotação de bitcoins em realtime",
+        "title": "Cotação de bitcoin em realtime",
         "description": "Acompanhe cotações de bitcoins e outras altcoins em tempo real de traders brasileiras através do WatchCoins",
         "icon": "fa-line-chart",
         "url": "https://watchcoins.net"
-      },
-      {
-        "title": "Tudo sobre Bitcoins e Altcoins",
-        "description": "O blog WatchCoins é um blog sensacional para quem quer aprender e acompanhar notícias sobre o mundo bitcoins e altcoins.",
-        "icon": "fa-btc",
-        "url": "https://blog.watchcoins.net"
       },
       {
         "title": "Ganhe 100R$ no AirBnB!",
@@ -46,12 +40,6 @@
         "description": "Esse site te conecta com mais de 300 empresas legais para se trabalhar e se você for contratado pode ganhar até R$2000 de bônus!",
         "icon": "fa-code",
         "url": "http://mbsy.co/contratado/26412755"
-      },
-      {
-        "title": "Doe cupom fiscal sem CPF para ONGs.",
-        "description": "Transforme suas compras em solidariedade! Doe seu cupom fiscal sem CPF para uma entidade social. #DoeSemGastar",
-        "icon": "fa-thumbs-o-up",
-        "url": "http://cupong.me/doar"
       },
       {
         "title": "Ganhe $25 no Payoneer!",
