@@ -185,8 +185,8 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-purifycss');
   grunt.loadNpmTasks('grunt-sw-precache');
 
-  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin', 'shell:posts']);
-  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin', 'shell:posts']);
+  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', /*'newer:imagemin',*/ 'shell:posts']);
+  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', /*'newer:imagemin',*/ 'shell:posts']);
   grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'concat', 'uglify', 'purifycss', 'cssmin', 'compress', 'sitemaps', 'shell:feed']);
   grunt.registerTask('deploy:prod', ['gh-pages', 'clean', 'shell:clear']);
 };

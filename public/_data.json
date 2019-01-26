@@ -1,4 +1,30 @@
 {
+  "incluindo-servicos-nao-oficiais-no-franz": {
+    "title": "Incluindo serviços não-oficiais no Franz",
+    "published": true,
+    "tags": [
+      "Ferramentas"
+    ],
+    "description": "Nesse post apresento um tutorial sobre como incluir serviços de comunicação não oficiais do Franz, tais como Reddit, Facebook, ZohoMail, Instagram e ProductHunt para incrementar o uso da ferramenta Franz.",
+    "alias_url": "https://medium.com/@crp_underground/incluindo-servi%C3%A7os-n%C3%A3o-oficiais-no-franz-4912e436aa8e",
+    "slug": "incluindo-servicos-nao-oficiais-no-franz",
+    "created_at": "09/01/2019",
+    "type": "redirect",
+    "redirected_to": "Medium"
+  },
+  "dicas-uteis-sobre-function-javascript": {
+    "title": "Dicas úteis sobre function do JavaScript",
+    "published": true,
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "Veja nesse artigo algumas dicas importantes sobre function do JavaScript, principalmente sobre os recursos do JavaScript moderno, tais como arrow-function, promises e async/await.",
+    "alias_url": "https://imasters.com.br/desenvolvimento/dicas-uteis-sobre-function-javascript",
+    "slug": "dicas-uteis-sobre-function-javascript",
+    "created_at": "09/01/2019",
+    "type": "redirect",
+    "redirected_to": "iMasters"
+  },
   "4-dicas-uteis-de-strings-para-javascript": {
     "title": "4 Dicas úteis de strings para JavaScript",
     "published": true,
