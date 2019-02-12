@@ -1,6 +1,6 @@
 - var page_title = (title || blog_description) + ' | ' + blog_name
 - var meta_page_title = title || blog_name
-- var page_url = root_url[environment] + (slug || (current.path === 'index' ? '' : current.path))
+- var page_url = root_url[environment] + (slug || (current.path == 'index' ? '' : current.path))
 - var bar_color = '#BA2D27'
 - var meta_description = description || blog_description
 - var page_image = feature_image || main_image
@@ -11,7 +11,7 @@ meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no
 meta(name="apple-mobile-web-app-capable" content="yes")
 meta(name="apple-mobile-web-app-status-bar-style" content="#{bar_color}")
 meta(name="apple-mobile-web-app-title" content="#{app_name}")
-meta(name="msapplication-TileImage" content="#{root_url[environment]}images/#{slug_title}-128.png")
+meta(name="msapplication-TileImage" content="#{root_url[environment]}images/#{main_image}")
 meta(name="msapplication-TileColor" content="#{bar_color}")
 meta(name="msapplication-tap-highlight" content="no")
 meta(name="mobile-web-app-capable" content="yes")
@@ -26,8 +26,6 @@ meta(property="og:url" content="#{page_url}")
 meta(property="og:site_name" content="#{blog_name}")
 meta(property="og:image" content="#{root_url[environment]}images/#{page_image}")
 meta(property="og:type" content="website")
-meta(property="article:author" content="#{google_plus}")
-meta(property="article:section" content="main")
 meta(name="twitter:creator" content="#{twitter}")
 meta(name="twitter:card" content="summary")
 meta(name="twitter:url" content="#{page_url}")

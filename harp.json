@@ -12,7 +12,7 @@
     "twitter": "@crp_underground",
     "featured_tags": ["nodejs", "meteor", "dicas-de-terminal"],
     "root_url": {
-      "development": "http://localhost:3000/",
+      "development": "http://localhost:4000/",
       "production": "https://udgwebdev.com/"
     },
     "bonus_data": [
@@ -22,6 +22,12 @@
         "icon": "fa-thumbs-o-up",
         "url": "/doacoes",
         "internal": true
+      },
+      {
+        "title": "Newsletter app para developers",
+        "description": "Codebanca a newsletter app for developers and startups",
+        "icon": "fa-code",
+        "url": "https://codebanca.com"
       },
       {
         "title": "Cotação de bitcoin em realtime",
