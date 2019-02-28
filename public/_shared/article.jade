@@ -8,6 +8,7 @@ article(class="#{type}" id="#{slug}")
       p.text-muted Publicação: <time datetime="#{created_at}" pubdate><b>#{created_at}</b></time> | Tags: !{tagLinks.toString().replace(',', ', ')}
     != yield
   if type === "post" || type === "page"
+    != partial("ads")
     != partial("share")
   if type === "post"
     hr

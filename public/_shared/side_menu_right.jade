@@ -1,8 +1,8 @@
 .sidemenu.animated(data-sticky-sidemenu)
-  section.hidden-xs
+  section
     h2.h3.text-center <i class="fa fa-book"></i>&nbsp;Livros
     != partial("book_gallery")
-  section.hidden-xs
+  section
     h2.h3.text-center <i class="fa fa-gift"></i>&nbsp;Bônus
     != partial("bonus")
   section.hidden-sticky
@@ -12,6 +12,6 @@
         - var tagPath = tag.title.toLowerCase().replace(/\s/g, '-').replace(/\./g, '');
         - var menuPath = featured_tags.includes(tagPath) ? '/' : '/menu/#';
         li <a href="#{menuPath}#{tagPath}" rel="me" title="#{tag.title}"><i class="fa fa-folder-open"></i>&nbsp;#{tag.title} (#{tag.total})</a>
-  section.hidden-xs
+  section.hidden-sticky
     h2.h3.text-center <i class="fa fa-users"></i>&nbsp;Conheça também
     != partial("friend_links")
