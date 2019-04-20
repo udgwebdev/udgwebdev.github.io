@@ -8,7 +8,6 @@
     "author_email": "caio.ribeiro.pereira@gmail.com",
     "main_image": "udgwebdev-logo.png",
     "github_repo": "git@github.com:udgwebdev/udgwebdev.github.io.git",
-    "google_plus": "https://plus.google.com/+CaioRibeiroPereira",
     "twitter": "@crp_underground",
     "featured_tags": ["nodejs", "meteor", "dicas-de-terminal"],
     "root_url": {
@@ -24,28 +23,10 @@
         "internal": true
       },
       {
-        "title": "Newsletter app para developers",
-        "description": "Codebanca é um app para acompanhar newsletters sobre programação, startups e tecnologia",
-        "icon": "fa-code",
-        "url": "https://codebanca.com"
-      },
-      {
-        "title": "Cotação de bitcoin em realtime",
-        "description": "Acompanhe cotações de bitcoins e outras altcoins em tempo real de traders brasileiras através do WatchCoins",
-        "icon": "fa-line-chart",
-        "url": "https://watchcoins.net"
-      },
-      {
-        "title": "Ganhe 100R$ no AirBnB!",
+        "title": "Ganhe R$50 no AirBnB!",
         "description": "Ao se cadastrar por esse link, você ganhará 100R$ de desconto ao se hospedar via AirBnb em sua próxima viagem!",
         "icon": "fa-plane",
         "url": "https://www.airbnb.com/c/caior440"
-      },
-      {
-        "title": "Procurando trampo em TI?",
-        "description": "Esse site te conecta com mais de 300 empresas legais para se trabalhar e se você for contratado pode ganhar até R$2000 de bônus!",
-        "icon": "fa-code",
-        "url": "http://mbsy.co/contratado/26412755"
       },
       {
         "title": "Ganhe $25 no Payoneer!",
@@ -58,6 +39,18 @@
         "description": "Cadastre-se na Digital Ocean por esse link e ganha $10 após confirmar investir $25 em um servidor.",
         "icon": "fa-server",
         "url": "https://m.do.co/c/e62dcba33da7"
+      },
+      {
+        "title": "Newsletter app para developers",
+        "description": "Codebanca é um app para acompanhar newsletters sobre programação, startups e tecnologia",
+        "icon": "fa-code",
+        "url": "https://app.codebanca.com"
+      },
+      {
+        "title": "Cotação de bitcoin em realtime",
+        "description": "Acompanhe cotações de bitcoins e outras altcoins em tempo real de traders brasileiras através do WatchCoins",
+        "icon": "fa-line-chart",
+        "url": "https://watchcoins.net"
       },
       {
         "title": "Termos de uso deste blog",
