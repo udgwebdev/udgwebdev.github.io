@@ -41,18 +41,6 @@
         "url": "https://m.do.co/c/e62dcba33da7"
       },
       {
-        "title": "Newsletter app para developers",
-        "description": "Codebanca é um app para acompanhar newsletters sobre programação, startups e tecnologia",
-        "icon": "fa-code",
-        "url": "https://app.codebanca.com"
-      },
-      {
-        "title": "Cotação de bitcoin em realtime",
-        "description": "Acompanhe cotações de bitcoins e outras altcoins em tempo real de traders brasileiras através do WatchCoins",
-        "icon": "fa-line-chart",
-        "url": "https://watchcoins.net"
-      },
-      {
         "title": "Termos de uso deste blog",
         "description": "Conheça os termos de uso e direitos autorais deste blog.",
         "icon": "fa-exclamation-triangle",
