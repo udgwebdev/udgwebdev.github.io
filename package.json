@@ -31,11 +31,11 @@
     "grunt-shell": "2.1.0",
     "grunt-sitemaps": "0.1.1",
     "grunt-sw-precache": "1.0.3",
-    "harp": "0.22.0",
-    "lodash": "4.17.2",
-    "moment": "2.17.0",
-    "rss": "1.2.1",
-    "to-markdown": "3.0.3",
-    "yamljs": "0.2.8"
+    "harp": "0.32.0",
+    "lodash": "4.17.19",
+    "moment": "2.27.0",
+    "rss": "1.2.2",
+    "to-markdown": "3.1.1",
+    "yamljs": "0.3.0"
   }
 }
