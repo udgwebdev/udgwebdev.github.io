@@ -26,6 +26,7 @@
     "grunt-purifycss": "0.1.2",
     "grunt-shell": "3.0.1",
     "harp": "0.41.0",
+    "jstransformer-marked": "^1.0.3",
     "lodash": "4.17.21",
     "moment": "2.29.1",
     "rss": "1.2.2",
