@@ -78,21 +78,6 @@ module.exports = (grunt) => {
         command: 'node clear_posts.js'
       }
     },
-    // Sitemap =======================================
-    sitemaps: {
-      default: {
-        options: {
-          baseUrl: harp.globals.root_url.production,
-          contentRoot: 'www/',
-          dest: 'www/'
-        },
-        files: [{
-          expand: true,
-          cwd: 'www/',
-          src: '**/*.html'
-        }]
-      }
-    },
     // CSSMin =========================================
     cssmin: {
       options: {
@@ -117,46 +102,6 @@ module.exports = (grunt) => {
         dest: 'www/assets/css/main.css'
       }
     },
-    // Manifest ======================================
-    appcache: {
-      options: {
-        basePath: 'www',
-        baseUrl: harp.globals.root_url.production
-      },
-      all: {
-        dest: 'www/manifest.appcache',
-        cache: [
-          'www/**/*.{css,js,woff,ttf,svg,eot,gif,png,jpg,jpeg}',
-          'www/index.html',
-          'www/404.html',
-          'www/manifest.json',
-          'www/favicon.ico',
-          'www/robots.txt'
-        ],
-        network: '*'
-      }
-    },
-    // SW PreCache ===================================
-    'sw-precache': {
-      options: {
-        baseDir: 'www',
-        cacheId: harp.globals.slug_name,
-        workerFileName: 'sw.js',
-        verbose: true,
-        handleFetch: true
-      },
-      default: {
-        staticFileGlobs: [
-          'index.html',
-          '404.html',
-          'manifest.json',
-          'robots.txt',
-          'manifest.appcache',
-          'favicon.ico',
-          '**/*.{css,js,woff,ttf,svg,eot,gif,png,jpg,jpeg}'
-        ]
-      }
-    },
     // Github Pages ==================================
     'gh-pages': {
       options: {
@@ -178,15 +123,12 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-appcache');
-  grunt.loadNpmTasks('grunt-sitemaps');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-purifycss');
-  grunt.loadNpmTasks('grunt-sw-precache');
 
-  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', /*'newer:imagemin',*/ 'shell:posts']);
-  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', /*'newer:imagemin',*/ 'shell:posts']);
-  grunt.registerTask('build:prod', ['appcache', 'sw-precache', 'concat', 'uglify', 'purifycss', 'cssmin', 'compress', 'sitemaps', 'shell:feed']);
+  grunt.registerTask('prebuild:dev', ['clean', 'env:dev', 'newer:imagemin', 'shell:posts']);
+  grunt.registerTask('prebuild:prod', ['clean', 'env:prod', 'newer:imagemin', 'shell:posts']);
+  grunt.registerTask('build:prod', ['concat', 'uglify', 'purifycss', 'cssmin', 'compress', 'shell:feed']);
   grunt.registerTask('deploy:prod', ['gh-pages', 'clean', 'shell:clear']);
 };
