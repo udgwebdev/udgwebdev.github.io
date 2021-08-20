@@ -1,26 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.github.io/</link><image><url>https://udgwebdev.github.io/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.github.io/</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 18 Sep 2020 21:51:37 GMT</lastBuildDate><atom:link href="https://udgwebdev.github.io/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 18 Sep 2020 21:51:37 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Incluindo serviços não-oficiais no Franz]]></title><description><![CDATA[Nesse post apresento um tutorial sobre como incluir serviços de comunicação não oficiais do Franz, tais como Reddit, Facebook, ZohoMail, Instagram e ProductHunt para incrementar o uso da ferramenta Franz.]]></description><link>https://udgwebdev.github.io/incluindo-servicos-nao-oficiais-no-franz</link><guid isPermaLink="true">https://udgwebdev.github.io/incluindo-servicos-nao-oficiais-no-franz</guid><category><![CDATA[Ferramentas]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 09 Jan 0019 03:06:28 GMT</pubDate></item><item><title><![CDATA[Dicas úteis sobre function do JavaScript]]></title><description><![CDATA[Veja nesse artigo algumas dicas importantes sobre function do JavaScript, principalmente sobre os recursos do JavaScript moderno, tais como arrow-function, promises e async/await.]]></description><link>https://udgwebdev.github.io/dicas-uteis-sobre-function-javascript</link><guid isPermaLink="true">https://udgwebdev.github.io/dicas-uteis-sobre-function-javascript</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 09 Jan 0019 03:06:28 GMT</pubDate></item><item><title><![CDATA[4 Dicas úteis de strings para JavaScript]]></title><description><![CDATA[Um compilado com 4 dicas úteis para manipular Strings no JavaScript, cada dica visa resolver um determinado problema usando o mais puro do vanilla JS, sem uso de lib third-party, enjoy it!]]></description><link>https://udgwebdev.github.io/4-dicas-uteis-de-strings-para-javascript</link><guid isPermaLink="true">https://udgwebdev.github.io/4-dicas-uteis-de-strings-para-javascript</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 27 Dec 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Criando um simples Voice Recognition com JavaScript]]></title><description><![CDATA[Nesse post será explicado como construir um simples comando de voz com JavaScript usando API do WebKit. Na prática, vamos criar um simples código que vai capturar tudo que for falado no microfone, e como resultado final qualquer frase dita será transcrito em uma string.]]></description><link>https://udgwebdev.github.io/criando-um-simples-voice-recognition-com-javascript</link><guid isPermaLink="true">https://udgwebdev.github.io/criando-um-simples-voice-recognition-com-javascript</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 05 Dec 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Ebook: JavaScript Dicas Incríveis]]></title><description><![CDATA[<h1>Ebook: JavaScript Dicas Incr&#xED;veis</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="09/07/2018" pubdate><b>09/07/2018</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><a href="https://leanpub.com/javascript-dicas-incriveis"><img src="https://udgwebdev.github.io/images/livro-javascript-dicas-incriveis.jpg" alt="JavaScript Dicas Incr&#xED;veis" title="JavaScript Dicas Incr&#xED;veis"></a></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Underground WebDev]]></title><description><![CDATA[Underground WebDev]]></description><link>https://udgwebdev.github.io/</link><image><url>https://udgwebdev.github.io/images/udgwebdev-logo.png</url><title>Underground WebDev</title><link>https://udgwebdev.github.io/</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 20 Aug 2021 19:33:47 GMT</lastBuildDate><atom:link href="https://udgwebdev.github.io/atom.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 20 Aug 2021 19:33:47 GMT</pubDate><managingEditor><![CDATA[Caio Ribeiro Pereira]]></managingEditor><webMaster><![CDATA[Caio Ribeiro Pereira]]></webMaster><ttl>60</ttl><item><title><![CDATA[Incluindo serviços não-oficiais no Franz]]></title><description><![CDATA[Nesse post apresento um tutorial sobre como incluir serviços de comunicação não oficiais do Franz, tais como Reddit, Facebook, ZohoMail, Instagram e ProductHunt para incrementar o uso da ferramenta Franz.]]></description><link>https://udgwebdev.github.io/incluindo-servicos-nao-oficiais-no-franz</link><guid isPermaLink="true">https://udgwebdev.github.io/incluindo-servicos-nao-oficiais-no-franz</guid><category><![CDATA[Ferramentas]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 09 Jan 0019 03:06:28 GMT</pubDate></item><item><title><![CDATA[Dicas úteis sobre function do JavaScript]]></title><description><![CDATA[Veja nesse artigo algumas dicas importantes sobre function do JavaScript, principalmente sobre os recursos do JavaScript moderno, tais como arrow-function, promises e async/await.]]></description><link>https://udgwebdev.github.io/dicas-uteis-sobre-function-javascript</link><guid isPermaLink="true">https://udgwebdev.github.io/dicas-uteis-sobre-function-javascript</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 09 Jan 0019 03:06:28 GMT</pubDate></item><item><title><![CDATA[4 Dicas úteis de strings para JavaScript]]></title><description><![CDATA[Um compilado com 4 dicas úteis para manipular Strings no JavaScript, cada dica visa resolver um determinado problema usando o mais puro do vanilla JS, sem uso de lib third-party, enjoy it!]]></description><link>https://udgwebdev.github.io/4-dicas-uteis-de-strings-para-javascript</link><guid isPermaLink="true">https://udgwebdev.github.io/4-dicas-uteis-de-strings-para-javascript</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 27 Dec 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Criando um simples Voice Recognition com JavaScript]]></title><description><![CDATA[Nesse post será explicado como construir um simples comando de voz com JavaScript usando API do WebKit. Na prática, vamos criar um simples código que vai capturar tudo que for falado no microfone, e como resultado final qualquer frase dita será transcrito em uma string.]]></description><link>https://udgwebdev.github.io/criando-um-simples-voice-recognition-com-javascript</link><guid isPermaLink="true">https://udgwebdev.github.io/criando-um-simples-voice-recognition-com-javascript</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 05 Dec 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Ebook: JavaScript Dicas Incríveis]]></title><description><![CDATA[<h1>Ebook: JavaScript Dicas Incr&#xED;veis</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="09/07/2018" pubdate><b>09/07/2018</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><a href="https://leanpub.com/javascript-dicas-incriveis"><img src="https://udgwebdev.github.io/images/livro-javascript-dicas-incriveis.jpg" alt="JavaScript Dicas Incr&#xED;veis" title="JavaScript Dicas Incr&#xED;veis"></a></p>
 <p>Fala galera tudo bem? Recentemente lancei um novo ebook, dessa vez um mini ebook, extremamente minimalista e com uma abordagem diferente dos livros convencionais de programa&#xE7;&#xE3;o.</p>
 <p>O ebook se chama: <a href="https://leanpub.com/javascript-dicas-incriveis">JavaScript Dicas Incr&#xED;veis</a>, e nele foi escrito uma cole&#xE7;&#xE3;o de dicas, hacks e truques pr&#xE1;ticos em JavaScript, com uma abordagem baseada em problemas e solu&#xE7;&#xF5;es, e com certeza muito c&#xF3;digo JavaScript, o mais legal desse livro &#xE9; que n&#xE3;o h&#xE1; cap&#xED;tulo sequencial, voc&#xEA; pode ler e reler cap&#xED;tulos avulsos, sem seguir ordem, pois cada cap&#xED;tulo, cada dica &#xE9; &#xFA;nica.</p>
 <p>Este &#xE9; um livro para quem j&#xE1; esta familiarizado com JavaScript ou pelo menos tem no&#xE7;&#xF5;es b&#xE1;sicas e quer se aprofundar mais, aprendendo desde hacks antigos do ES5, at&#xE9; chegar em solu&#xE7;&#xF5;es modernas do ES6, ES7 e ES8.</p>
 <p>O livro foi publicado na plataforma Leanpub, cont&#xE9;m apenas 50 p&#xE1;ginas com muitas dicas, na p&#xE1;gina da Leanpub existem dois cap&#xED;tulos avulsos para leitura gratuita.</p>
 <p>Link do livro: <a href="https://leanpub.com/javascript-dicas-incriveis">leanpub.com/javascript-dicas-incriveis</a></p>
-<p>Espero que gostem desse livro, e d&#xFA;vidas, feedbacks ou sugest&#xF5;es sobre este livro me avisem ou comentem aqui embaixo!</p>]]></description><link>https://udgwebdev.github.io/ebook-javascript-dicas-incriveis</link><guid isPermaLink="true">https://udgwebdev.github.io/ebook-javascript-dicas-incriveis</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 09 Jul 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 7]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 7</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="01/05/2018" pubdate><b>01/05/2018</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>Espero que gostem desse livro, e d&#xFA;vidas, feedbacks ou sugest&#xF5;es sobre este livro me avisem ou comentem aqui embaixo!</p>
+]]></description><link>https://udgwebdev.github.io/ebook-javascript-dicas-incriveis</link><guid isPermaLink="true">https://udgwebdev.github.io/ebook-javascript-dicas-incriveis</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 09 Jul 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 7]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 7</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="01/05/2018" pubdate><b>01/05/2018</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
 <p>Continuando a s&#xE9;rie de dicas para escrever JavaScript melhor, nesse artigo vamos explicar cinco dicas bem legais, sobre como criar em poucas linhas de c&#xF3;digo a fun&#xE7;&#xE3;o <code>compact()</code> e <code>diff()</code>, novas maneiras de concatenar arrays, como executar fun&#xE7;&#xF5;es em paralelo e como tornar par&#xE2;metros obrigat&#xF3;rios no default parameter.</p>
-<p>1) Criando fun&#xE7;&#xE3;o compact() em uma linha</p>
+<ol>
+<li>Criando fun&#xE7;&#xE3;o compact() em uma linha</li>
+</ol>
 <p>Se voc&#xEA; usa ou usou bibliotecas como underscore.js ou lodash, j&#xE1; deve ter visto a fun&#xE7;&#xE3;o <code>compact()</code>, em que basicamente essa fun&#xE7;&#xE3;o faz uma limpeza no array, removendo valores considerados como falso pelo JavaScript, exemplo: <code>0, null, undefined, false e &quot;&quot;</code>, caso voc&#xEA; queira usar somente essa fun&#xE7;&#xE3;o, eliminando a necessidade de carrega uma biblioteca inteira para usar apenas isso, voc&#xEA; pode implementar em uma &#xFA;nica linha, essa fun&#xE7;&#xE3;o, veja:</p>
 <pre><code class="language-javascript">const compact = arr =&gt; arr.filter(Boolean);
 
 const list = [0, null, 1, true];
-compact(list); // [1, true]</code></pre>
-<p>2) Simples fun&#xE7;&#xE3;o diff() entre dois arrays</p>
+compact(list); // [1, true]
+</code></pre>
+<ol start="2">
+<li>Simples fun&#xE7;&#xE3;o diff() entre dois arrays</li>
+</ol>
 <p>A fun&#xE7;&#xE3;o <code>diff()</code> tamb&#xE9;m &#xE9; conhecida pelas bibliotecas underscore.js e lodash, e basicamente seu prop&#xF3;sito &#xE9; retornar um array com valores diferentes entre dois arrays em par&#xE2;metros, ou seja, ele lista valores que n&#xE3;o existem nos dois arrays ao mesmo tempo, sua implementa&#xE7;&#xE3;o tamb&#xE9;m &#xE9; extremamente leve e simples de fazer:</p>
 <pre><code class="language-javascript">const diff = (a, b) =&gt; {
    const s = new Set(b);
    &#x200E;return a.filter(x =&gt; !s.has(x));
 };
 
-diff([1, 2], [1, 2, 3]); // [3]</code></pre>
-<p>3) Duas maneiras de concatenar arrays</p>
+diff([1, 2], [1, 2, 3]); // [3]
+</code></pre>
+<ol start="3">
+<li>Duas maneiras de concatenar arrays</li>
+</ol>
 <p>Existem duas maneiras de concatenar v&#xE1;rios arrays para um &#xFA;nico array, uma &#xE9; usando concat() e a outra op&#xE7;&#xE3;o &#xE9; viavel apenas usando Spread Operator do ES2015:</p>
 <pre><code class="language-javascript">const list1 = [1, 2, 3];
 const list2 = [4, 5, 6];
@@ -29,14 +38,20 @@ const list3 = [7, 8, 9];
 // usando concat
 const concat1 = [].concat(list1, list2, list3);
 // usando spread operator
-const concat2 = [...list1, ...list2, ...list3];</code></pre>
-<p>4) Rodando m&#xFA;ltiplas fun&#xE7;&#xF5;es ass&#xED;ncronas em paralelo</p>
+const concat2 = [...list1, ...list2, ...list3];
+</code></pre>
+<ol start="4">
+<li>Rodando m&#xFA;ltiplas fun&#xE7;&#xF5;es ass&#xED;ncronas em paralelo</li>
+</ol>
 <p>Caso voc&#xEA; queira maximizar processamento, atrav&#xE9;s da execu&#xE7;&#xE3;o paralela de m&#xFA;ltiplas fun&#xE7;&#xF5;es ass&#xED;ncronas, &#xE9; poss&#xED;vel aplicar esse tipo de processamento usando a combina&#xE7;&#xE3;o de promises com async/await:</p>
 <pre><code class="language-javascript">async function parallel() {
     const allFuncs = [asyncFunc1(), asyncFunc2()];
     const [result1, result2] = await Promise.all(allFuncs);
-}</code></pre>
-<p>5) Tornar par&#xE2;metros obrigat&#xF3;rios em uma fun&#xE7;&#xE3;o</p>
+}
+</code></pre>
+<ol start="5">
+<li>Tornar par&#xE2;metros obrigat&#xF3;rios em uma fun&#xE7;&#xE3;o</li>
+</ol>
 <p>Essa dica &#xE9; bem simples de fazer e visa deixar alguns par&#xE2;metros obrigat&#xF3;rios para tal fun&#xE7;&#xE3;o ser executada, para fazer isso, basta criar uma simples fun&#xE7;&#xE3;o que lance um erro, e utilize essa fun&#xE7;&#xE3;o como default parameter, e com isso, caso tal par&#xE2;metro n&#xE3;o receba um valor, ele executar&#xE1; a fun&#xE7;&#xE3;o de erro, veja a seguir como fazer isso:</p>
 <pre><code class="language-javascript">function required() {
     throw new Error(&apos;This field is required&apos;);
@@ -44,33 +59,38 @@ const concat2 = [...list1, ...list2, ...list3];</code></pre>
 
 function add(a = required(), b = required()) {
      return a + b;
-}</code></pre>
+}
+</code></pre>
 <p>E mais uma vez um novo post publicado sobre dicas para escrever javascript melhor, at&#xE9; a pr&#xF3;xima!</p>
 <p>Recentemente lancei o ebook <a href="https://leanpub.com/javascript-awesome-tips-br-version">JavaScript Awesome Tips (Br version)</a> com diversas dicas sobre JavaScript, vale a pena a leitura!</p>
 <p>Caso n&#xE3;o tenha visto, recomendo que leia tamb&#xE9;m as dicas anteriores, dessa s&#xE9;rie:</p>
 <ul>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5" title="Escrevendo JavaScript melhor - Parte 5">Escrevendo JavaScript melhor - Parte 5</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-6" title="Escrevendo JavaScript melhor - Parte 6">Escrevendo JavaScript melhor - Parte 6</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5" title="Escrevendo JavaScript melhor - Parte 5">Escrevendo JavaScript melhor - Parte 5</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-6" title="Escrevendo JavaScript melhor - Parte 6">Escrevendo JavaScript melhor - Parte 6</a></li>
 </ul>
 <p>Fontes:</p>
 <ul>
 <li><a href="https://www.facebook.com/addyosmaniofficial">Fanpage do Addy Osmani</a></li>
-</ul>]]></description><link>https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-7</link><guid isPermaLink="true">https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-7</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 01 May 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 6]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="04/01/2018" pubdate><b>04/01/2018</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+</ul>
+]]></description><link>https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-7</link><guid isPermaLink="true">https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-7</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 01 May 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 6]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="04/01/2018" pubdate><b>04/01/2018</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
 <p>Sim, e mais uma vez continuaremos com essa s&#xE9;rie de posts, j&#xE1; estamos no sexto post! \o/</p>
 <p>Feliz 2018! Fiquem tranquilos que este blog n&#xE3;o morreu, e n&#xE3;o pretendo parar em compartilhar conhecimento por aqui, no m&#xE1;ximo o ritmo de posts aqui ser&#xE3;o apenas menores, devido a minha dedica&#xE7;&#xE3;o maior que tenho hoje trabalhando para startup <a href="https://watchcoins.net">WatchCoins</a>.</p>
 <p>Hoje o post ser&#xE1; bem curto, mas ter&#xE1; um conte&#xFA;do bem bacana. Basicamente vamos aprender como criar uma fun&#xE7;&#xE3;o uniqueList combinando Spread Operator + Set, e tamb&#xE9;m como criar uma fun&#xE7;&#xE3;o sleep usando Promises + Async/Await, ambas fun&#xE7;&#xF5;es ser&#xE3;o escritas em uma &#xFA;nica linha de c&#xF3;digo!</p>
 <h3>Fun&#xE7;&#xE3;o para manter itens &#xFA;nicos no array</h3><p>A combina&#xE7;&#xE3;o de spread operator + objeto Set, nos permite criar uma fun&#xE7;&#xE3;o que mant&#xE9;m itens &#xFA;nicos em um array, o famoso unique(), essa fun&#xE7;&#xE3;o &#xE9; muito &#xFA;til e pode ser feita em uma &#xFA;nica linha, veja:</p>
-<pre><code class="language-javascript">const unique = array =&gt; [...new Set(array)];</code></pre>
+<pre><code class="language-javascript">const unique = array =&gt; [...new Set(array)];
+</code></pre>
 <p>Usar essa fun&#xE7;&#xE3;o &#xE9; bem simples, veja:</p>
 <pre><code class="language-javascript">const array = [1,2,3,3,3,4,5,6];
 const uniqList = unique(array);
-console.log(uniqList); // [1,2,3,4,5,6];</code></pre>
+console.log(uniqList); // [1,2,3,4,5,6];
+</code></pre>
 <h3>Fun&#xE7;&#xE3;o sleep usando Promises + Async/Await</h3><p>Se voc&#xEA; utilizar Promise + Async/Await para encapsular a fun&#xE7;&#xE3;o setTimeout, &#xE9; poss&#xED;vel criar a cl&#xE1;ssica fun&#xE7;&#xE3;o sleep, cuja, sua funcionalidade &#xE9; criar um delay com base no milisegundos passado em par&#xE2;metro, apesar do setTimeout fazer esse papel de forma ass&#xED;ncrona, podemos criar uma fun&#xE7;&#xE3;o sleep de forma que mantenha todo c&#xF3;digo limpo e no estilo s&#xED;ncrono, mesmo que por de baixo dos panos a execu&#xE7;&#xE3;o seja ass&#xED;ncrona, e tudo isso pode ser feito em uma &#xFA;nica linha tamb&#xE9;m, veja:</p>
-<pre><code class="language-javascript">const sleep = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));</code></pre>
+<pre><code class="language-javascript">const sleep = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
+</code></pre>
 <p>Para us&#xE1;-lo, &#xE9; necess&#xE1;rio incluir essa fun&#xE7;&#xE3;o, dentro de um escopo de uma fun&#xE7;&#xE3;o que utilize async/await, exemplo:</p>
 <pre><code class="language-javascript">async function delaySomething() {
     console.log(&apos;iniciando delay!&apos;);
@@ -81,20 +101,22 @@ console.log(uniqList); // [1,2,3,4,5,6];</code></pre>
 delaySomething();
 // iniciando delay!
 // espera 1 segundo
-// finalizando delay!</code></pre>
+// finalizando delay!
+</code></pre>
 <p>Recentemente lancei o ebook <a href="https://leanpub.com/javascript-awesome-tips-br-version">JavaScript Awesome Tips (Br version)</a> com diversas dicas sobre JavaScript, vale a pena a leitura!</p>
 <p>Caso n&#xE3;o tenha visto, recomendo que leia tamb&#xE9;m as dicas anteriores, dessa s&#xE9;rie:</p>
 <ul>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5" title="Escrevendo JavaScript melhor - Parte 5">Escrevendo JavaScript melhor - Parte 5</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5" title="Escrevendo JavaScript melhor - Parte 5">Escrevendo JavaScript melhor - Parte 5</a></li>
 </ul>
 <p>Fontes:</p>
 <ul>
 <li><a href="https://www.facebook.com/addyosmaniofficial">Fanpage do Addy Osmani</a></li>
-</ul>]]></description><link>https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-6</link><guid isPermaLink="true">https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-6</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 04 Jan 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Evite erros comuns ao criar um site]]></title><description><![CDATA[<h1>Evite erros comuns ao criar um site</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/12/2017" pubdate><b>12/12/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#seo" rel="me" title="Menu: SEO">SEO</a></p><p><img src="https://udgwebdev.github.io/images/weblink.jpg" alt="Evite erros comuns ao criar um site" title="Evite erros comuns ao criar um site"></p>
+</ul>
+]]></description><link>https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-6</link><guid isPermaLink="true">https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-6</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 04 Jan 0018 03:06:28 GMT</pubDate></item><item><title><![CDATA[Evite erros comuns ao criar um site]]></title><description><![CDATA[<h1>Evite erros comuns ao criar um site</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/12/2017" pubdate><b>12/12/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#seo" rel="me" title="Menu: SEO">SEO</a></p><p><img src="https://udgwebdev.github.io/images/weblink.jpg" alt="Evite erros comuns ao criar um site" title="Evite erros comuns ao criar um site"></p>
 <p>Toda empresa precisa de um site, independente do seu nicho e tipo de cliente, afinal o site &#xE9; um cart&#xE3;o de visitas, a vitrine que todo neg&#xF3;cio que preza o profissionalismo e credibilidade deve ter. E investir em estrat&#xE9;gias digitais &#xE9; sempre uma boa op&#xE7;&#xE3;o. </p>
 <p>Seja qual for seu ramo de atua&#xE7;&#xE3;o, ou modelo de neg&#xF3;cio, a visibilidade adquirida por meio da internet &#xE9; capaz de fazer verdadeiros &quot;milagres&quot; por sua empresa. Se ainda n&#xE3;o investe nisso, uma dica &#xE9; come&#xE7;ar a pensar.</p>
 <p>E como toda estrat&#xE9;gia parte de algum fundamento, o primeiro passo &#xE9; ter aten&#xE7;&#xE3;o e tamb&#xE9;m tomar certos cuidados para que a cria&#xE7;&#xE3;o do seu site seja realizada da melhor maneira poss&#xED;vel. </p>
@@ -137,17 +159,20 @@ portanto, deve seguir os mesmos elementos visuais.</p>
 <p>Em resumo, para ter um bom site, livre dos erros mais comuns, realizar uma avalia&#xE7;&#xE3;o pr&#xE9;via, definir um planejamento estruturado e evitar exageros, &#xE9; o caminho mais vi&#xE1;vel que se pode escolher.</p>
 <p>Um site precisa oferecer ao usu&#xE1;rio uma experi&#xEA;ncia enriquecedora, uma navega&#xE7;&#xE3;o simplificada e solu&#xE7;&#xF5;es para o que ele pesquisou, principalmente se a inten&#xE7;&#xE3;o &#xE9; que este usu&#xE1;rio se torne um potencial cliente. </p>
 <p>Esperamos que tenha gostado e que agora possa evitar os erros mais comuns ao criar um site.</p>
-<p>Post powered by <a href="https://www.weblink.com.br?utm_source=udgwebdev">WebLink</a></p>]]></description><link>https://udgwebdev.github.io/evite-erros-comuns-ao-criar-um-site</link><guid isPermaLink="true">https://udgwebdev.github.io/evite-erros-comuns-ao-criar-um-site</guid><category><![CDATA[SEO]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 12 Dec 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Deploying Node.js na Umbler]]></title><description><![CDATA[<h1>Deploying Node.js na Umbler</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/08/2017" pubdate><b>02/08/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/umbler-logo.png" alt="Deploying Node.js na Umbler" title="Deploying Node.js na Umbler"></p>
+<p>Post powered by <a href="https://www.weblink.com.br?utm_source=udgwebdev">WebLink</a></p>
+]]></description><link>https://udgwebdev.github.io/evite-erros-comuns-ao-criar-um-site</link><guid isPermaLink="true">https://udgwebdev.github.io/evite-erros-comuns-ao-criar-um-site</guid><category><![CDATA[SEO]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 12 Dec 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Deploying Node.js na Umbler]]></title><description><![CDATA[<h1>Deploying Node.js na Umbler</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="02/08/2017" pubdate><b>02/08/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/umbler-logo.png" alt="Deploying Node.js na Umbler" title="Deploying Node.js na Umbler"></p>
 <p>Se voc&#xEA; esta procurando um host Node.js aqui no Brasil e precisa de um servi&#xE7;o bem pr&#xE1;tico em que toda orquestra&#xE7;&#xE3;o dos servers voc&#xEA; faz em um Saas com um visual bem intuitivo, atualmente recomendo que teste a cloud on-demand bem bacana chamada Umbler.</p>
 <p>Eles al&#xE9;m de darem suporte a Node.js, trabalham com PHP e ASP.Net (E em breve ter&#xE1; suporte a Ruby/Python/Java tamb&#xE9;m!) e o foco deles &#xE9; facilitar a vida de quem desenvolve para a web, por isso tornaram todo o processo de deploy muito simplificado para voc&#xEA; gastar tempo e energia no que mais agrega valor, que &#xE9; o desenvolvimento da sua aplica&#xE7;&#xE3;o.</p>
 <p>Falando em deploy r&#xE1;pido, para comprovar isso, veja a seguir, um tutorial sobre como botar uma aplica&#xE7;&#xE3;o Node.js:</p>
 <p>Vamos supor, que voc&#xEA; j&#xE1; se <a href="https://www.umbler.com/br/hospedagem-nodejs">cadastrou na Umbler</a>, e criou o projeto <code>hello-umbler</code>, com isso, ele vai liberar para voc&#xEA; uma git url para viabilizar que voc&#xEA; fa&#xE7;a push de novas altera&#xE7;&#xF5;es, que ser&#xE3;o refletidas em um novo deploy no servidor. Se voc&#xEA; j&#xE1; criou no painel de controle da umbler, basta abrir o terminal para rodar os comandos a seguir:</p>
 <pre><code class="language-bash">mkdir hello-umbler
 cd hello-umbler
-npm init</code></pre>
+npm init
+</code></pre>
 <p>Preencha o question&#xE1;rio do npm init para gerar o <code>package.json</code> no final. Ap&#xF3;s essa etapa, ser&#xE1; necess&#xE1;rio iniciar o git nesse projeto e incluir a url remota do git do servidor, para isso execute:</p>
 <pre><code class="language-bash">git init
-git remote add umbler GIT_URL_DO_SERVER_UMBLER</code></pre>
+git remote add umbler GIT_URL_DO_SERVER_UMBLER
+</code></pre>
 <p><em>Obs.:</em> Troque <code>GIT_URL_DO_SERVER_UMBLER</code> pela git url gerada na sua conta umbler, ok?<br>Agora que temos integrado no git a url do servidor remoto, podemos criar nosso projeto da maneira que quiser, para exemplificar, crie o c&#xF3;digo <code>app.js</code>:</p>
 <pre><code class="language-javascript">const http = require(&apos;http&apos;);
 
@@ -158,7 +183,8 @@ const server = http.createServer((req, res) =&gt; {
 
 const port = process.env.PORT || 3000;
 
-server.listen(port, () =&gt; console.log(`Umbler server at port:${port}`));</code></pre>
+server.listen(port, () =&gt; console.log(`Umbler server at port:${port}`));
+</code></pre>
 <p>Agora edite o <code>package.json</code> para incluir o comando <code>npm start</code>:</p>
 <pre><code class="language-json">{
   &quot;name&quot;: &quot;hello-umbler&quot;,
@@ -170,11 +196,13 @@ server.listen(port, () =&gt; console.log(`Umbler server at port:${port}`));</cod
   },
   &quot;author&quot;: &quot;Caio R. Pereira&quot;,
   &quot;license&quot;: &quot;MIT&quot;
-}</code></pre>
+}
+</code></pre>
 <p>Ap&#xF3;s criar esse simples server, voc&#xEA; pode testar se o mesmo esta executando corretamente atrav&#xE9;s do comando <code>npm start</code>, supondo que tudo esteja ok, vamos para a parte do deploy, para isso, basta rodar esses comandos git:</p>
 <pre><code class="language-bash">git add .
 git commit -m &quot;First commit&quot;
-git push umbler master</code></pre>
+git push umbler master
+</code></pre>
 <p>Ao realizar um push no remote <code>umbler</code>, automaticamente ser&#xE1; realizado um deploy Node.js no servidor deles, afinal tudo que ele vai precisar &#xE9; do <code>package.json</code> configurado corretamente para identificar os metadados necess&#xE1;rios para instalar vers&#xE3;o node.js desejada, suas depend&#xEA;ncias para no final ser executado o comando <code>npm start</code>, que &#xE9; gerado no atributo <code>script: { start: &quot;node app&quot; }</code> do package.json.</p>
 <p>Outro detalhe bacana &#xE9; que se voc&#xEA; possuir o arquivo <code>yarn.lock</code> na ra&#xED;z do projeto, o processo de deployment vai usar <code>yarn</code> no lugar de <code>npm</code> no momento da instala&#xE7;&#xE3;o das deped&#xEA;ncias.</p>
 <p>No final, sua aplica&#xE7;&#xE3;o ser&#xE1; publicada no domain que voc&#xEA; configurou no painel da umbler.</p>
@@ -189,7 +217,8 @@ git push umbler master</code></pre>
 <li>Suporte a publica&#xE7;&#xE3;o e instala&#xE7;&#xE3;o de addons</li>
 <li>Suporte a deploy via Git, FTP e at&#xE9; mesmo via Dropbox</li>
 </ul>
-<p>Vale a pena testar! Aqui voc&#xEA; visualiza os planos e pre&#xE7;os que eles oferecem, e desde o <a href="https://www.umbler.com/br/hospedagem-nodejs">sign-up at&#xE9; chegar no passo final que &#xE9; o deploy voc&#xEA; vai ganhando b&#xF4;nus at&#xE9; completar o m&#xE1;ximo de 100R$ para usar nesta plataforma</a>.</p>]]></description><link>https://udgwebdev.github.io/deploying-nodejs-na-umbler</link><guid isPermaLink="true">https://udgwebdev.github.io/deploying-nodejs-na-umbler</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 02 Aug 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Habilitando stealth mode no MacOS]]></title><description><![CDATA[A dica desse post é bem rápida e super simples de se aplicar. E vem com uma vantagem muito relevante para deixar mais seguro o sistema operacional MacOS no momento em que ele se conectar a qualquer rede.]]></description><link>https://udgwebdev.github.io/habilitando-stealth-mode-no-macos</link><guid isPermaLink="true">https://udgwebdev.github.io/habilitando-stealth-mode-no-macos</guid><category><![CDATA[Sistemas operacionais]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 25 Jul 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Variáveis e escopos do ES6]]></title><description><![CDATA[<h1>Vari&#xE1;veis e escopos do ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/06/2017" pubdate><b>12/06/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Vari&#xE1;veis e escopos do ES6" title="Vari&#xE1;veis e escopos do ES6"></p>
+<p>Vale a pena testar! Aqui voc&#xEA; visualiza os planos e pre&#xE7;os que eles oferecem, e desde o <a href="https://www.umbler.com/br/hospedagem-nodejs">sign-up at&#xE9; chegar no passo final que &#xE9; o deploy voc&#xEA; vai ganhando b&#xF4;nus at&#xE9; completar o m&#xE1;ximo de 100R$ para usar nesta plataforma</a>.</p>
+]]></description><link>https://udgwebdev.github.io/deploying-nodejs-na-umbler</link><guid isPermaLink="true">https://udgwebdev.github.io/deploying-nodejs-na-umbler</guid><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Wed, 02 Aug 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Habilitando stealth mode no MacOS]]></title><description><![CDATA[A dica desse post é bem rápida e super simples de se aplicar. E vem com uma vantagem muito relevante para deixar mais seguro o sistema operacional MacOS no momento em que ele se conectar a qualquer rede.]]></description><link>https://udgwebdev.github.io/habilitando-stealth-mode-no-macos</link><guid isPermaLink="true">https://udgwebdev.github.io/habilitando-stealth-mode-no-macos</guid><category><![CDATA[Sistemas operacionais]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 25 Jul 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Variáveis e escopos do ES6]]></title><description><![CDATA[<h1>Vari&#xE1;veis e escopos do ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="12/06/2017" pubdate><b>12/06/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Vari&#xE1;veis e escopos do ES6" title="Vari&#xE1;veis e escopos do ES6"></p>
 <p>Desde o in&#xED;cio do JavaScript sempre foi muito comum declarar vari&#xE1;veis ou constantes usando a keyword <code>var</code>. &#xC9; importante saber que ao declarar vari&#xE1;veis usando <code>var</code> elas ser&#xE3;o <em>function-scoped</em>, ou seja, s&#xE3;o vis&#xED;veis dentro de um escopo de fun&#xE7;&#xE3;o e tamb&#xE9;m dentro de fun&#xE7;&#xF5;es filhas deste escopo. Isso pode ser um problema pois este comportamento pode se tornar bem confuso. Por exemplo:</p>
 <pre><code class="language-javascript">var msg = &apos;Ol&#xE1; ...&apos;;
 function helloMsg(string) {
@@ -199,7 +228,8 @@ function helloMsg(string) {
   }
   return msg;
 }
-helloMsg();</code></pre>
+helloMsg();
+</code></pre>
 <p>Ao olhar a simples l&#xF3;gica voc&#xEA; diria: ah, essa &#xE9; f&#xE1;cil, vai retornar a string <code>&apos;Ol&#xE1; ...&apos;</code>, pois &#xE9;, para nossa surpresa ao executar o comando <code>helloMsg();</code> foi retornado <code>undefined</code>. Isso se deve pelo fato de que o escopo vale para fun&#xE7;&#xE3;o <code>helloMsg()</code> como um todo - mesmo sem esta linha ter sido executada por conta do <code>if (string)</code>. Para voc&#xEA; entender, &#xE9; como se o interpretador JavaScript tivesse lido o c&#xF3;digo todo como o seguinte:</p>
 <pre><code class="language-javascript">var msg = &apos;Ol&#xE1; ...&apos;;
 function helloMsg(string) {
@@ -211,7 +241,8 @@ function helloMsg(string) {
   }
   return msg;
 }
-helloMsg();</code></pre>
+helloMsg();
+</code></pre>
 <h2>Escopo de bloco com let e const</h2><p>No ES6 existem duas novas formas para declarar vari&#xE1;veis, s&#xE3;o <code>let</code> e <code>const</code>. Diferente de <code>var</code>, essas vari&#xE1;veis s&#xE3;o <em>block-scoped</em>, ou seja, elas s&#xE3;o vis&#xED;veis dentro de um escopo de bloco e tamb&#xE9;m dentro de blocos filhos deste escopo. Este comportamento se aproxima de outras linguagens de programa&#xE7;&#xE3;o, como por exemplo <em>Ruby</em>.</p>
 <h3>Usando let</h3><p><code>let</code> funciona como <code>var</code>, mas como escopo de bloco em vez de escopo de fun&#xE7;&#xE3;o. Perceba no c&#xF3;digo abaixo que a vari&#xE1;vel <code>tmp</code> s&#xF3; existe dentro do bloco do if:</p>
 <pre><code class="language-javascript">function nomeEditora(string) {
@@ -221,14 +252,16 @@ helloMsg();</code></pre>
   console.log(tmp);
   // ReferenceError: tmp is not defined
   return string;
-}</code></pre>
+}
+</code></pre>
 <h3>Usando const</h3><p><em>const</em> funciona similar a <em>let</em>, com a diferen&#xE7;a que voc&#xEA; j&#xE1; precisa iniciar com um valor fixo na sua declara&#xE7;&#xE3;o, e este valor n&#xE3;o poder&#xE1; ser trocado depois, ou seja, as constantes s&#xE3;o imut&#xE1;veis (<em>immutable variables</em>). Exemplo:</p>
 <pre><code class="language-javascript">const nome;
 // SyntaxError: Missing initializer in const declaration
 
 const nome = &apos;John Connor&apos;;
 nome = &apos;Sarah Connor&apos;;
-// TypeError: Assignment to constant variable.</code></pre>
+// TypeError: Assignment to constant variable.
+</code></pre>
 <h2>Quando usar const ou let</h2><p>Recomendamos que use sempre <code>let</code> ou <code>const</code>, e evite <code>var</code>. Quando voc&#xEA; souber que o valor da var&#xED;avel n&#xE3;o ir&#xE1; mudar, ou seja, a constante nunca poder&#xE1; receber outro valor ou ser usada com opera&#xE7;&#xF5;es usando <code>++</code> ou <code>--</code>, use <code>const</code>. &#xC9; importante saber que o objeto e array que for uma constante pode se alterar em seus atributos internos sem problemas, exemplo:</p>
 <pre><code class="language-javascript">const usuario = {};
 usuario.nome = &apos;John Connor&apos;;
@@ -238,11 +271,13 @@ const scores = [];
 scores.push(1);
 scores.push(3);
 scores.push(2);
-console.log(scores); // [1, 3, 2]</code></pre>
+console.log(scores); // [1, 3, 2]
+</code></pre>
 <p>Ao usar a fun&#xE7;&#xE3;o <code>for</code> tamb&#xE9;m prefira us&#xE1;-la com <code>const</code>. O compilador do ES6 associar&#xE1; um valor imut&#xE1;vel a constante para cada loop. Lembrando que o valor da constante x dentro do bloco do <code>for</code> n&#xE3;o poder&#xE1; ser alterada:</p>
 <pre><code class="language-javascript">for (const x of [&apos;a&apos;, &apos;b&apos;]) {
   console.log(x);
-}</code></pre>
+}
+</code></pre>
 <p>Entretando, use <code>let</code> quando o valor inicial de uma var&#xED;avel ir&#xE1; mudar. Por exemplo:</p>
 <pre><code class="language-javascript">let counter = 0;
 // initial value
@@ -252,30 +287,35 @@ counter++;
 let obj = {};
 // initial value
 obj = { foo: 123 };
-// change</code></pre>
+// change
+</code></pre>
 <p>Se voc&#xEA; seguir esses conselhos, voc&#xEA; n&#xE3;o ter&#xE1; mais a keyword <code>var</code> em seus futuros projetos JavaScript.</p>
-<p>Recentemente lancei o ebook <a href="https://leanpub.com/javascript-awesome-tips-br-version">JavaScript Awesome Tips (Br version)</a> com diversas dicas sobre JavaScript, vale a pena a leitura!</p>]]></description><link>https://udgwebdev.github.io/variaveis-e-escopos-do-es6</link><guid isPermaLink="true">https://udgwebdev.github.io/variaveis-e-escopos-do-es6</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 12 Jun 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Imutabilidade no ES6]]></title><description><![CDATA[<h1>Imutabilidade no ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/04/2017" pubdate><b>03/04/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Imutabilidade no ES6" title="Imutabilidade no ES6"></p>
+<p>Recentemente lancei o ebook <a href="https://leanpub.com/javascript-awesome-tips-br-version">JavaScript Awesome Tips (Br version)</a> com diversas dicas sobre JavaScript, vale a pena a leitura!</p>
+]]></description><link>https://udgwebdev.github.io/variaveis-e-escopos-do-es6</link><guid isPermaLink="true">https://udgwebdev.github.io/variaveis-e-escopos-do-es6</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 12 Jun 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Imutabilidade no ES6]]></title><description><![CDATA[<h1>Imutabilidade no ES6</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="03/04/2017" pubdate><b>03/04/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Imutabilidade no ES6" title="Imutabilidade no ES6"></p>
 <p>Caso voc&#xEA; j&#xE1; esteja por dentro sobre o <strong>ES6/7/8/9/100000</strong>, voc&#xEA; j&#xE1; deve estar bem ciente de como trabalhar com imutabilidade usando a keyword <code>const</code> para declarar var&#xED;aveis im&#xFA;taveis. De fato n&#xE3;o h&#xE1; nenhum segredo nisso, basicamente voc&#xEA; declara qualquer <strong>tipo de dados</strong> usando <code>const</code> e nunca mais seu estado inicial ser&#xE1; modificado, correto? Veja esse exemplo:</p>
 <pre><code class="language-javascript">const score = 10;
 console.log(score); // 10
 
-score = 9; // TypeError: Assignment to constant variable</code></pre>
+score = 9; // TypeError: Assignment to constant variable
+</code></pre>
 <p>At&#xE9; aqui tudo ok, foi criado uma constante <code>score</code> com valor <code>10</code>, e ao tentar modificar seu valor para <code>9</code>, ocorreu o erro: <code>TypeError: Assignment to constant variable</code>, que basicamente &#xE9; um erro referente a n&#xE3;o permiss&#xE3;o de mudan&#xE7;a de valores em uma vari&#xE1;vel que j&#xE1; possui um valor.</p>
 <p>Outro detalhe da <code>const</code>, voc&#xEA; n&#xE3;o pode cri&#xE1;-la sem definir um valor, pois vai gerar o seguinte erro:</p>
-<pre><code class="language-javascript">const score; // SyntaxError: Missing initializer in const declaration</code></pre>
+<pre><code class="language-javascript">const score; // SyntaxError: Missing initializer in const declaration
+</code></pre>
 <p>&#xC9; regra b&#xE1;sica, n&#xE3;o se pode criar constante sem definir seu estado inicial, pois <code>undefined</code> n&#xE3;o &#xE9; uma defini&#xE7;&#xE3;o de um bom estado, n&#xE3;o &#xE9;?</p>
-<p>Por&#xE9;m voltando a pergunta inicial, usar <code>const</code> torna qualquer tipo de dado do JavaScript imut&#xE1;vel? N&#xC3;O!  
-Somente dados primitivos: <strong>String, Number, Date, Boolean</strong>, ser&#xE3;o im&#xFA;taveis, se voc&#xEA; usar objeto ou array, facilmente voc&#xEA; poder&#xE1; modificar os atributos internos deles, o que teoricamente deveria ser im&#xFA;tavel tamb&#xE9;m.</p>
+<p>Por&#xE9;m voltando a pergunta inicial, usar <code>const</code> torna qualquer tipo de dado do JavaScript imut&#xE1;vel? N&#xC3;O!<br>Somente dados primitivos: <strong>String, Number, Date, Boolean</strong>, ser&#xE3;o im&#xFA;taveis, se voc&#xEA; usar objeto ou array, facilmente voc&#xEA; poder&#xE1; modificar os atributos internos deles, o que teoricamente deveria ser im&#xFA;tavel tamb&#xE9;m.</p>
 <pre><code class="language-javascript">const scores = [];
 scores.push(1);
 scores.push(3);
 scores.push(4);
-console.log(scores); /// [1, 3, 4]</code></pre>
+console.log(scores); /// [1, 3, 4]
+</code></pre>
 <p>O mesmo cen&#xE1;rio ocorre para objetos:</p>
 <pre><code class="language-javascript">const player = {};
 player.name = &apos;John Connor&apos;;
 player.age = 25;
-console.log(player); // { name: &apos;John Connor&apos;, age: 25 }</code></pre>
+console.log(player); // { name: &apos;John Connor&apos;, age: 25 }
+</code></pre>
 <p>Nestes dois cen&#xE1;rios, seus atributos internos foram modificados e nenhum erro ocorreu, afinal o <code>const</code> somente torna <strong>im&#xFA;tavel as atribui&#xE7;&#xF5;es das vari&#xE1;veis</strong>, ou seja, tudo aquilo que for atribu&#xED;do usando <code>=</code> na inicializa&#xE7;&#xE3;o de uma vari&#xE1;vel, qualquer atribui&#xE7;&#xE3;o em propriedades de um objeto ser&#xE3;o ignorados.</p>
 <h2>Como tornar objetos e arrays im&#xFA;taveis??</h2><p>Desde o ES5, j&#xE1; existia uma fun&#xE7;&#xE3;o chamada <code>Object.freeze()</code> que congela o estado interno de um objeto ou array, ou seja, seus atributos jamais ser&#xE3;o modificados, congelando seu estado, e n&#xE3;o permitindo a inclus&#xE3;o, altera&#xE7;&#xE3;o e exclus&#xE3;o de seus atributos internos, entenda nesse exemplo:</p>
 <pre><code class="language-javascript">const player = { name: &apos;John Connor&apos; };
@@ -283,16 +323,19 @@ Object.freeze(player);
 // Silenciosamente n&#xE3;o vai acontecer nenhum erro
 player.age = 25; 
 // Por&#xE9;m n&#xE3;o ser&#xE1; inclu&#xED;do o atributo age no objeto que foi congelado!
-console.log(player); // Object { name: &apos;John Connor&apos; }</code></pre>
+console.log(player); // Object { name: &apos;John Connor&apos; }
+</code></pre>
 <p>No caso do array, qualquer modifica&#xE7;&#xE3;o vai gerar um erro, veja:</p>
 <pre><code class="language-javascript">const scores = [1, 2, 3];
 Object.freeze(scores);
-scores.push(10); // TypeError: Can&apos;t add property 10, object is not extensible</code></pre>
+scores.push(10); // TypeError: Can&apos;t add property 10, object is not extensible
+</code></pre>
 <p>Caso seja necess&#xE1;rio visualizar um erro na modifica&#xE7;&#xE3;o de um objeto, basta usar <code>&apos;use strict&apos;</code> no topo do c&#xF3;digo:</p>
 <pre><code class="language-javascript">&apos;use strict&apos;;
 const player = { name: &apos;John Connor&apos; };
 Object.freeze(player);
-player.age = 25; // TypeError: Can&apos;t add property age, object is not extensible</code></pre>
+player.age = 25; // TypeError: Can&apos;t add property age, object is not extensible
+</code></pre>
 <h2>Aplicando deep frezzing recursivo</h2><p>Mesmo usando <code>Object.freeze()</code> para congelar o estado do objeto ou array, sub-atributos ou sub-objetos v&#xE3;o continuar m&#xFA;taveis, para realmente criar um objeto/array profundamente im&#xFA;tavel, &#xE9; necess&#xE1;rio criar uma fun&#xE7;&#xE3;o recursiva para aplicar o conceito de <code>deep freezing</code>, veja abaixo como fazer isso:</p>
 <pre><code class="language-javascript">function deepFreeze(obj) {
   const props = Object.getOwnPropertyNames(obj);
@@ -303,7 +346,8 @@ player.age = 25; // TypeError: Can&apos;t add property age, object is not extens
     }
   });
   return Object.freeze(obj);
-}</code></pre>
+}
+</code></pre>
 <p>Agora com essa fun&#xE7;&#xE3;o declarada, voc&#xEA; n&#xE3;o vai conseguir modificar subatributos dos subatributos dos subatributos, que todos eles ser&#xE3;o im&#xFA;taveis, veja:</p>
 <pre><code class="language-javascript">const data = {
   cliente: {
@@ -319,12 +363,13 @@ console.log(data.cliente.nome); // Sarah Connor
 // Usando fun&#xE7;&#xE3;o deepFreeze()
 deepFreeze(data);
 data.cliente.nome = &apos;Sarah Connor&apos;
-console.log(data.cliente.nome); // John Connor</code></pre>
+console.log(data.cliente.nome); // John Connor
+</code></pre>
 <h2>Conclus&#xE3;o</h2><p>Se voc&#xEA; pretende trabalhar 100% com dados im&#xFA;taveis e isso inclui tanto dados primitivos quanto objetos e arrays, basta usar <code>const</code> para as vari&#xE1;veis primitivas e <code>const</code> + <code>Object.freeze()</code> para objetos e ou arrays.</p>
 <p>Recentemente lancei o ebook <a href="https://leanpub.com/javascript-awesome-tips-br-version">JavaScript Awesome Tips (Br version)</a> com diversas dicas sobre JavaScript, vale a pena a leitura!</p>
-<p>Fonte: <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">MDN - Object.freeze()</a></p>]]></description><link>https://udgwebdev.github.io/imutabilidade-no-es6</link><guid isPermaLink="true">https://udgwebdev.github.io/imutabilidade-no-es6</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 03 Apr 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Você pode colaborar em projetos open-source fazendo doações]]></title><description><![CDATA[Um post não técnico que tem o objetivo de estimular as pessoas a reconhecerem mais os projetos open-source que elas curtem usar através da simples atitude em realizar uma doação.]]></description><link>https://udgwebdev.github.io/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</link><guid isPermaLink="true">https://udgwebdev.github.io/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</guid><category><![CDATA[SouDev]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 26 Feb 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Aumentando performance do Socket.IO]]></title><description><![CDATA[<h1>Aumentando performance do Socket.IO</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="20/02/2017" pubdate><b>20/02/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/socket-io.jpg" alt="Aumentando performance do Socket.IO" title="Aumentando performance do Socket.IO"></p>
-<p>Fala galera! Ultimamente andei sem muito tempo para me dedicar no blog aqui, mas hoje venho com um post bacana para compens&#xE1;-los!  
-Esse post ter&#xE1; uma implementa&#xE7;&#xE3;o bem simples e r&#xE1;pida de se fazer, e os ganhos em performance ser&#xE3;o gigantescos para uma aplica&#xE7;&#xE3;o Node.js que utilize Socket.IO.</p>
+<p>Fonte: <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze">MDN - Object.freeze()</a></p>
+]]></description><link>https://udgwebdev.github.io/imutabilidade-no-es6</link><guid isPermaLink="true">https://udgwebdev.github.io/imutabilidade-no-es6</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 03 Apr 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Você pode colaborar em projetos open-source fazendo doações]]></title><description><![CDATA[Um post não técnico que tem o objetivo de estimular as pessoas a reconhecerem mais os projetos open-source que elas curtem usar através da simples atitude em realizar uma doação.]]></description><link>https://udgwebdev.github.io/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</link><guid isPermaLink="true">https://udgwebdev.github.io/voce-pode-colaborar-em-projetos-open-source-fazendo-doacoes</guid><category><![CDATA[SouDev]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sun, 26 Feb 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Aumentando performance do Socket.IO]]></title><description><![CDATA[<h1>Aumentando performance do Socket.IO</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="20/02/2017" pubdate><b>20/02/2017</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a>, <a href="https://udgwebdev.github.io/menu/#node.js" rel="me" title="Menu: Node.js">Node.js</a></p><p><img src="https://udgwebdev.github.io/images/socket-io.jpg" alt="Aumentando performance do Socket.IO" title="Aumentando performance do Socket.IO"></p>
+<p>Fala galera! Ultimamente andei sem muito tempo para me dedicar no blog aqui, mas hoje venho com um post bacana para compens&#xE1;-los!<br>Esse post ter&#xE1; uma implementa&#xE7;&#xE3;o bem simples e r&#xE1;pida de se fazer, e os ganhos em performance ser&#xE3;o gigantescos para uma aplica&#xE7;&#xE3;o Node.js que utilize Socket.IO.</p>
 <p>Para quem n&#xE3;o conhece, o Socket.IO &#xE9; um framework bem popular no Node.js, sua fun&#xE7;&#xE3;o &#xE9; fornecer uma comunica&#xE7;&#xE3;o bidirecional entre cliente e servidor, pelo qual permite implementar intera&#xE7;&#xF5;es realtime na aplica&#xE7;&#xE3;o.<br>Aqui no blog h&#xE1; alguns posts sobre Socket.IO, ent&#xE3;o caso queria conhec&#xEA;-lo na pr&#xE1;tica, recomendo a leitura desses posts:</p>
 <ul>
 <li><a href="https://udgwebdev.github.io/real-time-com-socket-io-no-nodejs" title="Real-time com Socket.IO no Node.js">Real-time com Socket.IO no Node.js</a></li>
@@ -334,7 +379,8 @@ Esse post ter&#xE1; uma implementa&#xE7;&#xE3;o bem simples e r&#xE1;pida de se 
 <li><a href="https://udgwebdev.github.io/node-js-para-leigos-explorando-real-time" title="Node.js para leigos - Explorando real-time">Node.js para leigos - Explorando real-time</a></li>
 </ul>
 <h2>Aumentando performance usando uWebSocket</h2><p>Como disse no come&#xE7;o, esse post ser&#xE1; bem r&#xE1;pido, pr&#xE1;tico e com um resultado sensacional no final, se voc&#xEA; j&#xE1; possui uma aplica&#xE7;&#xE3;o com Socket.IO, e j&#xE1; utiliza suas principais features, e gostaria de aumentar performance, sem ter a necessidade de aplicar grandes modifica&#xE7;&#xF5;es na aplica&#xE7;&#xE3;o, para isso basta instalar o m&#xF3;dulo <code>uws</code>, conhecido como uWebSocket.</p>
-<pre><code class="language-bash">npm install uws --save</code></pre>
+<pre><code class="language-bash">npm install uws --save
+</code></pre>
 <p>Em resumo, este m&#xF3;dulo &#xE9; uma vers&#xE3;o otimizada do WebSockets, t&#xE3;o otimizado que foi escrito em C/C++ e esta dispon&#xED;vel tamb&#xE9;m como addon para o Node.js. Ele possui a mesma interface do WebSocket convencional, tanto &#xE9; que se voc&#xEA; possui no server-side o m&#xF3;dulo <code>ws</code>, voc&#xEA; s&#xF3; ter&#xE1; o simples trabalho de remov&#xEA;-lo, instalar o <code>uws</code> e mudar no carregamento de seu m&#xF3;dulo, de <code>require(&apos;ws&apos;)</code> para <code>require(&apos;uws&apos;)</code>.</p>
 <p>No nosso caso, vamos supor que temos uma aplica&#xE7;&#xE3;o que utilize o Socket.IO.</p>
 <pre><code class="language-javascript">const http = require(&apos;http&apos;);
@@ -350,7 +396,8 @@ io.on(&apos;connection&apos;, (socket) =&gt; {
   io.emit(&apos;data&apos;, &apos;hello!&apos;); 
 });
 
-server.listen(3000, () =&gt; console.log(&apos;Socket.IO Running...&apos;));</code></pre>
+server.listen(3000, () =&gt; console.log(&apos;Socket.IO Running...&apos;));
+</code></pre>
 <p>Neste caso, para adotar uma implementa&#xE7;&#xE3;o WebSockets diferente da convencional no Socket.IO, basta fazer as seguintes modifica&#xE7;&#xF5;es:</p>
 <pre><code class="language-javascript">const http = require(&apos;http&apos;);
 const express = require(&apos;express&apos;);
@@ -369,35 +416,40 @@ io.on(&apos;connection&apos;, (socket) =&gt; {
   io.emit(&apos;data&apos;, &apos;hello!&apos;); 
 });
 
-server.listen(3000, () =&gt; console.log(&apos;Socket.IO Running...&apos;));</code></pre>
-<p>Com essa simples mudan&#xE7;a, sua aplica&#xE7;&#xE3;o Socket.IO estar&#xE1; <strong>62x mais eficiente no consumo de mem&#xF3;ria, 42x melhor na gest&#xE3;o de conex&#xF5;es e 61x mais r&#xE1;pido no throughput de mensagens curtas</strong>.  
-Esses dados, est&#xE3;o no readme do <a href="https://github.com/uWebSockets/uWebSockets">github uWebSockets</a>, l&#xE1; tem mais detalhes sobre features desse m&#xF3;dulo e tamb&#xE9;m h&#xE1; um benchmark comparando uWebSockets com outros m&#xF3;dulos populares.</p>
-<p>At&#xE9; a pr&#xF3;xima!</p>]]></description><link>https://udgwebdev.github.io/aumentando-performance-do-socketio</link><guid isPermaLink="true">https://udgwebdev.github.io/aumentando-performance-do-socketio</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 20 Feb 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Quando não usar Arrow Functions]]></title><description><![CDATA[<h1>Quando n&#xE3;o usar Arrow Functions</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="24/12/2016" pubdate><b>24/12/2016</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="ES6 Arrow Functions" title="ES6 Arrow Functions"></p>
+server.listen(3000, () =&gt; console.log(&apos;Socket.IO Running...&apos;));
+</code></pre>
+<p>Com essa simples mudan&#xE7;a, sua aplica&#xE7;&#xE3;o Socket.IO estar&#xE1; <strong>62x mais eficiente no consumo de mem&#xF3;ria, 42x melhor na gest&#xE3;o de conex&#xF5;es e 61x mais r&#xE1;pido no throughput de mensagens curtas</strong>.<br>Esses dados, est&#xE3;o no readme do <a href="https://github.com/uWebSockets/uWebSockets">github uWebSockets</a>, l&#xE1; tem mais detalhes sobre features desse m&#xF3;dulo e tamb&#xE9;m h&#xE1; um benchmark comparando uWebSockets com outros m&#xF3;dulos populares.</p>
+<p>At&#xE9; a pr&#xF3;xima!</p>
+]]></description><link>https://udgwebdev.github.io/aumentando-performance-do-socketio</link><guid isPermaLink="true">https://udgwebdev.github.io/aumentando-performance-do-socketio</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Node.js]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 20 Feb 0017 03:06:28 GMT</pubDate></item><item><title><![CDATA[Quando não usar Arrow Functions]]></title><description><![CDATA[<h1>Quando n&#xE3;o usar Arrow Functions</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="24/12/2016" pubdate><b>24/12/2016</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="ES6 Arrow Functions" title="ES6 Arrow Functions"></p>
 <p>Infelizmente, apesar do <strong>Arrow Function</strong> ser uma feature muito bacana e &#xFA;til do ES6, saiba que nem sempre ser&#xE1; poss&#xED;vel utilizar ela, pois ela n&#xE3;o foi feita para substituir 100% a declara&#xE7;&#xE3;o de function principal, o arrow function, apesar de trazer um <strong>syntax sugar</strong> e algumas utilidades como, por exemplo, compartilhamento de contextos, voc&#xEA; precisa antes de us&#xE1;-la, aprender tamb&#xE9;m quando n&#xE3;o us&#xE1;-la para que voc&#xEA; n&#xE3;o fique perdido na procura de um bug de dif&#xED;cil de resolver, veja a seguir uma lista com poss&#xED;veis situa&#xE7;&#xF5;es para <strong>N&#xC3;O USAR</strong> arrow funcition.</p>
 <h2>Click handlers</h2><p>Para exemplificar, vamos supor que existe um bot&#xE3;o pelo qual queremos mudar sua cor entre azul e vermelho, conforme ele &#xE9; clicado, para isso temos o seguinte html:</p>
 <pre><code class="language-html">&lt;style&gt;
   button { background-color: blue; }
   .on { background-color: red; }
 &lt;/style&gt;
-&lt;button id=&quot;click_here&quot;&gt;CLIQUE AQUI!&lt;/button&gt;</code></pre>
+&lt;button id=&quot;click_here&quot;&gt;CLIQUE AQUI!&lt;/button&gt;
+</code></pre>
 <p>Agora vamos programar o evento de click desse bot&#xE3;o, usando arrow function:</p>
 <pre><code class="language-javascript">const button = document.querySelector(&apos;#click_here&apos;);
 button.addEventListener(&apos;click&apos;, () =&gt; {
   this.classList.toggle(&apos;on&apos;);
-});</code></pre>
+});
+</code></pre>
 <p>Se voc&#xEA; testar esse bot&#xE3;o, vai gerar o erro: <code>TypeError, cannot read property &apos;toggle&apos; of undefined</code></p>
 <p>Isso ocorre pois o <code>this</code> de <code>this.classList.toggle(&apos;on&apos;)</code> compartilha os atributos de <code>window</code> e n&#xE3;o do evento. E com isso nesse caso o ideal &#xE9; utilizar a declara&#xE7;&#xE3;o de function:</p>
 <pre><code class="language-javascript">const button = document.querySelector(&apos;#click_here&apos;);
 button.addEventListener(&apos;click&apos;, function() {
   this.classList.toggle(&apos;on&apos;);
-});</code></pre>
+});
+</code></pre>
 <h2>Object methods</h2><p>Se voc&#xEA; pretende criar um <strong>object methods no frontend</strong>, n&#xE3;o &#xE9; recomendado utilizar arrow functions em seus m&#xE9;todos, entenda o porque vendo esse exemplo:</p>
 <pre><code class="language-javascript">const Usuario = {
   pontos: 20,
   ganhou: () =&gt; {
     this.pontos++;
   }
-}</code></pre>
+}
+</code></pre>
 <p>Se voc&#xEA; rodar <code>Usuario.ganhou()</code>, algumas vezes, a expectativa &#xE9; que os <code>pontos</code> esteja com valores acima do que foi estabelecido em seu estado inicial, ou seja, maior que 20.</p>
 <p>Mas se voc&#xEA; acessar: <code>Usuario.pontos</code> seu valor vai continuar 20, e isso ocorre pelo fato de que o <code>this</code>, estar&#xE1; sendo referenciado ao objeto <code>window</code> do browser, herdando seu escopo.</p>
 <p>Para resolver esse problema, voc&#xEA; pode tanto usar a declara&#xE7;&#xE3;o cl&#xE1;ssica de <code>function</code>, quanto usar a declara&#xE7;&#xE3;o de m&#xE9;todos do <strong>Object methods</strong>:</p>
@@ -414,7 +466,8 @@ const Usuario = {
   ganhou() {
     this.pontos++;
   }
-}</code></pre>
+}
+</code></pre>
 <h2>Argumentos de um objeto</h2><p>Quando se cria uma fun&#xE7;&#xE3;o que trabalhe com <code>arguments</code>, caso voc&#xEA; precise tratar esses arguments em uma fun&#xE7;&#xE3;o interna, tamb&#xE9;m n&#xE3;o &#xE9; recomendado usar arrow function, veja esse exemplo:</p>
 <pre><code class="language-javascript">const ordernaPlayers = () =&gt; {
   const players = Array.from(arguments);
@@ -422,7 +475,8 @@ const Usuario = {
     return `${player} chegou em #${i + 1}`;
   })
   console.log(arguments);
-}</code></pre>
+}
+</code></pre>
 <p>O problema nesse exemplo &#xE9; que a fun&#xE7;&#xE3;o <code>ordernaPlayers()</code> vai gerar o erro: <code>ReferenceError, arguments is not defined.</code>, esse erro ocorrer&#xE1; pelo simples fato de que <code>arguments</code> vai retornar um array e arrays n&#xE3;o trabalham com a keyword <code>this</code>, e mesmo n&#xE3;o utilizando essa keyword, vai ocorrer esse erro, para resolver esse bug, basta aplicar function na fun&#xE7;&#xE3;o pai, a <code>ordernaPlayers()</code>:</p>
 <pre><code class="language-javascript">const ordernaPlayers = function() {
   const players = Array.from(arguments);
@@ -430,7 +484,8 @@ const Usuario = {
     return `${player} chegou em #${i + 1}`;
   })
   console.log(arguments);
-}</code></pre>
+}
+</code></pre>
 <h2>Prototypes</h2><p>Jamais use arrow function em fun&#xE7;&#xF5;es prototype de um objeto, simplesmente os atributos n&#xE3;o ser&#xE3;o definidos mesmo instanciando o objeto corretamente, veja esse exemplo:</p>
 <pre><code class="language-javascript">class Cliente {
   constructor(nome, idade) {
@@ -440,19 +495,23 @@ const Usuario = {
 }
 Cliente.prototype.apresentar = () =&gt; {
   return `Cliente: ${this.nome} | Idade: ${this.idade}`;
-};</code></pre>
+};
+</code></pre>
 <p>Agora tente instanciar um cliente e em seguida se voc&#xEA; invocar a fun&#xE7;&#xE3;o <code>Cliente.prototype.apresentar()</code> a interpola&#xE7;&#xE3;o de seus atributos no resultado final ser&#xE1; simplesmente <code>undefined</code>.</p>
 <pre><code class="language-javascript">const john = new Cliente(&apos;John Connor&apos;, 25);
 const mary = new Cliente(&apos;Mary Jane&apos;, 20);
 
 john.apresentar(); // &apos;Cliente: undefined | Idade: undefined&apos;
-mary.apresentar(); // &apos;Cliente: undefined | Idade: undefined&apos;</code></pre>
+mary.apresentar(); // &apos;Cliente: undefined | Idade: undefined&apos;
+</code></pre>
 <p>Simplesmente o arrow function para fun&#xE7;&#xF5;es de um objeto prototype n&#xE3;o mant&#xE9;m estado ap&#xF3;s instanciado. O ideal nesse caso &#xE9; manter a declara&#xE7;&#xE3;o de <code>function</code> normal:</p>
 <pre><code class="language-javascript">Cliente.prototype.apresentar = function() {
   return `Cliente: ${this.nome} | Idade: ${this.idade}`;
-};</code></pre>
+};
+</code></pre>
 <p>Recentemente lancei o ebook <a href="https://leanpub.com/javascript-awesome-tips-br-version">JavaScript Awesome Tips (Br version)</a> com diversas dicas sobre JavaScript, vale a pena a leitura!</p>
-<p>Fontes: <a href="http://wesbos.com/arrow-function-no-no/">When Not to use an Arrow Function</a></p>]]></description><link>https://udgwebdev.github.io/quando-nao-usar-arrow-functions</link><guid isPermaLink="true">https://udgwebdev.github.io/quando-nao-usar-arrow-functions</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sat, 24 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 5]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 5</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/12/2016" pubdate><b>22/12/2016</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
+<p>Fontes: <a href="http://wesbos.com/arrow-function-no-no/">When Not to use an Arrow Function</a></p>
+]]></description><link>https://udgwebdev.github.io/quando-nao-usar-arrow-functions</link><guid isPermaLink="true">https://udgwebdev.github.io/quando-nao-usar-arrow-functions</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Sat, 24 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Escrevendo JavaScript melhor - Parte 5]]></title><description><![CDATA[<h1>Escrevendo JavaScript melhor - Parte 5</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="22/12/2016" pubdate><b>22/12/2016</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#javascript" rel="me" title="Menu: JavaScript">JavaScript</a></p><p><img src="https://udgwebdev.github.io/images/es6-logo.jpg" alt="Escrevendo JavaScript melhor" title="Escrevendo JavaScript melhor"></p>
 <p>Sim! Esse post vai ter parte 5 sim! E a id&#xE9;ia &#xE9; que no futuro tenha mais posts desse assunto. Nesse post vou mostrar algumas dicas sensacionais que j&#xE1; &#xE9; poss&#xED;vel aplicar usando JavaScript puro.</p>
 <h2>Convertendo n&#xFA;meros para moeda sem framework</h2><p>Agora com ES6 j&#xE1; &#xE9; poss&#xED;vel converter Number para String currency nativo, usando apenas a fun&#xE7;&#xE3;o toLocaleString(). Veja:</p>
 <pre><code class="language-javascript">(10.9).toLocaleString(); // &quot;10,90&quot;
@@ -461,27 +520,34 @@ mary.apresentar(); // &apos;Cliente: undefined | Idade: undefined&apos;</code></
   // Ajustando casas decimais
   minimumFractionDigits: 2,  
   maximumFractionDigits: 2
-});</code></pre>
+});
+</code></pre>
 <p>O melhor disso, &#xE9; que dessa forma voc&#xEA; evita fazer as gambiarras cl&#xE1;ssicas em usar <code>Math.abs()</code> ou <code>Number.prototype.toFixed()</code> do JavaScript.</p>
 <p>E outro detalhe legal, esta seguro contra o bug do ponto flutuante:</p>
 <pre><code>// Resultado bugado
 0.1+0.2 // 0.30000000000000004
 // Resultado sem bugs
-(0.1+0.2).toLocaleString(); // &quot;0.3&quot;</code></pre><h2>Criando slug strings com Regex</h2><p>Se voc&#xEA; precisar criar uma vers&#xE3;o slug de uma string, exemplo, transformar a frase: &quot;Escrevendo JavaScript Melhor&quot; em &quot;escrevendo-javascript-melhor&quot;, voc&#xEA; pode facilmente cria a seguinte fun&#xE7;&#xE3;o:</p>
+(0.1+0.2).toLocaleString(); // &quot;0.3&quot;
+</code></pre>
+<h2>Criando slug strings com Regex</h2><p>Se voc&#xEA; precisar criar uma vers&#xE3;o slug de uma string, exemplo, transformar a frase: &quot;Escrevendo JavaScript Melhor&quot; em &quot;escrevendo-javascript-melhor&quot;, voc&#xEA; pode facilmente cria a seguinte fun&#xE7;&#xE3;o:</p>
 <pre><code class="language-javascript">function slugify(content) {
   return content.toLowerCase().replace(/\s/g, &apos;-&apos;);
 }
 
-slugify(&quot;Escrevendo JavaScript Melhor&quot;); // &quot;escrevendo-javascript-melhor&quot;</code></pre>
+slugify(&quot;Escrevendo JavaScript Melhor&quot;); // &quot;escrevendo-javascript-melhor&quot;
+</code></pre>
 <p>Ou caso queira injetar essa fun&#xE7;&#xE3;o junto as demais fun&#xE7;&#xF5;es nativas da String, fa&#xE7;a o seguinte:</p>
 <pre><code class="language-javascript">String.prototype.slugify = function() {
   return this.toLowerCase().replace(/\s/g, &apos;-&apos;);
 }
 
-&quot;Escrevendo JavaScript Melhor&quot;.slugify(); // &quot;escrevendo-javascript-melhor&quot;</code></pre>
+&quot;Escrevendo JavaScript Melhor&quot;.slugify(); // &quot;escrevendo-javascript-melhor&quot;
+</code></pre>
 <h2>Percorrendo atributos de modo seguro</h2><p>&#xC9; muito comum ocorrer um erro quando se tenta acessar um atributo de um objeto que n&#xE3;o existe, exemplo:</p>
 <pre><code>let obj;
-console.log(obj.text.value); // Uncaught TypeError: Cannot read property &apos;text&apos; of undefined</code></pre><p>Nesse caso, vai ocorrer um erro grave, alertando que n&#xE3;o pode ler a propriedade <code>text</code> de uma refer&#xEA;ncia <code>undefined</code>.</p>
+console.log(obj.text.value); // Uncaught TypeError: Cannot read property &apos;text&apos; of undefined
+</code></pre>
+<p>Nesse caso, vai ocorrer um erro grave, alertando que n&#xE3;o pode ler a propriedade <code>text</code> de uma refer&#xEA;ncia <code>undefined</code>.</p>
 <p>E se ao inv&#xE9;s de gerar um erro, simplesmente fosse ignorado essa situa&#xE7;&#xE3;o, retornando <code>undefined</code> no lugar do erro? Para isso voc&#xEA; pode simplesmente criar uma fun&#xE7;&#xE3;o recursiva para resolver esse problema:</p>
 <pre><code class="language-javascript">function get(obj, attributes) {
   const flatAttributes = attributes.replace(/\[([0-9]+)\]/g, &apos;.$1&apos;);
@@ -496,28 +562,30 @@ console.log(obj.text.value); // Uncaught TypeError: Cannot read property &apos;t
     }
     return obj[cleanAttr];
   }
-}</code></pre>
+}
+</code></pre>
 <p>Eae com essa fun&#xE7;&#xE3;o voc&#xEA; poder&#xE1; percorrer os atributos de forma segura, veja:</p>
 <pre><code class="language-javascript">const obj = { a: 1, b: { c: [{ x: 1 }] } };
 get(obj, &apos;a&apos;); // 1
 get(obj, &apos;b.c&apos;); // [{ x: 1 }]
 get(obj, &apos;b.c[0]&apos;); // { x: 1 }
 get(obj, &apos;b.c[0].x&apos;); // 1
-get(obj, &apos;x&apos;); // undefined</code></pre>
+get(obj, &apos;x&apos;); // undefined
+</code></pre>
 <p>Recentemente lancei o ebook <a href="https://leanpub.com/javascript-awesome-tips-br-version">JavaScript Awesome Tips (Br version)</a> com diversas dicas sobre JavaScript, vale a pena a leitura!</p>
 <p>Caso n&#xE3;o tenha visto, recomendo que leia tamb&#xE9;m as dicas anteriores, dessa s&#xE9;rie:</p>
 <ul>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
-<li><a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-1" title="Escrevendo JavaScript melhor - Parte 1">Escrevendo JavaScript melhor - Parte 1</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-2" title="Escrevendo JavaScript melhor - Parte 2">Escrevendo JavaScript melhor - Parte 2</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-3" title="Escrevendo JavaScript melhor - Parte 3">Escrevendo JavaScript melhor - Parte 3</a></li>
+<li>  <a href="https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-4" title="Escrevendo JavaScript melhor - Parte 4">Escrevendo JavaScript melhor - Parte 4</a></li>
 </ul>
 <p>Fontes:</p>
 <ul>
 <li><a href="https://remysharp.com/2016/12/13/format-numjsor-es6">format-num.js&#x2026;or ES6!</a></li>
-</ul>]]></description><link>https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5</link><guid isPermaLink="true">https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 22 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Como obter conta bancária estrangeira sem sair do Brasil]]></title><description><![CDATA[Sim, este post vai te explicar de um jeito simples sobre como criar uma conta bancária simples, para receber grana do exterior, sem precisar sair do Brasil e sem precisar ir numa casa de câmbio.]]></description><link>https://udgwebdev.github.io/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</link><guid isPermaLink="true">https://udgwebdev.github.io/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</guid><category><![CDATA[Profissão]]></category><category><![CDATA[Money]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 06 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate><b>05/12/2016</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="https://udgwebdev.github.io/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
-<p>Fala galera! Depois de duas semanas trabalhando nos tempos livres, finalmente lancei uma nova cara pro blog!  
-Dessa vez o blog conta com os seguintes improvements:  </p>
+</ul>
+]]></description><link>https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5</link><guid isPermaLink="true">https://udgwebdev.github.io/escrevendo-javascript-melhor-parte-5</guid><category><![CDATA[JavaScript]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Thu, 22 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Como obter conta bancária estrangeira sem sair do Brasil]]></title><description><![CDATA[Sim, este post vai te explicar de um jeito simples sobre como criar uma conta bancária simples, para receber grana do exterior, sem precisar sair do Brasil e sem precisar ir numa casa de câmbio.]]></description><link>https://udgwebdev.github.io/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</link><guid isPermaLink="true">https://udgwebdev.github.io/como-obter-conta-bancaria-estrangeira-sem-sair-do-brasil</guid><category><![CDATA[Profissão]]></category><category><![CDATA[Money]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 06 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[O blog esta de cara nova!]]></title><description><![CDATA[<h1>O blog esta de cara nova!</h1><p class="text-muted">Publica&#xE7;&#xE3;o: <time datetime="05/12/2016" pubdate><b>05/12/2016</b></time> | Tags: <a href="https://udgwebdev.github.io/menu/#comunicado" rel="me" title="Menu: Comunicado">Comunicado</a></p><p><img src="https://udgwebdev.github.io/images/udgwebdev-logo-128.png" alt="Blog de cara nova!" title="Blog de cara nova!"></p>
+<p>Fala galera! Depois de duas semanas trabalhando nos tempos livres, finalmente lancei uma nova cara pro blog!<br>Dessa vez o blog conta com os seguintes improvements:  </p>
 <ul>
 <li><p><strong>Migra&#xE7;&#xE3;o do static generator Jekyll para Harp.js</strong>: Gostei muito da simplicidade do <a href="http://harpjs.com/">Harp.js</a>, ele possui uma documenta&#xE7;&#xE3;o bem clara, boas conven&#xE7;&#xF5;es para organizar dados e metadados das p&#xE1;ginas, e o que mais acho dahora nele, &#xE9; que ele j&#xE1; internamente com compila&#xE7;&#xE3;o para Markdown, EJS ou Jade para HTML, Stylus, Sass ou Less para CSS e tamb&#xE9;m CoffeeScript para JS, no caso deste blog, estou usando Jade para p&#xE1;ginas din&#xE2;micas, Markdown para conte&#xFA;do dos posts e Sass para organizar todo CSS. Ele possui uma engine totalmente diferente do Jekyll, e por isso tive um certo trabalho criando scripts para migrar todos os posts. Caso voc&#xEA; queira migrar de Jekyll para uma engine mais pr&#xF3;xima dele existente no Node.js, recomendo que utilize o <a href="https://hexo.io/">Hexo</a>.</p>
 </li>
@@ -532,4 +600,5 @@ Dessa vez o blog conta com os seguintes improvements:  </p>
 <li><p><strong>Yarn</strong>: Como essa nova vers&#xE3;o do blog esta 100% Node.js, resolvi testar o <a href="https://yarnpkg.com/">yarn</a> no lugar do <a href="http://npmjs.com/">npm</a>, e achei sensacional, ele baixa os m&#xF3;dulos mais r&#xE1;pido do que no npm, e o que achei mais interessante o cache dos m&#xF3;dulos que ele faz, que permite de instalar esses m&#xF3;dulos em modo offline, realmente vale a pena usar ele.</p>
 </li>
 </ul>
-<p>Curtiu as mudan&#xE7;as? Para ver o c&#xF3;digo-fonte acesse: <a href="https://github.com/udgwebdev/udgwebdev.github.io">https://github.com/udgwebdev/udgwebdev.github.io</a></p>]]></description><link>https://udgwebdev.github.io/o-blog-esta-de-cara-nova</link><guid isPermaLink="true">https://udgwebdev.github.io/o-blog-esta-de-cara-nova</guid><category><![CDATA[Comunicado]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 05 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Acelerando comando dd no MacOS]]></title><description><![CDATA[Se você possui um mac e já tentou clonar uma distro linux para um cartão sd via comando dd e percebeu que demorava muito para fazer isso, veja nesse post uma simples solução que vai deixar 20x mais rápida a execução desse comando.]]></description><link>https://udgwebdev.github.io/acelerando-comando-dd-no-macos</link><guid isPermaLink="true">https://udgwebdev.github.io/acelerando-comando-dd-no-macos</guid><category><![CDATA[Dicas de terminal]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 15 Nov 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Dualboot no raspberry com berryboot]]></title><description><![CDATA[Neste post, explicarei como configurar um sistema gerenciador de boot muito foda, chamado BerryBoot, que vai permitir instalar múltiplos sistemas de forma muito fácil.]]></description><link>https://udgwebdev.github.io/dualboot-no-raspberry-com-berryboot</link><guid isPermaLink="true">https://udgwebdev.github.io/dualboot-no-raspberry-com-berryboot</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 11 Oct 0016 03:06:28 GMT</pubDate></item></channel></rss>
+<p>Curtiu as mudan&#xE7;as? Para ver o c&#xF3;digo-fonte acesse: <a href="https://github.com/udgwebdev/udgwebdev.github.io">https://github.com/udgwebdev/udgwebdev.github.io</a></p>
+]]></description><link>https://udgwebdev.github.io/o-blog-esta-de-cara-nova</link><guid isPermaLink="true">https://udgwebdev.github.io/o-blog-esta-de-cara-nova</guid><category><![CDATA[Comunicado]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Mon, 05 Dec 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Acelerando comando dd no MacOS]]></title><description><![CDATA[Se você possui um mac e já tentou clonar uma distro linux para um cartão sd via comando dd e percebeu que demorava muito para fazer isso, veja nesse post uma simples solução que vai deixar 20x mais rápida a execução desse comando.]]></description><link>https://udgwebdev.github.io/acelerando-comando-dd-no-macos</link><guid isPermaLink="true">https://udgwebdev.github.io/acelerando-comando-dd-no-macos</guid><category><![CDATA[Dicas de terminal]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 15 Nov 0016 03:06:28 GMT</pubDate></item><item><title><![CDATA[Dualboot no raspberry com berryboot]]></title><description><![CDATA[Neste post, explicarei como configurar um sistema gerenciador de boot muito foda, chamado BerryBoot, que vai permitir instalar múltiplos sistemas de forma muito fácil.]]></description><link>https://udgwebdev.github.io/dualboot-no-raspberry-com-berryboot</link><guid isPermaLink="true">https://udgwebdev.github.io/dualboot-no-raspberry-com-berryboot</guid><category><![CDATA[IoT]]></category><dc:creator><![CDATA[Caio Ribeiro Pereira]]></dc:creator><pubDate>Tue, 11 Oct 0016 03:06:28 GMT</pubDate></item></channel></rss>
